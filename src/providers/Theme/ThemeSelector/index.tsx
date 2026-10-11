@@ -7,35 +7,21 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import React, { useState } from 'react'
+import React from 'react'
 
-import type { Theme } from './types'
+import type { ThemePreference } from '../types'
 
 import { useTheme } from '..'
-import { themeLocalStorageKey } from './types'
 
 export const ThemeSelector: React.FC = () => {
-  const { setTheme } = useTheme()
-  const [value, setValue] = useState('')
+  const { setTheme, preference } = useTheme()
 
-  const onThemeChange = (themeToSet: Theme & 'auto') => {
-    if (themeToSet === 'auto') {
-      setTheme(null)
-      setValue('auto')
-    } else {
-      setTheme(themeToSet)
-      setValue(themeToSet)
-    }
+  const onThemeChange = (themeToSet: ThemePreference) => {
+    setTheme(themeToSet)
   }
 
-  React.useEffect(() => {
-    const preference = window.localStorage.getItem(themeLocalStorageKey)
-    const frame = requestAnimationFrame(() => setValue(preference ?? 'auto'))
-    return () => cancelAnimationFrame(frame)
-  }, [])
-
   return (
-    <Select onValueChange={onThemeChange} value={value}>
+    <Select onValueChange={onThemeChange} value={preference}>
       <SelectTrigger
         aria-label="Select a theme"
         className="w-auto bg-transparent gap-2 pl-0 md:pl-3 border-none"
@@ -43,7 +29,6 @@ export const ThemeSelector: React.FC = () => {
         <SelectValue placeholder="Theme" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="auto">Auto</SelectItem>
         <SelectItem value="light">Light</SelectItem>
         <SelectItem value="dark">Dark</SelectItem>
       </SelectContent>

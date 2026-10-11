@@ -1,6 +1,35 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 
+test('Tamil navigation and homepage survive provider failure and return to English', async ({
+  page,
+}) => {
+  const errors: string[] = []
+  page.on('pageerror', (error) => errors.push(error.message))
+  await page.route('**/api/translate', (route) =>
+    route.fulfill({ status: 503, json: { error: 'Provider unavailable' } }),
+  )
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/ta')
+  await expect(page.locator('h1')).toHaveText('உங்கள் உள்ளடக்கம்.விரிந்த உலகம்.')
+  await expect(
+    page.locator('.et-desktop-nav').getByRole('button', { name: 'எங்கள் சேவைகள்' }),
+  ).toBeVisible()
+  await expect(page.locator('html')).toHaveAttribute('lang', 'ta')
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
+    true,
+  )
+  await page.getByRole('button', { name: 'TA', exact: true }).click()
+  await page
+    .locator('#language-options')
+    .getByRole('button', { name: 'English, default language' })
+    .click()
+  await expect(page).toHaveURL(/^https?:\/\/[^/]+\/$/)
+  await expect(page.locator('h1')).toHaveText('Your content.A wider world.')
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en')
+  expect(errors).toEqual([])
+})
+
 test('careers page and company menu work at mobile and desktop widths', async ({ page }) => {
   for (const width of [375, 1440]) {
     await page.setViewportSize({ width, height: 900 })

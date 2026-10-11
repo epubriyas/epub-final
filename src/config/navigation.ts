@@ -52,9 +52,104 @@ export const navigation: NavigationSection[] = [
     ],
   },
   { label: 'Solutions', href: '/solutions' },
-  { label: 'Industries', href: '/industries' },
-  { label: 'Technology', href: '/technology' },
-  { label: 'Resources', href: '/resources' },
+  {
+    label: 'Industries',
+    href: '/industries',
+    overviewLabel: 'Explore All Industries',
+    description:
+      'Publishing, localization and accessible digital content for specialized industries.',
+    groups: [
+      {
+        title: 'Core Industries',
+        items: [
+          {
+            label: 'Publishing & Scholarly Communications',
+            href: '/industries#publishing-scholarly-communications',
+          },
+          { label: 'Education & eLearning', href: '/industries#education-elearning' },
+          { label: 'Technology & Digital Content', href: '/industries#technology-digital-content' },
+        ],
+      },
+      {
+        title: 'Specialized Markets',
+        items: [
+          {
+            label: 'Corporate & Business Communications',
+            href: '/industries#corporate-business-communications',
+          },
+          { label: 'Media & Entertainment', href: '/industries#media-entertainment' },
+          {
+            label: 'Accessibility & Inclusive Content',
+            href: '/industries#accessibility-inclusive-content',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Technology',
+    href: '/technology',
+    overviewLabel: 'Explore our technology',
+    description:
+      'Production expertise, practical automation and development built around the work.',
+    groups: [
+      {
+        title: 'Production Technologies',
+        description: 'The tools and formats behind your content.',
+        items: [{ label: 'Production Technologies', href: '/technology/production-technologies' }],
+      },
+      {
+        title: 'Workflow Automation & AI',
+        description: 'Thoughtful improvements with people at the centre.',
+        items: [{ label: 'Workflow Automation & AI', href: '/technology/workflow-automation' }],
+      },
+      {
+        title: 'In-House Development',
+        description: 'Internal tools shaped by production needs.',
+        items: [
+          { label: 'In-House Development', href: '/technology/in-house-development' },
+          {
+            label: 'EPUBTRANS Production OS',
+            href: '/technology/production-os',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Resources',
+    href: '/resources',
+    overviewLabel: 'Explore our resources',
+    description: 'Ideas, practical guidance and approved project stories for your next chapter.',
+    groups: [
+      {
+        title: 'Insights & Blog',
+        description: 'Ideas and perspectives for publishing and localization.',
+        items: [
+          { label: 'Blog', href: '/blog' },
+          { label: 'Industry Insights', href: '/industry-insights' },
+        ],
+      },
+      {
+        title: 'Case Studies',
+        description: 'Explore our work across content, languages and learning.',
+        items: [
+          { label: 'Publishing', href: '/work?category=publishing' },
+          { label: 'Localization', href: '/work?category=localization' },
+          { label: 'eLearning', href: '/work?category=elearning' },
+          { label: 'Accessibility', href: '/work?category=accessibility' },
+        ],
+      },
+      {
+        title: 'Resources',
+        description: 'Practical guides and reports for your next project.',
+        items: [
+          { label: 'Guides & eBooks', href: '/resources?type=guides-ebooks' },
+          { label: 'Whitepapers & Reports', href: '/resources?type=whitepapers-reports' },
+        ],
+      },
+    ],
+  },
   {
     label: 'Company',
     href: '/company',
@@ -71,17 +166,6 @@ export const navigation: NavigationSection[] = [
           { label: 'Mission & Vision', href: '/company#mission-vision' },
           { label: 'Why EPUBTRANS', href: '/company#why-epubtrans' },
           { label: 'Leadership', href: '/company#leadership' },
-        ],
-      },
-      {
-        title: 'Trust',
-        description: 'Clarity at every stage of delivery.',
-        items: [
-          { label: 'Certifications', href: '/company#certifications' },
-          { label: 'Quality', href: '/company#quality' },
-          { label: 'Security', href: '/company#security' },
-          { label: 'Compliance', href: '/company#compliance' },
-          { label: 'Partnerships', href: '/company#partnerships' },
         ],
       },
       {
@@ -106,4 +190,5 @@ export const navigation: NavigationSection[] = [
       },
     ],
   },
+  { label: 'Contact', href: '/contact' },
 ]

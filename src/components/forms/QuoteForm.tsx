@@ -23,6 +23,7 @@ const initial: QuoteData = {
   website: '',
 }
 export function QuoteForm() {
+  const [notification, setNotification] = useState('')
   const [step, setStep] = useState(0),
     [data, setData] = useState(initial),
     [files, setFiles] = useState<File[]>([]),
@@ -31,6 +32,7 @@ export function QuoteForm() {
     [message, setMessage] = useState(''),
     [reference, setReference] = useState('')
   const heading = useRef<HTMLHeadingElement>(null)
+  const submitting = useRef(false)
   const update = (key: keyof QuoteData, value: string | boolean) =>
     setData((current) => ({ ...current, [key]: value }))
   const go = (next: number) => {
@@ -61,6 +63,7 @@ export function QuoteForm() {
     label: string,
     type = 'text',
     required = false,
+    help?: string,
   ) => (
     <div className="et-field">
       <label htmlFor={key}>
@@ -74,7 +77,10 @@ export function QuoteForm() {
         value={data[key]}
         onChange={(event) => update(key, event.target.value)}
         aria-invalid={!!errors[key]}
-        aria-describedby={errors[key] ? `${key}-error` : undefined}
+        aria-describedby={
+          [errors[key] && `${key}-error`, help && `${key}-help`].filter(Boolean).join(' ') ||
+          undefined
+        }
         maxLength={key === 'email' ? 254 : key === 'name' ? 100 : 200}
         autoComplete={
           key === 'name'
@@ -86,6 +92,11 @@ export function QuoteForm() {
                 : 'off'
         }
       />
+      {help && (
+        <p id={`${key}-help`} className="et-form-help">
+          {help}
+        </p>
+      )}
       {errors[key] && (
         <p id={`${key}-error`} className="et-field-error">
           {errors[key]}
@@ -94,16 +105,21 @@ export function QuoteForm() {
     </div>
   )
   const submit = async () => {
+    if (submitting.current || reference) return
     const issues = validateQuote(data)
     setErrors(issues)
     if (Object.keys(issues).length) {
       setMessage('Complete the required information and consent.')
       return
     }
+    submitting.current = true
     setPending(true)
     setMessage('')
     const form = new FormData()
     Object.entries(data).forEach(([key, value]) => form.set(key, String(value)))
+    // Multipart encoders normalize line endings; JSON preserves the original textarea value.
+    form.set('details', JSON.stringify(data.details))
+    form.set('detailsEncoding', 'json')
     files.forEach((file) => form.append('files', file))
     try {
       const response = await fetch('/api/quote', { method: 'POST', body: form })
@@ -113,10 +129,14 @@ export function QuoteForm() {
         setMessage(result.error || 'Your request could not be saved.')
         return
       }
+      setNotification(result.notification || 'unavailable')
       setReference(result.reference)
+      setData(initial)
+      setFiles([])
     } catch {
       setMessage('We could not reach the server. Your information is still here; please try again.')
     } finally {
+      submitting.current = false
       setPending(false)
     }
   }
@@ -135,6 +155,11 @@ export function QuoteForm() {
         <p data-private>
           Your project request has been saved for EPUBTRANS to review. Keep reference {reference}{' '}
           when contacting the team.
+        </p>
+        <p>
+          {notification === 'sent'
+            ? 'Our email provider has accepted the notification for delivery to our team.'
+            : 'Your request is saved, but the email notification could not be sent. You can contact our team at info@epubtrans.com with your reference.'}
         </p>
         <Link className="et-text-link" href="/services">
           Continue exploring →
@@ -248,7 +273,13 @@ export function QuoteForm() {
                   'Tell us what you need, your content format and approximate volume.'}
               </p>
             </div>
-            {input('deadline', 'Preferred delivery date (optional)', 'date')}
+            {input(
+              'deadline',
+              'Project deadline (optional)',
+              'date',
+              false,
+              'Choose the date you would like your project completed. Leave it blank if your timeline is flexible.',
+            )}
             <p className="et-form-help">
               Have a brief or sample? Attach it below, or continue without files.
             </p>
@@ -313,7 +344,7 @@ export function QuoteForm() {
             {[
               ['Service', data.service],
               ['Project', data.details],
-              ['Preferred date', data.deadline || 'Not specified'],
+              ['Project deadline', data.deadline || 'Not specified'],
               ['Files', files.map((file) => file.name).join(', ') || 'No files'],
               ['Contact', `${data.name} · ${data.email}`],
               ['Company', data.company || 'Not specified'],

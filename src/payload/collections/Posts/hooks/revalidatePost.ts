@@ -17,6 +17,8 @@ export const revalidatePost: CollectionAfterChangeHook<Post> = ({
 
       revalidatePath(path)
       revalidatePath('/resources')
+      revalidatePath('/blog')
+      revalidatePath('/industry-insights')
       revalidateTag('posts-sitemap', 'max')
     }
 
@@ -28,6 +30,8 @@ export const revalidatePost: CollectionAfterChangeHook<Post> = ({
 
       revalidatePath(oldPath)
       revalidatePath('/resources')
+      revalidatePath('/blog')
+      revalidatePath('/industry-insights')
       revalidateTag('posts-sitemap', 'max')
     }
   }
@@ -40,6 +44,8 @@ export const revalidateDelete: CollectionAfterDeleteHook<Post> = ({ doc, req: { 
 
     revalidatePath(path)
     revalidatePath('/resources')
+    revalidatePath('/blog')
+    revalidatePath('/industry-insights')
     revalidateTag('posts-sitemap', 'max')
   }
 

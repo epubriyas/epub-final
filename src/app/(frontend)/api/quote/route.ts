@@ -3,6 +3,7 @@ import { mkdir, writeFile, unlink } from 'node:fs/promises'
 import { randomUUID, createHash } from 'node:crypto'
 import path from 'node:path'
 import { contentPayload } from '@/lib/content'
+import { notifyQuote } from '@/lib/quote-email'
 import {
   getQuoteData,
   validateQuote,
@@ -125,9 +126,10 @@ export async function POST(request: Request) {
   }
   const root = path.resolve(process.env.PRIVATE_UPLOAD_DIR || 'private-uploads')
   const written: string[] = []
+  const attachments: { originalName: string; path: string; size: number }[] = []
+  let reference: string
   try {
     await mkdir(root, { recursive: true })
-    const attachments = []
     for (const { file, bytes, extension } of prepared) {
       const filename = randomUUID() + extension
       const destination = path.join(root, filename)
@@ -158,10 +160,7 @@ export async function POST(request: Request) {
         status: 'new',
       },
     })
-    return NextResponse.json(
-      { reference: String(result.id) },
-      { status: 201, headers: { 'Cache-Control': 'no-store' } },
-    )
+    reference = String(result.id)
   } catch {
     await Promise.allSettled(written.map((file) => unlink(file)))
     console.error('Quote persistence failed.')
@@ -170,4 +169,16 @@ export async function POST(request: Request) {
       { status: 503 },
     )
   }
+  // The create has committed. Notification failures must never remove saved uploads
+  // or turn a saved enquiry into a retryable database error.
+  let notification: 'sent' | 'unavailable' | 'failed' = 'failed'
+  try {
+    notification = await notifyQuote(reference, data, attachments)
+  } catch {
+    console.error('Quote notification failed; request remains saved in the admin panel.')
+  }
+  return NextResponse.json(
+    { reference, notification },
+    { status: 201, headers: { 'Cache-Control': 'no-store' } },
+  )
 }

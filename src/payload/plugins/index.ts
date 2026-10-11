@@ -14,13 +14,15 @@ import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
-  return doc?.title ? `${doc.title} | Payload Website Template` : 'Payload Website Template'
+  return doc?.title ? `${doc.title} | EPUBTRANS` : 'EPUBTRANS'
 }
 
-const generateURL: GenerateURL<Post | Page> = ({ doc }) => {
+const generateURL: GenerateURL<Post | Page> = ({ doc, collectionConfig }) => {
   const url = getServerSideURL()
 
-  return doc?.slug ? `${url}/${doc.slug}` : url
+  return doc?.slug
+    ? `${url}${collectionConfig?.slug === 'posts' ? '/resources' : ''}/${doc.slug === 'home' && collectionConfig?.slug === 'pages' ? '' : encodeURIComponent(doc.slug)}`
+    : url
 }
 
 export const plugins: Plugin[] = [

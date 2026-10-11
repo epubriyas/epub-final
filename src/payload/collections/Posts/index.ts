@@ -125,6 +125,8 @@ export const Posts: CollectionConfig<'posts'> = {
               type: 'relationship',
               admin: {
                 position: 'sidebar',
+                description:
+                  'All published posts appear in Blog. Select the Industry Insights category (slug: industry-insights) to also appear in Industry Insights.',
               },
               hasMany: true,
               relationTo: 'categories',

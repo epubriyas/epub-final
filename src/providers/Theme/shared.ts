@@ -2,6 +2,7 @@ import type { Theme } from './types'
 
 export const themeLocalStorageKey = 'payload-theme'
 export const themeCookieKey = 'epubtrans-theme'
+export const themePreferenceCookieKey = 'epubtrans-theme-preference'
 
 export const defaultTheme: Theme = 'light'
 

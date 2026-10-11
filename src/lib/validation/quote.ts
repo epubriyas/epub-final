@@ -41,11 +41,21 @@ export function validateQuote(data: QuoteData): Record<string, string> {
 export function getQuoteData(form: FormData): QuoteData {
   const str = (name: string) =>
     typeof form.get(name) === 'string' ? String(form.get(name)).trim() : ''
+  let details = typeof form.get('details') === 'string' ? String(form.get('details')) : ''
+  if (form.get('detailsEncoding') === 'json') {
+    try {
+      const original: unknown = JSON.parse(details)
+      details = typeof original === 'string' ? original : ''
+    } catch {
+      details = ''
+    }
+  }
   return {
     service: str('service'),
     sourceLanguage: str('sourceLanguage'),
     targetLanguages: str('targetLanguages'),
-    details: str('details'),
+    // Validate with trim(), but store and email the customer's original wording and whitespace.
+    details,
     deadline: str('deadline'),
     name: str('name'),
     email: str('email'),

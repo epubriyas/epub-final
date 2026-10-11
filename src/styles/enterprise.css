@@ -195,6 +195,9 @@ button:hover .et-arrow {
   gap: 32px;
   padding-top: 32px;
 }
+.et-mega-resources .et-mega-groups {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .et-mega h3 {
   color: var(--brand-secondary);
   font-size: 12px;
@@ -217,8 +220,7 @@ button:hover .et-arrow {
   outline-color: var(--brand-secondary);
 }
 .et-mega-company .et-mega-groups {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .et-mega-eyebrow {
   color: var(--brand-secondary);
@@ -240,15 +242,6 @@ button:hover .et-arrow {
   min-width: 44px;
   min-height: 44px;
 }
-.et-mega-company .et-mega-groups > div,
-.et-mega-services .et-mega-groups > div {
-  border-inline-start: 1px solid #ffffff26;
-  padding-inline-start: 24px;
-}
-.et-mega-company h3,
-.et-mega-services h3 {
-  margin-bottom: 10px;
-}
 .et-mega-group-description {
   min-height: 44px;
   color: #ffffff99;
@@ -257,27 +250,19 @@ button:hover .et-arrow {
   max-width: 220px;
   margin-bottom: 18px;
 }
-.et-mega-company li,
-.et-mega-services li {
-  margin-top: 4px;
-}
 .et-mega-company li a,
-.et-mega-services li a {
+.et-mega-services li a,
+.et-mega-resources li a {
   display: block;
-  padding-block: 9px;
   transition: color var(--motion-fast);
 }
 .et-mega-company li a:hover,
-.et-mega-services li a:hover {
+.et-mega-services li a:hover,
+.et-mega-resources li a:hover {
   color: var(--brand-secondary);
 }
 .et-mega-services .et-mega-groups {
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 28px;
-}
-.et-mega-services h3 {
-  min-height: 36px;
-  line-height: 1.5;
 }
 .et-mega-services .et-mega-group-wide {
   grid-column: span 2;
@@ -285,10 +270,10 @@ button:hover .et-arrow {
 .et-mega-services .et-mega-group-wide ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 20px;
+  gap: 12px 20px;
 }
-.et-mega-services li a {
-  min-height: 44px;
+.et-mega-services .et-mega-group-wide li {
+  margin-top: 0;
 }
 .et-mobile-group-description {
   color: #ffffff99;

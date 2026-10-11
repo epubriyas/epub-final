@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { Header } from '@/components/navigation/Header'
 import { Footer } from '@/components/navigation/Footer'
 import { Providers } from '@/providers'
+import { InitTheme } from '@/providers/Theme/InitTheme'
 import { getServerSideURL } from '@/utilities/getURL'
 import { cookies, headers } from 'next/headers'
 import { themeCookieKey } from '@/providers/Theme/shared'
@@ -41,7 +42,11 @@ export default async function FrontendLayout({ children }: { children: React.Rea
       lang="en"
       dir="ltr"
       data-theme={theme}
+      suppressHydrationWarning
     >
+      <head>
+        <InitTheme />
+      </head>
       <body className="et-site">
         <Providers initialTheme={theme}>
           <LocaleProvider locale={locale}>

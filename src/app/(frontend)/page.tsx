@@ -6,6 +6,10 @@ import { Reveal } from '@/components/shared/Reveal'
 import { getHomeContent, getPreviewAccess } from '@/lib/content'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
+import {
+  ContentTransformationInfographic,
+  WorkflowInfographic,
+} from '@/components/home/HomeInfographics'
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
   title: 'EPUBTRANS — Publishing, Localization & Digital Content',
@@ -175,18 +179,7 @@ export default async function HomePage() {
       </section>
       <section className="et-feature">
         <div className="et-container et-feature-grid">
-          <div className="et-feature-art" aria-hidden="true">
-            <span className="et-label">FROM MANUSCRIPT TO MULTIFORMAT</span>
-            <div className="et-feature-letter">
-              a<span>à</span>
-            </div>
-            <div className="et-feature-formats">
-              <span>PRINT</span>
-              <span>EPUB</span>
-              <span>XML</span>
-              <span>DIGITAL</span>
-            </div>
-          </div>
+          <ContentTransformationInfographic />
           <div className="et-feature-copy">
             <p className="et-label">SOLUTIONS / DIGITAL PUBLISHING</p>
             <h2>
@@ -246,23 +239,7 @@ export default async function HomePage() {
               Explore our approach
             </ArrowLink>
           </div>
-          <ol className="et-pipeline">
-            {[
-              ['01', 'Prepare', 'Manuscripts, media and source files'],
-              ['02', 'Transform', 'Editorial, language and production'],
-              ['03', 'Review', 'Format, content and project requirements'],
-              ['04', 'Deliver', 'Your audience. Your chosen formats.'],
-            ].map(([n, title, desc]) => (
-              <li key={n}>
-                <span className="et-label">{n}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{desc}</p>
-                </div>
-                <span aria-hidden="true">↗</span>
-              </li>
-            ))}
-          </ol>
+          <WorkflowInfographic />
         </div>
       </section>
       <section className="et-work-home et-container">
@@ -351,4 +328,3 @@ export default async function HomePage() {
     </main>
   )
 }
-

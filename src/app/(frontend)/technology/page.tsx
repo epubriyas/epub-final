@@ -2,10 +2,12 @@ import { pageMetadata } from '@/lib/seo'
 import { PageHero, ContentCTA } from '@/components/editorial/Primitives'
 import { listContent } from '@/lib/content'
 import RichText from '@/components/RichText'
+import { TechnologyCards, ProductionOSFeature } from '@/components/technology/TechnologyContent'
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
   title: 'Technology',
-  description: 'Explore structured content, XML conversion and digital publishing workflows.',
+  description:
+    'Explore production technologies, workflow automation and in-house development at EPUBTRANS.',
   alternates: { canonical: '/technology' },
 })
 
@@ -15,9 +17,11 @@ export default async function Technology() {
     <main>
       <PageHero
         eyebrow="TECHNOLOGY"
-        title="Structure meets possibility."
-        description="Digital publishing starts with well-prepared content. Explore the formats and workflows behind your next edition."
+        title="Technology, grounded in production."
+        description="We combine publishing and localization expertise with practical technology. From established production tools to internal development, our focus is on the real work behind your content."
       />
+      <TechnologyCards />
+      <ProductionOSFeature />
       <section className="et-container et-content-section">
         <h2>Content that can move.</h2>
         <ul className="et-content-list">
@@ -86,4 +90,3 @@ export default async function Technology() {
     </main>
   )
 }
-

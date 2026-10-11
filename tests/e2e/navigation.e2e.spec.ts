@@ -26,7 +26,7 @@ test('service menu uses the Company presentation and keeps every service reachab
   await expect(page.locator('main h1')).toBeVisible()
 })
 
-test('company menu presents four columns and navigates to company content', async ({ page }) => {
+test('company menu presents three columns and navigates to company content', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/')
   const trigger = page.getByRole('button', { name: 'Company', exact: true })
@@ -36,11 +36,10 @@ test('company menu presents four columns and navigates to company content', asyn
   await expect(menu.getByRole('link', { name: 'Discover EPUBTRANS' })).toBeFocused()
   await expect(menu.getByRole('heading')).toHaveText([
     'About EPUBTRANS',
-    'Trust',
     'Global Presence',
     'Careers',
   ])
-  await expect(menu.getByRole('link')).toHaveCount(19)
+  await expect(menu.getByRole('link')).toHaveCount(14)
   const columns = await menu
     .locator('.et-mega-groups > div')
     .evaluateAll((elements) => elements.map((element) => element.getBoundingClientRect().top))
@@ -49,9 +48,9 @@ test('company menu presents four columns and navigates to company content', asyn
     Promise.all(element.getAnimations().map((animation) => animation.finished)),
   )
   await page.screenshot({ path: 'artifacts/v2/screens/company-menu-desktop.png' })
-  await menu.getByRole('link', { name: 'Quality', exact: true }).click()
-  await expect(page).toHaveURL(/\/company#quality$/)
-  await expect(page.locator('#quality')).toBeInViewport()
+  await menu.getByRole('link', { name: 'Our Story', exact: true }).click()
+  await expect(page).toHaveURL(/\/company#our-story$/)
+  await expect(page.locator('#our-story')).toBeInViewport()
   await expect(menu).toHaveCount(0)
   await trigger.click()
   await page.keyboard.press('Escape')
@@ -69,7 +68,6 @@ test('mobile company groups lead to internship content without horizontal overfl
   await expect(dialog.getByRole('link', { name: 'Discover EPUBTRANS' })).toBeVisible()
   await expect(dialog.locator('#mobile-5 summary')).toHaveText([
     'About EPUBTRANS',
-    'Trust',
     'Global Presence',
     'Careers',
   ])

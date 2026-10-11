@@ -1,6 +1,9 @@
 import 'server-only'
 import { contentPayload } from '@/lib/content'
 import publicUITexts from './public-ui-texts.json'
+import tamil from './ta.json'
+import { technologyTopics, productionOS, developmentSteps } from '@/config/technology'
+import { technologyGuides } from '@/config/technology-guides'
 export const normalizeText = (text: string) => text.replace(/\s+/g, ' ').trim()
 let catalog: { expires: number; texts: Set<string> } | undefined
 let building: Promise<Set<string>> | undefined
@@ -8,7 +11,7 @@ export async function getPublicTranslationCatalog(): Promise<Set<string>> {
   if (catalog && catalog.expires > Date.now()) return catalog.texts
   if (building) return building
   building = (async () => {
-    const texts = new Set(publicUITexts.map(normalizeText))
+    const texts = new Set([...publicUITexts, ...Object.keys(tamil)].map(normalizeText))
     const payload = await contentPayload()
     function collect(value: unknown) {
       if (typeof value === 'string') {
@@ -35,6 +38,10 @@ export async function getPublicTranslationCatalog(): Promise<Set<string>> {
             collect(item)
         }
     }
+    collect(technologyTopics)
+    collect(productionOS)
+    collect(developmentSteps)
+    collect(technologyGuides)
     for (const collection of [
       'services',
       'solutions',

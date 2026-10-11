@@ -494,6 +494,9 @@ export interface Post {
     [k: string]: unknown;
   };
   relatedPosts?: (number | Post)[] | null;
+  /**
+   * All published posts appear in Blog. Select the Industry Insights category (slug: industry-insights) to also appear in Industry Insights.
+   */
   categories?: (number | Category)[] | null;
   meta?: {
     title?: string | null;
@@ -1279,6 +1282,10 @@ export interface CaseStudy {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Choose the Resources menu category for this case study.
+   */
+  category?: ('publishing' | 'localization' | 'elearning' | 'accessibility') | null;
   industry?: (number | null) | Industry;
   client?: string | null;
   /**
@@ -1416,6 +1423,10 @@ export interface Resource {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Choose the resource type to include it in the Resources menu listings.
+   */
+  type?: ('guide' | 'ebook' | 'whitepaper' | 'report') | null;
   file?: (number | null) | Media;
   status: 'draft' | 'published';
   seo?: {
@@ -2570,6 +2581,7 @@ export interface CaseStudiesSelect<T extends boolean = true> {
         description?: T;
         id?: T;
       };
+  category?: T;
   industry?: T;
   client?: T;
   permissionConfirmed?: T;
@@ -2608,6 +2620,7 @@ export interface ResourcesSelect<T extends boolean = true> {
         description?: T;
         id?: T;
       };
+  type?: T;
   file?: T;
   status?: T;
   seo?:

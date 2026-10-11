@@ -11,11 +11,18 @@ export async function GET() {
     '/solutions',
     '/industries',
     '/technology',
+    '/technology/production-technologies',
+    '/technology/workflow-automation',
+    '/technology/in-house-development',
+    '/technology/production-os',
     '/resources',
+    '/blog',
+    '/industry-insights',
     '/company',
     '/company/careers',
     '/work',
     '/get-a-quote',
+    '/contact',
     '/accessibility',
   ].map((route) => ({ loc: base + route }))
   for (const collection of ['services', 'solutions', 'industries', 'case-studies'] as const) {

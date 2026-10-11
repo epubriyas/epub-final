@@ -1,6 +1,7 @@
 import type { CollectionConfig, Field, Where } from 'payload'
 import { authenticated } from '@/payload/access/authenticated'
 import { publishedContent } from '@/payload/access/publishedContent'
+import { caseStudyCategories, resourceTypes } from '@/config/resource-content'
 const itemFields: Field[] = [
   { name: 'title', type: 'text', required: true },
   { name: 'description', type: 'textarea' },
@@ -46,6 +47,13 @@ export function contentCollection(slug: string, extra: Field[] = []): Collection
 export const ServiceCategories = contentCollection('service-categories')
 export const Technologies = contentCollection('technologies')
 export const CaseStudies = contentCollection('case-studies', [
+  {
+    name: 'category',
+    type: 'select',
+    options: caseStudyCategories,
+    index: true,
+    admin: { description: 'Choose the Resources menu category for this case study.' },
+  },
   { name: 'industry', type: 'relationship', relationTo: 'industries' },
   { name: 'client', type: 'text' },
   {
@@ -69,6 +77,15 @@ CaseStudies.access = {
       : { and: [{ status: { equals: 'published' } }, { permissionConfirmed: { equals: true } }] },
 }
 export const Resources = contentCollection('resources', [
+  {
+    name: 'type',
+    type: 'select',
+    options: resourceTypes,
+    index: true,
+    admin: {
+      description: 'Choose the resource type to include it in the Resources menu listings.',
+    },
+  },
   { name: 'file', type: 'upload', relationTo: 'media' },
 ])
 export const Careers = contentCollection('careers', [

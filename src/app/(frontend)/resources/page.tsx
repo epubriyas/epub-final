@@ -5,6 +5,7 @@ import { PageHero, ContentCTA } from '@/components/editorial/Primitives'
 import RichText from '@/components/RichText'
 import { headers } from 'next/headers'
 import { languagePath } from '@/config/languages'
+import { getResourceGroup } from '@/config/resource-content'
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
   title: 'Resources',
@@ -57,9 +58,12 @@ export default async function Resources({
     q?: string | string[]
     page?: string | string[]
     category?: string | string[]
+    type?: string | string[]
   }>
 }) {
   const params = await searchParams
+  const resourceGroup = getResourceGroup(params.type)
+  const resourceType = resourceGroup ? String(params.type) : ''
   const q = (typeof params.q === 'string' ? params.q : '').slice(0, 120)
   const category =
     typeof params.category === 'string' && /^\d+$/.test(params.category) ? params.category : ''
@@ -77,11 +81,13 @@ export default async function Resources({
     collection: 'resources',
     overrideAccess: false,
     limit: 12,
+    page: resourceGroup ? currentPage : 1,
     depth: 1,
     sort: 'title',
     where: {
       and: [
         { status: { equals: 'published' } },
+        ...(resourceGroup ? [{ type: { in: [...resourceGroup.types] } }] : []),
         ...(q ? [{ or: [{ title: { contains: q } }, { description: { contains: q } }] }] : []),
       ],
     },
@@ -108,10 +114,14 @@ export default async function Resources({
     <main>
       <PageHero
         eyebrow="RESOURCES"
-        title="A clearer start. A stronger result."
-        description="Practical checklists, articles and downloads to help you prepare your next publishing, localization or accessibility project."
+        title={resourceGroup?.title || 'A clearer start. A stronger result.'}
+        description={
+          resourceGroup
+            ? 'Published reference material to support your planning and production.'
+            : 'Practical checklists, articles and downloads to help you prepare your next publishing, localization or accessibility project.'
+        }
       />
-      {!q && !category && (
+      {!q && !category && !resourceGroup && (
         <section className="et-container et-content-section" aria-labelledby="project-guides-title">
           <p className="et-label">START WITH YOUR PROJECT</p>
           <h2 id="project-guides-title">A little preparation goes a long way.</h2>
@@ -140,12 +150,14 @@ export default async function Resources({
       )}
       <section className="et-container et-content-section">
         <p className="et-label">EXPLORE THE LIBRARY</p>
-        <h2>Articles & resources.</h2>
+        <h2>{resourceGroup?.title || 'Articles & resources.'}</h2>
         <p>
-          Search published articles and downloadable resources. The category filter applies to
-          articles.
+          {resourceGroup
+            ? 'Search published downloadable resources.'
+            : 'Search published articles and downloadable resources. The category filter applies to articles.'}
         </p>
         <form action={hubPath} className="et-search-form">
+          {resourceGroup && <input type="hidden" name="type" value={resourceType} />}
           <label htmlFor="resource-search">Search resources</label>
           <div>
             <input
@@ -155,88 +167,96 @@ export default async function Resources({
               maxLength={120}
               placeholder="Publishing, language, learning…"
             />
-            <label htmlFor="resource-category" className="sr-only">
-              Article category
-            </label>
-            <select
-              name="category"
-              id="resource-category"
-              defaultValue={category}
-              aria-label="Article category"
-            >
-              <option value="">All article categories</option>
-              {categories.docs.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.title}
-                </option>
-              ))}
-            </select>
+            {!resourceGroup && (
+              <>
+                <label htmlFor="resource-category" className="sr-only">
+                  Article category
+                </label>
+                <select
+                  name="category"
+                  id="resource-category"
+                  defaultValue={category}
+                  aria-label="Article category"
+                >
+                  <option value="">All article categories</option>
+                  {categories.docs.map((item) => (
+                    <option key={item.id} value={item.id}>
+                      {item.title}
+                    </option>
+                  ))}
+                </select>
+              </>
+            )}
             <button className="et-button" type="submit">
               Search →
             </button>
           </div>
         </form>
-        <h2 className="et-resource-section-title">Articles & perspectives</h2>
-        {posts.docs.length ? (
-          <div className="et-content-list">
-            {posts.docs.map((post) => (
-              <Link className="et-content-row" key={post.id} href={`/resources/${post.slug}`}>
-                <div>
-                  <p className="et-label">
-                    {post.publishedAt
-                      ? new Date(post.publishedAt).toLocaleDateString('en-IN', {
-                          timeZone: 'Asia/Kolkata',
-                          day: 'numeric',
-                          month: 'long',
-                          year: 'numeric',
-                        })
-                      : 'PERSPECTIVE'}
-                  </p>
-                  <h3>{post.title}</h3>
-                  <p>{post.meta?.description}</p>
-                </div>
-                <span>Read ↗</span>
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <div className="et-empty">
-            <h2>{q || category ? 'No matching articles.' : 'New articles are on the way.'}</h2>
-            <p>
-              {q || category
-                ? 'Try a broader search or clear the article category filter.'
-                : 'Start with the project checklists above, or talk to us about the content you are preparing.'}
-            </p>
-            <Link className="et-text-link" href={q || category ? '/resources' : '/services'}>
-              {q || category ? 'Clear filters' : 'Explore services'} →
-            </Link>
-          </div>
+        {!resourceGroup && (
+          <>
+            <h2 className="et-resource-section-title">Articles & perspectives</h2>
+            {posts.docs.length ? (
+              <div className="et-content-list">
+                {posts.docs.map((post) => (
+                  <Link className="et-content-row" key={post.id} href={`/resources/${post.slug}`}>
+                    <div>
+                      <p className="et-label">
+                        {post.publishedAt
+                          ? new Date(post.publishedAt).toLocaleDateString('en-IN', {
+                              timeZone: 'Asia/Kolkata',
+                              day: 'numeric',
+                              month: 'long',
+                              year: 'numeric',
+                            })
+                          : 'PERSPECTIVE'}
+                      </p>
+                      <h3>{post.title}</h3>
+                      <p>{post.meta?.description}</p>
+                    </div>
+                    <span>Read ↗</span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="et-empty">
+                <h2>{q || category ? 'No matching articles.' : 'New articles are on the way.'}</h2>
+                <p>
+                  {q || category
+                    ? 'Try a broader search or clear the article category filter.'
+                    : 'Start with the project checklists above, or talk to us about the content you are preparing.'}
+                </p>
+                <Link className="et-text-link" href={q || category ? '/resources' : '/services'}>
+                  {q || category ? 'Clear filters' : 'Explore services'} →
+                </Link>
+              </div>
+            )}
+            <nav className="et-pagination" aria-label="Article pages">
+              {posts.hasPrevPage && (
+                <Link
+                  href={`/resources?q=${encodeURIComponent(q)}&category=${category}&page=${currentPage - 1}`}
+                >
+                  ← Previous
+                </Link>
+              )}
+              {posts.totalPages > 1 && (
+                <span>
+                  Page {currentPage} of {posts.totalPages}
+                </span>
+              )}
+              {posts.hasNextPage && (
+                <Link
+                  href={`/resources?q=${encodeURIComponent(q)}&category=${category}&page=${currentPage + 1}`}
+                >
+                  Next →
+                </Link>
+              )}
+            </nav>
+          </>
         )}
-        <nav className="et-pagination" aria-label="Article pages">
-          {posts.hasPrevPage && (
-            <Link
-              href={`/resources?q=${encodeURIComponent(q)}&category=${category}&page=${currentPage - 1}`}
-            >
-              ← Previous
-            </Link>
-          )}
-          {posts.totalPages > 1 && (
-            <span>
-              Page {currentPage} of {posts.totalPages}
-            </span>
-          )}
-          {posts.hasNextPage && (
-            <Link
-              href={`/resources?q=${encodeURIComponent(q)}&category=${category}&page=${currentPage + 1}`}
-            >
-              Next →
-            </Link>
-          )}
-        </nav>
         {!!resources.docs.length && (
           <section className="et-content-section">
             <p className="et-label">RESOURCE LIBRARY</p>
-            <h2>Guides & downloads.</h2>
+            <h2>{resourceGroup?.title || 'Guides & downloads.'}</h2>
             <p>Published reference material to support your planning and production.</p>
             {resources.docs.map((resource) => (
               <article key={resource.id} className="et-content-section">
@@ -251,6 +271,39 @@ export default async function Resources({
               </article>
             ))}
           </section>
+        )}
+        {resourceGroup && !resources.docs.length && (
+          <div className="et-empty">
+            <h2>{q ? 'No matching resources.' : 'New resources are on the way.'}</h2>
+            <p>
+              {q
+                ? 'Try a broader search.'
+                : 'Published resources will appear here as they become available.'}
+            </p>
+          </div>
+        )}
+        {resourceGroup && (
+          <nav className="et-pagination" aria-label="Resource pages">
+            {resources.hasPrevPage && (
+              <Link
+                href={`/resources?type=${resourceType}&q=${encodeURIComponent(q)}&page=${currentPage - 1}`}
+              >
+                ← Previous
+              </Link>
+            )}
+            {resources.totalPages > 1 && (
+              <span>
+                Page {currentPage} of {resources.totalPages}
+              </span>
+            )}
+            {resources.hasNextPage && (
+              <Link
+                href={`/resources?type=${resourceType}&q=${encodeURIComponent(q)}&page=${currentPage + 1}`}
+              >
+                Next →
+              </Link>
+            )}
+          </nav>
         )}
       </section>
       <ContentCTA />

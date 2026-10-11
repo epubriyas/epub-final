@@ -212,7 +212,7 @@ function HeaderState({
           item.groups && (
             <div
               key={item.label}
-              className={`et-mega${item.label === 'Company' ? ' et-mega-company' : item.label === 'What We Do' ? ' et-mega-services' : ''}`}
+              className={`et-mega${item.label === 'Company' ? ' et-mega-company' : item.label === 'What We Do' ? ' et-mega-services' : item.label === 'Resources' ? ' et-mega-resources' : item.label === 'Technology' ? ' et-mega-technology' : ''}`}
               id={`mega-${index}`}
             >
               <div className="et-container">

@@ -1,50 +1,30 @@
-import Script from 'next/script'
-import React from 'react'
+import {
+  defaultTheme,
+  themeLocalStorageKey,
+  themeCookieKey,
+  themePreferenceCookieKey,
+} from '../shared'
 
-import { defaultTheme, themeLocalStorageKey } from '../ThemeSelector/types'
-
-export const InitTheme: React.FC = () => {
+export function InitTheme() {
   return (
-    // eslint-disable-next-line @next/next/no-before-interactive-script-outside-document
-    <Script
+    <script
+      id="theme-script"
       dangerouslySetInnerHTML={{
         __html: `
-  (function () {
-    function getImplicitPreference() {
-      var mediaQuery = '(prefers-color-scheme: dark)'
-      var mql = window.matchMedia(mediaQuery)
-      var hasImplicitPreference = typeof mql.matches === 'boolean'
-
-      if (hasImplicitPreference) {
-        return mql.matches ? 'dark' : 'light'
-      }
-
-      return null
-    }
-
-    function themeIsValid(theme) {
-      return theme === 'light' || theme === 'dark'
-    }
-
-    var themeToSet = '${defaultTheme}'
-    var preference = window.localStorage.getItem('${themeLocalStorageKey}')
-
-    if (themeIsValid(preference)) {
-      themeToSet = preference
-    } else {
-      var implicitPreference = getImplicitPreference()
-
-      if (implicitPreference) {
-        themeToSet = implicitPreference
-      }
-    }
-
-    document.documentElement.setAttribute('data-theme', themeToSet)
-  })();
+    (function () {
+      function cookie(key) { var entry = document.cookie.split('; ').find(function (item) { return item.indexOf(key + '=') === 0 }); return entry ? entry.slice(key.length + 1) : null; }
+      var preference = null;
+      try { preference = localStorage.getItem('${themeLocalStorageKey}'); } catch (_) {}
+      if (preference === null) preference = cookie('${themePreferenceCookieKey}') || cookie('${themeCookieKey}');
+      if (['light', 'dark'].indexOf(preference) < 0) preference = '${defaultTheme}';
+      var theme = preference;
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme-preference', preference);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#0e1b19' : '#f4f2eb');
+    })();
   `,
       }}
-      id="theme-script"
-      strategy="beforeInteractive"
     />
   )
 }

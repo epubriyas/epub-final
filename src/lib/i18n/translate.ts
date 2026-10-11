@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { translateWithMyMemory } from './mymemory'
+import { fixedTranslation } from './fixed-translations'
 const memory = new Map<string, string>()
 let day = new Date().toISOString().slice(0, 10),
   characters = 0
@@ -14,12 +15,17 @@ const decode = (text: string) =>
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&amp;/g, '&')
-export async function translatePublicText(texts: string[], locale: string): Promise<string[]> {
+export async function translatePublicText(
+  texts: string[],
+  locale: string,
+): Promise<(string | undefined)[]> {
   const key = process.env.GOOGLE_TRANSLATE_API_KEY
   const directory = path.resolve(process.env.TRANSLATION_CACHE_DIR || '.translation-cache')
   const ids = texts.map((text) => createHash('sha256').update(`${locale}\0${text}`).digest('hex'))
   const values = await Promise.all(
-    ids.map(async (id) => {
+    ids.map(async (id, index) => {
+      const fixed = fixedTranslation(texts[index], locale)
+      if (fixed) return fixed
       if (memory.has(id)) return memory.get(id)
       try {
         const text = await readFile(path.join(directory, id + '.txt'), 'utf8')
@@ -57,6 +63,7 @@ export async function translatePublicText(texts: string[], locale: string): Prom
               const value = await translateWithMyMemory(missing[index].text, locale)
               const text = decode(value)
               translated[index] = { translatedText: value }
+              values[missing[index].index] = text
               // Persist each successful segment so retries do not spend quota again.
               await mkdir(directory, { recursive: true })
               memory.set(ids[missing[index].index], text)
@@ -69,7 +76,8 @@ export async function translatePublicText(texts: string[], locale: string): Prom
           }
         }),
       )
-      if (failure) throw failure
+      // A failed segment must not discard the successfully translated segments.
+      if (failure && values.every((value) => value === undefined)) throw failure
     } else {
       const response = await fetch('https://translation.googleapis.com/language/translate/v2', {
         method: 'POST',
@@ -100,6 +108,7 @@ export async function translatePublicText(texts: string[], locale: string): Prom
     await mkdir(directory, { recursive: true })
     await Promise.all(
       missing.map(async (item, index) => {
+        if (!translated[index]) return
         const text = decode(translated[index].translatedText)
         values[item.index] = text
         memory.set(ids[item.index], text)
@@ -108,5 +117,5 @@ export async function translatePublicText(texts: string[], locale: string): Prom
     )
     if (memory.size > 20000) memory.clear()
   }
-  return values as string[]
+  return values
 }

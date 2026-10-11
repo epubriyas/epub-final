@@ -15,6 +15,75 @@ afterEach(() => {
   window.history.replaceState({}, '', '/')
 })
 describe('native language reading', () => {
+  it('uses fixed Tamil wording even when the external provider is unavailable', async () => {
+    window.history.replaceState({}, '', '/ta')
+    const fetchTranslation = vi.fn(async (_url: string, _options: { body: string }) => ({
+      ok: false,
+    }))
+    vi.stubGlobal('fetch', fetchTranslation)
+    render(
+      <LocaleProvider locale="ta" configured>
+        <h1>Your content.</h1>
+        <nav>What We Do</nav>
+        <p>Unregistered dynamic public sentence.</p>
+      </LocaleProvider>,
+    )
+    await waitFor(() => expect(screen.getByRole('heading').textContent).toBe('உங்கள் உள்ளடக்கம்.'))
+    expect(screen.getByRole('navigation').textContent).toBe('எங்கள் சேவைகள்')
+    await waitFor(() =>
+      expect(screen.getByRole('status').textContent).toContain('Some text could not be translated'),
+    )
+    expect(document.documentElement.lang).toBe('ta')
+    expect(JSON.parse(fetchTranslation.mock.calls[0]?.[1]?.body || '{}').texts).not.toContain(
+      'What We Do',
+    )
+  })
+  it('retains the successful first batch when a later batch fails', async () => {
+    window.history.replaceState({}, '', '/hi')
+    const fetchTranslation = vi.fn(async (_url, options) => {
+      if (fetchTranslation.mock.calls.length > 1) return { ok: false }
+      const { texts } = JSON.parse(options.body)
+      return {
+        ok: true,
+        json: async () => ({
+          translations: Object.fromEntries(texts.map((text: string) => [text, `अनुवाद ${text}`])),
+        }),
+      }
+    })
+    vi.stubGlobal('fetch', fetchTranslation)
+    render(
+      <LocaleProvider locale="hi" configured>
+        {Array.from({ length: 33 }, (_, index) => (
+          <p key={index}>{`Public sentence ${index}`}</p>
+        ))}
+      </LocaleProvider>,
+    )
+    await waitFor(() =>
+      expect(screen.getByRole('status').textContent).toContain('Some text could not be translated'),
+    )
+    expect(screen.getByText('अनुवाद Public sentence 0')).toBeDefined()
+    expect(screen.getByText('Public sentence 32')).toBeDefined()
+    expect(document.documentElement.lang).toBe('hi')
+  })
+  it('reports partial server results without discarding their translated content', async () => {
+    window.history.replaceState({}, '', '/hi')
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        json: async () => ({ translations: { 'Your content.': 'आपकी सामग्री।' }, partial: true }),
+      })),
+    )
+    render(
+      <LocaleProvider locale="hi" configured>
+        <h1>Your content.</h1>
+        <p>Untranslated sentence.</p>
+      </LocaleProvider>,
+    )
+    await waitFor(() => expect(screen.getByRole('heading').textContent).toBe('आपकी सामग्री।'))
+    expect(screen.getByRole('status').textContent).toContain('Some text could not be translated')
+    expect(screen.getByRole('button', { name: 'Retry translation' })).toBeDefined()
+  })
   it('translates visible copy and accessibility labels without sending private values', async () => {
     window.history.replaceState({}, '', '/hi/company/careers')
     const requests: string[] = []

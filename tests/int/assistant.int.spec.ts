@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { getAssistantReply } from '@/lib/assistant'
 describe('EPUBTRANS project guidance', () => {
+  it('routes contact enquiries to the separate contact page', () => {
+    expect(getAssistantReply('How can I contact your team?').links?.[0].href).toBe('/contact')
+  })
   it('understands a translation question and carries its context into a follow-up', () => {
     const first = getAssistantReply('I need to translate a brochure')
     expect(first.topic).toBe('localization')
@@ -19,7 +22,7 @@ describe('EPUBTRANS project guidance', () => {
   it('routes job enquiries to careers and unknown questions to a useful starting point', () => {
     expect(getAssistantReply('Are you hiring?').links?.[0].href).toBe('/company/careers')
     expect(
-      getAssistantReply('Something unrelated').links?.some((link) => link.href === '/get-a-quote'),
+      getAssistantReply('Something unrelated').links?.some((link) => link.href === '/contact'),
     ).toBe(true)
   })
 })

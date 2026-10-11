@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useState, useSyncExternalStore } 
 import { usePathname } from 'next/navigation'
 import { getLanguage, stripLanguage } from '@/config/languages'
 import NextLink from 'next/link'
+import { fixedTranslation } from '@/lib/i18n/fixed-translations'
 const LocaleContext = createContext('en')
 export const useSiteLocale = () => useContext(LocaleContext)
 const excluded =
@@ -32,7 +33,7 @@ export function LocaleProvider({
 }
 function PageTranslation({ locale, configured }: { locale: string; configured: boolean }) {
   const pathname = usePathname()
-  const [status, setStatus] = useState<'idle' | 'working' | 'ready' | 'failed'>('idle')
+  const [status, setStatus] = useState<'idle' | 'working' | 'ready' | 'partial' | 'failed'>('idle')
   const [attempt, setAttempt] = useState(0)
   useEffect(() => {
     if (locale === 'en' || !configured) return
@@ -44,10 +45,17 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
     let timer: ReturnType<typeof setTimeout>,
       busy = false,
       pending = false,
-      active = true
+      active = true,
+      incomplete = false
     const normalize = (value: string) => value.replace(/\s+/g, ' ').trim()
     const allowed = (parent: Element | null) => parent && !parent.closest(excluded)
-    const observer = new MutationObserver(() => {
+    const observer = new MutationObserver((changes) => {
+      if (
+        !changes.some(({ target }) =>
+          allowed(target instanceof Element ? target : target.parentElement),
+        )
+      )
+        return
       clearTimeout(timer)
       timer = setTimeout(() => void translate(), 150)
     })
@@ -104,12 +112,46 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
           attributeNodes.push({ element, name, text })
         }
       }
-      const unique = [
+      const sources = [
         ...new Set([
           ...nodes.map((node) => normalize(node.data)),
           ...attributeNodes.map((item) => normalize(item.text)),
         ]),
-      ].filter((text) => !seen.has(text))
+      ]
+      for (const text of sources) {
+        const fixed = fixedTranslation(text, locale)
+        if (fixed) {
+          cache.set(text, fixed)
+          seen.add(text)
+        }
+      }
+      const unique = sources.filter((text) => !seen.has(text))
+      function applyTranslations() {
+        observer.disconnect()
+        for (const node of nodes) {
+          const original = originals.get(node),
+            value = cache.get(normalize(node.data))
+          if (original && value && node.isConnected && node.data === original.source) {
+            const whitespace = node.data.match(/^(\s*)[\s\S]*?(\s*)$/)
+            original.translated = (whitespace?.[1] || '') + value + (whitespace?.[2] || '')
+            node.data = original.translated
+          }
+        }
+        for (const { element, name, text } of attributeNodes) {
+          const value = cache.get(normalize(text)),
+            record = attributes.get(element)?.get(name)
+          if (value && record && element.isConnected && element.getAttribute(name) === text) {
+            record.translated = value
+            element.setAttribute(name, value)
+          }
+        }
+        if (cache.size) {
+          document.documentElement.lang = locale
+          document.documentElement.dir = getLanguage(locale)?.direction || 'ltr'
+        }
+        watch()
+      }
+      applyTranslations()
       try {
         if (unique.length) setStatus('working')
         for (let start = 0; start < unique.length;) {
@@ -135,7 +177,10 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
             signal: controller.signal,
           })
           if (!response.ok) throw new Error('Translation unavailable')
-          const result = (await response.json()) as { translations?: Record<string, string> }
+          const result = (await response.json()) as {
+            translations?: Record<string, string>
+            partial?: boolean
+          }
           if (!result.translations || typeof result.translations !== 'object')
             throw new Error('Invalid translation response')
           for (const text of batch) {
@@ -143,48 +188,26 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
             if (typeof result.translations[text] === 'string')
               cache.set(text, result.translations[text])
           }
+          if (result.partial) incomplete = true
+          if (!active) return
+          applyTranslations()
         }
         if (!active) return
-        observer.disconnect()
-        for (const node of nodes) {
-          const original = originals.get(node),
-            value = cache.get(normalize(node.data))
-          if (original && value && node.isConnected && node.data === original.source) {
-            const whitespace = node.data.match(/^(\s*)[\s\S]*?(\s*)$/)
-            const translated = (whitespace?.[1] || '') + value + (whitespace?.[2] || '')
-            original.translated = translated
-            node.data = translated
-          }
-        }
-        for (const { element, name, text } of attributeNodes) {
-          const value = cache.get(normalize(text)),
-            record = attributes.get(element)?.get(name)
-          if (value && record && element.isConnected && element.getAttribute(name) === text) {
-            record.translated = value
-            element.setAttribute(name, value)
-          }
-        }
-        if (cache.size) {
-          document.documentElement.lang = locale
-          document.documentElement.dir = getLanguage(locale)?.direction || 'ltr'
-        }
         if (!cache.size && unique.length) throw new Error('No translated content returned')
-        watch()
-        setStatus(cache.size ? 'ready' : 'idle')
+        setStatus(incomplete ? 'partial' : cache.size ? 'ready' : 'idle')
       } catch {
         if (active) {
-          setStatus('failed')
+          setStatus(cache.size ? 'partial' : 'failed')
+          incomplete = true
           pending = false
           clearTimeout(timer)
           observer.disconnect()
-          for (const [node, record] of originals)
-            if (node.isConnected && node.data === record.translated) node.data = record.source
-          for (const [element, records] of attributes)
-            for (const [name, record] of records)
-              if (element.isConnected && element.getAttribute(name) === record.translated)
-                element.setAttribute(name, record.source)
-          document.documentElement.lang = 'en'
-          document.documentElement.dir = 'ltr'
+          if (!cache.size) {
+            document.documentElement.lang = 'en'
+            document.documentElement.dir = 'ltr'
+          }
+          // Continue observing new menus and form steps even after a provider outage.
+          watch()
         }
       } finally {
         busy = false
@@ -221,11 +244,13 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
       <span>
         {missing
           ? 'Translation unavailable. English content is shown.'
-          : status === 'working' || status === 'idle'
-            ? 'Translating this page…'
-            : 'Automatically translated. English is the original.'}
+          : status === 'partial'
+            ? 'Some text could not be translated and remains in English.'
+            : status === 'working' || status === 'idle'
+              ? 'Translating this page…'
+              : 'Automatically translated. English is the original.'}
       </span>
-      {configured && status === 'failed' && (
+      {configured && (status === 'failed' || status === 'partial') && (
         <button type="button" onClick={() => setAttempt((value) => value + 1)}>
           Retry translation
         </button>

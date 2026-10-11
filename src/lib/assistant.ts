@@ -72,7 +72,7 @@ export function getAssistantReply(message: string, previousTopic?: AssistantTopi
     return {
       topic: previousTopic,
       text: 'For a conversation with the EPUBTRANS team, start a project enquiry or use the contact details below. This assistant provides automated guidance; it does not send messages or book appointments.',
-      links: [{ label: 'Contact the team', href: '/get-a-quote' }],
+      links: [{ label: 'Contact the team', href: '/contact' }],
     }
   if (/\b(accessib\w*|wcag|pdf\/ua|screen reader)\b/.test(text)) return topics.accessibility
   if (/\b(elearning|e-learning|course|courses|training|lms|scorm)\b/.test(text))
@@ -124,7 +124,7 @@ export function getAssistantReply(message: string, previousTopic?: AssistantTopi
     text: 'I can help with publishing, translation, eLearning, multimedia and accessibility, as well as resources and careers. Which area would you like to explore? For a question specific to your project, our team can review your brief.',
     links: [
       { label: 'Browse all services', href: '/services' },
-      { label: 'Contact the team', href: '/get-a-quote' },
+      { label: 'Contact the team', href: '/contact' },
     ],
   }
 }

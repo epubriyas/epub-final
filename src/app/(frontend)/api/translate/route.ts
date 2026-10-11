@@ -70,9 +70,14 @@ export async function POST(request: NextRequest) {
       ? await translatePublicText([...new Set(allowed)], body.locale)
       : []
     const translated = Object.fromEntries(
-      [...new Set(allowed)].map((text, index) => [text, values[index]]),
+      [...new Set(allowed)].flatMap((text, index) =>
+        typeof values[index] === 'string' ? [[text, values[index]]] : [],
+      ),
     )
-    return Response.json({ translations: translated }, { headers: { 'Cache-Control': 'no-store' } })
+    return Response.json(
+      { translations: translated, partial: values.some((value) => value === undefined) },
+      { headers: { 'Cache-Control': 'no-store' } },
+    )
   } catch {
     return Response.json({ error: 'Translation is temporarily unavailable' }, { status: 503 })
   }
