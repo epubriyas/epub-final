@@ -1,0 +1,10 @@
+{
+  "url": "https://epubtrans-v2.vercel.app",
+  "health": "passed",
+  "adminLogin": "passed",
+  "cloudMediaUpload": "passed",
+  "privateAttachments": "passed",
+  "portfolioImages": "passed",
+  "canonical": "passed",
+  "mobile": "passed"
+}

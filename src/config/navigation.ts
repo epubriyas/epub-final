@@ -50,7 +50,6 @@ export const navigation: NavigationSection[] = [
       },
     ],
   },
-  { label: 'Solutions', href: '/solutions' },
   {
     label: 'Industries',
     href: '/industries',

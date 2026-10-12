@@ -3,6 +3,7 @@ import * as migration_20261007_103126_enterprise from './20261007_103126_enterpr
 import * as migration_20261009_075405_resources_navigation from './20261009_075405_resources_navigation'
 import * as migration_20261011_111342_services_premium from './20261011_111342_services_premium'
 import * as migration_20261011_123958_portfolio_samples from './20261011_123958_portfolio_samples'
+import * as migration_20261012_054530_vercel_private_storage from './20261012_054530_vercel_private_storage'
 
 export const migrations = [
   {
@@ -29,5 +30,10 @@ export const migrations = [
     up: migration_20261011_123958_portfolio_samples.up,
     down: migration_20261011_123958_portfolio_samples.down,
     name: '20261011_123958_portfolio_samples',
+  },
+  {
+    up: migration_20261012_054530_vercel_private_storage.up,
+    down: migration_20261012_054530_vercel_private_storage.down,
+    name: '20261012_054530_vercel_private_storage',
   },
 ]

@@ -30,3 +30,6 @@ artifacts/v2/baseline/
 backups/
 *.tsbuildinfo
 .translation-cache/
+
+.vercel
+.env*

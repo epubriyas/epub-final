@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { mkdir, writeFile, unlink } from 'node:fs/promises'
+import { storePrivateFile, removePrivateFile } from '@/lib/private-files'
 import { randomUUID, createHash } from 'node:crypto'
 import path from 'node:path'
 import { contentPayload } from '@/lib/content'
@@ -124,17 +124,14 @@ export async function POST(request: Request) {
       )
     prepared.push({ file, bytes, extension })
   }
-  const root = path.resolve(process.env.PRIVATE_UPLOAD_DIR || 'private-uploads')
   const written: string[] = []
   const attachments: { originalName: string; path: string; size: number }[] = []
   let reference: string
   try {
-    await mkdir(root, { recursive: true })
     for (const { file, bytes, extension } of prepared) {
       const filename = randomUUID() + extension
-      const destination = path.join(root, filename)
-      await writeFile(destination, bytes, { flag: 'wx', mode: 0o600 })
-      written.push(destination)
+      await storePrivateFile(filename, bytes)
+      written.push(filename)
       attachments.push({
         originalName: path.basename(file.name).slice(0, 200),
         path: filename,
@@ -162,7 +159,7 @@ export async function POST(request: Request) {
     })
     reference = String(result.id)
   } catch {
-    await Promise.allSettled(written.map((file) => unlink(file)))
+    await Promise.allSettled(written.map((file) => removePrivateFile(file)))
     console.error('Quote persistence failed.')
     return NextResponse.json(
       { error: 'Your request could not be saved. Please try again or contact info@epubtrans.com.' },

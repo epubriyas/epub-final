@@ -1,0 +1,15 @@
+.env*
+.vercel
+.git
+.next
+node_modules
+.local-backups
+private-uploads
+public/media
+src/public/media
+.agents
+artifacts
+test-results
+playwright-report
+.translation-cache
+backups

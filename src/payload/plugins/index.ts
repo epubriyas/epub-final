@@ -12,6 +12,7 @@ import { beforeSyncWithSearch } from '@/payload/search/beforeSync'
 
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
+import { privateBlobStorage } from '@/payload/storage/privateBlob'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | EPUBTRANS` : 'EPUBTRANS'
@@ -26,6 +27,7 @@ const generateURL: GenerateURL<Post | Page> = ({ doc, collectionConfig }) => {
 }
 
 export const plugins: Plugin[] = [
+  privateBlobStorage,
   redirectsPlugin({
     collections: ['pages', 'posts'],
     overrides: {

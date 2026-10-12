@@ -1,5 +1,4 @@
-import { readFile } from 'node:fs/promises'
-import path from 'node:path'
+import { readPrivateFile } from '@/lib/private-files'
 import { contentPayload } from '@/lib/content'
 export const runtime = 'nodejs'
 export async function GET(
@@ -22,9 +21,7 @@ export async function GET(
     })
     const file = quote.attachments?.find((file) => file.path === filename)
     if (!file) return new Response('Not found', { status: 404 })
-    const bytes = await readFile(
-      path.resolve(process.env.PRIVATE_UPLOAD_DIR || 'private-uploads', filename),
-    )
+    const bytes = await readPrivateFile(filename)
     return new Response(bytes, {
       headers: {
         'Content-Type': 'application/octet-stream',
