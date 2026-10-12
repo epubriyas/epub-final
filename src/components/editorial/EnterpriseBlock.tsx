@@ -3,6 +3,7 @@ import RichText from '@/components/RichText'
 import { Media } from '@/components/Media'
 import { ArrowLink, PageHero } from './Primitives'
 import Link from '@/components/i18n/LocalizedLink'
+import { servicePath } from '@/config/service-paths'
 
 type LayoutBlock = Page['layout'][number]
 export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
@@ -142,7 +143,13 @@ export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
             )
             .map((record) =>
               typeof record === 'object' && record ? (
-                <Link className="et-content-row" key={record.id} href={`/${route}/${record.slug}`}>
+                <Link
+                  className="et-content-row"
+                  key={record.id}
+                  href={
+                    route === 'services' ? servicePath(record.slug) : `/${route}/${record.slug}`
+                  }
+                >
                   <h3>{record.title}</h3>
                   <span>Explore →</span>
                 </Link>
@@ -170,4 +177,3 @@ export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
     )
   return null
 }
-

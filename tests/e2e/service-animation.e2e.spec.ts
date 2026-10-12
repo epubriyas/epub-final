@@ -5,7 +5,7 @@ test('XML visual runs on entry, finishes and can be replayed with the keyboard',
 }) => {
   const errors: string[] = []
   page.on('pageerror', (error) => errors.push(error.message))
-  await page.goto('/services/scielo-xml-markup')
+  await page.goto('/scielo-xml-markup-services')
   const diagram = page.locator('.sv-xml-animation')
   await diagram.scrollIntoViewIfNeeded()
   await expect(diagram.locator('.sv-xml')).toHaveAttribute('data-playing', 'true')
@@ -35,7 +35,7 @@ test('XML content is static with reduced motion and readable without JavaScript'
   browser,
 }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.goto('/services/scielo-xml-markup')
+  await page.goto('/scielo-xml-markup-services')
   const diagram = page.locator('.sv-xml-animation')
   await diagram.scrollIntoViewIfNeeded()
   await expect(diagram.locator('.sv-xml')).toHaveAttribute('data-playing', 'false')
@@ -48,7 +48,7 @@ test('XML content is static with reduced motion and readable without JavaScript'
   ).toBe('none')
   const context = await browser.newContext({ javaScriptEnabled: false, baseURL: page.url() })
   const staticPage = await context.newPage()
-  await staticPage.goto('/services/scielo-xml-markup')
+  await staticPage.goto('/scielo-xml-markup-services')
   await expect(staticPage.locator('.sv-xml-animation code')).toContainText('Publication content.')
   await context.close()
 })

@@ -24,7 +24,7 @@ const projectGuides = [
       'Confirm your audience, style guide and preferred spelling.',
       'List the print and digital formats you need, with key delivery dates.',
     ],
-    href: '/services/copyediting',
+    href: '/copyediting-services',
     link: 'Explore editorial support',
   },
   {
@@ -35,7 +35,7 @@ const projectGuides = [
       'Provide approved terminology, brand guidance and source assets.',
       'Agree on in-country review and the formats needed for each market.',
     ],
-    href: '/services/translation',
+    href: '/translation-services',
     link: 'Explore language services',
   },
   {

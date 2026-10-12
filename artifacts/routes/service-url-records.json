@@ -1,0 +1,137 @@
+[
+  {
+    "id": 14,
+    "title": "Translation Services",
+    "cmsSlug": "translation",
+    "path": "/translation-services",
+    "localhost": "http://localhost:3000/translation-services",
+    "production": "https://www.epubtrans.com/translation-services",
+    "status": "published"
+  },
+  {
+    "id": 5,
+    "title": "Desktop Publishing Services",
+    "cmsSlug": "desktop-publishing",
+    "path": "/desktop-publishing-services",
+    "localhost": "http://localhost:3000/desktop-publishing-services",
+    "production": "https://www.epubtrans.com/desktop-publishing-services",
+    "status": "published"
+  },
+  {
+    "id": 1,
+    "title": "Copyediting Services",
+    "cmsSlug": "copyediting",
+    "path": "/copyediting-services",
+    "localhost": "http://localhost:3000/copyediting-services",
+    "production": "https://www.epubtrans.com/copyediting-services",
+    "status": "published"
+  },
+  {
+    "id": 15,
+    "title": "Typesetting Services",
+    "cmsSlug": "typesetting",
+    "path": "/typesetting-services",
+    "localhost": "http://localhost:3000/typesetting-services",
+    "production": "https://www.epubtrans.com/typesetting-services",
+    "status": "published"
+  },
+  {
+    "id": 3,
+    "title": "Cover Page Design Services",
+    "cmsSlug": "cover-page-design",
+    "path": "/cover-page-design-services",
+    "localhost": "http://localhost:3000/cover-page-design-services",
+    "production": "https://www.epubtrans.com/cover-page-design-services",
+    "status": "published"
+  },
+  {
+    "id": 11,
+    "title": "SciELO XML Markup Services",
+    "cmsSlug": "scielo-xml-markup",
+    "path": "/scielo-xml-markup-services",
+    "localhost": "http://localhost:3000/scielo-xml-markup-services",
+    "production": "https://www.epubtrans.com/scielo-xml-markup-services",
+    "status": "published"
+  },
+  {
+    "id": 10,
+    "title": "Proofreading Services",
+    "cmsSlug": "proofreading",
+    "path": "/proofreading-services",
+    "localhost": "http://localhost:3000/proofreading-services",
+    "production": "https://www.epubtrans.com/proofreading-services",
+    "status": "published"
+  },
+  {
+    "id": 6,
+    "title": "eBook Creation Services",
+    "cmsSlug": "ebook-creation",
+    "path": "/ebook-creation-services",
+    "localhost": "http://localhost:3000/ebook-creation-services",
+    "production": "https://www.epubtrans.com/ebook-creation-services",
+    "status": "published"
+  },
+  {
+    "id": 8,
+    "title": "Graphic Design and Image Services",
+    "cmsSlug": "graphic-design-image-services",
+    "path": "/graphic-design-image-services",
+    "localhost": "http://localhost:3000/graphic-design-image-services",
+    "production": "https://www.epubtrans.com/graphic-design-image-services",
+    "status": "published"
+  },
+  {
+    "id": 4,
+    "title": "Data Conversion Services",
+    "cmsSlug": "data-conversion",
+    "path": "/data-conversion-services",
+    "localhost": "http://localhost:3000/data-conversion-services",
+    "production": "https://www.epubtrans.com/data-conversion-services",
+    "status": "published"
+  },
+  {
+    "id": 12,
+    "title": "Subtitling Services",
+    "cmsSlug": "subtitling",
+    "path": "/subtitling-services",
+    "localhost": "http://localhost:3000/subtitling-services",
+    "production": "https://www.epubtrans.com/subtitling-services",
+    "status": "published"
+  },
+  {
+    "id": 16,
+    "title": "Voiceover Services",
+    "cmsSlug": "voiceover",
+    "path": "/voiceover-services",
+    "localhost": "http://localhost:3000/voiceover-services",
+    "production": "https://www.epubtrans.com/voiceover-services",
+    "status": "published"
+  },
+  {
+    "id": 13,
+    "title": "Transcription Services",
+    "cmsSlug": "transcription",
+    "path": "/transcription-services",
+    "localhost": "http://localhost:3000/transcription-services",
+    "production": "https://www.epubtrans.com/transcription-services",
+    "status": "published"
+  },
+  {
+    "id": 7,
+    "title": "e-Learning Localization Services",
+    "cmsSlug": "elearning-localization",
+    "path": "/elearning-localization-services",
+    "localhost": "http://localhost:3000/elearning-localization-services",
+    "production": "https://www.epubtrans.com/elearning-localization-services",
+    "status": "published"
+  },
+  {
+    "id": 2,
+    "title": "Accessibility Services",
+    "cmsSlug": "accessibility",
+    "path": "/accessibility-services",
+    "localhost": "http://localhost:3000/accessibility-services",
+    "production": "https://www.epubtrans.com/accessibility-services",
+    "status": "published"
+  }
+]

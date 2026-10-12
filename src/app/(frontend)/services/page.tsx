@@ -4,6 +4,7 @@ import Link from '@/components/i18n/LocalizedLink'
 import { ArrowUpRight } from 'lucide-react'
 import { serviceGroups, serviceGroup } from '@/config/service-design'
 import { ServiceCTA } from '@/components/services/ServiceSections'
+import { servicePath } from '@/config/service-paths'
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
   title: 'What We Do',
@@ -58,7 +59,7 @@ export default async function ServicesPage() {
                   <Link
                     className="sp-catalog-link"
                     key={service.id}
-                    href={`/services/${service.slug}`}
+                    href={servicePath(service.slug)}
                   >
                     <div>
                       <h3>{service.title}</h3>

@@ -2,6 +2,7 @@ import { cache } from 'react'
 import type { CaseStudy, PortfolioPreview, Service } from '@/payload-types'
 import { contentPayload } from '@/lib/content'
 import { serviceQuoteHref } from '@/config/service-design'
+import { servicePath } from '@/config/service-paths'
 
 export interface WorkSample {
   id: number
@@ -95,7 +96,7 @@ export function toWorkSample(doc: WorkDocument, catalog: Service[]): WorkSample 
     sectionCount: doc.readerSections?.length || 0,
     previewNote: doc.previewNote || '',
     sourcePageCount: doc.sourcePageCount || null,
-    services: services.map(({ title, slug }) => ({ title, href: `/services/${slug}` })),
+    services: services.map(({ title, slug }) => ({ title, href: servicePath(slug) })),
     quoteHref: services[0] ? serviceQuoteHref(services[0]) : '/get-a-quote',
   }
 }

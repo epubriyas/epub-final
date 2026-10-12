@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { legacyRedirects } from '@/config/redirects'
+import { serviceRedirects } from '@/config/service-paths'
 import { getLanguage, languagePath } from '@/config/languages'
 export function proxy(request: NextRequest) {
   const original = request.nextUrl.pathname.replace(/\/$/, '') || '/'
@@ -21,7 +22,7 @@ export function proxy(request: NextRequest) {
             ? '/resources'
             : pathname.startsWith('/posts/')
               ? pathname.replace('/posts/', '/resources/')
-              : legacyRedirects[pathname]
+              : serviceRedirects[pathname] || legacyRedirects[pathname]
   if (target) {
     const url = request.nextUrl.clone()
     url.pathname = languagePath(target, locale)

@@ -7,7 +7,7 @@ describe('EPUBTRANS project guidance', () => {
   it('understands a translation question and carries its context into a follow-up', () => {
     const first = getAssistantReply('I need to translate a brochure')
     expect(first.topic).toBe('localization')
-    expect(first.links?.[0].href).toBe('/services/translation')
+    expect(first.links?.[0].href).toBe('/translation-services')
     expect(getAssistantReply('I need translation services').topic).toBe('localization')
     const followup = getAssistantReply('It is 200 pages for next month', first.topic)
     expect(followup.topic).toBe('localization')

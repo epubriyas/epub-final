@@ -13,25 +13,25 @@ const topics: Record<AssistantTopic, AssistantReply> = {
   localization: {
     topic: 'localization',
     text: 'Our language services cover translation, localization and multilingual desktop publishing. Which source language, target languages and content format do you have in mind?',
-    links: [{ label: 'Translation & localization', href: '/services/translation' }],
+    links: [{ label: 'Translation & localization', href: '/translation-services' }],
   },
   learning: {
     topic: 'learning',
     text: 'We help adapt eLearning for different languages, cultures and audiences. Share the course format, target markets and whether you need voiceover or subtitles.',
-    links: [{ label: 'Explore eLearning localization', href: '/services/elearning-localization' }],
+    links: [{ label: 'Explore eLearning localization', href: '/elearning-localization-services' }],
   },
   media: {
     topic: 'media',
     text: 'We support subtitling, voiceover and transcription. What type of audio or video are you working with, and which languages do you need?',
     links: [
-      { label: 'Subtitling', href: '/services/subtitling' },
-      { label: 'Voiceover', href: '/services/voiceover' },
+      { label: 'Subtitling', href: '/subtitling-services' },
+      { label: 'Voiceover', href: '/voiceover-services' },
     ],
   },
   accessibility: {
     topic: 'accessibility',
     text: 'We help with accessible document and digital content requirements. Tell us the delivery format and any accessibility standard or audit requirements in your brief.',
-    links: [{ label: 'Explore accessibility services', href: '/services/accessibility' }],
+    links: [{ label: 'Explore accessibility services', href: '/accessibility-services' }],
   },
 }
 export function getAssistantReply(message: string, previousTopic?: AssistantTopic): AssistantReply {

@@ -80,7 +80,7 @@ const designs: Record<string, ServiceDesign> = {
     introduction: 'Care for the detail. Preserve the meaning.',
     source: 'Original manuscript',
     output: 'Reviewed copy',
-    related: ['proofreading', 'typesetting', 'indexing'],
+    related: ['proofreading', 'typesetting'],
     photo: {
       src: '/industries/publishing.jpg',
       alt: 'A fountain pen on manuscript paper, representing editorial attention to detail',

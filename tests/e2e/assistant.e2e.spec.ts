@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
     const last = messages[messages.length - 1].content.toLowerCase()
     const text = /quote|cost/.test(last)
       ? 'The scope and volume determine pricing. [Prepare a project enquiry](/get-a-quote)'
-      : 'We can help localize your brochure. Which languages do you need? [Translation & localization](/services/translation)'
+      : 'We can help localize your brochure. Which languages do you need? [Translation & localization](/translation-services)'
     await route.fulfill({
       contentType: 'application/x-ndjson',
       body:
@@ -34,7 +34,7 @@ test('assistant supports conversation, reset, keyboard dismissal and service han
   await page.getByLabel('Your message', { exact: true }).press('Enter')
   await expect(dialog.getByRole('link', { name: 'Translation & localization' })).toHaveAttribute(
     'href',
-    '/services/translation',
+    '/translation-services',
   )
   await page.getByLabel('Your message', { exact: true }).fill('How much will it cost?')
   const followUp = page.waitForRequest('**/api/assistant')

@@ -1,6 +1,7 @@
 import { getServerSideSitemap } from 'next-sitemap'
 import { contentPayload } from '@/lib/content'
 import { getServerSideURL } from '@/utilities/getURL'
+import { servicePath } from '@/config/service-paths'
 export const dynamic = 'force-dynamic'
 export async function GET() {
   const payload = await contentPayload()
@@ -42,7 +43,10 @@ export async function GET() {
     for (const doc of records.docs) {
       if ('permissionConfirmed' in doc && !doc.permissionConfirmed) continue
       sitemap.push({
-        loc: `${base}/${collection === 'case-studies' ? 'work' : collection === 'careers' ? 'company/careers' : collection}/${doc.slug}`,
+        loc:
+          collection === 'services'
+            ? `${base}${servicePath(doc.slug)}`
+            : `${base}/${collection === 'case-studies' ? 'work' : collection === 'careers' ? 'company/careers' : collection}/${doc.slug}`,
       })
     }
   }

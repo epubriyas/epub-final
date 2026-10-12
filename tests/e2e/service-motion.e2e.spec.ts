@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test('major sections have distinct motion and entry runs only once', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
-  await page.goto('/services/typesetting')
+  await page.goto('/typesetting-services')
   const sections = [
     ['hero', 'h1', 'sp-hero-type'],
     ['capabilities', '.sp-capability-list > li', 'sp-editorial-row'],
@@ -81,7 +81,7 @@ test('transformation stories differ by service and finish with a complete connec
 })
 
 test('following a related service initializes its own animation sequence', async ({ page }) => {
-  await page.goto('/services/typesetting')
+  await page.goto('/typesetting-services')
   await expect(page.locator('[data-motion="hero"]')).toHaveAttribute('data-motion-state', 'run')
   const related = page.locator('.sp-related-grid > a').first()
   const href = await related.getAttribute('href')
@@ -96,7 +96,7 @@ test('reduced motion and no JavaScript preserve final content; preference change
   page,
   browser,
 }) => {
-  await page.goto('/services/typesetting')
+  await page.goto('/typesetting-services')
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await expect(page.locator('[data-motion="hero"]')).toHaveAttribute('data-motion-state', 'static')
   for (const variant of ['hero', 'capabilities', 'diagram', 'process', 'related', 'cta']) {
@@ -114,7 +114,7 @@ test('reduced motion and no JavaScript preserve final content; preference change
   }
   const context = await browser.newContext({ javaScriptEnabled: false, baseURL: page.url() })
   const staticPage = await context.newPage()
-  await staticPage.goto('/services/typesetting')
+  await staticPage.goto('/typesetting-services')
   await expect(staticPage.locator('h1')).toBeVisible()
   await expect(staticPage.locator('.sp-route-ink')).toBeVisible()
   expect(await staticPage.locator('h1').evaluate((el) => getComputedStyle(el).clipPath)).toBe(
@@ -127,7 +127,7 @@ test('reduced motion and no JavaScript preserve final content; preference change
 test('optional CMS FAQ keeps native keyboard expansion with CSS height enhancement', async ({
   page,
 }) => {
-  await page.goto('/services/typesetting')
+  await page.goto('/typesetting-services')
   await expect(page.locator('[data-motion="hero"]')).toHaveAttribute('data-motion-state', 'run')
   // Published fixtures currently have no FAQs; mount the same native markup without changing CMS data.
   await page.locator('.sp-page').evaluate((main) => {

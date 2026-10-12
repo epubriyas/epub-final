@@ -5,6 +5,7 @@ import type { Service } from '@/payload-types'
 import { serviceDesign, serviceQuoteHref } from '@/config/service-design'
 import { TransformationDiagram } from './visuals/TransformationDiagram'
 import { SubtitleStudy, AccessibilityStudy } from './visuals/ServiceStudy'
+import { servicePath } from '@/config/service-paths'
 import type { CSSProperties } from 'react'
 
 export function ServiceIntroduction({ service }: { service: Service }) {
@@ -165,7 +166,7 @@ export function RelatedServices({ services }: { services: Service[] }) {
         {services.map((item, i) => (
           <Link
             key={item.id}
-            href={`/services/${item.slug}`}
+            href={servicePath(item.slug)}
             style={{ '--fan': i - (services.length - 1) / 2 } as CSSProperties}
           >
             <span className="sp-small-number">0{i + 1}</span>

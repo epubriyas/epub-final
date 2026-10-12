@@ -7,97 +7,91 @@ const services = [
   {
     number: '01',
     title: 'Accessibility Services',
-    href: '/services/accessibility',
+    href: '/accessibility-services',
     category: 'Accessibility',
   },
   {
     number: '02',
     title: 'Cover Page Design Services',
-    href: '/services/cover-page-design',
+    href: '/cover-page-design-services',
     category: 'Publishing',
   },
   {
     number: '03',
     title: 'Copyediting Services',
-    href: '/services/copyediting',
+    href: '/copyediting-services',
     category: 'Publishing',
   },
   {
     number: '04',
     title: 'Data Conversion Services',
-    href: '/services/data-conversion',
+    href: '/data-conversion-services',
     category: 'Publishing',
   },
   {
     number: '05',
     title: 'Desktop Publishing Services',
-    href: '/services/desktop-publishing',
+    href: '/desktop-publishing-services',
     category: 'Translation & Localization',
   },
   {
     number: '06',
     title: 'e-Learning Localization Services',
-    href: '/services/elearning-localization',
+    href: '/elearning-localization-services',
     category: 'Translation & Localization',
   },
   {
     number: '07',
     title: 'eBook Creation Services',
-    href: '/services/ebook-creation',
+    href: '/ebook-creation-services',
     category: 'Publishing',
   },
   {
     number: '08',
     title: 'Graphic Design and Image Services',
-    href: '/services/graphic-design-image-services',
+    href: '/graphic-design-image-services',
     category: 'Publishing',
   },
   {
     number: '09',
-    title: 'Indexing Services',
-    href: '/services/indexing',
+    title: 'Proofreading Services',
+    href: '/proofreading-services',
     category: 'Publishing',
   },
   {
     number: '10',
-    title: 'Proofreading Services',
-    href: '/services/proofreading',
+    title: 'SciELO XML Markup Services',
+    href: '/scielo-xml-markup-services',
     category: 'Publishing',
   },
   {
     number: '11',
-    title: 'SciELO XML Markup Services',
-    href: '/services/scielo-xml-markup',
-    category: 'Publishing',
+    title: 'Subtitling Services',
+    href: '/subtitling-services',
+    category: 'Translation & Localization',
   },
   {
     number: '12',
-    title: 'Subtitling Services',
-    href: '/services/subtitling',
+    title: 'Transcription Services',
+    href: '/transcription-services',
     category: 'Translation & Localization',
   },
   {
     number: '13',
-    title: 'Transcription Services',
-    href: '/services/transcription',
+    title: 'Translation Services',
+    href: '/translation-services',
     category: 'Translation & Localization',
   },
   {
     number: '14',
-    title: 'Translation Services',
-    href: '/services/translation',
-    category: 'Translation & Localization',
-  },
-  {
-    number: '15',
     title: 'Typesetting Services',
-    href: '/services/typesetting',
+    href: '/typesetting-services',
     category: 'Publishing',
   },
   {
-    number: '16',
+    number: '15',
     title: 'Voiceover Services',
-    href: '/services/voiceover',
+    href: '/voiceover-services',
     category: 'Translation & Localization',
   },
 ]
@@ -117,8 +111,7 @@ export function ServicesOverview() {
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-[#526568]">
-            Explore our publishing, translation, localization, and
-            accessibility services.
+            Explore our publishing, translation, localization, and accessibility services.
           </p>
         </div>
 

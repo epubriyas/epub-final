@@ -185,7 +185,7 @@ test('dark content, menus, forms and assistant meet automated accessibility chec
     for (const route of [
       '/',
       '/services',
-      '/services/copyediting',
+      '/copyediting-services',
       '/resources',
       '/company',
       '/company/careers',

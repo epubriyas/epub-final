@@ -15,14 +15,14 @@ test('service menu uses the Company presentation and keeps every service reachab
     'Learning',
     'Accessibility',
   ])
-  await expect(menu.getByRole('link')).toHaveCount(17)
+  await expect(menu.getByRole('link')).toHaveCount(16)
   await expect(menu.locator('.et-mega-group-description')).toHaveCount(5)
   await menu.evaluate((element) =>
     Promise.all(element.getAnimations().map((animation) => animation.finished)),
   )
   await page.screenshot({ path: 'artifacts/v2/screens/services-menu-desktop.png' })
   await menu.getByRole('link', { name: 'Copyediting', exact: true }).click()
-  await expect(page).toHaveURL(/\/services\/copyediting$/)
+  await expect(page).toHaveURL(/\/copyediting-services$/)
   await expect(page.locator('main h1')).toBeVisible()
 })
 

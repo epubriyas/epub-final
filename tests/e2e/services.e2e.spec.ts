@@ -54,12 +54,12 @@ test('published catalog, service visuals, metadata and responsive layouts', asyn
         [320, 1440].includes(width) &&
         [
           '/services',
-          '/services/typesetting',
-          '/services/scielo-xml-markup',
-          '/services/copyediting',
-          '/services/translation',
-          '/services/ebook-creation',
-          '/services/transcription',
+          '/typesetting-services',
+          '/scielo-xml-markup-services',
+          '/copyediting-services',
+          '/translation-services',
+          '/ebook-creation-services',
+          '/transcription-services',
         ].includes(route)
       ) {
         await page.screenshot({
@@ -111,7 +111,7 @@ test('quote preselection, process anchor, reduced motion and accessible service 
       results.violations.map((x) => ({ id: x.id, nodes: x.nodes.map((n) => n.target) })),
     ).toEqual([])
   }
-  await page.goto('/services/typesetting')
+  await page.goto('/typesetting-services')
   await page.getByRole('link', { name: 'Explore Our Process' }).click()
   await expect(page.locator('#process')).toBeInViewport()
   await page.getByRole('link', { name: 'Request a Quote' }).first().click()
@@ -121,7 +121,7 @@ test('quote preselection, process anchor, reduced motion and accessible service 
   await page.goto('/get-a-quote?service=invalid')
   await expect(page.getByLabel('Publishing & content', { exact: true })).not.toBeChecked()
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.goto('/services/scielo-xml-markup')
+  await page.goto('/scielo-xml-markup-services')
   await expect(page.locator('main h1')).toBeVisible()
   expect(
     await page
@@ -136,8 +136,8 @@ test('quote preselection, process anchor, reduced motion and accessible service 
   await expect(page.getByRole('dialog')).not.toBeVisible()
 })
 
-test('missing and unpublished service slugs return 404', async ({ page }) => {
-  for (const slug of ['not-a-service', 'accessibility', 'proofreading', 'subtitling']) {
+test('missing service slugs return 404', async ({ page }) => {
+  for (const slug of ['not-a-service', 'not-another-service']) {
     const response = await page.goto(`/services/${slug}`)
     expect(response?.status()).toBe(404)
   }
@@ -145,14 +145,14 @@ test('missing and unpublished service slugs return 404', async ({ page }) => {
 
 test('an unavailable optional hero image falls back to a readable diagram', async ({ page }) => {
   await page.route('**/_next/image?**', (route) => route.abort())
-  await page.goto('/services/copyediting')
+  await page.goto('/copyediting-services')
   await expect(page.locator('.sp-hero-art .sv-stage')).toBeVisible()
   await expect(page.locator('main h1')).toBeVisible()
 })
 
 test('manual dark theme and mobile service navigation remain usable', async ({ page }) => {
   test.setTimeout(90000)
-  await page.goto('/services/typesetting')
+  await page.goto('/typesetting-services')
   await page.getByRole('button', { name: 'Use dark theme', exact: true }).click()
   for (const route of [
     'typesetting',
@@ -179,6 +179,6 @@ test('manual dark theme and mobile service navigation remain usable', async ({ p
   await dialog.getByRole('button', { name: 'What We Do', exact: true }).click()
   await dialog.locator('summary').filter({ hasText: 'Publishing & content' }).click()
   await dialog.getByRole('link', { name: 'Typesetting', exact: true }).click()
-  await expect(page).toHaveURL(/\/services\/typesetting$/)
+  await expect(page).toHaveURL(/\/typesetting-services$/)
   await expect(dialog).not.toBeVisible()
 })

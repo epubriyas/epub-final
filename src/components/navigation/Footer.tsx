@@ -8,10 +8,10 @@ const footerGroups = [
     title: 'Capabilities',
     links: [
       { label: 'Publishing & content', href: '/services' },
-      { label: 'Translation & localization', href: '/services/translation' },
-      { label: 'Subtitling', href: '/services/subtitling' },
-      { label: 'eLearning localization', href: '/services/elearning-localization' },
-      { label: 'Accessibility', href: '/services/accessibility' },
+      { label: 'Translation & localization', href: '/translation-services' },
+      { label: 'Subtitling', href: '/subtitling-services' },
+      { label: 'eLearning localization', href: '/elearning-localization-services' },
+      { label: 'Accessibility', href: '/accessibility-services' },
     ],
   },
   {

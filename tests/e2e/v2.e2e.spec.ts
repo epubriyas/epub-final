@@ -19,7 +19,7 @@ test('responsive homepage and editorial routes render without overflow', async (
   }
   for (const route of [
     '/services',
-    '/services/copyediting',
+    '/copyediting-services',
     '/solutions',
     '/solutions/digital-publishing',
     '/industries',
@@ -35,8 +35,8 @@ test('responsive homepage and editorial routes render without overflow', async (
     await expect(page.locator('h1')).toHaveCount(1)
     expect(await page.title()).not.toContain('Payload Website Template')
   }
-  await page.goto('/services/accessibility')
-  await expect(page.locator('h1')).toContainText('out of the edition')
+  await page.goto('/accessibility-services')
+  await expect(page.locator('h1')).toContainText('Accessibility Services')
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/')
   expect(

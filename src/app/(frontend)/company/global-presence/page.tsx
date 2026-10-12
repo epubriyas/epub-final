@@ -39,7 +39,7 @@ export default function GlobalPresence() {
             </article>
           ))}
         </div>
-        <ArrowLink href="/services/translation">Explore translation and localization</ArrowLink>
+        <ArrowLink href="/translation-services">Explore translation and localization</ArrowLink>
       </section>
       <ContentCTA />
     </CompanyMotion>

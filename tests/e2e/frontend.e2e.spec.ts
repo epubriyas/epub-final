@@ -40,7 +40,7 @@ test('Resources navigation and project checklists work on desktop and mobile', a
   await expect(page.locator('.et-resource-guides article')).toHaveCount(3)
   await expect(page.getByRole('link', { name: 'Explore editorial support' })).toHaveAttribute(
     'href',
-    '/services/copyediting',
+    '/copyediting-services',
   )
   await page.setViewportSize({ width: 375, height: 900 })
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(

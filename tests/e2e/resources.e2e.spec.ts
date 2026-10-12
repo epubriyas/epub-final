@@ -50,7 +50,7 @@ test('Resources menu has the requested groups and working routes on desktop and 
     .click()
   await expect(
     page.locator('.et-mega-services').getByRole('link', { name: 'Copyediting', exact: true }),
-  ).toHaveAttribute('href', '/services/copyediting')
+  ).toHaveAttribute('href', '/copyediting-services')
   await page.keyboard.press('Escape')
   await page.setViewportSize({ width: 390, height: 844 })
   await page.getByRole('button', { name: 'Open navigation' }).click()
