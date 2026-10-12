@@ -56,3 +56,18 @@ it('blocks repeated submissions while saving and preserves the brief in transpor
   )
   expect(screen.queryByRole('button', { name: 'Submit request' })).toBeNull()
 })
+
+it('preselects an allowlisted service category from the existing quote flow', () => {
+  render(<QuoteForm initialService="Translation & localization" />)
+  expect((screen.getByLabelText('Translation & localization') as HTMLInputElement).checked).toBe(
+    true,
+  )
+})
+
+it('ignores an unknown service category', () => {
+  render(<QuoteForm initialService="untrusted-value" />)
+  expect((screen.getByLabelText('Publishing & content') as HTMLInputElement).checked).toBe(false)
+  expect((screen.getByLabelText('Translation & localization') as HTMLInputElement).checked).toBe(
+    false,
+  )
+})

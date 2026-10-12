@@ -1,0 +1,478 @@
+/* Inventory: docs/SERVICE-ANIMATIONS.md. Base content always renders in its final state. */
+.sp-page {
+  --sp-motion-fast: 240ms;
+  --sp-motion-row: 550ms;
+  --sp-motion-feature: 800ms;
+  --sp-motion-route: 900ms;
+  --sp-motion-stagger: 90ms;
+  --sp-motion-step: 400ms;
+  --sp-motion-distance: 8px;
+  --sp-motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sp-transform-route {
+  display: block;
+  width: 48px;
+  height: 80px;
+  overflow: visible;
+  align-self: center;
+}
+.sp-transform-panels {
+  grid-template-columns: minmax(0, 1fr) 48px minmax(0, 1fr);
+}
+.sp-route-track {
+  stroke: var(--sp-border);
+  stroke-width: 2;
+}
+.sp-route-ink {
+  stroke: var(--sp-action);
+  stroke-width: 2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+}
+.sp-transform-route circle {
+  fill: var(--sp-action);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.sp-cta > .et-container {
+  position: relative;
+}
+.sp-cta > .et-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(32px, 5vw, 70px);
+  aspect-ratio: 1;
+  border-top: 3px solid var(--sp-orange);
+  border-right: 3px solid var(--sp-orange);
+  pointer-events: none;
+}
+.sp-cta .sp-button {
+  transition:
+    box-shadow 180ms,
+    background 180ms;
+}
+.sp-cta .sp-button:is(:hover, :focus-visible) {
+  box-shadow: inset 0 -4px var(--sp-orange);
+}
+.sp-cta .sp-button:hover svg {
+  transform: none;
+}
+.sp-related-grid > a .sp-text-link {
+  transition: transform var(--sp-motion-fast) var(--sp-motion-ease);
+}
+.sp-related-grid > a:is(:hover, :focus-visible) .sp-text-link {
+  transform: translateX(4px);
+}
+
+/* Native details remains functional in browsers without intrinsic-size transitions. */
+@supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+  .sp-faq details {
+    interpolate-size: allow-keywords;
+  }
+  .sp-faq details::details-content {
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+    transition:
+      height var(--sp-motion-fast) ease,
+      opacity var(--sp-motion-fast) ease,
+      content-visibility var(--sp-motion-fast) allow-discrete;
+  }
+  .sp-faq details[open]::details-content {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-motion='hero'][data-motion-state='run'] h1 {
+    animation: sp-hero-type 700ms var(--sp-motion-ease) both;
+  }
+  [data-motion='hero'][data-motion-state='run'] .sp-lead {
+    animation: sp-hero-copy 500ms ease 180ms both;
+  }
+  [data-motion='hero'][data-motion-state='run'] .sp-button {
+    animation: sp-hero-action 480ms var(--sp-motion-ease) 240ms both;
+  }
+  [data-motion='hero'][data-motion-state='run'] .sp-hero-art > .sv-stage:not(.sv-stage-xml) {
+    animation: sp-hero-color var(--sp-motion-feature) var(--sp-motion-ease) both;
+  }
+  [data-motion='hero'][data-motion-state='run'] .sp-image {
+    animation: sp-photo-aperture var(--sp-motion-route) var(--sp-motion-ease) both;
+  }
+  [data-motion='capabilities'][data-motion-state='run'] .sp-capability-list > li {
+    animation: sp-editorial-row var(--sp-motion-row) var(--sp-motion-ease) both;
+    animation-delay: calc(min(var(--motion-index), 10) * var(--sp-motion-stagger));
+  }
+  [data-motion='diagram'][data-motion-state='run'] .sp-route-source {
+    animation: sp-node-check 350ms var(--sp-motion-ease) both;
+  }
+  [data-motion='diagram'][data-motion-state='run'] .sp-route-ink {
+    animation: sp-route-trace var(--sp-motion-route) ease 250ms both;
+  }
+  [data-motion='diagram'][data-motion-state='run'] .sp-route-destination {
+    animation: sp-node-check 350ms var(--sp-motion-ease) 1100ms both;
+  }
+  [data-motion='diagram'][data-motion-state='run'] .sp-transform-output {
+    --sp-output-animation: sp-format-boundary;
+    animation: var(--sp-output-animation) 650ms var(--sp-motion-ease) 1100ms both;
+  }
+  .sp-transformation-xml[data-motion-state='run'] .sp-transform-output {
+    animation: none;
+  }
+  .sp-transformation-xml[data-motion-state='run'] code {
+    animation: sp-schema-check 950ms ease 1100ms both;
+  }
+  .sp-transformation-layout[data-motion-state='run'] .sp-transform-output {
+    animation: none;
+  }
+  .sp-transformation-layout[data-motion-state='run'] .sp-transform-publication > div {
+    animation: sp-column-align 650ms var(--sp-motion-ease) 1100ms both;
+  }
+  .sp-transformation-layout[data-motion-state='run'] .sp-transform-publication > div + div {
+    animation-delay: 1250ms;
+  }
+  .sp-transformation-reader[data-motion-state='run'] .sp-transform-output {
+    --sp-output-animation: sp-edition-turn;
+  }
+  .sp-transformation-language[data-motion-state='run'] .sp-transform-output {
+    animation: none;
+  }
+  .sp-transformation-language[data-motion-state='run'] .sp-transform-output ul {
+    animation: sp-language-resolve 900ms ease 1100ms both;
+  }
+  .sp-transformation-learning[data-motion-state='run'] .sp-transform-output {
+    --sp-output-animation: sp-module-order;
+  }
+  .sp-transformation-design[data-motion-state='run'] .sp-transform-output,
+  .sp-transformation-editing[data-motion-state='run'] .sp-transform-output,
+  .sp-transformation-index[data-motion-state='run'] .sp-transform-output,
+  .sp-transformation-accessibility[data-motion-state='run'] .sp-transform-output,
+  .sp-transformation-audio[data-motion-state='run'] .sp-transform-output,
+  .sp-transformation-subtitles[data-motion-state='run'] .sp-transform-output {
+    animation: none;
+  }
+  .sp-transformation-design[data-motion-state='run'] .sp-transform-publication {
+    animation: sp-palette-assemble 750ms var(--sp-motion-ease) 1100ms both;
+  }
+  .sp-transformation-editing[data-motion-state='run'] ins {
+    animation: sp-revision-mark 900ms ease 1100ms both;
+  }
+  .sp-transformation-editing[data-motion-state='run'] del {
+    animation: sp-revision-retire 900ms ease 1100ms both;
+  }
+  .sp-transformation-index[data-motion-state='run'] dl > div {
+    animation: sp-index-marker 600ms ease both;
+    animation-delay: calc(1100ms + var(--motion-index) * 180ms);
+  }
+  .sp-transformation-accessibility[data-motion-state='run'] .sp-transform-output li {
+    animation: sp-level-check 550ms ease both;
+    animation-delay: calc(1100ms + var(--motion-index) * 180ms);
+  }
+  .sp-transformation-audio[data-motion-state='run'] .sp-transform-lines {
+    animation: sp-audio-rhythm 900ms ease 1100ms both;
+  }
+  .sp-transformation-audio[data-motion-state='run'] .sv-wave i {
+    animation: sp-wave-sample 650ms ease 200ms both;
+  }
+  .sp-transformation-subtitles[data-motion-state='run'] .sp-transform-caption {
+    animation: sp-caption-cursor 950ms linear 1100ms both;
+  }
+  [data-motion='process'][data-motion-state='run'] .sp-timeline > li {
+    animation: sp-stage-spotlight 650ms ease both;
+    animation-delay: calc(min(var(--motion-index), 12) * var(--sp-motion-step));
+  }
+  [data-motion='process'][data-motion-state='run'] .sp-step-number {
+    animation: sp-stage-number 650ms ease both;
+    animation-delay: calc(min(var(--motion-index), 12) * var(--sp-motion-step));
+  }
+  [data-motion='related'][data-motion-state='run'] .sp-related-grid > a {
+    animation: sp-related-deck 750ms var(--sp-motion-ease) both;
+  }
+  [data-motion='cta'][data-motion-state='run'] h2 {
+    animation: sp-cta-focus var(--sp-motion-feature) var(--sp-motion-ease) both;
+  }
+  [data-motion='cta'][data-motion-state='run'] .sp-cta-bottom > p {
+    animation: sp-cta-focus var(--sp-motion-feature) var(--sp-motion-ease) 150ms both;
+  }
+  [data-motion='cta'][data-motion-state='run'] > .et-container::after {
+    animation: sp-cta-orbit var(--sp-motion-route) var(--sp-motion-ease) both;
+  }
+}
+
+@keyframes sp-hero-type {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+@keyframes sp-hero-copy {
+  from {
+    opacity: 0.94;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes sp-hero-action {
+  from {
+    transform: scale(0.97);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes sp-hero-color {
+  from {
+    filter: saturate(0.65);
+  }
+  to {
+    filter: none;
+  }
+}
+@keyframes sp-photo-aperture {
+  from {
+    clip-path: polygon(0 0, 65% 0, 0 65%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes sp-editorial-row {
+  from {
+    opacity: 0.94;
+    transform: translateY(var(--sp-motion-distance));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes sp-route-trace {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes sp-node-check {
+  from {
+    transform: scale(0.35);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes sp-format-boundary {
+  from {
+    border-radius: 28px 0 28px 0;
+  }
+  to {
+    border-radius: 0;
+  }
+}
+@keyframes sp-schema-check {
+  35% {
+    box-shadow: -3px 0 #078686;
+  }
+  70% {
+    box-shadow: -3px 0 #f2a03a;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+@keyframes sp-column-align {
+  from {
+    transform: translateX(-5px) skewY(3deg);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes sp-edition-turn {
+  from {
+    transform: perspective(700px) rotateY(12deg);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes sp-language-resolve {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.sp-transformation-language .sp-transform-output ul {
+  background-image: linear-gradient(90deg, transparent 40%, #eaf6f5 50%, transparent 60%);
+  background-size: 250% 100%;
+  background-position: 0 0;
+}
+@keyframes sp-module-order {
+  from {
+    transform: scaleY(0.96);
+    transform-origin: top;
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes sp-palette-assemble {
+  from {
+    transform: rotate(-3deg) scale(0.95);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes sp-revision-mark {
+  40% {
+    box-shadow: 0 3px #f2a03a;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+@keyframes sp-revision-retire {
+  40% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sp-index-marker {
+  40% {
+    box-shadow: inset 3px 0 #f2a03a;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+@keyframes sp-level-check {
+  40% {
+    outline: 1px solid var(--sp-action);
+    outline-offset: 3px;
+  }
+  100% {
+    outline: 1px solid transparent;
+    outline-offset: 0;
+  }
+}
+@keyframes sp-audio-rhythm {
+  from {
+    background-position-y: 6px;
+  }
+  to {
+    background-position-y: 0;
+  }
+}
+@keyframes sp-wave-sample {
+  50% {
+    transform: scaleY(0.55);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes sp-caption-cursor {
+  from {
+    background-size: 0% 2px;
+  }
+  to {
+    background-size: 100% 2px;
+  }
+}
+.sp-transform-caption {
+  background-image: linear-gradient(var(--sp-orange), var(--sp-orange));
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 2px;
+}
+@keyframes sp-stage-spotlight {
+  35% {
+    background: #204849;
+    box-shadow: inset 0 3px var(--sp-orange);
+  }
+  100% {
+    background: transparent;
+    box-shadow: inset 0 0 transparent;
+  }
+}
+@keyframes sp-stage-number {
+  35% {
+    box-shadow: 0 0 0 5px var(--sp-orange);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+@keyframes sp-related-deck {
+  from {
+    transform: translateX(calc(var(--fan) * 12px)) rotate(calc(var(--fan) * 1deg));
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes sp-cta-focus {
+  from {
+    text-shadow: 1px 0 var(--sp-orange);
+  }
+  to {
+    text-shadow: 0 0 transparent;
+  }
+}
+@keyframes sp-cta-orbit {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .sp-page {
+    --sp-motion-feature: 480ms;
+    --sp-motion-route: 600ms;
+    --sp-motion-row: 400ms;
+    --sp-motion-stagger: 60ms;
+    --sp-motion-distance: 4px;
+  }
+  [data-motion='hero'][data-motion-state='run'] h1 {
+    animation-duration: 480ms;
+  }
+  [data-motion='hero'][data-motion-state='run'] .sp-hero-art > .sv-stage:not(.sv-stage-xml),
+  [data-motion='related'][data-motion-state='run'] .sp-related-grid > a,
+  [data-motion='cta'][data-motion-state='run'] > .et-container::after {
+    animation: none;
+  }
+  .sp-transformation-reader[data-motion-state='run'] .sp-transform-output {
+    animation: none;
+  }
+}
+@media (max-width: 1100px) and (min-width: 821px), (max-width: 480px) {
+  .sp-transform-panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sp-transform-route {
+    transform: rotate(90deg);
+    width: 48px;
+    height: 48px;
+    margin: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sp-faq details::details-content {
+    transition: none;
+  }
+}

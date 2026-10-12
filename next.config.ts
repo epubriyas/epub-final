@@ -15,6 +15,16 @@ const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 const nextConfig: NextConfig = {
   output: 'standalone',
+  outputFileTracingExcludes: {
+    '*': [
+      './private-uploads/portfolio-source/**/*',
+      './private-uploads/portfolio-prepared/**/*',
+      './private-uploads/portfolio-previews/**/*',
+      './.local-backups/**/*',
+      './artifacts/**/*',
+      './test-results/**/*',
+    ],
+  },
   async headers() {
     return [
       {

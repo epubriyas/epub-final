@@ -2,6 +2,17 @@ import type { CollectionConfig, Field, Where } from 'payload'
 import { authenticated } from '@/payload/access/authenticated'
 import { publishedContent } from '@/payload/access/publishedContent'
 import { caseStudyCategories, resourceTypes } from '@/config/resource-content'
+import {
+  BlocksFeature,
+  HeadingFeature,
+  FixedToolbarFeature,
+  InlineToolbarFeature,
+  UnorderedListFeature,
+  OrderedListFeature,
+  lexicalEditor,
+} from '@payloadcms/richtext-lexical'
+import { BlogInfographic } from '@/blocks/BlogInfographic/config'
+import { generatePreviewPath } from '@/utilities/generatePreviewPath'
 const itemFields: Field[] = [
   { name: 'title', type: 'text', required: true },
   { name: 'description', type: 'textarea' },
@@ -68,6 +79,70 @@ export const CaseStudies = contentCollection('case-studies', [
     admin: { description: 'Evidence supporting the case and any results.' },
   },
   { name: 'outcomes', type: 'array', fields: itemFields },
+  {
+    name: 'workKind',
+    type: 'select',
+    defaultValue: 'case-study',
+    options: [
+      { label: 'Case study', value: 'case-study' },
+      { label: 'Sample', value: 'sample' },
+      { label: 'Internal demonstration', value: 'demonstration' },
+    ],
+  },
+  {
+    name: 'services',
+    type: 'relationship',
+    relationTo: 'services',
+    hasMany: true,
+    filterOptions: { status: { equals: 'published' } },
+  },
+  {
+    name: 'sampleCategory',
+    type: 'text',
+    admin: {
+      description: 'Verified sample category. Only categories with published samples are shown.',
+    },
+  },
+  {
+    name: 'fileType',
+    type: 'select',
+    options: ['pdf', 'epub', 'image', 'document-preview'],
+    admin: {
+      description:
+        'Verified source format. EPUB is shown as a safe reading excerpt; original interactivity is not reproduced.',
+    },
+  },
+  { name: 'featured', type: 'checkbox', defaultValue: false },
+  { name: 'displayOrder', type: 'number', defaultValue: 100 },
+  { name: 'thumbnail', type: 'upload', relationTo: 'portfolio-previews' },
+  { name: 'sourcePageCount', type: 'number' },
+  {
+    name: 'previewNote',
+    type: 'textarea',
+    admin: { description: 'Clearly state whether this is an excerpt or generated preview.' },
+  },
+  {
+    name: 'previewPages',
+    type: 'array',
+    fields: [
+      { name: 'asset', type: 'upload', relationTo: 'portfolio-previews', required: true },
+      { name: 'sourcePage', type: 'number', required: true },
+      {
+        name: 'text',
+        type: 'textarea',
+        admin: { description: 'Source text for the accessible reading alternative.' },
+      },
+    ],
+  },
+  {
+    name: 'readerSections',
+    type: 'array',
+    fields: [
+      { name: 'title', type: 'text', required: true },
+      { name: 'text', type: 'textarea', required: true },
+    ],
+  },
+  { name: 'workflow', type: 'array', fields: itemFields },
 ])
 CaseStudies.access = {
   ...CaseStudies.access,
@@ -93,6 +168,66 @@ export const Careers = contentCollection('careers', [
   { name: 'employmentType', type: 'select', options: ['full-time', 'part-time', 'contract'] },
   { name: 'applicationEmail', type: 'email' },
 ])
+Careers.labels = { singular: 'Career Opening', plural: 'Careers' }
+Careers.admin = {
+  ...Careers.admin,
+  defaultColumns: ['title', 'location', 'employmentType', 'status', 'updatedAt'],
+  description:
+    'Create an opening, add the role details and infographic blocks, then set Status to Published and Save. Draft openings stay private. Preview lets you review the role page before publication.',
+  preview: (data, { req }) =>
+    generatePreviewPath({ collection: 'careers', slug: data.slug as string, req }),
+}
+Careers.fields = Careers.fields.map((field): Field => {
+  if (!('name' in field) || field.type === 'ui') return field
+  if (field.name === 'content')
+    return {
+      name: 'content',
+      type: 'richText',
+      label: 'Role details',
+      admin: {
+        description:
+          'Describe responsibilities, experience, skills and how to apply. Add headings, lists or Infographic blocks to make the opening easy to scan.',
+      },
+      editor: lexicalEditor({
+        features: ({ rootFeatures }) => [
+          ...rootFeatures,
+          HeadingFeature({ enabledHeadingSizes: ['h2', 'h3', 'h4'] }),
+          UnorderedListFeature(),
+          OrderedListFeature(),
+          BlocksFeature({ blocks: [BlogInfographic] }),
+          FixedToolbarFeature(),
+          InlineToolbarFeature(),
+        ],
+      }),
+    }
+  if (field.name === 'capabilities')
+    return {
+      ...field,
+      label: 'Role highlights & requirements',
+      admin: {
+        description: 'Optional short points, displayed clearly below the full role details.',
+      },
+    }
+  if (field.name === 'description')
+    return {
+      ...field,
+      label: 'Short role summary',
+      admin: {
+        description:
+          'A concise introduction displayed on the opening card and at the top of its role page.',
+      },
+    }
+  if (field.name === 'status')
+    return {
+      ...field,
+      admin: {
+        description:
+          'Published + Save makes the opening visible immediately. Draft + Save removes it from the public website.',
+      },
+    }
+  if (field.name === 'media') return { ...field, admin: { hidden: true } }
+  return field
+})
 export const QuoteRequests: CollectionConfig = {
   slug: 'quote-requests',
   admin: {

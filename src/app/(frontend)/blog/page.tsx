@@ -3,7 +3,8 @@ import { pageMetadata } from '@/lib/seo'
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
   title: 'Blog',
-  description: 'Articles and ideas from EPUBTRANS.',
+  description:
+    'Ideas, practical guidance and thoughtful perspectives on publishing, localization and digital content from EPUBTRANS.',
   alternates: { canonical: '/blog' },
 })
 export default function Blog({ searchParams }: { searchParams: ArticleSearch }) {

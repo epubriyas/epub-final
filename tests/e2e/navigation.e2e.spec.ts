@@ -86,6 +86,23 @@ test('mobile company groups lead to internship content without horizontal overfl
   )
 })
 
+test('desktop menus open on hover, stay open over links and close after leaving', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/')
+  const services = page.getByRole('button', { name: 'What We Do', exact: true })
+  await services.hover()
+  await expect(services).toHaveAttribute('aria-expanded', 'true')
+  await page.locator('#mega-0 a').first().hover()
+  await page.waitForTimeout(250)
+  await expect(page.locator('#mega-0')).toBeVisible()
+  const resources = page.getByRole('button', { name: 'Resources', exact: true })
+  await resources.hover()
+  await expect(resources).toHaveAttribute('aria-expanded', 'true')
+  await expect(services).toHaveAttribute('aria-expanded', 'false')
+  await page.mouse.move(5, 850)
+  await expect(resources).toHaveAttribute('aria-expanded', 'false')
+})
+
 test('desktop disclosure supports keyboard, Escape and outside dismissal', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/')

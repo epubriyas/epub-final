@@ -123,11 +123,10 @@ export const navigation: NavigationSection[] = [
     description: 'Ideas, practical guidance and approved project stories for your next chapter.',
     groups: [
       {
-        title: 'Insights & Blog',
+        title: 'Blog',
         description: 'Ideas and perspectives for publishing and localization.',
         items: [
           { label: 'Blog', href: '/blog' },
-          { label: 'Industry Insights', href: '/industry-insights' },
         ],
       },
       {
@@ -141,12 +140,9 @@ export const navigation: NavigationSection[] = [
         ],
       },
       {
-        title: 'Resources',
-        description: 'Practical guides and reports for your next project.',
-        items: [
-          { label: 'Guides & eBooks', href: '/resources?type=guides-ebooks' },
-          { label: 'Whitepapers & Reports', href: '/resources?type=whitepapers-reports' },
-        ],
+        title: 'Portfolio',
+        description: 'Explore our publishing and learning samples.',
+        items: [{ label: 'View Portfolio', href: '/work' }],
       },
     ],
   },
@@ -161,7 +157,7 @@ export const navigation: NavigationSection[] = [
         title: 'About EPUBTRANS',
         description: 'Our purpose. Your publishing partner.',
         items: [
-          { label: 'About Us', href: '/company#about-us' },
+          { label: 'About Us', href: '/company' },
           { label: 'Our Story', href: '/company#our-story' },
           { label: 'Mission & Vision', href: '/company#mission-vision' },
           { label: 'Why EPUBTRANS', href: '/company#why-epubtrans' },
@@ -172,10 +168,10 @@ export const navigation: NavigationSection[] = [
         title: 'Global Presence',
         description: 'Content for different markets and audiences.',
         items: [
-          { label: 'Global Capabilities', href: '/company#global-capabilities' },
-          { label: 'Locations', href: '/company#locations' },
-          { label: 'Language Coverage', href: '/company#language-coverage' },
-          { label: 'Regional Expertise', href: '/company#regional-expertise' },
+          { label: 'Global Capabilities', href: '/company/global-presence#global-capabilities' },
+          { label: 'Locations', href: '/company/global-presence#locations' },
+          { label: 'Language Coverage', href: '/company/global-presence#language-coverage' },
+          { label: 'Regional Expertise', href: '/company/global-presence#regional-expertise' },
         ],
       },
       {

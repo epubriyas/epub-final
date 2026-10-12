@@ -30,6 +30,21 @@ function HeaderState({
   const languageButton = useRef<HTMLButtonElement>(null)
   const menuButton = useRef<HTMLButtonElement>(null)
   const trigger = useRef<HTMLButtonElement | null>(null)
+  const hoverClose = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const cancelHoverClose = () => {
+    if (hoverClose.current) clearTimeout(hoverClose.current)
+    hoverClose.current = null
+  }
+  const scheduleHoverClose = () => {
+    cancelHoverClose()
+    hoverClose.current = setTimeout(() => {
+      // Keep a menu available while a keyboard user is working inside it.
+      if (document.activeElement?.closest('.et-mega, .et-language')) return
+      setOpen(null)
+    }, 180)
+  }
+  const canHover = (pointerType: string) =>
+    pointerType === 'mouse' && window.matchMedia('(hover: hover)').matches
   const [mobileSection, setMobileSection] = useState<number | null>(null)
   useEffect(() => {
     const desktop = window.matchMedia('(min-width: 1200px)')
@@ -88,6 +103,7 @@ function HeaderState({
   useEffect(
     () => () => {
       document.body.style.overflow = ''
+      if (hoverClose.current) clearTimeout(hoverClose.current)
     },
     [],
   )
@@ -120,12 +136,28 @@ function HeaderState({
                 className="et-nav-link"
                 aria-expanded={open === index}
                 aria-controls={`mega-${index}`}
+                onPointerEnter={(event) => {
+                  if (!canHover(event.pointerType)) return
+                  cancelHoverClose()
+                  trigger.current = event.currentTarget
+                  setOpen(index)
+                }}
+                onPointerLeave={(event) => {
+                  if (canHover(event.pointerType)) scheduleHoverClose()
+                }}
                 ref={(node) => {
                   if (open === index) trigger.current = node
                 }}
                 onClick={(event) => {
                   trigger.current = event.currentTarget
-                  setOpen(open === index ? null : index)
+                  cancelHoverClose()
+                  setOpen(
+                    event.detail > 0 && window.matchMedia('(hover: hover)').matches
+                      ? index
+                      : open === index
+                        ? null
+                        : index,
+                  )
                 }}
                 onKeyDown={(event) => {
                   if (event.key === 'ArrowDown') {
@@ -157,9 +189,25 @@ function HeaderState({
             className="et-nav-link"
             aria-expanded={open === 99}
             aria-controls="language-options"
+            onPointerEnter={(event) => {
+              if (!canHover(event.pointerType)) return
+              cancelHoverClose()
+              trigger.current = event.currentTarget
+              setOpen(99)
+            }}
+            onPointerLeave={(event) => {
+              if (canHover(event.pointerType)) scheduleHoverClose()
+            }}
             onClick={(event) => {
               trigger.current = event.currentTarget
-              setOpen(open === 99 ? null : 99)
+              cancelHoverClose()
+              setOpen(
+                event.detail > 0 && window.matchMedia('(hover: hover)').matches
+                  ? 99
+                  : open === 99
+                    ? null
+                    : 99,
+              )
             }}
           >
             <Globe2 size={15} />{' '}
@@ -214,6 +262,10 @@ function HeaderState({
               key={item.label}
               className={`et-mega${item.label === 'Company' ? ' et-mega-company' : item.label === 'What We Do' ? ' et-mega-services' : item.label === 'Resources' ? ' et-mega-resources' : item.label === 'Technology' ? ' et-mega-technology' : ''}`}
               id={`mega-${index}`}
+              onPointerEnter={cancelHoverClose}
+              onPointerLeave={(event) => {
+                if (canHover(event.pointerType)) scheduleHoverClose()
+              }}
             >
               <div className="et-container">
                 <div className="et-mega-top">
@@ -268,7 +320,14 @@ function HeaderState({
           ),
       )}
       {open === 99 && (
-        <div id="language-options" className="et-language">
+        <div
+          id="language-options"
+          className="et-language"
+          onPointerEnter={cancelHoverClose}
+          onPointerLeave={(event) => {
+            if (canHover(event.pointerType)) scheduleHoverClose()
+          }}
+        >
           <LanguageSelector onSelect={() => setOpen(null)} />
         </div>
       )}

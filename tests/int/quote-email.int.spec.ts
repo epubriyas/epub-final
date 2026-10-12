@@ -27,6 +27,8 @@ afterEach(() => {
   vi.clearAllMocks()
 })
 function configure() {
+  vi.stubEnv('RESEND_API_KEY', '')
+  vi.stubEnv('SMTP_PORT', '465')
   for (const key of ['SMTP_HOST', 'SMTP_USER', 'SMTP_PASSWORD', 'SMTP_FROM'])
     vi.stubEnv(key, 'test')
 }

@@ -1,5 +1,9 @@
 import { pageMetadata } from '@/lib/seo'
 import { PageHero, ContentCTA, ArrowLink } from '@/components/editorial/Primitives'
+import styles from './company.module.css'
+import { CompanyPageNav } from '@/components/company/CompanyPageNav'
+import { CompanyMotion } from '@/components/company/CompanyMotion'
+import { ExpertiseInfographic, JourneyInfographic } from '@/components/company/CompanyInfographics'
 
 const companyTopics = [
   {
@@ -9,12 +13,20 @@ const companyTopics = [
       {
         id: 'why-epubtrans',
         title: 'Why EPUBTRANS',
-        text: 'Publishing and localization often share the same challenges: preserving meaning, managing complex files and preparing content for its final audience. Our service portfolio brings editorial, language and digital production disciplines into the same conversation.',
+        paragraphs: [
+          'A publishing project rarely belongs to one discipline. An edited manuscript still needs a thoughtful layout. A translated document needs space for a different script. An eBook needs a structure that works beyond the printed page. EPUBTRANS brings these connected needs into one conversation, helping you plan the whole journey of your content.',
+          'Our capabilities span editorial work, translation, typesetting, structured content and digital production. That breadth helps you consider decisions together: how terminology affects a translation, how a layout affects reading, and how a file format affects distribution.',
+          'The value of a good partnership is practical. It means a brief that reflects your priorities, a shared understanding of the deliverables, and room to resolve questions before they become costly revisions. Bring us the challenge behind your project, as well as the files, so we can discuss an approach that fits.',
+        ],
       },
       {
         id: 'leadership',
         title: 'Leadership',
-        text: 'A useful partnership starts with clear points of contact. Speak with our team about the people responsible for your project, delivery coordination and escalation before work begins.',
+        paragraphs: [
+          'Good leadership makes complex work easier to understand. For a content project, that means giving people a clear brief, making thoughtful decisions when requirements compete, and keeping the final reader in view. These are the principles we want to bring to every publishing conversation.',
+          'The people guiding a project need to understand both its creative intent and its production requirements. Editorial judgement, language knowledge and technical understanding each have a role. A question about tone deserves as much attention as a question about file structure or delivery.',
+          'When discussing your project, ask us who will coordinate the work, how feedback will be handled and where to raise a decision that needs attention. A clear working relationship begins with knowing who to speak to and what happens next.',
+        ],
       },
     ],
   },
@@ -25,91 +37,133 @@ const companyTopics = [
       {
         id: 'certifications',
         title: 'Certifications',
-        text: 'If your procurement process requires a specific certification, ask our team for current documentation and its scope. Certification requirements should be confirmed for the services in your brief.',
+        paragraphs: [
+          'Trust grows when evidence and expectations are clear. If your organization requires a particular certification, share that requirement during the initial conversation so our team can provide current documentation where available.',
+          'The scope matters as much as the certificate itself. Confirm which services, processes or locations the documentation covers before making it part of your project requirements.',
+        ],
       },
       {
         id: 'quality',
         title: 'Quality',
-        text: 'Copyediting, proofreading, typesetting and structured content services address different layers of quality. Define your style guide, output specifications and acceptance criteria with us when scoping a project.',
+        paragraphs: [
+          'Quality is found in the details a reader should never have to question: a consistent term, a clear sentence, a correctly placed heading, or a reading order that makes sense. Editorial review, language review and production checks each address a different part of that experience.',
+          'We use the project brief to discuss what a finished result should look like. Your style guide, reference material, output specifications and acceptance criteria help turn a broad expectation of quality into a useful review plan.',
+        ],
       },
       {
         id: 'security',
         title: 'Security',
-        text: 'Discuss confidentiality, file access and transfer requirements before sharing sensitive material. Our team can review your project’s handling requirements and any proposed non-disclosure agreement.',
+        paragraphs: [
+          'Unpublished manuscripts, learning materials and business documents can carry sensitive information. Responsible project planning includes a conversation about confidentiality and how the material should be shared.',
+          'Tell us about your file transfer, access and retention requirements before sending sensitive content. Our team can review the proposed handling arrangements and any non-disclosure agreement with you before work begins.',
+        ],
       },
       {
         id: 'compliance',
         title: 'Compliance',
-        text: 'Accessibility, publishing specifications and regional requirements depend on the content and its destination. Share the standards your output must meet so that the scope and validation requirements can be reviewed.',
+        paragraphs: [
+          'A publication needs to work in the environment where it will be used. Accessibility requirements, platform specifications and regional conventions can shape its structure, presentation and delivery format.',
+          'Share the standards and submission requirements your project must meet. We can then discuss the relevant services, the checks needed and the evidence expected at handover, with the scope agreed before production.',
+        ],
       },
       {
         id: 'partnerships',
         title: 'Partnerships',
-        text: 'For publishers, content teams and language service providers, a clear handover matters. Talk with us about your production workflow, delivery formats and how our services could fit into your existing process.',
-      },
-    ],
-  },
-  {
-    label: 'GLOBAL PRESENCE',
-    title: 'New audiences. Carefully considered content.',
-    items: [
-      {
-        id: 'global-capabilities',
-        title: 'Global Capabilities',
-        text: 'Our services cover translation, multilingual desktop publishing, eLearning localization, subtitling and digital publishing. Combine language and production requirements in your brief to plan content for each target audience.',
-      },
-      {
-        id: 'locations',
-        title: 'Locations',
-        text: 'Connect with EPUBTRANS in Chennai, India. Contact info@epubtrans.com or call +91 44 3136 3907 to discuss your project and coordination needs.',
-      },
-      {
-        id: 'language-coverage',
-        title: 'Language Coverage',
-        text: 'Tell us your source language, target languages and subject area. Our team can confirm availability and the appropriate service scope for your specific language pairs.',
-      },
-      {
-        id: 'regional-expertise',
-        title: 'Regional Expertise',
-        text: 'Regional context includes terminology, scripts, layout and audience expectations. Share the markets you are targeting, together with any local style guides or reference material, when requesting localization.',
+        paragraphs: [
+          'A useful publishing partner understands the work on either side of their own contribution. Your editors, designers, language teams and production teams need content they can pick up and use with confidence.',
+          'Whether you need support for one stage or several connected disciplines, tell us how your current process works. Together, we can discuss inputs, review responsibilities and delivery formats that fit the way your team already operates.',
+        ],
       },
     ],
   },
 ]
 export const metadata = pageMetadata({
-  title: 'Company',
-  description: 'Get to know EPUBTRANS, a technology-based publishing and localization company.',
+  title: 'About EPUBTRANS',
+  description:
+    'Meet EPUBTRANS, a publishing and localization company in Chennai bringing editorial care, language expertise and digital production to your content.',
   alternates: { canonical: '/company' },
 })
 
 export default function Company() {
   return (
-    <main>
+    <CompanyMotion className={styles.page}>
       <PageHero
         eyebrow="COMPANY / EPUBTRANS"
         title="Behind every edition, a human perspective."
-        description="We bring publishing expertise and digital production together to shape content for new formats and audiences."
+        description="Your content carries someone’s knowledge, effort and point of view. We bring editorial care, language expertise and digital production together to help it reach the people it was created for."
       />
-      <section id="about-us" className="et-container et-detail-grid et-company-section">
+      <CompanyPageNav current="about" />
+      <section
+        id="about-us"
+        className="et-container et-detail-grid et-company-section"
+        data-company-motion="section"
+      >
         <h2>About us</h2>
         <div>
           <p className="et-lead">
-            EPUBTRANS is a technology-based publishing company. Our capabilities connect project
-            management, XML and data conversion, typesetting, ePublishing, eBooks, translation and
-            learning localization.
+            EPUBTRANS is a publishing and localization company based in Chennai, India. We help
+            publishers and content teams prepare their work for different formats, languages and
+            audiences, with attention to both the message and the reading experience.
           </p>
-          <h3 id="our-story" className="et-company-section" style={{ marginTop: 32, fontSize: 24 }}>
-            Our story
-          </h3>
-          <p style={{ marginTop: 16, lineHeight: 1.8 }}>
-            Our work brings together language and production requirements across websites, learning
-            modules, multimedia and publishing. We start with the content, the audience and the
-            format it needs to reach.
+          <p>
+            Our capabilities connect copyediting, proofreading, typesetting, XML and data
+            conversion, eBook production, translation and learning localization. Each discipline
+            serves a shared purpose: helping content become clear, consistent and ready for its next
+            use.
+          </p>
+          <p>
+            A book, a training course and a multilingual document each have their own demands. We
+            begin with those differences. Understanding what you are making, who it is for and how
+            it will be delivered gives the work a clear direction from the start.
           </p>
           <ArrowLink href="/services">Explore our capabilities</ArrowLink>
         </div>
+        <div className={styles.fullWidth}>
+          <ExpertiseInfographic />
+        </div>
       </section>
-      <section id="mission-vision" className="et-company-home et-company-section">
+      <section
+        id="our-story"
+        className="et-container et-detail-grid et-company-section"
+        data-company-motion="section"
+      >
+        <div>
+          <p className="et-label">OUR STORY</p>
+          <h2>Every format changes. The meaning matters.</h2>
+        </div>
+        <div>
+          <p className="et-lead">
+            Our story is rooted in the relationship between words, design and technology. Content
+            moves through all three, and the choices made along the way shape what a reader
+            ultimately understands.
+          </p>
+          <p>
+            A manuscript becomes a designed page. That page becomes a digital edition. A learning
+            module moves into another language. At every transition, something needs careful
+            attention: the author’s voice, the structure of the information, or the way a new
+            audience will experience it.
+          </p>
+          <p>
+            EPUBTRANS brings these connected disciplines together. Our work spans publishing,
+            websites, learning materials and multimedia, where language decisions and production
+            decisions often meet. A longer translated sentence, for example, can change a layout; a
+            heading structure can change how a digital publication is navigated.
+          </p>
+          <p>
+            That connection shapes how we think about our role. The goal is to carry the purpose of
+            the original into its next form, with care for the people who created it and the people
+            who will read, watch or learn from it.
+          </p>
+        </div>
+        <div className={styles.fullWidth}>
+          <JourneyInfographic />
+        </div>
+      </section>
+      <section
+        id="mission-vision"
+        className="et-company-home et-company-section"
+        data-company-motion="section"
+      >
         <div className="et-container">
           <p className="et-label">MISSION & VISION</p>
           <h2>
@@ -117,14 +171,35 @@ export default function Company() {
             <br />
             <em>Bring cultures into conversation.</em>
           </h2>
-          <div>
-            <p>
-              Our purpose is to connect human expertise with technology, helping ideas move between
-              formats, languages and cultures. We see a future where content can reach new audiences
-              while retaining the meaning and care behind the original.
-            </p>
-            <ArrowLink href="/get-a-quote">Work with EPUBTRANS</ArrowLink>
+          <div className={styles.purpose}>
+            <article>
+              <h3>Our mission</h3>
+              <p>
+                To help people publish and share content that is clear, carefully prepared and
+                suited to its audience. We bring human judgement and production technology together
+                to support the journey from source material to a usable final edition.
+              </p>
+              <p>
+                In practice, that means keeping meaning, consistency and readability at the centre
+                of the work, whether the task involves a single manuscript or several language and
+                format requirements.
+              </p>
+            </article>
+            <article>
+              <h3>Our vision</h3>
+              <p>
+                A future where useful ideas can travel across languages, cultures and formats
+                without losing the thought behind them. We want more people to encounter content
+                they can understand, navigate and use with confidence.
+              </p>
+              <p>
+                As publishing tools evolve, that ambition stays human: make knowledge easier to
+                reach, respect different audiences and preserve the voice that makes each piece of
+                content worth sharing.
+              </p>
+            </article>
           </div>
+          <ArrowLink href="/get-a-quote">Work with EPUBTRANS</ArrowLink>
         </div>
       </section>
       {companyTopics.map((group) => (
@@ -133,9 +208,11 @@ export default function Company() {
           <h2>{group.title}</h2>
           <div className="et-company-topics">
             {group.items.map((item) => (
-              <article key={item.id} id={item.id}>
+              <article key={item.id} id={item.id} data-company-motion="section">
                 <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                {item.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </article>
             ))}
           </div>
@@ -154,6 +231,6 @@ export default function Company() {
         <ArrowLink href="/company/careers">Explore careers</ArrowLink>
       </section>
       <ContentCTA />
-    </main>
+    </CompanyMotion>
   )
 }

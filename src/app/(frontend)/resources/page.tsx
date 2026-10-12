@@ -198,7 +198,7 @@ export default async function Resources({
             {posts.docs.length ? (
               <div className="et-content-list">
                 {posts.docs.map((post) => (
-                  <Link className="et-content-row" key={post.id} href={`/resources/${post.slug}`}>
+                  <Link className="et-content-row" key={post.id} href={`/blog/${post.slug}`}>
                     <div>
                       <p className="et-label">
                         {post.publishedAt

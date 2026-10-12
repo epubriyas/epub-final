@@ -21,7 +21,7 @@ const generateURL: GenerateURL<Post | Page> = ({ doc, collectionConfig }) => {
   const url = getServerSideURL()
 
   return doc?.slug
-    ? `${url}${collectionConfig?.slug === 'posts' ? '/resources' : ''}/${doc.slug === 'home' && collectionConfig?.slug === 'pages' ? '' : encodeURIComponent(doc.slug)}`
+    ? `${url}${collectionConfig?.slug === 'posts' ? '/blog' : ''}/${doc.slug === 'home' && collectionConfig?.slug === 'pages' ? '' : encodeURIComponent(doc.slug)}`
     : url
 }
 

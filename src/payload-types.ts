@@ -75,6 +75,7 @@ export interface Config {
     services: Service;
     solutions: Solution;
     industries: Industry;
+    'portfolio-previews': PortfolioPreview;
     'service-categories': ServiceCategory;
     technologies: Technology;
     'case-studies': CaseStudy;
@@ -106,6 +107,7 @@ export interface Config {
     services: ServicesSelect<false> | ServicesSelect<true>;
     solutions: SolutionsSelect<false> | SolutionsSelect<true>;
     industries: IndustriesSelect<false> | IndustriesSelect<true>;
+    'portfolio-previews': PortfolioPreviewsSelect<false> | PortfolioPreviewsSelect<true>;
     'service-categories': ServiceCategoriesSelect<false> | ServiceCategoriesSelect<true>;
     technologies: TechnologiesSelect<false> | TechnologiesSelect<true>;
     'case-studies': CaseStudiesSelect<false> | CaseStudiesSelect<true>;
@@ -471,13 +473,21 @@ export interface Page {
   _status?: ('draft' | 'published') | null;
 }
 /**
+ * Write an article, add images or infographic blocks, then Publish to show it on the Blog. Drafts remain private. Use Preview to review before publishing.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "posts".
  */
 export interface Post {
   id: number;
   title: string;
+  /**
+   * Cover image for the blog card and article header. Add descriptive alternative text in Media.
+   */
   heroImage?: (number | null) | Media;
+  /**
+   * Use headings to organize your article. Insert an Infographic block for processes, statistics or comparison cards.
+   */
   content: {
     root: {
       type: string;
@@ -495,7 +505,7 @@ export interface Post {
   };
   relatedPosts?: (number | Post)[] | null;
   /**
-   * All published posts appear in Blog. Select the Industry Insights category (slug: industry-insights) to also appear in Industry Insights.
+   * All published posts appear in Blog. Select categories to organize articles by topic.
    */
   categories?: (number | Category)[] | null;
   meta?: {
@@ -1049,6 +1059,11 @@ export interface Service {
     eyebrow?: string | null;
     headline?: string | null;
     description?: string | null;
+    image?: (number | null) | Media;
+    /**
+     * Optional override; otherwise the layout follows the service.
+     */
+    layout?: ('editorial' | 'technical' | 'publication') | null;
   };
   /**
    * Main service overview content.
@@ -1069,6 +1084,105 @@ export interface Service {
     [k: string]: unknown;
   } | null;
   features?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  workflow?:
+    | {
+        step: number;
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  faqs?:
+    | {
+        question: string;
+        answer: string;
+        id?: string | null;
+      }[]
+    | null;
+  visualExplanation?: {
+    title?: string | null;
+    description?: string | null;
+    sourceLabel?: string | null;
+    outputLabel?: string | null;
+  };
+  /**
+   * Verified review practices only; omit unsupported compliance claims.
+   */
+  quality?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  useCases?:
+    | {
+        title: string;
+        description?: string | null;
+        industry?: (number | null) | Industry;
+        id?: string | null;
+      }[]
+    | null;
+  relatedServices?: (number | Service)[] | null;
+  status: 'draft' | 'published';
+  seo?: {
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "industries".
+ */
+export interface Industry {
+  id: number;
+  title: string;
+  slug: string;
+  category: 'core' | 'business-professional';
+  shortDescription?: string | null;
+  hero?: {
+    eyebrow?: string | null;
+    headline?: string | null;
+    description?: string | null;
+  };
+  overview?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  challenges?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  solutions?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  services?:
     | {
         title: string;
         description?: string | null;
@@ -1178,80 +1292,6 @@ export interface Solution {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "industries".
- */
-export interface Industry {
-  id: number;
-  title: string;
-  slug: string;
-  category: 'core' | 'business-professional';
-  shortDescription?: string | null;
-  hero?: {
-    eyebrow?: string | null;
-    headline?: string | null;
-    description?: string | null;
-  };
-  overview?: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
-  challenges?:
-    | {
-        title: string;
-        description?: string | null;
-        id?: string | null;
-      }[]
-    | null;
-  solutions?:
-    | {
-        title: string;
-        description?: string | null;
-        id?: string | null;
-      }[]
-    | null;
-  services?:
-    | {
-        title: string;
-        description?: string | null;
-        id?: string | null;
-      }[]
-    | null;
-  workflow?:
-    | {
-        step: number;
-        title: string;
-        description?: string | null;
-        id?: string | null;
-      }[]
-    | null;
-  faqs?:
-    | {
-        question: string;
-        answer: string;
-        id?: string | null;
-      }[]
-    | null;
-  status: 'draft' | 'published';
-  seo?: {
-    metaTitle?: string | null;
-    metaDescription?: string | null;
-  };
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "case-studies".
  */
 export interface CaseStudy {
@@ -1303,6 +1343,49 @@ export interface CaseStudy {
         id?: string | null;
       }[]
     | null;
+  workKind?: ('case-study' | 'sample' | 'demonstration') | null;
+  services?: (number | Service)[] | null;
+  /**
+   * Verified sample category. Only categories with published samples are shown.
+   */
+  sampleCategory?: string | null;
+  /**
+   * Verified source format. EPUB is shown as a safe reading excerpt; original interactivity is not reproduced.
+   */
+  fileType?: ('pdf' | 'epub' | 'image' | 'document-preview') | null;
+  featured?: boolean | null;
+  displayOrder?: number | null;
+  thumbnail?: (number | null) | PortfolioPreview;
+  sourcePageCount?: number | null;
+  /**
+   * Clearly state whether this is an excerpt or generated preview.
+   */
+  previewNote?: string | null;
+  previewPages?:
+    | {
+        asset: number | PortfolioPreview;
+        sourcePage: number;
+        /**
+         * Source text for the accessible reading alternative.
+         */
+        text?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  readerSections?:
+    | {
+        title: string;
+        text: string;
+        id?: string | null;
+      }[]
+    | null;
+  workflow?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   status: 'draft' | 'published';
   seo?: {
     metaTitle?: string | null;
@@ -1310,6 +1393,37 @@ export interface CaseStudy {
   };
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * Generated viewing images only. Original documents stay in private source storage.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "portfolio-previews".
+ */
+export interface PortfolioPreview {
+  id: number;
+  alt: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1437,6 +1551,8 @@ export interface Resource {
   createdAt: string;
 }
 /**
+ * Create an opening, add the role details and infographic blocks, then set Status to Published and Save. Draft openings stay private. Preview lets you review the role page before publication.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "careers".
  */
@@ -1444,7 +1560,13 @@ export interface Career {
   id: number;
   title: string;
   slug: string;
+  /**
+   * A concise introduction displayed on the opening card and at the top of its role page.
+   */
   description?: string | null;
+  /**
+   * Describe responsibilities, experience, skills and how to apply. Add headings, lists or Infographic blocks to make the opening easy to scan.
+   */
   content?: {
     root: {
       type: string;
@@ -1461,6 +1583,9 @@ export interface Career {
     [k: string]: unknown;
   } | null;
   media?: (number | null) | Media;
+  /**
+   * Optional short points, displayed clearly below the full role details.
+   */
   capabilities?:
     | {
         title: string;
@@ -1471,6 +1596,9 @@ export interface Career {
   location?: string | null;
   employmentType?: ('full-time' | 'part-time' | 'contract') | null;
   applicationEmail?: string | null;
+  /**
+   * Published + Save makes the opening visible immediately. Draft + Save removes it from the public website.
+   */
   status: 'draft' | 'published';
   seo?: {
     metaTitle?: string | null;
@@ -1727,6 +1855,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'industries';
         value: number | Industry;
+      } | null)
+    | ({
+        relationTo: 'portfolio-previews';
+        value: number | PortfolioPreview;
       } | null)
     | ({
         relationTo: 'service-categories';
@@ -2358,6 +2490,8 @@ export interface ServicesSelect<T extends boolean = true> {
         eyebrow?: T;
         headline?: T;
         description?: T;
+        image?: T;
+        layout?: T;
       };
   overview?: T;
   features?:
@@ -2382,6 +2516,30 @@ export interface ServicesSelect<T extends boolean = true> {
         answer?: T;
         id?: T;
       };
+  visualExplanation?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        sourceLabel?: T;
+        outputLabel?: T;
+      };
+  quality?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  useCases?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        industry?: T;
+        id?: T;
+      };
+  relatedServices?: T;
   status?: T;
   seo?:
     | T
@@ -2512,6 +2670,38 @@ export interface IndustriesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "portfolio-previews_select".
+ */
+export interface PortfolioPreviewsSelect<T extends boolean = true> {
+  alt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+  sizes?:
+    | T
+    | {
+        thumbnail?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+      };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "service-categories_select".
  */
 export interface ServiceCategoriesSelect<T extends boolean = true> {
@@ -2587,6 +2777,37 @@ export interface CaseStudiesSelect<T extends boolean = true> {
   permissionConfirmed?: T;
   source?: T;
   outcomes?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  workKind?: T;
+  services?: T;
+  sampleCategory?: T;
+  fileType?: T;
+  featured?: T;
+  displayOrder?: T;
+  thumbnail?: T;
+  sourcePageCount?: T;
+  previewNote?: T;
+  previewPages?:
+    | T
+    | {
+        asset?: T;
+        sourcePage?: T;
+        text?: T;
+        id?: T;
+      };
+  readerSections?:
+    | T
+    | {
+        title?: T;
+        text?: T;
+        id?: T;
+      };
+  workflow?:
     | T
     | {
         title?: T;
@@ -3172,6 +3393,31 @@ export interface CodeBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'code';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BlogInfographicBlock".
+ */
+export interface BlogInfographicBlock {
+  title: string;
+  description?: string | null;
+  layout: 'steps' | 'metrics' | 'cards';
+  /**
+   * Add two to six items. Statistics display the value you enter; use the source note to cite their origin.
+   */
+  items: {
+    label: string;
+    /**
+     * Optional headline figure, such as 25%. Used in the statistics layout.
+     */
+    value?: string | null;
+    description?: string | null;
+    id?: string | null;
+  }[];
+  source?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'blogInfographic';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

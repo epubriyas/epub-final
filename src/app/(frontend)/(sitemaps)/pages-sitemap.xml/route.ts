@@ -17,15 +17,21 @@ export async function GET() {
     '/technology/production-os',
     '/resources',
     '/blog',
-    '/industry-insights',
     '/company',
+    '/company/global-presence',
     '/company/careers',
     '/work',
     '/get-a-quote',
     '/contact',
     '/accessibility',
   ].map((route) => ({ loc: base + route }))
-  for (const collection of ['services', 'solutions', 'industries', 'case-studies'] as const) {
+  for (const collection of [
+    'services',
+    'solutions',
+    'industries',
+    'case-studies',
+    'careers',
+  ] as const) {
     const records = await payload.find({
       collection,
       overrideAccess: false,
@@ -36,7 +42,7 @@ export async function GET() {
     for (const doc of records.docs) {
       if ('permissionConfirmed' in doc && !doc.permissionConfirmed) continue
       sitemap.push({
-        loc: `${base}/${collection === 'case-studies' ? 'work' : collection}/${doc.slug}`,
+        loc: `${base}/${collection === 'case-studies' ? 'work' : collection === 'careers' ? 'company/careers' : collection}/${doc.slug}`,
       })
     }
   }

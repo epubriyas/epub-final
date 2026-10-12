@@ -14,6 +14,7 @@ import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
 import { Banner } from '../../../blocks/Banner/config'
 import { Code } from '../../../blocks/Code/config'
 import { MediaBlock } from '../../../blocks/MediaBlock/config'
+import { BlogInfographic } from '../../../blocks/BlogInfographic/config'
 import { generatePreviewPath } from '../../../utilities/generatePreviewPath'
 import { populateAuthors } from './hooks/populateAuthors'
 import { revalidateDelete, revalidatePost } from './hooks/revalidatePost'
@@ -29,6 +30,7 @@ import { slugField } from 'payload'
 
 export const Posts: CollectionConfig<'posts'> = {
   slug: 'posts',
+  labels: { singular: 'Blog Post', plural: 'Blog' },
   access: {
     create: authenticated,
     delete: authenticated,
@@ -48,7 +50,9 @@ export const Posts: CollectionConfig<'posts'> = {
     },
   },
   admin: {
-    defaultColumns: ['title', 'slug', 'updatedAt'],
+    description:
+      'Write an article, add images or infographic blocks, then Publish to show it on the Blog. Drafts remain private. Use Preview to review before publishing.',
+    defaultColumns: ['title', '_status', 'publishedAt', 'updatedAt'],
     livePreview: {
       url: ({ data, req }) =>
         generatePreviewPath({
@@ -80,6 +84,10 @@ export const Posts: CollectionConfig<'posts'> = {
               name: 'heroImage',
               type: 'upload',
               relationTo: 'media',
+              admin: {
+                description:
+                  'Cover image for the blog card and article header. Add descriptive alternative text in Media.',
+              },
             },
             {
               name: 'content',
@@ -88,15 +96,19 @@ export const Posts: CollectionConfig<'posts'> = {
                 features: ({ rootFeatures }) => {
                   return [
                     ...rootFeatures,
-                    HeadingFeature({ enabledHeadingSizes: ['h1', 'h2', 'h3', 'h4'] }),
-                    BlocksFeature({ blocks: [Banner, Code, MediaBlock] }),
+                    HeadingFeature({ enabledHeadingSizes: ['h2', 'h3', 'h4'] }),
+                    BlocksFeature({ blocks: [Banner, Code, MediaBlock, BlogInfographic] }),
                     FixedToolbarFeature(),
                     InlineToolbarFeature(),
                     HorizontalRuleFeature(),
                   ]
                 },
               }),
-              label: false,
+              label: 'Article content',
+              admin: {
+                description:
+                  'Use headings to organize your article. Insert an Infographic block for processes, statistics or comparison cards.',
+              },
               required: true,
             },
           ],
@@ -126,7 +138,7 @@ export const Posts: CollectionConfig<'posts'> = {
               admin: {
                 position: 'sidebar',
                 description:
-                  'All published posts appear in Blog. Select the Industry Insights category (slug: industry-insights) to also appear in Industry Insights.',
+                  'All published posts appear in Blog. Select categories to organize articles by topic.',
               },
               hasMany: true,
               relationTo: 'categories',

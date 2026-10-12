@@ -6,10 +6,9 @@ import { Reveal } from '@/components/shared/Reveal'
 import { getHomeContent, getPreviewAccess } from '@/lib/content'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
-import {
-  ContentTransformationInfographic,
-  WorkflowInfographic,
-} from '@/components/home/HomeInfographics'
+import { HomeMotion } from '@/components/home/HomeMotion'
+import { PremiumWorkflow } from '@/components/home/PremiumWorkflow'
+import { ContentTransformationInfographic } from '@/components/home/HomeInfographics'
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
   title: 'EPUBTRANS — Publishing, Localization & Digital Content',
@@ -61,8 +60,8 @@ export default async function HomePage() {
       </main>
     )
   return (
-    <main>
-      <section className="et-hero">
+    <HomeMotion>
+      <section className="et-hero" data-home-motion="hero">
         <div className="et-container">
           <div className="et-hero-meta">
             <span className="et-label">PUBLISHING · LOCALIZATION · DIGITAL CONTENT</span>
@@ -165,7 +164,7 @@ export default async function HomePage() {
             </div>
             <ArrowLink href="/services">All services</ArrowLink>
           </div>
-          <div className="et-service-rows">
+          <div className="et-service-rows" data-home-motion="services">
             {services.map(([n, title, desc, href]) => (
               <Link key={n} href={href} className="et-service-row">
                 <span className="et-label">{n}</span>
@@ -239,7 +238,7 @@ export default async function HomePage() {
               Explore our approach
             </ArrowLink>
           </div>
-          <WorkflowInfographic />
+          <PremiumWorkflow />
         </div>
       </section>
       <section className="et-work-home et-container">
@@ -254,7 +253,7 @@ export default async function HomePage() {
           </div>
           <ArrowLink href="/work">Explore our portfolio</ArrowLink>
         </div>
-        <div className="et-work-layout">
+        <div className="et-work-layout" data-home-motion="work">
           <Link href="/work" className="et-work-primary">
             <div className="et-work-art" aria-hidden="true">
               <div>
@@ -308,7 +307,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-      <section className="et-company-home">
+      <section className="et-company-home" data-home-motion="company">
         <div className="et-container">
           <p className="et-label">THE PEOPLE BEHIND THE CONTENT</p>
           <h2>
@@ -325,6 +324,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-    </main>
+    </HomeMotion>
   )
 }

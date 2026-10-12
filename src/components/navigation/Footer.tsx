@@ -27,6 +27,7 @@ const footerGroups = [
     title: 'Company',
     links: [
       { label: 'About EPUBTRANS', href: '/company' },
+      { label: 'Global Presence', href: '/company/global-presence' },
       { label: 'Careers', href: '/company/careers' },
       { label: 'Open opportunities', href: '/company/careers#open-roles' },
       { label: 'Contact us', href: '/contact' },

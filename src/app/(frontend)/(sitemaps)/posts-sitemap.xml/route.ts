@@ -14,7 +14,7 @@ export async function GET() {
   })
   return getServerSideSitemap(
     posts.docs.map((post) => ({
-      loc: `${getServerSideURL()}/resources/${post.slug}`,
+      loc: `${getServerSideURL()}/blog/${post.slug}`,
       lastmod: post.updatedAt,
     })),
   )

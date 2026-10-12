@@ -7,3 +7,6 @@
 @import '../components/assistant/assistant.css';
 @import './responsive.css';
 @import './theme.css';
+@import './services.css';
+@import './service-motion.css';
+@import './home-motion.css';

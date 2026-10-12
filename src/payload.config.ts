@@ -22,6 +22,7 @@ import { getServerSideURL } from './utilities/getURL'
 import { Services } from './payload/collections/services'
 import { Solutions } from './payload/collections/solutions'
 import { Industries } from './payload/collections/Industries'
+import { PortfolioPreviews } from './payload/collections/PortfolioPreviews'
 import {
   ServiceCategories,
   Technologies,
@@ -112,6 +113,7 @@ export default buildConfig({
     Services,
     Solutions,
     Industries,
+    PortfolioPreviews,
     ServiceCategories,
     Technologies,
     CaseStudies,

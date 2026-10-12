@@ -1,6 +1,6 @@
 import { authenticated } from '@/payload/access/authenticated'
 import { publishedContent } from '@/payload/access/publishedContent'
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig, Where } from 'payload'
 
 export const Services: CollectionConfig = {
   slug: 'services',
@@ -83,6 +83,13 @@ export const Services: CollectionConfig = {
           name: 'description',
           type: 'textarea',
         },
+        { name: 'image', type: 'upload', relationTo: 'media' },
+        {
+          name: 'layout',
+          type: 'select',
+          options: ['editorial', 'technical', 'publication'],
+          admin: { description: 'Optional override; otherwise the layout follows the service.' },
+        },
       ],
     },
 
@@ -148,6 +155,43 @@ export const Services: CollectionConfig = {
       ],
     },
 
+    {
+      name: 'visualExplanation',
+      type: 'group',
+      fields: [
+        { name: 'title', type: 'text' },
+        { name: 'description', type: 'textarea' },
+        { name: 'sourceLabel', type: 'text' },
+        { name: 'outputLabel', type: 'text' },
+      ],
+    },
+    {
+      name: 'quality',
+      type: 'array',
+      admin: { description: 'Verified review practices only; omit unsupported compliance claims.' },
+      fields: [
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' },
+      ],
+    },
+    {
+      name: 'useCases',
+      type: 'array',
+      fields: [
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' },
+        { name: 'industry', type: 'relationship', relationTo: 'industries' },
+      ],
+    },
+    {
+      name: 'relatedServices',
+      type: 'relationship',
+      relationTo: 'services',
+      hasMany: true,
+      filterOptions: ({ id }): Where => ({
+        and: [{ status: { equals: 'published' } }, ...(id ? [{ id: { not_equals: id } }] : [])],
+      }),
+    },
     {
       name: 'status',
       type: 'select',

@@ -1,7 +1,9 @@
 import { pageMetadata } from '@/lib/seo'
 import { listContent } from '@/lib/content'
-import { ContentCTA, PageHero } from '@/components/editorial/Primitives'
 import Link from '@/components/i18n/LocalizedLink'
+import { ArrowUpRight } from 'lucide-react'
+import { serviceGroups, serviceGroup } from '@/config/service-design'
+import { ServiceCTA } from '@/components/services/ServiceSections'
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
   title: 'What We Do',
@@ -9,63 +11,78 @@ export const metadata = pageMetadata({
   alternates: { canonical: '/services' },
 })
 
-const groups = [
-  ['publishing', 'Publishing & content', ['publishing']],
-  ['language', 'Language & localization', ['translation', 'desktop-publishing']],
-  ['media', 'Media & multimedia', ['voiceover', 'transcription', 'subtitling']],
-  ['learning', 'Learning', ['elearning-localization']],
-  ['accessibility', 'Accessibility', ['accessibility']],
-] as const
 export default async function ServicesPage() {
   const services = await listContent('services')
   return (
-    <main>
-      <PageHero
-        eyebrow="WHAT WE DO"
-        title="Content, in every dimension."
-        description="From the first manuscript to the next audience. Explore the capabilities that connect your content to its possibilities."
-      />
-      {groups.map(([id, title, slugs]) => {
-        const matches = services.filter((service) =>
-          id === 'publishing'
-            ? service.category === 'publishing'
-            : slugs.some((slug) => slug === service.slug),
-        )
+    <main className="sp-page">
+      <section className="sp-index-hero">
+        <div className="et-container">
+          <p className="sp-eyebrow">WHAT WE DO / EPUBTRANS</p>
+          <h1>Expertise for every chapter.</h1>
+          <div className="sp-index-bottom">
+            <p>
+              From editorial detail to structured digital content. Find the publishing, language and
+              production services your next project needs.
+            </p>
+            <div className="sp-actions">
+              <Link className="sp-button" href="/get-a-quote">
+                Discuss your project <ArrowUpRight size={19} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav className="et-container sp-group-nav" aria-label="Service categories">
+        {serviceGroups.map((group) => (
+          <Link key={group.id} href={`#${group.id}`}>
+            {group.title}
+          </Link>
+        ))}
+      </nav>
+      {serviceGroups.map((group, i) => {
+        const matches = services.filter((service) => serviceGroup(service) === group.id)
         return (
-          <section className="et-container et-content-section" id={id} key={id}>
-            <p className="et-label">WHAT WE DO / {id}</p>
-            <h2>{title}</h2>
-            {matches.length ? (
-              matches.map((service) => (
-                <Link
-                  className="et-content-row"
-                  key={service.id}
-                  href={`/services/${service.slug}`}
-                >
-                  <div>
-                    <h3>{service.title}</h3>
-                    <p>{service.shortDescription}</p>
-                  </div>
-                  <span>Explore ↗</span>
-                </Link>
-              ))
-            ) : (
-              <div className="et-empty">
-                <h3>Let’s discuss your requirements.</h3>
-                <p>
-                  Detailed service information is being prepared. Tell us about your content and the
-                  scope you have in mind.
-                </p>
-                <Link className="et-text-link" href="/get-a-quote">
-                  Discuss a project →
-                </Link>
-              </div>
-            )}
+          <section
+            className="et-container sp-section sp-catalog-group"
+            id={group.id}
+            key={group.id}
+          >
+            <div>
+              <span className="sp-small-number">0{i + 1} / CAPABILITIES</span>
+              <h2>{group.title}</h2>
+              <p>{group.description}</p>
+            </div>
+            <div>
+              {matches.length ? (
+                matches.map((service) => (
+                  <Link
+                    className="sp-catalog-link"
+                    key={service.id}
+                    href={`/services/${service.slug}`}
+                  >
+                    <div>
+                      <h3>{service.title}</h3>
+                      <p>{service.shortDescription}</p>
+                    </div>
+                    <ArrowUpRight size={25} aria-hidden="true" />
+                  </Link>
+                ))
+              ) : (
+                <div className="sp-catalog-empty">
+                  <p>
+                    Detailed service information is being prepared. Tell us about your content and
+                    requirements.
+                  </p>
+                  <Link className="sp-text-link" href="/get-a-quote">
+                    Discuss a project <ArrowUpRight size={17} aria-hidden="true" />
+                  </Link>
+                </div>
+              )}
+            </div>
           </section>
         )
       })}
-      <ContentCTA />
+      <ServiceCTA />
     </main>
   )
 }
-

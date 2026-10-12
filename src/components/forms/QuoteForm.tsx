@@ -22,10 +22,13 @@ const initial: QuoteData = {
   consent: false,
   website: '',
 }
-export function QuoteForm() {
+export function QuoteForm({ initialService = '' }: { initialService?: string }) {
   const [notification, setNotification] = useState('')
   const [step, setStep] = useState(0),
-    [data, setData] = useState(initial),
+    [data, setData] = useState(() => ({
+      ...initial,
+      service: quoteServices.some((value) => value === initialService) ? initialService : '',
+    })),
     [files, setFiles] = useState<File[]>([]),
     [errors, setErrors] = useState<Record<string, string>>({}),
     [pending, setPending] = useState(false),
