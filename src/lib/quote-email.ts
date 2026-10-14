@@ -1,8 +1,9 @@
 import nodemailer from 'nodemailer'
 import { Resend } from 'resend'
 import type { QuoteData } from '@/lib/validation/quote'
+import { quoteServiceOptions } from '@/lib/validation/quote'
 
-const managerEmail = () => process.env.MANAGER_EMAIL?.trim() || 'riyastech001@gmail.com'
+const managerEmail = () => process.env.MANAGER_EMAIL?.trim() || ''
 type Attachment = { originalName: string; size: number }
 
 export function quoteEmail(reference: string, data: QuoteData, attachments: Attachment[]) {
@@ -13,18 +14,21 @@ export function quoteEmail(reference: string, data: QuoteData, attachments: Atta
     ['Name', data.name],
     ['Email', data.email],
     ['Company', data.company || 'Not provided'],
-    ['Service', data.service],
-    ['Source language', data.sourceLanguage || 'Not specified'],
-    ['Target languages', data.targetLanguages || 'Not specified'],
-    ['Project deadline', data.deadline || 'Not specified'],
-    ['Project brief', data.details],
+    ['Country / Region', data.countryRegion || 'Not specified'],
+    ['Service', quoteServiceOptions.find(({ value }) => value === data.service)?.label || data.service],
+    ['Source and target languages', data.languages || 'Not specified'],
+    ['Source file format', data.sourceFileFormat || 'Not specified'],
+    ['Target output format', data.targetOutputFormat || 'Not specified'],
+    ['Approximate volume', data.approximateVolume || 'Not specified'],
+    ['Preferred delivery date', data.deadline || 'Not specified'],
+    ['Project description', data.details],
+    ['Additional requirements', data.additionalRequirements || 'Not specified'],
     [
       'Files',
       attachments.length
         ? attachments.map((file) => `${file.originalName} (${file.size} bytes)`).join('\n')
         : 'No files uploaded',
     ],
-    ['Consent', 'Customer agreed to be contacted about this request'],
   ]
   const escape = (value: string) =>
     value.replace(
@@ -35,7 +39,7 @@ export function quoteEmail(reference: string, data: QuoteData, attachments: Atta
   return {
     to: managerEmail(),
     replyTo: { name: data.name, address: data.email },
-    subject: `New Website Enquiry – ${data.service.replace(/[\r\n]/g, '')} (#${reference.replace(/[\r\n]/g, '')})`,
+    subject: `New Website Project Enquiry – ${quoteServiceOptions.find(({ value }) => value === data.service)?.label || 'EPUBTRANS'} (#${reference.replace(/[\r\n]/g, '')})`,
     text: `New EPUBTRANS quote request\n\n${rows.map(([label, value]) => `${label}: ${value}`).join('\n\n')}\n\nReview request and private files (admin login required): ${adminURL}`,
     html: `<div style="font-family:Arial,sans-serif;color:#102b2b;max-width:680px"><h1 style="font-size:24px">New quote request</h1><p>A visitor submitted a project enquiry on EPUBTRANS.</p><table style="border-collapse:collapse;width:100%">${rows.map(([label, value]) => `<tr><th style="text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #ddd">${escape(label)}</th><td style="padding:12px;border-bottom:1px solid #ddd;white-space:pre-wrap">${escape(value)}</td></tr>`).join('')}</table><p><a href="${escape(adminURL)}">Review request and private files</a> (admin login required)</p></div>`,
   }
@@ -46,16 +50,19 @@ export async function notifyQuote(
   data: QuoteData,
   attachments: Attachment[],
 ): Promise<'sent' | 'unavailable' | 'failed'> {
+  if (process.env.ENQUIRY_RECIPIENT_APPROVED !== 'true' || !managerEmail()) {
+    console.warn('Quote notification unavailable: the recipient approval gate is not enabled.')
+    return 'unavailable'
+  }
   if (process.env.RESEND_API_KEY) {
+    const sender = process.env.RESEND_FROM_EMAIL?.trim() || process.env.QUOTE_EMAIL_FROM?.trim()
+    if (!sender) return 'unavailable'
     try {
       const message = quoteEmail(reference, data, attachments)
       const resend = new Resend(process.env.RESEND_API_KEY)
       const { data: accepted, error } = await resend.emails.send(
         {
-          from:
-            process.env.RESEND_FROM_EMAIL ||
-            process.env.QUOTE_EMAIL_FROM ||
-            'EPUBTRANS <info@epubtrans.com>',
+          from: sender,
           to: [message.to],
           replyTo: data.email,
           subject: message.subject,

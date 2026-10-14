@@ -24,23 +24,31 @@ describe('Published content and private enquiries', () => {
     await expect(
       payload.find({ collection: 'quote-requests', overrideAccess: false }),
     ).rejects.toThrow()
+    await expect(
+      payload.find({ collection: 'enquiries', overrideAccess: false }),
+    ).rejects.toThrow()
   })
-  it('missing consent and a malformed email prevent a quote submission', () => {
+  it('a malformed email and missing required quote fields prevent submission', () => {
     const data: QuoteData = {
-      service: 'Publishing & content',
+      service: 'publishing_editorial',
       name: 'Example Reader',
       email: 'bad-address',
       details: 'A publishing project with several chapters.',
       sourceLanguage: '',
       targetLanguages: '',
+      languages: '',
+      countryRegion: '',
+      sourceFileFormat: '',
+      targetOutputFormat: '',
+      approximateVolume: '',
+      additionalRequirements: '',
       deadline: '',
       company: '',
       website: '',
-      consent: false,
     }
     expect(validateQuote(data)).toMatchObject({
       email: expect.any(String),
-      consent: expect.any(String),
+      company: expect.any(String),
     })
   })
 })

@@ -14,7 +14,7 @@ afterEach(() => {
   vi.unstubAllGlobals()
 })
 
-it('blocks repeated submissions while saving and preserves the brief in transport', async () => {
+it('prevents duplicate clicks and sends approved field IDs while retaining the exact brief', async () => {
   let complete!: (response: Response) => void
   const fetchMock = vi.fn(
     () =>
@@ -28,46 +28,57 @@ it('blocks repeated submissions while saving and preserves the brief in transpor
     return 0
   })
   render(<QuoteForm />)
-  fireEvent.click(screen.getByLabelText('Publishing & content'))
+  fireEvent.click(screen.getByRole('radio', { name: 'Publishing & Editorial Services' }))
   fireEvent.click(screen.getByRole('button', { name: 'Continue' }))
+  fireEvent.change(screen.getByLabelText(/Attach project files/), {
+    target: { files: [new File(['Brief'], 'brief.txt', { type: 'text/plain' })] },
+  })
   const brief = '  Please preserve this original message.\nSecond line & <tags>.\n  '
-  fireEvent.change(screen.getByLabelText('Project requirements *'), { target: { value: brief } })
+  fireEvent.change(screen.getByLabelText('Project Description *'), { target: { value: brief } })
   fireEvent.click(screen.getByRole('button', { name: 'Continue' }))
-  fireEvent.change(screen.getByLabelText('Full name *'), { target: { value: 'Test Customer' } })
-  fireEvent.change(screen.getByLabelText('Email address *'), {
+  fireEvent.change(screen.getByLabelText('Full Name *'), { target: { value: 'Test Customer' } })
+  fireEvent.change(screen.getByLabelText('Business Email *'), {
     target: { value: 'test@example.com' },
   })
+  fireEvent.change(screen.getByLabelText('Company / Organization *'), {
+    target: { value: 'Example' },
+  })
   fireEvent.click(screen.getByRole('button', { name: 'Continue' }))
-  fireEvent.click(screen.getByRole('checkbox'))
-  const form = screen.getByRole('button', { name: 'Submit request' }).closest('form')!
+  const form = screen.getByRole('button', { name: 'Submit Project Enquiry' }).closest('form')!
   fireEvent.submit(form)
   fireEvent.submit(form)
   expect(fetchMock).toHaveBeenCalledTimes(1)
-  expect(screen.getByRole('button', { name: 'Saving request…' }).hasAttribute('disabled')).toBe(
-    true,
-  )
+  expect(screen.getByRole('button', { name: 'Submitting…' }).hasAttribute('disabled')).toBe(true)
   const options = fetchMock.mock.calls[0] as unknown as [string, { body: FormData }]
-  expect(JSON.parse(String(options[1].body.get('details')))).toBe(brief)
+  expect((options[1].body.get('files') as File).name).toBe('brief.txt')
+  expect(options[1].body.get('service_required')).toBe('publishing_editorial')
+  expect(options[1].body.get('full_name')).toBe('Test Customer')
+  expect(JSON.parse(String(options[1].body.get('project_description')))).toBe(brief)
   complete(
-    new Response(JSON.stringify({ reference: '123', notification: 'failed' }), { status: 201 }),
+    new Response(JSON.stringify({ reference: '123', notification: 'unavailable' }), {
+      status: 201,
+    }),
   )
   await waitFor(() =>
-    expect(screen.getByText(/Your request is saved, but the email notification/)).toBeTruthy(),
+    expect(screen.getByText('Your project enquiry has been submitted.')).toBeTruthy(),
   )
-  expect(screen.queryByRole('button', { name: 'Submit request' })).toBeNull()
+  expect(screen.queryByRole('button', { name: 'Submit Project Enquiry' })).toBeNull()
 })
 
-it('preselects an allowlisted service category from the existing quote flow', () => {
-  render(<QuoteForm initialService="Translation & localization" />)
-  expect((screen.getByLabelText('Translation & localization') as HTMLInputElement).checked).toBe(
-    true,
-  )
+it('preselects only an allowlisted service ID', () => {
+  render(<QuoteForm initialService="localization_dtp" />)
+  expect(
+    (
+      screen.getByRole('radio', {
+        name: 'Localization & Multilingual Production',
+      }) as HTMLInputElement
+    ).checked,
+  ).toBe(true)
 })
 
 it('ignores an unknown service category', () => {
   render(<QuoteForm initialService="untrusted-value" />)
-  expect((screen.getByLabelText('Publishing & content') as HTMLInputElement).checked).toBe(false)
-  expect((screen.getByLabelText('Translation & localization') as HTMLInputElement).checked).toBe(
-    false,
+  expect(screen.getAllByRole('radio').every((input) => !(input as HTMLInputElement).checked)).toBe(
+    true,
   )
 })

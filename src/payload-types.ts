@@ -82,6 +82,7 @@ export interface Config {
     resources: Resource;
     careers: Career;
     'quote-requests': QuoteRequest;
+    enquiries: Enquiry;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -114,6 +115,7 @@ export interface Config {
     resources: ResourcesSelect<false> | ResourcesSelect<true>;
     careers: CareersSelect<false> | CareersSelect<true>;
     'quote-requests': QuoteRequestsSelect<false> | QuoteRequestsSelect<true>;
+    enquiries: EnquiriesSelect<false> | EnquiriesSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -1617,15 +1619,23 @@ export interface Career {
  */
 export interface QuoteRequest {
   id: number;
+  submissionKey?: string | null;
   name: string;
   email: string;
   company?: string | null;
   service: string;
   sourceLanguage?: string | null;
   targetLanguages?: string | null;
+  languages?: string | null;
+  countryRegion?: string | null;
+  sourceFileFormat?: string | null;
+  targetOutputFormat?: string | null;
+  approximateVolume?: string | null;
+  additionalRequirements?: string | null;
   details: string;
   deadline?: string | null;
-  consent: boolean;
+  consent?: boolean | null;
+  sourcePage?: string | null;
   attachments?:
     | {
         originalName: string;
@@ -1634,6 +1644,23 @@ export interface QuoteRequest {
         id?: string | null;
       }[]
     | null;
+  status?: ('new' | 'reviewing' | 'contacted' | 'closed') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiries".
+ */
+export interface Enquiry {
+  id: number;
+  submissionKey?: string | null;
+  name: string;
+  email: string;
+  organization?: string | null;
+  inquiryType: 'general' | 'services' | 'partnership' | 'existing_project' | 'other';
+  message: string;
+  sourcePage?: string | null;
   status?: ('new' | 'reviewing' | 'contacted' | 'closed') | null;
   updatedAt: string;
   createdAt: string;
@@ -1887,6 +1914,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'quote-requests';
         value: number | QuoteRequest;
+      } | null)
+    | ({
+        relationTo: 'enquiries';
+        value: number | Enquiry;
       } | null)
     | ({
         relationTo: 'redirects';
@@ -2896,15 +2927,23 @@ export interface CareersSelect<T extends boolean = true> {
  * via the `definition` "quote-requests_select".
  */
 export interface QuoteRequestsSelect<T extends boolean = true> {
+  submissionKey?: T;
   name?: T;
   email?: T;
   company?: T;
   service?: T;
   sourceLanguage?: T;
   targetLanguages?: T;
+  languages?: T;
+  countryRegion?: T;
+  sourceFileFormat?: T;
+  targetOutputFormat?: T;
+  approximateVolume?: T;
+  additionalRequirements?: T;
   details?: T;
   deadline?: T;
   consent?: T;
+  sourcePage?: T;
   attachments?:
     | T
     | {
@@ -2913,6 +2952,22 @@ export interface QuoteRequestsSelect<T extends boolean = true> {
         size?: T;
         id?: T;
       };
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiries_select".
+ */
+export interface EnquiriesSelect<T extends boolean = true> {
+  submissionKey?: T;
+  name?: T;
+  email?: T;
+  organization?: T;
+  inquiryType?: T;
+  message?: T;
+  sourcePage?: T;
   status?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -3262,6 +3317,24 @@ export interface SiteSetting {
   phone?: string | null;
   location?: string | null;
   /**
+   * Enable only after management confirms the current email address and telephone number for public display.
+   */
+  contactDetailsApproved?: boolean | null;
+  aboutPage?: {
+    /**
+     * Optional replacement for the current mission. Review the About EPUBTRANS draft and obtain management approval before enabling it.
+     */
+    mission?: string | null;
+    /**
+     * Optional replacement for the current vision. Review the About EPUBTRANS draft and obtain management approval before enabling it.
+     */
+    vision?: string | null;
+    /**
+     * Display the new CMS mission and vision only after management approves both statements.
+     */
+    missionVisionApproved?: boolean | null;
+  };
+  /**
    * Legal text and quote data retention require owner review before production.
    */
   legalReviewed?: boolean | null;
@@ -3325,6 +3398,14 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   email?: T;
   phone?: T;
   location?: T;
+  contactDetailsApproved?: T;
+  aboutPage?:
+    | T
+    | {
+        mission?: T;
+        vision?: T;
+        missionVisionApproved?: T;
+      };
   legalReviewed?: T;
   defaultLocale?: T;
   updatedAt?: T;

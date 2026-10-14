@@ -96,8 +96,8 @@ export async function POST(request: NextRequest) {
             parts: [
               {
                 text: assistantInstructions(
-                  settings.email || 'info@epubtrans.com',
-                  settings.phone || '+91 44 3136 3907',
+                  settings.contactDetailsApproved === true ? settings.email || '' : '',
+                  settings.contactDetailsApproved === true ? settings.phone || '' : '',
                   settings.location || 'Chennai, India',
                 ),
               },

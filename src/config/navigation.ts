@@ -144,7 +144,7 @@ export const navigation: NavigationSection[] = [
   },
   {
     label: 'Company',
-    href: '/company',
+    href: '/about-us',
     overviewLabel: 'Discover EPUBTRANS',
     description:
       'Meet the people, purpose and capabilities behind your next publishing and localization project.',
@@ -153,11 +153,13 @@ export const navigation: NavigationSection[] = [
         title: 'About EPUBTRANS',
         description: 'Our purpose. Your publishing partner.',
         items: [
-          { label: 'About Us', href: '/company' },
-          { label: 'Our Story', href: '/company#our-story' },
-          { label: 'Mission & Vision', href: '/company#mission-vision' },
-          { label: 'Why EPUBTRANS', href: '/company#why-epubtrans' },
-          { label: 'Leadership', href: '/company#leadership' },
+          { label: 'About Us', href: '/about-us' },
+          { label: 'Who We Are', href: '/about-us#who-we-are' },
+          { label: 'Who We Work With', href: '/about-us#who-we-work-with' },
+          { label: 'What We Do', href: '/about-us#what-we-do' },
+          { label: 'Our Approach', href: '/about-us#our-approach' },
+          { label: 'Mission & Vision', href: '/about-us#mission-vision' },
+          { label: 'Where We Work', href: '/about-us#where-we-work' },
         ],
       },
       {
@@ -182,5 +184,5 @@ export const navigation: NavigationSection[] = [
       },
     ],
   },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Contact', href: '/contact-us' },
 ]

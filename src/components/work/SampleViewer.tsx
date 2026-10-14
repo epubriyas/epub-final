@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import Image from 'next/image'
+import { ArrowLeft, ArrowRight, Maximize2, Minus, Plus, X } from 'lucide-react'
 import Link from '@/components/i18n/LocalizedLink'
 import type { WorkSample } from '@/lib/portfolio'
 
@@ -75,7 +76,7 @@ export function SampleViewer({
               autoFocus
               aria-label="Close sample viewer"
             >
-              Close <span aria-hidden="true">×</span>
+              Close <X size={18} aria-hidden="true" />
             </button>
           </header>
           <PreviewLoader key={sample.id} sample={sample} />
@@ -88,14 +89,14 @@ export function SampleViewer({
                     disabled={index === 0}
                     onClick={() => onChange(index! - 1)}
                   >
-                    Previous sample
+                    <ArrowLeft size={16} aria-hidden="true" /> Previous sample
                   </button>
                   <button
                     className="wp-control"
                     disabled={index === samples.length - 1}
                     onClick={() => onChange(index! + 1)}
                   >
-                    Next sample
+                    Next sample <ArrowRight size={16} aria-hidden="true" />
                   </button>
                 </>
               )}
@@ -113,7 +114,7 @@ export function SampleViewer({
                     }
                   }}
                 >
-                  Full screen
+                  <Maximize2 size={16} aria-hidden="true" /> Full screen
                 </button>
               )}
             </div>
@@ -183,10 +184,25 @@ function PreviewLoader({ sample }: { sample: WorkSample }) {
 function PreviewContent({ sample }: { sample: WorkSample }) {
   const [page, setPage] = useState(0)
   const [zoom, setZoom] = useState(1)
-  const [textView, setTextView] = useState(false)
   const [error, setError] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const area = useRef<HTMLDivElement>(null)
+  const [viewport, setViewport] = useState({ width: 0, height: 0 })
+  const [aspectRatio, setAspectRatio] = useState(1700 / 2200)
+  useEffect(() => {
+    const element = area.current
+    if (!element) return
+    const observer = new ResizeObserver(() => {
+      const style = getComputedStyle(element)
+      setViewport({
+        width: element.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight),
+        height:
+          element.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom),
+      })
+    })
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
   const reader = sample.sections.length > 0
   const count = reader ? sample.sections.length : sample.pages.length
   const active = sample.pages[page]
@@ -195,20 +211,20 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
     setError(false)
     setLoaded(false)
     setZoom(1)
-    if (area.current) area.current.scrollTop = 0
+    if (area.current) area.current.scrollTo({ top: 0, left: 0 })
   }
   return (
     <>
       <div className="wp-toolbar" aria-label="Preview controls">
         {count > 1 && (
-          <>
+          <div className="wp-toolbar-group wp-page-controls">
             <button
               className="wp-control"
               disabled={page === 0}
               onClick={() => changePage(page - 1)}
               aria-label={reader ? 'Previous section' : 'Previous page'}
             >
-              ←
+              <ArrowLeft size={18} aria-hidden="true" />
             </button>
             <label className="wp-page-select">
               {reader ? 'Section' : 'Page'}{' '}
@@ -227,19 +243,19 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
               onClick={() => changePage(page + 1)}
               aria-label={reader ? 'Next section' : 'Next page'}
             >
-              →
+              <ArrowRight size={18} aria-hidden="true" />
             </button>
-          </>
+          </div>
         )}
         {(reader || active) && (
-          <>
+          <div className="wp-toolbar-group wp-zoom-controls">
             <button
               className="wp-control"
               disabled={zoom <= 1}
               aria-label={reader ? 'Smaller text' : 'Zoom out'}
               onClick={() => setZoom(Math.max(1, zoom - 0.25))}
             >
-              −
+              <Minus size={18} aria-hidden="true" />
             </button>
             <span className="wp-zoom" aria-live="polite">
               {Math.round(zoom * 100)}%
@@ -250,21 +266,12 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
               aria-label={reader ? 'Larger text' : 'Zoom in'}
               onClick={() => setZoom(zoom + 0.25)}
             >
-              +
+              <Plus size={18} aria-hidden="true" />
             </button>
             <button className="wp-control" onClick={() => setZoom(1)}>
               {reader ? 'Reset text' : 'Fit'}
             </button>
-          </>
-        )}
-        {!!active?.text && (
-          <button
-            className="wp-control"
-            aria-pressed={textView}
-            onClick={() => setTextView(!textView)}
-          >
-            {textView ? 'Page image' : 'Read page text'}
-          </button>
+          </div>
         )}
       </div>
       <div className="wp-preview-area" ref={area}>
@@ -277,56 +284,53 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
             ))}
           </article>
         ) : active ? (
-          textView ? (
-            <article className="wp-reading">
-              <h3>Source page {active.sourcePage}</h3>
-              <p className="wp-transcript">{active.text}</p>
-            </article>
-          ) : (
-            <div
-              className="wp-image-stage"
-              data-zoomed={zoom > 1}
-              style={{ width: `${zoom * 100}%`, minHeight: `${zoom * 100}%` }}
-            >
-              {!loaded && !error && (
-                <p className="wp-preview-status wp-page-loading" role="status">
-                  Loading page…
-                </p>
-              )}
-              {error ? (
-                <div className="wp-preview-status" role="alert">
-                  <p>This page could not be loaded.</p>
-                  <button
-                    className="wp-control"
-                    onClick={() => {
-                      setError(false)
-                      setLoaded(false)
-                    }}
-                  >
-                    Try again
-                  </button>
-                  {active.text && (
-                    <button className="wp-control" onClick={() => setTextView(true)}>
-                      Read page text
-                    </button>
-                  )}
-                </div>
-              ) : (
-                <Image
-                  key={active.url}
-                  unoptimized
-                  loading="eager"
-                  src={active.url}
-                  alt={active.alt}
-                  width={1700}
-                  height={2200}
-                  className="wp-page-image"
-                  onLoad={() => setLoaded(true)}
-                  onError={() => setError(true)}
-                />
-              )}
-            </div>
-          )
+          <div
+            className="wp-image-stage"
+            data-zoomed={zoom > 1}
+            style={{
+              width: viewport.width
+                ? `${Math.min(viewport.width, viewport.height * aspectRatio) * zoom}px`
+                : '100%',
+              minHeight: '100%',
+            }}
+          >
+            {!loaded && !error && (
+              <p className="wp-preview-status wp-page-loading" role="status">
+                Loading page…
+              </p>
+            )}
+            {error ? (
+              <div className="wp-preview-status" role="alert">
+                <p>This page could not be loaded.</p>
+                <button
+                  className="wp-control"
+                  onClick={() => {
+                    setError(false)
+                    setLoaded(false)
+                  }}
+                >
+                  Try again
+                </button>
+              </div>
+            ) : (
+              <Image
+                key={active.url}
+                unoptimized
+                loading="eager"
+                src={active.url}
+                alt={active.alt}
+                width={1700}
+                height={2200}
+                className="wp-page-image"
+                onLoad={(event) => {
+                  const image = event.currentTarget
+                  setAspectRatio(image.naturalWidth / image.naturalHeight)
+                  setLoaded(true)
+                }}
+                onError={() => setError(true)}
+              />
+            )}
+          </div>
         ) : (
           <div className="wp-preview-status">
             <h3>Preview is being prepared</h3>

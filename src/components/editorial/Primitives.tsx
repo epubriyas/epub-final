@@ -38,12 +38,8 @@ export function PageHero({
 export function ContentCTA() {
   return (
     <section className="et-inline-cta et-container">
-      <h2>
-        Let’s talk about
-        <br />
-        your content.
-      </h2>
-      <ArrowLink href="/get-a-quote">Start a conversation</ArrowLink>
+      <h2>Discuss your project requirements</h2>
+      <ArrowLink href="/get-a-quote">Request a quote</ArrowLink>
     </section>
   )
 }

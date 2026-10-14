@@ -22,7 +22,7 @@ function AssistantText({ text, onNavigate }: { text: string; onNavigate: () => v
           )
         if (
           link &&
-          /^\/(services(?:\/[a-z0-9-]+)?|resources|work|company(?:\/careers)?|get-a-quote)$/.test(
+          /^\/(services(?:\/[a-z0-9-]+)?|resources|work|company(?:\/careers)?|contact-us|get-a-quote)$/.test(
             link[2],
           )
         )
@@ -431,11 +431,11 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
             </div>
             <p>
               AI replies may be inaccurate. Avoid confidential details.
-              <span className="et-assistant-contact-links">
-                <a href={`mailto:${email}`}>Email our team</a>
-                <span aria-hidden="true">·</span>
-                <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>Call us</a>
-              </span>
+              {(email || phone) && <span className="et-assistant-contact-links">
+                {email && <a href={`mailto:${email}`}>Email our team</a>}
+                {email && phone && <span aria-hidden="true">·</span>}
+                {phone && <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>Call us</a>}
+              </span>}
             </p>
           </form>
         </div>

@@ -39,7 +39,7 @@ test('company menu presents three columns and navigates to company content', asy
     'Global Presence',
     'Careers',
   ])
-  await expect(menu.getByRole('link')).toHaveCount(14)
+  await expect(menu.getByRole('link')).toHaveCount(16)
   const columns = await menu
     .locator('.et-mega-groups > div')
     .evaluateAll((elements) => elements.map((element) => element.getBoundingClientRect().top))
@@ -48,9 +48,9 @@ test('company menu presents three columns and navigates to company content', asy
     Promise.all(element.getAnimations().map((animation) => animation.finished)),
   )
   await page.screenshot({ path: 'artifacts/v2/screens/company-menu-desktop.png' })
-  await menu.getByRole('link', { name: 'Our Story', exact: true }).click()
-  await expect(page).toHaveURL(/\/company#our-story$/)
-  await expect(page.locator('#our-story')).toBeInViewport()
+  await menu.getByRole('link', { name: 'Who We Are', exact: true }).click()
+  await expect(page).toHaveURL(/\/about-us#who-we-are$/)
+  await expect(page.locator('#who-we-are')).toBeInViewport()
   await expect(menu).toHaveCount(0)
   await trigger.click()
   await page.keyboard.press('Escape')
@@ -64,16 +64,19 @@ test('mobile company groups lead to internship content without horizontal overfl
   await page.goto('/')
   await page.getByRole('button', { name: 'Open navigation', exact: true }).click()
   const dialog = page.getByRole('dialog', { name: 'Site navigation' })
-  await dialog.getByRole('button', { name: 'Company', exact: true }).click()
+  const company = dialog.getByRole('button', { name: 'Company', exact: true })
+  const sectionId = (await company.getAttribute('aria-controls'))!
+  await company.click()
   await expect(dialog.getByRole('link', { name: 'Discover EPUBTRANS' })).toBeVisible()
-  await expect(dialog.locator('#mobile-5 summary')).toHaveText([
+  const companySection = dialog.locator(`#${sectionId}`)
+  await expect(companySection.locator('summary')).toHaveText([
     'About EPUBTRANS',
     'Global Presence',
     'Careers',
   ])
-  await dialog.locator('#mobile-5 summary').getByText('Careers', { exact: true }).click()
+  await companySection.locator('summary').getByText('Careers', { exact: true }).click()
   await dialog
-    .locator('#mobile-5')
+    .locator(`#${sectionId}`)
     .evaluate((element) => element.scrollIntoView({ block: 'start' }))
   await page.screenshot({ path: 'artifacts/v2/screens/company-menu-mobile.png' })
   await dialog.getByRole('link', { name: 'Internships', exact: true }).click()

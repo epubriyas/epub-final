@@ -1,33 +1,41 @@
-import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { POST } from '@/app/(frontend)/api/quote/route'
 
-const { create, notify, mkdir, writeFile, unlink } = vi.hoisted(() => ({
+const { create, find, notify, store, remove } = vi.hoisted(() => ({
   create: vi.fn(),
+  find: vi.fn(),
   notify: vi.fn(),
-  mkdir: vi.fn(),
-  writeFile: vi.fn(),
-  unlink: vi.fn(),
+  store: vi.fn(),
+  remove: vi.fn(),
 }))
-vi.mock('@/lib/content', () => ({ contentPayload: async () => ({ create }) }))
+vi.mock('@/lib/content', () => ({ contentPayload: async () => ({ create, find }) }))
 vi.mock('@/lib/quote-email', () => ({ notifyQuote: notify }))
-vi.mock('node:fs/promises', () => ({ mkdir, writeFile, unlink }))
+vi.mock('@/lib/private-files', () => ({ storePrivateFile: store, removePrivateFile: remove }))
 
 const brief = '  Please preserve this exact brief.\r\nSecond line & <special> தமிழ்.\n  '
-function request(overrides: Record<string, string | undefined> = {}, attachment = false) {
+const key = 'f47ac10b-58cc-4372-a567-0e02b2c3d479'
+function request(
+  overrides: Record<string, string | undefined> = {},
+  attachment: boolean | File = false,
+) {
   const form = new FormData()
-  for (const [key, value] of Object.entries({
-    name: 'Test Customer',
-    email: 'customer@example.com',
-    company: 'Example',
-    service: 'Publishing & content',
-    details: brief,
-    consent: 'true',
+  for (const [name, value] of Object.entries({
+    full_name: 'Test Customer',
+    business_email: 'customer@example.com',
+    organization: 'Example',
+    service_required: 'publishing_editorial',
+    project_description: brief,
+    submission_key: key,
     ...overrides,
   }))
-    if (value !== undefined) form.set(key, value)
-  form.set('details', JSON.stringify(form.get('details')))
+    if (value !== undefined) form.set(name, value)
+  form.set('project_description', JSON.stringify(form.get('project_description')))
   form.set('detailsEncoding', 'json')
-  if (attachment) form.append('files', new File(['Sample brief'], 'brief.txt'))
+  if (attachment)
+    form.append(
+      'files',
+      attachment instanceof File ? attachment : new File(['Sample brief'], 'brief.txt'),
+    )
   return new Request('http://localhost:3001/api/quote', {
     method: 'POST',
     headers: { origin: 'http://localhost:3001' },
@@ -37,62 +45,94 @@ function request(overrides: Record<string, string | undefined> = {}, attachment 
 beforeEach(() => {
   vi.clearAllMocks()
   vi.stubEnv('NEXT_PUBLIC_SERVER_URL', 'http://localhost:3001')
+  find.mockResolvedValue({ docs: [] })
   create.mockResolvedValue({ id: 123 })
-  notify.mockResolvedValue('sent')
+  notify.mockResolvedValue('unavailable')
 })
 afterEach(() => vi.unstubAllEnvs())
 
 describe('Quote save and notification flow', () => {
-  it('creates one record before notifying, preserving the original brief', async () => {
-    const response = await POST(request())
+  it('persists the complete approved field set before notifying', async () => {
+    const response = await POST(
+      request({
+        country_region: 'India',
+        source_file_format: 'DOCX',
+        target_output_format: 'EPUB',
+        approximate_volume: '100 pages',
+        languages: 'English to Tamil',
+        additional_requirements: 'Use the supplied style guide.',
+      }),
+    )
     expect(response.status).toBe(201)
-    expect(await response.json()).toEqual({ reference: '123', notification: 'sent' })
-    expect(create).toHaveBeenCalledTimes(1)
+    expect(await response.json()).toEqual({ reference: '123', notification: 'unavailable' })
     expect(create).toHaveBeenCalledWith(
       expect.objectContaining({
         collection: 'quote-requests',
-        data: expect.objectContaining({ details: brief }),
+        data: expect.objectContaining({
+          submissionKey: key,
+          details: brief,
+          consent: false,
+          attachments: [],
+          countryRegion: 'India',
+          sourceFileFormat: 'DOCX',
+          targetOutputFormat: 'EPUB',
+          approximateVolume: '100 pages',
+          languages: 'English to Tamil',
+          additionalRequirements: 'Use the supplied style guide.',
+          sourcePage: '/get-a-quote',
+        }),
       }),
     )
-    expect(notify).toHaveBeenCalledTimes(1)
-    expect(notify).toHaveBeenCalledWith('123', expect.objectContaining({ details: brief }), [])
-    expect(create.mock.invocationCallOrder[0]).toBeLessThan(notify.mock.invocationCallOrder[0])
+    expect(notify).toHaveBeenCalledOnce()
   })
-  it.each(['failed', 'unavailable'])(
-    'returns the saved reference when mail is %s',
-    async (status) => {
-      notify.mockResolvedValue(status)
-      const response = await POST(request({}, true))
-      expect(response.status).toBe(201)
-      expect(await response.json()).toEqual({ reference: '123', notification: status })
-      expect(create).toHaveBeenCalledTimes(1)
-      expect(writeFile).toHaveBeenCalledTimes(1)
-      expect(unlink).not.toHaveBeenCalled()
-    },
-  )
-  it('retains the saved request and uploads even if notification unexpectedly throws', async () => {
-    notify.mockRejectedValue(new Error('Unexpected failure'))
-    const response = await POST(request({}, true))
+  it('returns the existing lead for a duplicate retry', async () => {
+    find.mockResolvedValue({ docs: [{ id: 987 }] })
+    const response = await POST(request())
     expect(response.status).toBe(201)
-    expect(await response.json()).toEqual({ reference: '123', notification: 'failed' })
-    expect(unlink).not.toHaveBeenCalled()
-  })
-  it('does not notify when storage fails and cleans up uncommitted uploads', async () => {
-    create.mockRejectedValue(new Error('Database unavailable'))
-    const response = await POST(request({}, true))
-    expect(response.status).toBe(503)
+    expect(await response.json()).toEqual({ reference: '987', notification: 'unavailable' })
+    expect(create).not.toHaveBeenCalled()
     expect(notify).not.toHaveBeenCalled()
-    expect(unlink).toHaveBeenCalledTimes(1)
   })
-  it.each([{ email: 'invalid' }, { details: ' ' }, { consent: 'false' }, { name: '' }])(
-    'rejects invalid input before storage and email: %j',
-    async (input) => {
-      const response = await POST(request(input))
-      expect(response.status).toBe(422)
-      expect(create).not.toHaveBeenCalled()
-      expect(notify).not.toHaveBeenCalled()
-    },
-  )
+  it('stores attachments privately and records them on the enquiry', async () => {
+    expect((await POST(request({}, true))).status).toBe(201)
+    expect(store).toHaveBeenCalledOnce()
+    expect(create.mock.calls[0][0].data.attachments).toEqual([
+      expect.objectContaining({
+        originalName: 'brief.txt',
+        size: 12,
+        path: expect.stringMatching(/\.txt$/),
+      }),
+    ])
+    expect(notify.mock.calls[0][2]).toHaveLength(1)
+  })
+  it('removes uploaded files when enquiry persistence fails', async () => {
+    create.mockRejectedValueOnce(new Error('Storage failed'))
+    expect((await POST(request({}, true))).status).toBe(503)
+    expect(remove).toHaveBeenCalledOnce()
+    expect(notify).not.toHaveBeenCalled()
+  })
+  it('does not store attachments again on a duplicate retry', async () => {
+    find.mockResolvedValue({ docs: [{ id: 987 }] })
+    expect((await POST(request({}, true))).status).toBe(201)
+    expect(store).not.toHaveBeenCalled()
+  })
+  it('rejects a file with a misleading PDF extension before storage', async () => {
+    expect((await POST(request({}, new File(['Not a PDF'], 'brief.pdf')))).status).toBe(422)
+    expect(store).not.toHaveBeenCalled()
+    expect(create).not.toHaveBeenCalled()
+  })
+  it.each([
+    { business_email: 'invalid' },
+    { project_description: ' ' },
+    { organization: '' },
+    { full_name: '' },
+    { service_required: 'unapproved_service' },
+    { submission_key: 'invalid' },
+  ])('rejects invalid input before storage: %j', async (input) => {
+    expect((await POST(request(input))).status).toBe(input.submission_key ? 400 : 422)
+    expect(create).not.toHaveBeenCalled()
+    expect(notify).not.toHaveBeenCalled()
+  })
   it('rejects honeypot submissions', async () => {
     expect((await POST(request({ website: 'spam' }))).status).toBe(400)
     expect(create).not.toHaveBeenCalled()

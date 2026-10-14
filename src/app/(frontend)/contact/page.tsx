@@ -1,171 +1,192 @@
+import type { Metadata } from 'next'
 import Link from '@/components/i18n/LocalizedLink'
-import { ArrowRight, ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
-import { PageHero } from '@/components/editorial/Primitives'
-import { companyOffices, companyWhatsApp } from '@/config/contact'
-import { getSiteSettings } from '@/lib/content'
-import { pageMetadata } from '@/lib/seo'
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Mail,
+  Phone,
+  MapPin,
+  Handshake,
+  Check,
+  MessagesSquare,
+} from 'lucide-react'
+import { ContactForm } from '@/components/forms/ContactForm'
+import { companyOffices } from '@/config/contact'
 
-export const metadata = pageMetadata({
-  title: 'Contact Us',
+const indexingApproved =
+  process.env.VERCEL_ENV === 'production' && process.env.EPUBTRANS_INDEXING_APPROVED === 'true'
+
+export const metadata: Metadata = {
+  title: { absolute: 'Contact EPUBTRANS | Publishing & Content Services' },
   description:
-    'Connect with EPUBTRANS for publishing, localization and digital content enquiries. Find our email, phone and WhatsApp details.',
-  alternates: { canonical: '/contact' },
-})
+    'Contact EPUBTRANS to discuss digital publishing, document conversion, XML, accessibility, multilingual DTP and localization production requirements.',
+  ...(indexingApproved ? { alternates: { canonical: '/contact-us' } } : {}),
+  robots: { index: false, follow: true },
+}
 
-export default async function Contact() {
-  const settings = await getSiteSettings()
-  const email = settings.email || 'info@epubtrans.com'
-  const phone = settings.phone || '+91 44 3136 3907'
-  const location = settings.location || 'Chennai, India'
-  const channels = [
-    {
-      title: 'Email our team',
-      description: 'For questions, partnerships and general enquiries.',
-      value: email,
-      href: `mailto:${email}`,
-      icon: Mail,
-      action: 'Write to us',
-    },
-    {
-      title: 'Give us a call',
-      description: 'Speak with our team about how we can help.',
-      value: phone,
-      href: `tel:${phone.replace(/[^+0-9]/g, '')}`,
-      icon: Phone,
-      action: 'Call the team',
-    },
-    {
-      title: 'Connect on WhatsApp',
-      description: 'Start a conversation from wherever you are.',
-      value: companyWhatsApp.number,
-      href: companyWhatsApp.href,
-      icon: MessageCircle,
-      action: 'Open WhatsApp',
-    },
-  ]
-
+export default function Contact() {
+  const email = 'info@epubtrans.com'
+  const phone = '+91 4431363907'
   return (
-    <main className="et-contact-page">
-      <PageHero
-        eyebrow="CONTACT US"
-        title="Good work starts with a conversation."
-        description="A question, an idea, a new collaboration. Wherever you are in your journey, we’d love to hear from you."
-      />
-      <section className="et-container et-contact-section" aria-labelledby="contact-heading">
-        <div className="et-contact-intro">
+    <main className="et-contact-page contact-premium">
+      <div className="et-container cp-wrap">
+        <header className="cp-intro">
           <p className="et-label">LET’S CONNECT</p>
-          <h2 id="contact-heading">Find your way to us.</h2>
-          <p>Choose the way that works for you. Our team is here to help you take the next step.</p>
-        </div>
-        <div className="et-contact-grid">
-          <div className="et-contact-channels">
-            {channels.map(({ title, description, value, href, icon: Icon, action }) => (
-              <a className="et-contact-channel" href={href} key={title}>
-                <span className="et-contact-icon">
-                  <Icon size={24} strokeWidth={1.5} aria-hidden="true" />
-                </span>
-                <div className="et-contact-channel-copy">
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <span className="et-contact-value">{value}</span>
-                  <span className="et-contact-action">
-                    {action} <ArrowUpRight size={17} aria-hidden="true" />
-                  </span>
-                </div>
-              </a>
-            ))}
-            <div className="et-contact-location">
-              <span className="et-contact-icon">
-                <MapPin size={24} strokeWidth={1.5} aria-hidden="true" />
+          <h1>Find your way to us.</h1>
+          <p>Publishing, localization or a new collaboration. Let’s find the right next step.</p>
+        </header>
+
+        <section className="cp-connect" aria-label="Ways to contact EPUBTRANS">
+          <div className="cp-channels">
+            <article className="cp-card">
+              <span className="cp-icon">
+                <Mail size={20} aria-hidden="true" />
               </span>
-              <div className="et-contact-channel-copy">
-                <h3>Rooted in Chennai.</h3>
-                <p>Publishing and language expertise, connected to a wider world.</p>
-                <address className="et-contact-value">{location}</address>
-                <span className="et-contact-location-note">Content. In every dimension.</span>
-              </div>
-            </div>
+              <h2>Email our team</h2>
+              <p>For service questions, business enquiries and production support.</p>
+              {email && (
+                <a className="cp-value" href={`mailto:${email}`}>
+                  {email}
+                </a>
+              )}
+              <a className="cp-link" href={`mailto:${email}`}>
+                Write to us <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            </article>
+            <article className="cp-card">
+              <span className="cp-icon">
+                <Phone size={20} aria-hidden="true" />
+              </span>
+              <h2>Start a conversation</h2>
+              <p>Discuss your requirements and the support your team needs.</p>
+              {phone && (
+                <a className="cp-value" href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>
+                  {phone}
+                </a>
+              )}
+              <a className="cp-link" href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>
+                Call our team <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            </article>
+            <article className="cp-card">
+              <span className="cp-icon">
+                <Handshake size={20} aria-hidden="true" />
+              </span>
+              <h2>Build a partnership</h2>
+              <p>Explore production support for your publishing or localization workflow.</p>
+              <a className="cp-link" href="#send-message">
+                Discuss a collaboration <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            </article>
           </div>
-          <aside className="et-contact-project" aria-labelledby="contact-project-heading">
+          <aside className="cp-project" aria-labelledby="project-heading">
             <p className="et-label">HAVE A PROJECT IN MIND?</p>
-            <span className="et-contact-project-mark" aria-hidden="true">
-              <ArrowUpRight size={64} strokeWidth={1} />
+            <span className="cp-project-icon">
+              <ArrowUpRight size={32} aria-hidden="true" />
             </span>
-            <h2 id="contact-project-heading">Your next chapter starts here.</h2>
+            <h2 id="project-heading">
+              Your next chapter
+              <br />
+              starts here.
+            </h2>
             <p>
-              Ready to bring your content to life? Share your requirements through our dedicated
-              quote form.
+              Share the details that matter. Our project enquiry form brings your requirements
+              together in one place.
             </p>
             <ul>
-              <li>Tell us about your project and service needs.</li>
-              <li>Include your languages, scope and timeline.</li>
-              <li>Share files to help us understand your brief.</li>
+              <li>
+                <Check size={16} aria-hidden="true" /> Source formats and target deliverables
+              </li>
+              <li>
+                <Check size={16} aria-hidden="true" /> Page counts, languages and specifications
+              </li>
+              <li>
+                <Check size={16} aria-hidden="true" /> Preferred timelines and project context
+              </li>
             </ul>
-            <Link className="et-button" href="/get-a-quote">
+            <Link className="et-button cp-quote" href="/get-a-quote">
               Get a Quote <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <span className="et-contact-project-note">
-              Publishing. Localization. Digital content.
-            </span>
+            <span className="cp-project-note">Publishing. Localization. Digital content.</span>
           </aside>
-        </div>
-        <div className="et-contact-offices" aria-labelledby="contact-offices-heading">
-          <div className="et-contact-intro">
-            <p className="et-label">OUR LOCATIONS</p>
-            <h2 id="contact-offices-heading">At home in Chennai.</h2>
+        </section>
+
+        <section className="cp-message" id="send-message" aria-labelledby="message-heading">
+          <div className="cp-message-copy">
+            <p className="et-label">A CONVERSATION STARTS HERE</p>
+            <h2 id="message-heading">
+              Tell us what
+              <br />
+              you have in mind.
+            </h2>
+            <p>
+              Ask a question, outline a production need or introduce your organization. Include a
+              little context so we can understand your enquiry.
+            </p>
+            <div className="cp-message-guide">
+              <span className="cp-icon">
+                <MessagesSquare size={20} aria-hidden="true" />
+              </span>
+              <p>
+                For a detailed estimate, use our <Link href="/get-a-quote">project quote form</Link>{' '}
+                to share formats, volume and delivery requirements.
+              </p>
+            </div>
+            <Link className="cp-link" href="/services">
+              Explore our services <ArrowRight size={16} aria-hidden="true" />
+            </Link>
           </div>
-          <div className="et-contact-offices-grid">
+          <div className="cp-form-panel">
+            <h3>Send us a message</h3>
+            <p className="cp-form-note">Fields marked * are required.</p>
+            <ContactForm />
+          </div>
+        </section>
+
+        <section className="cp-location" id="our-location" aria-labelledby="location-heading">
+          <div>
+            <p className="et-label">OUR LOCATIONS</p>
+            <h2 id="location-heading">
+              At home in Chennai.
+              <br />
+              <span>Connected to your team.</span>
+            </h2>
+          </div>
+          <div className="cp-office-grid">
             {companyOffices.map((office, index) => (
-              <div className="et-contact-office" key={office.title}>
-                <div className="et-contact-office-top">
-                  <span className="et-contact-icon">
-                    <MapPin size={24} strokeWidth={1.5} aria-hidden="true" />
+              <article className="cp-location-detail cp-office-card" key={office.title}>
+                <div className="cp-office-top">
+                  <span className="cp-icon">
+                    <MapPin size={22} aria-hidden="true" />
                   </span>
-                  <span className="et-contact-office-number" aria-hidden="true">
-                    0{index + 1}
+                  <span className="cp-office-number" aria-hidden="true">
+                    {String(index + 1).padStart(2, '0')}
                   </span>
                 </div>
-                <p className="et-label et-contact-office-area">{office.area}</p>
+                <p className="et-label cp-office-area">{office.area}</p>
                 <h3>{office.title}</h3>
                 <address>
                   {office.lines.map((line) => (
-                    <span key={line}>{line}</span>
+                    <span key={line}>
+                      {line}
+                      <br />
+                    </span>
                   ))}
                 </address>
                 <a
-                  className="et-contact-office-map"
+                  className="cp-link"
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.lines.join(' '))}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`View ${office.title} on Google Maps (opens in a new tab)`}
                 >
-                  View on Google Maps <ArrowUpRight size={18} aria-hidden="true" />
+                  View on Google Maps <ArrowUpRight size={16} aria-hidden="true" />
                 </a>
-              </div>
+              </article>
             ))}
           </div>
-        </div>
-      </section>
-      <section className="et-container et-contact-more" aria-labelledby="contact-more-heading">
-        <div>
-          <p className="et-label">OTHER WAYS TO CONNECT</p>
-          <h2 id="contact-more-heading">There’s more to explore.</h2>
-        </div>
-        <Link href="/company/careers" className="et-contact-more-link">
-          <span>
-            <strong>Build your next chapter with us.</strong>
-            <span>Explore careers at EPUBTRANS.</span>
-          </span>
-          <ArrowUpRight size={24} aria-hidden="true" />
-        </Link>
-        <Link href="/services" className="et-contact-more-link">
-          <span>
-            <strong>Find the right expertise.</strong>
-            <span>Discover our publishing and language services.</span>
-          </span>
-          <ArrowUpRight size={24} aria-hidden="true" />
-        </Link>
-      </section>
+        </section>
+      </div>
     </main>
   )
 }

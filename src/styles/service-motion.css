@@ -37,17 +37,6 @@
 .sp-cta > .et-container {
   position: relative;
 }
-.sp-cta > .et-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: clamp(32px, 5vw, 70px);
-  aspect-ratio: 1;
-  border-top: 3px solid var(--sp-orange);
-  border-right: 3px solid var(--sp-orange);
-  pointer-events: none;
-}
 .sp-cta .sp-button {
   transition:
     box-shadow 180ms,

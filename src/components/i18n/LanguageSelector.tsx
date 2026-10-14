@@ -52,12 +52,10 @@ export function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
     <section className="et-language-selector" aria-labelledby={`${id}-title`} data-no-translate>
       <div className="et-locale-heading">
         <p className="et-label">
-          <Globe2 size={13} aria-hidden="true" /> LANGUAGE / YOUR PREFERENCE
+          <Globe2 size={14} aria-hidden="true" /> LANGUAGE
         </p>
         <h2 id={`${id}-title`}>
-          A world of words.
-          <br />
-          <em>Your language.</em>
+          Choose your language.
         </h2>
         <p>Choose how you’d like to explore EPUBTRANS.</p>
       </div>
@@ -76,7 +74,7 @@ export function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
           <small>Original website language</small>
         </span>
         <span className="et-locale-default-end">
-          <span className="et-locale-badge">Default</span>
+          <span className="et-locale-badge">{locale === 'en' ? 'Selected' : 'Default'}</span>
           {locale === 'en' ? (
             <Check size={18} aria-hidden="true" />
           ) : (

@@ -9,7 +9,7 @@
   grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
   align-items: center;
   gap: clamp(36px, 6vw, 88px);
-  padding-block: clamp(64px, 8vw, 112px);
+  padding-block: var(--section-space);
 }
 
 .heroCopy {
@@ -99,7 +99,7 @@
 }
 
 .directory {
-  padding-block: clamp(56px, 7vw, 104px) clamp(80px, 10vw, 152px);
+  padding-block: var(--section-space);
   background: var(--background-primary);
 }
 
@@ -341,7 +341,7 @@
   }
 
   .directory {
-    padding-block: 52px 80px;
+    padding-block: var(--section-space);
   }
 
   .groupHeading {

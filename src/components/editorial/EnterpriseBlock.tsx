@@ -34,13 +34,15 @@ export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
         <RichText data={block.content} enableGutter={false} />
       </section>
     )
-  if (block.blockType === 'fullWidthMedia')
+  if (block.blockType === 'fullWidthMedia') {
+    if (typeof block.media !== 'object' || !block.media) return null
     return (
       <figure className="et-container et-content-section">
         {renderMedia(block.media)}
         {block.caption && <figcaption className="et-label">{block.caption}</figcaption>}
       </figure>
     )
+  }
   if (block.blockType === 'stats') {
     const verified = block.items?.filter((item) => item.verified && item.source)
     if (!verified?.length) return null
@@ -62,23 +64,27 @@ export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
         <cite>{block.attribution}</cite>
       </blockquote>
     ) : null
-  if (block.blockType === 'logoWall')
+  if (block.blockType === 'logoWall') {
+    const logos = block.logos?.filter(
+      (item) => item.permissionConfirmed && typeof item.media === 'object' && item.media,
+    )
+    if (!logos?.length) return null
     return (
       <section className="et-container et-content-section">
         <h2>{title}</h2>
         <div className="et-logo-wall">
-          {block.logos
-            ?.filter((item) => item.permissionConfirmed)
-            .map((item) => (
-              <div key={item.id}>
-                {renderMedia(item.media)}
-                <p>{item.name}</p>
-              </div>
-            ))}
+          {logos.map((item) => (
+            <div key={item.id}>
+              {renderMedia(item.media)}
+              <p>{item.name}</p>
+            </div>
+          ))}
         </div>
       </section>
     )
-  if (block.blockType === 'faq')
+  }
+  if (block.blockType === 'faq') {
+    if (!block.items?.length) return null
     return (
       <section className="et-container et-content-section">
         <h2>{title}</h2>
@@ -90,7 +96,9 @@ export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
         ))}
       </section>
     )
-  if (block.blockType === 'timeline')
+  }
+  if (block.blockType === 'timeline') {
+    if (!block.items?.length) return null
     return (
       <section className="et-container et-content-section">
         <h2>{title}</h2>
@@ -104,6 +112,7 @@ export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
         </ol>
       </section>
     )
+  }
   const records =
     block.blockType === 'serviceExplorer'
       ? block.services
@@ -125,36 +134,34 @@ export function EnterpriseBlock({ block }: { block: LayoutBlock }) {
           ? 'industries'
           : block.blockType === 'caseStudies'
             ? 'work'
-            : 'insights'
-  if (records)
+            : 'blog'
+  const publishedRecords = records?.filter(
+    (record) =>
+      typeof record === 'object' &&
+      record &&
+      (('status' in record && record.status === 'published') ||
+        ('_status' in record && record._status === 'published')) &&
+      (!('permissionConfirmed' in record) || record.permissionConfirmed),
+  )
+  if (records && !publishedRecords?.length) return null
+  if (publishedRecords?.length)
     return (
       <section className="et-container et-content-section">
         <p className="et-label">{eyebrow}</p>
         <h2>{title}</h2>
         <div className="et-content-list">
-          {records
-            .filter(
-              (record) =>
-                typeof record === 'object' &&
-                record &&
-                (('status' in record && record.status === 'published') ||
-                  ('_status' in record && record._status === 'published')) &&
-                (!('permissionConfirmed' in record) || record.permissionConfirmed),
-            )
-            .map((record) =>
-              typeof record === 'object' && record ? (
-                <Link
-                  className="et-content-row"
-                  key={record.id}
-                  href={
-                    route === 'services' ? servicePath(record.slug) : `/${route}/${record.slug}`
-                  }
-                >
-                  <h3>{record.title}</h3>
-                  <span>Explore →</span>
-                </Link>
-              ) : null,
-            )}
+          {publishedRecords.map((record) =>
+            typeof record === 'object' && record ? (
+              <Link
+                className="et-content-row"
+                key={record.id}
+                href={route === 'services' ? servicePath(record.slug) : `/${route}/${record.slug}`}
+              >
+                <h3>{record.title}</h3>
+                <span>Explore →</span>
+              </Link>
+            ) : null,
+          )}
         </div>
       </section>
     )

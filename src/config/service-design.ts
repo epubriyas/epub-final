@@ -247,10 +247,10 @@ export function serviceGroup(
 export function serviceQuoteHref(service: Pick<Service, 'slug' | 'category'>) {
   const mapping = {
     publishing: quoteServices[0],
-    language: quoteServices[1],
-    media: quoteServices[2],
-    learning: quoteServices[3],
-    accessibility: quoteServices[4],
+    language: quoteServices[3],
+    media: quoteServices[4],
+    learning: quoteServices[4],
+    accessibility: quoteServices[5],
   }
   return `/get-a-quote?service=${encodeURIComponent(mapping[serviceGroup(service)])}`
 }

@@ -1,8 +1,8 @@
 import type { Where } from 'payload'
 import { headers } from 'next/headers'
-import { ArrowUpRight, BookOpen, Globe2, Layers, Search } from 'lucide-react'
+import { ArrowUpRight, BookOpen, Search } from 'lucide-react'
 import Link from '@/components/i18n/LocalizedLink'
-import { Media } from '@/components/Media'
+import { BlogCover } from './BlogCover'
 import { contentPayload } from '@/lib/content'
 import { languagePath } from '@/config/languages'
 import { articleDate, articleSummary, readingTime } from '@/lib/blog'
@@ -20,20 +20,7 @@ export type ArticleSearch = Promise<{
 function Cover({ post }: { post: Post }) {
   const image =
     post.heroImage && typeof post.heroImage === 'object' ? post.heroImage : post.meta?.image
-  return image && typeof image === 'object' ? (
-    <Media resource={image} size="(max-width: 650px) 100vw, 50vw" />
-  ) : (
-    <div className={styles.coverArt} aria-hidden="true">
-      <span className={styles.coverOrbit} />
-      <BookOpen size={60} strokeWidth={1} />
-      <span className={styles.coverLines}>
-        <i />
-        <i />
-        <i />
-      </span>
-      <span className={styles.coverCaption}>WORDS / CULTURE / FORMAT</span>
-    </div>
-  )
+  return <BlogCover image={image && typeof image === 'object' ? image : null} />
 }
 
 function PostDetails({ post }: { post: Post }) {
@@ -51,9 +38,9 @@ function PostDetails({ post }: { post: Post }) {
 
 export async function BlogListing({ searchParams }: { searchParams: ArticleSearch }) {
   const params = await searchParams
-  const q = typeof params.q === 'string' ? params.q.slice(0, 120) : ''
+  const q = typeof params.q === 'string' ? params.q.trim().slice(0, 120) : ''
   const selected = typeof params.category === 'string' ? params.category : ''
-  const number = Number(params.page)
+  const number = typeof params.page === 'string' ? Number(params.page) : 1
   const page = Number.isFinite(number) ? Math.floor(Math.max(1, Math.min(1000, number))) : 1
   const payload = await contentPayload()
   const locale = (await headers()).get('x-epubtrans-language') || 'en'
@@ -65,10 +52,10 @@ export async function BlogListing({ searchParams }: { searchParams: ArticleSearc
       pagination: false,
       sort: 'title',
     })
-  ).docs
+  ).docs.filter((item) => Boolean(item.slug))
   const category = categories.find((item) => item.slug === selected)
   const conditions: Where[] = [{ _status: { equals: 'published' } }]
-  if (selected) conditions.push({ categories: { contains: category?.id ?? -1 } })
+  if (selected) conditions.push({ categories: { in: [category?.id ?? -1] } })
   if (q)
     conditions.push({ or: [{ title: { contains: q } }, { 'meta.description': { contains: q } }] })
   const posts = await payload.find({
@@ -87,48 +74,13 @@ export async function BlogListing({ searchParams }: { searchParams: ArticleSearc
     `${path}?${new URLSearchParams({ ...(q ? { q } : {}), ...(selected ? { category: selected } : {}), page: String(next) })}`
   return (
     <BlogMotion className={styles.page}>
-      <header className={`et-container ${styles.hero}`}>
-        <div>
-          <p className={styles.eyebrow}>EPUBTRANS / THE BLOG</p>
-          <h1>Good content starts with a fresh perspective.</h1>
-          <p className={styles.lead}>
-            Ideas, practical guidance and thoughtful perspectives on the craft of publishing,
-            language and digital content.
-          </p>
-        </div>
-        <figure className={styles.heroGraphic} data-blog-motion>
-          <figcaption>THE CONTENT PERSPECTIVE</figcaption>
-          <div className={styles.graphicCore}>
-            <BookOpen size={36} strokeWidth={1.3} />
-            <span>A better reading experience</span>
-          </div>
-          <svg viewBox="0 0 360 75" fill="none" preserveAspectRatio="none" aria-hidden="true">
-            <path pathLength="1" d="M180 0V30 M60 75V30H300V75 M180 30V75" />
-          </svg>
-          <ul>
-            <li>
-              <BookOpen aria-hidden="true" size={22} />
-              <span>Publishing</span>
-            </li>
-            <li>
-              <Globe2 aria-hidden="true" size={22} />
-              <span>Language</span>
-            </li>
-            <li>
-              <Layers aria-hidden="true" size={22} />
-              <span>Digital</span>
-            </li>
-          </ul>
-          <p>Words, culture and format. Connected.</p>
-        </figure>
-      </header>
       <section className={`et-container ${styles.listing}`} aria-labelledby="articles-heading">
         <div className={styles.listingTop}>
           <div>
-            <p className={styles.eyebrow}>EXPLORE THE JOURNAL</p>
-            <h2 id="articles-heading">
+            <p className={styles.eyebrow}>THE JOURNAL</p>
+            <h1 id="articles-heading" className={styles.listingTitle}>
               {q || selected ? 'Your reading list.' : 'The latest thinking.'}
-            </h2>
+            </h1>
           </div>
           <p>
             {posts.totalDocs} {posts.totalDocs === 1 ? 'article' : 'articles'}
@@ -176,7 +128,7 @@ export async function BlogListing({ searchParams }: { searchParams: ArticleSearc
               <h2>{featured.title}</h2>
               <p>{articleSummary(featured)}</p>
               <span className={styles.readLink}>
-                Read the story <ArrowUpRight size={20} aria-hidden="true" />
+                Read article <ArrowUpRight size={20} aria-hidden="true" />
               </span>
             </div>
           </Link>
@@ -204,30 +156,36 @@ export async function BlogListing({ searchParams }: { searchParams: ArticleSearc
           <div className={styles.empty}>
             <BookOpen size={40} strokeWidth={1.2} aria-hidden="true" />
             <h3>
-              {q || selected
-                ? 'No articles match this search.'
-                : 'The next perspective is taking shape.'}
+              {page > 1
+                ? 'You have reached the end of the journal.'
+                : q || selected
+                  ? 'No articles match this search.'
+                  : 'The next perspective is taking shape.'}
             </h3>
             <p>
-              {q || selected
-                ? 'Try another topic or a broader search to find your next read.'
-                : 'Return for new ideas on publishing, language and digital content. In the meantime, explore the work behind every edition.'}
+              {page > 1
+                ? 'Return to the latest articles to keep exploring.'
+                : q || selected
+                  ? 'Try another topic or a broader search to find your next read.'
+                  : 'Return for new ideas on publishing, language and digital content. In the meantime, explore the work behind every edition.'}
             </p>
-            <Link href={q || selected ? path : '/services'}>
-              {q || selected ? 'View all articles' : 'Explore our capabilities'}{' '}
+            <Link href={q || selected || page > 1 ? path : '/services'}>
+              {q || selected || page > 1 ? 'View all articles' : 'Explore our capabilities'}{' '}
               <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
           </div>
         )}
-        <nav className={styles.pagination} aria-label="Article pages">
-          {posts.hasPrevPage && <Link href={pageHref(page - 1)}>← Previous</Link>}
-          {posts.totalPages > 1 && (
-            <span>
-              Page {page} of {posts.totalPages}
-            </span>
-          )}
-          {posts.hasNextPage && <Link href={pageHref(page + 1)}>Next →</Link>}
-        </nav>
+        {posts.totalPages > 1 && (
+          <nav className={styles.pagination} aria-label="Article pages">
+            {posts.hasPrevPage && <Link href={pageHref(page - 1)}>← Previous</Link>}
+            {posts.totalPages > 1 && (
+              <span>
+                Page {page} of {posts.totalPages}
+              </span>
+            )}
+            {posts.hasNextPage && <Link href={pageHref(page + 1)}>Next →</Link>}
+          </nav>
+        )}
       </section>
       <ContentCTA />
     </BlogMotion>

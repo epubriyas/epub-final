@@ -2,7 +2,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .et-tech-section {
-  padding-block: clamp(56px, 7vw, 112px);
+  padding-block: var(--section-space);
 }
 .et-tech-reading-nav {
   display: flex;
@@ -193,7 +193,7 @@
 .et-tech-os {
   background: var(--background-inverse);
   color: var(--text-inverse);
-  padding-block: clamp(64px, 7vw, 112px);
+  padding-block: var(--section-space);
   scroll-margin-top: 110px;
 }
 .et-tech-os-grid {

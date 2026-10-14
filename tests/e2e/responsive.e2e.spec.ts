@@ -48,6 +48,7 @@ test('all public pages fit phones, tablets and desktop without clipped content',
     '/company',
     '/company/careers',
     '/work',
+    '/contact-us',
     '/get-a-quote',
     '/search',
     '/terms',
@@ -99,8 +100,12 @@ test('mobile menus remain scrollable on narrow phones, tablets and landscape', a
     await page.goto('/')
     await page.getByRole('button', { name: 'Open navigation', exact: true }).click()
     const dialog = page.getByRole('dialog', { name: 'Site navigation' })
-    await dialog.getByRole('button', { name: 'Company', exact: true }).click()
-    for (const summary of await dialog.locator('#mobile-5 summary').all()) await summary.click()
+    const company = dialog.getByRole('button', { name: 'Company', exact: true })
+    await company.click()
+    const sectionId = await company.getAttribute('aria-controls')
+    expect(sectionId).toBeTruthy()
+    for (const summary of await dialog.locator(`[id="${sectionId}"] summary`).all())
+      await summary.click()
     await expectContentToFit(page, '.et-mobile-dialog')
     const internships = dialog.getByRole('link', { name: 'Internships', exact: true })
     await internships.scrollIntoViewIfNeeded()
@@ -141,39 +146,38 @@ test('every quote step works on a small phone and preserves long details', async
   await page.setViewportSize({ width: 320, height: 568 })
   await page.goto('/get-a-quote')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
-  await expect(page.getByText('Choose the service you need.')).toBeVisible()
+  await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()
   await expectContentToFit(page)
-  await page.getByLabel('Publishing & content', { exact: true }).check()
+  await page.getByLabel('Service Required *').selectOption('publishing_editorial')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expect(page.locator('.et-quote-progress li')).toHaveCount(4)
-  await expect(page.getByLabel('Source language')).toHaveCount(0)
-  await expect(page.getByLabel('Target languages')).toHaveCount(0)
+  await expect(page.locator('#files')).toHaveCount(0)
   expect(
     await page
-      .getByLabel('Project requirements')
+      .getByLabel('Project Description *')
       .evaluate((element) => parseFloat(getComputedStyle(element).fontSize)),
   ).toBeGreaterThanOrEqual(16)
   const details =
     'A multilingual publishing project with accessible digital output. ' +
     'ManuscriptReference'.repeat(20)
-  await page.getByLabel('Project requirements').fill(details)
-  await page.getByLabel('Preferred delivery date (optional)').fill('2027-01-20')
-  await expectContentToFit(page)
-  await page.locator('#files').setInputFiles({
-    name: 'LongManuscriptFilename'.repeat(6) + '.txt',
-    mimeType: 'text/plain',
-    buffer: Buffer.from('Mobile layout verification only.'),
-  })
-  await expectContentToFit(page)
-  await page.getByRole('button', { name: 'Continue', exact: true }).click()
-  await page.getByLabel('Full name').fill('Mobile layout verification')
-  await page.getByLabel('Email address').fill('mobile-layout-check@example.invalid')
-  await page.getByLabel('Company (optional)').fill('PublishingCompanyName'.repeat(8))
+  await page.getByLabel('Project Description *').fill(details)
+  await page.getByLabel('Source File Format').fill('DOCX')
+  await page.getByLabel('Required Output Format').fill('EPUB')
+  await page.getByLabel('Approximate Volume (for example, page count)').fill('To be confirmed')
+  await page.getByLabel('Source and Target Languages, if applicable').fill('English to Tamil')
+  await page.getByLabel('Preferred Delivery Date').fill('2027-01-20')
+  await page.getByLabel('Additional Information').fill('Mobile layout verification only.')
   await expectContentToFit(page)
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await page.getByLabel('Full Name *').fill('Mobile layout verification')
+  await page.getByLabel('Business Email *').fill('mobile-layout-check@example.invalid')
+  await page.getByLabel('Company / Organization *').fill('PublishingCompanyName'.repeat(8))
+  await page.getByLabel('Country / Region').fill('India')
   await expectContentToFit(page)
-  await page.getByRole('button', { name: 'Return to Project step' }).click()
-  await expect(page.getByLabel('Project requirements')).toHaveValue(details)
+  await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await expectContentToFit(page)
+  await page.getByRole('button', { name: 'Return to Project Requirements step' }).click()
+  await expect(page.getByLabel('Project Description *')).toHaveValue(details)
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expectContentToFit(page)
@@ -182,12 +186,12 @@ test('every quote step works on a small phone and preserves long details', async
     expect(request).toContain(details)
     expect(request).toContain('Mobile layout verification only.')
     expect(request).toContain('mobile-layout-check@example.invalid')
-    await route.fulfill({ json: { reference: 'MOBILE-LAYOUT-TEST' } })
+    expect(request).toContain('service_required')
+    await route.fulfill({ json: { reference: 'MOBILE-LAYOUT-TEST', notification: 'unavailable' } })
   })
-  await page.getByRole('checkbox').check()
-  await page.getByRole('button', { name: 'Submit request', exact: true }).click()
+  await page.getByRole('button', { name: 'Submit Project Enquiry', exact: true }).click()
   await expect(
-    page.getByText('Your project request has been saved', { exact: false }),
+    page.getByText('Your project enquiry has been submitted.', { exact: true }),
   ).toBeVisible()
   await expectContentToFit(page)
 })

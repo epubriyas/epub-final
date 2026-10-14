@@ -25,9 +25,11 @@ test('responsive homepage and editorial routes render without overflow', async (
     '/industries',
     '/technology',
     '/resources',
+    '/about-us',
     '/company',
     '/company/careers',
     '/work',
+    '/contact-us',
     '/get-a-quote',
   ]) {
     const response = await page.goto(route)
@@ -44,49 +46,105 @@ test('responsive homepage and editorial routes render without overflow', async (
   ).toBe('none')
   expect(errors).toEqual([])
 })
-test('quote flow validates, preserves details and saves only on successful server response', async ({
+
+test('About page publishes the required canonical metadata and preserves the company alias', async ({
+  page,
+}) => {
+  const response = await page.goto('/about-us')
+  expect(response?.status()).toBe(200)
+  await expect(page).toHaveTitle('About EPUBTRANS | Digital Publishing & Content Production')
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    'https://www.epubtrans.com/about-us',
+  )
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('About EPUBTRANS')
+  await expect(page.getByRole('link', { name: 'Explore Publishing Services' })).toHaveAttribute(
+    'href',
+    '/typesetting-services',
+  )
+  await expect(
+    page.getByRole('link', { name: 'Explore Localization Production Services' }),
+  ).toHaveAttribute('href', '/desktop-publishing-services')
+  await expect(page.locator('main')).toHaveCount(1)
+
+  const aliasResponse = await page.goto('/company')
+  expect(aliasResponse?.status()).toBe(200)
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('About EPUBTRANS')
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    'https://www.epubtrans.com/about-us',
+  )
+})
+
+test('contact form validates and confirms only accepted general enquiries', async ({ page }) => {
+  await page.goto('/contact-us')
+  await expect(page).toHaveTitle('Contact EPUBTRANS | Publishing & Content Services')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Contact EPUBTRANS')
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+  let attempts = 0
+  await page.route('**/api/enquiry', async (route) => {
+    attempts++
+    await route.fulfill(
+      attempts === 1
+        ? { status: 503, json: { error: "We couldn't submit your enquiry. Please try again." } }
+        : { status: 201, json: { enquiryId: 'CONTACT-FLOW-TEST' } },
+    )
+  })
+  await page.getByRole('button', { name: 'Send Enquiry' }).click()
+  await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()
+  await page.getByLabel('Your Name *').fill('EPUBTRANS Automated QA')
+  await page.getByLabel('Business Email *').fill('qa@epubtrans.example.invalid')
+  await page.getByLabel('Enquiry Type *').selectOption('general')
+  await page.getByLabel('Your Message *').fill('This is a synthetic test enquiry.')
+  await page.getByRole('button', { name: 'Send Enquiry' }).click()
+  await expect(page.getByText("We couldn't submit your enquiry. Please try again.")).toBeVisible()
+  await expect(page.getByLabel('Your Message *')).toHaveValue('This is a synthetic test enquiry.')
+  await page.getByRole('button', { name: 'Send Enquiry' }).click()
+  await expect(page.getByText('Thank you for contacting EPUBTRANS.')).toBeVisible()
+  await expect(page.getByText(/Your enquiry has been submitted/)).toBeVisible()
+})
+
+test('quote flow validates, preserves details and confirms only successful server acceptance', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/get-a-quote')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
-  await expect(page.getByText('Choose the service you need.')).toBeVisible()
-  await page.getByLabel('Publishing & content', { exact: true }).check()
+  await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()
+  await page.getByLabel('Service Required *').selectOption('publishing_editorial')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
-  await expect(page.getByText('Describe your project in 20–5,000 characters.')).toBeVisible()
+  await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()
   await page
-    .getByLabel('Project requirements')
+    .getByLabel('Project Description *')
     .fill(
       'This is an automated QA request for a sample publishing project. No real business request.',
     )
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await page.getByLabel('Full Name *').fill('EPUBTRANS Automated QA')
+  await page.getByLabel('Business Email *').fill('bad-address')
+  await page.getByLabel('Company / Organization *').fill('Synthetic QA')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expect(page.getByText('Enter a valid email address.')).toBeVisible()
-  await page.getByLabel('Full name').fill('EPUBTRANS Automated QA')
-  await page.getByLabel('Email address').fill('qa@epubtrans.example.invalid')
+  await page.getByLabel('Business Email *').fill('qa@epubtrans.example.invalid')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
-  await expect(page.getByText('No files', { exact: true })).toBeVisible()
-  await page.getByRole('button', { name: 'Back', exact: true }).click()
-  await expect(page.getByLabel('Full name')).toHaveValue('EPUBTRANS Automated QA')
-  await page.getByRole('button', { name: 'Continue', exact: true }).click()
-  await page.getByRole('button', { name: 'Submit request', exact: true }).click()
-  await expect(page.getByText('Please confirm we can use these details')).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Review your project enquiry.' })).toBeVisible()
+  await expect(page.locator('#files')).toHaveCount(0)
   let attempts = 0
   await page.route('**/api/quote', async (route) => {
     attempts++
     await route.fulfill(
       attempts === 1
-        ? { status: 503, json: { error: 'Please try again.' } }
-        : { status: 201, json: { reference: 'QUOTE-FLOW-TEST' } },
+        ? { status: 503, json: { error: "We couldn't submit your enquiry. Please try again." } }
+        : { status: 201, json: { reference: 'QUOTE-FLOW-TEST', notification: 'unavailable' } },
     )
   })
-  await page.getByRole('checkbox').check()
-  await page.getByRole('button', { name: 'Submit request', exact: true }).click()
-  await expect(page.getByText('Please try again.', { exact: true })).toBeVisible()
-  await expect(page.getByText('Your project request has been saved')).toHaveCount(0)
-  await page.getByRole('button', { name: 'Submit request', exact: true }).click()
-  await expect(page.getByText('Your project request has been saved')).toBeVisible()
+  await page.getByRole('button', { name: 'Submit Project Enquiry', exact: true }).click()
+  await expect(page.getByText("We couldn't submit your enquiry. Please try again.")).toBeVisible()
+  await expect(page.getByLabel('Project Description *')).toHaveCount(0)
+  await expect(page.getByText('Review your project enquiry.')).toBeVisible()
+  await page.getByRole('button', { name: 'Submit Project Enquiry', exact: true }).click()
+  await expect(page.getByText('Your project enquiry has been submitted.')).toBeVisible()
 })
 test('public collection writes and quote reads are denied; origins and upload signatures are enforced', async ({
   request,
@@ -99,6 +157,7 @@ test('public collection writes and quote reads are denied; origins and upload si
     'industries',
     'technologies',
     'quote-requests',
+    'enquiries',
   ]) {
     const response = await request.post(`/api/${collection}`, {
       data: { title: 'Unauthenticated change' },
@@ -113,11 +172,12 @@ test('public collection writes and quote reads are denied; origins and upload si
   const invalid = await request.post('/api/quote', {
     headers: { Origin: 'http://localhost:3001' },
     multipart: {
-      service: 'Publishing & content',
-      name: 'QA test',
-      email: 'qa@example.invalid',
-      details: 'An automated project with sufficient details for validation.',
-      consent: 'true',
+      service_required: 'publishing_editorial',
+      full_name: 'QA test',
+      business_email: 'qa@example.invalid',
+      organization: 'QA test',
+      project_description: 'An automated project with sufficient details for validation.',
+      submission_key: 'f47ac10b-58cc-4372-a567-0e02b2c3d479',
       files: { name: 'sample.pdf', mimeType: 'application/pdf', buffer: Buffer.from('not a pdf') },
     },
   })

@@ -31,12 +31,7 @@ export function ServiceCapabilities({ service }: { service: Service }) {
       <div className="et-container sp-section">
         <div className="sp-section-heading">
           <p className="sp-eyebrow">CAPABILITIES</p>
-          <h2>
-            The detail
-            <br />
-            behind the deliverable.
-          </h2>
-          <p>{service.shortDescription}</p>
+          <h2>What the service includes</h2>
         </div>
         <ul className="sp-capability-list">
           {service.features.map((item, i) => (
@@ -62,7 +57,7 @@ export function ServiceExplanation({ service }: { service: Service }) {
     <section className="et-container sp-section sp-explanation">
       <div className="sp-section-heading">
         <p className="sp-eyebrow">THE TRANSFORMATION</p>
-        <h2>{service.visualExplanation?.title || 'From source to possibility.'}</h2>
+        <h2>{service.visualExplanation?.title || 'Source files and deliverables'}</h2>
         {service.visualExplanation?.description && <p>{service.visualExplanation.description}</p>}
       </div>
       <div className="sp-explanation-grid">
@@ -113,11 +108,7 @@ export function ServiceQuality({ service }: { service: Service }) {
     <section className="sp-quality">
       <div className="et-container sp-section">
         <p className="sp-eyebrow">QUALITY &amp; TECHNICAL APPROACH</p>
-        <h2>
-          Attention where
-          <br />
-          it matters.
-        </h2>
+        <h2>Quality and technical requirements</h2>
         <ul>
           {service.quality.map((item, i) => (
             <li key={item.id || i}>
@@ -161,7 +152,7 @@ export function RelatedServices({ services }: { services: Service[] }) {
   return (
     <section className="et-container sp-section sp-related" data-motion="related">
       <p className="sp-eyebrow">CONNECTED CAPABILITIES</p>
-      <h2>Consider the next step.</h2>
+      <h2>Related services</h2>
       <div className="sp-related-grid">
         {services.map((item, i) => (
           <Link
@@ -214,11 +205,7 @@ export function ServiceCTA({ service }: { service?: Service }) {
     <section className="sp-cta" data-motion="cta">
       <div className="et-container">
         <p className="sp-eyebrow">LET’S TALK ABOUT YOUR CONTENT</p>
-        <h2>
-          Have a project
-          <br />
-          in mind?
-        </h2>
+        <h2>Discuss {service ? service.title.toLowerCase() : 'your project'}</h2>
         <div className="sp-cta-bottom">
           <p>
             Tell us about your content, requirements and expected deliverables. Our team can review
@@ -228,7 +215,7 @@ export function ServiceCTA({ service }: { service?: Service }) {
             <Link className="sp-button" href={service ? serviceQuoteHref(service) : '/get-a-quote'}>
               Request a Quote <ArrowUpRight size={19} aria-hidden="true" />
             </Link>
-            <Link className="sp-text-link" href="/contact">
+            <Link className="sp-text-link" href="/contact-us">
               Contact Our Team <ArrowUpRight size={17} aria-hidden="true" />
             </Link>
           </div>

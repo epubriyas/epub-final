@@ -18,12 +18,12 @@ export async function GET() {
     '/technology/production-os',
     '/resources',
     '/blog',
-    '/company',
+    '/about-us',
     '/company/global-presence',
     '/company/careers',
     '/work',
     '/get-a-quote',
-    '/contact',
+    '/contact-us',
     '/accessibility',
   ].map((route) => ({ loc: base + route }))
   for (const collection of [

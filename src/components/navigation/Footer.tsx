@@ -26,18 +26,19 @@ const footerGroups = [
   {
     title: 'Company',
     links: [
-      { label: 'About EPUBTRANS', href: '/company' },
+      { label: 'About EPUBTRANS', href: '/about-us' },
       { label: 'Global Presence', href: '/company/global-presence' },
       { label: 'Careers', href: '/company/careers' },
       { label: 'Open opportunities', href: '/company/careers#open-roles' },
-      { label: 'Contact us', href: '/contact' },
+      { label: 'Contact us', href: '/contact-us' },
     ],
   },
 ]
 export async function Footer() {
   const settings = await getSiteSettings()
-  const email = settings.email || 'info@epubtrans.com'
-  const phone = settings.phone || '+91 44 3136 3907'
+  const contactDetailsApproved = settings.contactDetailsApproved === true
+  const email = contactDetailsApproved ? settings.email || '' : ''
+  const phone = contactDetailsApproved ? settings.phone || '' : ''
   const location = settings.location || 'Chennai, India'
   return (
     <footer className="et-footer">
@@ -87,14 +88,8 @@ export async function Footer() {
           <div className="et-footer-contact">
             <h3>Let’s connect</h3>
             <p>Tell us what you’re working on.</p>
-            <a href={`mailto:${email}`}>
-              <Mail size={15} aria-hidden="true" />
-              <span>{email}</span>
-            </a>
-            <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>
-              <Phone size={15} aria-hidden="true" />
-              <span>{phone}</span>
-            </a>
+            {email && <a href={`mailto:${email}`}><Mail size={15} aria-hidden="true" /><span>{email}</span></a>}
+            {phone && <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}><Phone size={15} aria-hidden="true" /><span>{phone}</span></a>}
             <span className="et-footer-location">
               <MapPin size={15} aria-hidden="true" />
               <span>{location}</span>

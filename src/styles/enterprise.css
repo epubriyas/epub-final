@@ -1,5 +1,5 @@
 .et-container {
-  width: min(100% - var(--gutter) * 2, 1600px);
+  width: min(100% - var(--gutter) * 2, 1360px);
   margin-inline: auto;
 }
 .et-grid {
@@ -634,12 +634,12 @@ button:hover .et-arrow {
   gap: 30px;
 }
 .et-intro {
-  padding-block: 120px;
+  padding-block: var(--section-space);
 }
 .et-intro-grid {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
-  gap: 100px;
+  gap: var(--section-gap);
   padding-top: 32px;
 }
 .et-intro h2,
@@ -666,14 +666,14 @@ button:hover .et-arrow {
 }
 .et-services-section {
   background: var(--background-secondary);
-  padding-block: 100px;
+  padding-block: var(--section-space);
 }
 .et-section-head {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 64px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 .et-section-head .et-label {
   margin-bottom: 24px;
@@ -701,7 +701,7 @@ button:hover .et-arrow {
   line-height: 1.2;
 }
 .et-service-row p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.65;
 }
@@ -710,12 +710,12 @@ button:hover .et-arrow {
   padding-inline: 20px;
 }
 .et-feature {
-  padding-block: 120px;
+  padding-block: var(--section-space);
 }
 .et-feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 90px;
+  gap: var(--section-gap);
   align-items: center;
 }
 .et-feature-art {
@@ -754,7 +754,7 @@ button:hover .et-arrow {
   margin-block: 28px;
 }
 .et-industries-home {
-  padding-block: 0 120px;
+  padding-block: 0 var(--section-space);
 }
 .et-industry-links {
   display: grid;
@@ -786,12 +786,12 @@ button:hover .et-arrow {
 .et-technology-home {
   background: var(--background-inverse);
   color: white;
-  padding-block: 100px;
+  padding-block: var(--section-space);
 }
 .et-technology-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: var(--section-gap);
 }
 .et-technology-home .et-label {
   color: var(--brand-secondary);
@@ -823,11 +823,11 @@ button:hover .et-arrow {
   letter-spacing: -0.7px;
 }
 .et-pipeline p {
-  font-size: 12px;
+  font-size: 16px;
   margin: 6px 0 0 !important;
 }
 .et-work-home {
-  padding-block: 120px;
+  padding-block: var(--section-space);
 }
 .et-work-layout {
   display: grid;
@@ -902,7 +902,7 @@ button:hover .et-arrow {
   color: var(--text-secondary);
 }
 .et-company-home {
-  padding-block: 100px;
+  padding-block: var(--section-space);
   background: var(--brand-secondary);
 }
 .et-company-home h2 {
@@ -1076,7 +1076,7 @@ button:hover .et-arrow {
   }
 }
 .et-page-hero {
-  padding-block: 80px 96px;
+  padding-block: var(--section-space);
   border-bottom: 1px solid var(--border-default);
 }
 .et-page-hero h1 {
@@ -1096,11 +1096,11 @@ button:hover .et-arrow {
   align-items: center;
   justify-content: space-between;
   gap: 48px;
-  padding-block: 80px;
+  padding-block: var(--section-space);
   border-top: 1px solid var(--border-default);
 }
 .et-inline-cta h2 {
-  font-size: var(--type-h2);
+  font-size: var(--type-h3);
   line-height: 1.1;
   letter-spacing: -0.055em;
 }
@@ -1212,7 +1212,7 @@ button:hover .et-arrow {
   .et-services-section,
   .et-feature,
   .et-work-home {
-    padding-block: 72px;
+    padding-block: var(--section-space);
   }
   .et-intro-grid,
   .et-feature-grid,
@@ -1283,7 +1283,7 @@ button:hover .et-arrow {
   }
   .et-technology-home,
   .et-company-home {
-    padding-block: 72px;
+    padding-block: var(--section-space);
   }
   .et-work-art {
     padding: 36px;
@@ -1336,18 +1336,18 @@ button:hover .et-arrow {
     display: none;
   }
   .et-page-hero {
-    padding-block: 48px 64px;
+    padding-block: var(--section-space);
   }
   .et-inline-cta {
     display: block;
-    padding-block: 64px;
+    padding-block: var(--section-space);
   }
   .et-inline-cta > a {
     margin-top: 24px;
   }
 }
 .et-content-section {
-  padding-block: 72px;
+  padding-block: var(--section-space);
 }
 .et-content-section h2 {
   font-size: var(--type-h2);
@@ -1363,7 +1363,7 @@ button:hover .et-arrow {
   margin-bottom: 28px;
 }
 .et-content-section .payload-richtext {
-  max-width: 900px;
+  max-width: var(--reading-width);
 }
 .et-content-section .payload-richtext h2 {
   font-size: var(--type-h3);
@@ -1403,20 +1403,21 @@ button:hover .et-arrow {
 }
 .et-content-list p {
   line-height: 1.8;
-  max-width: 800px;
+  max-width: var(--reading-width);
   color: var(--text-secondary);
 }
 .et-detail-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 80px;
-  padding-block: 72px;
+  gap: var(--section-gap);
+  padding-block: var(--section-space);
 }
 .et-detail-grid h2 {
   font-size: var(--type-h3);
   letter-spacing: -0.04em;
 }
 .et-detail-grid .payload-richtext {
+  max-width: var(--reading-width);
   font-size: 18px;
   line-height: 1.8;
 }
@@ -1432,12 +1433,12 @@ button:hover .et-arrow {
   margin-top: 20px;
   color: var(--text-secondary);
   line-height: 1.8;
-  max-width: 800px;
+  max-width: var(--reading-width);
 }
 .et-stats {
   display: flex;
-  gap: 80px;
-  padding-block: 64px;
+  gap: var(--section-gap);
+  padding-block: var(--section-space);
   flex-wrap: wrap;
 }
 .et-stats strong {
@@ -1447,7 +1448,7 @@ button:hover .et-arrow {
   font:
     var(--type-h2)/1.2 Georgia,
     serif;
-  padding-block: 72px;
+  padding-block: var(--section-space);
 }
 .et-pullquote cite {
   font-size: 16px;
@@ -1469,7 +1470,7 @@ button:hover .et-arrow {
   border: 1px solid var(--border-default);
   padding: 40px;
   margin-block: 40px;
-  max-width: 800px;
+  max-width: var(--reading-width);
 }
 .et-empty h2 {
   font-size: 28px;
@@ -1583,7 +1584,7 @@ button:hover .et-arrow {
 .et-quote-layout {
   display: grid;
   grid-template-columns: 1fr 2.2fr;
-  gap: 100px;
+  gap: var(--section-gap);
 }
 .et-quote-progress {
   padding-block: 32px;

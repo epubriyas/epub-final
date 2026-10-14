@@ -5,11 +5,11 @@ import { pageMetadata } from '@/lib/seo'
 import { contentPayload, getPreviewAccess } from '@/lib/content'
 import { articleDate, articleSummary, readingTime } from '@/lib/blog'
 import Link from '@/components/i18n/LocalizedLink'
-import { Media } from '@/components/Media'
+import { BlogCover } from '@/components/blog/BlogCover'
 import RichText from '@/components/RichText'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
+import { ArticleTools } from '@/components/blog/ArticleTools'
 import { BlogMotion } from '@/components/blog/BlogMotion'
-import { ContentCTA } from '@/components/editorial/Primitives'
 import { getServerSideURL } from '@/utilities/getURL'
 import styles from '@/components/blog/blog.module.css'
 
@@ -89,7 +89,7 @@ export default async function BlogArticle({ params }: Props) {
     publisher: { '@type': 'Organization', name: 'EPUBTRANS' },
   }
   return (
-    <BlogMotion className={styles.page}>
+    <BlogMotion className={`${styles.page} ${styles.articlePage}`}>
       {draft && (
         <>
           <LivePreviewListener />
@@ -102,7 +102,16 @@ export default async function BlogArticle({ params }: Props) {
         <Link className={styles.backLink} href="/blog">
           <ArrowLeft size={18} aria-hidden="true" /> Back to the blog
         </Link>
-        <p className={styles.eyebrow}>EPUBTRANS / JOURNAL</p>
+        <div className={styles.articleTopics}>
+          <p className={styles.eyebrow}>EPUBTRANS / JOURNAL</p>
+          {categories
+            .filter((category) => category.slug)
+            .map((category) => (
+              <Link key={category.id} href={`/blog?category=${encodeURIComponent(category.slug!)}`}>
+                {category.title}
+              </Link>
+            ))}
+        </div>
         <h1>{post.title}</h1>
         {post.meta?.description && <p className={styles.lead}>{post.meta.description}</p>}
         <div className={styles.postMeta}>
@@ -116,27 +125,22 @@ export default async function BlogArticle({ params }: Props) {
         </div>
       </header>
       {post.heroImage && typeof post.heroImage === 'object' && (
-        <div className={`et-container ${styles.articleCover}`}>
-          <Media resource={post.heroImage} size="100vw" />
+        <div
+          className={`et-container ${styles.articleCover}`}
+          data-portrait={Boolean(
+            post.heroImage.height &&
+            post.heroImage.width &&
+            post.heroImage.height > post.heroImage.width,
+          )}
+        >
+          <BlogCover image={post.heroImage} sizes="100vw" />
         </div>
       )}
       <div className={`et-container ${styles.articleLayout}`}>
         <aside className={styles.articleAside}>
-          <p className={styles.eyebrow}>THE READING ROOM</p>
-          <p>Ideas for your next edition.</p>
-          {categories.map((category) => (
-            <Link
-              key={category.id}
-              href={`/blog?category=${encodeURIComponent(category.slug || '')}`}
-            >
-              {category.title} <ArrowUpRight size={14} aria-hidden="true" />
-            </Link>
-          ))}
-          <Link href="/get-a-quote">
-            Discuss your content <ArrowUpRight size={14} aria-hidden="true" />
-          </Link>
+          <ArticleTools />
         </aside>
-        <article className={styles.articleBody} aria-label={post.title}>
+        <article id="article-content" className={styles.articleBody} aria-label={post.title}>
           <RichText data={post.content} enableGutter={false} />
           <div className={styles.articleEnd}>
             <span className={styles.eyebrow}>CONTINUE THE CONVERSATION</span>
@@ -150,7 +154,7 @@ export default async function BlogArticle({ params }: Props) {
       {related.length > 0 && (
         <section className={`et-container ${styles.related}`}>
           <p className={styles.eyebrow}>KEEP EXPLORING</p>
-          <h2>A little more perspective.</h2>
+          <h2>More from the journal.</h2>
           <div className={styles.grid}>
             {related.map((item) => (
               <Link key={item.id} className={styles.relatedCard} href={`/blog/${item.slug}`}>
@@ -170,7 +174,6 @@ export default async function BlogArticle({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
         />
       )}
-      <ContentCTA />
     </BlogMotion>
   )
 }

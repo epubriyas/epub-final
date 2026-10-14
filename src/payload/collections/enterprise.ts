@@ -242,15 +242,23 @@ export const QuoteRequests: CollectionConfig = {
     delete: authenticated,
   },
   fields: [
+    { name: 'submissionKey', type: 'text', unique: true, index: true, admin: { readOnly: true } },
     { name: 'name', type: 'text', required: true },
     { name: 'email', type: 'email', required: true },
     { name: 'company', type: 'text' },
     { name: 'service', type: 'text', required: true },
     { name: 'sourceLanguage', type: 'text' },
     { name: 'targetLanguages', type: 'text' },
+    { name: 'languages', type: 'text' },
+    { name: 'countryRegion', type: 'text' },
+    { name: 'sourceFileFormat', type: 'text' },
+    { name: 'targetOutputFormat', type: 'text' },
+    { name: 'approximateVolume', type: 'text' },
+    { name: 'additionalRequirements', type: 'textarea' },
     { name: 'details', type: 'textarea', required: true },
     { name: 'deadline', type: 'date' },
-    { name: 'consent', type: 'checkbox', required: true },
+    { name: 'consent', type: 'checkbox', defaultValue: false },
+    { name: 'sourcePage', type: 'text', defaultValue: '/get-a-quote' },
     {
       name: 'attachments',
       type: 'array',
@@ -260,6 +268,48 @@ export const QuoteRequests: CollectionConfig = {
         { name: 'size', type: 'number', required: true },
       ],
     },
+    {
+      name: 'status',
+      type: 'select',
+      defaultValue: 'new',
+      options: ['new', 'reviewing', 'contacted', 'closed'],
+    },
+  ],
+  timestamps: true,
+}
+
+export const Enquiries: CollectionConfig = {
+  slug: 'enquiries',
+  admin: {
+    useAsTitle: 'name',
+    group: 'Operations',
+    defaultColumns: ['name', 'email', 'inquiryType', 'createdAt'],
+  },
+  access: {
+    read: authenticated,
+    create: authenticated,
+    update: authenticated,
+    delete: authenticated,
+  },
+  fields: [
+    { name: 'submissionKey', type: 'text', unique: true, index: true, admin: { readOnly: true } },
+    { name: 'name', type: 'text', required: true },
+    { name: 'email', type: 'email', required: true },
+    { name: 'organization', type: 'text' },
+    {
+      name: 'inquiryType',
+      type: 'select',
+      required: true,
+      options: [
+        { label: 'General Enquiry', value: 'general' },
+        { label: 'Services Information', value: 'services' },
+        { label: 'Business Partnership', value: 'partnership' },
+        { label: 'Existing Project', value: 'existing_project' },
+        { label: 'Other', value: 'other' },
+      ],
+    },
+    { name: 'message', type: 'textarea', required: true },
+    { name: 'sourcePage', type: 'text', defaultValue: '/contact-us' },
     {
       name: 'status',
       type: 'select',

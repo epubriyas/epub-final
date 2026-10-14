@@ -8,11 +8,7 @@ export function ServiceWorkflow({ service }: { service: Service }) {
       <div className="et-container">
         <div className="sp-section-heading">
           <p className="sp-eyebrow">THE PROCESS</p>
-          <h2>
-            A clear path.
-            <br />
-            At every stage.
-          </h2>
+          <h2>Project workflow</h2>
           <p>
             The workflow for {service.title.toLowerCase()}, from source review to the final handoff.
           </p>

@@ -19,9 +19,6 @@ export function WorkExplorer({
   )
   const [search, setSearch] = useState('')
   const [index, setIndex] = useState<number | null>(null)
-  const featured = samples
-    .filter((sample) => sample.featured && (sample.pageCount || sample.sectionCount))
-    .slice(0, 3)
   const visible = samples.filter(
     (sample) =>
       (!category || sample.category === category) &&
@@ -39,51 +36,6 @@ export function WorkExplorer({
   const open = (sample: WorkSample) => setIndex(samples.findIndex((item) => item.id === sample.id))
   return (
     <>
-      {featured.length > 0 && (
-        <section className="wp-featured et-container" aria-labelledby="featured-title">
-          <div className="wp-section-heading">
-            <p className="wp-kicker">A closer look</p>
-            <h2 id="featured-title">
-              Selected work.
-              <br />
-              <span>The detail makes the difference.</span>
-            </h2>
-          </div>
-          <div className="wp-featured-composition">
-            {featured.map((sample, i) => (
-              <article className={`wp-feature wp-feature-${i + 1}`} key={sample.id}>
-                <button
-                  className="wp-feature-visual"
-                  onClick={() => open(sample)}
-                  aria-label={`View sample: ${sample.title}`}
-                >
-                  {sample.thumbnail && (
-                    <Image
-                      unoptimized
-                      src={sample.thumbnail.url}
-                      alt={sample.thumbnail.alt}
-                      width={sample.thumbnail.width}
-                      height={sample.thumbnail.height}
-                      sizes="(max-width: 767px) 90vw, 50vw"
-                    />
-                  )}
-                  <span className="wp-open-mark" aria-hidden="true">
-                    ↗
-                  </span>
-                </button>
-                <p className="wp-kicker">
-                  {sample.category} / {sample.format}
-                </p>
-                <h3>{sample.title}</h3>
-                <p>{sample.description}</p>
-                <button className="wp-text-button" onClick={() => open(sample)}>
-                  View Sample <span aria-hidden="true">↗</span>
-                </button>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
       <section
         className="wp-explorer et-container"
         id="explore-work"
@@ -163,9 +115,6 @@ export function WorkExplorer({
                       View Sample ↗
                     </button>
                   )}
-                  <Link className="wp-detail-link" href={`/work/${sample.slug}`}>
-                    Sample details
-                  </Link>
                 </div>
               </div>
             </article>

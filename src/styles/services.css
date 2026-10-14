@@ -26,10 +26,10 @@
   text-wrap: balance;
 }
 .sp-page h1 {
-  font-size: clamp(2.65rem, 5.4vw, 6.2rem);
+  font-size: var(--type-h1);
 }
 .sp-page h2 {
-  font-size: clamp(2rem, 3.8vw, 4.25rem);
+  font-size: var(--type-h2);
 }
 .sp-page h3 {
   font-size: clamp(1.2rem, 1.7vw, 1.7rem);
@@ -79,7 +79,7 @@
   grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
   gap: clamp(28px, 5vw, 90px);
   align-items: center;
-  padding-block: clamp(52px, 7vw, 108px);
+  padding-block: var(--section-space);
 }
 .sp-hero-copy .sp-eyebrow {
   color: var(--sp-action);
@@ -159,7 +159,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
 }
 .sp-hero-technical h1 {
-  font-size: clamp(2.65rem, 4.8vw, 5.5rem);
+  font-size: var(--type-h1);
 }
 .sp-hero-publication .sp-hero-grid {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
@@ -168,23 +168,23 @@
   transform: translateY(24px);
 }
 .sp-section {
-  padding-block: clamp(60px, 8vw, 128px);
+  padding-block: var(--section-space);
 }
 .sp-intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(32px, 8vw, 140px);
+  gap: var(--section-gap);
 }
 .sp-intro h2 {
   max-width: 14ch;
   margin-top: 25px;
 }
 .sp-richtext {
-  padding-top: 32px;
+  padding-top: 0;
   color: var(--sp-body);
 }
 .sp-richtext .prose {
-  max-width: none;
+  max-width: var(--reading-width);
   color: inherit;
 }
 .sp-richtext p {
@@ -197,7 +197,7 @@
 .sp-capabilities > div {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(32px, 8vw, 140px);
+  gap: var(--section-gap);
 }
 .sp-section-heading h2 {
   margin-top: 22px;
@@ -254,7 +254,7 @@
 .sp-process {
   background: #12383a;
   color: white;
-  padding-block: clamp(60px, 8vw, 120px);
+  padding-block: var(--section-space);
   scroll-margin-top: 112px;
 }
 .sp-process .sp-section-heading {
@@ -273,7 +273,7 @@
 .sp-timeline {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 64px !important;
+  margin-top: 32px !important;
   gap: 28px;
 }
 .sp-timeline li {
@@ -409,11 +409,11 @@
   color: var(--sp-body);
 }
 .sp-cta {
-  padding-block: clamp(64px, 8vw, 120px);
+  padding-block: var(--section-space);
   background: var(--sp-soft);
 }
 .sp-cta h2 {
-  font-size: clamp(3rem, 6vw, 7rem);
+  font-size: var(--type-h2);
   margin-top: 24px;
 }
 .sp-cta-bottom {
@@ -821,12 +821,12 @@
   background: var(--sp-paper);
 }
 .sp-index-hero > div {
-  padding-block: clamp(56px, 7vw, 110px);
+  padding-block: var(--section-space);
 }
 .sp-index-hero h1 {
-  max-width: 14ch;
+  max-width: 24ch;
   margin-top: 28px;
-  font-size: clamp(3rem, 7vw, 8rem);
+  font-size: var(--type-h1);
 }
 .sp-index-bottom {
   display: grid;
@@ -1021,7 +1021,7 @@ html[data-theme='dark'] .sp-page .sv-stage {
     font-size: clamp(2.35rem, 10vw, 3rem);
   }
   .sp-index-hero h1 {
-    font-size: clamp(2.8rem, 12vw, 3.6rem);
+    font-size: var(--type-h1);
   }
   .sp-hero-copy .sp-eyebrow {
     margin-bottom: 20px;

@@ -33,8 +33,8 @@ export default async function FrontendLayout({ children }: { children: React.Rea
     '@type': 'Organization',
     name: 'EPUBTRANS',
     url: getServerSideURL(),
-    email: 'info@epubtrans.com',
-    telephone: '+91 44 3136 3907',
+    ...(settings.contactDetailsApproved === true && settings.email ? { email: settings.email } : {}),
+    ...(settings.contactDetailsApproved === true && settings.phone ? { telephone: settings.phone } : {}),
   }
   return (
     <html
@@ -59,8 +59,8 @@ export default async function FrontendLayout({ children }: { children: React.Rea
             </div>
             <Footer />
             <EpubtransAssistant
-              email={settings.email || 'info@epubtrans.com'}
-              phone={settings.phone || '+91 44 3136 3907'}
+              email={settings.contactDetailsApproved === true ? settings.email || '' : ''}
+              phone={settings.contactDetailsApproved === true ? settings.phone || '' : ''}
             />
           </LocaleProvider>
         </Providers>

@@ -30,6 +30,7 @@ import {
   Resources,
   Careers,
   QuoteRequests,
+  Enquiries,
 } from './payload/collections/enterprise'
 import { SiteSettings } from './payload/globals/SiteSettings'
 
@@ -120,6 +121,7 @@ export default buildConfig({
     Resources,
     Careers,
     QuoteRequests,
+    Enquiries,
   ],
 
   // =======================================================

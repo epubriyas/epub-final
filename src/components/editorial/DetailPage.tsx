@@ -43,7 +43,7 @@ export function DetailPage({
       {'challenges' in document && !!document.challenges?.length && (
         <section className="et-container et-content-section">
           <p className="et-label">CONTEXT</p>
-          <h2>Understanding the challenge.</h2>
+          <h2>Project challenges</h2>
           <ul className="et-content-list">
             {document.challenges.map((item) => (
               <li key={item.id}>
@@ -57,7 +57,7 @@ export function DetailPage({
       {!!capabilities?.length && (
         <section className="et-container et-content-section">
           <p className="et-label">CAPABILITIES</p>
-          <h2>What we bring to your project.</h2>
+          <h2>Capabilities</h2>
           <ul className="et-content-list">
             {capabilities.map((item) => (
               <li key={item.id}>

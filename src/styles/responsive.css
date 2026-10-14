@@ -353,8 +353,8 @@
 
 @media (max-width: 480px) {
   .et-site {
-    --type-h2: clamp(30px, 8.2vw, 39px);
-    --type-h3: clamp(23px, 6vw, 28px);
+    --type-h2: clamp(28px, 7vw, 34px);
+    --type-h3: clamp(22px, 5.5vw, 26px);
   }
   .et-header-inner {
     gap: 4px;

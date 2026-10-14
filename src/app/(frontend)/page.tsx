@@ -75,10 +75,10 @@ export default async function HomePage() {
                 <span>A wider world.</span>
               </h1>
               <p>
-                Ideas deserve to travel. We bring publishing, language and digital content together
-                to help yours reach its next audience.
+                Publishing, translation and digital content services for print, multilingual
+                editions and online learning.
               </p>
-              <ArrowLink href="/services">Explore what we do</ArrowLink>
+              <ArrowLink href="/services">Explore services</ArrowLink>
             </div>
             <div
               className="et-hero-art"
@@ -146,7 +146,7 @@ export default async function HomePage() {
                 EPUBTRANS brings together editorial production, translation and digital publishing.
                 We help you shape content for the people, platforms and formats it needs to reach.
               </p>
-              <ArrowLink href="/company">Get to know EPUBTRANS</ArrowLink>
+              <ArrowLink href="/about-us">Get to know EPUBTRANS</ArrowLink>
             </div>
           </div>
         </Reveal>
@@ -156,11 +156,7 @@ export default async function HomePage() {
           <div className="et-section-head">
             <div>
               <p className="et-label">WHAT WE DO</p>
-              <h2>
-                Every word.
-                <br />
-                Every dimension.
-              </h2>
+              <h2>Publishing and localization services</h2>
             </div>
             <ArrowLink href="/services">All services</ArrowLink>
           </div>
@@ -181,16 +177,9 @@ export default async function HomePage() {
           <ContentTransformationInfographic />
           <div className="et-feature-copy">
             <p className="et-label">SOLUTIONS / DIGITAL PUBLISHING</p>
-            <h2>
-              One idea.
-              <br />
-              Many ways
-              <br />
-              to experience it.
-            </h2>
+            <h2>Prepare content for print and digital editions</h2>
             <p className="et-lead">
-              Your content is more than a file. Give it a life across print, eBooks and digital
-              publishing platforms.
+              Adapt your source content for print, eBooks and digital publishing platforms.
             </p>
             <ArrowLink href="/solutions/digital-publishing">Explore digital publishing</ArrowLink>
           </div>
@@ -245,11 +234,7 @@ export default async function HomePage() {
         <div className="et-section-head">
           <div>
             <p className="et-label">CONTENT IN PRACTICE</p>
-            <h2>
-              See the craft.
-              <br />
-              Explore the work.
-            </h2>
+            <h2>Publishing and learning samples</h2>
           </div>
           <ArrowLink href="/work">Explore our portfolio</ArrowLink>
         </div>
@@ -320,7 +305,8 @@ export default async function HomePage() {
               EPUBTRANS combines publishing expertise with digital production. Get to know the
               company behind your next edition, localization or learning project.
             </p>
-            <ArrowLink href="/company">Our story</ArrowLink>
+            <ArrowLink href="/about-us">Our story</ArrowLink>
+            <ArrowLink href="/contact-us">Contact EPUBTRANS</ArrowLink>
           </div>
         </div>
       </section>

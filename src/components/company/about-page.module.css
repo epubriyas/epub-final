@@ -1,0 +1,264 @@
+.page {
+  --about-reading-width: 68ch;
+}
+
+.heroCopy {
+  max-width: 900px;
+  margin-top: 28px;
+}
+
+.heroCopy > p,
+.page .readingColumn > p,
+.page .sectionLead,
+.page .audienceCard > p,
+.page .capabilityGrid p,
+.page .workflowGrid p,
+.page .principleGrid p,
+.page .missionGrid p,
+.page .finalCta > div > p:not(.et-label) {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.heroCopy > p {
+  max-width: var(--about-reading-width);
+  margin-block: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  margin-top: 28px;
+}
+
+.sectionHeading {
+  margin-bottom: 28px;
+}
+
+.sectionHeading .et-label {
+  margin-bottom: 12px;
+}
+
+.sectionHeading h2 {
+  max-width: 24ch;
+  font-size: var(--type-h2);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+.readingColumn {
+  max-width: var(--about-reading-width);
+}
+
+.readingColumn > p + p,
+.principleGrid p + p,
+.audienceCard > p + p {
+  margin-top: 16px;
+}
+
+.audience {
+  background: var(--background-secondary);
+}
+
+.sectionLead {
+  max-width: 70ch;
+  margin-bottom: 28px;
+}
+
+.audienceGrid,
+.principleGrid,
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.audienceCard,
+.principleGrid article,
+.missionGrid article {
+  min-width: 0;
+  border-top: 1px solid var(--border-default);
+  padding-top: 22px;
+}
+
+.audienceCard h3,
+.capabilityGrid h3,
+.workflowGrid h3,
+.principleGrid h3,
+.missionGrid h3 {
+  font-size: var(--type-h3);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  margin-bottom: 14px;
+  text-wrap: balance;
+}
+
+.audienceCard .et-text-link {
+  margin-top: 18px;
+}
+
+.capabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.capabilityGrid li {
+  border-top: 1px solid var(--border-default);
+  padding-block: 22px;
+}
+
+.capabilityGrid h3 {
+  font-size: 20px;
+}
+
+.capabilityLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 16px;
+}
+
+.sectionAction {
+  margin-top: 16px;
+}
+
+.approach {
+  background: var(--background-inverse);
+  color: var(--text-inverse);
+}
+
+.approach .sectionLead,
+.approach .workflowGrid p,
+.approach .workflowNote {
+  color: #c6d2cd;
+}
+
+.approach .sectionHeading .et-label {
+  color: var(--brand-secondary);
+}
+
+.workflowGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workflowGrid li {
+  min-width: 0;
+  border-top: 1px solid #ffffff40;
+  padding-top: 20px;
+}
+
+.stepNumber {
+  display: block;
+  color: var(--brand-secondary);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.workflowGrid h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.workflowNote {
+  margin-top: 28px;
+  max-width: 70ch;
+}
+
+.principleGrid {
+  row-gap: 32px;
+}
+
+.missionVision {
+  background: var(--brand-secondary);
+}
+
+.missionVision .sectionHeading .et-label {
+  color: var(--brand-primary);
+}
+
+.missionGrid {
+  gap: 32px;
+}
+
+.missionGrid article {
+  border-color: #758d83;
+}
+
+.missionGrid p {
+  max-width: var(--about-reading-width);
+}
+
+.explore .readingColumn {
+  margin-bottom: 18px;
+}
+
+.finalCta {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--border-default);
+}
+
+.finalCta > div > p:not(.et-label) {
+  max-width: var(--about-reading-width);
+}
+
+@media (max-width: 900px) {
+  .capabilityGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflowGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .heroCopy {
+    margin-top: 20px;
+  }
+
+  .audienceGrid,
+  .capabilityGrid,
+  .principleGrid,
+  .missionGrid,
+  .workflowGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .capabilityGrid li {
+    padding-block: 18px;
+  }
+
+  .sectionHeading {
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .actions .et-button,
+  .actions .et-text-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

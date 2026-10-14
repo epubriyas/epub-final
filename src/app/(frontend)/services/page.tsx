@@ -19,7 +19,7 @@ export default async function ServicesPage() {
       <section className="sp-index-hero">
         <div className="et-container">
           <p className="sp-eyebrow">WHAT WE DO / EPUBTRANS</p>
-          <h1>Expertise for every chapter.</h1>
+          <h1>Publishing, localization and content services</h1>
           <div className="sp-index-bottom">
             <p>
               From editorial detail to structured digital content. Find the publishing, language and

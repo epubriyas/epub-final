@@ -34,7 +34,7 @@ export default function GlobalPresence() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
               {item.id === 'locations' && (
-                <ArrowLink href="/contact">Connect with our Chennai team</ArrowLink>
+                <ArrowLink href="/contact-us">Connect with our Chennai team</ArrowLink>
               )}
             </article>
           ))}

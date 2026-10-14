@@ -13,12 +13,17 @@ const data: QuoteData = {
   name: 'Test Customer',
   email: 'customer@example.com',
   company: 'Example',
-  service: 'Translation & localization',
+  service: 'localization_dtp',
   sourceLanguage: 'English',
   targetLanguages: 'Tamil',
+  languages: 'English to Tamil',
+  countryRegion: 'India',
+  sourceFileFormat: 'DOCX',
+  targetOutputFormat: 'EPUB',
+  approximateVolume: '100 pages',
+  additionalRequirements: 'Follow the supplied style guide.',
   details: 'Translate our <script>alert(1)</script> project brief.',
   deadline: '2026-11-01',
-  consent: true,
   website: '',
 }
 afterEach(() => {
@@ -35,6 +40,7 @@ function configure() {
 describe('Quote email notifications', () => {
   it('sends through Resend with the manager recipient and customer reply address', async () => {
     vi.stubEnv('RESEND_API_KEY', 'test-key')
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     vi.stubEnv('MANAGER_EMAIL', 'riyastech001@gmail.com')
     vi.stubEnv('RESEND_FROM_EMAIL', 'EPUBTRANS <notifications@epubtrans.com>')
     send.mockResolvedValue({ data: { id: 'email-123' }, error: null })
@@ -52,6 +58,7 @@ describe('Quote email notifications', () => {
   })
   it('handles Resend rejection without losing the saved request or falling back to another send', async () => {
     vi.stubEnv('RESEND_API_KEY', 'test-key')
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     send.mockResolvedValue({ data: null, error: { message: 'Rejected' } })
     expect(await notifyQuote('123', data, [])).toBe('failed')
     expect(sendMail).not.toHaveBeenCalled()
@@ -69,12 +76,14 @@ describe('Quote email notifications', () => {
   })
   it('does not attempt delivery without SMTP configuration', async () => {
     vi.stubEnv('RESEND_API_KEY', '')
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     vi.stubEnv('SMTP_PASSWORD', '')
     expect(await notifyQuote('123', data, [])).toBe('unavailable')
     expect(sendMail).not.toHaveBeenCalled()
   })
   it('confirms SMTP acceptance of the intended recipient', async () => {
     configure()
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     vi.stubEnv('MANAGER_EMAIL', 'riyastech001@gmail.com')
     sendMail.mockResolvedValue({ accepted: ['riyastech001@gmail.com'] })
     expect(await notifyQuote('123', data, [])).toBe('sent')
@@ -82,6 +91,7 @@ describe('Quote email notifications', () => {
   })
   it('uses the authenticated account when SMTP_FROM is omitted', async () => {
     configure()
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     vi.stubEnv('SMTP_FROM', '')
     vi.stubEnv('SMTP_USER', 'sender@epubtrans.com')
     vi.stubEnv('MANAGER_EMAIL', 'riyastech001@gmail.com')
@@ -91,12 +101,14 @@ describe('Quote email notifications', () => {
   })
   it('rejects an invalid SMTP port before attempting delivery', async () => {
     configure()
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     vi.stubEnv('SMTP_PORT', 'invalid')
     expect(await notifyQuote('123', data, [])).toBe('failed')
     expect(sendMail).not.toHaveBeenCalled()
   })
   it('returns a failure without throwing when SMTP fails or rejects the recipient', async () => {
     configure()
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     sendMail.mockRejectedValueOnce(new Error('SMTP failed'))
     expect(await notifyQuote('123', data, [])).toBe('failed')
     sendMail.mockResolvedValueOnce({ accepted: [] })
@@ -105,7 +117,7 @@ describe('Quote email notifications', () => {
   it('preserves leading/trailing whitespace, line breaks, Unicode and special characters', () => {
     const details = '  Original brief & <tags> "quotes"\r\nதமிழ் — second line\n\n  '
     const form = new FormData()
-    form.set('details', details)
+    form.set('project_description', details)
     const parsed = getQuoteData(form)
     expect(parsed.details).toBe(details)
     const message = quoteEmail('123', { ...data, details: parsed.details }, [])
@@ -121,6 +133,7 @@ describe('Quote email notifications', () => {
   })
   it('handles network failures and missing provider confirmation', async () => {
     vi.stubEnv('RESEND_API_KEY', 'test-key')
+    vi.stubEnv('ENQUIRY_RECIPIENT_APPROVED', 'true')
     send.mockRejectedValueOnce(new Error('Network error'))
     expect(await notifyQuote('123', data, [])).toBe('failed')
     send.mockResolvedValueOnce({ data: {}, error: null })
