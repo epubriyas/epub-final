@@ -24,7 +24,21 @@ const eslintConfig = [
     },
   },
   {
-    ignores: ['.next/', 'artifacts/', 'src/payload-types.ts', 'src/payload-generated-schema.ts'],
+    ignores: [
+      '.next/',
+      'artifacts/',
+      'test-results/',
+      'playwright-report/',
+      'blob-report/',
+      'tmp/',
+      'temp/',
+      '.local-backups/',
+      '.vercel/',
+      '.translation-cache/',
+      'private-uploads/',
+      'src/payload-types.ts',
+      'src/payload-generated-schema.ts',
+    ],
   },
 ]
 

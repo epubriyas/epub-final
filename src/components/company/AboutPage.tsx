@@ -140,9 +140,9 @@ const principles = [
 ]
 
 const existingMission =
-  'To help people publish and share content that is clear, carefully prepared and suited to its audience. We bring human judgement and production technology together to support the journey from source material to a usable final edition.'
+  'To support publishers, localization service providers and content organizations with practical publishing-production and content-transformation services that help prepare content for its intended formats, languages and delivery environments.'
 const existingVision =
-  'A future where useful ideas can travel across languages, cultures and formats without losing the thought behind them. We want more people to encounter content they can understand, navigate and use with confidence.'
+  'To develop EPUBTRANS as a capable international production partner by combining publishing knowledge, technical workflows, responsible use of technology and collaborative project delivery.'
 
 function SectionHeading({ eyebrow, title }: { eyebrow?: string; title: string }) {
   return (
@@ -164,6 +164,17 @@ export async function AboutPage() {
 
   return (
     <CompanyMotion className={styles.page}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'AboutPage',
+            name: 'About EPUBTRANS',
+            description: seoDescription,
+            url: 'https://www.epubtrans.com/about-us',
+            about: { '@type': 'Organization', name: 'EPUBTRANS' },
+          }).replace(/</g, '\\u003c') }}
+        />
         <section className="et-page-hero">
           <div className="et-container">
             <h1>About EPUBTRANS</h1>

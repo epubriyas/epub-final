@@ -1,10 +1,10 @@
 # Homepage animation
 
-The default homepage uses the supplied process-board reference with EPUBTRANS's existing Prepare, Transform, Review and Deliver workflow. No project durations or additional service claims were added.
+The homepage uses the supplied connected workflow reference and editable CMS workflow titles and descriptions. No project durations or additional service claims were added.
 
-- Hero: masked typography and a staggered opening of the existing editorial paper artwork.
+- Hero: masked typography and a shaded, textured 3D Earth with continuous rotation, drag/keyboard exploration, atmospheric lighting, illustrative connection sweeps and pause/resume controls; the supplied globe image remains the fallback. See `HERO-GLOBE-MOTION.md`.
 - Services: sequential horizontal row entrances and restrained hover feedback.
-- Workflow: curved SVG route drawing, stage checkpoints and staggered teal cards on a pale background. Reading order follows 01–04; desktop placement follows the curved route, and mobile uses a vertical ordered list. Mobile cards animate individually on entry.
+- Workflow: a measured SVG curve follows the actual card positions, including after resizing or CMS copy changes. A light traces the route once over three seconds, coordinated with checkpoint pulses, icon entrances and staggered card reveals. Desktop retains the connected 01–04 layout and teal palette; pointer movement adds restrained perspective and a soft local highlight. Mobile uses a vertical ordered list and individually reveals cards on entry. Reduced motion disables these effects.
 - Portfolio artwork: restrained color transition.
 - Company heading: warm text-edge emphasis.
 

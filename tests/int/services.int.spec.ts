@@ -66,4 +66,15 @@ describe('service presentation and relationships', () => {
       serviceGroup({ ...record(1, 'desktop-publishing'), category: 'translation-localization' }),
     ).toBe('language')
   })
+  it.each([
+    ['ebook-creation', 'ebook_xml'],
+    ['scielo-xml-markup', 'ebook_xml'],
+    ['data-conversion', 'document_conversion'],
+  ])('preselects the directory category for %s', (slug, category) => {
+    expect(
+      new URL(serviceQuoteHref(record(1, slug)), 'https://example.test').searchParams.get(
+        'service',
+      ),
+    ).toBe(category)
+  })
 })

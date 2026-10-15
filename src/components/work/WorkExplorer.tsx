@@ -26,6 +26,11 @@ export function WorkExplorer({
         .toLowerCase()
         .includes(search.toLowerCase().trim()),
   )
+  const firstDescription = new Map<string, number>()
+  visible.forEach((sample, i) => {
+    const description = sample.description.trim()
+    if (description && !firstDescription.has(description)) firstDescription.set(description, i)
+  })
   const selectCategory = (value: string) => {
     setCategory(value)
     const url = new URL(window.location.href)
@@ -44,7 +49,7 @@ export function WorkExplorer({
         <div className="wp-explorer-heading">
           <div>
             <p className="wp-kicker">Explore the collection</p>
-            <h2 id="explorer-title">Find your next perspective.</h2>
+            <h2 id="explorer-title">Browse work samples</h2>
           </div>
           <label className="wp-search">
             Search work
@@ -103,7 +108,9 @@ export function WorkExplorer({
                 <h3>
                   <Link href={`/work/${sample.slug}`}>{sample.title}</Link>
                 </h3>
-                <p>{sample.description}</p>
+                {firstDescription.get(sample.description.trim()) === i && (
+                  <p>{sample.description}</p>
+                )}
                 <span className="wp-deliverable">
                   {sample.format}
                   {sample.sourcePageCount ? ` / ${sample.sourcePageCount} source pages` : ''}

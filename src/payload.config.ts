@@ -33,6 +33,7 @@ import {
   Enquiries,
 } from './payload/collections/enterprise'
 import { SiteSettings } from './payload/globals/SiteSettings'
+import { LandingPages } from './payload/globals/LandingPages'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -134,7 +135,7 @@ export default buildConfig({
   // GLOBALS
   // =======================================================
 
-  globals: [Header, Footer, SiteSettings],
+  globals: [Header, Footer, SiteSettings, LandingPages],
 
   // =======================================================
   // PLUGINS

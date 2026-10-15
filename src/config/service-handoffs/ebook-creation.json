@@ -1,0 +1,795 @@
+{
+  "sourceDocument": "EPUBTRAN_Ebook_Creation.docx",
+  "slug": "ebook-creation",
+  "seo": {
+    "title": "EPUB Conversion & eBook Creation Services | EPUBTRANS",
+    "description": "Convert manuscripts and publishing files into reflowable or fixed-layout EPUB. EPUBTRANS supports eBook production, navigation, metadata and scoped QA."
+  },
+  "hero": {
+    "title": "EPUB Conversion & eBook Creation Services",
+    "lead": "Reflowable and fixed-layout EPUB production for publishers, academic publishing organizations and digital-content teams.",
+    "paragraphs": [
+      "EPUBTRANS provides eBook creation and EPUB conversion services to help publishers transform manuscripts, print-production files and existing content into digital publications.",
+      "Our services include reflowable and fixed-layout EPUB production, content structuring, navigation, styling, metadata preparation and related publishing-file workflows. Accessible EPUB and Read Aloud features can also be considered where included in the project scope.",
+      "Whether you are preparing a new eBook, converting an existing publication or updating digital publishing files, we can review your source materials and target requirements to define the appropriate production approach."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request an EPUB Conversion Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Digital Publishing Services",
+        "href": "/services#ebook-xml",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "EPUB Conversion Services for Digital Publishing",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Preparing a publication for digital reading involves more than changing its file extension."
+        },
+        {
+          "kind": "paragraph",
+          "text": "An EPUB publication requires an appropriate content structure, navigation, styling, metadata and supporting assets. The production approach also depends on how readers are expected to use the content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports eBook creation and conversion for defined publishing requirements, including EPUB2 and EPUB3 outputs where applicable."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Reflowable EPUB Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Reflowable EPUB allows text and content to adapt to different reading environments, screen sizes and reader preferences."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It is commonly suited to publications where the content can flow naturally without depending on a fixed page arrangement."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Typical use cases include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Fiction and general-interest books",
+                "Text-led nonfiction",
+                "Academic and educational reading materials",
+                "Publications with predominantly linear content",
+                "Existing print titles being prepared for digital reading"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Production may include heading structures, paragraph styles, navigation, internal links, image placement and other formatting elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The suitability of reflowable EPUB depends on the source content, tables, equations, images and required reading experience."
+            }
+          ]
+        },
+        {
+          "title": "Fixed-Layout EPUB Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Fixed-layout EPUB retains a defined page composition instead of allowing all content to reflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This approach may be suitable for publications where the placement of text and images is an important part of the reading experience."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Typical use cases include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Illustrated children's books",
+                "Art and photography publications",
+                "Image-led educational books",
+                "Comics and graphic publications",
+                "Publications with complex visual arrangements"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Fixed-layout production requires assessment of page dimensions, image quality, text placement, reading order and target reading-system behavior."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It is not automatically the preferred format for every complex publication. Device limitations and accessibility requirements should be considered before selecting the format."
+            }
+          ]
+        },
+        {
+          "title": "EPUB2 & EPUB3 Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS's documented service portfolio includes EPUB2 and EPUB3 production."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required format version should be selected according to the publisher's specifications, intended distribution workflow, content requirements and supported reading environments."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUB3 supports a range of modern digital publishing features, but individual features and reading-system requirements must be reviewed before they are included in a project."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our eBook Creation & Conversion Capabilities",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Manuscript and Publication Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Conversion of eligible source content into an agreed EPUB format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Source files may include Microsoft Word, Adobe InDesign/IDML, XML, HTML, PDF and associated publication assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The conversion approach is determined by source quality, content structure, complexity and output requirements."
+            }
+          ]
+        },
+        {
+          "title": "Content Structure & Formatting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of digital publication content using appropriate headings, sections, paragraph styles, lists and other structural elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where applicable, production includes XHTML content, CSS styling and supporting publication assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The goal is to organize the source material according to the intended EPUB structure and project specification."
+            }
+          ]
+        },
+        {
+          "title": "Navigation & Table of Contents",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of EPUB navigation elements, including the table of contents, internal links and other applicable reading-navigation features."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The requirements depend on the publication structure and EPUB version."
+            }
+          ]
+        },
+        {
+          "title": "Images, Tables & Complex Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation and integration of publication elements such as images, figures, tables, captions, references and equations."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Complex material may require additional formatting, structural reconstruction or format-specific decisions."
+            }
+          ]
+        },
+        {
+          "title": "Metadata & Publication Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of agreed eBook metadata, including relevant publication information supplied or approved by the publisher."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve titles, contributors, language information, identifiers and other fields required by the target specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Cover images and other supporting assets are incorporated according to the approved brief."
+            }
+          ]
+        },
+        {
+          "title": "Read Aloud & Media-Enhanced EPUB",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where supported and specifically commissioned, EPUB production may include Read Aloud workflows or synchronized text-and-audio features."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These requirements should be reviewed separately because audio assets, timing information, content structure and reading-system compatibility can affect production."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Read Aloud EPUB is not automatically included with standard eBook conversion and should not be confused with producing a standalone audiobook."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "Choosing Between Reflowable & Fixed-Layout EPUB",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The appropriate format depends on the content and the intended reading experience."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Choose Reflowable EPUB When:",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Text is the primary content.",
+                "Readers should be able to adjust text presentation.",
+                "The publication structure can adapt to different screen sizes.",
+                "A fixed page arrangement is not essential to understanding the content."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Consider Fixed-Layout EPUB When:",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Page design is central to the publication.",
+                "Text and illustrations have specific spatial relationships.",
+                "Visual composition needs to remain consistent.",
+                "The intended reading environment supports the required layout behavior."
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "For some projects, a source publication designed for print may need adjustments before it works effectively as a digital book."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We can review representative pages and discuss the suitable EPUB format before production begins."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Source Files We Can Assess for EPUB Conversion",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The quality and completeness of source materials influence the conversion process."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, EPUBTRANS can assess:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Microsoft Word manuscripts",
+            "Adobe InDesign or IDML files",
+            "Existing XML or HTML content",
+            "PDF publication files",
+            "Cover images and illustration assets",
+            "Tables, figures and equations",
+            "Existing EPUB files requiring revision or updating",
+            "Publisher style guides and production specifications"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Editable, well-structured source files generally provide more flexibility during EPUB production."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Converting PDF to EPUB",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF files can be reviewed for EPUB conversion, but a PDF does not necessarily contain the logical structure needed for a reflowable eBook."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Page-based layouts, columns, text fragments, figures and reading order may require reconstruction."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Scanned or image-based PDFs can introduce additional text-extraction and correction requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "PDF-to-EPUB work should therefore be assessed according to source quality and expected output rather than treated as a simple automated conversion."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "EPUB Deliverables & Production Files",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Deliverables are defined according to the target format and agreed scope."
+        }
+      ],
+      "groups": [
+        {
+          "title": "EPUB Publication Package",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A reflowable or fixed-layout EPUB package in the agreed version and production specification."
+            }
+          ]
+        },
+        {
+          "title": "Structured Content & Styling Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Associated XHTML/HTML, CSS, images and other supporting resources where included in the delivery package."
+            }
+          ]
+        },
+        {
+          "title": "Navigation & Metadata",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed table of contents, navigation structure and publication metadata included in the EPUB."
+            }
+          ]
+        },
+        {
+          "title": "Review or Validation Information",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A validation checklist, issue report or test summary may be supplied where the corresponding checks are included and completed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Additional source files, intermediate assets or distribution-specific outputs must be confirmed during project planning."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our EPUB Conversion Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Source Review & Project Assessment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review the manuscript or source publication, available assets, intended EPUB version, layout requirements and target distribution specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Potential conversion challenges are identified before confirming the production scope."
+            }
+          ]
+        },
+        {
+          "title": "2. Content Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The source material is organized or adapted for the selected EPUB approach."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may include reviewing headings, reading order, images, tables, navigation requirements and publication metadata."
+            }
+          ]
+        },
+        {
+          "title": "3. EPUB Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The content is converted and assembled using the appropriate structural, styling and packaging requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Reflowable and fixed-layout workflows are adapted according to the publication design and target output."
+            }
+          ]
+        },
+        {
+          "title": "4. Review & Quality Checks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Relevant technical, structural and visual checks are performed as defined by the project requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Review may include navigation, content structure, image handling, internal references and layout behavior in agreed reading environments."
+            }
+          ]
+        },
+        {
+          "title": "5. Corrections & Final Delivery",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Agreed corrections are incorporated through the defined review process."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final EPUB package and any supporting deliverables are prepared for handoff according to the approved specifications."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "EPUB Validation & Quality Checks",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "An EPUB file must meet the applicable technical requirements of its intended format and publishing workflow."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, relevant checks may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "EPUB package structure",
+            "Content files and markup",
+            "Metadata completeness",
+            "Navigation and table-of-contents links",
+            "Internal references and linked assets",
+            "Image placement and display",
+            "CSS styling and content presentation",
+            "Reflowable or fixed-layout behavior",
+            "Technical validation against the specified EPUB requirements",
+            "Review in agreed reading systems or applications"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Validation tools can identify technical errors, but automated checks alone do not establish that every publication element renders correctly or that the eBook is fully accessible."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The validation tools, test environments, review stages, acceptance criteria and reporting requirements should be defined in the project scope."
+        },
+        {
+          "kind": "paragraph",
+          "text": "No particular retailer or reading-system acceptance is guaranteed without verifying the relevant requirements and the final deliverable."
+        }
+      ],
+      "groups": [],
+      "kind": "quality"
+    },
+    {
+      "title": "Accessible EPUB Production",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Accessibility is an important consideration in digital publishing, particularly when publications must support diverse reading needs or meet specified accessibility requirements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS's documented services include accessible EPUB-related production."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, activities may involve:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Logical content structure and heading hierarchy",
+            "Appropriate reading order",
+            "Navigation and internal links",
+            "Language and metadata information",
+            "Alternative text integration when supplied or commissioned",
+            "Accessible treatment of images, tables and complex content",
+            "Applicable structural and format-specific accessibility checks"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Accessibility production and testing requirements are determined by the target specification, EPUB version, source materials and agreed acceptance criteria."
+        },
+        {
+          "kind": "paragraph",
+          "text": "An EPUB file passing general technical validation does not automatically establish compliance with an accessibility standard."
+        },
+        {
+          "kind": "link",
+          "text": "Explore Digital Accessibility Services",
+          "href": "/accessibility-services",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "What Affects EPUB Conversion Scope & Schedule?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Source File Quality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Well-organized editable content can require a different production process from unstructured PDFs, incomplete source packages or scanned publications."
+            }
+          ]
+        },
+        {
+          "title": "Reflowable or Fixed-Layout Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Layout choice influences content preparation, formatting, visual review and target reading-system requirements."
+            }
+          ]
+        },
+        {
+          "title": "Content Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Tables, equations, figures, footnotes, cross-references, special characters and complex publication structures may require additional work."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility & Media Features",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Alternative text, accessible tables, synchronized audio and other specialist requirements can affect the production and testing scope."
+            }
+          ]
+        },
+        {
+          "title": "Output & Validation Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB version, platform-specific instructions, test environments, requested review cycles and validation deliverables influence the work involved."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We assess these factors before confirming production scope, pricing or delivery arrangements."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related Digital Publishing Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "EPUB production may form part of a wider publishing or content-transformation workflow."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and journal page composition and layout preparation for print and digital publishing."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "XML & Structured Content Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Structured-content preparation and XML conversion for applicable publishing workflows."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "Digital Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related production and remediation for EPUB, PDF and other supported document formats."
+            }
+          ],
+          "href": "/accessibility-services"
+        },
+        {
+          "title": "Document & Data Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation or reconstruction of source documents that may need further conversion before EPUB production."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services can be discussed separately or combined where the project requirements call for related production activities."
+            }
+          ],
+          "href": "/data-conversion-services"
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What is EPUB conversion?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB conversion is the process of preparing existing manuscripts or publication content as a structured EPUB digital publication. Depending on the source and target requirements, this may involve content reconstruction, styling, navigation, metadata and technical checks."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between reflowable and fixed-layout EPUB?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Reflowable EPUB allows text and content to adapt to different reading environments. Fixed-layout EPUB preserves a defined page arrangement. The appropriate option depends on publication content, design and target reading systems."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS convert Word files into EPUB?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Microsoft Word is among the documented source formats for EPUB production. The manuscript structure, images, tables and other elements are reviewed before confirming scope."
+            }
+          ]
+        },
+        {
+          "title": "Can you convert PDF files into EPUB?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF files can be assessed for conversion. However, page-based content may require structural reconstruction, especially for reflowable EPUB. The effort depends on source quality and layout complexity."
+            }
+          ]
+        },
+        {
+          "title": "Do you support EPUB2 and EPUB3?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS's documented portfolio includes EPUB2 and EPUB3 production. The required version and compatibility expectations should be confirmed for each project."
+            }
+          ]
+        },
+        {
+          "title": "Can you create fixed-layout EPUB for illustrated books?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Fixed-layout EPUB is part of the documented service portfolio. Suitability depends on the publication design, source assets, reading-system requirements and agreed output specification."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS produce accessible EPUB files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related EPUB production can be scoped for supported requirements. The target accessibility specification, manual review, validation and any conformance assessment must be confirmed before making a compliance claim."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide EPUB validation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Technical validation can be included as a defined production activity. The tool, version, checks, reporting requirements and handling of any identified issues should be agreed in advance."
+            }
+          ]
+        },
+        {
+          "title": "Can you add Read Aloud functionality?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Read Aloud workflows are included in EPUBTRANS's documented portfolio where scoped. Availability, audio assets, synchronization requirements and compatible output formats need to be confirmed for the specific project."
+            }
+          ]
+        },
+        {
+          "title": "What information is needed for an EPUB conversion quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide a sample manuscript or source publication, approximate page or title volume, desired EPUB format, target distribution requirements, relevant style or accessibility specifications and preferred schedule."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request an EPUB Conversion Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Preparing a digital edition of a book, converting an existing publication or planning a specialist EPUB production project?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your source files, publication details, target EPUB format and expected deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review the requirements and discuss a suitable conversion workflow for your publishing project."
+        },
+        {
+          "kind": "link",
+          "text": "Request an EPUB Conversion Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 198
+}

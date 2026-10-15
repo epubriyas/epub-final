@@ -5,16 +5,20 @@ import { getContent, listContent } from '@/lib/content'
 import { ServiceDetail } from '@/components/services/ServiceDetail'
 import { relatedPublishedServices } from '@/config/service-design'
 import { getServerSideURL } from '@/utilities/getURL'
+import { getServiceHandoff } from '@/lib/service-handoff'
 type Props = { params: Promise<{ slug: string }> }
 export const dynamic = 'force-dynamic'
 export async function generateServiceMetadata({ params }: Props) {
   const { slug } = await params
   const doc = await getContent('services', slug)
   if (!doc) notFound()
+  const handoff = getServiceHandoff(slug)
   const metadata = pageMetadata({
     title:
-      doc?.seo?.metaTitle?.replace(/\s*\|\s*EPUBTRANS\s*$/i, '').trim() || doc?.title || 'Service',
-    description: doc?.seo?.metaDescription || doc?.shortDescription,
+      (handoff?.seo.title || doc?.seo?.metaTitle)?.replace(/\s*\|\s*EPUBTRANS\s*$/i, '').trim() ||
+      doc?.title ||
+      'Service',
+    description: handoff?.seo.description || doc?.seo?.metaDescription || doc?.shortDescription,
     alternates: { canonical: servicePath(slug) },
   })
   const image = doc.hero?.image
@@ -40,7 +44,7 @@ export async function ServiceRoute({ params }: Props) {
       {
         '@type': 'ListItem',
         position: 3,
-        name: document.title,
+        name: getServiceHandoff(document.slug)?.hero.title || document.title,
         item: `${base}${servicePath(document.slug)}`,
       },
     ],

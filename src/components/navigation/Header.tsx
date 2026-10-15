@@ -1,4 +1,4 @@
-import { navigation } from '@/config/navigation'
+import { headerNavigation as navigation } from '@/config/header-navigation'
 import { listContent } from '@/lib/content'
 import { HeaderClient } from './Header.client'
 import { servicePath, serviceSlugForPath } from '@/config/service-paths'
@@ -22,11 +22,17 @@ export async function Header() {
                 (serviceSlugForPath(item.href) || item.href.startsWith('/services/')) &&
                 !published.has(item.href)
               ? '/services#' +
-                (group.title === 'Accessibility'
-                  ? 'accessibility'
-                  : group.title === 'Media'
-                    ? 'media'
-                    : 'publishing')
+                (group.title === 'Digital Accessibility'
+                  ? 'digital-accessibility'
+                  : group.title === 'eLearning & Multimedia'
+                    ? 'elearning-multimedia'
+                    : group.title === 'Localization & Multilingual Production'
+                      ? 'localization-dtp'
+                      : group.title === 'eBook, XML & Structured Content'
+                        ? 'ebook-xml'
+                        : group.title === 'Document & Data Conversion'
+                          ? 'document-conversion'
+                          : 'publishing-editorial')
               : item.href,
       })),
     })),

@@ -9,13 +9,12 @@ import { servicePath } from '@/config/service-paths'
 import type { CSSProperties } from 'react'
 
 export function ServiceIntroduction({ service }: { service: Service }) {
-  const design = serviceDesign(service)
   if (!service.overview) return null
   return (
     <section className="et-container sp-section sp-intro">
       <div>
         <p className="sp-eyebrow">THE CONTEXT</p>
-        <h2>{design.introduction}</h2>
+        <h2>Service scope and requirements</h2>
       </div>
       <div className="sp-richtext">
         <RichText data={service.overview} enableGutter={false} />
@@ -37,8 +36,10 @@ export function ServiceCapabilities({ service }: { service: Service }) {
           {service.features.map((item, i) => (
             <li key={item.id || i} style={{ '--motion-index': i } as CSSProperties}>
               <span className="sp-small-number">{String(i + 1).padStart(2, '0')}</span>
-              <div>
+              <div className="sp-capability-title">
                 <h3>{item.title}</h3>
+              </div>
+              <div className="sp-capability-body">
                 <p>{item.description}</p>
               </div>
             </li>
@@ -127,7 +128,7 @@ export function ServiceUseCases({ service }: { service: Service }) {
   return (
     <section className="et-container sp-section">
       <p className="sp-eyebrow">APPLICATIONS</p>
-      <h2>Where this work fits.</h2>
+      <h2>Where this service is used</h2>
       <ul className="sp-use-cases">
         {service.useCases.map((item, i) => (
           <li key={item.id || i}>
@@ -179,11 +180,7 @@ export function ServiceFAQ({ service }: { service: Service }) {
     <section className="et-container sp-section sp-faq">
       <div>
         <p className="sp-eyebrow">GOOD TO KNOW</p>
-        <h2>
-          Questions,
-          <br />
-          answered.
-        </h2>
+        <h2>Frequently asked questions</h2>
       </div>
       <div>
         {service.faqs.map((item, i) => (

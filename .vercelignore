@@ -13,3 +13,7 @@ test-results
 playwright-report
 .translation-cache
 backups
+tmp
+temp
+.tmp-*
+*.tsbuildinfo

@@ -9,7 +9,7 @@ import { ThemeToggle } from './ThemeToggle'
 import { LanguageSelector } from '@/components/i18n/LanguageSelector'
 import { useSiteLocale } from '@/components/i18n/LocaleProvider'
 import { stripLanguage } from '@/config/languages'
-import solutionsStyles from './solutions-menu.module.css'
+import handoffStyles from './header-handoff.module.css'
 
 export function HeaderClient({ navigation }: { navigation: NavigationSection[] }) {
   const pathname = usePathname()
@@ -121,7 +121,7 @@ function HeaderState({
   return (
     <header
       ref={header}
-      className="et-header"
+      className={`et-header ${handoffStyles.header}`}
       data-scrolled={scrolled}
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setOpen(null)
@@ -132,48 +132,62 @@ function HeaderState({
         <nav className="et-desktop-nav" aria-label="Main navigation">
           {navigation.map((item, index) =>
             item.groups ? (
-              <button
+              <div
                 key={item.label}
-                className={`et-nav-link${item.label === 'Solutions' ? ` ${solutionsStyles.trigger}` : ''}`}
-                data-active={item.label === 'Solutions' && pathname.startsWith('/solutions')}
-                aria-expanded={open === index}
-                aria-controls={`mega-${index}`}
+                className={handoffStyles.disclosure}
                 onPointerEnter={(event) => {
                   if (!canHover(event.pointerType)) return
                   cancelHoverClose()
-                  trigger.current = event.currentTarget
+                  trigger.current = event.currentTarget.querySelector('button')
                   setOpen(index)
                 }}
                 onPointerLeave={(event) => {
                   if (canHover(event.pointerType)) scheduleHoverClose()
                 }}
-                ref={(node) => {
-                  if (open === index) trigger.current = node
-                }}
-                onClick={(event) => {
-                  trigger.current = event.currentTarget
-                  cancelHoverClose()
-                  setOpen(
-                    event.detail > 0 && window.matchMedia('(hover: hover)').matches
-                      ? index
-                      : open === index
-                        ? null
-                        : index,
-                  )
-                }}
-                onKeyDown={(event) => {
-                  if (event.key === 'ArrowDown') {
-                    event.preventDefault()
-                    setOpen(index)
-                    requestAnimationFrame(() =>
-                      document.querySelector<HTMLElement>(`#mega-${index} a`)?.focus(),
-                    )
-                  }
-                }}
               >
-                {item.label}
-                <ChevronDown size={12} className="et-chevron" aria-hidden="true" />
-              </button>
+                {item.label === 'What We Do' && (
+                  <Link
+                    className="et-nav-link"
+                    href={item.href!}
+                    onClick={() => setOpen(null)}
+                    aria-current={pathname === '/services' ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+                <button
+                  aria-label={item.label}
+                  className={`et-nav-link${item.label === 'What We Do' ? ` ${handoffStyles.toggle}` : ''}`}
+                  aria-expanded={open === index}
+                  aria-controls={`mega-${index}`}
+                  ref={(node) => {
+                    if (open === index) trigger.current = node
+                  }}
+                  onClick={(event) => {
+                    trigger.current = event.currentTarget
+                    cancelHoverClose()
+                    setOpen(
+                      event.detail > 0 && window.matchMedia('(hover: hover)').matches
+                        ? index
+                        : open === index
+                          ? null
+                          : index,
+                    )
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === 'ArrowDown') {
+                      event.preventDefault()
+                      setOpen(index)
+                      requestAnimationFrame(() =>
+                        document.querySelector<HTMLElement>(`#mega-${index} a`)?.focus(),
+                      )
+                    }
+                  }}
+                >
+                  {item.label !== 'What We Do' && item.label}
+                  <ChevronDown size={12} className="et-chevron" aria-hidden="true" />
+                </button>
+              </div>
             ) : (
               <Link
                 key={item.label}
@@ -258,12 +272,11 @@ function HeaderState({
       )}
       {navigation.map(
         (item, index) =>
-          (open === index || item.label === 'Solutions') &&
+          open === index &&
           item.groups && (
             <div
               key={item.label}
-              className={`et-mega${item.label === 'Company' ? ' et-mega-company' : item.label === 'What We Do' ? ' et-mega-services' : item.label === 'Resources' ? ' et-mega-resources' : item.label === 'Technology' ? ' et-mega-technology' : item.label === 'Solutions' ? ` ${solutionsStyles.panel}` : ''}`}
-              hidden={open !== index}
+              className={`et-mega${item.label === 'Company' ? ' et-mega-company' : item.label === 'What We Do' ? ' et-mega-services' : item.label === 'Resources' ? ' et-mega-resources' : item.label === 'Technology' ? ' et-mega-technology' : ''}`}
               aria-label={`${item.label} navigation`}
               id={`mega-${index}`}
               onPointerEnter={cancelHoverClose}
@@ -294,7 +307,7 @@ function HeaderState({
                   </button>
                 </div>
                 <div className="et-mega-groups">
-                  {item.groups.map((group, groupIndex) => (
+                  {item.groups.map((group) => (
                     <div
                       key={group.title}
                       className={
@@ -303,11 +316,6 @@ function HeaderState({
                           : undefined
                       }
                     >
-                      {item.label === 'Solutions' && (
-                        <span className={solutionsStyles.groupNumber} aria-hidden="true">
-                          0{groupIndex + 1}
-                        </span>
-                      )}
                       <h3>{group.title}</h3>
                       {group.description && (
                         <p className="et-mega-group-description">{group.description}</p>
@@ -324,17 +332,6 @@ function HeaderState({
                     </div>
                   ))}
                 </div>
-                {item.label === 'Solutions' && (
-                  <div className={solutionsStyles.footer}>
-                    <p>
-                      One project. Connected expertise.
-                      <span>Tell us about your content, languages and delivery goals.</span>
-                    </p>
-                    <Link href="/get-a-quote" onClick={() => setOpen(null)}>
-                      Find the Right Solution <ArrowRight size={18} aria-hidden="true" />
-                    </Link>
-                  </div>
-                )}
               </div>
             </div>
           ),
@@ -365,25 +362,27 @@ function HeaderState({
         </div>
         <nav aria-label="Mobile navigation">
           {navigation.map((item, index) => (
-            <div
-              className={`et-mobile-row${item.label === 'Solutions' ? ` ${solutionsStyles.mobile}` : ''}`}
-              key={item.label}
-            >
+            <div className="et-mobile-row" key={item.label}>
               {item.groups ? (
                 <>
-                  <button
-                    aria-expanded={mobileSection === index}
-                    aria-controls={`mobile-${index}`}
-                    onClick={() => setMobileSection(mobileSection === index ? null : index)}
-                  >
-                    {item.label}
-                    <span aria-hidden="true">{mobileSection === index ? '−' : '+'}</span>
-                  </button>
+                  <div className={handoffStyles.mobileDisclosure}>
+                    {item.label === 'What We Do' && (
+                      <Link href={item.href!} onClick={closeMobile}>
+                        {item.label}
+                      </Link>
+                    )}
+                    <button
+                      aria-label={item.label}
+                      aria-expanded={mobileSection === index}
+                      aria-controls={`mobile-${index}`}
+                      onClick={() => setMobileSection(mobileSection === index ? null : index)}
+                    >
+                      {item.label !== 'What We Do' && item.label}
+                      <span aria-hidden="true">{mobileSection === index ? '−' : '+'}</span>
+                    </button>
+                  </div>
                   {mobileSection === index && (
                     <div id={`mobile-${index}`}>
-                      {item.label === 'Solutions' && (
-                        <p className={solutionsStyles.mobileIntro}>{item.description}</p>
-                      )}
                       <Link href={item.href!} onClick={closeMobile}>
                         {item.overviewLabel ??
                           (item.label === 'What We Do'
@@ -408,15 +407,6 @@ function HeaderState({
                           </ul>
                         </details>
                       ))}
-                      {item.label === 'Solutions' && (
-                        <Link
-                          className={solutionsStyles.mobileCta}
-                          href="/get-a-quote"
-                          onClick={closeMobile}
-                        >
-                          Find the Right Solution <ArrowRight size={18} aria-hidden="true" />
-                        </Link>
-                      )}
                     </div>
                   )}
                 </>

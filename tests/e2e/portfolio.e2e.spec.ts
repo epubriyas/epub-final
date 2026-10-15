@@ -14,7 +14,7 @@ test('real samples, filtering, lazy previews, accessible PDF viewer and responsi
     if (request.url().includes('/preview')) previews.push(request.url())
   })
   expect((await page.goto('/work'))?.status()).toBe(200)
-  await expect(page.locator('main h1')).toHaveText('Work that bringscontent to life.')
+  await expect(page.locator('main h1')).toHaveText('Selected publishing and content samples.')
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', /\/work$/)
   const rows = page.locator('.wp-work-row')
   expect(await rows.count()).toBeGreaterThanOrEqual(19)
@@ -53,9 +53,7 @@ test('real samples, filtering, lazy previews, accessible PDF viewer and responsi
   await expect(dialog.locator('.wp-image-stage')).toHaveAttribute('data-zoomed', 'true')
   await dialog.getByRole('button', { name: 'Fit', exact: true }).click()
   await expect(dialog.locator('.wp-zoom')).toHaveText('100%')
-  await dialog.getByRole('button', { name: 'Read page text' }).click()
-  await expect(dialog.locator('.wp-transcript')).not.toBeEmpty()
-  await dialog.getByRole('button', { name: 'Page image', exact: true }).click()
+  await expect(dialog.getByRole('button', { name: 'Read page text' })).toHaveCount(0)
   await page.keyboard.press('Shift+Tab')
   expect(await page.evaluate(() => Boolean(document.activeElement?.closest('dialog')))).toBe(true)
   const axe = await new AxeBuilder({ page })
@@ -132,7 +130,9 @@ test('EPUB reading, quote preselection, preview errors and reduced motion', asyn
   const quote = await dialog.getByRole('link', { name: /Request a Quote/ }).getAttribute('href')
   await page.keyboard.press('Escape')
   await page.goto(quote!)
-  await expect(page.getByRole('radio', { name: 'Publishing & content', exact: true })).toBeChecked()
+  await expect(
+    page.getByRole('radio', { name: 'eBook, XML & Structured Content', exact: true }),
+  ).toBeChecked()
   await page.goto('/work')
   await page.route('**/api/work/*/preview', (route) =>
     route.fulfill({ status: 503, contentType: 'application/json', body: '{}' }),
@@ -162,7 +162,7 @@ test('dark theme, detail layouts and editorial compositions', async ({ page }) =
   expect(audit.violations).toEqual([])
   await page.setViewportSize({ width: 1440, height: 950 })
   await page.screenshot({ path: 'artifacts/portfolio/screens/work-dark-1440.png' })
-  await page.locator('.wp-featured').scrollIntoViewIfNeeded()
+  await page.locator('.wp-hero-composition').scrollIntoViewIfNeeded()
   await page.screenshot({ path: 'artifacts/portfolio/screens/featured-1440.png' })
   await page.locator('.wp-explorer-heading').scrollIntoViewIfNeeded()
   await expect(page.locator('.wp-row-preview img').first()).toBeVisible()

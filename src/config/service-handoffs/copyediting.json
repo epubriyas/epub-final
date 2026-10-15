@@ -1,0 +1,697 @@
+{
+  "sourceDocument": "EPUBTRANS_Copyedit_Proofread.docx",
+  "slug": "copyediting",
+  "seo": {
+    "title": "Copyediting Services for Book & Journal Publishers | EPUBTRANS",
+    "description": "Copyediting support for book and journal publishers, including grammar, clarity, consistency, house-style checks and agreed editorial queries."
+  },
+  "hero": {
+    "title": "Copyediting Services for Book & Journal Publishers",
+    "lead": "Manuscript copyediting for academic publishers, journal publishers, book publishers and publishing production teams.",
+    "paragraphs": [
+      "EPUBTRANS provides copyediting support for publishers preparing manuscripts for typesetting and other print or digital production stages.",
+      "Our copyediting services focus on language accuracy, clarity, consistency and the application of agreed editorial style requirements. Depending on the project, this can include grammar, punctuation, spelling, terminology, manuscript formatting and editorial queries.",
+      "We work from the publisher's approved manuscript, house style and project instructions to define the appropriate editorial review.",
+      "Whether you require copyediting for a journal article, an individual book or a larger publishing project, we can assess the materials and discuss a suitable scope."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Copyediting Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Proofreading Services",
+        "href": "/proofreading-services",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "What Does Copyediting Cover?",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Copyediting is an editorial review of manuscript-level content, generally performed before final page layout."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Its purpose is to help prepare text for the next production stage while preserving the intended meaning, author voice and publication requirements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The precise depth of editing should be agreed before work begins."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Grammar, Spelling and Punctuation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Copyediting can address grammatical errors, spelling inconsistencies, punctuation and other language-level issues."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The preferred language variety, such as British or American English, should be specified when relevant."
+            }
+          ]
+        },
+        {
+          "title": "Clarity and Readability",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editors can identify unclear sentences, awkward phrasing, repetition or wording that may be difficult for the intended readership to follow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any change that could alter technical or scholarly meaning should be queried rather than decided without appropriate author or publisher input."
+            }
+          ]
+        },
+        {
+          "title": "Style and Consistency",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A manuscript may require consistent capitalization, abbreviations, hyphenation, numerals, units, headings and other editorial conventions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project can be guided by the publisher's house style or another specified style guide."
+            }
+          ]
+        },
+        {
+          "title": "Terminology and Specialist Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Academic and technical manuscripts may contain field-specific terminology, equations, symbols and discipline-dependent conventions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The editing approach must take account of the source material and the extent of specialist knowledge required."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Substantive changes to technical meaning or scientific claims should be referred to the responsible author or editor."
+            }
+          ]
+        },
+        {
+          "title": "References, Tables and Figures",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where included in the brief, copyediting may address the presentation and consistency of citations, reference lists, table titles, figure captions and cross-references."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Reference formatting is not the same as independently verifying every bibliographic detail."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Artwork editing, figure recreation and full reference checking require separate scope confirmation."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "Copyediting for Different Publishing Projects",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Academic and Scholarly Journals",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Journal manuscripts may require review against the journal's editorial instructions, language conventions and reference requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The scope can include article front matter, abstracts, main text, headings, acknowledgements and other specified manuscript elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Peer review, research-integrity checks and decisions about manuscript acceptance remain the responsibility of the publisher or its designated editorial team."
+            }
+          ]
+        },
+        {
+          "title": "Books and Edited Volumes",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book production may involve chapters with different structures, contributors, writing styles, notes and bibliographic conventions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For edited volumes, the publisher may need consistency across multiple chapters while preserving the meaning and voice of individual contributors."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The degree of standardization should be defined in the editorial instructions."
+            }
+          ]
+        },
+        {
+          "title": "Educational and Professional Publications",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Educational and professional content may contain learning objectives, structured sections, examples, tables and specialist terms."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Copyediting can be assessed against the publication's intended audience and agreed content requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Subject-matter validation and instructional-design review are not automatically part of the copyediting assignment."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Working with Publisher House Styles",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "A clear editorial brief helps define consistent decisions across the manuscript."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Relevant instructions may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Preferred spelling and language variety",
+            "Capitalization, hyphenation and punctuation conventions",
+            "Treatment of numbers, dates and units",
+            "Abbreviations and terminology",
+            "Heading hierarchy and text labels",
+            "Citation and reference formatting",
+            "Table, figure and equation conventions",
+            "The publisher's process for author queries",
+            "Requirements for tracking changes or documenting corrections"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "A publisher may supply an established house style, a recognized editorial manual or specific instructions for a title or journal."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Support for a particular style and the depth of compliance checking should be confirmed during the project assessment."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Copyediting Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Manuscript and Editorial Brief",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review representative source content, publication type, manuscript condition and available editorial instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This helps identify the intended level of editing and any specialist requirements."
+            }
+          ]
+        },
+        {
+          "title": "2. Agree the Scope and Responsibilities",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The project brief identifies which editorial checks are included, who will resolve author queries and which elements require separate review."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The expected output format and correction process are also confirmed."
+            }
+          ]
+        },
+        {
+          "title": "3. Perform the Agreed Copyediting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The manuscript is reviewed against the specified language and editorial requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Questions affecting meaning, missing information or unclear source material may be recorded for publisher or author review."
+            }
+          ]
+        },
+        {
+          "title": "4. Review Queries and Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the workflow, editorial changes or queries are returned for assessment by the designated reviewer."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Publisher or author decisions may be necessary before certain changes can be finalized."
+            }
+          ]
+        },
+        {
+          "title": "5. Prepare the Editorial Handoff",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The edited files and any agreed supporting notes or queries are prepared for the next publishing stage."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Further revisions are handled according to the agreed correction scope."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "Source Files and Deliverables",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What We Need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A copyediting assessment may require:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "The manuscript or a representative sample",
+                "Publication type and subject area",
+                "Approximate word count",
+                "Preferred English variety",
+                "Publisher house style or editorial guide",
+                "Citation and reference requirements",
+                "Expected depth of copyediting",
+                "Instructions for handling queries",
+                "Required output format",
+                "Preferred schedule"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Microsoft Word is a typical editable manuscript format. Other source formats can be assessed based on the project and current technical capabilities."
+            }
+          ]
+        },
+        {
+          "title": "What You Receive",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the agreed scope, deliverables may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "An edited manuscript",
+                "Changes recorded in the agreed format",
+                "Author or publisher queries",
+                "Editorial consistency notes or a style sheet, where commissioned",
+                "A correction or issue list, where specified"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The delivery agreement should identify which items are included and how unresolved queries will be handled."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Copyediting and Proofreading: Different Stages",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Copyediting and proofreading are related but distinct editorial services."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Copyediting focuses on the manuscript's language, clarity and consistency before final presentation."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Proofreading is generally a later-stage review of edited material or typeset proofs to identify remaining errors and production-related inconsistencies."
+        },
+        {
+          "kind": "paragraph",
+          "text": "If the manuscript still needs significant language revision, copyediting is usually the more appropriate starting point."
+        },
+        {
+          "kind": "paragraph",
+          "text": "If the text is already edited and laid out, proofreading may be the appropriate next stage."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can assess these requirements separately or as connected services when commissioned."
+        },
+        {
+          "kind": "link",
+          "text": "Explore Proofreading Services",
+          "href": "/proofreading-services",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Quality Checks and Editorial Responsibilities",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The content, publication type and agreed editing level determine the appropriate review criteria."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A copyediting assignment may involve checks of language consistency, document structure, formatting conventions and other editorial elements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "However, copyediting should not be presented as a guarantee of complete factual accuracy or freedom from all errors."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The following activities are not automatically included:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Developmental or substantive editing",
+            "Rewriting or ghostwriting",
+            "Peer review",
+            "Research-integrity assessment",
+            "Independent verification of all scientific or factual claims",
+            "Complete bibliographic verification",
+            "Permissions clearance",
+            "Plagiarism screening",
+            "Typesetting and page layout",
+            "Final-stage proofreading",
+            "Journal submission or publication acceptance"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Any additional requirement should be identified in the project brief."
+        }
+      ],
+      "groups": [],
+      "kind": "quality"
+    },
+    {
+      "title": "What Affects Copyediting Scope and Scheduling?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Manuscript Condition",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The quality and consistency of the original text influence the amount of editorial work required."
+            }
+          ]
+        },
+        {
+          "title": "Subject and Terminology",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Specialist subjects may require additional terminology guidance, source clarification or reviewer input."
+            }
+          ]
+        },
+        {
+          "title": "Editorial Depth",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A light consistency review differs from a more detailed language and clarity edit."
+            }
+          ]
+        },
+        {
+          "title": "References and Supporting Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Extensive references, tables, equations, figures and notes can add editorial complexity."
+            }
+          ]
+        },
+        {
+          "title": "House Style and Queries",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The number of publication-specific instructions and unresolved author queries can affect the review process."
+            }
+          ]
+        },
+        {
+          "title": "Volume and Revision Stages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Word count, the number of manuscripts or chapters, deadlines and planned revision rounds all contribute to project scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These factors are reviewed before estimates and delivery arrangements are confirmed."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "These services have separate scopes and should not be assumed to be included in a copyediting quote."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Proofreading Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Final-stage checking of edited manuscripts and typeset proofs."
+            }
+          ],
+          "href": "/proofreading-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Page layout and composition after the appropriate editorial stage."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Broader production support for book, academic and journal publishers."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "XML & JATS Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Structured XML article production for eligible scholarly publishing workflows."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "Indexing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Specialist index-related production for suitable book projects."
+            }
+          ],
+          "href": null
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What is included in EPUBTRANS copyediting services?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Copyediting can include grammar, spelling, punctuation, clarity, consistency and agreed style checks. Additional work involving references, tables, figures or specialist content depends on the editorial brief."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide copyediting for academic journals?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Academic publishers and journal publishers are among EPUBTRANS's target clients. Specific journal styles, subject requirements and review responsibilities are assessed for each project."
+            }
+          ]
+        },
+        {
+          "title": "Do you copyedit books and edited volumes?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and edited-volume manuscripts can be assessed. Requirements may include chapter consistency, notes, references and publisher-specific style instructions."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between copyediting and proofreading?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Copyediting primarily addresses language and consistency at the manuscript stage. Proofreading generally checks edited text and final-stage proofs for remaining errors and presentation issues."
+            }
+          ]
+        },
+        {
+          "title": "Can you follow our publisher's house style?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "House-style requirements can be included in the agreed brief. Please provide the relevant instructions and identify any specialist conventions."
+            }
+          ]
+        },
+        {
+          "title": "Does copyediting include fact-checking or reference verification?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Editorial review may flag issues, but independent factual verification and comprehensive reference checking require separate agreement."
+            }
+          ]
+        },
+        {
+          "title": "Can you provide an edited Word file with tracked changes?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please specify the required edit-marking and delivery method. Word-based editorial workflows can be assessed, but the exact tracking and query format should be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide substantive editing or rewriting?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Substantive editing and rewriting differ from routine copyediting. Any such requirement should be reviewed and explicitly scoped rather than assumed to be included."
+            }
+          ]
+        },
+        {
+          "title": "Can copyediting and proofreading be ordered together?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Both services can be assessed as connected publishing stages. Their responsibilities, source files, review rounds and separate deliverables should be defined in advance."
+            }
+          ]
+        },
+        {
+          "title": "Does copyediting guarantee journal acceptance?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. Editorial work does not determine a journal's peer-review decision, editorial acceptance or publication outcome."
+            }
+          ]
+        },
+        {
+          "title": "What information is needed for a copyediting quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide a representative manuscript, approximate word count, subject area, language requirements, house style, expected depth of editing, deliverables and preferred schedule."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request a Copyediting Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need editorial support for book manuscripts, journal articles or other publishing content?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share the source materials, editorial requirements and expected deliverables with EPUBTRANS."
+        },
+        {
+          "kind": "paragraph",
+          "text": "We can review the manuscript condition, house style and required editing scope to discuss an appropriate production plan."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Copyediting Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 169
+}

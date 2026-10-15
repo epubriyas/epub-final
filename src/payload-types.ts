@@ -135,11 +135,13 @@ export interface Config {
     header: Header;
     footer: Footer;
     'site-settings': SiteSetting;
+    'landing-pages': LandingPage;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
+    'landing-pages': LandingPagesSelect<false> | LandingPagesSelect<true>;
   };
   locale: null;
   widgets: {
@@ -3322,11 +3324,11 @@ export interface SiteSetting {
   contactDetailsApproved?: boolean | null;
   aboutPage?: {
     /**
-     * Optional replacement for the current mission. Review the About EPUBTRANS draft and obtain management approval before enabling it.
+     * Optional approved replacement for the ET-ABOUT-001 v1.0 mission. Leave blank to use the approved handoff text.
      */
     mission?: string | null;
     /**
-     * Optional replacement for the current vision. Review the About EPUBTRANS draft and obtain management approval before enabling it.
+     * Optional approved replacement for the ET-ABOUT-001 v1.0 vision. Leave blank to use the approved handoff text.
      */
     vision?: string | null;
     /**
@@ -3339,6 +3341,45 @@ export interface SiteSetting {
    */
   legalReviewed?: boolean | null;
   defaultLocale?: 'en' | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Phase 1 content handoff. Edit content here; the existing frontend controls presentation. Confirm service scope and publication approval before launch.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "landing-pages".
+ */
+export interface LandingPage {
+  id: number;
+  /**
+   * Approval register for management. This does not deploy the website.
+   */
+  editorialStatus?: ('draft' | 'inReview' | 'approved' | 'published') | null;
+  /**
+   * Editable headlines, paragraphs, audience cards, service categories, workflow, previews, CTAs and SEO. Preserve the field structure; arrays may be reordered or extended.
+   */
+  homeContent:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Editable directory categories, cards, FAQs, guidance and SEO. Card status: active, pendingApproval or hidden. Pending approval cards use an enquiry link until scope is confirmed. sortOrder controls category and card order.
+   */
+  servicesContent:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -3408,6 +3449,18 @@ export interface SiteSettingsSelect<T extends boolean = true> {
       };
   legalReviewed?: T;
   defaultLocale?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "landing-pages_select".
+ */
+export interface LandingPagesSelect<T extends boolean = true> {
+  editorialStatus?: T;
+  homeContent?: T;
+  servicesContent?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

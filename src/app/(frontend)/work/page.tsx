@@ -32,9 +32,8 @@ export default async function Work({
         <div className="wp-hero-copy">
           <p className="wp-kicker">EPUBTRANS / Selected work</p>
           <h1>
-            Work that brings
-            <br />
-            content <em>to life.</em>
+            Selected publishing <br />
+            and content <em>samples.</em>
           </h1>
           <p className="wp-hero-intro">
             A closer look at the craft. Explore selected{' '}

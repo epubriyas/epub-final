@@ -148,7 +148,7 @@ test('every quote step works on a small phone and preserves long details', async
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()
   await expectContentToFit(page)
-  await page.getByLabel('Service Required *').selectOption('publishing_editorial')
+  await page.getByRole('radio', { name: 'Publishing & Editorial Services', exact: true }).check()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expect(page.locator('.et-quote-progress li')).toHaveCount(4)
   await expect(page.locator('#files')).toHaveCount(0)

@@ -53,4 +53,6 @@ Content editors use `/admin`. A published `home` Page replaces the curated homep
 
 See [build audit](docs/BUILD-AUDIT.md), [phase tracker](docs/PHASES.md), [validation and remaining work](docs/VALIDATION.md), and [manual VPS deployment](docs/DEPLOYMENT.md).
 
-Use package-lock.json and npm for this implementation. The pre-existing pnpm lockfile is retained for history and is not the deployment lockfile.
+Use package-lock.json and npm for this implementation.
+
+Generated screenshots and audit output (`artifacts/`), temporary document extracts (`tmp/`), test reports, local uploads, database backups and environment secrets are excluded from Git. Keep `.env.example` and `deployment/.env.production.example` as setup templates. Source code, CMS migrations, public website assets and tests belong in the repository.

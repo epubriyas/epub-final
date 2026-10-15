@@ -1,0 +1,829 @@
+{
+  "sourceDocument": "EPUBTRANS_SciELO_XML_Markup_Services_Approved_Copy_v1.1.md",
+  "slug": "scielo-xml-markup",
+  "sourceCopyBlockCount": 14,
+  "showTransformation": false,
+  "seo": {
+    "title": "SciELO-Certified XML Markup Services | EPUBTRANS",
+    "description": "EPUBTRANS is a SciELO-certified XML tagging provider supporting scholarly journals with article XML conversion, metadata, references and structured content."
+  },
+  "hero": {
+    "title": "SciELO XML Markup Services for Scholarly Journals",
+    "lead": "SciELO-Certified XML Article Tagging Services",
+    "paragraphs": [
+      "EPUBTRANS is a SciELO-certified XML article tagging service provider, officially listed by SciELO for services involving the SciELO Publishing Schema (SciELO PS).",
+      "We support academic publishers, scholarly journal publishers and journal production teams with structured XML conversion, article metadata, references, figures, tables and other publication elements.",
+      "Our production workflow is organized around the applicable SciELO specifications, source materials and agreed validation requirements."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a SciELO XML Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Publishing Services",
+        "href": "/services#ebook-xml",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "SciELO-Certified XML Article Tagging Services",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS is officially listed among the companies certified by SciELO for XML article text tagging according to the SciELO Publishing Schema."
+        },
+        {
+          "kind": "paragraph",
+          "text": "SciELO identifies the companies on its certified-provider list as having undergone technical evaluation for XML article markup according to SciELO PS."
+        },
+        {
+          "kind": "paragraph",
+          "text": "This certification is directly relevant to publishers and journal production teams seeking specialist support for SciELO XML production."
+        },
+        {
+          "kind": "link",
+          "text": "Verify Our Certification on the Official SciELO Website",
+          "href": "https://www.scielo.org/en/about-scielo/partnerships/companies-certified-for-xml-article-tagging-services/",
+          "primary": false
+        }
+      ],
+      "groups": []
+    },
+    {
+      "title": "SciELO XML Conversion for Scholarly Publishing",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Scholarly articles contain structured information that must remain meaningful beyond the way it appears on a printed or digital page."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Titles, authors, affiliations, abstracts, keywords, references, tables, figures and other article components may need to be identified using appropriate XML elements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "SciELO XML markup supports this structured representation of scholarly content."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Understanding the SciELO Publishing Schema",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The SciELO Publishing Schema is a set of XML specifications developed for SciELO publishing workflows. It builds on the Journal Article Tag Suite (JATS) and introduces SciELO-specific requirements for article structure, metadata and content markup."
+            },
+            {
+              "kind": "paragraph",
+              "text": "JATS and SciELO PS are related, but they are not interchangeable specifications. A general JATS XML file may need additional preparation or changes to meet an applicable SciELO requirement."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess eligible scholarly content for conversion and markup according to the specified SciELO workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The schema version, journal requirements, validation rules and expected deliverables must be confirmed before production."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Our SciELO XML Markup Capabilities",
+      "kind": "capabilities",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "SciELO XML production involves identifying and representing the structural and semantic components of scholarly articles."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the source material and agreed requirements, the service may include the following activities."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Article Structure & XML Tagging",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of article content using XML elements appropriate to the required SciELO Publishing Schema."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Typical components include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Article titles and other front matter",
+                "Abstracts and keywords",
+                "Sections and subsections",
+                "Paragraphs, lists and other body content",
+                "Acknowledgements and funding information",
+                "References and back matter",
+                "Supplementary content references"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The exact tagging structure depends on the article type and applicable specification."
+            }
+          ]
+        },
+        {
+          "title": "Journal & Article Metadata Markup",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of XML metadata from information supplied or approved by the publisher."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may include journal identifiers, article titles, contributor information, affiliations, publication dates, article identifiers, abstracts and language information."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We identify missing or inconsistent source metadata for clarification rather than inventing information that has not been supplied."
+            }
+          ]
+        },
+        {
+          "title": "Bibliographic References & Citation Markup",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Structuring reference lists and bibliographic information using the required XML elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "References may contain contributor names, titles, journal details, volume and issue information, publication years, page ranges and identifiers."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The accuracy and completeness of reference data depend on the supplied sources and any separately agreed editorial or bibliographic verification."
+            }
+          ]
+        },
+        {
+          "title": "Tables, Figures & Captions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "XML markup for tables, figures, captions, labels and associated content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Complex tables, nested elements, image relationships and supplementary assets may need individual assessment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project specification determines whether artwork preparation, file conversion or correction of source content is included."
+            }
+          ]
+        },
+        {
+          "title": "Mathematical Equations & Special Characters",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of mathematical and technical content within the specified XML structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where applicable, mathematical expressions may involve MathML or other approved representations."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Equations, symbols and specialist notation can require additional source review and markup decisions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Support for a particular mathematical representation or toolchain must be confirmed for the project."
+            }
+          ]
+        },
+        {
+          "title": "DOI & Identifier Markup",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Inclusion of supplied identifiers, such as Digital Object Identifiers (DOIs), in the appropriate article or reference metadata fields where required."
+            },
+            {
+              "kind": "paragraph",
+              "text": "XML markup of an existing DOI is different from DOI registration or depositing metadata with Crossref."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Registration, assignment, verification or external submission activities are separate unless expressly included in the agreement."
+            }
+          ]
+        },
+        {
+          "title": "XML Corrections & Updates",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Review and correction of XML markup based on agreed production feedback, revised source information or identified technical issues."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Revision rounds, error-resolution responsibilities and resubmission requirements are defined as part of the project scope."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "What Information Is Required for SciELO XML Production?",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Complete source materials and clear publishing specifications help establish an appropriate XML production workflow."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, useful inputs may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Finalized journal article manuscripts",
+            "Microsoft Word, XML, InDesign/IDML, PDF or other agreed source files",
+            "Journal and article metadata",
+            "Author names and affiliations",
+            "Abstracts and keywords",
+            "Reference lists and existing identifiers",
+            "Tables, figures and associated files",
+            "Mathematical content and supplementary materials",
+            "Journal-specific style or tagging instructions",
+            "Required SciELO Publishing Schema version",
+            "Reference XML samples, where available",
+            "Validation and delivery specifications"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "If essential information is missing, we can identify the issues during source review and request clarification."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Scanned documents, incomplete metadata, inconsistent references and complicated article structures may require additional preparation."
+        }
+      ],
+      "groups": []
+    },
+    {
+      "title": "SciELO XML Deliverables",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The final production package depends on the journal's requirements and the agreed scope."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Structured Article XML",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "XML files containing scholarly article content marked up according to the specified SciELO-related requirements."
+            }
+          ]
+        },
+        {
+          "title": "Metadata & Associated Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed metadata and supporting files, including relevant figures, tables, supplementary material and linked assets."
+            }
+          ]
+        },
+        {
+          "title": "XML Delivery Package",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An organized package of XML files and supporting resources following the agreed naming, file-structure and delivery instructions."
+            }
+          ]
+        },
+        {
+          "title": "Validation Reports or Issue Lists",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where validation is commissioned and performed, the deliverables may include technical results, identified issues and related correction information."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A validation report is supplied only when the corresponding checks have actually been completed and documented."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Additional outputs, including transformed XML variants or other publishing formats, must be explicitly included in the project scope."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Our SciELO XML Markup Workflow",
+      "kind": "workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Source File & Specification Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review the available article files, metadata, assets, journal instructions and target SciELO requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We identify missing information, source inconsistencies and technical dependencies that may affect production."
+            }
+          ]
+        },
+        {
+          "title": "2. XML Structure & Markup Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Article content is organized according to the applicable markup requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve preparing metadata, identifying article sections and defining the representation of tables, figures, references and other content elements."
+            }
+          ]
+        },
+        {
+          "title": "3. SciELO XML Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The article is marked up using the agreed SciELO Publishing Schema specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The XML structure reflects the approved source content and the required journal or collection instructions."
+            }
+          ]
+        },
+        {
+          "title": "4. Quality Review & Validation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Relevant structural, technical and content checks are performed according to the approved project scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where commissioned, this may include validation with the applicable schema and specified SciELO-related tools."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any issues identified during validation are reviewed and addressed according to the agreed responsibilities and correction process."
+            }
+          ]
+        },
+        {
+          "title": "5. Final Package Preparation & Delivery",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The XML files, related assets and agreed supporting documents are prepared for delivery."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Corrections, final acceptance requirements and additional submission activities are handled according to the project agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SciELO XML Validation & Quality Checks",
+      "kind": "quality",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "XML production quality depends on both the markup and its alignment with the required journal or collection specifications."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, quality checks may cover:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "XML structure and well-formedness",
+            "Required elements and attributes",
+            "Article and journal metadata",
+            "Section and heading hierarchy",
+            "Author and affiliation relationships",
+            "Reference structure and identifiers",
+            "Tables, figures and asset references",
+            "Mathematical expressions and special characters",
+            "Supplementary material references",
+            "File names and package organization",
+            "Validation results against the agreed specifications"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Schema Validation & SciELO-Specific Checks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Different publishing workflows may require different schema versions, validation tools or additional rules."
+            },
+            {
+              "kind": "paragraph",
+              "text": "SciELO provides tools and documentation for preparing and checking applicable XML packages, including XML Package Maker."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where the project calls for these checks, the exact tool, version, validation criteria and reporting requirements must be confirmed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A technically valid XML file is not automatically accepted by every journal, collection, repository or publishing platform."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Final acceptance may depend on requirements beyond the XML file itself, including editorial information, submission procedures and review by the receiving organization."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SciELO XML vs General JATS XML",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "SciELO XML and general JATS XML serve related structured-publishing purposes, but the production requirements are not necessarily identical."
+        }
+      ],
+      "groups": [
+        {
+          "title": "JATS XML",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "JATS provides standardized XML structures for scholarly journal articles and related publication information."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Different publishers and repositories may specify different JATS tag sets, versions or implementation rules."
+            }
+          ]
+        },
+        {
+          "title": "SciELO XML",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "SciELO XML follows the applicable SciELO Publishing Schema requirements and any additional rules established for the intended SciELO publishing workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This means a JATS-based article may require additional markup, metadata adjustments or validation before it meets the specified SciELO requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "When requesting XML conversion, publishers should identify the target specification and intended downstream use."
+            },
+            {
+              "kind": "link",
+              "text": "Discuss Your XML Requirements",
+              "href": "/get-a-quote",
+              "primary": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Who Uses SciELO XML Markup Services?",
+      "kind": "related",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Scholarly Journal Publishers",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publishers preparing articles for SciELO-related publishing processes or managing structured XML production for journals."
+            }
+          ]
+        },
+        {
+          "title": "Academic Publishing Organizations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Teams working with scholarly articles, scientific publications and structured publishing requirements."
+            }
+          ]
+        },
+        {
+          "title": "Journal Production Vendors",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publishing service providers looking for specialist XML markup support within their existing production workflows."
+            }
+          ]
+        },
+        {
+          "title": "Publishers Converting Existing Articles",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Organizations converting suitable archived or previously published articles into a required XML format, subject to the condition and completeness of the source materials."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Each project is evaluated against the actual output specification rather than an assumed universal publishing workflow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "What Affects SciELO XML Project Scope & Schedule?",
+      "kind": "scope",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Source File Structure",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable, clearly organized manuscripts may require a different level of preparation from PDFs, scanned documents or inconsistent legacy source files."
+            }
+          ]
+        },
+        {
+          "title": "Article Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The number of figures, tables, equations, references and supplementary files can affect markup requirements."
+            }
+          ]
+        },
+        {
+          "title": "Metadata Completeness",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Missing affiliations, identifiers, funding details, reference data or other required information can lead to queries and additional review."
+            }
+          ]
+        },
+        {
+          "title": "Schema & Validation Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The required SciELO schema version, journal-specific instructions and validation tools influence the production and checking process."
+            }
+          ]
+        },
+        {
+          "title": "Correction & Submission Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The number of review stages, error-correction rounds, package revisions and downstream delivery requirements can affect the overall scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We review these factors before discussing production estimates or schedules."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Related Scholarly Publishing Services",
+      "kind": "related",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "SciELO XML production may be connected with other publishing and content-transformation activities."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Journal Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Page composition and layout preparation for scholarly journal articles and academic publications."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "XML & JATS Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Structured XML preparation for broader scholarly publishing workflows, where the target specification is not limited to SciELO."
+            }
+          ],
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB production and conversion for eligible digital publishing requirements."
+            }
+          ],
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Editorial & Proofreading Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Content and proof review activities that may be required before or after XML production."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services can be commissioned separately or assessed together according to the project requirements."
+            }
+          ],
+          "href": "/copyediting-services"
+        }
+      ]
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "kind": "faq",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What is SciELO XML markup?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "SciELO XML markup is the process of structuring scholarly article content using the XML elements and rules required by the applicable SciELO Publishing Schema. It includes article content, metadata, references and other publishing information."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between SciELO XML and JATS XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "SciELO Publishing Schema is based on JATS but introduces SciELO-specific requirements. A general JATS XML file may not satisfy every SciELO validation or publishing requirement without additional work."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS convert Word articles into SciELO XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Microsoft Word is among the documented source formats for XML production. We review the article structure, metadata, figures, references and target requirements before confirming the production scope."
+            }
+          ]
+        },
+        {
+          "title": "Can you convert existing journal PDFs into SciELO XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF files can be assessed for XML conversion. Depending on the source, the work may require reconstructing article structure, extracting text and clarifying missing metadata or content relationships."
+            }
+          ]
+        },
+        {
+          "title": "Do you support references, tables and figures in SciELO XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "These elements are included in EPUBTRANS's documented XML service scope. The exact markup and any required corrections depend on the source materials and target specification."
+            }
+          ]
+        },
+        {
+          "title": "Can you include DOI information in XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing DOI information supplied or confirmed by the publisher can be marked up according to the required specification. DOI registration or Crossref deposit services are not automatically included."
+            }
+          ]
+        },
+        {
+          "title": "Does EPUBTRANS provide SciELO XML validation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Validation can be included according to the agreed project requirements. The applicable specification, tools, correction process and reporting expectations must be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Does successful XML validation guarantee acceptance by SciELO?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. XML validation checks technical requirements within its defined scope. Acceptance by a particular journal or SciELO collection can also depend on additional editorial, administrative and submission criteria."
+            }
+          ]
+        },
+        {
+          "title": "Can you correct existing SciELO XML files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing XML files can be reviewed for agreed corrections or updates. Please provide the files, validation feedback, expected output and applicable specifications for assessment."
+            }
+          ]
+        },
+        {
+          "title": "What do you need to prepare a SciELO XML quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please share representative article files, approximate article volume, source formats, target SciELO requirements, available metadata and assets, validation expectations and preferred schedule."
+            }
+          ]
+        },
+        {
+          "title": "Is EPUBTRANS a SciELO-certified XML service provider?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Yes. EPUBTRANS is listed on SciELO's official directory of companies certified for XML article text tagging services according to the SciELO Publishing Schema."
+            },
+            {
+              "kind": "paragraph",
+              "text": "You can verify EPUBTRANS's listing directly on the official SciELO website."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Certification does not eliminate the need for project-specific validation or guarantee automatic acceptance of every submitted XML package."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Request a SciELO XML Markup Quote",
+      "kind": "cta",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Preparing journal articles for a SciELO-related publishing workflow or converting scholarly content into structured XML?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your article files, technical specifications, approximate volume, metadata requirements and expected deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review the information and discuss an appropriate XML markup and production scope."
+        },
+        {
+          "kind": "link",
+          "text": "Request a SciELO XML Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": []
+    }
+  ]
+}

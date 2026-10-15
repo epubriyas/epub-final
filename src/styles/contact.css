@@ -598,7 +598,7 @@
   margin-block: 18px 8px;
 }
 .cp-card > p {
-  font-size: 0.9rem;
+  font-size: var(--body);
   line-height: 1.65;
   color: var(--text-secondary);
   margin-bottom: 14px;
@@ -659,7 +659,7 @@
 .cp-project > p:not(.et-label) {
   color: #c6e6dc;
   line-height: 1.65;
-  font-size: 0.95rem;
+  font-size: var(--body);
   margin-block: 18px;
 }
 .cp-project ul {
@@ -719,7 +719,7 @@
   border-top: 1px solid var(--border-default);
 }
 .cp-message-guide p {
-  font-size: 0.9rem;
+  font-size: var(--body);
   color: var(--text-secondary);
   line-height: 1.7;
 }

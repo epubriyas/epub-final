@@ -484,6 +484,43 @@ button:hover .et-arrow {
   line-height: 1.55;
   letter-spacing: -0.25px;
 }
+/* Shared prose flow for CMS paragraphs and supporting sections. */
+.et-copy {
+  max-width: var(--reading-width);
+  line-height: 1.7;
+}
+.et-copy > p {
+  margin: 0;
+}
+.et-copy > p + p,
+.et-copy > p + :is(ul, ol) {
+  margin-top: var(--space-4);
+}
+.et-copy > h2 + p {
+  margin-top: var(--space-6);
+}
+.et-copy > :is(div, article) + :is(div, article) {
+  margin-top: var(--space-8);
+}
+.et-copy > h3 {
+  font-size: var(--type-h4);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-block: var(--space-6) var(--space-3);
+}
+.et-copy > h3:first-child {
+  margin-top: 0;
+}
+.et-copy > :is(ul, ol) {
+  padding-inline-start: 1.25em;
+  list-style: disc;
+}
+.et-copy li + li {
+  margin-top: var(--space-2);
+}
+.et-copy > :is(ul, ol) + p {
+  margin-top: var(--space-4);
+}
 .et-hero {
   overflow: hidden;
 }
@@ -502,7 +539,7 @@ button:hover .et-arrow {
   padding-bottom: 44px;
 }
 .et-hero h1 {
-  font-size: var(--display-xl);
+  font-size: var(--type-h1);
   line-height: 1.01;
   letter-spacing: -0.075em;
   font-weight: 500;
@@ -513,112 +550,19 @@ button:hover .et-arrow {
   color: var(--brand-primary);
 }
 .et-hero-copy > p {
-  max-width: 350px;
-  margin-block: 32px 20px;
+  max-width: 60ch;
+  margin-block: 24px 16px;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-secondary);
+}
+.et-hero-copy > p + p {
+  margin-top: var(--space-4);
 }
 .et-hero-art {
   position: relative;
   height: 540px;
   isolation: isolate;
-}
-.et-art-rule {
-  position: absolute;
-  inset: 2% -30% -5% 30%;
-  background: var(--brand-secondary);
-  border-radius: 50% 0 0 50%;
-  z-index: -1;
-}
-.et-paper {
-  position: absolute;
-  width: 64%;
-  height: 75%;
-  padding: 28px;
-  inset-inline-start: 24%;
-  inset-block-start: 14%;
-  box-shadow: 0 24px 44px #102b2b20;
-  transform-origin: bottom center;
-}
-.et-paper-back {
-  background: var(--brand-primary);
-  color: var(--brand-secondary);
-  transform: rotate(20deg) translate(45px, -20px);
-}
-.et-paper-back > span,
-.et-paper-mid > span {
-  font: 9px var(--font-geist-mono);
-  letter-spacing: 0.1em;
-}
-.et-paper-back b {
-  font:
-    150px Georgia,
-    serif;
-  display: block;
-  padding-top: 80px;
-  text-align: center;
-}
-.et-paper-mid {
-  background: #d5e7a5;
-  transform: rotate(6deg) translate(20px, -10px);
-}
-.et-paper-mid b {
-  font:
-    130px Georgia,
-    serif;
-  display: block;
-  margin-top: 60px;
-}
-.et-paper-front {
-  background: #fffcf5;
-  transform: rotate(-12deg) translate(-40px, 5px);
-  display: flex;
-  flex-direction: column;
-}
-.et-paper-top {
-  font: 8px var(--font-geist-mono);
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid var(--border-strong);
-  padding-top: 8px;
-}
-.et-paper-title {
-  font:
-    clamp(35px, 4vw, 64px)/1.1 Georgia,
-    serif;
-  letter-spacing: -3px;
-  margin-top: 50px;
-}
-.et-paper-title em {
-  font-weight: normal;
-}
-.et-paper-divider {
-  height: 1px;
-  width: 100%;
-  background: var(--border-default);
-  margin-top: 25px;
-}
-.et-paper-front p {
-  font-size: 10px;
-  margin-top: 18px;
-  line-height: 1.5;
-}
-.et-paper-bottom {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font:
-    28px Georgia,
-    serif;
-}
-.et-art-caption {
-  position: absolute;
-  inset-block-end: 3%;
-  inset-inline-start: 28%;
-  font: 9px var(--font-geist-mono);
-  letter-spacing: 0.16em;
 }
 .et-hero-bottom {
   display: flex;
@@ -708,6 +652,13 @@ button:hover .et-arrow {
 .et-service-row:hover {
   background: var(--background-primary);
   padding-inline: 20px;
+}
+.et-service-row:not(a) {
+  transition: none;
+}
+.et-service-row:not(a):hover {
+  background: transparent;
+  padding-inline: 0;
 }
 .et-feature {
   padding-block: var(--section-space);
@@ -890,15 +841,15 @@ button:hover .et-arrow {
   padding-block: 28px;
 }
 .et-work-secondary h3 {
-  font-size: 36px;
+  font-size: var(--type-h3);
   line-height: 1.15;
   letter-spacing: -1px;
   margin-block: 20px;
 }
 .et-work-secondary p:not(.et-label) {
-  font-size: 14px;
+  font-size: var(--body);
   line-height: 1.8;
-  max-width: 320px;
+  max-width: var(--reading-width);
   color: var(--text-secondary);
 }
 .et-company-home {
@@ -921,37 +872,10 @@ button:hover .et-arrow {
 .et-footer {
   background: var(--background-inverse);
   color: var(--text-inverse);
-  padding-top: 64px;
+  padding-top: 0;
 }
 .et-footer :focus-visible {
   outline-color: var(--brand-secondary);
-}
-.et-footer-cta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid #ffffff20;
-}
-.et-footer h2 {
-  font-size: clamp(32px, 3.3vw, 52px);
-  letter-spacing: -0.05em;
-  line-height: 1.08;
-  margin-top: 16px;
-}
-.et-footer-cta-copy {
-  margin-top: 20px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #bdceca;
-}
-.et-footer-cta .et-label {
-  color: #b2d0c7;
-}
-.et-footer-cta > .et-button {
-  min-height: 52px;
-  padding-inline: 24px;
 }
 .et-button-light {
   background: var(--brand-secondary);
@@ -1111,9 +1035,6 @@ button:hover .et-arrow {
   .et-hero-art {
     height: 650px;
   }
-  .et-paper-title {
-    margin-top: 80px;
-  }
 }
 @media (max-width: 1000px) {
   .et-hero-layout {
@@ -1121,9 +1042,6 @@ button:hover .et-arrow {
   }
   .et-hero-art {
     height: 440px;
-  }
-  .et-paper {
-    padding: 20px;
   }
   .et-hero h1 {
     font-size: clamp(56px, 8vw, 85px);
@@ -1190,18 +1108,6 @@ button:hover .et-arrow {
     height: 390px;
     margin-top: 10px;
   }
-  .et-paper {
-    width: 58%;
-    height: 75%;
-    inset-inline-start: 29%;
-  }
-  .et-paper-title {
-    font-size: 43px;
-    margin-top: 35px;
-  }
-  .et-art-caption {
-    font-size: 8px;
-  }
   .et-hero-bottom {
     font-size: 11px;
   }
@@ -1243,7 +1149,7 @@ button:hover .et-arrow {
   .et-service-row p {
     grid-column: 2;
     grid-row: 2;
-    font-size: 13px;
+    font-size: var(--body);
   }
   .et-service-row svg {
     grid-column: 3;
@@ -1305,16 +1211,6 @@ button:hover .et-arrow {
   }
   .et-company-home .et-text-link {
     margin-top: 20px;
-  }
-  .et-footer {
-    padding-top: 64px;
-  }
-  .et-footer-cta {
-    display: block;
-    padding-bottom: 48px;
-  }
-  .et-footer-cta > a {
-    margin-top: 32px;
   }
   .et-footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -1546,6 +1442,10 @@ button:hover .et-arrow {
 }
 .et-resource-section-title {
   margin-bottom: 28px;
+}
+.et-resource-downloads,
+.et-resource-downloads > article + article {
+  margin-top: var(--space-8);
 }
 @media (max-width: 900px) {
   .et-resource-guides {

@@ -1,0 +1,1068 @@
+{
+  "sourceDocument": "EPUBTRANS_XML-JATS_Conversion.docx",
+  "slug": "xml-jats",
+  "sourceCopyBlockCount": 272,
+  "showTransformation": false,
+  "seo": {
+    "title": "JATS XML Conversion Services for Publishers | EPUBTRANS",
+    "description": "XML and JATS conversion for scholarly publishers, including article markup, metadata, references, structured content and project-specific quality checks."
+  },
+  "hero": {
+    "title": "XML & JATS Conversion Services for Scholarly Publishers",
+    "lead": "Structured XML production, JATS article markup and content conversion for academic publishers, journal publishers and publishing production teams.",
+    "paragraphs": [
+      "EPUBTRANS provides XML and JATS conversion services to support scholarly publishing and structured-content workflows.",
+      "Our documented XML services include article markup, metadata structuring, bibliographic references, tables, figures, equations and related publishing content.",
+      "Whether you need to convert approved manuscripts into JATS XML, prepare an existing article archive for structured reuse or update XML files against specified requirements, we can review the available source materials and define an appropriate production scope.",
+      "Each XML project is planned around the required schema, version, tagging rules, source content and delivery specifications."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request an XML Conversion Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Discuss a Sample Article",
+        "href": "/contact-us",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Structured XML for Journal Publishing",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Scholarly journal articles contain information that needs to be identified and organized beyond its visual appearance."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Titles, authors, affiliations, abstracts, keywords, headings, references, tables, figures and supplementary information each have a role in the article's structure."
+        },
+        {
+          "kind": "paragraph",
+          "text": "XML markup represents these relationships through defined elements and attributes."
+        },
+        {
+          "kind": "paragraph",
+          "text": "JATS, the Journal Article Tag Suite, is a widely used XML framework for representing and exchanging journal article content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Structured XML can support publisher production, content interchange, archiving and the preparation of articles for different publishing environments."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The appropriate XML format depends on the intended destination. A publisher may need JATS for its own production workflow, a particular repository specification or a specialized XML model based on JATS."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports these requirements through project-specific XML conversion and markup activities."
+        }
+      ],
+      "groups": []
+    },
+    {
+      "title": "Our XML & JATS Conversion Capabilities",
+      "kind": "capabilities",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Manuscript-to-JATS XML Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publishers may require accepted manuscripts to be converted into structured JATS XML for further production or delivery."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the source files and agreed specification, EPUBTRANS can assess conversion of article content into an appropriate XML structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Identifying article front matter and metadata",
+                "Structuring titles, abstracts and keywords",
+                "Tagging sections, headings and paragraphs",
+                "Representing lists and other body elements",
+                "Preparing references and citation relationships",
+                "Marking up tables, figures and captions",
+                "Organizing acknowledgements and funding information",
+                "Representing supplementary material references",
+                "Preparing other article elements required by the target specification"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The exact XML elements, attributes and ordering rules depend on the selected JATS tag set, version and any additional publisher requirements."
+            }
+          ]
+        },
+        {
+          "title": "XML-to-XML Transformation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some publishing projects begin with existing XML rather than Word or PDF manuscripts."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The task may involve reorganizing content, changing the markup structure or transforming an existing XML format into another agreed publishing model."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Such work can include mapping metadata fields, reviewing element relationships and adapting content to the target specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The feasibility of a transformation depends on the source XML, the target schema and whether the information needed by the destination format is present in the source."
+            },
+            {
+              "kind": "paragraph",
+              "text": "An XML transformation cannot reliably create missing article information without appropriate source material or publisher clarification."
+            }
+          ]
+        },
+        {
+          "title": "Journal Article Metadata",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Article metadata is an important component of structured publishing content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the specified requirements, XML production may involve supplied information such as:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Journal title and identifiers",
+                "Article title and article type",
+                "Author and contributor details",
+                "Institutional affiliations",
+                "Abstracts and keywords",
+                "Publication dates",
+                "Volume, issue and pagination information",
+                "Language information",
+                "Funding and acknowledgment details",
+                "Article identifiers, including supplied DOIs"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Missing, ambiguous or inconsistent metadata may require clarification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The inclusion of an existing DOI in XML is different from DOI registration or the submission of metadata to a registration agency."
+            }
+          ]
+        },
+        {
+          "title": "References and Bibliographic Markup",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Scholarly articles may contain references requiring structured representation in XML."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Relevant tasks can include identifying citation elements, tagging bibliographic components and preserving relationships between citations and reference-list entries where the specification requires them."
+            },
+            {
+              "kind": "paragraph",
+              "text": "References may contain author names, publication titles, journal details, publication dates, volume and issue information, page ranges and identifiers."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project scope should distinguish XML reference markup from separate bibliographic verification, reference correction or external reference-linking services."
+            }
+          ]
+        },
+        {
+          "title": "Tables, Figures and Captions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Tables and figures may need to be represented through a combination of XML structures and associated assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, relevant work may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Tagging tables and table captions",
+                "Identifying table rows and cells",
+                "Associating figures with labels and captions",
+                "Managing figure references",
+                "Linking relevant image assets",
+                "Representing supplementary figures or tables",
+                "Reviewing complex content against the selected XML model"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Some tables and diagrams require additional preparation, particularly when the source material is image-based or contains complex structures."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Image editing, reconstruction and the creation of missing source assets are separate production activities unless expressly included."
+            }
+          ]
+        },
+        {
+          "title": "Equations, Symbols and Technical Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Scholarly manuscripts may contain mathematical expressions, specialized symbols, chemical notation and other technical material."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These components may require additional preparation according to the target XML format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where applicable, mathematical expressions may need to be represented using an approved MathML structure or another permitted method."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required mathematical markup, source quality and supported production workflow must be confirmed for each project."
+            }
+          ]
+        },
+        {
+          "title": "Existing XML Review and Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publishers may have existing XML that requires review or correction following changes to source content or technical feedback."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess XML cleanup, element corrections, metadata updates and other agreed adjustments."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The scope should specify whether the task involves structural correction, content changes, schema migration, validation or preparation of a revised delivery package."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Reviewing and correcting an XML file does not automatically mean that every editorial, semantic or repository-specific issue has been resolved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "JATS Tag Sets and Publishing Requirements",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The Journal Article Tag Suite provides different XML models for different publishing purposes."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Choosing an appropriate model is an important part of the production specification."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Journal Publishing Tag Set",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Journal Publishing Tag Set is designed for controlled journal-article markup and is commonly relevant to publisher production workflows."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It provides a structured model for representing article content and metadata."
+            }
+          ]
+        },
+        {
+          "title": "Journal Archiving and Interchange Tag Set",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Archiving and Interchange Tag Set is more permissive and can represent a broader range of existing journal article structures."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It may be relevant when preserving or exchanging content from multiple source systems."
+            }
+          ]
+        },
+        {
+          "title": "Article Authoring Tag Set",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Article Authoring Tag Set provides a more constrained model intended for creating structured journal articles."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It may be appropriate for particular authoring workflows rather than general conversion of existing published content."
+            }
+          ]
+        },
+        {
+          "title": "Selecting the Right Model",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The choice of JATS tag set should reflect the publisher's workflow, intended destination and required interchange specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For example, a receiving repository may have additional rules concerning metadata, figures, tables, references or package preparation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The applicable version and tag set must therefore be confirmed before XML production begins."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS does not assume that one JATS configuration is suitable for every publisher, archive or journal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "JATS XML, SciELO XML and Repository Requirements",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Structured scholarly publishing uses related XML specifications that can have important technical differences."
+        }
+      ],
+      "groups": [
+        {
+          "title": "General JATS XML",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "JATS provides a framework for organizing scholarly journal article content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Publishers may use it within their production systems or for exchanging material with other publishing platforms and archives."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The specific implementation depends on the required JATS tag set, version and local rules."
+            }
+          ]
+        },
+        {
+          "title": "SciELO XML Markup",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "SciELO Publishing Schema is based on JATS and introduces additional requirements for SciELO-related publishing workflows."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS is listed by SciELO among companies certified for XML article text tagging services according to the SciELO Publishing Schema."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This certification is specific to SciELO XML article tagging; it is not a blanket certification of all JATS versions, XML formats or repository submissions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For work governed by SciELO requirements, please refer to our dedicated SciELO XML Markup Services page."
+            },
+            {
+              "kind": "link",
+              "text": "Explore SciELO XML Markup Services",
+              "href": "/scielo-xml-markup-services",
+              "primary": false
+            },
+            {
+              "kind": "link",
+              "text": "Verify Our SciELO Certification",
+              "href": "https://www.scielo.org/en/about-scielo/partnerships/companies-certified-for-xml-article-tagging-services/",
+              "primary": false
+            }
+          ]
+        },
+        {
+          "title": "PubMed Central and Other Repositories",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some journals require XML and related assets prepared for a particular archive or publishing platform."
+            },
+            {
+              "kind": "paragraph",
+              "text": "PubMed Central, for example, publishes its own technical requirements for full-text XML and supporting files."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A project intended for PMC may therefore need checks in addition to basic JATS schema validation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess XML production against supplied destination requirements, but PMC-specific workflows, submission services, compatibility testing and acceptance responsibilities must be defined separately."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Preparing XML does not guarantee that a journal is eligible for inclusion in a repository or that a submitted package will be accepted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Source Files and Information Required",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The quality and completeness of the source content affect the XML conversion process."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, useful materials may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Approved journal article manuscripts",
+            "Microsoft Word files",
+            "Existing XML files",
+            "PDFs or reference article layouts",
+            "Eligible InDesign or IDML source files",
+            "Publisher or journal tagging instructions",
+            "The target JATS tag set and version",
+            "Applicable DTD, XSD or other schema references",
+            "Sample XML files",
+            "Approved article metadata",
+            "Reference lists and bibliographic information",
+            "Figures, tables and image assets",
+            "Equations and supplementary materials",
+            "Repository or delivery requirements",
+            "Required validation methods and acceptance criteria",
+            "Approximate article volume and preferred schedule"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Source File Assessment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An editable manuscript with consistent structure may require a different approach from a PDF-only source or a collection of historical articles."
+            },
+            {
+              "kind": "paragraph",
+              "text": "If the source documents contain missing metadata, inconsistent references, incomplete illustrations or unclear article structure, additional queries or content preparation may be required."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Support for a particular file type or application version should be confirmed before production."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "XML Conversion Deliverables",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The final deliverables depend on the selected XML model and agreed project requirements."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Structured XML Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Article XML prepared according to the specified tagging rules, schema and content requirements."
+            }
+          ]
+        },
+        {
+          "title": "Related Publication Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Figures, image files, supplementary content or other supporting files organized according to the delivery specification."
+            }
+          ]
+        },
+        {
+          "title": "XML Production Package",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A structured delivery package containing the agreed XML files, associated assets and appropriate file naming or organization."
+            }
+          ]
+        },
+        {
+          "title": "Validation Results and Issue Lists",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where validation is included and actually performed, the project may provide relevant technical results, issue logs or correction information."
+            }
+          ]
+        },
+        {
+          "title": "Revised or Transformed XML",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Updated XML files incorporating agreed changes or conversions from an existing structured format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The deliverable agreement should identify the target format, version, validation scope, package requirements and any excluded work."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Additional services such as HTML generation, PDF typesetting, DOI registration or direct repository submission are not automatically included."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Our XML Production Workflow",
+      "kind": "workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Source Content and Specifications",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review representative articles, existing files, available metadata, target XML requirements and the intended publishing workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Missing information, unusual content structures and technical dependencies are identified."
+            }
+          ]
+        },
+        {
+          "title": "2. Confirm the XML Model and Production Scope",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The required XML specification, tag set, version, validation rules, asset requirements and deliverables are clarified."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project brief also identifies responsibility for metadata decisions, reference correction, source-content queries and downstream submissions."
+            }
+          ]
+        },
+        {
+          "title": "3. Convert and Structure the Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed XML conversion or markup activities are performed according to the specified model."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Article metadata, body content, references, figures, tables and related elements are prepared as applicable."
+            }
+          ]
+        },
+        {
+          "title": "4. Conduct Quality Review and Agreed Validation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The XML and associated content are reviewed according to the defined quality requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where commissioned and technically supported, the appropriate validation tools are used against the agreed specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Errors or issues identified through the defined process are handled according to the correction scope."
+            }
+          ]
+        },
+        {
+          "title": "5. Prepare the Delivery Package",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The completed XML files, relevant assets and agreed supporting information are organized for delivery."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Additional revisions or destination-specific submissions are handled only when included in the project agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "XML Validation and Quality Review",
+      "kind": "quality",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "XML quality depends on more than whether a file opens successfully or is accepted by a basic parser."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A structured publishing file should reflect the required schema and accurately represent the approved source content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, review activities may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "XML well-formedness",
+            "Required elements and attributes",
+            "Schema or DTD validation",
+            "Article structure and heading hierarchy",
+            "Author and affiliation relationships",
+            "Required article metadata",
+            "Reference markup and identifiers",
+            "Tables and figure associations",
+            "Equations and special characters",
+            "Supplementary-content references",
+            "Comparison with the supplied source",
+            "File naming and package structure",
+            "Additional destination-specific validation rules"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Technical Validation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where included in the agreed scope, XML may be checked using applicable schema definitions or specified validation methods."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The chosen validator, schema version and rules must be identified."
+            }
+          ]
+        },
+        {
+          "title": "Content and Structural Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A schema-valid XML file can still contain incorrect metadata, misplaced content or missing article information."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Content-oriented checks therefore require a separate review approach, depending on the source materials and acceptance criteria."
+            }
+          ]
+        },
+        {
+          "title": "Repository-Specific Checks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An archive or publishing platform may require additional tests beyond the general XML specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Those checks should be performed only when the necessary rules, tools and access are available and the activity is part of the commissioned work."
+            }
+          ]
+        },
+        {
+          "title": "Validation Is Not Automatic Acceptance",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Passing a technical validation check does not guarantee acceptance by PubMed Central, SciELO or another receiving organization."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Acceptance can depend on eligibility, editorial processes, metadata completeness, package requirements and other conditions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS will define validation and correction responsibilities according to the agreed project scope."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "XML Conversion for Existing Journal Archives",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Publishers may need to convert older articles into a structured format for reuse, archiving or migration to a new publishing environment."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Legacy content can present additional challenges."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Earlier articles may be available only as PDFs or image files, while author metadata, references, figures and supplementary materials may be incomplete."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The work required can include identifying article sections, reconstructing content relationships, preparing metadata and converting the resulting content into the selected XML model."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Retrospective Article Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We can assess existing journal articles and collections for XML conversion based on available source materials and desired outputs."
+            }
+          ]
+        },
+        {
+          "title": "XML Version or Schema Changes",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing structured content can be reviewed where a publisher needs to adapt it to a different version or agreed XML implementation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The feasibility of a change depends on the structure and information available in the existing files."
+            }
+          ]
+        },
+        {
+          "title": "Publisher-Controlled Migration",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "If the XML is intended for a new publishing platform or archive, the receiving system's requirements should be supplied before conversion."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Platform migration, repository acceptance and application integration are separate activities unless expressly commissioned."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "What Affects XML Conversion Scope and Scheduling?",
+      "kind": "scope",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Source Content Quality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Consistent, editable manuscripts may require less reconstruction than scanned or poorly structured legacy articles."
+            }
+          ]
+        },
+        {
+          "title": "Article Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Equations, tables, figures, references, supplementary files and uncommon article structures can increase markup requirements."
+            }
+          ]
+        },
+        {
+          "title": "Metadata Completeness",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Missing identifiers, affiliations, article dates or other required information may require publisher clarification."
+            }
+          ]
+        },
+        {
+          "title": "Schema and Tagging Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Different JATS models, versions and journal-specific rules may require different tagging or validation methods."
+            }
+          ]
+        },
+        {
+          "title": "Transformation Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Converting from one XML model to another can involve content mapping, element changes and handling information not directly supported by the target."
+            }
+          ]
+        },
+        {
+          "title": "Validation and Revision Scope",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The required validation tools, issue-resolution process, correction rounds and downstream handoff requirements influence production planning."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We review these factors before discussing estimates and delivery arrangements."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "kind": "related",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "XML conversion can form part of a broader scholarly publishing workflow."
+        }
+      ],
+      "groups": [
+        {
+          "title": "SciELO XML Markup Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Specialist XML article text tagging according to SciELO Publishing Schema, supported by EPUBTRANS's official listing as a SciELO-certified provider."
+            }
+          ],
+          "href": "/scielo-xml-markup-services"
+        },
+        {
+          "title": "Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A broader overview of book, academic and journal production support, including editorial activities, typesetting and digital content preparation."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and journal composition, page proofs and agreed production layouts."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF-to-Word conversion, OCR and editable document reconstruction when source content requires preparation before XML markup."
+            }
+          ],
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB conversion and eBook production for suitable publishing content."
+            }
+          ],
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related remediation and production for supported digital publishing and document formats."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services may be commissioned separately or considered together where the source materials and required outputs call for connected production stages."
+            }
+          ],
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "kind": "faq",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What are JATS XML conversion services?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "JATS XML conversion services involve structuring scholarly journal article content using the elements and rules of an agreed JATS model. The conversion can include article metadata, headings, references, figures, tables and other publication components."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS convert Word manuscripts into JATS XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Microsoft Word is among the source formats in EPUBTRANS's documented XML service scope. The required JATS version, article structure, metadata and validation requirements must be confirmed for each project."
+            }
+          ]
+        },
+        {
+          "title": "Can you convert PDF journal articles into JATS XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF articles can be assessed for conversion. The process may require additional text extraction, structural reconstruction, metadata review or correction when the original editable sources are unavailable."
+            }
+          ]
+        },
+        {
+          "title": "Which JATS versions does EPUBTRANS support?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The supported versions and tag sets must be confirmed by the XML production team. The latest published NISO JATS standard is version 1.4, but that does not mean every project uses or supports that version."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between JATS XML and SciELO XML?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "SciELO Publishing Schema is based on JATS and includes additional requirements for SciELO publishing workflows. A general JATS XML file is not automatically suitable for a SciELO-specific project."
+            }
+          ]
+        },
+        {
+          "title": "Is EPUBTRANS certified for JATS XML conversion?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS is officially listed as a certified provider for SciELO XML article text tagging according to SciELO Publishing Schema. This should not be interpreted as a separate certification covering every form of JATS or XML conversion."
+            }
+          ]
+        },
+        {
+          "title": "Can you prepare XML for PubMed Central?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Projects involving PMC requirements can be assessed against the applicable specifications. PMC-specific validation, file preparation and submission activities must be explicitly agreed. XML production does not guarantee journal eligibility or PMC acceptance."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide XML schema validation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Validation can be included when the required specification, tools and review method are confirmed. A validation claim applies only to the checks actually performed and documented."
+            }
+          ]
+        },
+        {
+          "title": "Can you convert existing XML into a different JATS format?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing XML transformations can be assessed individually. The work depends on the source schema, the target model and whether the necessary metadata and content relationships are available."
+            }
+          ]
+        },
+        {
+          "title": "Do you handle bibliographic references, tables, figures and equations?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "These elements are within EPUBTRANS's documented XML service scope, subject to the source files and agreed technical specifications. Complex structures may require additional preparation or specialist handling."
+            }
+          ]
+        },
+        {
+          "title": "Do you register DOIs or submit XML directly to repositories?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "DOI registration, metadata deposit and repository submission are not automatically included in XML conversion. Such requirements must be separately reviewed and agreed."
+            }
+          ]
+        },
+        {
+          "title": "What files are needed for an XML conversion quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide representative articles, available source files, the required XML schema and version, sample XML if available, publication metadata, figures and references, approximate article volume, validation expectations and preferred schedule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Request an XML Conversion Quote",
+      "kind": "cta",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need JATS XML conversion, structured article markup or XML transformation for a scholarly publishing project?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your source format, article volume, target schema, sample files and expected deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review your requirements and discuss the appropriate XML production, validation and delivery scope."
+        },
+        {
+          "kind": "link",
+          "text": "Request an XML Conversion Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": []
+    }
+  ]
+}

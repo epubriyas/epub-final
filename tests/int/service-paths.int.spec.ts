@@ -7,9 +7,9 @@ import {
 } from '@/config/service-paths'
 
 describe('V1 service URL contract', () => {
-  it('maps all 15 records to distinct root URLs with reversible redirects', () => {
-    expect(Object.keys(servicePaths)).toHaveLength(15)
-    expect(new Set(Object.values(servicePaths)).size).toBe(15)
+  it('maps all 16 records to distinct root URLs with reversible redirects', () => {
+    expect(Object.keys(servicePaths)).toHaveLength(16)
+    expect(new Set(Object.values(servicePaths)).size).toBe(16)
     for (const [slug, path] of Object.entries(servicePaths)) {
       expect(servicePath(slug)).toBe(path)
       expect(path).toMatch(/^\/[a-z-]+-services$/)

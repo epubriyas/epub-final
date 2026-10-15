@@ -7,6 +7,12 @@ test('homepage process animates once and fits desktop and mobile layouts', async
   await process.scrollIntoViewIfNeeded()
   await expect(process).toHaveAttribute('data-home-state', 'run')
   await expect(process.locator('.hp-process-card')).toHaveCount(4)
+  const particle = await process.locator('.hp-route-particle').evaluate((el) => ({
+    path: getComputedStyle(el).offsetPath,
+    animation: getComputedStyle(el).animationName,
+  }))
+  expect(particle.path).not.toBe('none')
+  expect(particle.animation).toBe('hp-travel')
   await expect
     .poll(() =>
       process.locator('.hp-route-progress').evaluate((el) => getComputedStyle(el).strokeDashoffset),
@@ -22,6 +28,21 @@ test('homepage process animates once and fits desktop and mobile layouts', async
       await expect(card).toBeVisible()
   }
   await page.setViewportSize({ width: 1440, height: 1000 })
+  await process.scrollIntoViewIfNeeded()
+  const firstCard = process.locator('.hp-process-card').first()
+  await firstCard.hover({ position: { x: 40, y: 40 } })
+  await expect(firstCard).toHaveAttribute('data-lit', 'true')
+  expect(await firstCard.evaluate((el) => el.style.transform)).toContain('perspective')
+  await page.mouse.move(0, 0)
+  await expect(firstCard).not.toHaveAttribute('data-lit', 'true')
+  await expect(process.locator('.hp-checkpoint')).toHaveCount(4)
+  const alignment = await process.locator('.hp-process-board').evaluate((board) => {
+    const cards = Array.from(board.querySelectorAll<HTMLElement>('.hp-process-card'))
+    return Array.from(board.querySelectorAll<HTMLElement>('.hp-checkpoint')).every(
+      (node, index) => Math.abs(parseFloat(node.style.top) - (cards[index].offsetTop - 30)) < 1,
+    )
+  })
+  expect(alignment).toBe(true)
   await process.screenshot({
     path: 'artifacts/services/home-process-desktop.png',
     animations: 'disabled',

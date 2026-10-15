@@ -1,0 +1,986 @@
+{
+  "sourceDocument": "EPUBTRANS_Subtitling_Services_Approved_Copy_v1.0.md",
+  "slug": "subtitling",
+  "sourceCopyBlockCount": 15,
+  "seo": {
+    "title": "Subtitling Services for eLearning & Video | EPUBTRANS",
+    "description": "Subtitling production for LSPs, eLearning teams and publishers. EPUBTRANS supports timed text, subtitle synchronization and project-specific media deliverables."
+  },
+  "hero": {
+    "title": "Subtitling Services for eLearning & Video Localization",
+    "lead": "Subtitle preparation, timed-text production and media-localization support for localization service providers, training-content teams and digital publishers.",
+    "paragraphs": [
+      "EPUBTRANS provides subtitling services for organizations preparing video and multimedia content for different languages and audiences.",
+      "Our documented localization production scope includes subtitle preparation, timed-text deliverables and related media workflows, subject to the source content, target languages and agreed production requirements.",
+      "Whether you need subtitles for a training video, localized eLearning module, educational recording or other business content, we can review your media files, approved scripts, language assets and target specifications.",
+      "The scope may include subtitle timing, segmentation, formatting, synchronization and correction work. Translation, linguistic review and accessibility-specific captioning requirements are defined separately when applicable."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Subtitling Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Discuss Your Media Project",
+        "href": "/contact-us",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Subtitling Production for Multilingual Content",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Subtitles allow viewers to follow speech and other specified information through synchronized text displayed during video playback."
+        },
+        {
+          "kind": "paragraph",
+          "text": "For localization service providers (LSPs), subtitle production may be one stage in a wider workflow involving transcription, translation, linguistic review, media engineering and final delivery."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The source video, approved language content and technical delivery rules determine how the subtitle file should be prepared."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Different projects may require different timing conventions, reading-speed limits, line lengths, positioning instructions and output formats."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports subtitling production as an individual assignment or as a separately scoped part of a localization or eLearning project."
+        },
+        {
+          "kind": "paragraph",
+          "text": "We work from the project requirements rather than assuming one subtitle template is appropriate for every language, video or distribution platform."
+        }
+      ],
+      "groups": []
+    },
+    {
+      "title": "Our Subtitling Services",
+      "kind": "capabilities",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Subtitle Timing and Synchronization",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Subtitle text needs to appear in a way that corresponds with the relevant audio and visual content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, timing work may involve identifying the beginning and end of spoken segments, preparing timecodes and reviewing the relationship between subtitle cues and the media."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required timing precision and acceptable conventions should be supplied or agreed before work begins."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Different receiving systems may have their own timing restrictions."
+            }
+          ]
+        },
+        {
+          "title": "Subtitle Segmentation and Line Breaks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Subtitle production involves dividing speech into readable units."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Appropriate segmentation can depend on sentence structure, the available screen time, reading requirements and the target language."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Work may include reviewing line breaks, balancing subtitle length and avoiding unnecessary fragmentation of meaning."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Subtitle presentation should reflect the agreed specification rather than a universal character or reading-speed rule."
+            }
+          ]
+        },
+        {
+          "title": "Subtitle Formatting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A subtitle file may need particular text conventions, punctuation, line lengths or styling instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the required output, the work can involve preparing the subtitle text and timecodes in the agreed file structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The appearance of the final subtitles may also depend on the media player, authoring tool or video distribution environment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Not every subtitle file format supports the same styling or positioning features."
+            }
+          ]
+        },
+        {
+          "title": "Subtitle Editing and Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some clients already have subtitle files that require revision."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The requested work may involve updating approved text, correcting timing, adjusting segmentation or adapting the file to another specified output."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where translated subtitles are supplied, the task may be limited to production-level corrections rather than full linguistic review."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The distinction should be clear in the project brief."
+            }
+          ]
+        },
+        {
+          "title": "Multilingual Subtitle Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A video may require subtitle tracks in several languages."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess multilingual subtitle production using the agreed target-language content, source media and delivery rules."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The scope should identify whether EPUBTRANS is working from client-approved translations or whether translation and linguistic review must also be separately commissioned."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Language availability, specialist subject requirements and reviewer responsibilities must be confirmed for each project."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Working with Translation Agencies and LSPs",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Localization service providers often manage the client relationship, translation decisions and linguistic approvals while assigning selected production stages to a specialist partner."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can support these workflows by preparing agreed subtitle assets from supplied media, scripts and translations."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the assignment, relevant activities may include aligning translated text to the source video, preparing language-specific subtitle files and applying supplied formatting or timing conventions."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The LSP can remain responsible for translation management, terminology, in-country review and client approvals unless the agreement defines another arrangement."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS should not be positioned as automatically replacing the LSP's linguistic team or end-client relationship."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Working with Approved Translations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where translated scripts are already approved, subtitling production can focus on their representation as timed text."
+            },
+            {
+              "kind": "paragraph",
+              "text": "If the translated wording is too long for the available screen time, a linguistic decision may be needed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Production staff should flag such issues rather than independently changing approved meaning without authorization."
+            }
+          ]
+        },
+        {
+          "title": "Language and Script Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some languages require particular care with font support, script rendering, text direction and line-breaking conventions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These requirements should be reviewed against the source media, subtitle format and intended delivery environment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Current support for specific languages, scripts and platforms requires confirmation before committing to the project."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Subtitles, Captions and Accessibility Requirements",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Subtitles and captions can use similar technical methods, but their intended purpose may differ."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Translated Subtitles",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translated subtitles commonly convey spoken dialogue or narration in another language."
+            },
+            {
+              "kind": "paragraph",
+              "text": "They are typically designed for viewers who can hear the audio but need the speech represented in a language they understand."
+            }
+          ]
+        },
+        {
+          "title": "Same-Language Captions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Captions may provide a synchronized text alternative to speech and meaningful nonspeech audio information."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the content, this can include speaker identification, important sounds and other audio cues needed for comprehension."
+            }
+          ]
+        },
+        {
+          "title": "Subtitles for Deaf and Hard-of-Hearing Audiences",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects specify subtitles for deaf and hard-of-hearing viewers, commonly referred to as SDH."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These may require additional conventions beyond translation-only subtitles, including suitable treatment of speakers and meaningful sounds."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility Is a Defined Deliverable",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A translated subtitle file is not automatically equivalent to an accessibility-compliant caption track."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The applicable accessibility requirements, editorial conventions, target platform and acceptance criteria must be identified."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess supported caption-related production requirements, but compliance with WCAG or another accessibility standard must not be claimed unless the relevant checks are actually performed and the complete media experience is evaluated."
+            },
+            {
+              "kind": "linked-paragraph",
+              "before": "For broader document and digital-publishing accessibility requirements, see ",
+              "text": "our Accessibility Services",
+              "href": "/accessibility-services",
+              "after": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Subtitle Formats and Delivery Requirements",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Subtitle and caption files may be delivered separately from the video or integrated into another production workflow."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The correct approach depends on the receiving platform."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Timecoded Subtitle Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Common timed-text formats include SubRip Subtitle (SRT) and Web Video Text Tracks (WebVTT)."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Other workflows may involve specialized subtitle or caption formats with additional technical requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These are examples of formats used in the industry, not a claim that EPUBTRANS currently supports every format or platform implementation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Please identify the required extension, specification and destination when requesting a quote."
+            }
+          ]
+        },
+        {
+          "title": "Separate Subtitle Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A project may require standalone subtitle tracks to be imported into a video platform, eLearning authoring tool or multimedia player."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The delivery agreement should define the languages, file naming, text encoding, timecode conventions and any relevant compatibility requirements."
+            }
+          ]
+        },
+        {
+          "title": "Embedded or Burned-In Subtitles",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects require subtitles to be permanently displayed within the video image."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This involves video-processing considerations beyond delivering a standalone subtitle file and must be separately assessed."
+            }
+          ]
+        },
+        {
+          "title": "Platform-Specific Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A file that is technically valid in one subtitle format may not meet the requirements of every learning platform, video player or distribution service."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Platform-specific conversion, rendering tests and final upload or integration are separate work items unless explicitly included."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Subtitling for Different Content Types",
+      "kind": "scope",
+      "lead": [],
+      "groups": [
+        {
+          "title": "eLearning and Training Videos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Learning materials may include instructional videos, demonstrations, screen recordings and narrated presentations."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Subtitle work can be coordinated with course localization, but the interaction between video tracks, authoring-tool files and published learning packages must be defined for each project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Rebuilding an eLearning course, integrating subtitles into a native authoring file and testing an LMS package are not automatically included in standalone subtitling."
+            }
+          ]
+        },
+        {
+          "title": "Educational and Academic Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publishers and educational organizations may need subtitles for lectures, seminars, author interviews, instructional recordings and digital-learning resources."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Specialist terminology, names, equations and references to visual content may require approved source materials or subject-matter clarification."
+            }
+          ]
+        },
+        {
+          "title": "Corporate and Product Videos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Business training, onboarding, demonstrations and presentations may require timed-text outputs for different markets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The target languages, brand terminology, approved scripts and intended publication environment help determine the appropriate production method."
+            }
+          ]
+        },
+        {
+          "title": "Recorded Webinars and Presentations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recorded webinars can involve multiple speakers, technical terminology and inconsistent audio quality."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A subtitle assignment may require transcription or a corrected source script before timing can begin."
+            },
+            {
+              "kind": "paragraph",
+              "text": "That preparatory work should be identified in the quotation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Source Materials and Information Required",
+      "kind": "scope",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "A representative media sample helps establish a realistic production scope."
+        }
+      ],
+      "groups": [
+        {
+          "title": "What We Need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the assignment, useful inputs include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Source video or audio files",
+                "Video duration and approximate number of assets",
+                "Source language and required target languages",
+                "Approved source transcripts or scripts, where available",
+                "Translated scripts or subtitle text, where available",
+                "Existing subtitle or caption files",
+                "Glossaries, terminology and pronunciation references",
+                "Speaker information where relevant",
+                "Required subtitle or caption conventions",
+                "Target file formats and specifications",
+                "Intended video platform or eLearning authoring environment",
+                "Timing, segmentation and reading requirements",
+                "Instructions for relevant sound cues or speaker labels",
+                "Media ownership and processing permissions",
+                "Required review stages",
+                "Preferred schedule and final delivery method"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Not every item applies to every project."
+            }
+          ]
+        },
+        {
+          "title": "Source Media Assessment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Clear audio and complete scripts generally make subtitle preparation more straightforward than recordings containing noise, overlapping speech or missing source information."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where translated text has not been supplied, the translation requirement must be assessed separately."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where the source video is incomplete or changing, subtitle timing may need to be revised after the final video is approved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Subtitling Deliverables",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The agreed deliverables depend on the work requested."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Possible outputs include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Timed subtitle files",
+            "Language-specific subtitle tracks",
+            "Updated subtitle files based on client feedback",
+            "Caption files where separately scoped",
+            "Timed-text files in an agreed supported format",
+            "Corrected timing or segmentation",
+            "A subtitle issue list or query report where commissioned",
+            "Supporting file lists or delivery notes"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "The output specification should identify the required languages, file formats, timecodes and review expectations."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Translated scripts, video exports, embedded subtitles, accessibility reports and integration into an eLearning or video platform are not automatically part of every subtitle-production assignment."
+        }
+      ],
+      "groups": []
+    },
+    {
+      "title": "Our Subtitling Production Workflow",
+      "kind": "workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Media and Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We examine the representative source files, available scripts, target languages and intended delivery format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The review identifies any transcription, translation, timing or platform-specific dependencies."
+            }
+          ]
+        },
+        {
+          "title": "2. Confirm Scope and Responsibilities",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We agree which services are included and who is responsible for the supplied language content, linguistic review, subtitle timing, caption cues and final platform acceptance."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Delivery formats, file naming, review cycles and acceptance criteria are also defined."
+            }
+          ]
+        },
+        {
+          "title": "3. Prepare the Subtitle Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed text is organized and timed according to the project instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any source inconsistencies or language issues requiring authorization are recorded for client review."
+            }
+          ]
+        },
+        {
+          "title": "4. Conduct Agreed Quality Checks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Checks may cover synchronization, segmentation, text consistency, timecode structure, required conventions and compatibility where the relevant tools and media are available."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Linguistic and accessibility-specific review activities are included only when commissioned."
+            }
+          ]
+        },
+        {
+          "title": "5. Deliver the Agreed Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Completed subtitle files and any required supporting information are prepared for the specified handoff."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Changes to approved translations, revised source videos and further correction rounds are handled according to the project agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quality Review and Client Responsibilities",
+      "kind": "quality",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Useful subtitle files need to represent the approved content in a readable, synchronized form."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the agreed scope, production quality checks may include timing and cue order, line breaks, punctuation, missing text, duplicate segments, file naming and correct identification of the target language."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Timing and Playback Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where included, the delivered subtitle files may be reviewed alongside the supplied media to identify obvious timing or display issues."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Full platform-specific integration testing must be explicitly agreed."
+            }
+          ]
+        },
+        {
+          "title": "Linguistic Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Subtitle timing and technical QA should not be confused with independent verification of the translated content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The client or designated linguistic reviewer is responsible for approving translation choices unless linguistic review is separately included."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Captioning for accessibility may require inclusion of meaningful nonspeech audio, speaker identification and other conventions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The applicable review standard should be agreed before production."
+            }
+          ]
+        },
+        {
+          "title": "Content Rights and Confidentiality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The client should confirm authorization to provide media, scripts and related materials."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Unreleased training, educational or business recordings may require particular handling instructions and an approved transfer method."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS does not guarantee error-free output, universal platform compatibility or accessibility conformance without defined scope and appropriate evidence."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "What Affects Subtitling Scope and Scheduling?",
+      "kind": "scope",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Media Duration and Audio Quality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Long recordings, background noise, overlapping speakers and unclear dialogue can require additional preparation."
+            }
+          ]
+        },
+        {
+          "title": "Number of Languages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Additional target languages increase the number of subtitle tracks and language-specific requirements."
+            }
+          ]
+        },
+        {
+          "title": "Availability of Approved Scripts",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing transcripts and translations may reduce the amount of preparatory work, provided they match the final media."
+            }
+          ]
+        },
+        {
+          "title": "Timing and Formatting Specifications",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Detailed segmentation rules, caption requirements and destination-specific formatting can change the production effort."
+            }
+          ]
+        },
+        {
+          "title": "Revision Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Changes to the source video, scripts or translations after timing may require rework."
+            }
+          ]
+        },
+        {
+          "title": "Related Production Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation, linguistic review, transcription, accessibility captioning, video processing and eLearning integration may need separately agreed tasks and reviewers."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These requirements should be reviewed before estimates or schedules are confirmed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These requirements should be reviewed before estimates or schedules are confirmed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "kind": "related",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Voiceover Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Narration and voiceover-related production for video and learning content, subject to agreed languages, talent and recording scope."
+            }
+          ],
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "Transcription Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Converting supplied audio or video speech into readable text, with timestamps and formatting where commissioned."
+            }
+          ],
+          "href": "/transcription-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Production support for localized course content, related media assets and supported eLearning authoring workflows."
+            }
+          ],
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A broader overview of EPUBTRANS's production support for LSPs and translation agencies."
+            }
+          ]
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Document layout and formatting for multilingual publishing and localized content."
+            }
+          ],
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related production for supported digital content, documents and publishing formats."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services are individually scoped and should not be assumed to be included in a standard subtitling quotation."
+            }
+          ],
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "kind": "faq",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What does EPUBTRANS's subtitling service include?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS's documented media-production scope includes subtitle and timed-text activities. Depending on the brief, a project may involve synchronization, segmentation, formatting or corrections to approved subtitle content."
+            }
+          ]
+        },
+        {
+          "title": "Can you work with translations supplied by our localization agency?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Client-approved translations can be used as source assets for a subtitling project. The required language, formatting rules and responsibility for linguistic review should be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "Does subtitling include translation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Translation may be commissioned separately or supplied by the client. The project brief should identify who produces and approves the target-language text."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between subtitles and captions?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translated subtitles commonly convey speech in another language. Captions can include same-language speech and meaningful nonspeech audio information, such as important sounds and speaker identification."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide SRT and VTT subtitle files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "SRT and VTT are common timed-text formats. Current output-format and feature support must be confirmed against the project's technical requirements."
+            }
+          ]
+        },
+        {
+          "title": "Can you synchronize existing subtitles with a video?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing subtitle timing and synchronization work can be assessed using the supplied media and files. The scope should identify whether text corrections or complete retiming are needed."
+            }
+          ]
+        },
+        {
+          "title": "Can you prepare multilingual subtitles for eLearning courses?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual subtitle preparation can be assessed using approved language content and source media. Integration into Storyline, Rise, Lectora or another authoring environment is a separate requirement unless included in the project."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide captions for deaf and hard-of-hearing viewers?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Caption-related production can be assessed where the applicable conventions, media and requirements are supplied. The exact accessibility checks and deliverables require agreement."
+            }
+          ]
+        },
+        {
+          "title": "Can you add subtitles directly into our final video?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Embedding or burning subtitles into a video requires separate video-processing work. Please identify the source video format and required final output so feasibility can be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "Which languages does EPUBTRANS support?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Language and script availability depend on the project, source assets and required linguistic or technical work. Please specify the target locales and requirements for assessment."
+            }
+          ]
+        },
+        {
+          "title": "Can you guarantee that subtitles comply with accessibility standards?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. Accessibility conformance depends on the applicable requirements and the completed media experience. Specific caption-production and validation tasks must be agreed and supported by evidence."
+            }
+          ]
+        },
+        {
+          "title": "What information is needed for a subtitling quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide a sample video, duration, source and target languages, available transcripts or translations, output format, target platform, timing requirements and preferred schedule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Request a Subtitling Quote",
+      "kind": "cta",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need timed subtitles for a video, training course or multilingual media project?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your source media, target languages, approved text assets and intended delivery format with EPUBTRANS."
+        },
+        {
+          "kind": "paragraph",
+          "text": "We can review the requirements and discuss the subtitling production, quality checks and related services appropriate to your project."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Subtitling Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": []
+    }
+  ]
+}

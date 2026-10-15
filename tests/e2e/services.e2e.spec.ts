@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import { mkdir } from 'node:fs/promises'
+import landingContent from '../../src/config/landing-content.json'
 const widths = [320, 360, 375, 390, 414, 480, 768, 820, 1024, 1280, 1440, 1600, 1920]
 test('published catalog, service visuals, metadata and responsive layouts', async ({ page }) => {
   test.setTimeout(240000)
@@ -11,9 +12,15 @@ test('published catalog, service visuals, metadata and responsive layouts', asyn
   })
   await page.goto('/services')
   const links = page.locator('main .sp-catalog-link')
-  const hrefs = await links.evaluateAll((items) => items.map((item) => item.getAttribute('href')!))
-  expect(hrefs.length).toBeGreaterThan(0)
-  expect(new Set(hrefs).size).toBe(hrefs.length)
+  // XML enquiries, pending scope and PDF recreation intentionally share destinations.
+  await expect(links).toHaveCount(17)
+  const hrefs = [
+    ...new Set(
+      landingContent.directory.categories.flatMap((group) =>
+        group.services.map((card) => card.href),
+      ),
+    ),
+  ].filter((href) => href !== '/get-a-quote')
   await mkdir('artifacts/services', { recursive: true })
   for (const route of ['/services', ...hrefs]) {
     const response = await page.goto(route)
@@ -33,8 +40,9 @@ test('published catalog, service visuals, metadata and responsive layouts', asyn
       )
       await expect(page.locator('main .sp-button').first()).toHaveAttribute(
         'href',
-        /\/get-a-quote\?service=/,
+        /\/get-a-quote(?:\?service=|$)/,
       )
+      await expect(page.locator('.sp-timeline > li')).toHaveCount(4)
       const related = await page
         .locator('.sp-related-grid > a')
         .evaluateAll((items) => items.map((item) => item.getAttribute('href')))
@@ -68,12 +76,10 @@ test('published catalog, service visuals, metadata and responsive layouts', asyn
           caret: 'initial',
         })
         if (route !== '/services')
-          await page
-            .locator('.sp-hero')
-            .screenshot({
-              path: `artifacts/services/${route.split('/').pop()}-hero-${width}.png`,
-              caret: 'initial',
-            })
+          await page.locator('.sp-hero').screenshot({
+            path: `artifacts/services/${route.split('/').pop()}-hero-${width}.png`,
+            caret: 'initial',
+          })
       }
     }
     expect(
@@ -112,17 +118,33 @@ test('quote preselection, process anchor, reduced motion and accessible service 
     ).toEqual([])
   }
   await page.goto('/typesetting-services')
-  await page.getByRole('link', { name: 'Explore Our Process' }).click()
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.locator('#process').scrollIntoViewIfNeeded()
+  await expect.poll(() => page.locator('#process').getAttribute('data-motion-state')).toBe('run')
+  expect(
+    await page
+      .locator('.sp-timeline > li')
+      .first()
+      .evaluate((el) => getComputedStyle(el, '::after').animationName),
+  ).toBe('sp-workflow-line')
+  await expect(page.locator('.sp-timeline > li')).toHaveCount(4)
+  await page.goto('/typesetting-services#process')
   await expect(page.locator('#process')).toBeInViewport()
-  await page.getByRole('link', { name: 'Request a Quote' }).first().click()
-  await expect(page.getByLabel('Publishing & content', { exact: true })).toBeChecked()
+  await page.getByRole('link', { name: 'Request a Typesetting Quote', exact: true }).first().click()
+  await page.goto('/get-a-quote?service=publishing_editorial')
+  await expect(
+    page.getByRole('radio', { name: 'Publishing & Editorial Services', exact: true }),
+  ).toBeChecked()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
-  await expect(page.getByLabel('Project requirements *')).toBeVisible()
+  await expect(page.getByLabel('Project Description *')).toBeVisible()
   await page.goto('/get-a-quote?service=invalid')
-  await expect(page.getByLabel('Publishing & content', { exact: true })).not.toBeChecked()
+  await expect(
+    page.getByRole('radio', { name: 'Publishing & Editorial Services', exact: true }),
+  ).not.toBeChecked()
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/scielo-xml-markup-services')
   await expect(page.locator('main h1')).toBeVisible()
+  await expect(page.locator('.sp-timeline > li')).toHaveCount(4)
   expect(
     await page
       .locator('.sp-route-ink')

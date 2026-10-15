@@ -1,11 +1,11 @@
 /* Inventory: docs/SERVICE-ANIMATIONS.md. Base content always renders in its final state. */
 .sp-page {
   --sp-motion-fast: 240ms;
-  --sp-motion-row: 550ms;
-  --sp-motion-feature: 800ms;
-  --sp-motion-route: 900ms;
-  --sp-motion-stagger: 90ms;
-  --sp-motion-step: 400ms;
+  --sp-motion-row: 750ms;
+  --sp-motion-feature: 1000ms;
+  --sp-motion-route: 1200ms;
+  --sp-motion-stagger: 75ms;
+  --sp-motion-step: 260ms;
   --sp-motion-distance: 8px;
   --sp-motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -170,12 +170,20 @@
     animation: sp-caption-cursor 950ms linear 1100ms both;
   }
   [data-motion='process'][data-motion-state='run'] .sp-timeline > li {
-    animation: sp-stage-spotlight 650ms ease both;
-    animation-delay: calc(min(var(--motion-index), 12) * var(--sp-motion-step));
+    animation: sp-workflow-step 680ms var(--sp-motion-ease) both;
+    animation-delay: calc(min(var(--motion-index), 3) * var(--sp-motion-step));
   }
   [data-motion='process'][data-motion-state='run'] .sp-step-number {
-    animation: sp-stage-number 650ms ease both;
-    animation-delay: calc(min(var(--motion-index), 12) * var(--sp-motion-step));
+    animation: sp-workflow-number 680ms var(--sp-motion-ease) both;
+    animation-delay: calc(min(var(--motion-index), 3) * var(--sp-motion-step));
+  }
+  [data-motion='process'][data-motion-state='run'] .sp-timeline > li::before {
+    animation: sp-workflow-node 680ms var(--sp-motion-ease) both;
+    animation-delay: calc(min(var(--motion-index), 3) * var(--sp-motion-step));
+  }
+  [data-motion='process'][data-motion-state='run'] .sp-timeline > li::after {
+    animation: sp-workflow-line 620ms var(--sp-motion-ease) both;
+    animation-delay: calc(100ms + min(var(--motion-index), 3) * var(--sp-motion-step));
   }
   [data-motion='related'][data-motion-state='run'] .sp-related-grid > a {
     animation: sp-related-deck 750ms var(--sp-motion-ease) both;
@@ -402,6 +410,60 @@
   }
   100% {
     box-shadow: 0 0 0 0 transparent;
+  }
+}
+@keyframes sp-workflow-step {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    background: transparent;
+  }
+  45% {
+    opacity: 1;
+    background: #204849;
+    box-shadow: inset 0 2px #a5cfce;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    background: transparent;
+    box-shadow: inset 0 0 transparent;
+  }
+}
+@keyframes sp-workflow-number {
+  0% {
+    opacity: 0.5;
+    transform: translateY(5px) scale(0.96);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(0) scale(1.015);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes sp-workflow-node {
+  0% {
+    transform: scale(0.6);
+    box-shadow: 0 0 0 0 #a5cfce00;
+  }
+  58% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 4px #a5cfce55;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #a5cfce00;
+  }
+}
+@keyframes sp-workflow-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 @keyframes sp-related-deck {

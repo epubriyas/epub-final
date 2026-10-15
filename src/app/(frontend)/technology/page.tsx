@@ -23,7 +23,7 @@ export default async function Technology() {
       <TechnologyCards />
       <ProductionOSFeature />
       <section className="et-container et-content-section">
-        <h2>Content that can move.</h2>
+        <h2>Publishing formats and production workflows</h2>
         <ul className="et-content-list">
           <li>
             <h3>Structured content & XML</h3>

@@ -138,29 +138,8 @@ html[data-theme='dark'] :is(.et-company-home, .et-feature-art, .et-quote-success
 html[data-theme='dark'] .et-work-art {
   background: var(--background-secondary);
 }
-/* The editorial artwork retains its printed-paper colors in both themes. */
-html[data-theme='dark'] :is(.et-paper-front, .et-paper-mid) {
-  color: #102b2b;
-}
-html[data-theme='dark'] .et-paper-back {
-  background: #006d68;
-}
-html[data-theme='dark'] .et-paper-front :is(.et-paper-top, .et-paper-divider) {
-  border-color: #758d83;
-}
-html[data-theme='dark'] .et-paper-divider {
-  background: #c9d0c9;
-}
 html[data-theme='dark'] .et-work-art > div:last-child {
   color: #006d68;
-}
-html[data-theme='dark'] .et-art-rule {
-  background: var(--surface-accent);
-}
-html[data-theme='dark'] .et-art-caption {
-  background: var(--background-primary);
-  color: var(--text-secondary);
-  padding: 4px 8px;
 }
 html[data-theme='dark']
   :is(

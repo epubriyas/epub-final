@@ -1,0 +1,913 @@
+{
+  "sourceDocument": "EPUBTRAN_Data_Conversion.docx",
+  "slug": "data-conversion",
+  "seo": {
+    "title": "PDF-to-Word & Document Conversion Services | EPUBTRANS",
+    "description": "PDF-to-Word conversion, OCR and document reconstruction for publishers and localization agencies. Share your files with EPUBTRANS for a project assessment."
+  },
+  "hero": {
+    "title": "PDF-to-Word & Document Conversion Services",
+    "lead": "PDF conversion, OCR and editable document preparation for publishers, localization service providers and translation agencies.",
+    "paragraphs": [
+      "EPUBTRANS provides document and data conversion services to help organizations transform PDFs, scanned documents and other source materials into editable or structured files for further use.",
+      "Our services include PDF-to-Word conversion, OCR-assisted text extraction, document reconstruction, formatting cleanup and preparation of files for publishing, editing and localization workflows.",
+      "Whether you need to recreate a non-editable PDF, extract content from scanned pages or prepare documents for translation, we can review your source files and define an appropriate conversion approach."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Document Conversion Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Our Services",
+        "href": "/services#document-conversion",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Document Conversion for Publishing & Localization Workflows",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Many publishing and localization projects begin with source documents that are difficult to edit or reuse."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A PDF may contain selectable text but lack usable formatting. A scanned document may contain only page images. Complex layouts can include columns, tables, graphics and text boxes that do not convert cleanly into editable files."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Document conversion helps prepare these materials for their next production stage."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports conversion requirements based on the condition of the source files, intended output format and agreed editing or layout specifications."
+        }
+      ],
+      "groups": [
+        {
+          "title": "PDF-to-Word Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Converting PDF content into Microsoft Word can make text available for editing, formatting and downstream production."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the source file, the work may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Extracting and organizing text",
+                "Rebuilding paragraph and heading styles",
+                "Recreating tables and text boxes",
+                "Formatting lists, captions and footnotes",
+                "Restoring headers, footers and page elements",
+                "Placing or extracting images and figures",
+                "Preparing an editable DOCX document"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The amount of reconstruction required depends on whether the PDF contains usable text, has a consistent structure and includes recoverable document elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A PDF-to-Word conversion may prioritize editable content, layout similarity or a combination of the two. These requirements should be clarified before production."
+            }
+          ]
+        },
+        {
+          "title": "OCR Conversion & Text Extraction",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Optical character recognition (OCR) can be used to extract text from scanned pages and image-based documents."
+            },
+            {
+              "kind": "paragraph",
+              "text": "OCR output may require review and correction, especially when source documents contain low-resolution text, unusual fonts, multiple columns, technical symbols or inconsistent page quality."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, OCR-related activities may include text extraction, content cleanup, structure reconstruction and preparation of an agreed editable output."
+            },
+            {
+              "kind": "paragraph",
+              "text": "OCR recognition alone does not guarantee complete or correct text extraction."
+            }
+          ]
+        },
+        {
+          "title": "Document Recreation & Reconstruction",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "When the original editable source file is unavailable, document elements may need to be recreated from a PDF or other reference."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work can involve rebuilding text frames, headings, tables, illustrations, page numbering and other layout features."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the requirements and technical feasibility, reconstructed content may be prepared in Word, PowerPoint, InDesign or another agreed target format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The feasibility of recreating the original design depends on source quality, fonts, graphics and the limitations of the selected output format."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Document Conversion Capabilities",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Editable Document Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Conversion of suitable content into documents that can be edited and reused."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the agreed scope, this may include preparing editable text, applying styles, rebuilding sections and organizing document elements for further production."
+            }
+          ]
+        },
+        {
+          "title": "Scanned PDF & Image-Based Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "OCR-assisted extraction and reconstruction of scanned documents."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Documents with skewed pages, faint text, poor contrast, handwritten content or complex structures may require additional assessment and manual work."
+            }
+          ]
+        },
+        {
+          "title": "Table & Figure Reconstruction",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recreating tables, figures and related document elements when they need to remain editable or follow an agreed structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For complex tables, diagrams or equations, the required output should be clarified because certain elements may need specialist reconstruction or may remain as images."
+            }
+          ]
+        },
+        {
+          "title": "Formatting Cleanup",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Reviewing and correcting formatting issues introduced by extraction or conversion."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Work may include resolving unnecessary line breaks, inconsistent spacing, misplaced text, paragraph formatting and other structural problems within the agreed scope."
+            }
+          ]
+        },
+        {
+          "title": "PDF Layout Recreation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Rebuilding document layouts from available PDFs or reference files."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve reproducing headings, text flow, columns, page elements and supporting assets according to the client's layout requirements."
+            }
+          ]
+        },
+        {
+          "title": "Conversion for Downstream Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparing documents for use in publishing, localization or other agreed content workflows."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Requirements may involve editable files, consistent text structure, output format compatibility or layout references for later production stages."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Specialist eBook conversion, XML markup, accessibility remediation and multilingual DTP are handled as separate services when those activities are required."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "PDF-to-Word Conversion for Translation Agencies",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Localization service providers and translation agencies often receive documents that are difficult to process in their existing translation workflows."
+        },
+        {
+          "kind": "paragraph",
+          "text": "For example, a project may begin with a PDF rather than the original editable Word or layout file. Scanned content may require OCR, while tables and text boxes may need to be reconstructed."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can assess these files and prepare agreed editable outputs for downstream localization work."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Preparing Editable Source Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The conversion process may involve extracting text, rebuilding document structure and preparing content in an editable format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The target output can be defined according to the localization team's requirements."
+            }
+          ]
+        },
+        {
+          "title": "Supporting Translation Workflows",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where required, document preparation may focus on consistent text structure, paragraph styles, tables and other elements relevant to later processing."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Compatibility with a particular computer-assisted translation (CAT) tool or translation management system must be reviewed separately."
+            }
+          ]
+        },
+        {
+          "title": "Separating Conversion from Translation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Document conversion does not automatically include translation, linguistic proofreading, terminology management or post-translation desktop publishing."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess related production requirements, but the activities and responsibilities should be agreed before work begins."
+            },
+            {
+              "kind": "link",
+              "text": "Discuss Your Document Conversion Requirements",
+              "href": "/services",
+              "primary": false
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Document Conversion for Publishers & Content Teams",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Publishers may need to transform existing content into files that can be edited, repurposed or prepared for additional production activities."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Typical situations include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Converting legacy PDFs into editable documents",
+            "Extracting text from scanned publications",
+            "Reconstructing source files when originals are unavailable",
+            "Preparing publication content for editorial review",
+            "Rebuilding tables and structured document elements",
+            "Preparing source content for typesetting or digital publishing"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Existing publications can vary considerably in source quality and technical complexity."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Projects involving structured XML, EPUB conversion or complete publication typesetting should be assessed for the appropriate specialist workflow."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Editable Content vs Layout Preservation",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Not every conversion project has the same intended outcome."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Before production begins, it is important to establish which characteristics of the source document must be retained."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Editable Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The priority is to make the text and required document elements available for editing or reuse."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The converted document may have a simpler layout than the original when visual similarity is not essential."
+            }
+          ]
+        },
+        {
+          "title": "Layout-Preserved Conversion",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The priority is to recreate the source document's visual arrangement as closely as is feasible within the chosen output format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may require additional formatting, manual reconstruction and attention to fonts, tables, images and pagination."
+            }
+          ]
+        },
+        {
+          "title": "Editable and Layout-Preserved Output",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects require both editable content and substantial visual similarity to the source."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These projects may involve more reconstruction than basic text extraction."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Exact pagination, fully editable graphic elements or identical rendering across applications cannot be assumed without reviewing the source document and output requirements."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Source Files & Materials We Can Assess",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The source file, available assets and target output influence the conversion workflow."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Typical Source Materials",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "PDFs containing selectable text",
+                "Scanned or image-based PDF files",
+                "Document images or scanned pages",
+                "Existing editable documents requiring format changes",
+                "Reference layouts or approved sample files",
+                "Supporting graphics, tables or other document assets"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Useful Project Information",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide the following where available:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Representative source files",
+                "Approximate page count or file volume",
+                "Required output format and application version",
+                "Whether editability or visual similarity is the main priority",
+                "Language and script information where relevant",
+                "Reference files or existing templates",
+                "Requirements for tables, figures, equations and images",
+                "Desired formatting and quality checks",
+                "Intended downstream workflow",
+                "Preferred delivery schedule"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "For longer or technically complex documents, a representative sample can help determine whether additional extraction, reconstruction or review work is required."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Document Conversion Deliverables",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Deliverables are defined according to the agreed project requirements."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Editable Word Documents",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "DOCX files containing the converted and reconstructed content, with applicable formatting and structural elements."
+            }
+          ]
+        },
+        {
+          "title": "Extracted Text",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Text extracted from digital or scanned sources, in an agreed file format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Additional cleanup or structural preparation should be included explicitly in the scope."
+            }
+          ]
+        },
+        {
+          "title": "Reconstructed Office or Layout Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Word, PowerPoint, InDesign or other agreed editable formats where technically suitable and supported."
+            }
+          ]
+        },
+        {
+          "title": "Formatted Document Outputs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Documents prepared with the agreed headings, paragraphs, tables, images and other layout elements."
+            }
+          ]
+        },
+        {
+          "title": "Supporting Files & Delivery Package",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Related assets and conversion outputs organized according to the specified delivery requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where appropriate, the delivery package can identify known exclusions, unresolved source issues or limitations affecting particular document elements."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Document Conversion Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Source File Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review the supplied documents, source quality, file structure, language requirements and intended output."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Potential challenges such as scanned text, missing fonts, complex tables or image-based content are identified."
+            }
+          ]
+        },
+        {
+          "title": "2. Scope & Output Confirmation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We clarify the required target format, degree of editability, layout expectations, content-review requirements and delivery specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For complex source files, a sample assessment may be recommended before confirming the complete production scope."
+            }
+          ]
+        },
+        {
+          "title": "3. Conversion & Reconstruction",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The appropriate extraction, OCR, formatting or reconstruction activities are performed according to the agreed requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Manual preparation may be included for content that cannot be converted satisfactorily through automated processing alone."
+            }
+          ]
+        },
+        {
+          "title": "4. Quality Review & Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Relevant content, formatting and structural checks are performed according to the project specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Issues identified through the agreed review process are addressed within the defined correction scope."
+            }
+          ]
+        },
+        {
+          "title": "5. Final File Preparation & Delivery",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Completed files and associated assets are prepared in the agreed format and package structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final deliverables reflect the approved output specifications and any documented exclusions."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "Quality Checks for Converted Documents",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Conversion quality depends on the original source and the acceptance criteria for the target output."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, checks may cover:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Text completeness and extraction errors",
+            "OCR recognition issues",
+            "Missing or incorrect characters",
+            "Paragraph order and heading structure",
+            "Unwanted line breaks and spacing",
+            "Table content and cell structure",
+            "Images, figures and captions",
+            "Footnotes, headers and footers",
+            "Page breaks and document flow",
+            "Font substitution and character rendering",
+            "Visual comparison with the original document",
+            "Target-file editability and file integrity"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Conversion QA vs Editorial Proofreading",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Document conversion checks focus on transferring and reconstructing source content correctly according to the agreed requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "They do not automatically include copyediting, linguistic proofreading, factual verification or correction of errors already present in the source."
+            }
+          ]
+        },
+        {
+          "title": "OCR Review Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "OCR is particularly sensitive to the condition of scanned material."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Some projects may require additional manual comparison, text correction or specialized handling of equations and symbols."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required review method and acceptance criteria should be agreed before production."
+            }
+          ]
+        }
+      ],
+      "kind": "quality"
+    },
+    {
+      "title": "What Affects Document Conversion Scope & Schedule?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Source File Quality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Clean, searchable PDFs may be easier to process than scanned documents with blurred, skewed or low-resolution pages."
+            }
+          ]
+        },
+        {
+          "title": "Layout Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multi-column documents, extensive tables, forms, mathematical content and embedded graphics can require additional work."
+            }
+          ]
+        },
+        {
+          "title": "Required Editability",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Extracting usable text is different from reconstructing an editable document containing native tables, styles and other elements."
+            }
+          ]
+        },
+        {
+          "title": "Layout Preservation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Maintaining visual similarity can require additional formatting and manual reconstruction."
+            }
+          ]
+        },
+        {
+          "title": "Languages & Special Characters",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The language, writing system, fonts, symbols and source encoding can influence extraction and formatting requirements."
+            }
+          ]
+        },
+        {
+          "title": "Volume & Review Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The number of files, page count, expected output formats, correction rounds and requested quality checks can affect production effort."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We review these factors before confirming scope, estimated cost or delivery arrangements."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Document conversion may be one stage in a broader content-production workflow."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Desktop Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual formatting, post-translation DTP and layout adaptation for documents that require target-language production."
+            }
+          ],
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and journal page composition where manuscript content needs to be prepared for publication."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB production and eBook conversion for suitable publishing content."
+            }
+          ],
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "SciELO XML Markup Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Specialist XML article markup for scholarly publications requiring SciELO-related workflows."
+            }
+          ],
+          "href": "/scielo-xml-markup-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related remediation and preparation for supported document and digital publishing formats."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services can be commissioned separately or assessed together where the project requirements call for connected production activities."
+            }
+          ],
+          "href": "/accessibility-services"
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Can EPUBTRANS convert PDF files into editable Word documents?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF-to-Word conversion is part of EPUBTRANS's documented service scope. The degree of editability and layout reconstruction depends on the source file and agreed output requirements."
+            }
+          ]
+        },
+        {
+          "title": "Can you convert scanned PDFs into Word documents?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Scanned PDFs can be assessed for OCR-assisted conversion and reconstruction. Source quality, text recognition, formatting complexity and review requirements affect the production approach."
+            }
+          ]
+        },
+        {
+          "title": "Will the converted Word file look exactly like the original PDF?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not necessarily. Exact visual reproduction and editable content are separate requirements. The level of layout similarity should be confirmed after examining representative source files."
+            }
+          ]
+        },
+        {
+          "title": "Can you recreate tables, images and diagrams?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Tables, figures and document elements can be assessed for extraction or reconstruction. Some may require manual work, while others may need to remain as images depending on the agreed output."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide conversion files suitable for translation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can prepare editable documents for localization workflows. Requirements involving CAT-tool compatibility, segmentation, language processing and translation-system testing must be confirmed separately."
+            }
+          ]
+        },
+        {
+          "title": "Do you support OCR for multiple languages?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Language-specific OCR projects can be assessed. The supported languages, scripts, recognition methods and correction requirements need to be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Can you recreate a document in InDesign or PowerPoint?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The documented service catalog includes reconstruction into Word, PowerPoint, InDesign or another agreed target when technically suitable. Current software compatibility and file-format requirements must be checked for each project."
+            }
+          ]
+        },
+        {
+          "title": "Is proofreading included after OCR?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "OCR-related content checking may be included according to the agreed specification. Full linguistic proofreading or editorial correction is not automatically part of document conversion."
+            }
+          ]
+        },
+        {
+          "title": "Can you convert legacy publishing files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Eligible legacy documents can be assessed according to the available source files and desired output. Support for specific legacy software or file versions must be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide XML or EPUB conversion as part of this service?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS offers related XML and EPUB production services, but these are scoped separately when specialist publishing requirements apply."
+            }
+          ]
+        },
+        {
+          "title": "What information is required for a document conversion quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide representative source files, approximate page or file volume, target output format, editing and layout requirements, language information where relevant, and the preferred schedule."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS handle a large volume of documents?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Projects involving multiple files or substantial document volumes can be reviewed for feasibility, resource requirements and delivery planning. Capacity and schedules are confirmed only after assessment."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request a Document Conversion Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need to convert a PDF into an editable Word file, extract text from scanned documents or reconstruct files for publishing or translation?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your source format, approximate page count, required output and any layout or editability expectations."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review your requirements and discuss the appropriate conversion and production workflow."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Document Conversion Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 224
+}

@@ -11,6 +11,7 @@ import { themeCookieKey } from '@/providers/Theme/shared'
 import { getLanguage } from '@/config/languages'
 import { LocaleProvider } from '@/components/i18n/LocaleProvider'
 import { EpubtransAssistant } from '@/components/assistant/EpubtransAssistant'
+import { SiteMotion } from '@/components/motion/SiteMotion'
 import { getSiteSettings } from '@/lib/content'
 import '@/styles/index.css'
 export async function generateViewport(): Promise<Viewport> {
@@ -33,8 +34,12 @@ export default async function FrontendLayout({ children }: { children: React.Rea
     '@type': 'Organization',
     name: 'EPUBTRANS',
     url: getServerSideURL(),
-    ...(settings.contactDetailsApproved === true && settings.email ? { email: settings.email } : {}),
-    ...(settings.contactDetailsApproved === true && settings.phone ? { telephone: settings.phone } : {}),
+    ...(settings.contactDetailsApproved === true && settings.email
+      ? { email: settings.email }
+      : {}),
+    ...(settings.contactDetailsApproved === true && settings.phone
+      ? { telephone: settings.phone }
+      : {}),
   }
   return (
     <html
@@ -50,6 +55,7 @@ export default async function FrontendLayout({ children }: { children: React.Rea
       <body className="et-site">
         <Providers initialTheme={theme}>
           <LocaleProvider locale={locale}>
+            <SiteMotion />
             <a className="et-skip" href="#main-content">
               Skip to main content
             </a>

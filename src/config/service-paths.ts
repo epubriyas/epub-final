@@ -6,6 +6,7 @@ export const servicePaths: Record<string, string> = {
   typesetting: '/typesetting-services',
   'cover-page-design': '/cover-page-design-services',
   'scielo-xml-markup': '/scielo-xml-markup-services',
+  'xml-jats': '/xml-conversion-services',
   proofreading: '/proofreading-services',
   'ebook-creation': '/ebook-creation-services',
   'graphic-design-image-services': '/graphic-design-image-services',

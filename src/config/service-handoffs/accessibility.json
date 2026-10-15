@@ -1,0 +1,1073 @@
+{
+  "sourceDocument": "EPUBTRAN_Accessibility.docx",
+  "slug": "accessibility",
+  "seo": {
+    "title": "Document Accessibility & Remediation Services | EPUBTRANS",
+    "description": "EPUBTRANS supports PDF, EPUB, Word and PowerPoint accessibility remediation, document structure, tagging and project-specific quality checks."
+  },
+  "hero": {
+    "title": "Digital Document & Publishing Accessibility Services",
+    "lead": "Accessibility remediation and production support for PDF, EPUB, Word, PowerPoint and publishing-source files.",
+    "paragraphs": [
+      "EPUBTRANS provides digital document accessibility services to support publishers, academic publishing organizations, localization service providers and other content teams preparing more accessible digital publications and documents.",
+      "Our services include accessibility-related production and remediation for PDF, EPUB, Microsoft Word, PowerPoint and suitable Adobe InDesign-based workflows.",
+      "Depending on the source files and agreed requirements, projects may involve document structure, tagging, reading order, alternative text, navigation, formatting improvements and relevant accessibility checks.",
+      "Whether you need to improve existing documents or prepare new digital content against specific accessibility requirements, we can review your materials and discuss an appropriate production scope."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request an Accessibility Assessment",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Our Services",
+        "href": "/services#digital-accessibility",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Digital Accessibility for Documents & Publications",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "A document can look correct visually while still presenting barriers to people using assistive technologies or alternative ways of accessing content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "For example, a PDF may lack meaningful structure, an EPUB may contain inaccessible navigation, or a presentation may have a reading order that does not reflect its intended content sequence."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Accessibility-related production addresses these issues by improving how content is structured, described, navigated and presented."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The appropriate requirements depend on the file format, intended audience, relevant accessibility criteria and target reading environment."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports these activities through project-specific production and remediation workflows."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Document Accessibility Services",
+      "lead": [],
+      "groups": [
+        {
+          "title": "PDF Accessibility Remediation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF accessibility remediation focuses on improving the document structure and other features required for more accessible use."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the source file and project specification, activities may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Reviewing and correcting document tags",
+                "Organizing heading and paragraph structure",
+                "Reviewing logical reading order",
+                "Preparing or integrating alternative text",
+                "Identifying tables and relevant structural relationships",
+                "Reviewing lists, links and navigation elements",
+                "Checking document language and relevant metadata",
+                "Reviewing bookmarks where required",
+                "Addressing other specified accessibility issues"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "PDF remediation requirements vary considerably between documents."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A text-based PDF with a structured source may need a different workflow from a scanned publication or a PDF containing complex tables, mathematical content or forms."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where required, PDF/UA-related checks or other specified accessibility criteria can be considered within the agreed production scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Discuss PDF Accessibility Requirements"
+            }
+          ]
+        },
+        {
+          "title": "EPUB Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB publications require meaningful content structure and navigation to support accessible digital reading experiences."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS supports accessibility-related EPUB production and remediation for eligible publications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, work may involve:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Reviewing semantic content structure",
+                "Organizing headings and sections",
+                "Preparing accessible navigation",
+                "Reviewing reading order",
+                "Integrating alternative text and image descriptions",
+                "Reviewing tables and other complex content",
+                "Preparing relevant accessibility metadata",
+                "Applying agreed markup and content improvements",
+                "Performing specified EPUB accessibility checks"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Accessibility requirements should be considered alongside the publication's layout, content complexity and intended reading systems."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Reflowable and fixed-layout EPUB publications may present different technical considerations."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The accessibility specification, evaluation method and any conformance requirements must be defined for the project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Explore eBook Creation Services"
+            }
+          ]
+        },
+        {
+          "title": "Microsoft Word Accessibility",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Word documents often serve as source materials for publishing, localization, training and business communication."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related preparation may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Applying logical heading styles",
+                "Reviewing document structure",
+                "Preparing meaningful links",
+                "Improving list and table structure",
+                "Adding or incorporating alternative text",
+                "Reviewing document language information",
+                "Checking the logical presentation of content",
+                "Addressing other specified document issues"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The availability of original editable files can significantly affect the remediation workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where the document will later be converted into PDF or another format, the accessibility requirements of the final output must also be considered."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Discuss Word Accessibility Requirements"
+            }
+          ]
+        },
+        {
+          "title": "PowerPoint Accessibility",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PowerPoint presentations contain visual and structural elements that may require specific attention."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, accessibility-related activities may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Reviewing slide titles",
+                "Checking the reading order of slide objects",
+                "Integrating alternative text",
+                "Reviewing tables, charts and graphics",
+                "Applying meaningful hyperlink text",
+                "Checking text presentation and contrast-related requirements",
+                "Reviewing relevant language and document settings",
+                "Addressing other agreed accessibility issues"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Complex diagrams, multimedia, animations and interactive presentation elements may require separate assessment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Accessibility of the final presentation also depends on how the content is used, distributed and presented."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Discuss PowerPoint Accessibility Requirements"
+            }
+          ]
+        },
+        {
+          "title": "InDesign Accessibility-Related Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Adobe InDesign source files may be part of a workflow for producing accessible PDFs or digital publications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where supported, accessibility-related source preparation may involve reviewing document structure, paragraph styles, object relationships, alternative text and export settings."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final accessibility requirements depend on the intended output format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Preparing an InDesign source file does not by itself establish that a resulting PDF or EPUB meets a particular accessibility standard."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Source-file preparation, export, remediation and final testing should therefore be defined as separate production activities where appropriate."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Discuss Publishing-Source Accessibility Requirements"
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "Accessibility Remediation vs Accessible Content Production",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Accessibility requirements can arise at different stages of a content-production workflow."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Remediation of Existing Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An existing PDF, EPUB or office document may require changes to address identified accessibility barriers."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work begins with reviewing the source file, available editable materials and expected accessibility criteria."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Remediation may involve correcting structural, semantic or presentation-related issues."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility During New Content Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "When preparing a new publication or document, accessibility requirements can be considered during source preparation and production."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For example, appropriate heading structures, alternative text, navigation and content organization may be incorporated before final files are generated."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This approach can reduce the need to reconstruct some accessibility features after publication."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The exact production method depends on the source application, file format and agreed deliverable."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility Review & Testing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A client may require an assessment of existing files, remediation of identified issues, or documented testing against selected criteria."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These are related but distinct activities."
+            },
+            {
+              "kind": "paragraph",
+              "text": "An initial review, remediation work, technical checks, assistive-technology testing and formal conformance evaluation should not be assumed to be included together unless expressly commissioned."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Accessibility Standards & Project Requirements",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Accessibility requirements should be defined using the relevant standard, version, conformance target and intended use of the content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Common references in digital publishing and document accessibility include WCAG, PDF/UA, EPUB Accessibility specifications and applicable procurement or regulatory requirements."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Web Content Accessibility Guidelines (WCAG)",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "WCAG provides internationally recognized accessibility criteria for digital content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The applicable version and conformance level should be confirmed for each project, along with how the criteria apply to the document or publication being evaluated."
+            }
+          ]
+        },
+        {
+          "title": "PDF/UA",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF/UA is a family of standards addressing technical accessibility requirements for PDF documents."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required version, technical checks and any additional content-accessibility criteria must be defined for the project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Technical PDF/UA validation alone does not establish every aspect of accessibility for every user."
+            }
+          ]
+        },
+        {
+          "title": "EPUB Accessibility",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB Accessibility specifications address accessibility requirements and discoverability information for EPUB publications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The target version, required accessibility metadata, publication features, evaluation method and reporting requirements must be confirmed before making a conformance claim."
+            }
+          ]
+        },
+        {
+          "title": "Section 508 & Other Applicable Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some organizations must satisfy accessibility requirements associated with public-sector procurement, legislation or client policies."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The exact obligations depend on the relevant jurisdiction, content type, procurement terms and applicable technical standards."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess production work against supplied requirements within the agreed technical scope. Legal compliance assessments or certifications are not automatically included."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Accessibility Features We Can Assess",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The issues requiring attention differ across formats. Depending on the project, relevant accessibility production activities may include the following."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Document Structure & Headings",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Organizing content with meaningful sections, headings and structural relationships."
+            }
+          ]
+        },
+        {
+          "title": "Logical Reading Order",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Reviewing the sequence in which document content is presented through supported reading and assistive technologies."
+            }
+          ]
+        },
+        {
+          "title": "Alternative Text & Image Descriptions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Integrating descriptions for meaningful images, charts and other visual content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project scope should clarify whether EPUBTRANS is incorporating client-supplied descriptions, reviewing existing descriptions or creating new descriptions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Complex scientific figures and educational illustrations may require subject-matter input."
+            }
+          ]
+        },
+        {
+          "title": "Tables & Complex Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Reviewing table headers, relationships between content and structural markup where supported."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Complex tables, mathematical expressions and specialized content may require additional assessment."
+            }
+          ]
+        },
+        {
+          "title": "Navigation & Links",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparing meaningful navigation elements, bookmarks, internal references and descriptive hyperlinks where relevant to the format."
+            }
+          ]
+        },
+        {
+          "title": "Language & Metadata",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Reviewing applicable language information, document properties and accessibility-related metadata."
+            }
+          ]
+        },
+        {
+          "title": "Visual Presentation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Addressing agreed requirements involving color contrast, text presentation or other visual accessibility features where the format and project scope permit."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Source Files & Information Required",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Accessible production and remediation depend on the condition of the source files and the specified target requirements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Useful project materials may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Existing PDF, EPUB, Word or PowerPoint files",
+            "Original editable source documents, where available",
+            "InDesign or other supported publishing-source files",
+            "Image assets, charts and illustrations",
+            "Existing alternative text or image descriptions",
+            "Publisher style guides and document specifications",
+            "Target accessibility standard and version",
+            "Required conformance level or acceptance criteria",
+            "Existing accessibility audit results or issue lists",
+            "Language and reading-order requirements",
+            "Target platforms or reading systems",
+            "Required testing and reporting expectations",
+            "Preferred delivery schedule"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "For existing PDFs, an accessible or well-structured editable source may provide more production options than a flattened or scanned document."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Scanned PDFs can require OCR, content reconstruction and additional review before accessibility-related remediation can proceed."
+        },
+        {
+          "kind": "paragraph",
+          "text": "If the necessary source files or specifications are incomplete, we can identify the outstanding requirements during project assessment."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Accessibility Deliverables",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The deliverables depend on the requested format, scope and acceptance requirements."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Remediated PDF Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF files with the agreed structural or accessibility-related corrections applied."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility-Related EPUB Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB packages with agreed accessibility improvements, navigation, metadata and other relevant content features."
+            }
+          ]
+        },
+        {
+          "title": "Remediated Word & PowerPoint Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable documents or presentations incorporating the agreed accessibility-related changes."
+            }
+          ]
+        },
+        {
+          "title": "Prepared Publishing-Source Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "InDesign-based or other supported source files prepared for specified downstream output workflows."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility Issue Lists & Reports",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where commissioned, the project may include identified issues, remediation notes, checklists or testing summaries."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A formal conformance report, certification or declaration is a separate deliverable and must be explicitly agreed, supported by the required evaluation evidence and approved before use."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Accessibility Production Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Source Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We examine representative files, available editable sources, content complexity and relevant accessibility instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Existing audit reports or known issues are reviewed when provided."
+            }
+          ]
+        },
+        {
+          "title": "2. Define the Accessibility Scope",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We clarify the target format, relevant criteria, remediation tasks, testing expectations, deliverables and review stages."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Requirements involving alternative text creation, complex content, assistive-technology testing or formal reporting are identified separately."
+            }
+          ]
+        },
+        {
+          "title": "3. Perform Accessibility-Related Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed remediation or accessibility production activities are carried out according to the project specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The approach depends on the document type, source condition and required output."
+            }
+          ]
+        },
+        {
+          "title": "4. Conduct Agreed Quality Checks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Relevant technical, structural, visual or manual accessibility checks are performed within the agreed testing scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Issues requiring additional source information or decisions are identified for review."
+            }
+          ]
+        },
+        {
+          "title": "5. Apply Corrections & Deliver",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Approved corrections are incorporated according to the defined review process."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final files and any commissioned checklists or reports are prepared for delivery in the agreed package structure."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "Accessibility Quality Checks & Testing",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Accessibility cannot be established solely through the presence of a few document features or a successful automated check."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Different content formats require different testing approaches and acceptance criteria."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, quality checks may examine:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Document structure and hierarchy",
+            "Tags and semantic relationships",
+            "Reading order",
+            "Alternative text availability",
+            "Table structure and interpretation",
+            "Navigation and hyperlinks",
+            "Language identification",
+            "Metadata and file properties",
+            "Visual presentation issues",
+            "Applicable automated validation findings",
+            "Manual accessibility review results",
+            "Assistive-technology behavior where testing is commissioned"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Automated Checks & Manual Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Automated tools can identify certain accessibility issues, but they cannot determine every requirement involving meaning, usability or content interpretation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Manual inspection may therefore be necessary to evaluate issues that automated testing cannot resolve."
+            }
+          ]
+        },
+        {
+          "title": "Assistive-Technology Testing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Screen-reader or other assistive-technology testing may be relevant when required by the project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The specific technologies, software versions, platforms, testing scenarios and reporting requirements must be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "Conformance Claims",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A remediation activity does not automatically establish full WCAG, PDF/UA, EPUB Accessibility, Section 508 or other conformance."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A conformance statement should identify the exact specification, scope, evaluation method and supported results."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS does not make blanket conformance guarantees for all document formats or projects."
+            }
+          ]
+        }
+      ],
+      "kind": "quality"
+    },
+    {
+      "title": "Accessibility Support for Publishers & Localization Teams",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Publishers & Academic Publishing Organizations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Digital publishing projects may require accessible EPUB production, PDF remediation, source-document preparation or improvements to existing publications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Academic content can introduce additional requirements involving tables, mathematical notation, references, figures and other complex structures."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We can assess these needs within the intended publishing workflow and required output specification."
+            }
+          ]
+        },
+        {
+          "title": "Localization Service Providers & Translation Agencies",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual content projects may include accessible document requirements alongside translation and desktop publishing."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess accessibility-related production for eligible localized files, while respecting the localization provider's existing workflow and client relationship."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation accuracy, language-specific accessibility evaluation and post-translation DTP must be scoped separately where applicable."
+            }
+          ]
+        },
+        {
+          "title": "Education & Digital-Content Organizations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Educational publications, presentations and learning materials may require accessibility-related improvements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The appropriate service depends on the content format, target use and applicable acceptance criteria."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "What Affects Accessibility Project Scope & Schedule?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Document Format",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF, EPUB, Word, PowerPoint and publishing-source files require different production and evaluation methods."
+            }
+          ]
+        },
+        {
+          "title": "Source File Quality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable sources, existing tags, content structure and file completeness influence the available remediation options."
+            }
+          ]
+        },
+        {
+          "title": "Content Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Complex tables, charts, equations, forms, multimedia and interactive elements may require additional work or specialist review."
+            }
+          ]
+        },
+        {
+          "title": "Alternative Text Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Projects requiring original image descriptions or specialist scientific descriptions can differ substantially from those where approved alternative text has already been supplied."
+            }
+          ]
+        },
+        {
+          "title": "Target Standards & Testing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The required accessibility criteria, software environments, manual assessment, assistive-technology testing and reporting expectations affect the production scope."
+            }
+          ]
+        },
+        {
+          "title": "Volume & Revision Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "File count, page or slide volume, correction rounds, stakeholder review and delivery milestones influence project planning."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We review these requirements before confirming scope, estimated costs or delivery arrangements."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Accessibility-related production may be connected with several other content-transformation services."
+        }
+      ],
+      "groups": [
+        {
+          "title": "eBook Creation Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB conversion and eBook production for digital publishing requirements, including accessibility considerations where commissioned."
+            }
+          ],
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF-to-Word conversion, OCR and document reconstruction when source content requires preparation before remediation."
+            }
+          ],
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and journal page composition that may provide source materials for further digital publishing or accessibility work."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Formatting and multilingual layout production for documents requiring additional accessibility-related activities."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services can be commissioned separately or assessed as part of a connected project."
+            }
+          ],
+          "href": "/desktop-publishing-services"
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What are document accessibility services?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Document accessibility services involve reviewing, preparing or remediating digital files to address specified accessibility requirements. Activities vary by format and may include tagging, reading order, document structure, navigation and alternative text."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS remediate inaccessible PDF documents?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF accessibility remediation is part of EPUBTRANS's documented service portfolio. The production approach depends on the source file, accessibility requirements and agreed remediation scope."
+            }
+          ]
+        },
+        {
+          "title": "Can you make scanned PDFs accessible?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Scanned PDFs can be assessed, but they may require OCR, text correction and content reconstruction before accessibility-related changes can be applied."
+            }
+          ]
+        },
+        {
+          "title": "Do you support accessible EPUB production?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related EPUB production is included in EPUBTRANS's documented portfolio. The target specification, required features, validation and evaluation scope should be agreed for each project."
+            }
+          ]
+        },
+        {
+          "title": "Can you improve Word and PowerPoint accessibility?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Word and PowerPoint accessibility-related production is included in the documented service scope. Typical work may involve headings, reading order, alternative text, tables and other document-specific features."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS produce accessible files from InDesign?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "InDesign-based accessibility preparation can be assessed for supported workflows. The accessibility of the final PDF or EPUB output requires separate checks against the agreed requirements."
+            }
+          ]
+        },
+        {
+          "title": "Do you create alternative text for images?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Alternative text integration can be included in accessibility production. Creation of new descriptions, especially for technical or scientific images, must be separately defined and may require client or subject-matter review."
+            }
+          ]
+        },
+        {
+          "title": "Are your accessibility services WCAG or PDF/UA compliant?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility production can be scoped against a specified standard and acceptance criteria. Conformance for a particular deliverable must be established through the agreed evaluation process. A blanket compliance guarantee does not apply to all projects."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide accessibility testing reports?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Testing summaries, issue lists or validation information may be included when commissioned. The report type, tools, manual checks and acceptance criteria should be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Is assistive-technology testing included?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Where required and supported, assistive-technology testing should be defined by platform, technology, test cases and agreed reporting requirements."
+            }
+          ]
+        },
+        {
+          "title": "Is accessibility remediation the same as a formal accessibility audit?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. Remediation focuses on making agreed changes, while an audit evaluates content against defined criteria and documents findings. A project may involve either or both activities, depending on scope."
+            }
+          ]
+        },
+        {
+          "title": "What information is needed for an accessibility quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide representative files, source formats, approximate volume, the target accessibility requirements, known issues, required deliverables and preferred schedule."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request an Accessibility Assessment",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need to improve an existing PDF, prepare an accessible EPUB, remediate office documents or assess a publishing accessibility requirement?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your file formats, representative materials, target accessibility criteria and expected deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review your requirements and discuss an appropriate remediation or accessibility production workflow."
+        },
+        {
+          "kind": "link",
+          "text": "Request an Accessibility Assessment",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 276
+}

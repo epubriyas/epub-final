@@ -1,5 +1,6 @@
 build
-dist / media
+dist/
+media/
 node_modules
 .DS_Store
 .env
@@ -15,7 +16,6 @@ public/sitemap*.xml
 
 
 # Playwright
-node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
@@ -24,12 +24,23 @@ node_modules/
 # Local database backups contain private records; never commit.
 .local-backups/
 private-uploads/
-artifacts/v2/baseline/
 
-.env.production
 backups/
 *.tsbuildinfo
 .translation-cache/
 
-.vercel
 .env*
+/test.env
+
+# Keep setup templates available in a fresh clone.
+!.env.example
+!deployment/.env.production.example
+
+# Generated audits, screenshots, document extracts and local scratch files.
+/artifacts/
+/tmp/
+/temp/
+/.tmp-*
+*.log
+*.bak
+*.orig

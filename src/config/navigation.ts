@@ -147,39 +147,27 @@ export const navigation: NavigationSection[] = [
     href: '/about-us',
     overviewLabel: 'Discover EPUBTRANS',
     description:
-      'Meet the people, purpose and capabilities behind your next publishing and localization project.',
+      'Company expertise, international production collaboration and career opportunities.',
     groups: [
       {
         title: 'About EPUBTRANS',
-        description: 'Our purpose. Your publishing partner.',
+        description: 'Company profile, expertise and working approach.',
         items: [
-          { label: 'About Us', href: '/about-us' },
-          { label: 'Who We Are', href: '/about-us#who-we-are' },
-          { label: 'Who We Work With', href: '/about-us#who-we-work-with' },
-          { label: 'What We Do', href: '/about-us#what-we-do' },
-          { label: 'Our Approach', href: '/about-us#our-approach' },
-          { label: 'Mission & Vision', href: '/about-us#mission-vision' },
-          { label: 'Where We Work', href: '/about-us#where-we-work' },
+          { label: 'About EPUBTRANS', href: '/about-us' },
         ],
       },
       {
-        title: 'Global Presence',
-        description: 'Content for different markets and audiences.',
+        title: 'Global Delivery & Collaboration',
+        description: 'Location, international projects and language requirements.',
         items: [
-          { label: 'Global Capabilities', href: '/company/global-presence#global-capabilities' },
-          { label: 'Locations', href: '/company/global-presence#locations' },
-          { label: 'Language Coverage', href: '/company/global-presence#language-coverage' },
-          { label: 'Regional Expertise', href: '/company/global-presence#regional-expertise' },
+          { label: 'Global Delivery & Collaboration', href: '/company/global-presence' },
         ],
       },
       {
         title: 'Careers',
-        description: 'Bring your craft to our next chapter.',
+        description: 'Opportunities, roles and applications.',
         items: [
           { label: 'Careers', href: '/company/careers' },
-          { label: 'Open Positions', href: '/company/careers#open-roles' },
-          { label: 'Life at EPUBTRANS', href: '/company/careers#life-at-epubtrans' },
-          { label: 'Internships', href: '/company/careers#internships' },
         ],
       },
     ],

@@ -24,7 +24,7 @@ export default async function Careers() {
       <header className={`et-container ${styles.hero}`}>
         <div>
           <p className="et-label">COMPANY / CAREERS</p>
-          <h1>Your craft. A meaningful next chapter.</h1>
+          <h1>Careers at EPUBTRANS</h1>
           <p>
             Bring your care for words, languages and digital content to the work behind every
             edition. Explore the opportunities that fit your experience and ambitions.
@@ -37,8 +37,8 @@ export default async function Careers() {
       </header>
       <CompanyPageNav current="careers" />
       <section id="life-at-epubtrans" className={`et-container ${styles.section}`}>
-        <p className="et-label">LIFE AT EPUBTRANS</p>
-        <h2>Different skills. A shared purpose.</h2>
+        <p className="et-label">AREAS OF WORK</p>
+        <h2>Areas of Work</h2>
         <p className={styles.intro}>
           Publishing brings together people who care about clarity, design and detail. Our work
           connects editorial judgement, language knowledge and digital production to help content
@@ -51,7 +51,7 @@ export default async function Careers() {
         <div className={styles.sectionTop}>
           <div>
             <p className="et-label">CURRENT OPPORTUNITIES</p>
-            <h2>Find your next chapter.</h2>
+            <h2>Current Opportunities</h2>
           </div>
           <p>
             {careers.length} {careers.length === 1 ? 'open role' : 'open roles'}
@@ -107,21 +107,19 @@ export default async function Careers() {
           </div>
         )}
       </section>
-      <section id="internships" className={`et-container ${styles.section} ${styles.internship}`}>
+      <section id="application-process" className={`et-container ${styles.section} ${styles.internship}`}>
         <div>
-          <p className="et-label">INTERNSHIPS / EARLY CAREERS</p>
-          <h2>Start with curiosity. Build your craft.</h2>
+          <p className="et-label">APPLICATION PROCESS</p>
+          <h2>Applying for a role</h2>
           <p className={styles.intro}>
-            Interested in editorial work, languages or digital publishing? Contact our team to ask
-            whether an internship opportunity is available in your area of interest. Availability,
-            duration and mentoring arrangements are confirmed by the team.
+            Review the requirements and application instructions in the relevant opening. Prepare an
+            introduction explaining your experience, skills and availability, with relevant work
+            samples where requested.
           </p>
           <div className={styles.roleActions}>
-            <a
-              href={`mailto:${email}?subject=${encodeURIComponent('Internship enquiry at EPUBTRANS')}`}
-            >
-              Enquire about internships <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
+            <Link href="/company/careers#open-roles">
+              View current opportunities <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
           </div>
         </div>
         <div className={styles.checklist}>

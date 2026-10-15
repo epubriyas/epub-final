@@ -1,0 +1,957 @@
+{
+  "sourceDocument": "graphic_design.docx",
+  "slug": "graphic-design-image-services",
+  "sourceCopyBlockCount": 246,
+  "seo": {
+    "title": "Graphic Design & Image Services for Publishers | EPUBTRANS",
+    "description": "Artwork preparation, figure formatting, illustration and image editing for book, journal and academic publishing projects. Discuss your requirements with EPUBTRANS."
+  },
+  "hero": {
+    "title": "Graphic Design & Image Services for Publishers",
+    "lead": "Publication artwork, figure preparation, image editing and visual-content production for book publishers, scholarly journals and localization teams.",
+    "paragraphs": [
+      "EPUBTRANS provides graphic design and image services to support the preparation of print and digital publications.",
+      "Our documented service portfolio includes graphic design and publishing production, while the existing Graphic Design & Image Services offering covers illustrations, charts, infographics, image editing and visual consistency.",
+      "We work with supplied artwork, reference materials and publication specifications to assess the preparation or adaptation of images and graphic elements for an agreed output.",
+      "Whether your project involves figures for a scholarly journal, illustrations for a book, visual assets for a digital publication or graphics requiring localization, share the source materials and specifications with EPUBTRANS.",
+      "We can review the requirements and discuss an appropriate production scope."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Graphic Design & Image Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Discuss Your Artwork Requirements",
+        "href": "/contact-us",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Graphic Design and Image Production for Publishing",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Graphics are an important part of many publishing workflows."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A scholarly journal may need figures formatted according to its technical requirements. An educational book may contain diagrams, charts and illustrations that need consistent presentation. A digital publication may require images in different dimensions or file formats."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The source artwork is not always ready for these uses."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Some assets may have insufficient resolution, inconsistent labels, unsuitable proportions or missing editable elements. Others may need to be recreated from supplied references or adapted for different editions."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports selected image and artwork production tasks according to the publisher's requirements, available source materials and agreed deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Our focus is on preparing visual content for publishing production, not replacing the publisher's editorial, scientific or design-approval responsibilities."
+        }
+      ],
+      "groups": []
+    },
+    {
+      "title": "Our Graphic Design & Image Services",
+      "kind": "capabilities",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Figure and Artwork Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Books and journals often include figures that must follow defined presentation requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Artwork preparation can involve reviewing supplied figures and adapting their presentation for the intended publication format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the assignment, relevant work may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Figure sizing and placement preparation",
+                "Aligning labels and visual elements",
+                "Reviewing typography and line weights",
+                "Preparing appropriate figure dimensions",
+                "Adjusting file formats where supported",
+                "Organizing artwork panels and captions",
+                "Applying publisher-provided visual specifications",
+                "Preparing agreed outputs for typesetting or further review"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The publisher should provide the relevant figure requirements, especially where artwork must fit a specified column width, publication template or digital output."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Scientific and technical content must remain faithful to the supplied source."
+            }
+          ]
+        },
+        {
+          "title": "Artwork Redrawing and Illustration",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects require existing artwork to be redrawn or converted into a more suitable editable form."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve diagrams, line illustrations, explanatory graphics or other supplied visual references."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess eligible artwork recreation and illustration requirements based on the complexity of the source, the intended output and the available design tools."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It is important to distinguish between:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Reproducing an existing approved diagram",
+                "Adapting the appearance of supplied artwork",
+                "Creating a new illustration from an approved brief",
+                "Developing a new scientific or technical explanation"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "These activities have different requirements and should be quoted separately where appropriate."
+            },
+            {
+              "kind": "paragraph",
+              "text": "New scientific interpretations, missing research data and technical conclusions must be supplied or approved by the responsible author, publisher or subject-matter specialist."
+            }
+          ]
+        },
+        {
+          "title": "Image Editing and Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publication images may require technical preparation before they can be incorporated into page layouts or digital outputs."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the source materials and approved requirements, relevant tasks may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Cropping and resizing",
+                "Adjusting canvas dimensions",
+                "Reviewing image orientation",
+                "Preparing suitable output formats",
+                "Color-space preparation where applicable",
+                "Basic image cleanup",
+                "Image placement and framing adjustments",
+                "Preparing alternate sizes or versions"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Not every image can be improved sufficiently for every intended output."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For example, enlarging a low-resolution source or changing its resolution metadata cannot reliably recreate detail that is absent from the original."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Image processing must also respect applicable scientific image-integrity policies and should not misrepresent research results."
+            }
+          ]
+        },
+        {
+          "title": "Charts, Graphs and Infographics",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Charts and diagrams often need consistent styling, labels, typography and proportions across a publication."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess the preparation or adaptation of supplied visual information into an agreed publication design."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Projects may involve:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Formatting existing charts",
+                "Aligning diagram elements",
+                "Updating supplied text labels",
+                "Applying consistent visual styling",
+                "Preparing graphics for different publication sizes",
+                "Revising infographic layouts using approved content",
+                "Preparing editable visual assets where supported"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Source data, figure values and scientific interpretations remain subject to author or publisher approval."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Creating statistical analyses, checking research findings or inventing missing data is outside routine graphic production."
+            }
+          ]
+        },
+        {
+          "title": "Graphics for Books and Educational Publications",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Illustrated books, textbooks, manuals and other educational publications may include a combination of diagrams, figures, callouts, icons and photographs."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Artwork may need to remain consistent across chapters or editions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the agreed scope, production support can involve preparing visual assets, adapting supplied illustrations and coordinating image requirements with the typesetting process."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Book cover concepts and full cover production are addressed separately through EPUBTRANS's Cover Page Design Services."
+            }
+          ]
+        },
+        {
+          "title": "Graphics for Localization and Multilingual Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Localized publications may contain illustrations or images with embedded text."
+            },
+            {
+              "kind": "paragraph",
+              "text": "After the approved translation is available, some graphics may need editing to accommodate longer text, different scripts or revised labels."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess graphics adaptation as part of a broader localization production requirement."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The feasibility depends on access to editable source artwork, approved translated content, appropriate fonts and compatible tools."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Linguistic translation and language review are distinct from graphics editing unless separately commissioned."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Artwork Preparation for Books and Scholarly Journals",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Different publication types require different visual-production approaches."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Academic and Scholarly Journals",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Journal figures may be governed by detailed requirements for dimensions, resolution, format, typography, labeling and panel organization."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Some journals also have strict policies governing image manipulation, especially for photographs, microscopy, medical images and other scientific evidence."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The target journal's instructions and approved source artwork should be provided before production begins."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess the applicable artwork-formatting requirements but cannot guarantee journal acceptance solely because an image has been formatted."
+            }
+          ]
+        },
+        {
+          "title": "Book and Textbook Publishing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book production may involve chapter illustrations, diagrams, figures, photographic images and recurring visual elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The supplied page design, trim size and intended print or digital output can influence artwork preparation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "When an image is intended for typesetting, its final dimensions and relationship to surrounding content should be coordinated with the production specification."
+            }
+          ]
+        },
+        {
+          "title": "Professional and Educational Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Professional manuals, reports and training materials may contain explanatory graphics, charts, tables and visual instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These can be assessed for visual consistency, source-file preparation and delivery in the required format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Educational accuracy and subject-matter interpretation remain separate responsibilities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Image Quality, Technical Requirements and Research Integrity",
+      "kind": "quality",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Artwork quality should be evaluated against the actual source materials and publication specifications."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Resolution and Dimensions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Images intended for print or digital publication may have different dimension and resolution requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project should identify the intended output size and any specific requirements supplied by the publisher, printer or platform."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A low-resolution image may require a better original or separate recreation rather than simple enlargement."
+            }
+          ]
+        },
+        {
+          "title": "File Formats and Editability",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The most appropriate output depends on the artwork type and intended use."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Publishing projects may involve raster images, vector artwork, PDFs or native design files."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The ability to return an editable file depends on the source, available assets, software compatibility and commissioned production work."
+            }
+          ]
+        },
+        {
+          "title": "Color and Typography",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects require specific color spaces, fonts, line widths or image treatment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The supplied specifications should guide these decisions, rather than assuming that one color or image setting is suitable for all print and digital environments."
+            }
+          ]
+        },
+        {
+          "title": "Preserving Scientific Evidence",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "For scientific and medical publications, image adjustments must not introduce, remove, conceal or misleadingly emphasize research information."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Cropping, contrast adjustments, retouching and other image changes may be restricted by the journal's image-integrity policy."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The publisher or author should provide approved originals and instructions. Any required disclosures, scientific review or evidence verification remain with the responsible parties unless a separate service is agreed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS's routine graphics production should not be interpreted as a research-integrity investigation or certification."
+            }
+          ]
+        },
+        {
+          "title": "Accessibility Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A clearly prepared visual is not automatically accessible to every reader."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Alternative text, accessible document structure, color-contrast evaluation and other accessibility work may require separate specifications and testing."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Please refer to our Accessibility Services for supported accessibility-related production requirements."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Source Files and Project Requirements",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Complete artwork and clear specifications help identify the right production approach."
+        }
+      ],
+      "groups": [
+        {
+          "title": "What We Need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Useful inputs may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Source images or artwork",
+                "Editable design files, where available",
+                "PDF references or sample layouts",
+                "Original figures and illustrations",
+                "Target publication or journal",
+                "Intended print or digital output",
+                "Required image dimensions",
+                "Required formats and technical specifications",
+                "Brand or publisher style guides",
+                "Fonts and linked assets",
+                "Captions, labels and other approved text",
+                "Relevant source data for charts, where applicable",
+                "Localization text, if graphics require language adaptation",
+                "Rights and permissions information",
+                "Approximate number of assets",
+                "Preferred schedule and review requirements"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "For scholarly images, unmodified original files and the target journal's image policies may also be necessary."
+            }
+          ]
+        },
+        {
+          "title": "Source Assessment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable vector files offer different options from flattened images or screenshots."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A project involving straightforward resizing may require relatively little intervention, while recreation from poor-quality references may involve substantial manual work."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We assess these differences before defining the scope."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Graphic Design and Image Deliverables",
+      "kind": "narrative",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The final outputs depend on the commissioned work and the intended publishing workflow."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Possible deliverables include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Prepared artwork and figures",
+            "Edited publication images",
+            "Reformatted charts and diagrams",
+            "Recreated or adapted illustrations",
+            "Updated labels and visual elements",
+            "Images exported to agreed dimensions and formats",
+            "Editable design assets, where available and included",
+            "Artwork prepared for integration into page-layout files",
+            "Localized graphic assets",
+            "Issue lists or review notes, where commissioned"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "File formats must be confirmed for each project."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Examples of publishing image formats include TIFF, JPEG, PNG, EPS, SVG and PDF, but support for a particular version, feature or native application file must be verified before production."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The delivery agreement should specify the required formats, editable-file expectations, number of versions and correction responsibilities."
+        }
+      ],
+      "groups": []
+    },
+    {
+      "title": "Our Graphic Design and Image Production Workflow",
+      "kind": "workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Artwork and Brief",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review the supplied images, reference files, publication requirements and intended outputs."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Missing editable files, unclear labels and technical concerns can be identified at this stage."
+            }
+          ]
+        },
+        {
+          "title": "2. Confirm the Production Scope",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We clarify which artwork activities are required and which remain the responsibility of the publisher, designer or author."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This includes output formats, permitted adjustments, review stages and any required source-preservation rules."
+            }
+          ]
+        },
+        {
+          "title": "3. Prepare or Adapt the Visual Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed artwork preparation, editing, illustration adaptation or related tasks are performed using an appropriate supported workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Changes requiring editorial or scientific decisions are referred to the responsible reviewer."
+            }
+          ]
+        },
+        {
+          "title": "4. Conduct Agreed Quality Checks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, visual and technical checks may cover dimensions, labels, file integrity, formatting and consistency with the supplied specification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A proof or sample may be provided for review when included in the agreement."
+            }
+          ]
+        },
+        {
+          "title": "5. Prepare the Final Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Approved files are organized according to the delivery requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any separately commissioned source files, asset packages or outstanding notes are included as agreed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quality Checks and Approval Responsibilities",
+      "kind": "quality",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The quality review depends on the type of artwork, publication requirements and commissioned activities."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Visual and Layout Consistency",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Checks may address alignment, spacing, font appearance, labeling and consistency across a related set of assets."
+            }
+          ]
+        },
+        {
+          "title": "Technical Output Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where included, checks can address file dimensions, format, resolution information and basic file integrity."
+            }
+          ]
+        },
+        {
+          "title": "Source Comparison",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recreated or adapted artwork may require comparison against the supplied source or approved reference."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This review must distinguish presentation changes from changes to content meaning."
+            }
+          ]
+        },
+        {
+          "title": "Publisher and Author Approval",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The publisher or its designated reviewer remains responsible for confirming editorial accuracy, scientific meaning, rights clearance and acceptance of the final artwork."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The agreed QA process does not automatically establish scientific validity, copyright clearance, accessibility conformance or third-party platform acceptance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "What Affects Project Scope and Scheduling?",
+      "kind": "scope",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Artwork Condition",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Low-quality scans, incomplete diagrams and missing editable files can require additional preparation."
+            }
+          ]
+        },
+        {
+          "title": "Number and Complexity of Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A small collection of simple figures differs from a larger project containing detailed diagrams, illustrations and multilayer artwork."
+            }
+          ]
+        },
+        {
+          "title": "Creative Versus Technical Work",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Resizing an existing image, redrawing a supplied figure and designing an original illustration are different tasks."
+            }
+          ]
+        },
+        {
+          "title": "Intended Publication Formats",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Print and digital outputs may need different dimensions, image characteristics and file formats."
+            }
+          ]
+        },
+        {
+          "title": "Source Rights and Approvals",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Missing permissions, incomplete scientific source information or unapproved figure changes can affect the project."
+            }
+          ]
+        },
+        {
+          "title": "Review and Correction Stages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Additional design options, revision rounds, delayed publisher feedback or changes to approved source content can affect the agreed scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These factors are reviewed before project estimates and delivery arrangements are confirmed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "kind": "related",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Cover Page Design Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Cover design for suitable books, journals and other publication requirements."
+            }
+          ],
+          "href": "/cover-page-design-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Page composition and the integration of approved figures and other visual assets into book and journal layouts."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A broader overview of editorial, print and digital production services for publishers."
+            }
+          ],
+          "href": "/services#publishing-editorial"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Document layout, editable content preparation and multilingual desktop publishing workflows."
+            }
+          ],
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF reconstruction, OCR and related document conversion when source materials need additional preparation."
+            }
+          ],
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB creation and digital publication production using suitable content and visual assets."
+            }
+          ],
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related production and remediation for supported publication and document formats."
+            }
+          ],
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "kind": "faq",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What does EPUBTRANS's Graphic Design & Image Services offering include?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The documented service portfolio covers graphic design and production-related image work. The existing offering includes illustrations, infographics, charts, image preparation and editing. The exact tasks and outputs are confirmed for each assignment."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS prepare figures for academic journals?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Journal figure preparation can be assessed against supplied artwork, journal instructions and technical specifications. Any format-specific or scientific-image requirements must be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide figure redrawing services?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Eligible figure redrawing and artwork recreation can be assessed. The feasibility depends on the available source, content complexity, required editability and approved reference material."
+            }
+          ]
+        },
+        {
+          "title": "Can you improve a low-resolution image?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some image preparation may be possible, but enlarging a low-resolution file cannot reliably recover detail missing from the original. A higher-quality source or approved artwork recreation may be necessary."
+            }
+          ]
+        },
+        {
+          "title": "Can you create charts and infographics?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Graphic preparation and infographic-related work appear in the existing service offering. Requirements for new designs, data visualization, research interpretation and editable outputs need separate scope confirmation."
+            }
+          ]
+        },
+        {
+          "title": "Do you support image editing for scientific publications?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Suitable technical preparation can be assessed, but changes must comply with the target publication's image-integrity requirements. Scientific data must not be misleadingly altered."
+            }
+          ]
+        },
+        {
+          "title": "Can you provide editable artwork files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable deliverables depend on the source material, design application and agreed work. Please identify the required native file format when requesting a quote."
+            }
+          ]
+        },
+        {
+          "title": "Do you work with Adobe Photoshop and Illustrator files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS has historically documented experience with Photoshop and Illustrator-related production assets. Current application versions, supported features and export requirements must be confirmed before the project."
+            }
+          ]
+        },
+        {
+          "title": "Can you adapt images containing translated text?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Graphics requiring post-translation text integration can be assessed where approved translations, suitable fonts and editable artwork are available. Linguistic review is separately scoped."
+            }
+          ]
+        },
+        {
+          "title": "Are book cover design services included?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and journal cover design requirements are covered by a separate EPUBTRANS service. Please review our Cover Page Design Services page for that scope."
+            }
+          ]
+        },
+        {
+          "title": "Are image accessibility requirements included?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Alternative text and accessibility remediation have separate requirements that should be agreed with the applicable Accessibility Services scope."
+            }
+          ]
+        },
+        {
+          "title": "What information is needed for an artwork quotation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide representative artwork, the number of assets, intended publication, current file formats, output specifications, available editable sources, required changes and preferred schedule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Request a Graphic Design & Image Quote",
+      "kind": "cta",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need help preparing images, figures, illustrations or graphic assets for your publication?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share the artwork requirements, representative source files, technical specifications and intended outputs with EPUBTRANS."
+        },
+        {
+          "kind": "paragraph",
+          "text": "We can review the available materials and discuss suitable graphic design, image preparation and related publishing production services."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Graphic Design & Image Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": []
+    }
+  ],
+  "showTransformation": false
+}

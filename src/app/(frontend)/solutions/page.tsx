@@ -15,23 +15,24 @@ export default async function SolutionsPage() {
     <main>
       <PageHero
         eyebrow="SOLUTIONS"
-        title="Connect the whole content journey."
-        description="Bring your content requirements together. Explore solutions built around publication, format and audience."
+        title="Publishing and localization solutions"
+        description="Explore connected production services for your publication, file formats and target audiences."
       />
-      <section className="et-container et-content-section">
-        {documents.map((doc) => (
-          <Link key={doc.id} className="et-content-row" href={`/solutions/${doc.slug}`}>
-            <div>
-              <p className="et-label">SOLUTION</p>
-              <h3>{doc.title}</h3>
-              <p>{doc.shortDescription}</p>
-            </div>
-            <span>Explore ↗</span>
-          </Link>
-        ))}
-      </section>
+      {documents.length > 0 && (
+        <section className="et-container et-content-section">
+          {documents.map((doc) => (
+            <Link key={doc.id} className="et-content-row" href={`/solutions/${doc.slug}`}>
+              <div>
+                <p className="et-label">SOLUTION</p>
+                <h3>{doc.title}</h3>
+                <p>{doc.shortDescription}</p>
+              </div>
+              <span>Explore ↗</span>
+            </Link>
+          ))}
+        </section>
+      )}
       <ContentCTA />
     </main>
   )
 }
-

@@ -1,0 +1,621 @@
+{
+  "sourceDocument": "EPUBTRANS Typesetting services.docx",
+  "slug": "typesetting",
+  "seo": {
+    "title": "Book & Journal Typesetting Services | EPUBTRANS",
+    "description": "EPUBTRANS provides book and journal typesetting, page composition and layout production for publishers. Share your manuscript and specifications for a quote."
+  },
+  "hero": {
+    "title": "Book & Journal Typesetting Services",
+    "lead": "Professional page composition and layout production for book publishers, academic publishers and journal publishing teams.",
+    "paragraphs": [
+      "EPUBTRANS provides book and journal typesetting services to help publishers transform manuscripts into consistently formatted pages for print and digital publication workflows.",
+      "Our typesetting services cover page composition, typography, publication layout, tables, figures, equations, references and other content elements according to your design and production specifications.",
+      "Whether you need typesetting for a new title, an academic journal or an existing publication requiring layout updates, we can review your source files and define the appropriate production scope."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Typesetting Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Publishing Services",
+        "href": "/services#publishing-editorial",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Typesetting for Books, Journals & Academic Publications",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Different publication types require different approaches to page composition. EPUBTRANS supports typesetting requirements based on the structure, complexity and intended use of the content."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Book Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We support publishers with book page composition and formatting according to supplied designs, templates and publishing specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, typesetting activities may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Chapter and section formatting",
+                "Typography and paragraph styles",
+                "Page numbering, running heads and footers",
+                "Table of contents formatting",
+                "Footnotes, endnotes and references",
+                "Tables, illustrations and image placement",
+                "Page-layout consistency across the publication"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Book typesetting can be scoped for text-led publications or more complex layouts involving numerous visual and structural elements."
+            }
+          ]
+        },
+        {
+          "title": "Journal Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Academic and scholarly journals often require consistent article layouts, references, figures, tables and publication-specific formatting."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS supports journal article composition based on publisher or journal style requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The production scope may include article headings, author information, abstracts, body text, mathematical content, citations, references, captions and related publication elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where journals use established templates or design specifications, these can guide the production workflow."
+            }
+          ]
+        },
+        {
+          "title": "Academic & Technical Typesetting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Academic and technical publications may contain mathematical equations, scientific symbols, complex tables, figures and multiple levels of headings."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Such content requires careful handling during page composition to preserve the intended presentation and maintain consistency."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We assess the complexity of the supplied material and clarify any specialist formatting requirements before confirming the production approach."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Typesetting & Page Composition Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Typesetting involves more than placing manuscript text into pages. It requires organizing content according to a defined typographic and layout structure."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Page Layout & Composition",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of publication pages using the supplied design specifications, page dimensions, templates and formatting requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Activities may include managing margins, columns, text flow, page breaks and the positioning of publication elements."
+            }
+          ]
+        },
+        {
+          "title": "Typography & Text Formatting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Application of consistent text styles throughout the publication, including heading hierarchies, body text, captions, quotations, footnotes and other content elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Typography requirements may include font selection or application, line spacing, paragraph spacing, alignment and hyphenation according to the approved design."
+            }
+          ]
+        },
+        {
+          "title": "Tables, Figures & Equations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Formatting and placement of tables, charts, illustrations, equations and other technical elements within the page layout."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work depends on source quality, complexity, available artwork and the publisher's requirements."
+            }
+          ]
+        },
+        {
+          "title": "References & Publication Elements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Formatting of bibliographies, reference lists, footnotes, endnotes, running heads, page numbers and other publication elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The creation or substantive editing of references is separate from their visual formatting unless explicitly included in the project."
+            }
+          ]
+        },
+        {
+          "title": "Proof Corrections & Layout Updates",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Application of approved author or publisher corrections to typeset pages."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Correction rounds, revision limits, responsibility for content changes and final approval stages are defined during project scoping."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "What We Need for a Typesetting Project",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Providing complete source materials and production instructions helps clarify the scope and reduce avoidable production queries."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the publication, useful materials may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Manuscript files, preferably in an editable format",
+            "Publisher style sheets or design specifications",
+            "Existing templates or reference publication samples",
+            "Page size, margins and layout instructions",
+            "Tables, figures and image assets",
+            "Mathematical equations and special-character requirements",
+            "Font files or approved font specifications, where applicable",
+            "Instructions for references, footnotes, indexes and other publication elements",
+            "Required proof format and final delivery specifications"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "If some materials are unavailable, we can review the information provided and identify what is needed before production begins."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Typesetting Deliverables",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The final deliverables depend on the publication type, source files and agreed production requirements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Possible outputs include:"
+        }
+      ],
+      "groups": [
+        {
+          "title": "Typeset Page Proofs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF proofs or other agreed review files for checking page composition and incorporating approved corrections."
+            }
+          ]
+        },
+        {
+          "title": "Final Publication PDFs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF files prepared against the agreed print or digital publishing specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Print-ready file preparation and printer-specific checks are included only when defined in the project scope."
+            }
+          ]
+        },
+        {
+          "title": "Editable Production Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Native layout files and associated production assets in agreed formats, where required and supported."
+            }
+          ]
+        },
+        {
+          "title": "Supporting Production Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Related layout resources and agreed supporting files needed for the client's downstream publishing workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The exact file formats, versions, packaging and delivery requirements are confirmed before production."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Typesetting Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Source File & Specification Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We examine the manuscript, design references, publication requirements and available supporting assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "During this stage, we identify structural or formatting complexities that may affect production."
+            }
+          ]
+        },
+        {
+          "title": "2. Layout Preparation & Sample Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where the project requires it, we prepare or adapt the page layout based on the approved design specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A sample or representative pages may be prepared for review when included in the production process."
+            }
+          ]
+        },
+        {
+          "title": "3. Typesetting & Page Composition",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The manuscript is formatted and composed according to the agreed layout, content structure and publication specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Tables, figures, references and other content elements are incorporated as required."
+            }
+          ]
+        },
+        {
+          "title": "4. Quality Checks & Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Relevant visual, layout and content-presentation checks are performed according to the project scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Approved corrections and revision requests are incorporated through the agreed review process."
+            }
+          ]
+        },
+        {
+          "title": "5. Final File Preparation & Delivery",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "After the required reviews and approvals, final files are prepared in the agreed formats and delivery structure."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "Quality Checks for Typeset Publications",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Typesetting quality depends on how accurately the prepared pages follow the required publication specifications."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, quality checks may cover:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Consistency of text styles and heading levels",
+            "Page layout, margins and spacing",
+            "Running heads, footers and page numbering",
+            "Table, figure and caption placement",
+            "Text overflow, missing content and unexpected page breaks",
+            "Equation and special-character presentation",
+            "Reference and footnote formatting",
+            "Visual comparison with an approved design or reference",
+            "Final file structure and delivery requirements"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Quality checks are performed according to the agreed scope. Copyediting, language proofreading, independent technical validation and printer-specific preflight are not automatically included in a typesetting assignment."
+        }
+      ],
+      "groups": [],
+      "kind": "quality"
+    },
+    {
+      "title": "What Affects Typesetting Scope & Schedule?",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The effort required for a publication depends on several factors."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Publication Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A text-only manuscript typically presents different requirements from an illustrated textbook or a technical journal article containing extensive equations, tables and figures."
+            }
+          ]
+        },
+        {
+          "title": "Source File Condition",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Well-structured editable manuscripts are generally easier to prepare than inconsistent, incomplete or non-editable source files."
+            }
+          ]
+        },
+        {
+          "title": "Design & Formatting Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publisher-specific templates, page dimensions, typographic standards and complex page structures affect the production approach."
+            }
+          ]
+        },
+        {
+          "title": "Corrections & Review Cycles",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The number and nature of review stages, author corrections and changes after pagination can influence the work required."
+            }
+          ]
+        },
+        {
+          "title": "Required Deliverables",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A project requiring page proofs and final PDFs may have a different scope from one requiring editable production files, additional formats or downstream publishing preparation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We review these requirements before defining the production scope and preparing an estimate."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related Publishing Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Typesetting is one part of the wider publishing-production workflow. Depending on your requirements, related EPUBTRANS services may include:"
+        }
+      ],
+      "groups": [
+        {
+          "title": "Copyediting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editorial preparation and language consistency work before typesetting, where required."
+            }
+          ],
+          "href": "/copyediting-services"
+        },
+        {
+          "title": "Proofreading Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Review of prepared content or publication proofs within an agreed proofreading scope."
+            }
+          ],
+          "href": "/proofreading-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUB creation and eBook conversion for publications intended for digital reading environments."
+            }
+          ],
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "XML & Structured Content Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Structured-content preparation for applicable academic and journal publishing workflows."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "Graphic Design & Image Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation or refinement of publication graphics and visual assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services can be discussed separately or assessed as part of a broader production requirement."
+            }
+          ],
+          "href": "/graphic-design-image-services"
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What types of publications can EPUBTRANS typeset?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Our documented service scope includes book and journal typesetting. We can assess academic, technical and other publication requirements based on the manuscript, content complexity and expected outputs."
+            }
+          ]
+        },
+        {
+          "title": "Can you work with manuscripts supplied in Microsoft Word?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Word manuscripts are among the documented input types for publishing production. We review their structure, formatting and supporting assets before confirming the production approach."
+            }
+          ]
+        },
+        {
+          "title": "Can you typeset books or journals containing equations, tables and figures?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "These elements are part of the documented typesetting scope. Their complexity, source format and required presentation are assessed during project planning."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide print-ready PDF files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Print-ready PDF preparation may be included where specified. Printer requirements, final proof approval and any preflight checks should be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Is proofreading included with typesetting?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Typesetting focuses on page composition and formatting. Editorial proofreading can be included as a separately agreed service."
+            }
+          ]
+        },
+        {
+          "title": "Can you follow our existing publisher design or journal template?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publisher design references, style sheets and layout templates can be used to define the required page composition. Please provide the relevant materials for review."
+            }
+          ]
+        },
+        {
+          "title": "Can we request corrections after receiving typeset proofs?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Correction rounds can be included in the agreed workflow. The number of review stages, permitted changes and responsibilities should be established before production."
+            }
+          ]
+        },
+        {
+          "title": "What information do you need to prepare a quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A representative manuscript, approximate page or word count, publication type, sample pages, formatting instructions, expected deliverables and preferred schedule help us assess your requirements."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request a Typesetting Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Looking for book, journal or academic publishing typesetting support?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your manuscript details, publication specifications, approximate volume and expected deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review the information and discuss a suitable production approach for your project."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Typesetting Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 149
+}

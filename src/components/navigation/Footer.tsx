@@ -1,19 +1,12 @@
 import Link from '@/components/i18n/LocalizedLink'
-import { ArrowRight, ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
 import { navigation } from '@/config/navigation'
 import { Logo } from './Logo'
 import { getSiteSettings } from '@/lib/content'
+import { getLandingContent } from '@/lib/landing-content'
+import { visibleDirectoryCategories } from '@/lib/landing-directory'
+import styles from './footer.module.css'
 const footerGroups = [
-  {
-    title: 'Capabilities',
-    links: [
-      { label: 'Publishing & content', href: '/services' },
-      { label: 'Translation & localization', href: '/translation-services' },
-      { label: 'Subtitling', href: '/subtitling-services' },
-      { label: 'eLearning localization', href: '/elearning-localization-services' },
-      { label: 'Accessibility', href: '/accessibility-services' },
-    ],
-  },
   {
     title: 'Explore',
     links: [
@@ -27,52 +20,73 @@ const footerGroups = [
     title: 'Company',
     links: [
       { label: 'About EPUBTRANS', href: '/about-us' },
-      { label: 'Global Presence', href: '/company/global-presence' },
+      { label: 'Global Delivery & Collaboration', href: '/company/global-presence' },
       { label: 'Careers', href: '/company/careers' },
-      { label: 'Open opportunities', href: '/company/careers#open-roles' },
       { label: 'Contact us', href: '/contact-us' },
     ],
   },
 ]
 export async function Footer() {
-  const settings = await getSiteSettings()
+  const [settings, { directory }] = await Promise.all([getSiteSettings(), getLandingContent()])
+  const groups = [
+    {
+      title: 'Capabilities',
+      links: visibleDirectoryCategories(directory).map((category) => ({
+        label: category.title,
+        href: `/services#${category.anchorId}`,
+      })),
+    },
+    ...footerGroups,
+  ]
   const contactDetailsApproved = settings.contactDetailsApproved === true
   const email = contactDetailsApproved ? settings.email || '' : ''
   const phone = contactDetailsApproved ? settings.phone || '' : ''
   const location = settings.location || 'Chennai, India'
   return (
-    <footer className="et-footer">
+    <footer className={`et-footer ${styles.footer}`}>
       <div className="et-container">
-        <div className="et-footer-cta">
-          <div>
-            <p className="et-label">YOUR NEXT CHAPTER STARTS HERE</p>
-            <h2>
-              Content built for
-              <br />a wider world.
-            </h2>
-            <p className="et-footer-cta-copy">
-              Publishing expertise. Language precision. Digital possibilities.
-            </p>
-          </div>
-          <Link className="et-button et-button-light" href="/get-a-quote">
-            Discuss your project <ArrowRight className="et-arrow" size={18} />
-          </Link>
-        </div>
-        <div className="et-footer-grid">
-          <div className="et-footer-brand">
+        <div className={styles.top}>
+          <div className={styles.brand}>
             <Logo />
             <p>
               From the first manuscript to the final market. Your partner in publishing,
               localization and digital content.
             </p>
-            <Link className="et-footer-brand-link" href="/services">
+            <Link className={styles.brandLink} href="/services">
               Discover our capabilities <ArrowUpRight size={15} aria-hidden="true" />
             </Link>
           </div>
-          {footerGroups.map((group) => (
+          <div className={styles.contact}>
+            <h3>Let’s connect</h3>
+            <p>Tell us what you’re working on.</p>
+            <Link className={styles.quote} href="/get-a-quote">
+              Discuss your project <ArrowUpRight size={15} aria-hidden="true" />
+            </Link>
+            <div className={styles.contactDetails}>
+              {email && (
+                <a href={`mailto:${email}`}>
+                  <Mail size={15} aria-hidden="true" />
+                  <span>{email}</span>
+                </a>
+              )}
+              {phone && (
+                <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>
+                  <Phone size={15} aria-hidden="true" />
+                  <span>{phone}</span>
+                </a>
+              )}
+              <span className={styles.location}>
+                <MapPin size={15} aria-hidden="true" />
+                <span>{location}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className={styles.navigation}>
+          {groups.map((group, index) => (
             <nav
               key={group.title}
-              className="et-footer-nav"
+              className={index === 0 ? styles.capabilities : undefined}
               aria-label={`Footer ${group.title.toLowerCase()}`}
             >
               <h3>{group.title}</h3>
@@ -85,18 +99,8 @@ export async function Footer() {
               </ul>
             </nav>
           ))}
-          <div className="et-footer-contact">
-            <h3>Let’s connect</h3>
-            <p>Tell us what you’re working on.</p>
-            {email && <a href={`mailto:${email}`}><Mail size={15} aria-hidden="true" /><span>{email}</span></a>}
-            {phone && <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}><Phone size={15} aria-hidden="true" /><span>{phone}</span></a>}
-            <span className="et-footer-location">
-              <MapPin size={15} aria-hidden="true" />
-              <span>{location}</span>
-            </span>
-          </div>
         </div>
-        <div className="et-footer-base">
+        <div className={styles.base}>
           <span>© {new Date().getFullYear()} EPUBTRANS. All rights reserved.</span>
           <nav aria-label="Legal navigation">
             <Link href="/privacy-policy">Privacy</Link>

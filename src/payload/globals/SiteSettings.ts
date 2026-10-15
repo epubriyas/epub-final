@@ -28,7 +28,7 @@ export const SiteSettings: GlobalConfig = {
           type: 'textarea',
           admin: {
             description:
-              'Optional replacement for the current mission. Review the About EPUBTRANS draft and obtain management approval before enabling it.',
+              'Optional approved replacement for the ET-ABOUT-001 v1.0 mission. Leave blank to use the approved handoff text.',
           },
         },
         {
@@ -36,7 +36,7 @@ export const SiteSettings: GlobalConfig = {
           type: 'textarea',
           admin: {
             description:
-              'Optional replacement for the current vision. Review the About EPUBTRANS draft and obtain management approval before enabling it.',
+              'Optional approved replacement for the ET-ABOUT-001 v1.0 vision. Leave blank to use the approved handoff text.',
           },
         },
         {

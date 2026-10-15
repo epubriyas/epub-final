@@ -1,0 +1,1084 @@
+{
+  "sourceDocument": "EPUBTRAN_Elearning_Localization.docx",
+  "slug": "elearning-localization",
+  "seo": {
+    "title": "eLearning Localization & Course Production | EPUBTRANS",
+    "description": "EPUBTRANS supports eLearning localization, course layout adaptation, multimedia integration and QA for supported Storyline, Rise and Lectora workflows."
+  },
+  "hero": {
+    "title": "eLearning Localization Services",
+    "lead": "Multilingual course production, layout adaptation and localization support for training companies, localization service providers and learning-content teams.",
+    "paragraphs": [
+      "EPUBTRANS provides eLearning localization services to help organizations prepare digital training content for different languages and learning audiences.",
+      "Our services cover course text integration, multilingual layout adaptation, on-screen graphics, interactive content, assessments, multimedia coordination and preparation of localized course deliverables.",
+      "Our documented production experience includes workflows involving Articulate Storyline, Rise and Lectora. The appropriate production method depends on the authoring environment, source files, language requirements and target delivery platform.",
+      "Whether you need to localize an existing course, integrate translated material or prepare multilingual training packages, we can review your project requirements and discuss a suitable production scope."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request an eLearning Localization Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Our Services",
+        "href": "/services#elearning-multimedia",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "eLearning Localization Beyond Translation",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "An eLearning course contains more than text."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Slides, interactive elements, quizzes, videos, navigation controls, audio and completion settings all contribute to the learner experience."
+        },
+        {
+          "kind": "paragraph",
+          "text": "When course content is adapted for another language, these elements may require additional production work."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Translated text can change the space needed within buttons or text boxes. On-screen graphics may contain embedded text. Multimedia timing may need adjustment, while interactive elements and assessments must be reviewed within the localized course."
+        },
+        {
+          "kind": "paragraph",
+          "text": "eLearning localization production addresses these requirements according to the source materials and agreed specifications."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports localization service providers, translation agencies and learning-content teams with the technical preparation and adaptation of eligible course materials."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our eLearning Localization Capabilities",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Course Text Integration & Formatting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Incorporating approved target-language content into supported eLearning authoring environments."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, tasks may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Integrating translated lesson text and headings",
+                "Updating buttons, labels and navigation text",
+                "Adjusting text containers",
+                "Correcting spacing and alignment",
+                "Reviewing language-specific typography",
+                "Formatting feedback messages and assessment text",
+                "Addressing layout changes caused by translated content"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work is based on the translated material and production instructions supplied or agreed for the project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation accuracy and linguistic approval are separate requirements unless specifically commissioned."
+            }
+          ]
+        },
+        {
+          "title": "Multilingual Course Layout Adaptation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Adapting course layouts to accommodate changes in text length, fonts and language presentation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve resizing text areas, adjusting the placement of visual elements, updating slide layouts and reviewing content flow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Languages with right-to-left direction or complex scripts may require additional assessment of the authoring tool, available fonts and presentation behavior."
+            }
+          ]
+        },
+        {
+          "title": "Interactive Content Localization",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "eLearning courses may contain clickable objects, tabs, hotspots, branching activities and other interactive components."
+            },
+            {
+              "kind": "paragraph",
+              "text": "When these elements contain localized text or supporting assets, production changes may be required."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the course and agreed scope, we can assess:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Buttons and interactive labels",
+                "Pop-up content and feedback messages",
+                "Clickable navigation elements",
+                "States and triggers affected by localized content",
+                "Branching content and scenario screens",
+                "Language-dependent variables and display elements"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Complex programming modifications, new interaction development and substantial functional redesign are separately scoped activities."
+            }
+          ]
+        },
+        {
+          "title": "Quiz & Assessment Adaptation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Quizzes and knowledge checks may require more than replacing the question text."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Relevant production activities may include integrating translated questions, answer options, feedback messages, result-screen content and assessment-related labels."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Changes to scoring logic, branching rules, question banks or completion conditions should be reviewed and approved before implementation."
+            }
+          ]
+        },
+        {
+          "title": "Graphics & On-Screen Text Localization",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some training courses contain screenshots, diagrams, illustrations and graphics with embedded text."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These elements may require replacement, editing or reconstruction before localized content can be displayed appropriately."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Work can include integrating translated graphic labels, adjusting visual layout and preparing updated assets where agreed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The source artwork, editability, image rights and expected output affect the work required."
+            }
+          ]
+        },
+        {
+          "title": "Audio, Video & Subtitle Integration",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multimedia elements may need to be adapted for the target language."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, production can involve integrating supplied voiceover files, subtitles, captions, revised scripts or localized video assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Audio recording, voice talent, translation, subtitle creation, video editing and narration synchronization must be identified separately when required."
+            }
+          ]
+        },
+        {
+          "title": "Course Packaging & Handoff",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Completed course content may need to be prepared for review, distribution or deployment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where supported and included in scope, this may involve publishing course output, preparing agreed packages and organizing the source files and associated assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required package format and compatibility checks depend on the authoring tool and target learning environment."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "eLearning Authoring Tools & Production Workflows",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS's documented service portfolio includes experience with selected eLearning authoring environments."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The availability of current versions, licenses, translation methods and publishing features must be confirmed for each project."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Articulate Storyline & Storyline 360",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Articulate Storyline courses may contain slides, animations, interactive objects, quizzes, triggers, variables and branching content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Localization production can involve adapting these elements while working within the supported project structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Relevant activities may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Integrating translated on-screen text",
+                "Adjusting slide layouts and text boxes",
+                "Updating navigation and feedback labels",
+                "Adapting graphical assets",
+                "Reviewing interactive content",
+                "Integrating localized media",
+                "Preparing agreed review or published output"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Storyline offers different translation and localization workflows depending on its version and project configuration."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The selected method must be reviewed before confirming compatibility or deliverables."
+            }
+          ]
+        },
+        {
+          "title": "Articulate Rise & Rise 360",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Rise courses use a responsive, block-based approach to digital learning content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Localization may require updates to lessons, text blocks, interactive activities, media, labels and knowledge checks."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the course and available permissions, supported workflows may involve translated content integration, course duplication, localization features, review and publication."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The availability of editable course access, subscription features and applicable localization methods must be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Lectora & Lectora Inspire",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Lectora courses may include structured pages, actions, interactive elements, assessments and supporting media."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Localization-related production can involve managing translated course content, adjusting layouts and reviewing the resulting course structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Documented Lectora workflows may use translation exports and imports, with the exact file format and process dependent on the application version."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project must be assessed for current compatibility, required access and publishing specifications."
+            }
+          ]
+        },
+        {
+          "title": "Other eLearning Environments",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Projects involving other authoring tools or existing course packages can be assessed individually."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Support for a particular application, proprietary source format, plugin or publishing environment should not be assumed without confirming the technical requirements."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "eLearning Production Support for Localization Agencies",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS works with localization service providers and translation agencies that require specialist production assistance for multilingual learning content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Our role can complement an agency's existing translation and project-management processes."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Production After Translation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "When approved translated content is supplied, EPUBTRANS can assess the work required to integrate it into supported authoring files and adapt the layouts."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This can help distinguish the linguistic phase from course-production activities."
+            }
+          ]
+        },
+        {
+          "title": "Preparation Before Translation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects require source review, content extraction or preparation of course assets before translation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These tasks may be included where the authoring tool, source access and agreed workflow support them."
+            }
+          ]
+        },
+        {
+          "title": "Defined Responsibilities",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A localization project may involve translators, linguistic reviewers, course developers, media producers and client stakeholders."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The agreed scope should identify who is responsible for translation, language approval, production changes, functional testing and final acceptance."
+            }
+          ]
+        },
+        {
+          "title": "Coordinated Language Deliverables",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Projects involving multiple target languages may require consistent version naming, common course specifications, reference materials and review instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We can assess these requirements as part of the project plan."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Translation & Multimedia Responsibilities",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "eLearning localization can involve several related services, but they are not automatically included in a single production assignment."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Translation & Linguistic Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation, terminology management, cultural adaptation and linguistic quality assurance are defined separately from technical course production unless the project agreement includes them."
+            }
+          ]
+        },
+        {
+          "title": "Subtitling & Captioning",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Subtitle translation, timed-text production and caption preparation may be required for videos or narrated content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Supported formats, timing rules and final media integration must be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "Voiceover & Narration",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Target-language voiceover can involve script preparation, voice talent, recording, audio editing and synchronization."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These activities require separate specifications for language, voice, timing, audio format and quality review."
+            }
+          ]
+        },
+        {
+          "title": "Instructional Design & Course Redesign",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Rewriting training objectives, redesigning learning scenarios, developing new assessments or creating substantially new interactions falls outside standard localization production unless explicitly commissioned."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This separation helps establish realistic deliverables and review responsibilities."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Source Files & Project Requirements",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The availability of editable course files and supporting assets is an important factor in eLearning localization."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Useful project inputs may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Original course project files or authorized authoring-tool access",
+            "Authoring application and version information",
+            "A reference course or published preview",
+            "Source and target languages",
+            "Approved translations or translation requirements",
+            "Glossaries and style guides",
+            "Graphic and image assets",
+            "Video, audio and subtitle files",
+            "Narration scripts and pronunciation instructions",
+            "Quizzes and assessment specifications",
+            "Interaction, variable and trigger requirements",
+            "Required publishing or LMS format",
+            "Accessibility criteria, where applicable",
+            "Review and acceptance instructions",
+            "Approximate course volume and preferred schedule"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Editable Course Source vs Published Package",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An editable course project generally provides different production options from a published web or LMS package."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A published package may not contain all the authoring information needed to make changes and republish the course."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where only published content is available, we can review the feasibility of reconstruction or alternative preparation. Complete editability or reconstruction cannot be assumed."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "eLearning Localization Deliverables",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Final deliverables depend on the authoring environment, project files, technical specifications and agreed scope."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Localized Course Project Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Updated, editable course projects in an agreed supported authoring format."
+            }
+          ]
+        },
+        {
+          "title": "Published Course Packages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Published files or packages prepared for an agreed delivery environment, where supported and commissioned."
+            }
+          ]
+        },
+        {
+          "title": "Updated Graphics & Media Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Localized or adapted text, images, audio-related files, subtitle assets and supporting production resources."
+            }
+          ]
+        },
+        {
+          "title": "Review Files & Preview Links",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Course previews or review materials made available through the agreed workflow and supported systems."
+            }
+          ]
+        },
+        {
+          "title": "QA Issues & Test Summaries",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Issue lists, correction logs or test summaries where the relevant review and reporting activities have been commissioned and completed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The delivery specification should identify the format, version, language organization, naming convention and any included acceptance evidence."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our eLearning Localization Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Source Course",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We examine the available authoring files, published course reference, multimedia assets, interactive components and target-language requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Technical dependencies and missing source materials are identified."
+            }
+          ]
+        },
+        {
+          "title": "2. Define Scope & Responsibilities",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We clarify the localization workflow, approved language content, authoring-tool versions, course deliverables, multimedia requirements and review stages."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any complex interactions, LMS testing, accessibility work or additional development tasks are separately identified."
+            }
+          ]
+        },
+        {
+          "title": "3. Prepare & Integrate Localized Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The approved target-language material is integrated into the supported course environment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Required layout and asset changes are performed according to the agreed specification."
+            }
+          ]
+        },
+        {
+          "title": "4. Review Layout & Course Behavior",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Applicable visual and functional checks are conducted."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Issues involving text overflow, navigation, media, quizzes or interactions are reviewed according to the agreed testing responsibilities."
+            }
+          ]
+        },
+        {
+          "title": "5. Apply Corrections & Prepare Delivery",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Approved corrections are incorporated through the defined review process."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final source files, publish packages and supporting assets are prepared for the agreed handoff."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "eLearning Quality Assurance & Functional Checks",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Course localization quality requires attention to both presentation and behavior."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the project, relevant checks may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Missing or untranslated on-screen text",
+            "Text overflow and incorrect alignment",
+            "Font and character rendering",
+            "Navigation labels and controls",
+            "Interactive element display",
+            "States, triggers and variables",
+            "Quiz questions and feedback presentation",
+            "Assessment navigation and result screens",
+            "Audio and subtitle synchronization",
+            "Image and graphic placement",
+            "Broken links or missing assets",
+            "Target-language course navigation",
+            "Published package completeness",
+            "Review in agreed browsers or devices"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Visual & Production QA",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Visual review examines whether translated content is displayed as intended and whether layout changes follow the approved design."
+            }
+          ]
+        },
+        {
+          "title": "Functional QA",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Functional review examines specified course behaviors, such as navigation, interactive objects, branching and assessment presentation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The test scenarios and acceptance criteria should be defined in advance."
+            }
+          ]
+        },
+        {
+          "title": "Linguistic QA",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Linguistic review evaluates the meaning, accuracy, terminology and suitability of the translated language."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It is distinct from technical production QA and is included only when separately agreed."
+            }
+          ]
+        }
+      ],
+      "kind": "quality"
+    },
+    {
+      "title": "Course Packaging, SCORM & LMS Requirements",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Learning management systems (LMSs) may require particular publishing packages and completion-tracking behavior."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the authoring tool and project, the requested output may involve a SCORM, xAPI, cmi5 or other supported distribution format."
+        },
+        {
+          "kind": "paragraph",
+          "text": "These requirements should be established before course publication."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Publishing Package Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where available and commissioned, the course may be published using the agreed authoring-tool settings."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The target package type, application version and output settings must be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "LMS Testing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Successful publishing from an authoring tool does not automatically demonstrate that a localized course behaves correctly in every LMS."
+            },
+            {
+              "kind": "paragraph",
+              "text": "When LMS testing is included, the test plan should identify the target system, package version, launch behavior, progress tracking, completion rules and assessment reporting requirements."
+            }
+          ]
+        },
+        {
+          "title": "Functional Equivalence",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A localized course should be reviewed against the agreed functional requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "However, complete functional equivalence, SCORM/xAPI conformance and acceptance by a specific LMS should not be promised without the relevant testing and documented evidence."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Accessibility Considerations for Localized Courses",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Accessible eLearning may require particular attention to navigation, reading order, visual content, captions, alternative text, keyboard interaction and compatibility with assistive technologies."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Localization can introduce additional issues involving language identification, reading direction, translated alternative text or changes to interactive elements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Where accessibility is a project requirement, the relevant criteria, target technologies and evaluation responsibilities should be defined separately."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Localization and routine functional QA do not automatically establish WCAG or Section 508 conformance."
+        },
+        {
+          "kind": "link",
+          "text": "Explore Accessibility Services",
+          "href": "/accessibility-services",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "What Affects eLearning Localization Scope & Schedule?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Authoring Tool & Version",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Different applications, versions and licensing arrangements provide different localization and publishing capabilities."
+            }
+          ]
+        },
+        {
+          "title": "Source File Availability",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable course projects, original media assets and appropriate application access can significantly affect production feasibility."
+            }
+          ]
+        },
+        {
+          "title": "Course Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Interactive screens, branching scenarios, quizzes, variables, animations and embedded modules may require additional attention."
+            }
+          ]
+        },
+        {
+          "title": "Number of Languages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The number of target languages, language-specific typography and review requirements influence project planning."
+            }
+          ]
+        },
+        {
+          "title": "Multimedia Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Narration, subtitles, translated graphics and synchronized media may introduce additional production stages."
+            }
+          ]
+        },
+        {
+          "title": "Testing & Delivery Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Requested devices, browsers, accessibility checks, LMS platforms, package formats and correction rounds influence the production effort."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We review these factors before confirming scope, costs or delivery schedules."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "eLearning localization may require other production activities depending on the source content and expected deliverables."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Desktop Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual layout and formatting for course handouts, workbooks, presentations and related documents."
+            }
+          ],
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Subtitling Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Subtitle and timed-text production for training videos and other media."
+            }
+          ],
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Voiceover-related production for course narration and multilingual media."
+            }
+          ],
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "Transcription Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Conversion of source audio or video content into written transcripts where required."
+            }
+          ],
+          "href": "/transcription-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related preparation and remediation for supported learning documents and digital content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services may be commissioned independently or coordinated within an agreed project."
+            }
+          ],
+          "href": "/accessibility-services"
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What is eLearning localization?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "eLearning localization is the adaptation of digital learning content for a target language or audience. In addition to translated text, it may involve course layout, graphics, navigation, assessments, multimedia and delivery requirements."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS work with Articulate Storyline 360?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Storyline and Storyline 360 are part of EPUBTRANS's documented workflow experience. Current version compatibility, source-file access, licensing and deliverables must be confirmed for the project."
+            }
+          ]
+        },
+        {
+          "title": "Do you support Articulate Rise 360 localization?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Rise is included in EPUBTRANS's documented eLearning portfolio. Supported localization methods, course access, permissions and publishing requirements must be assessed for the current environment."
+            }
+          ]
+        },
+        {
+          "title": "Can you localize Lectora courses?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Lectora is a documented production environment. The exact Lectora version, translation-file workflow, editable project format and required output must be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS work with translated content supplied by our agency?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Yes, the documented production scope includes integration and layout adaptation of supplied target-language content. Translation and linguistic approval can remain with the localization agency under the agreed workflow."
+            }
+          ]
+        },
+        {
+          "title": "Can you localize interactive quizzes and branching courses?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Interactive elements and assessments can be assessed as part of the localization scope. Triggers, states, variables, scoring logic and branching behavior may require additional technical review or programming work."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide voiceover, subtitles and media localization?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "These are documented related service areas that may be included when specifically agreed. Language availability, scripts, recording requirements, subtitle formats, audio synchronization and media deliverables must be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "Can you localize a course if we only have a published SCORM package?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A published SCORM package may not provide sufficient editable content for ordinary localization. We can assess the source package and determine whether suitable reconstruction or another workflow is feasible."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide SCORM or xAPI course packages?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Supported authoring tools may offer SCORM, xAPI or other publishing options. EPUBTRANS's current production and testing scope for the requested output must be confirmed before committing to a deliverable."
+            }
+          ]
+        },
+        {
+          "title": "Do you test the localized course in our LMS?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "LMS testing can be assessed as a separately specified activity. The target LMS, access arrangements, test cases, completion rules and reporting requirements should be agreed in advance."
+            }
+          ]
+        },
+        {
+          "title": "Does eLearning localization include accessibility compliance?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Accessibility production and evaluation require an explicit specification, testing scope and acceptance criteria."
+            }
+          ]
+        },
+        {
+          "title": "What information do you need for an eLearning localization quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please share a representative course, available editable project files, authoring tool and version, target languages, translation availability, multimedia requirements, approximate number of slides or modules, expected output package and preferred schedule."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request an eLearning Localization Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need to prepare an Articulate, Rise, Lectora or other eligible eLearning course for multilingual delivery?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your course format, source files, target languages, translation status, interactive content and expected deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review the requirements and discuss an appropriate course localization and production workflow."
+        },
+        {
+          "kind": "link",
+          "text": "Request an eLearning Localization Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 270
+}

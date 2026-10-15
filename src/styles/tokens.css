@@ -41,6 +41,7 @@
   --caption: 0.75rem;
   --gutter: clamp(20px, 4.5vw, 88px);
   --section-space: clamp(40px, 5vw, 72px);
+  --section-space-compact: clamp(28px, 3vw, 48px);
   --section-gap: clamp(28px, 4vw, 64px);
   --reading-width: 68ch;
 }

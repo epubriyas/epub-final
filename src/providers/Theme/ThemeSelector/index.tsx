@@ -9,15 +9,15 @@ import {
 } from '@/components/ui/select'
 import React from 'react'
 
-import type { ThemePreference } from '../types'
+import { themeIsValid } from '../types'
 
 import { useTheme } from '..'
 
 export const ThemeSelector: React.FC = () => {
   const { setTheme, preference } = useTheme()
 
-  const onThemeChange = (themeToSet: ThemePreference) => {
-    setTheme(themeToSet)
+  const onThemeChange = (themeToSet: string) => {
+    if (themeIsValid(themeToSet)) setTheme(themeToSet)
   }
 
   return (

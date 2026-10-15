@@ -26,10 +26,11 @@ const service: Service = {
 }
 afterEach(cleanup)
 describe('optional CMS service sections', () => {
-  it('renders a complete minimal service without optional content or images', () => {
+  it('renders a complete minimal service with default visuals and no optional CMS sections', () => {
     const html = renderToStaticMarkup(<ServiceDetail service={service} related={[]} />)
     expect(html).toContain('Example service')
-    expect(html).toContain('Illustrative study')
+    expect(html).toContain('CMS image')
+    expect(html).toContain('Illustrative transformation')
     expect(html).not.toContain('id="process"')
     expect(html).not.toContain('GOOD TO KNOW')
     expect(html).not.toContain('CONNECTED CAPABILITIES')

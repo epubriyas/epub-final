@@ -46,7 +46,7 @@ const projectGuides = [
       'Include source files, image descriptions and any existing audit findings.',
       'Plan time for testing, corrections and a final review before release.',
     ],
-    href: '/services#accessibility',
+    href: '/services#digital-accessibility',
     link: 'Explore accessibility services',
   },
 ]
@@ -114,7 +114,7 @@ export default async function Resources({
     <main>
       <PageHero
         eyebrow="RESOURCES"
-        title={resourceGroup?.title || 'A clearer start. A stronger result.'}
+        title={resourceGroup?.title || 'Publishing and localization resources'}
         description={
           resourceGroup
             ? 'Published reference material to support your planning and production.'
@@ -124,7 +124,7 @@ export default async function Resources({
       {!q && !category && !resourceGroup && (
         <section className="et-container et-content-section" aria-labelledby="project-guides-title">
           <p className="et-label">START WITH YOUR PROJECT</p>
-          <h2 id="project-guides-title">A little preparation goes a long way.</h2>
+          <h2 id="project-guides-title">Project preparation checklists</h2>
           <p>
             Use these checklists to shape your brief, gather the right files and make your first
             conversation more useful.
@@ -254,12 +254,12 @@ export default async function Resources({
           </>
         )}
         {!!resources.docs.length && (
-          <section className="et-content-section">
+          <section className="et-resource-downloads">
             <p className="et-label">RESOURCE LIBRARY</p>
             <h2>{resourceGroup?.title || 'Guides & downloads.'}</h2>
             <p>Published reference material to support your planning and production.</p>
             {resources.docs.map((resource) => (
-              <article key={resource.id} className="et-content-section">
+              <article key={resource.id} className="et-copy">
                 <h3>{resource.title}</h3>
                 <p>{resource.description}</p>
                 {resource.content && <RichText data={resource.content} enableGutter={false} />}{' '}

@@ -216,32 +216,6 @@
     width: min(100%, 540px);
     margin-inline: auto;
   }
-  .et-paper {
-    width: 58%;
-    inset-inline-start: 29%;
-    padding: clamp(16px, 4vw, 24px);
-  }
-  .et-paper-title {
-    font-size: clamp(30px, 8vw, 43px);
-    margin-top: 24px;
-    letter-spacing: -2px;
-  }
-  .et-paper-front p {
-    margin-top: 12px;
-    font-size: 9px;
-  }
-  .et-paper-divider {
-    margin-top: 16px;
-    flex-shrink: 0;
-  }
-  .et-paper-bottom {
-    font-size: 22px;
-    padding-top: 12px;
-  }
-  .et-paper-back b,
-  .et-paper-mid b {
-    font-size: clamp(90px, 28vw, 130px);
-  }
   .et-section-head {
     display: block;
   }
@@ -260,12 +234,10 @@
   .et-industry-links svg {
     inset-inline-end: 0;
   }
-  .et-inline-cta,
-  .et-footer-cta {
+  .et-inline-cta {
     display: block;
   }
-  .et-inline-cta > a,
-  .et-footer-cta > a {
+  .et-inline-cta > a {
     margin-top: 24px;
   }
   .et-footer-grid {

@@ -1,0 +1,510 @@
+{
+  "home": {
+    "seo": {
+      "title": "Digital Publishing & Content Transformation | EPUBTRANS",
+      "description": "EPUBTRANS supports publishers and localization service providers with typesetting, XML conversion, eBook production, accessibility and multilingual DTP.",
+      "canonicalUrl": "/",
+      "noIndex": false
+    },
+    "eyebrow": "Publishing, Localization & Digital Content",
+    "h1": "Digital Publishing, Content Transformation & Localization",
+    "intro": [
+      "Publishing and content-production services for publishers, academic publishing organizations, localization service providers and translation agencies.",
+      "EPUBTRANS helps organizations prepare, structure, format, convert and localize content for print, digital publishing and multilingual delivery.",
+      "Our services include book and journal typesetting, XML conversion, EPUB production, document conversion, digital accessibility, multilingual desktop publishing and eLearning localization.",
+      "From a single production task to a workflow involving multiple formats, we can review your requirements and help define an appropriate production scope."
+    ],
+    "primaryCTA": {
+      "label": "Discuss Your Project",
+      "href": "/get-a-quote"
+    },
+    "secondaryCTA": {
+      "label": "Explore Our Services",
+      "href": "/services"
+    },
+    "audience": {
+      "title": "Production Support for Publishers and Localization Teams",
+      "intro": "Content-production requirements vary across industries, file formats and delivery workflows. EPUBTRANS supports organizations that need specialist production services aligned with their project specifications.",
+      "cards": [
+        {
+          "title": "Publishers & Academic Publishing Organizations",
+          "paragraphs": [
+            "Support for book and journal production, page composition, structured XML, eBook creation and digital accessibility.",
+            "Whether you are preparing a new publication or transforming existing content, we can assess the required production activities, source materials and deliverables."
+          ],
+          "cta": {
+            "label": "Explore Publishing Services",
+            "href": "/services#publishing-editorial"
+          }
+        },
+        {
+          "title": "Localization Service Providers & Translation Agencies",
+          "paragraphs": [
+            "Specialist production support for multilingual documents, post-translation formatting, editable-file preparation and eLearning localization.",
+            "We work within agreed specifications and delivery workflows, complementing your organization's existing translation and client-management processes."
+          ],
+          "cta": {
+            "label": "Explore Localization Production",
+            "href": "/services#localization-dtp"
+          }
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "intro": "EPUBTRANS provides production services across six interconnected areas. Individual activities can be commissioned separately or combined where the project requires multiple production stages.",
+      "categories": [
+        {
+          "title": "Publishing & Editorial Services",
+          "description": "Prepare manuscripts, books, journals and publication assets through typesetting, page layout, copyediting, proofreading and related editorial production activities.",
+          "cta": {
+            "label": "Explore Publishing Services",
+            "href": "/services#publishing-editorial"
+          }
+        },
+        {
+          "title": "eBook, XML & Structured Content",
+          "description": "Transform publication content into EPUB and structured XML formats, including JATS and SciELO-related markup for relevant scholarly publishing workflows.",
+          "cta": {
+            "label": "Explore Digital Publishing Services",
+            "href": "/services#ebook-xml"
+          }
+        },
+        {
+          "title": "Document & Data Conversion",
+          "description": "Convert PDFs, scanned documents and other supplied materials into editable or structured outputs, depending on source condition and required formats.",
+          "cta": {
+            "label": "Explore Conversion Services",
+            "href": "/services#document-conversion"
+          }
+        },
+        {
+          "title": "Localization & Multilingual Production",
+          "description": "Adapt translated documents and publication layouts for target-language typography, formatting and production requirements.",
+          "cta": {
+            "label": "Explore Multilingual DTP Services",
+            "href": "/services#localization-dtp"
+          }
+        },
+        {
+          "title": "eLearning & Multimedia",
+          "description": "Support localization production for digital learning materials and associated multimedia content, subject to supported formats and project requirements.",
+          "cta": {
+            "label": "Explore eLearning Services",
+            "href": "/services#elearning-multimedia"
+          }
+        },
+        {
+          "title": "Digital Accessibility",
+          "description": "Prepare or remediate supported digital documents and publications against agreed accessibility specifications and testing requirements.",
+          "cta": {
+            "label": "Explore Accessibility Services",
+            "href": "/services#digital-accessibility"
+          }
+        }
+      ],
+      "cta": {
+        "label": "View All Services",
+        "href": "/services"
+      }
+    },
+    "transformation": {
+      "title": "Content Transformation Across Formats",
+      "subtitle": "From Source Files to Publishing-Ready Deliverables",
+      "paragraphs": [
+        "Content often needs to move between formats and production environments before it reaches its intended audience.",
+        "EPUBTRANS supports the transformation of supplied materials into agreed deliverables for publishing, localization and digital distribution."
+      ],
+      "sourceTitle": "Typical source materials",
+      "source": "Manuscripts, Word files, PDFs, publishing-layout files, images, structured content and supported eLearning source packages.",
+      "outputTitle": "Possible deliverables",
+      "output": "Typeset publication files, digital PDFs, EPUB packages, XML files, editable documents, localized layouts and supported learning-content outputs.",
+      "note": "The production method and final deliverables depend on file quality, project specifications and agreed scope."
+    },
+    "workflow": {
+      "title": "How We Work",
+      "steps": [
+        {
+          "title": "Review Your Requirements",
+          "description": "We examine the available source files, project instructions, target formats, content volume and delivery requirements."
+        },
+        {
+          "title": "Define the Production Scope",
+          "description": "We clarify expected deliverables, technical dependencies, quality checks, revision requirements and schedule considerations."
+        },
+        {
+          "title": "Produce and Transform Content",
+          "description": "Our production workflow is organized around the approved specifications and the services required for the project."
+        },
+        {
+          "title": "Check and Deliver",
+          "description": "Relevant content, visual, structural and format-specific checks are performed as agreed. Final files are prepared for delivery in the required format and package structure."
+        }
+      ]
+    },
+    "values": {
+      "title": "A Practical Partner for Content Production",
+      "items": [
+        {
+          "title": "Connected Production Capabilities",
+          "description": "Publishing, conversion and localization tasks often depend on one another. Our range of services allows related activities to be assessed within a coordinated production scope."
+        },
+        {
+          "title": "Attention to Technical Requirements",
+          "description": "Source quality, editable files, fonts, linked images, markup specifications and output requirements can affect production. We consider these dependencies during project assessment."
+        },
+        {
+          "title": "Project-Specific Quality Checks",
+          "description": "Quality requirements differ across typesetting, XML, EPUB, document conversion and multilingual production. Relevant checks are defined according to the deliverables and specifications."
+        },
+        {
+          "title": "Collaboration With Your Team",
+          "description": "We work with publishing and localization teams through agreed instructions, review stages, file-sharing arrangements and delivery requirements."
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "See Our Work",
+      "intro": "Explore selected examples of publication layout, digital-content production, document transformation and learning-content localization.",
+      "note": "Examples are displayed only when the necessary content rights and disclosure permissions have been confirmed.",
+      "cta": {
+        "label": "Explore Our Work",
+        "href": "/work"
+      }
+    },
+    "resources": {
+      "title": "Publishing & Localization Resources",
+      "intro": "Discover practical articles and guidance covering publishing production, XML and EPUB workflows, document conversion, accessibility and multilingual formatting.",
+      "cta": {
+        "label": "Explore Resources",
+        "href": "/resources"
+      }
+    },
+    "enquiry": {
+      "title": "Let's Discuss Your Project",
+      "paragraphs": [
+        "Whether you are preparing a publication, converting existing files or managing a multilingual production workflow, EPUBTRANS can help you assess the next steps.",
+        "Tell us about your source files, target deliverables, approximate volume, technical requirements and preferred schedule."
+      ],
+      "primaryCTA": {
+        "label": "Discuss Your Project",
+        "href": "/get-a-quote"
+      },
+      "secondaryCTA": {
+        "label": "Explore All Services",
+        "href": "/services"
+      }
+    }
+  },
+  "directory": {
+    "seo": {
+      "title": "Publishing, Conversion & Localization Services | EPUBTRANS",
+      "description": "Explore EPUBTRANS services for publishing production, EPUB and XML conversion, accessibility, document processing, multilingual DTP and eLearning localization.",
+      "canonicalUrl": "/services",
+      "noIndex": false
+    },
+    "eyebrow": "WHAT WE DO / EPUBTRANS",
+    "h1": "Publishing, Content Conversion & Localization Services",
+    "intro": [
+      "Specialist production services for publishers, academic publishing organizations, localization service providers and translation agencies.",
+      "EPUBTRANS supports the preparation, formatting, conversion, structuring and localization of content for print, digital publishing and multilingual delivery.",
+      "Explore our service categories to identify the production support that fits your project. Requirements, inputs, deliverables and quality checks are defined according to the agreed scope."
+    ],
+    "primaryCTA": {
+      "label": "Request a Quote",
+      "href": "/get-a-quote"
+    },
+    "categories": [
+      {
+        "title": "Publishing & Editorial Services",
+        "anchorId": "publishing-editorial",
+        "intro": "Editorial preparation, composition and visual production support for books, journals, manuscripts and related publishing materials.",
+        "sortOrder": 0,
+        "services": [
+          {
+            "title": "Typesetting Services",
+            "paragraphs": [
+              "Book and journal typesetting, page composition and layout preparation, including complex elements such as tables, figures, equations and references where required."
+            ],
+            "href": "/typesetting-services",
+            "linkLabel": "Explore Typesetting Services",
+            "status": "active",
+            "sortOrder": 0
+          },
+          {
+            "title": "Copyediting Services",
+            "paragraphs": [
+              "Manuscript editing for agreed requirements involving language, grammar, consistency, style and editorial presentation."
+            ],
+            "href": "/copyediting-services",
+            "linkLabel": "Explore Copyediting Services",
+            "status": "active",
+            "sortOrder": 1
+          },
+          {
+            "title": "Proofreading Services",
+            "paragraphs": [
+              "Review of publication proofs and prepared content for typographical, language and consistency issues within the commissioned proofreading scope."
+            ],
+            "href": "/proofreading-services",
+            "linkLabel": "Explore Proofreading Services",
+            "status": "active",
+            "sortOrder": 2
+          },
+          {
+            "title": "Graphic Design & Image Services",
+            "paragraphs": [
+              "Preparation and refinement of publication graphics, illustrations, images and other visual assets for print or digital content."
+            ],
+            "href": "/graphic-design-image-services",
+            "linkLabel": "Explore Graphic Design Services",
+            "status": "active",
+            "sortOrder": 3
+          },
+          {
+            "title": "Cover Page Design Services",
+            "paragraphs": [
+              "Design and production of cover artwork and related assets according to supplied concepts, reference materials and output specifications."
+            ],
+            "href": "/cover-page-design-services",
+            "linkLabel": "Explore Cover Design Services",
+            "status": "active",
+            "sortOrder": 4
+          }
+        ]
+      },
+      {
+        "title": "eBook, XML & Structured Content",
+        "anchorId": "ebook-xml",
+        "intro": "Conversion and production of digital publishing files and structured content for publishing workflows.",
+        "sortOrder": 1,
+        "services": [
+          {
+            "title": "eBook Creation Services",
+            "paragraphs": [
+              "Creation and conversion of eBooks, including reflowable and fixed-layout EPUB where applicable. Scope may include content structure, navigation, image handling and agreed format checks."
+            ],
+            "href": "/ebook-creation-services",
+            "linkLabel": "Explore eBook Creation Services",
+            "status": "active",
+            "sortOrder": 0
+          },
+          {
+            "title": "SciELO XML Markup Services",
+            "paragraphs": [
+              "Structured XML markup for scholarly publications following the applicable SciELO-related requirements and project specifications."
+            ],
+            "href": "/scielo-xml-markup-services",
+            "linkLabel": "Explore SciELO XML Services",
+            "status": "active",
+            "sortOrder": 1
+          },
+          {
+            "title": "XML & JATS Conversion",
+            "paragraphs": [
+              "Preparation of structured XML content for academic and journal publishing workflows, including JATS-based outputs when required."
+            ],
+            "href": "/xml-conversion-services",
+            "linkLabel": "Discuss Your XML Requirements",
+            "status": "active",
+            "sortOrder": 2
+          }
+        ]
+      },
+      {
+        "title": "Document & Data Conversion",
+        "anchorId": "document-conversion",
+        "intro": "Transform documents and content assets into formats suitable for editing, publishing, localization or downstream processing.",
+        "sortOrder": 2,
+        "services": [
+          {
+            "title": "Data Conversion Services",
+            "paragraphs": [
+              "Conversion of documents between agreed formats, including PDF-to-Word workflows, OCR-assisted extraction and structured or editable-file preparation where applicable."
+            ],
+            "href": "/data-conversion-services",
+            "linkLabel": "Explore Data Conversion Services",
+            "status": "active",
+            "sortOrder": 0
+          },
+          {
+            "title": "PDF Recreation & Document Preparation",
+            "paragraphs": [
+              "Reconstruction of non-editable documents or complex layouts into suitable working formats for publishing or localization production.",
+              "Output editability and layout fidelity depend on the source files, available assets and agreed specifications."
+            ],
+            "href": "/data-conversion-services",
+            "linkLabel": "Discuss Document Conversion Requirements",
+            "status": "active",
+            "sortOrder": 1
+          }
+        ]
+      },
+      {
+        "title": "Localization & Multilingual Production",
+        "anchorId": "localization-dtp",
+        "intro": "Production support for documents and content adapted for different languages, scripts and delivery requirements.",
+        "sortOrder": 3,
+        "services": [
+          {
+            "title": "Desktop Publishing Services",
+            "paragraphs": [
+              "Multilingual desktop publishing and post-translation layout adaptation for publications and business documents. Work may involve text expansion, typography, complex layouts, tables and final file preparation."
+            ],
+            "href": "/desktop-publishing-services",
+            "linkLabel": "Explore Desktop Publishing Services",
+            "status": "active",
+            "sortOrder": 0
+          },
+          {
+            "title": "Translation Services",
+            "paragraphs": [
+              "Translation-related production for agreed language and content requirements, with linguistic services, review stages and output specifications confirmed separately for each project."
+            ],
+            "href": "/translation-services",
+            "linkLabel": "Explore Translation Services",
+            "status": "pendingApproval",
+            "sortOrder": 1
+          }
+        ]
+      },
+      {
+        "title": "eLearning & Multimedia",
+        "anchorId": "elearning-multimedia",
+        "intro": "Production and localization support for digital learning content and related media assets.",
+        "sortOrder": 4,
+        "services": [
+          {
+            "title": "eLearning Localization Services",
+            "paragraphs": [
+              "Preparation and adaptation of learning content for target-language audiences, including supported course-authoring workflows and associated production assets where agreed."
+            ],
+            "href": "/elearning-localization-services",
+            "linkLabel": "Explore eLearning Localization Services",
+            "status": "active",
+            "sortOrder": 0
+          },
+          {
+            "title": "Subtitling Services",
+            "paragraphs": [
+              "Subtitle and timed-text preparation for supported audiovisual content, following the agreed language, timing, format and delivery requirements."
+            ],
+            "href": "/subtitling-services",
+            "linkLabel": "Explore Subtitling Services",
+            "status": "pendingApproval",
+            "sortOrder": 1
+          },
+          {
+            "title": "Voiceover Services",
+            "paragraphs": [
+              "Voiceover-related production for supported multimedia and eLearning projects, with language, recording, editing and delivery requirements defined in the project scope."
+            ],
+            "href": "/voiceover-services",
+            "linkLabel": "Explore Voiceover Services",
+            "status": "pendingApproval",
+            "sortOrder": 2
+          },
+          {
+            "title": "Transcription Services",
+            "paragraphs": [
+              "Conversion of supported audio or video material into written transcripts, according to specified language, formatting and review requirements."
+            ],
+            "href": "/transcription-services",
+            "linkLabel": "Explore Transcription Services",
+            "status": "pendingApproval",
+            "sortOrder": 3
+          }
+        ]
+      },
+      {
+        "title": "Digital Accessibility",
+        "anchorId": "digital-accessibility",
+        "intro": "Accessibility-related production for supported document and publishing formats.",
+        "sortOrder": 5,
+        "services": [
+          {
+            "title": "Accessibility Services",
+            "paragraphs": [
+              "Preparation and remediation of PDF, EPUB, Word, PowerPoint and supported publishing-source files against agreed accessibility requirements.",
+              "Work may involve content structure, tagging, reading order, navigation, alternative text and format-specific checks, as applicable.",
+              "Accessibility testing methods and acceptance criteria are determined by the project specification."
+            ],
+            "href": "/accessibility-services",
+            "linkLabel": "Explore Accessibility Services",
+            "status": "active",
+            "sortOrder": 0
+          }
+        ]
+      }
+    ],
+    "audience": {
+      "title": "Production Support for Different Teams",
+      "cards": [
+        {
+          "title": "For Publishers & Academic Publishing Organizations",
+          "paragraphs": [
+            "EPUBTRANS supports publishing workflows involving editorial production, book and journal typesetting, structured XML, EPUB creation, content conversion and digital accessibility.",
+            "We can review individual production tasks or related service requirements, based on your supplied files and publishing specifications."
+          ]
+        },
+        {
+          "title": "For Localization Service Providers & Translation Agencies",
+          "paragraphs": [
+            "We support production work that complements translation and localization projects, including multilingual DTP, editable-file conversion, layout recreation and eLearning localization.",
+            "Our production activities are aligned with your agreed client specifications, workflow stages and delivery requirements."
+          ]
+        }
+      ]
+    },
+    "guidance": {
+      "title": "How to Prepare Your Project Enquiry",
+      "intro": "Useful information for a project assessment includes:",
+      "items": [
+        "The production service required",
+        "Available source files and representative samples",
+        "Required output formats and technical specifications",
+        "Approximate page count, file volume or content quantity",
+        "Source and target languages, where relevant",
+        "Style guides, reference layouts and expected quality checks",
+        "Preferred timeline and relevant production milestones"
+      ],
+      "note": "Not every project needs all of this information. We can clarify additional requirements during the initial discussion."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can EPUBTRANS handle projects involving several production services?",
+          "answer": "Related tasks may be combined within an agreed scope. For example, a project could involve typesetting and EPUB creation, or document conversion followed by multilingual DTP."
+        },
+        {
+          "question": "Do you work with publisher-specific or client-specific specifications?",
+          "answer": "We can review supplied specifications, formats, templates and acceptance requirements before confirming the appropriate production scope."
+        },
+        {
+          "question": "Can you work from PDFs or scanned documents?",
+          "answer": "PDFs and scanned files may be suitable for conversion or document recreation. However, output quality, editability and layout requirements must be assessed against the source material."
+        },
+        {
+          "question": "What information is needed for a quote?",
+          "answer": "Representative source files, expected deliverables, approximate volume, format requirements, language information where relevant and scheduling requirements help us assess the project."
+        },
+        {
+          "question": "Are validation and quality checks included?",
+          "answer": "Applicable quality checks depend on the service and agreed scope. Technical validation, visual review, editorial checking and accessibility testing are not automatically interchangeable or included in every project."
+        }
+      ]
+    },
+    "enquiry": {
+      "title": "Need Help Choosing the Right Service?",
+      "paragraphs": [
+        "Tell us what content you have, what you need to produce and any technical or delivery requirements.",
+        "EPUBTRANS can review the available information and discuss the appropriate services and next steps."
+      ],
+      "primaryCTA": {
+        "label": "Request a Quote",
+        "href": "/get-a-quote"
+      }
+    }
+  }
+}

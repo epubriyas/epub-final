@@ -47,6 +47,7 @@ const nextConfig: NextConfig = {
     localPatterns: [
       { pathname: '/favicon.jpeg', search: '' },
       { pathname: '/industries/**', search: '' },
+      { pathname: '/images/services/**', search: '' },
       {
         pathname: '/api/media/file/**',
       },

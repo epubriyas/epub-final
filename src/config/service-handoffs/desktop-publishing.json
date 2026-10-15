@@ -1,0 +1,959 @@
+{
+  "sourceDocument": "EPUBTRAN_DTP.docx",
+  "slug": "desktop-publishing",
+  "seo": {
+    "title": "Multilingual DTP & Desktop Publishing Services | EPUBTRANS",
+    "description": "EPUBTRANS supports localization agencies with multilingual DTP, post-translation formatting, document recreation and layout QA for print and digital files."
+  },
+  "hero": {
+    "title": "Multilingual Desktop Publishing (DTP) Services",
+    "lead": "Post-translation layout, document formatting and multilingual production support for localization service providers, translation agencies and publishers.",
+    "paragraphs": [
+      "EPUBTRANS provides desktop publishing (DTP) services to help organizations prepare, adapt and format documents for multilingual print and digital delivery.",
+      "Our services include multilingual DTP, post-translation layout adjustment, document formatting, PDF recreation and preparation of editable production files. We work with supplied content, reference layouts and project specifications to assess the appropriate formatting and production requirements.",
+      "Whether you need to prepare source files for translation, format translated documents or recreate complex layouts, EPUBTRANS can support defined production activities within your existing workflow."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Multilingual DTP Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Our Services",
+        "href": "/services#localization-dtp",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Multilingual Desktop Publishing for Localization Projects",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Translation changes the language of content, but it can also change how the content fits within a document."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Text may expand or contract, fonts may need to change, and certain languages require different approaches to typography, alignment and reading direction."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A document designed for one language may therefore need further layout work before the translated version is suitable for its intended use."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Multilingual desktop publishing addresses these presentation requirements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS supports localization service providers and translation agencies with document layout adaptation, formatting and production-file preparation according to the agreed language, source-file and output specifications."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Post-Translation Desktop Publishing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Post-translation DTP focuses on adapting a document after translated text becomes available."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, this work may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Integrating translated content into existing layouts",
+                "Adjusting text frames and page flow",
+                "Managing text expansion and contraction",
+                "Applying appropriate fonts and typography",
+                "Correcting line breaks and spacing",
+                "Formatting tables, captions and document elements",
+                "Adjusting page composition for the target language",
+                "Preparing review and final output files"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The objective is to produce a document that follows the agreed design and layout requirements while accommodating the target-language content."
+            }
+          ]
+        },
+        {
+          "title": "Pre-Translation DTP & File Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some localization projects require source-document preparation before translation begins."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where included in scope, EPUBTRANS can assess source files for formatting or structural issues that may complicate downstream work."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Pre-translation preparation may involve reorganizing editable content, reviewing text frames, resolving document-formatting issues and preparing source files for an agreed localization workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation extraction, CAT-tool preparation, linguistic processing and file engineering must be specified separately where required."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Desktop Publishing Capabilities",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Multilingual Layout Adaptation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Adapting document layouts to accommodate translated content while following the supplied design references and formatting specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve adjusting columns, text frames, spacing, page breaks and other layout elements."
+            }
+          ]
+        },
+        {
+          "title": "Typography & Font Management",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Applying appropriate fonts, text styles and typographic settings for the target-language content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Font availability, licensing, character coverage and application support must be reviewed where relevant."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Languages using complex scripts or different reading directions may require additional assessment."
+            }
+          ]
+        },
+        {
+          "title": "Tables, Figures & Document Elements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Formatting tables, charts, illustrations, captions, footnotes, headers, footers, page numbers and other document components."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Complex elements are assessed against the original design and the target output requirements."
+            }
+          ]
+        },
+        {
+          "title": "Text Expansion & Layout Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Adjusting document layouts when translated text no longer fits the original text areas."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the document, this may involve changes to text flow, frame dimensions, spacing, pagination or other formatting properties."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Major redesigns or content changes require separate approval."
+            }
+          ]
+        },
+        {
+          "title": "Document Recreation & PDF Layout Reconstruction",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recreating eligible non-editable documents in agreed editable formats where suitable source files are unavailable."
+            },
+            {
+              "kind": "paragraph",
+              "text": "PDF-only projects may require manual reconstruction of text, graphics and page structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The feasibility and degree of layout similarity depend on the source quality, available assets and required deliverables."
+            }
+          ]
+        },
+        {
+          "title": "Graphics & Image-Related Formatting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Incorporating supplied graphics and image assets into localized layouts."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where required, related production tasks may include adjusting graphic placement, incorporating approved translated labels and coordinating with image-editing or graphic-design activities."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Substantive graphic redesign and image-content editing are defined separately."
+            }
+          ]
+        },
+        {
+          "title": "Print & Digital Document Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparing formatted files for agreed print or digital delivery requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may include editable source documents, proof PDFs, final PDF outputs and supporting production assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Printer-specific preflight, accessibility remediation and additional output transformations are included only when specified."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "Documents We Can Assess for DTP Production",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS's documented services cover a range of publishing and business-document workflows."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Typical project materials may include:"
+        }
+      ],
+      "groups": [
+        {
+          "title": "Marketing & Corporate Documents",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Brochures, company profiles, product literature, reports and other formatted business content."
+            }
+          ]
+        },
+        {
+          "title": "Technical Documentation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "User manuals, technical guides, instructions, product documentation and related materials involving complex document structures."
+            }
+          ]
+        },
+        {
+          "title": "Publishing Materials",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Books, educational publications and other content requiring page formatting or multilingual layout adaptation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Book and journal typesetting may be managed as a separate publishing service when full publication composition is required."
+            }
+          ]
+        },
+        {
+          "title": "Presentation & Office Documents",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Word documents, PowerPoint presentations and other supported office-document formats where formatting must be adapted for different language versions."
+            }
+          ]
+        },
+        {
+          "title": "Non-Editable PDF Documents",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF files requiring conversion, layout reconstruction or preparation of editable working files."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required workflow depends on whether original source documents, images, fonts and related assets are available."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Multilingual DTP for Different Languages & Scripts",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Document formatting requirements differ between languages."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The production approach depends on the target language, script, available fonts, source-file structure and supported publishing environment."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Left-to-Right Languages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translated content may require changes to word spacing, line lengths, text frames and pagination."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Even when the reading direction remains unchanged, the layout may need adjustment to accommodate the translated text."
+            }
+          ]
+        },
+        {
+          "title": "Right-to-Left Languages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Languages using right-to-left writing systems can require changes to text direction, alignment, punctuation handling and the arrangement of certain layout elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Bidirectional content, such as numbers or embedded English terms, may introduce additional formatting requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Support for specific languages and application workflows must be confirmed during project assessment."
+            }
+          ]
+        },
+        {
+          "title": "Complex-Script & Non-Latin Typography",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Certain scripts require appropriate font support, character shaping, line-breaking behavior and layout settings."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Projects involving such scripts need review of the target language, software environment, fonts and expected output."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS assesses the relevant language and script requirements before confirming its production scope."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Source Files & Materials Required",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Complete project files make it easier to assess layout complexity and establish the required production steps."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Useful inputs may include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Original editable source files",
+            "Translated target-language content",
+            "Reference PDFs or approved source-language layouts",
+            "Design templates and style specifications",
+            "Linked images and graphics",
+            "Font information and licensed font resources",
+            "Tables, charts and illustrations",
+            "Required target languages and scripts",
+            "Target application and version requirements",
+            "Page dimensions and print or digital output specifications",
+            "Quality-control instructions",
+            "Project deadlines and review requirements"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Common Source File Types",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS's documented DTP workflows include assessment of files such as:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Adobe InDesign files (INDD/IDML)",
+                "Adobe FrameMaker-related files (including MIF)",
+                "Microsoft Word",
+                "Microsoft PowerPoint",
+                "PDF documents",
+                "Supporting image, graphic and layout assets"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Support for a particular software version, native file format or conversion pathway must be confirmed before production."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where possible, provide packaged source files with the necessary linked assets and a reference PDF."
+            },
+            {
+              "kind": "paragraph",
+              "text": "PDF-only sources can also be assessed, although editable-file recreation may involve additional work."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Desktop Publishing Deliverables",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The exact deliverables depend on the source files, target applications and agreed production scope."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Formatted Multilingual Documents",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Target-language documents prepared according to the required page layout, typography and formatting specifications."
+            }
+          ]
+        },
+        {
+          "title": "Editable Production Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Native or agreed editable working files where included in the delivery requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve supported layout or office-document formats."
+            }
+          ]
+        },
+        {
+          "title": "Review & Final PDFs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF proofs for layout review and final PDF files prepared according to the agreed output specifications."
+            }
+          ]
+        },
+        {
+          "title": "Recreated Document Layouts",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable reconstructed layouts or converted documents where PDF recreation or related conversion work has been commissioned."
+            }
+          ]
+        },
+        {
+          "title": "Supporting Production Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Related images, linked resources or other supporting files included in the agreed delivery package."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The deliverable specification should define the target application and version, required file structure, revision expectations and any relevant print or digital requirements."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Multilingual DTP Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review Source Files & Project Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We examine the available source files, translated content, target languages, layout references and required deliverables."
+            },
+            {
+              "kind": "paragraph",
+              "text": "File completeness, complexity, fonts, missing assets and application compatibility are assessed as relevant."
+            }
+          ]
+        },
+        {
+          "title": "2. Confirm Scope & Production Instructions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We clarify the formatting requirements, target application, expected outputs, language-specific considerations, review stages and schedule."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any source-file preparation or document reconstruction is identified separately where necessary."
+            }
+          ]
+        },
+        {
+          "title": "3. Perform Layout & Formatting Work",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The relevant DTP activities are carried out according to the agreed specifications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may involve inserting translated text, adjusting typography, correcting layout elements, rebuilding document components and preparing target-language files."
+            }
+          ]
+        },
+        {
+          "title": "4. Review & Apply Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Applicable visual and technical checks are performed according to the project scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Issues identified during internal review or client review are addressed through the agreed correction process."
+            }
+          ]
+        },
+        {
+          "title": "5. Prepare Final Files & Deliver",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Approved production files, PDFs and supporting assets are prepared in the agreed format and package structure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final handoff follows the specified file-naming, versioning and delivery instructions."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "DTP Quality Checks",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Multilingual desktop publishing requires attention to the presentation of content as well as the structure of the final files."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Depending on the document and agreed scope, quality checks may cover:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Missing or overflowing text",
+            "Incorrect font substitution",
+            "Missing glyphs or unsupported characters",
+            "Text direction and alignment",
+            "Line spacing and paragraph formatting",
+            "Table and chart layout",
+            "Image placement and linked assets",
+            "Page numbering, headers and footers",
+            "Page breaks and unexpected pagination changes",
+            "Inconsistent styles and formatting",
+            "Comparison against approved reference layouts",
+            "Final PDF and native-file packaging requirements"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Visual comparison is particularly useful when localized documents are expected to maintain the structure and visual identity of the source."
+        }
+      ],
+      "groups": [
+        {
+          "title": "DTP Quality Checks vs Linguistic Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Desktop publishing quality checks focus primarily on document formatting, layout and production-related issues."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation accuracy, terminology review, linguistic proofreading and language validation are separate activities unless they are specifically included in the agreed project scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This distinction helps establish clear responsibilities between EPUBTRANS, the localization service provider and any linguistic reviewers."
+            }
+          ]
+        }
+      ],
+      "kind": "quality"
+    },
+    {
+      "title": "Supporting Localization Service Providers & Translation Agencies",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS positions its desktop publishing services as production support for organizations managing multilingual content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Localization teams often need specialist assistance after translation, especially when the translated content must be delivered in complex formats or established design layouts."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Support for Your Existing Workflow",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Our DTP work can be scoped around files and translated content supplied by your team."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project can follow agreed formatting specifications, review stages and delivery instructions."
+            }
+          ]
+        },
+        {
+          "title": "Defined Production Responsibilities",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The scope identifies which tasks EPUBTRANS handles and which remain with the client or other project participants."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may include separating translation, layout production, linguistic review, technical file preparation and final approval."
+            }
+          ]
+        },
+        {
+          "title": "Coordination for Multiple Language Versions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Projects involving several language versions may require common design references, standardized file naming, consistent instructions and coordinated review requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We can assess these requirements when planning a multilingual DTP assignment."
+            }
+          ]
+        },
+        {
+          "title": "File Preparation & Related Production Tasks",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where a project requires both document conversion and post-translation formatting, the related activities can be assessed together."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This may help clarify handoffs between editable-file preparation, translation and final layout production."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "What Affects Multilingual DTP Scope & Schedule?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Document Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Documents with extensive tables, charts, nested layouts, illustrations or technical content may require more work than simple text-led files."
+            }
+          ]
+        },
+        {
+          "title": "Source File Availability",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable original files generally provide more flexibility than flattened PDFs or scanned documents."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Missing images, fonts, styles or linked assets can affect the required preparation work."
+            }
+          ]
+        },
+        {
+          "title": "Language & Script Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Target-language expansion, reading direction, character support and typographic conventions influence production effort."
+            }
+          ]
+        },
+        {
+          "title": "Software & Output Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The source application, target file version, PDF specification and requirements for editable handoff files affect the workflow."
+            }
+          ]
+        },
+        {
+          "title": "Review & Correction Rounds",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The number of target-language files, requested reviews, corrections and final output versions can influence the overall production scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We assess these factors before discussing estimated effort, price or delivery arrangements."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Desktop publishing is often connected with other production requirements."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Data Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF-to-Word conversion, OCR-assisted extraction and document preparation where editable source content is required."
+            }
+          ],
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and journal composition, publishing layouts and publication-specific page production."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Graphic Design & Image Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation or refinement of graphics and publication visual assets."
+            }
+          ],
+          "href": "/graphic-design-image-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Localization-related production for digital learning content and supported course formats."
+            }
+          ],
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related production and remediation for supported PDF, Word, PowerPoint and other document formats."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These activities may be commissioned separately or assessed as part of a combined project where appropriate."
+            }
+          ],
+          "href": "/accessibility-services"
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What is multilingual desktop publishing?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual desktop publishing is the process of formatting and adapting documents for different languages. It involves typography, page layout, tables, graphics and other document elements so that translated content follows the agreed design and delivery requirements."
+            }
+          ]
+        },
+        {
+          "title": "What is post-translation DTP?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Post-translation DTP takes place after translated content is available. The work focuses on integrating the translated content into the intended layout and making the necessary formatting adjustments."
+            }
+          ]
+        },
+        {
+          "title": "Does EPUBTRANS provide DTP without translation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "DTP can be scoped as a separate production service using translated content supplied by a localization agency or client. Translation and linguistic review are not automatically included."
+            }
+          ]
+        },
+        {
+          "title": "Can you work with Adobe InDesign files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "InDesign/IDML files are among EPUBTRANS's documented DTP source formats. Current software compatibility, version support and required output formats must be confirmed for the specific project."
+            }
+          ]
+        },
+        {
+          "title": "Can you recreate a document from a PDF?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF recreation may be possible depending on the quality and structure of the source. Complex or non-editable files may require manual reconstruction, and exact reproduction cannot be guaranteed before reviewing the material."
+            }
+          ]
+        },
+        {
+          "title": "Do you support right-to-left and complex-script documents?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess projects involving right-to-left or complex-script formatting. Availability for particular languages, fonts, scripts and applications must be confirmed during project planning."
+            }
+          ]
+        },
+        {
+          "title": "What files should we send for a DTP quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide representative source files, translated content if available, reference PDFs, target languages, expected output formats, approximate page volume and delivery requirements."
+            }
+          ]
+        },
+        {
+          "title": "Will the final files be editable?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Editable deliverables can be included when the selected production workflow and source materials support them. The required native format, application version and associated assets should be confirmed before production."
+            }
+          ]
+        },
+        {
+          "title": "Is linguistic proofreading included in DTP?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No, not automatically. DTP quality checks focus on layout and formatting. Linguistic proofreading or translation verification must be commissioned separately."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS handle multiple language versions?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual DTP projects involving more than one target language can be assessed. Feasibility depends on the requested languages, file types, document complexity, schedule and current production capabilities."
+            }
+          ]
+        },
+        {
+          "title": "Do you provide print-ready PDFs?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF production for print or digital use can be included in the agreed scope. Printer-specific output settings, preflight requirements and approval procedures must be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "How do you estimate a multilingual DTP project?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review the source materials, page volume, languages, formatting complexity, available assets, output requirements, review stages and requested schedule before establishing scope and discussing an estimate."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request a Multilingual DTP Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need post-translation document formatting, multilingual layout adaptation or help preparing editable production files?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Tell us about your source documents, target languages, file formats, approximate volume and expected deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can review your requirements and discuss an appropriate desktop publishing workflow."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Multilingual DTP Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 234
+}

@@ -7,9 +7,9 @@ import { globalPresence } from '@/config/global-presence'
 import styles from '../company.module.css'
 
 export const metadata = pageMetadata({
-  title: 'Global Presence',
+  title: 'Global Delivery & Collaboration',
   description:
-    'Explore EPUBTRANS’s global capabilities, Chennai location, language coverage and approach to regional localization.',
+    'Explore Chennai-based production support, multilingual project requirements and international project communication and delivery with EPUBTRANS.',
   alternates: { canonical: '/company/global-presence' },
 })
 
@@ -17,14 +17,14 @@ export default function GlobalPresence() {
   return (
     <CompanyMotion className={styles.page}>
       <PageHero
-        eyebrow="COMPANY / GLOBAL PRESENCE"
-        title="New audiences. Carefully considered content."
-        description="From Chennai to your next audience, connect language, layout and local context. Explore how EPUBTRANS helps prepare content for different markets and ways of reading."
+        eyebrow="COMPANY / GLOBAL DELIVERY"
+        title="Global Delivery & Collaboration"
+        description="Chennai-based production support for international publishing and localization workflows. Project scope, language requirements and delivery arrangements are agreed for each engagement."
       />
       <CompanyPageNav current="global" />
       <section className="et-container et-content-section">
-        <p className="et-label">CONTENT ACROSS CULTURES</p>
-        <h2>Built around the people you want to reach.</h2>
+        <p className="et-label">INTERNATIONAL PRODUCTION SUPPORT</p>
+        <h2>Working across content, languages and locations.</h2>
         <AudienceInfographic />
         <div className="et-company-topics">
           {globalPresence.items.map((item) => (

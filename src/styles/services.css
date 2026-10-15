@@ -207,14 +207,14 @@
   max-width: 48ch;
   margin-top: 26px;
 }
-.sp-capability-list li {
+.sp-capability-list > li {
   display: grid;
   grid-template-columns: 40px minmax(0, 1fr);
   gap: 22px;
   padding-block: 28px;
   border-top: 1px solid var(--sp-border);
 }
-.sp-capability-list li:last-child {
+.sp-capability-list > li:last-child {
   border-bottom: 1px solid var(--sp-border);
 }
 .sp-small-number {
@@ -242,7 +242,7 @@
 }
 .sp-handoff p {
   margin-top: 14px;
-  font-size: 0.9rem;
+  font-size: var(--body);
   color: var(--sp-body);
 }
 .sp-handoff-arrow {
@@ -366,7 +366,7 @@
   color: var(--sp-body);
   margin-top: 16px;
   margin-bottom: 24px;
-  font-size: 0.95rem;
+  font-size: var(--body);
 }
 .sp-related-grid .sp-text-link {
   margin-top: auto;
@@ -830,15 +830,15 @@
 }
 .sp-index-bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 42px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--section-gap);
+  margin-top: var(--space-8);
   align-items: end;
 }
 .sp-index-bottom p {
-  max-width: 50ch;
+  max-width: var(--reading-width);
   color: var(--sp-body);
-  font-size: 1.1rem;
+  font-size: var(--body);
 }
 .sp-index-bottom .sp-actions {
   justify-content: end;
@@ -858,10 +858,31 @@
   text-decoration: underline;
   text-underline-offset: 5px;
 }
+.sp-directory-search {
+  padding-block: var(--space-6);
+}
+.sp-directory-search .et-field {
+  max-width: var(--reading-width);
+  margin-top: 0;
+}
+.sp-directory-search [role='status']:not(:empty) {
+  margin-top: var(--space-3);
+}
+.sp-page .et-copy > ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: var(--space-4);
+}
+.sp-page .et-copy > ol {
+  list-style: decimal;
+  padding-inline-start: 1.25em;
+  margin-block: var(--space-4);
+}
 .sp-catalog-group {
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(30px, 6vw, 100px);
+  gap: var(--section-gap);
+  padding-block: var(--section-space-compact);
   scroll-margin-top: 110px;
   border-bottom: 1px solid var(--sp-border);
 }
@@ -876,14 +897,14 @@
   grid-template-columns: minmax(0, 1fr) 32px;
   gap: 20px;
   border-top: 1px solid var(--sp-border);
-  padding-block: 30px;
+  padding-block: var(--space-6);
   transition: color 180ms;
 }
 .sp-catalog-link:hover {
   color: var(--sp-action);
 }
 .sp-catalog-link p {
-  font-size: 0.9rem;
+  font-size: var(--body);
   margin-top: 12px;
   color: var(--sp-body);
   max-width: 58ch;
@@ -1058,7 +1079,7 @@ html[data-theme='dark'] .sp-page .sv-stage {
   .sp-step-number {
     font-size: 2rem;
   }
-  .sp-capability-list li {
+  .sp-capability-list > li {
     grid-template-columns: 25px minmax(0, 1fr);
     gap: 15px;
   }

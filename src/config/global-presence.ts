@@ -1,18 +1,18 @@
 export const globalPresence = {
-  label: 'GLOBAL PRESENCE',
-  title: 'New audiences. Carefully considered content.',
+  label: 'GLOBAL DELIVERY & COLLABORATION',
+  title: 'Global Delivery & Collaboration',
   items: [
     {
       id: 'global-capabilities',
-      title: 'Global Capabilities',
+      title: 'Working With International Clients',
       paragraphs: [
-        'Reaching a new audience takes more than changing the language. Content may need a different layout, a revised learning experience, readable subtitles or a digital format suited to the way people will access it.',
-        'Our capabilities include translation, multilingual desktop publishing, eLearning localization, subtitling and digital publishing. Bringing language and production requirements into the same brief helps you plan how each version should read, look and function.',
+        'International production support begins with a shared understanding of the source materials, intended audiences and required deliverables. Share the publishing or localization activities you need, the target formats and the teams involved in review.',
+        'Production scope, responsibilities and handoff requirements are agreed for each project. This allows EPUBTRANS to support the relevant production activities within your existing publishing or localization workflow.',
       ],
     },
     {
       id: 'locations',
-      title: 'Locations',
+      title: 'Chennai-Based Production Support',
       paragraphs: [
         'Connect with EPUBTRANS in Chennai, India, to discuss publishing and localization requirements for your intended markets. A useful first conversation starts with your content, your audience and the outcome you need.',
         'For teams working across locations, review schedules and communication preferences matter. Share your time zone, key milestones and preferred points of contact so that coordination needs can be considered in the project plan.',
@@ -20,7 +20,7 @@ export const globalPresence = {
     },
     {
       id: 'language-coverage',
-      title: 'Language Coverage',
+      title: 'Multilingual Project Requirements',
       paragraphs: [
         'The right language support depends on more than a language name. Subject matter, regional variants, tone and the intended reader all affect the work. A technical guide and a learning module may need very different terminology and review decisions.',
         'Share your source language, target languages, subject area and any approved glossary or reference translations. Our team can confirm availability for the specific language pairs and discuss the appropriate translation, review and production scope.',
@@ -28,10 +28,10 @@ export const globalPresence = {
     },
     {
       id: 'regional-expertise',
-      title: 'Regional Expertise',
+      title: 'Project Communication & Delivery',
       paragraphs: [
-        'Content feels familiar when its details make sense to the people reading it. Date formats, units, examples and terminology can all influence that experience. Scripts and text direction can also change the way a page needs to be designed.',
-        'Tell us which markets you are targeting and how the content will be used. Local style guides, approved terminology and audience references help define the adaptation needed while keeping the original purpose clear.',
+        'Share your preferred communication channels, time zone, review contacts and delivery milestones. Communication arrangements, revision requirements and schedule considerations are established through the agreed engagement.',
+        'Confirm the file formats, naming conventions, package structure and any validation instructions needed for handoff. These requirements help define the production checks and the deliverables to be prepared for your team.',
       ],
     },
   ],

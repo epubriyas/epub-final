@@ -1,0 +1,740 @@
+{
+  "sourceDocument": "EPUBTRANS_Copyedit_Proofread.docx",
+  "slug": "proofreading",
+  "seo": {
+    "title": "Proofreading Services for Books & Journals | EPUBTRANS",
+    "description": "Proofreading support for books, journals and typeset proofs, including final-stage text, layout consistency and correction checks within an agreed scope."
+  },
+  "hero": {
+    "title": "Proofreading Services for Books & Journals",
+    "lead": "Final-stage proofreading support for book publishers, academic journals and publishing production teams.",
+    "paragraphs": [
+      "EPUBTRANS provides proofreading services for publishers reviewing manuscripts, page proofs and other content approaching publication.",
+      "Proofreading focuses on identifying remaining errors and inconsistencies after the main editorial work has been completed. Depending on the project stage, it may involve checking spelling, punctuation, typographical details, text consistency and issues introduced during page layout.",
+      "Our approach is based on the agreed source materials, publisher house style, proof format and correction instructions.",
+      "Whether you need a review of a book's typeset pages, journal article proofs or another eligible publication, EPUBTRANS can assess your requirements and define the appropriate proofreading scope."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Proofreading Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Explore Copyediting Services",
+        "href": "/copyediting-services",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Proofreading as a Publishing Production Stage",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Proofreading generally takes place after copyediting and, in traditional book and journal production, after the material has been typeset."
+        },
+        {
+          "kind": "paragraph",
+          "text": "At this stage, the objective is usually to identify remaining errors without introducing unnecessary changes to approved content."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Proofreading can be particularly important when text has moved from an editable manuscript into a page-layout or publication format."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Line breaks, special characters, headings, tables and captions may need attention because the final presentation can introduce issues that were not visible in the original manuscript."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The precise review depends on whether the supplied material is an edited manuscript, a first page proof, a revised proof or another production file."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "What Our Proofreading Services Can Cover",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Spelling, Punctuation and Typographical Errors",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Proofreading can identify remaining spelling mistakes, missing or duplicated words, punctuation problems and other typographical errors."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The preferred language variety and editorial conventions should be confirmed for the assignment."
+            }
+          ]
+        },
+        {
+          "title": "Text and Style Consistency",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Proofreading may address inconsistencies in capitalization, abbreviations, hyphenation, numbering and other conventions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Existing house styles, editorial instructions and approved terminology help define the expected presentation."
+            }
+          ]
+        },
+        {
+          "title": "Headings and Page Elements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "For typeset material, proof-stage checks may cover:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Chapter and section headings",
+                "Headers and footers",
+                "Page numbering",
+                "Running heads",
+                "Tables and figure captions",
+                "Footnotes and endnotes",
+                "Labels, numbering and cross-references",
+                "Contents pages and other navigational elements"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The checks included will depend on the publication structure and agreed responsibilities."
+            }
+          ]
+        },
+        {
+          "title": "Tables, Figures and References",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Tables, figures and reference lists can develop inconsistencies during editing or typesetting."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Proofreading may identify visible errors, missing labels, incorrect numbering or other issues within the supplied proof."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Independent verification of all data, citations and source references is not automatically included."
+            }
+          ]
+        },
+        {
+          "title": "Proof-Stage Layout Issues",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where appropriate, proofreading may flag problems affecting how text appears on the page, such as unexpected line breaks, missing characters or visible inconsistencies."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Correcting the underlying typesetting files is a separate production task unless specifically commissioned."
+            }
+          ]
+        },
+        {
+          "title": "Checking Implemented Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A publisher may request a later-stage check to confirm that previously approved corrections have been applied."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This can be scoped around an earlier marked proof, a correction list or another agreed reference."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A correction-checking assignment is not necessarily the same as a complete new proofreading pass."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "Proofreading for Books and Journal Publications",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Book Proofreading",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book proofs may contain chapters, notes, references, tables, illustrations, captions and indexes."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the assignment, proofreading can address remaining textual errors and agreed consistency issues throughout the publication."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The type of book, length, content complexity and current production stage affect the review."
+            }
+          ]
+        },
+        {
+          "title": "Academic and Scholarly Journal Proofreading",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Journal article proofs may require attention to titles, abstracts, headings, author information, tables, figures, equations and references."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The publisher's journal style, technical instructions and correction process help define the scope."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Proofreading does not replace the journal's editorial review, scientific validation or author approval process."
+            }
+          ]
+        },
+        {
+          "title": "Educational and Professional Publishing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Educational and professional publications may contain structured activities, learning content, technical terminology and supporting visual elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Proofreading can be assessed according to the intended output and the publisher's specified checks."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Subject-matter review, curriculum validation and factual research remain separate tasks unless agreed."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Typeset Proofs and Other Source Formats",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Proofreading requirements vary depending on the form in which content is supplied."
+        }
+      ],
+      "groups": [
+        {
+          "title": "PDF Page Proofs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A typeset PDF can be reviewed for agreed textual and visible presentation issues."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The method for returning corrections—such as annotations or a separate correction list—should be confirmed before work begins."
+            }
+          ]
+        },
+        {
+          "title": "Editable Manuscripts",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects use the term proofreading for a final language check in an editable document before layout."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess this requirement, but the intended depth should be clarified so that the assignment is not mistaken for full copyediting."
+            }
+          ]
+        },
+        {
+          "title": "Revised Proofs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "After corrections have been implemented, a revised proof may require checking against previously approved changes."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The publisher should specify whether the task is limited to those changes or includes another complete proofreading pass."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Proofreading Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Proofs and Instructions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review representative content, the publication type, source format and current editorial stage."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Available house styles, previous corrections and production instructions are considered when defining the work."
+            }
+          ]
+        },
+        {
+          "title": "2. Confirm the Review Scope",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed brief identifies the required checks, any reference material, the correction-marking method and the responsible reviewers."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It also distinguishes a first proofread from correction checking or other review stages."
+            }
+          ]
+        },
+        {
+          "title": "3. Conduct the Proofreading Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The supplied material is checked according to the agreed criteria."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Potential errors and issues requiring clarification are recorded using the specified method."
+            }
+          ]
+        },
+        {
+          "title": "4. Return Corrections and Queries",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Marked proofs, issue lists or other agreed outputs are prepared for the publisher or production team."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Questions that affect content meaning or editorial decisions are referred to the designated reviewer."
+            }
+          ]
+        },
+        {
+          "title": "5. Support the Agreed Correction Stage",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "If included in the assignment, revised proofs or implemented corrections can be reviewed against the agreed reference."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Typesetting changes and final publication approval remain with the responsible project participants unless separately commissioned."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "What We Need and What You Receive",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Typical Project Inputs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "To assess proofreading requirements, please provide:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "A representative file or proof",
+                "Publication type",
+                "Approximate page count or word count",
+                "Current editorial and production stage",
+                "Preferred spelling and language conventions",
+                "Publisher house style",
+                "Available original or approved reference content",
+                "Earlier marked proofs or correction lists, if applicable",
+                "Required method for identifying corrections",
+                "Expected review rounds",
+                "Preferred schedule"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Possible Deliverables",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the agreement, you may receive:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Annotated proof files",
+                "A structured correction list",
+                "Queries for publisher or author review",
+                "An agreed corrected editable document, where applicable",
+                "A report of outstanding production issues, where commissioned",
+                "Results of a specified correction-checking pass"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final delivery format and responsibility for applying changes must be agreed before production."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Proofreading Compared with Copyediting",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Although both services address textual quality, they serve different stages of publishing."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Copyediting typically reviews manuscript language, clarity and style before the final layout has been prepared."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Proofreading focuses on remaining errors in already edited text and, where applicable, its final page presentation."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A document requiring substantial rewriting, extensive sentence-level improvements or unresolved editorial decisions may need copyediting rather than proofreading."
+        },
+        {
+          "kind": "paragraph",
+          "text": "If your project requires both, we can assess the services as separate stages within an agreed production plan."
+        },
+        {
+          "kind": "link",
+          "text": "Explore Copyediting Services",
+          "href": "/copyediting-services",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Quality Review and Responsibilities",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Proofreading can reduce the risk of remaining textual and production errors, but no review process should be represented as guaranteeing that a publication will be free of every possible error."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The proofreading scope is defined by the source materials, review instructions, publication type and available production stage."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The following services are not automatically included:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Substantive editing or rewriting",
+            "Full manuscript copyediting",
+            "Independent factual or scientific verification",
+            "Plagiarism checking",
+            "Complete reference verification",
+            "Artwork correction",
+            "Typesetting or layout reconstruction",
+            "Implementation of all marked corrections",
+            "Unspecified additional proof rounds",
+            "Final publication authorization"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "The publisher or designated production manager should identify who will review queries, apply corrections, approve revised proofs and authorize release."
+        }
+      ],
+      "groups": [],
+      "kind": "quality"
+    },
+    {
+      "title": "What Affects Proofreading Scope and Scheduling?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Proof Condition",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A first proof may require a different review from a proof already checked and corrected."
+            }
+          ]
+        },
+        {
+          "title": "Page Count and Content Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Long publications, extensive tables, equations, references and complex page structures can affect the work."
+            }
+          ]
+        },
+        {
+          "title": "Editorial Preparation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The quality of preceding manuscript editing may influence the number and type of issues identified."
+            }
+          ]
+        },
+        {
+          "title": "Reference Materials",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Reliable approved text, house styles and previous correction lists help establish what should be checked."
+            }
+          ]
+        },
+        {
+          "title": "Review Method",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF annotations, editable-file changes and separate correction reports involve different processes."
+            }
+          ]
+        },
+        {
+          "title": "Correction Rounds",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Checking one set of page proofs differs from reviewing additional corrected versions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These details should be included in the quotation request."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The individual services and their deliverables should be agreed separately."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Copyediting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Manuscript language, clarity and style review before final production."
+            }
+          ],
+          "href": "/copyediting-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book and journal composition, page layout and proof preparation."
+            }
+          ],
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Broader editorial and production support for book and journal publishers."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "eBook Creation Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of eligible content for EPUB and related digital publishing formats."
+            }
+          ],
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "XML & JATS Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Structured XML production for scholarly articles."
+            }
+          ],
+          "href": null
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What does EPUBTRANS proofreading cover?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Proofreading can cover remaining spelling, punctuation, typographical, consistency and agreed proof-stage issues. The exact checks depend on the publication and project specification."
+            }
+          ]
+        },
+        {
+          "title": "Can you proofread typeset book PDFs?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF page proofs can be assessed for proofreading. Please provide a representative file, house style and instructions for marking corrections."
+            }
+          ]
+        },
+        {
+          "title": "Do you proofread academic journal articles?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Journal proofs are within EPUBTRANS's documented publishing service categories, subject to confirmation of the required editorial checks and source formats."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between copyediting and proofreading?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Copyediting focuses on manuscript language and consistency, while proofreading is generally the final review of edited text or typeset pages before publication."
+            }
+          ]
+        },
+        {
+          "title": "Do you correct the original InDesign or typesetting files?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Proofreading may identify required corrections, but implementation in layout files should be separately agreed with the production team."
+            }
+          ]
+        },
+        {
+          "title": "Can you check whether earlier corrections have been implemented?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Correction checking can be assessed when earlier marked proofs or correction lists are available. Please identify whether the work requires only checking those corrections or a full new proofread."
+            }
+          ]
+        },
+        {
+          "title": "Do you check references, tables and figures?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Visible consistency and numbering issues can be included in the proofread. Comprehensive bibliographic verification, data validation and artwork preparation are separate activities."
+            }
+          ]
+        },
+        {
+          "title": "Is proofreading suitable for a manuscript that has not been edited?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A light final review may be possible, but manuscripts with significant language or structural issues generally require copyediting or another editorial service first."
+            }
+          ]
+        },
+        {
+          "title": "Do you guarantee error-free publications?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. Proofreading provides a defined quality review, but detecting every possible error cannot be guaranteed."
+            }
+          ]
+        },
+        {
+          "title": "Can proofreading be combined with typesetting?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Proofreading and typesetting can be assessed as connected production stages. The responsibility for making corrections, producing revised proofs and approving final files must be established."
+            }
+          ]
+        },
+        {
+          "title": "What files should we send for a proofreading quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide representative proofs or documents, approximate volume, publication type, house style, current production stage, review instructions and preferred schedule."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request a Proofreading Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need a final-stage review of book, journal or other publishing content?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your page proofs, editorial instructions and required checks with EPUBTRANS."
+        },
+        {
+          "kind": "paragraph",
+          "text": "We can review the material, understand its production stage and discuss an appropriate proofreading scope and delivery arrangement."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Proofreading Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 178
+}

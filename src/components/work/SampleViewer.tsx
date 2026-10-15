@@ -206,6 +206,7 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
   const reader = sample.sections.length > 0
   const count = reader ? sample.sections.length : sample.pages.length
   const active = sample.pages[page]
+  const textView = reader
   const changePage = (next: number) => {
     setPage(next)
     setError(false)
@@ -252,7 +253,7 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
             <button
               className="wp-control"
               disabled={zoom <= 1}
-              aria-label={reader ? 'Smaller text' : 'Zoom out'}
+              aria-label={textView ? 'Smaller text' : 'Zoom out'}
               onClick={() => setZoom(Math.max(1, zoom - 0.25))}
             >
               <Minus size={18} aria-hidden="true" />
@@ -262,14 +263,14 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
             </span>
             <button
               className="wp-control"
-              disabled={zoom >= (reader ? 2 : 3)}
-              aria-label={reader ? 'Larger text' : 'Zoom in'}
+              disabled={zoom >= (textView ? 2 : 3)}
+              aria-label={textView ? 'Larger text' : 'Zoom in'}
               onClick={() => setZoom(zoom + 0.25)}
             >
               <Plus size={18} aria-hidden="true" />
             </button>
             <button className="wp-control" onClick={() => setZoom(1)}>
-              {reader ? 'Reset text' : 'Fit'}
+              {textView ? 'Reset text' : 'Fit'}
             </button>
           </div>
         )}

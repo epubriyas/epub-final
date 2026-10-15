@@ -80,7 +80,7 @@ describe('About EPUBTRANS page', () => {
     }
   })
 
-  it('keeps existing Mission and Vision visible until approved replacement copy is complete', async () => {
+  it('uses the approved handoff Mission and Vision until a complete approved CMS override exists', async () => {
     const html = await render({
       mission: 'Draft mission',
       vision: 'Draft vision',
@@ -88,8 +88,8 @@ describe('About EPUBTRANS page', () => {
     })
     expect(html).not.toContain('Draft mission')
     expect(html).not.toContain('Draft vision')
-    expect(html).toContain('To help people publish and share content')
-    expect(html).toContain('A future where useful ideas can travel')
+    expect(html).toContain('To support publishers, localization service providers and content organizations')
+    expect(html).toContain('To develop EPUBTRANS as a capable international production partner')
 
     const approvedHtml = await render({
       mission: 'Approved mission copy',
@@ -98,6 +98,6 @@ describe('About EPUBTRANS page', () => {
     })
     expect(approvedHtml).toContain('Approved mission copy')
     expect(approvedHtml).toContain('Approved vision copy')
-    expect(approvedHtml).not.toContain('To help people publish and share content')
+    expect(approvedHtml).not.toContain('To support publishers, localization service providers and content organizations')
   })
 })

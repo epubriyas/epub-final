@@ -28,6 +28,20 @@ export interface ServiceDesign {
 // Presentation copy describes capabilities already present in the Services collection.
 // Diagrams are illustrative examples, never customer work or evidence of compliance.
 const designs: Record<string, ServiceDesign> = {
+  'xml-jats': {
+    kind: 'xml',
+    layout: 'technical',
+    introduction: 'Structured XML for Journal Publishing',
+    source: 'Manuscript & Metadata',
+    output: 'XML Delivery Package',
+    related: [
+      'scielo-xml-markup',
+      'typesetting',
+      'data-conversion',
+      'ebook-creation',
+      'accessibility',
+    ],
+  },
   typesetting: {
     kind: 'layout',
     layout: 'publication',
@@ -194,6 +208,124 @@ const designs: Record<string, ServiceDesign> = {
   },
 }
 
+const servicePhotoThemes: Record<VisualKind, NonNullable<ServiceDesign['photo']>> = {
+  layout: {
+    src: '/images/services/publishing-production.webp',
+    alt: 'Illustrative publishing studio scene: a specialist reviews a printed book layout beside its digital edition.',
+  },
+  xml: {
+    src: '/images/services/publishing-production.webp',
+    alt: 'Illustrative production studio scene: an editor reviews print and digital publication materials.',
+  },
+  reader: {
+    src: '/images/services/publishing-production.webp',
+    alt: 'Illustrative publishing studio scene: a printed publication and tablet edition are reviewed together.',
+  },
+  editing: {
+    src: '/images/services/editorial.webp',
+    alt: 'Illustrative editorial studio scene: a copy editor reviews manuscript pages at a workstation.',
+  },
+  language: {
+    src: '/images/services/localization.webp',
+    alt: 'Illustrative localization studio scene: specialists review publication layouts together.',
+  },
+  accessibility: {
+    src: '/industries/accessibility.jpg',
+    alt: 'Colleagues reviewing digital content together on a laptop.',
+  },
+  conversion: {
+    src: '/images/services/publishing-production.webp',
+    alt: 'Illustrative publishing production scene with materials reviewed across print and digital formats.',
+  },
+  audio: {
+    src: '/images/services/audio-production.webp',
+    alt: 'Illustrative voiceover studio scene: a presenter records a script at a microphone.',
+  },
+  subtitles: {
+    src: '/industries/media.jpg',
+    alt: 'Film production setup representing video and subtitling work.',
+  },
+  learning: {
+    src: '/images/services/localization.webp',
+    alt: 'Illustrative learning localization scene: specialists review a publication and its localized layouts.',
+  },
+  design: {
+    src: '/images/services/publishing-production.webp',
+    alt: 'Illustrative book design scene: a designer reviews print and digital publication artwork.',
+  },
+  index: {
+    src: '/images/services/editorial.webp',
+    alt: 'Illustrative publishing studio scene: an editor reviews structured manuscript pages.',
+  },
+}
+
+const serviceHeroPhotos: Record<string, NonNullable<ServiceDesign['photo']>> = {
+  typesetting: {
+    src: '/images/services/hero-typesetting.webp',
+    alt: 'A typesetting specialist reviewing an academic book proof and page layout.',
+  },
+  'desktop-publishing': {
+    src: '/images/services/hero-desktop-publishing.webp',
+    alt: 'A desktop publishing specialist checking a publication layout on screen and in print.',
+  },
+  'scielo-xml-markup': {
+    src: '/images/services/hero-scielo-xml-markup.webp',
+    alt: 'A scholarly journal production specialist reviewing structured article files and proofs.',
+  },
+  'data-conversion': {
+    src: '/images/services/hero-data-conversion.webp',
+    alt: 'An archival digitization specialist converting manuscript pages into digital files.',
+  },
+  'ebook-creation': {
+    src: '/images/services/hero-ebook-creation.webp',
+    alt: 'A publishing specialist comparing an open book with its digital reader edition.',
+  },
+  copyediting: {
+    src: '/images/services/hero-copyediting.webp',
+    alt: 'A copy editor marking a manuscript proof at a publishing studio desk.',
+  },
+  proofreading: {
+    src: '/images/services/hero-proofreading.webp',
+    alt: 'A proofreader comparing final page proofs with a printed book.',
+  },
+  translation: {
+    src: '/images/services/hero-translation.webp',
+    alt: 'Two language professionals reviewing translated publication layouts together.',
+  },
+  accessibility: {
+    src: '/images/services/hero-accessibility.webp',
+    alt: 'An accessibility specialist auditing a digital publication with keyboard and screen reader tools.',
+  },
+  transcription: {
+    src: '/images/services/hero-transcription.webp',
+    alt: 'A transcription specialist listening to a recording and preparing notes at a workstation.',
+  },
+  voiceover: {
+    src: '/images/services/hero-voiceover.webp',
+    alt: 'A voice talent recording narration in a professional audio studio.',
+  },
+  subtitling: {
+    src: '/images/services/hero-subtitling.webp',
+    alt: 'Training video with synchronized subtitle text and corresponding timecoded subtitle entries.',
+  },
+  'elearning-localization': {
+    src: '/images/services/hero-elearning-localization.webp',
+    alt: 'A learning content team reviewing localized course materials on screen and tablet.',
+  },
+  'cover-page-design': {
+    src: '/images/services/hero-cover-page-design.webp',
+    alt: 'A book cover designer arranging cover concepts, paper mockups and color swatches.',
+  },
+  'graphic-design-image-services': {
+    src: '/images/services/hero-graphic-design-image-services.webp',
+    alt: 'A publication designer reviewing prepared book illustrations and image proofs.',
+  },
+  indexing: {
+    src: '/images/services/hero-indexing.webp',
+    alt: 'A scholarly indexer cross-referencing annotated pages and subject index notes.',
+  },
+}
+
 export function serviceDesign(service: Pick<Service, 'slug' | 'title' | 'hero'>): ServiceDesign {
   const design = designs[service.slug] ?? {
     kind: 'conversion',
@@ -203,7 +335,11 @@ export function serviceDesign(service: Pick<Service, 'slug' | 'title' | 'hero'>)
     output: 'Agreed deliverable',
     related: [],
   }
-  return { ...design, layout: service.hero?.layout || design.layout }
+  return {
+    ...design,
+    layout: service.hero?.layout || design.layout,
+    photo: serviceHeroPhotos[service.slug] || design.photo || servicePhotoThemes[design.kind],
+  }
 }
 
 export const serviceGroups = [
@@ -245,6 +381,12 @@ export function serviceGroup(
 }
 
 export function serviceQuoteHref(service: Pick<Service, 'slug' | 'category'>) {
+  if (['ebook-creation', 'scielo-xml-markup'].includes(service.slug)) {
+    return `/get-a-quote?service=${encodeURIComponent(quoteServices[1])}`
+  }
+  if (service.slug === 'data-conversion') {
+    return `/get-a-quote?service=${encodeURIComponent(quoteServices[2])}`
+  }
   const mapping = {
     publishing: quoteServices[0],
     language: quoteServices[3],

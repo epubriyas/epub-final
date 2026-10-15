@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test('service menu uses the Company presentation and keeps every service reachable', async ({
+test('service menu follows the six approved categories and keeps every service reachable', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
@@ -9,18 +9,26 @@ test('service menu uses the Company presentation and keeps every service reachab
   const menu = page.locator('.et-mega-services')
   await expect(menu.getByRole('link', { name: 'Explore our services', exact: true })).toBeVisible()
   await expect(menu.getByRole('heading')).toHaveText([
-    'Language & localization',
-    'Publishing & content',
-    'Media',
-    'Learning',
-    'Accessibility',
+    'Publishing & Editorial Services',
+    'eBook, XML & Structured Content',
+    'Document & Data Conversion',
+    'Localization & Multilingual Production',
+    'eLearning & Multimedia',
+    'Digital Accessibility',
   ])
-  await expect(menu.getByRole('link')).toHaveCount(16)
-  await expect(menu.locator('.et-mega-group-description')).toHaveCount(5)
+  await expect(menu.getByRole('link')).toHaveCount(18)
+  await expect(
+    menu.getByRole('link', { name: 'XML & JATS Conversion', exact: true }),
+  ).toHaveAttribute('href', '/xml-conversion-services')
+  await expect(menu.getByRole('link', { name: 'PDF Recreation', exact: true })).toHaveAttribute(
+    'href',
+    '/data-conversion-services',
+  )
+  await expect(menu.getByText(/indexing/i)).toHaveCount(0)
   await menu.evaluate((element) =>
     Promise.all(element.getAnimations().map((animation) => animation.finished)),
   )
-  await page.screenshot({ path: 'artifacts/v2/screens/services-menu-desktop.png' })
+  await page.screenshot({ path: 'artifacts/clean-ui/company-handoff/services-menu-desktop.png' })
   await menu.getByRole('link', { name: 'Copyediting', exact: true }).click()
   await expect(page).toHaveURL(/\/copyediting-services$/)
   await expect(page.locator('main h1')).toBeVisible()
@@ -36,10 +44,10 @@ test('company menu presents three columns and navigates to company content', asy
   await expect(menu.getByRole('link', { name: 'Discover EPUBTRANS' })).toBeFocused()
   await expect(menu.getByRole('heading')).toHaveText([
     'About EPUBTRANS',
-    'Global Presence',
+    'Global Delivery & Collaboration',
     'Careers',
   ])
-  await expect(menu.getByRole('link')).toHaveCount(16)
+  await expect(menu.getByRole('link')).toHaveCount(4)
   const columns = await menu
     .locator('.et-mega-groups > div')
     .evaluateAll((elements) => elements.map((element) => element.getBoundingClientRect().top))
@@ -47,17 +55,17 @@ test('company menu presents three columns and navigates to company content', asy
   await menu.evaluate((element) =>
     Promise.all(element.getAnimations().map((animation) => animation.finished)),
   )
-  await page.screenshot({ path: 'artifacts/v2/screens/company-menu-desktop.png' })
-  await menu.getByRole('link', { name: 'Who We Are', exact: true }).click()
-  await expect(page).toHaveURL(/\/about-us#who-we-are$/)
-  await expect(page.locator('#who-we-are')).toBeInViewport()
+  await page.screenshot({ path: 'artifacts/clean-ui/company-handoff/company-menu-desktop.png' })
+  await menu.getByRole('link', { name: 'About EPUBTRANS', exact: true }).click()
+  await expect(page).toHaveURL(/\/about-us$/)
+  await expect(page.getByRole('heading', { name: 'About EPUBTRANS', exact: true })).toBeVisible()
   await expect(menu).toHaveCount(0)
   await trigger.click()
   await page.keyboard.press('Escape')
   await expect(trigger).toBeFocused()
 })
 
-test('mobile company groups lead to internship content without horizontal overflow', async ({
+test('mobile company groups lead to the careers page without horizontal overflow', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 })
@@ -71,17 +79,17 @@ test('mobile company groups lead to internship content without horizontal overfl
   const companySection = dialog.locator(`#${sectionId}`)
   await expect(companySection.locator('summary')).toHaveText([
     'About EPUBTRANS',
-    'Global Presence',
+    'Global Delivery & Collaboration',
     'Careers',
   ])
   await companySection.locator('summary').getByText('Careers', { exact: true }).click()
   await dialog
     .locator(`#${sectionId}`)
     .evaluate((element) => element.scrollIntoView({ block: 'start' }))
-  await page.screenshot({ path: 'artifacts/v2/screens/company-menu-mobile.png' })
-  await dialog.getByRole('link', { name: 'Internships', exact: true }).click()
-  await expect(page).toHaveURL(/\/company\/careers#internships$/)
-  await expect(page.locator('#internships')).toBeInViewport()
+  await page.screenshot({ path: 'artifacts/clean-ui/company-handoff/company-menu-mobile.png' })
+  await dialog.getByRole('link', { name: 'Careers', exact: true }).click()
+  await expect(page).toHaveURL(/\/company\/careers$/)
+  await expect(page.locator('main h1')).toBeVisible()
   await expect(dialog).not.toBeVisible()
   expect(await page.locator('body').evaluate((el) => el.style.overflow)).toBe('')
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
@@ -89,7 +97,9 @@ test('mobile company groups lead to internship content without horizontal overfl
   )
 })
 
-test('desktop menus open on hover, stay open over links and close after leaving', async ({ page }) => {
+test('desktop menus open on hover, stay open over links and close after leaving', async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/')
   const services = page.getByRole('button', { name: 'What We Do', exact: true })
@@ -134,7 +144,7 @@ test('mobile modal locks scroll, contains focus, reveals service categories and 
   await expect(dialog).toBeVisible()
   expect(await page.locator('body').evaluate((el) => el.style.overflow)).toBe('hidden')
   await dialog.getByRole('button', { name: 'What We Do' }).click()
-  await dialog.getByText('Publishing & content', { exact: true }).click()
+  await dialog.getByText('Publishing & Editorial Services', { exact: true }).click()
   await expect(dialog.getByRole('link', { name: 'Copyediting', exact: true })).toBeVisible()
   await page.keyboard.press('Escape')
   await expect(dialog).not.toBeVisible()
