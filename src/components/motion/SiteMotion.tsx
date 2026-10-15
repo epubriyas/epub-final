@@ -39,12 +39,14 @@ export function SiteMotion() {
         // A duration curve gives wheel input a fluid tail with a definite stop.
         // Keep touch momentum native instead of smoothing it a second time.
         lerp: 0,
-        duration: 1.6,
+        duration: 1.25,
         easing: (progress) => Math.min(1, 1.001 - Math.pow(2, -10 * progress)),
         smoothWheel: true,
         syncTouch: false,
         anchors: false,
-        allowNestedScroll: true,
+        // Known readers and overlays opt out below; avoid walking computed
+        // overflow styles up the DOM tree on every wheel event.
+        allowNestedScroll: false,
         stopInertiaOnNavigate: true,
         prevent: (node) => !!node.closest(nativeScroll),
       })
@@ -90,7 +92,10 @@ export function SiteMotion() {
     const content = document.getElementById('main-content')
     if (!content || !('IntersectionObserver' in window)) return
     let seen = new WeakSet<Element>()
+    const parallaxSeen = new WeakSet<Element>()
     const animations = new Set<Animation>()
+    let scanFrame = 0
+    const compact = matchMedia('(max-width: 700px)')
     const observer = new IntersectionObserver(
       (entries) => {
         let stagger = 0
@@ -102,17 +107,16 @@ export function SiteMotion() {
           // Focused and live form content must never move away from the user.
           if (element.contains(document.activeElement)) return
           const image = element.hasAttribute('data-site-image-reveal')
-          const compact = matchMedia('(max-width: 700px)').matches
           const animation = element.animate(
             image
               ? [
-                  { clipPath: 'inset(0 0 5% 0)', scale: '1.025' },
-                  { clipPath: 'inset(0 0 0% 0)', scale: '1' },
+                  { opacity: 0.75, scale: '1.025' },
+                  { opacity: 1, scale: '1' },
                 ]
-              : [{ translate: compact ? '0 14px' : '0 22px' }, { translate: '0 0' }],
+              : [{ translate: compact.matches ? '0 12px' : '0 18px' }, { translate: '0 0' }],
             {
-              duration: image ? 1150 : compact ? 700 : 1000,
-              delay: Math.min(stagger++ * 75, 225),
+              duration: image ? 950 : compact.matches ? 600 : 800,
+              delay: Math.min(stagger++ * 60, 180),
               easing: 'cubic-bezier(.22,1,.36,1)',
             },
           )
@@ -163,11 +167,22 @@ export function SiteMotion() {
       content
         .querySelectorAll<HTMLImageElement>('main figure img, main [class*="heroMainImage"] img')
         .forEach((image) => {
+          if (parallaxSeen.has(image)) return
           if (image.closest(ownedMotion) || image.closest(nativeScroll)) return
+          parallaxSeen.add(image)
           const parent = image.parentElement
           if (parent && ['hidden', 'clip'].includes(getComputedStyle(parent).overflowY))
             image.dataset.siteParallax = 'true'
         })
+    }
+    // Streaming and interactive content can produce many mutations in a frame.
+    // Batch discovery so they never trigger repeated full-page style reads.
+    const scheduleScan = () => {
+      if (scanFrame) return
+      scanFrame = requestAnimationFrame(() => {
+        scanFrame = 0
+        scan()
+      })
     }
     const stop = () => {
       if (preference.matches) {
@@ -189,13 +204,14 @@ export function SiteMotion() {
       })
     }
     scan()
-    const mutations = new MutationObserver(scan)
+    const mutations = new MutationObserver(scheduleScan)
     mutations.observe(content, { childList: true, subtree: true })
     preference.addEventListener('change', stop)
     content.addEventListener('focusin', focus)
     return () => {
       observer.disconnect()
       mutations.disconnect()
+      cancelAnimationFrame(scanFrame)
       animations.forEach((animation) => animation.cancel())
       preference.removeEventListener('change', stop)
       content.removeEventListener('focusin', focus)
