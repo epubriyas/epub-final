@@ -1,0 +1,1155 @@
+{
+  "sourceDocument": "translation_services.docx",
+  "slug": "translation",
+  "seo": {
+    "title": "Translation Services for Publishers & Content Teams | EPUBTRANS",
+    "description": "Translation services for publishing, documents and digital learning content. Discuss language pairs, subject matter, linguistic review and file requirements."
+  },
+  "hero": {
+    "title": "Translation Services for Publishing & Digital Content",
+    "lead": "Translation support for publishers, academic content teams, eLearning producers and organizations preparing multilingual publications and digital materials.",
+    "paragraphs": [
+      "EPUBTRANS offers translation services for publishing and digital-content projects where written material needs to be prepared for readers, learners or business audiences in another language.",
+      "Our work in digital publishing and localization production provides a useful context for projects involving translated manuscripts, educational documents, training materials and content that must subsequently be typeset, converted or published.",
+      "Every translation assignment begins with an assessment of the source material, language pair, subject matter, target audience and intended use.",
+      "Translation production, linguistic review, terminology requirements and final file preparation are defined according to the agreed project scope and confirmed delivery capabilities."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Translation Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Discuss Your Multilingual Content Project",
+        "href": "/contact-us",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Translation for Multilingual Content Workflows",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "A translation project involves more than transferring words from one language into another."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The intended meaning, specialist terminology, audience expectations and use of the final material influence how the work should be specified and reviewed."
+        },
+        {
+          "kind": "paragraph",
+          "text": "For a publisher, the translated text may become part of a book, journal, reference publication or digital edition. For an eLearning team, it may be used in slides, onscreen instructions, assessments or narration scripts."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Translation projects can also involve content received in PDFs, editable documents, presentations or publishing files."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS assesses translation requirements alongside the document and production considerations that affect the final deliverables."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The responsibilities for translation, independent revision, technical formatting and final publication approval should be agreed before production begins."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Translation Service Scope",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Book, Manuscript and Publishing Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Book publishers and editorial production teams may require source material to be prepared in another language before typesetting or digital publication."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation requirements may involve manuscript text, chapter content, introductions, explanatory material and other eligible publication elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Literary style, academic terminology, quotations, references and publisher-specific conventions may call for different approaches and specialist language resources."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The commissioning publisher should identify the intended readership, relevant editorial standards and any passages requiring subject-matter or author approval."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Book translation and its subsequent copyediting, typesetting, proofreading and publication are distinct production activities unless specifically combined in the agreement."
+            }
+          ]
+        },
+        {
+          "title": "Academic and Scholarly Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Academic publishers, research teams and journal production organizations may need translations of eligible scholarly content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Potential project materials include abstracts, article-related text, editorial communications, educational reference materials and other publication assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Scientific and technical content can require discipline-specific terminology and careful treatment of citations, units, names, abbreviations and specialist expressions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Current subject-matter expertise and suitable language resources must be confirmed for the particular project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation does not automatically include scientific validation, peer review, manuscript acceptance or journal submission management."
+            }
+          ]
+        },
+        {
+          "title": "Educational and eLearning Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Learning materials often need translated text that can be used in different instructional environments."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, source material may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Course descriptions and learning objectives",
+                "Instructional text and training modules",
+                "Presentation slides",
+                "Knowledge checks and assessment questions",
+                "User guidance and learning-support materials",
+                "Narration or video scripts",
+                "Supporting handouts and reference documents"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The intended learners, terminology, reading level and use of the content should be specified."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Integration into eLearning authoring software, layout adjustments, synchronized narration and final course testing belong to separately agreed production stages."
+            }
+          ]
+        },
+        {
+          "title": "Business and Technical Documents",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Organizations may need translation of business information, training documents, operational guidance or other written materials."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Document complexity can vary considerably. A straightforward document may require a different review process from specialized technical or regulated material."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The scope should identify the subject matter, intended users, terminology requirements and any specialist approvals."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Legal certification, sworn translation, notarization, regulatory approval and independent technical certification are not automatically included."
+            }
+          ]
+        },
+        {
+          "title": "Website and Digital Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Digital materials may contain headings, descriptions, interface text, content modules and other written assets requiring translation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These assignments can require instructions on terminology, character limits, contextual meaning and content that should remain untranslated."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation of text is separate from technical website implementation, multilingual SEO, locale-specific functionality and testing."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These additional activities should be explicitly defined when required."
+            }
+          ]
+        },
+        {
+          "title": "Translation Updates and Existing-Content Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "When previously translated content is revised, the new source material may need to be compared with earlier versions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A project may involve translating changed passages, reviewing existing translations or preparing a new target-language file."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The available bilingual files, terminology assets, earlier approvals and extent of revision determine how the work should be approached."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Existing-content review is not automatically equivalent to a full retranslation or independent linguistic audit."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "Working with Publishers and Localization Service Providers",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS works within publishing and localization production workflows that can involve several specialist responsibilities."
+        },
+        {
+          "kind": "paragraph",
+          "text": "The role assigned to EPUBTRANS depends on the commissioning organization and the agreed deliverables."
+        }
+      ],
+      "groups": [
+        {
+          "title": "For Publishers and Content Owners",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A publisher may provide manuscript or document content together with its style guide, preferred terminology and intended target markets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project brief should identify who is responsible for translation, linguistic review, editorial decisions, subject-matter queries and final authorization."
+            },
+            {
+              "kind": "paragraph",
+              "text": "After translation approval, the content may proceed to typesetting, XML conversion, eBook creation or another publishing workflow under a separate production scope."
+            }
+          ]
+        },
+        {
+          "title": "For Localization Service Providers",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation agencies and LSPs may commission specific language or content-production activities as part of a client-managed project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The LSP may supply approved source files, translation memories, glossaries, file specifications, quality requirements and reporting instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess assignments that fit the required capabilities and delivery model."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any linguistic production, review or downstream formatting work must be separately specified."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The LSP retains the client-facing responsibilities assigned to it under the contract. White-label handling, direct-client contact restrictions and confidentiality arrangements should be confirmed for each engagement rather than assumed."
+            }
+          ]
+        },
+        {
+          "title": "For eLearning and Multimedia Teams",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Digital learning projects may require translated scripts and other written content for use in a larger production workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation, subtitling, voiceover recording, course reassembly and media synchronization involve different skills and outputs."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These stages can be coordinated where contracted, but they are not automatically included in a translation quotation."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Translation, Localization and Multilingual DTP",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "These services are related, but they should not be treated as interchangeable."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Translation",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation is the linguistic transfer of meaning from source-language text into target-language text."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The translation brief determines the required language variety, terminology, intended readership and review approach."
+            }
+          ]
+        },
+        {
+          "title": "Localization",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Localization may extend beyond translation to adapt content for a particular audience, region or use environment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, it can involve cultural references, formatting conventions, imagery, examples, interface elements and other locale-specific considerations."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The actual localization responsibilities must be defined rather than assumed."
+            }
+          ]
+        },
+        {
+          "title": "Multilingual Desktop Publishing",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual DTP deals with the technical presentation of source or translated content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It may involve text expansion, line breaks, typography, layout reflow, fonts, tables, right-to-left directionality and final production files."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A completed translation does not automatically include post-translation page layout or a print-ready PDF."
+            }
+          ]
+        },
+        {
+          "title": "Linguistic Review and Proofreading",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An independent linguistic revision compares translated content with the source to assess issues such as meaning, omissions and terminology."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Target-language proofreading may focus on errors in the final written text. Layout proofreading can involve a separate review of the finished document."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These stages should be identified individually in the project scope, including whether separate reviewers are available and commissioned."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Languages, Terminology and File Requirements",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Source and Target Languages",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The suitability of a translation project depends on the requested source and target language pair."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Regional variants, scripts, specialist subjects and reviewer requirements can affect the available production arrangement."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS should confirm current language resources and capabilities before accepting an assignment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "No fixed number of supported languages or language pairs is implied."
+            }
+          ]
+        },
+        {
+          "title": "Terminology and Style",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Client terminology plays an important role in publishing and technical translation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where available, source materials should be accompanied by glossaries, style guides, product terminology, previous approved translations and instructions for names or expressions that should remain unchanged."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Some projects may require terminology queries or client decisions before the translated text can be finalized."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation-memory or terminology-database creation, ownership and maintenance are separate scope matters unless expressly included."
+            }
+          ]
+        },
+        {
+          "title": "Editable Documents and Publishing Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Source material may be provided as Word documents, presentation files, PDFs or other digital content formats."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The accepted formats and target-file requirements must be confirmed for each assignment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A PDF may require document conversion before translation. A design or publishing file may need a preparation stage before text can be extracted or replaced."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Delivery of translated text is not the same as delivery of a fully reconstructed editable file or a final typeset publication."
+            }
+          ]
+        },
+        {
+          "title": "Structured and Digital Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects may involve text contained in XML, HTML or other structured content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These materials can include tags, attributes, code-like elements or content that must not be translated."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Their handling requires project-specific instructions and appropriate technical workflows."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Structural validation, content integration and target-language testing should be separately defined where applicable."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Source Materials and Project Requirements",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Providing a clear translation brief helps establish the expected output and quality responsibilities."
+        }
+      ],
+      "groups": [
+        {
+          "title": "What We Need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the assignment, please share:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Source language and target language or locale",
+                "Source files or representative samples",
+                "Word count or approximate content volume",
+                "Type of material and subject area",
+                "Intended audience and use of the translation",
+                "Relevant terminology, glossaries and style guides",
+                "Previous approved translations or bilingual assets",
+                "Required tone and writing conventions",
+                "Any specialist language or subject-matter requirements",
+                "Preferred target file format",
+                "Whether independent linguistic revision is required",
+                "Whether translation-memory or CAT-tool compatibility is needed",
+                "Any publishing, DTP or digital-content handoff requirements",
+                "Review and correction responsibilities",
+                "Required delivery schedule",
+                "Confidentiality, content rights and data-handling requirements"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Not every project requires all these materials."
+            }
+          ]
+        },
+        {
+          "title": "Clarifying the Source Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Ambiguous passages, incomplete references, unclear terminology or errors in the source may require client queries."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation should not silently invent missing facts or alter technical meaning."
+            },
+            {
+              "kind": "paragraph",
+              "text": "If a source is a scan or image-based PDF, separate OCR or document-conversion work may be necessary before translation."
+            }
+          ]
+        },
+        {
+          "title": "Rights and Permissions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The client should have the appropriate rights to commission translation and subsequent use of the supplied material."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Publication rights, licensed content, quotations, illustrations and other third-party material may require specific instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The ownership and permitted use of translated deliverables should be addressed in the project agreement."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Translation Deliverables",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The final outputs depend on the agreed language, content and workflow."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Translated Text Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The principal deliverable may be target-language text prepared in the agreed editable file format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The file may be organized by source document, chapter, course module or another specified unit."
+            }
+          ]
+        },
+        {
+          "title": "Reviewed Translation Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where a linguistic revision or proofreading stage has been contracted, the project may include the corresponding reviewed version."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The type of review, reviewer responsibility and correction procedure should be stated clearly."
+            }
+          ]
+        },
+        {
+          "title": "Bilingual and Project Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some clients may require bilingual translation files, translation-memory assets or other project-specific deliverables."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These are subject to the tools, interchange formats and responsibilities agreed for the assignment."
+            }
+          ]
+        },
+        {
+          "title": "Terminology and Query Records",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where commissioned, deliverables may include a terminology query list, unresolved-language issue log or approved glossary updates."
+            }
+          ]
+        },
+        {
+          "title": "Files for Downstream Production",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translated content may be prepared for a later DTP, eLearning, subtitle, voiceover or publishing stage."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A final typeset book, synchronized subtitle file, EPUB publication or localized course package is a separate deliverable unless included in the approved quotation."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Translation Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Content and Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review the source material, requested language pair, subject matter, target audience and intended deliverables."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This assessment identifies the language resources, document preparation and specialist review requirements that need confirmation."
+            }
+          ]
+        },
+        {
+          "title": "2. Agree the Scope and Production Method",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The project brief defines translation responsibilities, available delivery resources, file formats, terminology instructions and quality stages."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It should also clarify whether translation is performed through a specified human translation workflow, a permitted technology-assisted process or another agreed method."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The actual approach must be confirmed before the project begins."
+            }
+          ]
+        },
+        {
+          "title": "3. Prepare the Source Materials",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Source files, glossaries, reference materials and any approved terminology are organized for the agreed workflow."
+            },
+            {
+              "kind": "paragraph",
+              "text": "If files need OCR, extraction or technical reconstruction, these activities are separately scoped."
+            }
+          ]
+        },
+        {
+          "title": "4. Produce the Target-Language Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The translation activity follows the agreed source text, language conventions and project instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Questions about unclear meaning, terminology or source inconsistencies are raised through the agreed client communication process."
+            }
+          ]
+        },
+        {
+          "title": "5. Carry Out the Agreed Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The translated content undergoes the specific quality checks and linguistic review stages included in the assignment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "An independent second-linguist revision is performed only when contracted and supported by confirmed resources."
+            }
+          ]
+        },
+        {
+          "title": "6. Prepare the Delivery Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreed files are prepared in the requested structure and format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any relevant linguistic queries, unresolved source issues or agreed supporting assets are identified."
+            }
+          ]
+        },
+        {
+          "title": "7. Handle Client Review and Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The client or designated reviewer evaluates the output and supplies consolidated feedback."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Corrections and further review rounds are managed according to the agreed scope and responsibilities."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "Translation Quality and Approval Responsibilities",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The quality requirements for a translation should be established before production."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Meaning and Completeness",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where included in the agreed review, checks may address whether the target text conveys the source meaning and whether important content has been omitted or added incorrectly."
+            }
+          ]
+        },
+        {
+          "title": "Terminology and Consistency",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Terminology review may consider adherence to a supplied glossary, approved names and repeated expressions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Inconsistent or ambiguous source terminology may require client clarification."
+            }
+          ]
+        },
+        {
+          "title": "Language and Audience Suitability",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The required register, spelling conventions and target locale should be specified."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where specialist subject matter is involved, qualified linguistic or subject-matter review may be needed."
+            }
+          ]
+        },
+        {
+          "title": "Numbers, References and Technical Details",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Projects can require particular attention to numbers, measurements, dates, citations, references and other details that may have technical or publishing significance."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Changes to factual content or scientific claims require the appropriate client or subject-matter authorization."
+            }
+          ]
+        },
+        {
+          "title": "Linguistic Review Is a Defined Service",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation, revision, proofreading, specialist review and final publisher approval should not be described as one automatic, universal process."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The project agreement should specify which stages are included, the responsible reviewers and the expected evidence of completion."
+            }
+          ]
+        },
+        {
+          "title": "Translation Technology and Data Handling",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The use of machine translation, AI-assisted translation, translation memories or external processing systems should be determined by the approved production method and client requirements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Confidential source material must not be submitted to unapproved external services."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The actual file-transfer method, access permissions, processing arrangements, retention and deletion requirements must be confirmed before sensitive materials are shared."
+            }
+          ]
+        },
+        {
+          "title": "Certifications and Guarantees",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A translation assignment does not automatically include certified, sworn, notarized or legally recognized translation services."
+            },
+            {
+              "kind": "paragraph",
+              "text": "No translation should be described as universally error-free or guaranteed to satisfy a particular publisher, court, regulator or submission authority."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Any required certification, standard compliance or independent attestation must be verified and expressly agreed."
+            }
+          ]
+        }
+      ],
+      "kind": "quality"
+    },
+    {
+      "title": "What Affects Translation Scope and Scheduling?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Language Pair and Locale",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Available translators or reviewers, language direction and regional requirements affect project feasibility and scheduling."
+            }
+          ]
+        },
+        {
+          "title": "Word Count and Source Quality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Content volume, incomplete files and poor source quality influence preparation and review requirements."
+            }
+          ]
+        },
+        {
+          "title": "Subject Matter",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Specialist academic, technical, legal or regulated terminology may require additional qualified resources and approval stages."
+            }
+          ]
+        },
+        {
+          "title": "Quality and Review Level",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation-only work differs from an assignment requiring independent bilingual revision, subject-matter review or in-context testing."
+            }
+          ]
+        },
+        {
+          "title": "File Complexity",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Structured content, tables, graphics, presentation elements and non-editable documents may require technical preparation or post-translation work."
+            }
+          ]
+        },
+        {
+          "title": "Terminology and Reference Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing approved glossaries and previous translations may affect the required preparation work and consistency checks."
+            }
+          ]
+        },
+        {
+          "title": "Revisions and Delivery Requirements",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Changes to source files, multiple approval rounds, multiple target languages and complex handoffs can affect scheduling."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Quotations should be based on the actual project requirements rather than a universal fixed promise."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Localization Production Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Production support for translation agencies and LSPs, including document preparation, technical handoffs and related multilingual-content workflows."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual DTP and post-translation formatting for documents requiring target-language layout adaptation."
+            }
+          ],
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "PDF-to-Word preparation, OCR and editable-document reconstruction for suitable source materials."
+            }
+          ],
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Technical localization and production support for eligible learning materials and supported authoring workflows."
+            }
+          ],
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Subtitling Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Timed-text production for video and learning content where the required linguistic assets and media specifications are available."
+            }
+          ],
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Narration and audio production support for eligible multimedia and training projects."
+            }
+          ],
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "eBook Creation and Typesetting Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Preparation of agreed print and digital publishing outputs after suitable content has been supplied or approved."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services have separate production scopes and are not automatically included in a translation quotation."
+            },
+            {
+              "kind": "link",
+              "text": "Explore eBook Creation Services",
+              "href": "/ebook-creation-services",
+              "primary": false
+            },
+            {
+              "kind": "link",
+              "text": "Explore Typesetting Services",
+              "href": "/typesetting-services",
+              "primary": false
+            }
+          ],
+          "href": null
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Does EPUBTRANS provide translation services?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation is part of EPUBTRANS's existing published service offering. Individual projects are assessed for the requested languages, content type, delivery resources, linguistic responsibilities and output requirements before acceptance."
+            }
+          ]
+        },
+        {
+          "title": "Which languages does EPUBTRANS support?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The source and target languages, regional variants and specialist requirements must be confirmed for each assignment. An unrestricted language list or fixed number of language pairs should not be assumed."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS translate books, manuscripts and journal-related content?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Publishing and scholarly-content translation requests can be assessed. The specific subject matter, language pair, editorial requirements and available specialist resources determine whether the assignment can be accepted."
+            }
+          ]
+        },
+        {
+          "title": "Can you translate eLearning and training materials?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation of eligible learning text, presentations and scripts can be assessed. Technical course localization, layout adaptation, media synchronization and final testing are separate scope items unless commissioned together."
+            }
+          ]
+        },
+        {
+          "title": "Do you translate directly or work with linguistic partners?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The current delivery model, including any in-house and external linguistic resources, requires confirmation. The agreed proposal should identify the relevant responsibilities and review arrangements."
+            }
+          ]
+        },
+        {
+          "title": "Is an independent second-linguist review included?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Not automatically. Any independent bilingual revision, proofreading or specialist review must be defined in the quotation and supported by confirmed resources."
+            }
+          ]
+        },
+        {
+          "title": "Do you use machine translation or AI-assisted translation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The applicable translation method must be confirmed with the client before production. Tools, processing arrangements, permitted data use and any human review should be specified for the assignment."
+            }
+          ]
+        },
+        {
+          "title": "Can you work with translation memories and glossaries?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Client-supplied terminology and previous approved translations can be considered during scoping. Compatibility with particular CAT tools, translation-memory formats or terminology systems requires verification."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between translation and localization?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Translation produces target-language content. Localization may also adapt the content or its presentation to suit a particular region, audience or delivery environment."
+            }
+          ]
+        },
+        {
+          "title": "Does translation include multilingual DTP?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. Translated text and the final formatted document are different deliverables. Post-translation layout adjustment should be commissioned when required."
+            }
+          ]
+        },
+        {
+          "title": "Can you provide certified or notarized translations?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Certified, sworn, notarized or authority-specific translation requirements must be separately assessed. They should not be assumed to be part of the standard offering."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS handle confidential translation documents?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Confidential-document requirements can be discussed during quotation. Approved transfer, access-control, processing and retention arrangements must be confirmed before source material is submitted."
+            }
+          ]
+        },
+        {
+          "title": "What file formats can you accept?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accepted source and output formats depend on current technical capabilities and the specific assignment. Editable documents, PDFs, presentations and structured content may require different preparation workflows."
+            }
+          ]
+        },
+        {
+          "title": "What information is required for a translation quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide the source language, target language, content type, approximate word count, representative files, intended audience, terminology guidance, quality and review expectations, target format and preferred schedule."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request a Translation Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Do you need translation support for manuscripts, educational content, business documents or digital learning materials?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your source files or a representative sample, language requirements, expected deliverables and any terminology or review instructions."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can assess the project requirements and discuss an appropriate translation and content-production arrangement."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Translation Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 269,
+  "showTransformation": false
+}

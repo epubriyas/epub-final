@@ -13,10 +13,14 @@ test('Earth rotates, pauses, supports exploration and respects visibility and re
   const canvas = figure.locator('canvas')
   await expect(figure).toHaveAttribute('data-earth-ready', 'true')
   await expect(canvas).toHaveAttribute('data-earth-state', 'rotating')
+  const satellites = figure.locator('[data-service-satellite]')
+  await expect(satellites).toHaveCount(4)
+  await expect(satellites.first()).toHaveCSS('animation-play-state', 'running')
   const initial = await canvas.getAttribute('data-rotation')
   await expect.poll(() => canvas.getAttribute('data-rotation')).not.toBe(initial)
   await figure.getByRole('button', { name: 'Pause globe animation' }).click()
   await expect(canvas).toHaveAttribute('data-earth-state', 'paused')
+  await expect(satellites.first()).toHaveCSS('animation-play-state', 'paused')
   const paused = await canvas.getAttribute('data-rotation')
   await page.waitForTimeout(200)
   expect(await canvas.getAttribute('data-rotation')).toBe(paused)
@@ -40,6 +44,7 @@ test('Earth rotates, pauses, supports exploration and respects visibility and re
   ).toEqual([])
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await expect(canvas).toHaveAttribute('data-earth-state', 'static')
+  await expect(satellites.first()).toHaveCSS('animation-name', 'none')
   const still = await canvas.getAttribute('data-rotation')
   await page.waitForTimeout(200)
   expect(await canvas.getAttribute('data-rotation')).toBe(still)
@@ -92,6 +97,10 @@ test('service focus highlights its network route and preserves navigation', asyn
       'true',
     )
     await expect(cards.nth(index)).toHaveAttribute('href', destinations[index])
+    await expect(figure.locator(`[data-service-satellite="${index}"]`)).toHaveAttribute(
+      'data-active',
+      'true',
+    )
   }
   await page.setViewportSize({ width: 320, height: 800 })
   await figure.scrollIntoViewIfNeeded()

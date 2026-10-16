@@ -1,0 +1,1136 @@
+{
+  "sourceDocument": "Transcription_services.docx",
+  "slug": "transcription",
+  "seo": {
+    "title": "Audio & Video Transcription Services | EPUBTRANS",
+    "description": "Transcription support for audio, video, training and educational content. Discuss verbatim or edited transcripts, timestamps, speaker labels and deliverables."
+  },
+  "hero": {
+    "title": "Transcription Services for Audio, Video & eLearning",
+    "lead": "Audio and video transcription support for localization service providers, educational publishers, eLearning teams and business-content producers.",
+    "paragraphs": [
+      "EPUBTRANS provides transcription services for organizations converting recorded speech into written content for publishing, training, localization and digital-media workflows.",
+      "Our documented multimedia production scope includes transcription, with speaker information, timestamps and formatting requirements defined according to the project.",
+      "Whether you need transcripts of lectures, training videos, interviews, webinars, podcasts or other business recordings, EPUBTRANS can review your source media and prepare a suitable project scope.",
+      "The work may involve verbatim transcription, edited transcripts, speaker labeling, timestamps and agreed corrections. Supported languages, source formats, review methods and final deliverables are confirmed before production."
+    ],
+    "actions": [
+      {
+        "kind": "link",
+        "text": "Request a Transcription Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      {
+        "kind": "link",
+        "text": "Discuss Your Recording Requirements",
+        "href": "/contact-us",
+        "primary": false
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Transcription Support for Digital Content Production",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Transcription converts spoken audio into written text."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A transcript can help a production team review recorded content, identify relevant passages, prepare written reference material or develop other content assets."
+        },
+        {
+          "kind": "paragraph",
+          "text": "For localization projects, an approved source-language transcript may be used as an input for translation, subtitling or voiceover script preparation."
+        },
+        {
+          "kind": "paragraph",
+          "text": "For educational and corporate content, transcripts can support learners and reviewers who need access to information presented through speech."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Different uses require different transcript conventions."
+        },
+        {
+          "kind": "paragraph",
+          "text": "An interview transcript may need to preserve speech closely, while a training-video transcript may be prepared for readability and navigation. Other projects may require speaker labels, timestamps or specific terminology."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS assesses these requirements as part of the transcription brief rather than assuming one transcript style will suit every recording."
+        }
+      ],
+      "groups": [],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Transcription Service Scope",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Verbatim Transcription",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Verbatim transcription aims to preserve spoken wording and the requested details of natural speech."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the agreed conventions, a verbatim transcript may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Filler words and repetitions",
+                "False starts and self-corrections",
+                "Incomplete sentences",
+                "Relevant pauses",
+                "Speaker changes",
+                "Laughter or other specified vocal events",
+                "Other speech details required by the client"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "There are different interpretations of verbatim in transcription workflows."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The brief should identify whether the client requires a detailed, strict verbatim transcript or a more readable version that retains the substance of the speech."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Not every pause, breath or nonspeech sound is automatically included unless the specification requires it."
+            }
+          ]
+        },
+        {
+          "title": "Edited and Readable Transcripts",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some recordings need to be converted into text that is easier to read without changing the intended meaning."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the agreement, a readable transcript may omit routine fillers, remove accidental repetitions and apply suitable punctuation or paragraph breaks."
+            },
+            {
+              "kind": "paragraph",
+              "text": "This differs from independently rewriting, summarizing or changing the message of the speaker."
+            },
+            {
+              "kind": "paragraph",
+              "text": "When the content involves quotations, technical explanations, research findings or other sensitive wording, proposed changes should be handled according to the client's instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A transcript prepared for publication may need further copyediting or editorial approval after transcription."
+            }
+          ]
+        },
+        {
+          "title": "Speaker Labels and Timestamps",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recorded interviews, discussions and webinars may involve several speakers."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A transcription project can be scoped to distinguish speakers using supplied names, roles or neutral labels such as Speaker 1 and Speaker 2."
+            },
+            {
+              "kind": "paragraph",
+              "text": "If speakers cannot be reliably distinguished from the recording, clarification may be needed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Timestamps can also help reviewers find passages in the original audio or video."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Possible requirements include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Time markers at agreed intervals",
+                "Timestamps at speaker changes",
+                "Time markers for selected sections",
+                "Labels identifying speakers",
+                "A transcript organized into topic or recording segments",
+                "A specified timestamp notation"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "The timing convention, precision and frequency should be agreed before work begins."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Speaker labeling does not automatically include independent identity verification."
+            }
+          ]
+        },
+        {
+          "title": "Transcript Review and Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Clients may already have draft transcripts that require checking against an original recording."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The requested work can involve correcting misheard words, reviewing names and technical terminology, adjusting speaker labels or applying formatting instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The scope should identify whether EPUBTRANS is expected to produce a transcript from the recording, review an existing transcript or perform a defined correction pass."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Editing a transcript for grammar or publication style is different from confirming that the transcript faithfully represents the recording."
+            }
+          ]
+        },
+        {
+          "title": "Language-Specific Transcription",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recordings may contain different languages, accents or regional varieties."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess transcription requirements using the source language, speaker characteristics, available reference materials and current production capabilities."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A multilingual recording may require separate language-specific review or instructions about how speech in different languages should be represented."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Current language, script and specialist-domain availability must be confirmed for every project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Transcribing speech into its original language is distinct from translating that speech into another language."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Translation and independent linguistic review are not automatically included in a transcription assignment."
+            }
+          ]
+        }
+      ],
+      "kind": "capabilities"
+    },
+    {
+      "title": "Transcription for Different Content Types",
+      "lead": [],
+      "groups": [
+        {
+          "title": "eLearning and Training Videos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Digital courses and training videos may include spoken instructions, demonstrations, interviews and narrated explanations."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Transcripts can provide a written reference for course production, content review or further localization."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the assignment, the transcript may need to follow individual lessons, scenes, slides or modules."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Integration into an eLearning authoring project, learning-management system or final course package requires a separately defined scope."
+            }
+          ]
+        },
+        {
+          "title": "Lectures, Seminars and Academic Recordings",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Educational publishers, training organizations and academic teams may need written versions of recorded lectures, seminars or presentations."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Such recordings can include specialist terminology, names, questions from an audience and references to slides or visual materials."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The client should supply terminology guidance and relevant supporting information when available."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Independent verification of the speaker's research claims or academic content is not part of routine transcription."
+            }
+          ]
+        },
+        {
+          "title": "Interviews and Discussions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Interviews can involve multiple speakers, interruptions and informal spoken language."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The intended use helps determine whether a strict verbatim transcript, a readable transcript or a speaker-labeled record is most suitable."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Interview projects may also have requirements concerning confidentiality, participant consent and attribution."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The client should identify those requirements before production."
+            }
+          ]
+        },
+        {
+          "title": "Webinars and Corporate Presentations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Corporate training sessions, webinars, workshops and recorded meetings may contain technical terms, product names and multiple participants."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Transcripts can support content review, knowledge sharing and the preparation of further training material."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Formal meeting minutes, action-item summaries and legal records are distinct deliverables and should be separately commissioned where appropriate."
+            }
+          ]
+        },
+        {
+          "title": "Podcasts and Recorded Educational Content",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Podcasts and recorded discussions may require text for editorial review, publication or further content adaptation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the brief, transcription may include speaker labels, timestamps or the preparation of readable paragraphs."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Creating show notes, promotional articles, summaries or rewritten content is separate from faithfully transcribing the recording."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Working with Localization Service Providers and eLearning Teams",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Localization service providers often manage projects involving transcription, translation, subtitling, voiceover and media production."
+        },
+        {
+          "kind": "paragraph",
+          "text": "A source-language transcript can provide a useful reference for subsequent language work."
+        },
+        {
+          "kind": "paragraph",
+          "text": "EPUBTRANS can assess transcription as an individual production stage within a wider client-managed workflow."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Preparing Source-Language Assets",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The LSP may supply the recording, terminology guidance and instructions for producing a source-language transcript."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The transcript can then be reviewed and approved by the designated language or content reviewer before further use."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The client should define how unclear passages, names and technical terminology will be handled."
+            }
+          ]
+        },
+        {
+          "title": "Supporting Downstream Localization",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Once approved, a transcript may be provided to a translation team or used as reference material for subtitle or narration preparation."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The later work may require additional formatting, segmentation, translation or synchronization."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A readable transcript alone is not a timed subtitle file or an approved voiceover script."
+            }
+          ]
+        },
+        {
+          "title": "Maintaining Clear Responsibilities",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The agreement should define who is responsible for recording rights, transcription, language review, translation, client approval and delivery of any related media assets."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS should not be assumed to provide all localization stages as part of a standalone transcription assignment."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Transcripts, Subtitles and Accessibility",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Transcription is related to subtitles and captions, but the outputs have different purposes."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Written Transcripts",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A transcript is generally a document or text resource presenting the spoken content of a recording."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It can be read independently of the media and may include speaker information, timestamps or other agreed context."
+            }
+          ]
+        },
+        {
+          "title": "Subtitles and Captions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Subtitles and captions are synchronized text displayed alongside video or audio playback."
+            },
+            {
+              "kind": "paragraph",
+              "text": "They require timing, segmentation and delivery formats that are different from those used for ordinary text transcripts."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Captioning for viewers who cannot hear the audio may also need meaningful sound information and speaker identification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Converting a transcript into a timed subtitle or caption file is a separate production activity unless included in the agreement."
+            }
+          ]
+        },
+        {
+          "title": "Accessible Transcripts",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An accessibility-oriented transcript may need more than spoken words."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For example, a basic transcript can include meaningful nonspeech audio information, while a descriptive transcript for video may also explain important visual information needed to understand the content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The appropriate requirements depend on the medium and intended accessibility outcome."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess transcript preparation against supplied requirements, but delivering a basic transcript does not automatically establish accessibility conformance for a complete video, website or learning experience."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For supported captioning and timed-text work, see our Subtitling Services."
+            },
+            {
+              "kind": "paragraph",
+              "text": "For broader digital accessibility requirements, see our Accessibility Services."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Source Files and Project Requirements",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The quality and completeness of the recording affect the transcription approach."
+        }
+      ],
+      "groups": [
+        {
+          "title": "What We Need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the project, useful information may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Source audio or video files",
+                "Recording duration and number of files",
+                "Source language or languages",
+                "Expected number of speakers",
+                "Speaker names or labels, where available",
+                "Subject area and technical terminology",
+                "Glossaries, scripts or reference documents",
+                "Required verbatim or edited-transcript conventions",
+                "Instructions for nonspeech sounds or verbal events",
+                "Timestamp and speaker-labeling requirements",
+                "Preferred spelling and language variety",
+                "Desired document structure and output format",
+                "Media ownership and processing permissions",
+                "Any confidentiality or access restrictions",
+                "Review and correction requirements",
+                "Preferred delivery schedule"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Not every item applies to every project."
+            }
+          ]
+        },
+        {
+          "title": "Assessing the Recording",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A clear single-speaker recording may require a different approach from a discussion with multiple participants."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Factors such as overlapping speech, background noise, poor microphone quality, strong accents and specialist terminology can make some passages difficult to transcribe reliably."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Missing or unclear speech cannot always be reconstructed from the recording."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The agreed process should identify how uncertain passages will be marked and how client clarification will be requested."
+            }
+          ]
+        },
+        {
+          "title": "File Compatibility and Transfer",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Audio and video files may be supplied in a range of formats."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The exact accepted input formats, file-size limits and transfer arrangements must be confirmed before a client submits project material."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Unpublished, confidential or restricted recordings should only be transferred using a method approved for the project."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Transcription Deliverables",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "The final deliverables depend on the required transcript type and commissioned services."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Possible outputs include:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "A verbatim transcript",
+            "An edited or readable transcript",
+            "A speaker-labeled transcript",
+            "A transcript with agreed timestamps",
+            "A reviewed or corrected existing transcript",
+            "A transcript structured by recording, lesson or section",
+            "A list of unclear passages or editorial queries, where commissioned",
+            "Supporting notes or version information, where agreed"
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Output Formats",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Common transcript formats include editable Word documents, text files and PDFs."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The required file type, formatting and compatibility should be confirmed for the project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "An editable transcript, a page-formatted PDF and a web-ready HTML transcript are different deliverables."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Web publication, media-player integration and preparation of synchronized subtitle files are not automatically included."
+            }
+          ]
+        },
+        {
+          "title": "Language and Terminology Conventions",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The deliverable should follow the agreed spelling, punctuation, terminology and speaker-labeling instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where the source contains uncertain names or specialist expressions, the transcript may require an issue list or publisher clarification."
+            }
+          ]
+        },
+        {
+          "title": "Revisions and Handoffs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The quotation should identify the expected review rounds and who is responsible for approving transcript corrections."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Substantial changes to source media or additional editorial transformations may require separate work."
+            }
+          ]
+        }
+      ],
+      "kind": "narrative"
+    },
+    {
+      "title": "Our Transcription Workflow",
+      "lead": [],
+      "groups": [
+        {
+          "title": "1. Review the Recording and Brief",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We review the available recording sample, duration, source language, audio quality and intended use of the transcript."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The assessment helps identify speaker, terminology, format and timing requirements."
+            }
+          ]
+        },
+        {
+          "title": "2. Confirm Scope and Responsibilities",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The project brief identifies whether the work requires verbatim or edited transcription, speaker labeling, timestamps, specialist terminology or an existing-transcript review."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Output formats, unclear-speech conventions, quality checks and correction responsibilities are agreed."
+            }
+          ]
+        },
+        {
+          "title": "3. Prepare the Transcript",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The recording is converted into written text according to the agreed instructions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Uncertain passages, unclear names or other source issues are handled through the specified query or marking process."
+            }
+          ]
+        },
+        {
+          "title": "4. Review the Transcript",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The transcript is reviewed against the defined project requirements using the quality process agreed for the assignment."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where applicable, attention may be given to missing passages, speaker changes, terminology, timestamps and consistency."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The level of review and any transcription technology used should be agreed according to the available workflow."
+            }
+          ]
+        },
+        {
+          "title": "5. Prepare the Delivery Files",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The transcript and any separately commissioned supporting files are prepared in the agreed format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Outstanding queries or sections requiring client decisions are identified as appropriate."
+            }
+          ]
+        },
+        {
+          "title": "6. Handle Agreed Corrections",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The client or designated reviewer assesses the delivered material."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Corrections and further reviews are managed according to the agreed scope and available reference materials."
+            }
+          ]
+        }
+      ],
+      "kind": "workflow"
+    },
+    {
+      "title": "Quality Review and Approval Responsibilities",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Transcription quality depends on the source recording, requested conventions and review method."
+        }
+      ],
+      "groups": [
+        {
+          "title": "Comparing Text with the Source Recording",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Where included, quality checks may involve comparing transcript passages with the original audio to identify missing, duplicated or incorrect words."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A transcript that reads smoothly may still contain errors in names, numbers or technical expressions."
+            }
+          ]
+        },
+        {
+          "title": "Speaker and Timestamp Review",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "For multi-speaker or timecoded assignments, the review may include speaker changes, sequence and consistency of timestamp placement."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The expected timing accuracy should be established before production."
+            }
+          ]
+        },
+        {
+          "title": "Technical and Specialist Terminology",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recordings containing specialized vocabulary may require client-provided glossaries or subject-matter clarification."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Transcription should preserve the intended spoken content rather than make unsupported factual corrections."
+            }
+          ]
+        },
+        {
+          "title": "Unclear or Inaudible Speech",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "If a phrase cannot be understood reliably, the transcript may need an agreed uncertainty marker or client query."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A production team should not invent words merely to produce a complete-looking transcript."
+            }
+          ]
+        },
+        {
+          "title": "Accuracy and Review Limitations",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No transcription process should be represented as guaranteeing an error-free result under all recording conditions."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The agreed quality checks and review stages determine the scope of the service."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Independent legal certification, medical verification, scientific review and other specialist assessments are not automatically included."
+            }
+          ]
+        },
+        {
+          "title": "Privacy and Content Rights",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The client should have the rights and permissions needed to provide the recording for processing."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Sensitive recordings may require specific contractual, handling and retention arrangements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Secure transfer methods, access controls and deletion procedures must be confirmed before confidential materials are submitted."
+            }
+          ]
+        }
+      ],
+      "kind": "quality"
+    },
+    {
+      "title": "What Affects Transcription Scope and Scheduling?",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Recording Duration",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Longer recordings and collections of multiple media files require more production work than short individual recordings."
+            }
+          ]
+        },
+        {
+          "title": "Audio Quality",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Background noise, low volume, poor microphone quality and overlapping speakers can increase review requirements."
+            }
+          ]
+        },
+        {
+          "title": "Number of Speakers",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multi-speaker recordings may need additional speaker labeling and identification guidance."
+            }
+          ]
+        },
+        {
+          "title": "Languages, Accents and Terminology",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Specialist language content and particular accents may require additional reference materials or qualified review."
+            }
+          ]
+        },
+        {
+          "title": "Transcript Type",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A strict verbatim transcript can have different requirements from a lightly edited version intended for general reading."
+            }
+          ]
+        },
+        {
+          "title": "Timestamps and Special Formatting",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Timestamp intervals, speaker labels, complex templates and delivery formats may add production requirements."
+            }
+          ]
+        },
+        {
+          "title": "Review and Correction Scope",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Additional verification passes, source changes and client revisions affect scheduling."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These factors are assessed before estimates and delivery arrangements are confirmed."
+            }
+          ]
+        }
+      ],
+      "kind": "scope"
+    },
+    {
+      "title": "Related EPUBTRANS Services",
+      "lead": [],
+      "groups": [
+        {
+          "title": "Subtitling Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Timed subtitle preparation, segmentation and synchronization for approved video and multilingual content."
+            }
+          ],
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Narration and audio production support for eLearning, training and localized media."
+            }
+          ],
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Production support for digital courses, multimedia assets and supported eLearning authoring workflows."
+            }
+          ],
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A broader overview of EPUBTRANS's production support for localization service providers and translation agencies."
+            }
+          ],
+          "href": null
+        },
+        {
+          "title": "Accessibility Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Accessibility-related production for supported digital content, document and publishing formats."
+            }
+          ],
+          "href": "/accessibility-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Document layout and formatting for multilingual publication and localized content."
+            },
+            {
+              "kind": "paragraph",
+              "text": "These services are individually scoped and are not automatically included in a transcription quotation."
+            }
+          ],
+          "href": "/desktop-publishing-services"
+        }
+      ],
+      "kind": "related"
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "lead": [],
+      "groups": [
+        {
+          "title": "What does EPUBTRANS's Transcription Services offering include?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS's documented service portfolio includes converting recorded speech into written transcripts. Requirements such as verbatim transcription, edited transcripts, speaker labels, timestamps and output formatting are assessed according to the project brief."
+            }
+          ]
+        },
+        {
+          "title": "Can EPUBTRANS transcribe both audio and video recordings?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Audio and video transcription requests can be assessed using the source files, languages, recording quality and intended deliverables. Current input-format and technical compatibility must be confirmed."
+            }
+          ]
+        },
+        {
+          "title": "What is the difference between verbatim and edited transcription?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Verbatim transcription aims to preserve the specified details of spoken language, while edited transcription applies agreed readability conventions without independently changing the intended meaning."
+            }
+          ]
+        },
+        {
+          "title": "Can you provide speaker labels and timestamps?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Speaker labels and timestamped transcripts are documented as possible outputs. Their format, frequency and level of review must be confirmed for each assignment."
+            }
+          ]
+        },
+        {
+          "title": "Do you transcribe multilingual recordings?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Multilingual recording requirements can be reviewed, but current language and script support must be confirmed before accepting the work."
+            }
+          ]
+        },
+        {
+          "title": "Is transcription the same as translation?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. Transcription converts speech into written content, usually in the original language. Translation renders content into another language and requires separately agreed linguistic responsibilities."
+            }
+          ]
+        },
+        {
+          "title": "Can transcripts be used for subtitling?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A transcript can serve as a source asset for subtitling, but it generally requires additional timing, segmentation, formatting and sometimes translation before it becomes a subtitle file."
+            }
+          ]
+        },
+        {
+          "title": "Can you transcribe technical lectures, training videos and webinars?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "These content types are within the existing published service offering. Specialized terminology, multiple speakers and recording quality should be reviewed during project assessment."
+            }
+          ]
+        },
+        {
+          "title": "Can you review or correct an existing automated transcript?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Existing transcript correction requests can be assessed against the original recording. Any speech-recognition tools, review methods and available workflows must be verified before being promised."
+            }
+          ]
+        },
+        {
+          "title": "Do you use AI or human transcription?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The current delivery model and tools require confirmation. A project proposal should make clear which transcription method, review stages and data-processing arrangements apply."
+            }
+          ]
+        },
+        {
+          "title": "Are transcripts automatically accessible or WCAG-compliant?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. Accessibility depends on the transcript content, the type of media, its presentation and the relevant accessibility requirements. A basic speech transcript alone does not establish conformance for the complete experience."
+            }
+          ]
+        },
+        {
+          "title": "Can we securely upload confidential recordings?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Approved file-transfer and access arrangements must be confirmed before confidential material is submitted. EPUBTRANS should not promise a secure upload platform until its controls and operation have been verified."
+            }
+          ]
+        },
+        {
+          "title": "Do you guarantee error-free transcription?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No. The service should be evaluated against agreed quality criteria, recognizing that unclear speech, background noise and complex terminology can limit what can be reliably recovered."
+            }
+          ]
+        },
+        {
+          "title": "What information is needed for a transcription quote?",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Please provide the recording duration, source language, number of speakers, representative media sample, terminology requirements, preferred transcript style, timestamps or speaker labels, output format and expected schedule."
+            }
+          ]
+        }
+      ],
+      "kind": "faq"
+    },
+    {
+      "title": "Request a Transcription Quote",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Need transcripts for training videos, recorded lectures, interviews, webinars or other business and educational content?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Share your recording requirements, source language, approximate duration and expected deliverables with EPUBTRANS."
+        },
+        {
+          "kind": "paragraph",
+          "text": "We can review the project scope and discuss an appropriate transcription workflow, quality checks and delivery arrangement."
+        },
+        {
+          "kind": "link",
+          "text": "Request a Transcription Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Contact EPUBTRANS",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "groups": [],
+      "kind": "cta"
+    }
+  ],
+  "sourceCopyBlockCount": 277,
+  "showTransformation": false
+}

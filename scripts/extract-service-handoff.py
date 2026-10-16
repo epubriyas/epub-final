@@ -1,5 +1,7 @@
 import json,zipfile,xml.etree.ElementTree as E,pathlib,argparse,re
 specs={
+ 'translation':('translation_services.docx',136,405,93,95),
+ 'transcription':('Transcription_services.docx',176,453,122,125),
  'voiceover':('Voiceover.docx',196,510,142,145),
  'cover-page-design':('CoverPage.docx',173,435,162,165),
  'copyediting':('EPUBTRANS_Copyedit_Proofread.docx',142,311,130,131),
@@ -33,7 +35,7 @@ for r in p[a+2:b]:
  if re.match(r'^(Primary |Secondary )?CTA:',t):
   label=t.split(':',1)[1].strip()
   if t.startswith('Primary'):kind='primary';href='/get-a-quote'
-  elif t.startswith('Secondary'):kind='secondary';href=secondary[args.slug] if section is None else '/contact-us'
+  elif t.startswith('Secondary'):kind='secondary';href=secondary.get(args.slug, '/contact-us') if section is None else '/contact-us'
   else:kind='contextual';href='/accessibility-services' if 'Accessibility' in label else '/services'
   link={'kind':'link','text':label,'href':href,'primary':kind=='primary'}
   if section is None:ctas.append(link)
@@ -64,8 +66,19 @@ for s in sections:
    else:remaining.append(block)
   s['lead']=remaining
 sections[-1]['kind']='cta'
+if args.slug in ('translation', 'transcription'):
+ for s in sections:
+  if s['title'] in ('Our Translation Service Scope', 'Our Transcription Service Scope'):
+   s['kind']='capabilities'
+  if s['title']=='Translation Quality and Approval Responsibilities':s['kind']='quality'
+  for g in s['groups']:
+   if s['kind']=='related' and g['title']=='eBook Creation and Typesetting Services':
+    g['href']=None
+    g['blocks'].append({'kind':'link','text':'Explore eBook Creation Services','href':'/ebook-creation-services','primary':False})
+    g['blocks'].append({'kind':'link','text':'Explore Typesetting Services','href':'/typesetting-services','primary':False})
 hero['actions']=ctas
 out={'sourceDocument':f,'slug':args.slug,'seo':{'title':meta(ti),'description':meta(di)},'hero':hero,'sections':sections,'sourceCopyBlockCount':b-a}
+if args.slug in ('translation', 'transcription'):out['showTransformation']=False
 path=pathlib.Path('src/config/service-handoffs')/(args.slug+'.json');path.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'slug':args.slug,'h1':hero['title'],'sections':len(sections),'sourceBlocks':b-a,'output':str(path)}))
 

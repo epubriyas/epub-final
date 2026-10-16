@@ -1,3 +1,5 @@
+import handoffTranscription from '@/config/service-handoffs/transcription.json'
+import handoffTranslation from '@/config/service-handoffs/translation.json'
 import handoffTypesetting from '@/config/service-handoffs/typesetting.json'
 import handoffEbookCreation from '@/config/service-handoffs/ebook-creation.json'
 import handoffDesktopPublishing from '@/config/service-handoffs/desktop-publishing.json'
@@ -53,6 +55,8 @@ export interface ServiceHandoff {
 
 // Document copy is a separate, reviewable content layer; CMS identities and visual assets stay intact.
 const handoffs: Record<string, ServiceHandoff> = {
+  transcription: handoffTranscription as ServiceHandoff,
+  translation: handoffTranslation as ServiceHandoff,
   typesetting: handoffTypesetting as ServiceHandoff,
   'ebook-creation': handoffEbookCreation as ServiceHandoff,
   'desktop-publishing': handoffDesktopPublishing as ServiceHandoff,

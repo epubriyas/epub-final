@@ -8,7 +8,7 @@ import {
   BookOpenCheck,
   LayoutTemplate,
   Languages,
-  Accessibility,
+  FileCheck2,
   ArrowUpRight,
 } from 'lucide-react'
 import Link from '@/components/i18n/LocalizedLink'
@@ -39,7 +39,7 @@ const connectedServices = [
     label: 'Accessibility',
     detail: 'INCLUSIVE CONTENT',
     href: '/accessibility-services',
-    icon: Accessibility,
+    icon: FileCheck2,
   },
 ]
 
@@ -210,6 +210,30 @@ export function PublishingHeroVisual() {
             </g>
           ))}
         </svg>
+        <div className={styles.contentOrbit} aria-hidden="true">
+          <span className={styles.orbitTrack} />
+          {connectedServices.map(({ label, icon: Icon }, index) => (
+            <span
+              key={label}
+              className={styles.contentSatellite}
+              data-service-satellite={index}
+              data-active={active === index}
+              data-muted={active !== null && active !== index}
+              style={{ '--service-index': index } as CSSProperties}
+            >
+              <span className={styles.satellitePage}>
+                <Icon size={19} strokeWidth={1.3} />
+                <span className={styles.contentLines}>
+                  <i />
+                  <i />
+                  <i />
+                </span>
+                <span className={styles.contentScan} />
+              </span>
+              <span className={styles.satelliteLabel}>{label}</span>
+            </span>
+          ))}
+        </div>
         <span className={styles.tag} aria-hidden="true">
           <Globe2 size={13} /> EPUBTRANS / CONNECTED EXPERTISE
         </span>
