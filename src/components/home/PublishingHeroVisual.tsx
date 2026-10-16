@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import {
   Globe2,
   Pause,
@@ -12,7 +13,14 @@ import {
   ArrowUpRight,
 } from 'lucide-react'
 import Link from '@/components/i18n/LocalizedLink'
-import { useEffect, useRef, useState, useCallback, type CSSProperties } from 'react'
+import {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  type CSSProperties,
+  type MouseEvent,
+} from 'react'
 import type { createEarth } from './earth-renderer'
 import styles from './publishing-hero-visual.module.css'
 
@@ -44,18 +52,139 @@ const connectedServices = [
 ]
 
 export function PublishingHeroVisual() {
+  const router = useRouter()
   const figure = useRef<HTMLElement>(null)
+  const scene = useRef<HTMLDivElement>(null)
   const network = useRef<SVGSVGElement>(null)
   const canvas = useRef<HTMLCanvasElement>(null)
   const controls = useRef<ReturnType<typeof createEarth> | null>(null)
+  const destination = useRef<HTMLDivElement>(null)
+  const cancelButton = useRef<HTMLButtonElement>(null)
+  const pending = useRef<{ href: string; index: number } | null>(null)
+  const navigationTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const [journey, setJourney] = useState<number | null>(null)
   const [ready, setReady] = useState(false)
   const [paused, setPaused] = useState(false)
   const [active, setActive] = useState<number | null>(null)
   const select = (index: number | null) => {
+    if (pending.current) return
     setActive(index)
     controls.current?.select(index)
   }
   const loaded = useCallback(() => setReady(true), [])
+  const cancelJourney = useCallback(() => {
+    const index = pending.current?.index
+    pending.current = null
+    if (navigationTimer.current) clearTimeout(navigationTimer.current)
+    controls.current?.cancelFlight()
+    setJourney(null)
+    if (index !== undefined)
+      requestAnimationFrame(() =>
+        figure.current
+          ?.querySelectorAll<HTMLAnchorElement>('nav[aria-label="Explore EPUBTRANS services"] a')
+          [index]?.focus(),
+      )
+  }, [])
+  const beginJourney = (event: MouseEvent<HTMLAnchorElement>, index: number) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return
+    if (!ready || paused || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    event.preventDefault()
+    if (pending.current || !controls.current) return
+    const url = new URL(event.currentTarget.href)
+    const href = `${url.pathname}${url.search}${url.hash}`
+    pending.current = { href, index }
+    setActive(index)
+    setJourney(index)
+    router.prefetch(href)
+    let navigating = false
+    const navigate = () => {
+      if (!pending.current || navigating) return
+      navigating = true
+      if (navigationTimer.current) clearTimeout(navigationTimer.current)
+      router.push(href)
+    }
+    controls.current.flyToChennai(() => {
+      if (navigationTimer.current) clearTimeout(navigationTimer.current)
+      navigationTimer.current = setTimeout(navigate, 350)
+    })
+    // Keep navigation usable even if the GPU stops rendering or the tab is hidden.
+    navigationTimer.current = setTimeout(navigate, 3400)
+  }
+  useEffect(() => {
+    if (journey === null) return
+    cancelButton.current?.focus({ preventScroll: true })
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') cancelJourney()
+    }
+    window.addEventListener('keydown', escape)
+    return () => window.removeEventListener('keydown', escape)
+  }, [journey, cancelJourney])
+  useEffect(
+    () => () => {
+      pending.current = null
+      if (navigationTimer.current) clearTimeout(navigationTimer.current)
+    },
+    [],
+  )
+  useEffect(() => {
+    const root = scene.current
+    if (!root) return
+    const preference = matchMedia('(prefers-reduced-motion: reduce)')
+    let frame = 0
+    let targetX = 0,
+      targetY = 0,
+      x = 0,
+      y = 0
+    const draw = () => {
+      frame = 0
+      x += (targetX - x) * 0.12
+      y += (targetY - y) * 0.12
+      root.style.setProperty('--pointer-x', `${(50 + x * 45).toFixed(2)}%`)
+      root.style.setProperty('--pointer-y', `${(50 + y * 45).toFixed(2)}%`)
+      root.style.setProperty('--depth-x', `${(x * 9).toFixed(2)}px`)
+      root.style.setProperty('--depth-y', `${(y * 7).toFixed(2)}px`)
+      if (Math.abs(targetX - x) + Math.abs(targetY - y) > 0.002) frame = requestAnimationFrame(draw)
+    }
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(draw)
+    }
+    const move = (event: PointerEvent) => {
+      if (preference.matches || paused || event.pointerType !== 'mouse') return
+      const box = root.getBoundingClientRect()
+      targetX = (event.clientX - box.left) / box.width - 0.5
+      targetY = (event.clientY - box.top) / box.height - 0.5
+      schedule()
+    }
+    const reset = () => {
+      targetX = 0
+      targetY = 0
+      schedule()
+    }
+    const stop = () => {
+      cancelAnimationFrame(frame)
+      frame = 0
+      targetX = targetY = x = y = 0
+      for (const property of ['--pointer-x', '--pointer-y', '--depth-x', '--depth-y'])
+        root.style.removeProperty(property)
+    }
+    root.addEventListener('pointermove', move)
+    root.addEventListener('pointerleave', reset)
+    preference.addEventListener('change', stop)
+    return () => {
+      stop()
+      root.removeEventListener('pointermove', move)
+      root.removeEventListener('pointerleave', reset)
+      preference.removeEventListener('change', stop)
+    }
+  }, [paused])
   useEffect(() => {
     let disposed = false
     const element = canvas.current
@@ -67,22 +196,34 @@ export function PublishingHeroVisual() {
       .then(({ createEarth }) => {
         if (disposed) return
         try {
-          controls.current = createEarth(element, loaded, failed, (points) => {
-            const groups = network.current?.querySelectorAll<SVGGElement>('[data-service-path]')
-            points.forEach((point, index) => {
-              const group = groups?.[index]
-              if (!group) return
-              const startX = index % 2 === 0 ? 150 : 450
-              const startY = index < 2 ? 160 + index * 55 : 455
-              const path = `M${startX} ${startY} Q300 ${Math.min(startY, point.y) - 55} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`
-              group.querySelectorAll('path').forEach((line) => line.setAttribute('d', path))
-              group.querySelectorAll('circle').forEach((dot) => {
-                dot.setAttribute('cx', String(point.x))
-                dot.setAttribute('cy', String(point.y))
+          controls.current = createEarth(
+            element,
+            loaded,
+            failed,
+            (points) => {
+              const groups = network.current?.querySelectorAll<SVGGElement>('[data-service-path]')
+              points.forEach((point, index) => {
+                const group = groups?.[index]
+                if (!group) return
+                const startX = index % 2 === 0 ? 150 : 450
+                const startY = index < 2 ? 160 + index * 55 : 455
+                const path = `M${startX} ${startY} Q300 ${Math.min(startY, point.y) - 55} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`
+                group.querySelectorAll('path').forEach((line) => line.setAttribute('d', path))
+                group.querySelectorAll('circle').forEach((dot) => {
+                  dot.setAttribute('cx', String(point.x))
+                  dot.setAttribute('cy', String(point.y))
+                })
+                group.dataset.visible = String(point.visible)
               })
-              group.dataset.visible = String(point.visible)
-            })
-          })
+            },
+            (point) => {
+              const marker = destination.current
+              if (!marker) return
+              marker.style.left = `${point.x / 6}%`
+              marker.style.top = `${point.y / 6}%`
+              marker.dataset.visible = String(point.visible)
+            },
+          )
         } catch {
           failed()
           element.getContext('webgl')?.getExtension('WEBGL_lose_context')?.loseContext()
@@ -168,8 +309,16 @@ export function PublishingHeroVisual() {
       data-earth-ready={ready}
       data-earth-paused={paused}
       data-active-service={active ?? 'none'}
+      data-journey={journey !== null}
     >
-      <div className={styles.scene}>
+      <div ref={scene} className={styles.scene}>
+        <div className={styles.atmosphere} aria-hidden="true">
+          <span className={styles.aura} />
+          <span className={styles.coordinateGrid} />
+          <span className={styles.orbitalRing} />
+          <span className={styles.orbitalRingSecondary} />
+          <span className={styles.dustField} />
+        </div>
         <Image
           src="/images/earth-hero-poster.webp"
           alt="Earth with shaded continents and a soft atmospheric glow."
@@ -187,6 +336,17 @@ export function PublishingHeroVisual() {
           aria-hidden={!ready}
           tabIndex={ready ? 0 : -1}
         />
+        {journey !== null && (
+          <div className={styles.journeyMap} aria-hidden="true">
+            <div ref={destination} className={styles.destination}>
+              <span className={styles.destinationDot} />
+              <span className={styles.destinationLabel}>
+                <strong>Chennai</strong>
+                <span>TAMIL NADU · INDIA</span>
+              </span>
+            </div>
+          </div>
+        )}
         <svg
           ref={network}
           className={styles.orbit}
@@ -222,6 +382,7 @@ export function PublishingHeroVisual() {
               style={{ '--service-index': index } as CSSProperties}
             >
               <span className={styles.satellitePage}>
+                <span className={styles.pageFold} />
                 <Icon size={19} strokeWidth={1.3} />
                 <span className={styles.contentLines}>
                   <i />
@@ -245,6 +406,7 @@ export function PublishingHeroVisual() {
               className={styles.service}
               style={{ '--service-index': index } as CSSProperties}
               data-active={active === index}
+              data-muted={active !== null && active !== index}
               onPointerEnter={() => select(index)}
               onPointerLeave={(event) => {
                 if (document.activeElement !== event.currentTarget) select(null)
@@ -252,6 +414,7 @@ export function PublishingHeroVisual() {
               onPointerDown={() => select(index)}
               onFocus={() => select(index)}
               onBlur={() => select(null)}
+              onClick={(event) => beginJourney(event, index)}
             >
               <span className={styles.serviceIcon}>
                 <Icon size={18} strokeWidth={1.4} aria-hidden="true" />
@@ -269,11 +432,43 @@ export function PublishingHeroVisual() {
             DRAG TO EXPLORE <span>↔</span>
           </span>
         )}
+        {journey !== null && (
+          <div className={styles.journeyPanel}>
+            <div role="status">
+              <span>CONNECTED FROM CHENNAI</span>
+              <strong>Opening {connectedServices[journey].label}</strong>
+            </div>
+            <div className={styles.journeyActions}>
+              <Link href={connectedServices[journey].href}>
+                Open now <ArrowUpRight size={14} aria-hidden="true" />
+              </Link>
+              <button ref={cancelButton} type="button" onClick={cancelJourney}>
+                Cancel journey
+              </button>
+            </div>
+          </div>
+        )}
       </div>
       <figcaption className={styles.caption} id="publishing-visual-caption">
         <div>
           <span className={styles.eyebrow}>CONNECTED CONTENT SERVICES</span>
-          <p>Publish. Transform. Localize.</p>
+          <p className={styles.captionTitle}>
+            <span data-visible={active === null}>Publish. Transform. Localize.</span>
+            {connectedServices.map(({ label }, index) => (
+              <span key={label} data-visible={active === index}>
+                {label}. Connected to your world.
+              </span>
+            ))}
+          </p>
+          <div className={styles.signalBars} aria-hidden="true">
+            {connectedServices.map(({ label }, index) => (
+              <i
+                key={label}
+                data-active={active === index}
+                style={{ '--service-index': index } as CSSProperties}
+              />
+            ))}
+          </div>
         </div>
         <button
           className={styles.replay}

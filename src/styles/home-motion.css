@@ -221,9 +221,38 @@
   color: inherit;
 }
 .et-home-premium a.et-service-row {
+  position: relative;
   transition:
     background-color 350ms var(--hp-ease),
     transform 450ms var(--hp-ease);
+}
+.et-home-premium a.et-service-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+  transform: scaleX(0.1);
+  opacity: 0;
+  transition:
+    transform 650ms var(--hp-ease),
+    opacity 450ms;
+  pointer-events: none;
+}
+.et-home-premium a.et-service-row:is(:hover, :focus-visible)::before {
+  transform: scaleX(1);
+  opacity: 0.8;
+}
+.et-home-premium a.et-service-row .et-arrow {
+  transition:
+    transform 450ms var(--hp-ease),
+    color 350ms;
+}
+.et-home-premium a.et-service-row:is(:hover, :focus-visible) .et-arrow {
+  transform: translate(3px, -3px);
+  color: var(--brand-primary);
 }
 .et-home-premium a.et-service-row:hover {
   background: #0786860a;
@@ -234,6 +263,21 @@
   }
 }
 @media (prefers-reduced-motion: no-preference) {
+  [data-home-motion='hero'][data-home-state='run'] .et-hero-meta,
+  [data-home-motion='hero'][data-home-state='run'] .et-hero-copy > p,
+  [data-home-motion='hero'][data-home-state='run'] .et-hero-copy > .sp-actions,
+  [data-home-motion='hero'][data-home-state='run'] .et-hero-bottom {
+    animation: hp-copy-arrive 900ms var(--hp-ease) both;
+  }
+  [data-home-motion='hero'][data-home-state='run'] .et-hero-copy > p {
+    animation-delay: 130ms;
+  }
+  [data-home-motion='hero'][data-home-state='run'] .et-hero-copy > .sp-actions {
+    animation-delay: 260ms;
+  }
+  [data-home-motion='hero'][data-home-state='run'] .et-hero-bottom {
+    animation-delay: 400ms;
+  }
   [data-home-motion='hero'][data-home-state='run'] h1 {
     animation: hp-title 950ms var(--hp-ease) both;
   }
@@ -275,6 +319,16 @@
   }
   [data-home-motion='company'][data-home-state='run'] h2 {
     animation: hp-emphasis 1200ms ease both;
+  }
+}
+@keyframes hp-copy-arrive {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
   }
 }
 @keyframes hp-title {

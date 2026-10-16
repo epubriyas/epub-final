@@ -24,11 +24,11 @@ export async function Header() {
               ? '/services#' +
                 (group.title === 'Digital Accessibility'
                   ? 'digital-accessibility'
-                  : group.title === 'eLearning & Multimedia'
+                  : group.title === 'eLearning & Multimedia '
                     ? 'elearning-multimedia'
                     : group.title === 'Localization & Multilingual Production'
                       ? 'localization-dtp'
-                      : group.title === 'eBook, XML & Structured Content'
+                      : group.title === 'eBook, XML & Structured Content '
                         ? 'ebook-xml'
                         : group.title === 'Document & Data Conversion'
                           ? 'document-conversion'
