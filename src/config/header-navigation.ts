@@ -9,47 +9,47 @@ const services: NavigationSection = {
     {
       title: 'Publishing & Editorial Services',
       items: [
-        { label: 'Typesetting', href: '/typesetting-services' },
-        { label: 'Copyediting', href: '/copyediting-services' },
-        { label: 'Proofreading', href: '/proofreading-services' },
-        { label: 'Graphic Design & Image', href: '/graphic-design-image-services' },
-        { label: 'Cover Page Design', href: '/cover-page-design-services' },
+        { label: 'Typesetting Service', href: '/typesetting-services' },
+        { label: 'Copyediting Service', href: '/copyediting-services' },
+        { label: 'Proofreading Service', href: '/proofreading-services' },
+        { label: 'Graphic Design & Image Service', href: '/graphic-design-image-services' },
+        { label: 'Cover Page Design Service', href: '/cover-page-design-services' },
       ],
     },
     {
       title: 'eBook, XML & Structured Content',
       items: [
-        { label: 'eBook Creation', href: '/ebook-creation-services' },
-        { label: 'SciELO XML Markup', href: '/scielo-xml-markup-services' },
-        { label: 'XML & JATS Conversion', href: '/xml-conversion-services' },
+        { label: 'eBook Creation Service', href: '/ebook-creation-services' },
+        { label: 'SciELO XML Markup Service', href: '/scielo-xml-markup-services' },
+        { label: 'XML & JATS Conversion Service', href: '/xml-conversion-services' },
       ],
     },
     {
       title: 'Document & Data Conversion',
       items: [
-        { label: 'Data Conversion', href: '/data-conversion-services' },
-        { label: 'PDF Recreation', href: '/data-conversion-services' },
+        { label: 'Data Conversion Service', href: '/data-conversion-services' },
+        { label: 'PDF Recreation Service', href: '/data-conversion-services' },
       ],
     },
     {
       title: 'Localization & Multilingual Production',
       items: [
-        { label: 'Desktop Publishing', href: '/desktop-publishing-services' },
-        { label: 'Translation', href: '/translation-services' },
+        { label: 'Desktop Publishing Service', href: '/desktop-publishing-services' },
+        { label: 'Translation Service', href: '/translation-services' },
       ],
     },
     {
       title: 'eLearning & Multimedia',
       items: [
-        { label: 'eLearning Localization', href: '/elearning-localization-services' },
-        { label: 'Subtitling', href: '/subtitling-services' },
-        { label: 'Voiceover', href: '/voiceover-services' },
-        { label: 'Transcription', href: '/transcription-services' },
+        { label: 'eLearning Localization Service', href: '/elearning-localization-services' },
+        { label: 'Subtitling Service', href: '/subtitling-services' },
+        { label: 'Voiceover Service', href: '/voiceover-services' },
+        { label: 'Transcription Service', href: '/transcription-services' },
       ],
     },
     {
       title: 'Digital Accessibility',
-      items: [{ label: 'Accessibility', href: '/accessibility-services' }],
+      items: [{ label: 'Accessibility Service', href: '/accessibility-services' }],
     },
   ],
 }
