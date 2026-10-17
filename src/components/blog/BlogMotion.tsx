@@ -5,7 +5,8 @@ export function BlogMotion({ children, className }: { children: ReactNode; class
   const root = useRef<HTMLElement>(null)
   useEffect(() => {
     const preference = matchMedia('(prefers-reduced-motion: reduce)')
-    if (!root.current || !('IntersectionObserver' in window) || preference.matches) return
+    const container = root.current
+    if (!container || !('IntersectionObserver' in window) || preference.matches) return
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -14,12 +15,24 @@ export function BlogMotion({ children, className }: { children: ReactNode; class
           observer.unobserve(entry.target)
         })
       },
-      { threshold: 0.12 },
+      { threshold: 0.06, rootMargin: '0px 0px -24px 0px' },
     )
-    root.current
-      .querySelectorAll('[data-blog-motion]')
-      .forEach((element) => observer.observe(element))
-    return () => observer.disconnect()
+    container.querySelectorAll<HTMLElement>('[data-blog-motion]').forEach((element) => {
+      if (element.getBoundingClientRect().top < window.innerHeight) {
+        element.setAttribute('data-blog-visible', 'true')
+      }
+      observer.observe(element)
+    })
+    container.setAttribute('data-motion-ready', 'true')
+    const revealAll = () => {
+      if (preference.matches) container.removeAttribute('data-motion-ready')
+    }
+    preference.addEventListener('change', revealAll)
+    return () => {
+      observer.disconnect()
+      preference.removeEventListener('change', revealAll)
+      container.removeAttribute('data-motion-ready')
+    }
   }, [])
   return (
     <main ref={root} className={className}>

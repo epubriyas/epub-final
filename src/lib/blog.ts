@@ -1,4 +1,10 @@
-import type { Post } from '@/payload-types'
+import type { Media, Post } from '@/payload-types'
+
+export function articleImage(post: Pick<Post, 'heroImage' | 'meta'>) {
+  return [post.heroImage, post.meta?.image].find(
+    (image): image is Media => Boolean(image && typeof image === 'object' && image.url),
+  )
+}
 
 export function articleText(content: unknown): string {
   if (!content || typeof content !== 'object') return ''

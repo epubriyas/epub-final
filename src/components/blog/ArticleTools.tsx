@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Check, Link2 } from 'lucide-react'
+import { Check, Link2, Printer } from 'lucide-react'
 import styles from './blog.module.css'
 
 export function ArticleTools() {
@@ -47,6 +47,7 @@ export function ArticleTools() {
   }, [])
   return (
     <div className={styles.articleTools}>
+      <p className={styles.eyebrow}>READING PROGRESS · {Math.round(progress)}%</p>
       <div className={styles.readingProgress} aria-hidden="true">
         <span style={{ width: `${progress}%` }} />
       </div>
@@ -84,6 +85,9 @@ export function ArticleTools() {
       <p className={styles.copyStatus} role="status">
         {status}
       </p>
+      <button className={styles.copyLink} type="button" onClick={() => window.print()}>
+        <Printer size={16} aria-hidden="true" /> Print article
+      </button>
     </div>
   )
 }

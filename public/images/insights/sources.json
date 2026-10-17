@@ -1,0 +1,9 @@
+{
+  "provider": "Unsplash",
+  "usage": "Editorial stock photography; these photographs do not depict EPUBTRANS premises or personnel.",
+  "images": {
+    "workplace.jpg": "https://images.unsplash.com/photo-1497366811353-6870744d04b2",
+    "editorial.jpg": "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
+    "collaboration.jpg": "https://images.unsplash.com/photo-1521737711867-e3b97375f902"
+  }
+}

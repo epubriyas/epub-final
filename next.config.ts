@@ -48,6 +48,7 @@ const nextConfig: NextConfig = {
       { pathname: '/favicon.jpeg', search: '' },
       { pathname: '/industries/**', search: '' },
       { pathname: '/images/services/**', search: '' },
+      { pathname: '/images/insights/**', search: '' },
       {
         pathname: '/api/media/file/**',
       },

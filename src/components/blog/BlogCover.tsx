@@ -9,9 +9,15 @@ import styles from './blog.module.css'
 export function BlogCover({
   image,
   sizes = '(max-width: 650px) 100vw, 50vw',
+  fill = false,
+  priority = false,
+  fit = 'cover',
 }: {
   image?: Media | null
   sizes?: string
+  fill?: boolean
+  priority?: boolean
+  fit?: 'cover' | 'contain'
 }) {
   const [failedUrl, setFailedUrl] = useState<string | null>(null)
   const url = image?.url
@@ -20,9 +26,15 @@ export function BlogCover({
       <Image
         src={url}
         alt={image.alt || ''}
-        width={image.width || 1200}
-        height={image.height || 750}
+        fill={fill}
+        width={fill ? undefined : image.width || 1200}
+        height={fill ? undefined : image.height || 750}
         sizes={sizes}
+        priority={priority}
+        style={{
+          objectFit: fit,
+          objectPosition: `${image.focalX ?? 50}% ${image.focalY ?? 50}%`,
+        }}
         onError={() => setFailedUrl(url)}
       />
     )
