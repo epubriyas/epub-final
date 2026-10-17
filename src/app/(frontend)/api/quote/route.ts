@@ -1,5 +1,6 @@
 import { createHash, randomUUID } from 'node:crypto'
 import { isTrustedOrigin } from '@/lib/request-origin'
+import { requestAddress } from '@/lib/request-address'
 import { NextResponse } from 'next/server'
 import { contentPayload } from '@/lib/content'
 import { notifyQuote } from '@/lib/quote-email'
@@ -13,10 +14,7 @@ const attempts = new Map<string, { count: number; reset: number }>()
 const maxFormBytes = quoteUploadLimit * quoteUploadCount + 128 * 1024
 
 function rateLimit(request: Request) {
-  const ip =
-    process.env.TRUST_NGINX_PROXY === 'true'
-      ? request.headers.get('x-real-ip') || 'unknown'
-      : 'local'
+  const ip = requestAddress(request)
   const key = createHash('sha256').update(ip).digest('hex')
   const now = Date.now()
   for (const [attemptKey, value] of attempts) if (value.reset < now) attempts.delete(attemptKey)

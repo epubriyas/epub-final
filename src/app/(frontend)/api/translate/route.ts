@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server'
 import { isTrustedOrigin } from '@/lib/request-origin'
+import { requestAddress } from '@/lib/request-address'
 import { getLanguage } from '@/config/languages'
 import { getPublicTranslationCatalog, normalizeText } from '@/lib/i18n/catalog'
 import { translatePublicText } from '@/lib/i18n/translate'
@@ -8,10 +9,7 @@ const requests = new Map<string, { time: number; count: number }>()
 export async function POST(request: NextRequest) {
   if (!isTrustedOrigin(request))
     return Response.json({ error: 'Origin not allowed' }, { status: 403 })
-  const address =
-    process.env.TRUST_NGINX_PROXY === 'true'
-      ? request.headers.get('x-real-ip') || 'unknown'
-      : 'local'
+  const address = requestAddress(request)
   const now = Date.now(),
     entry = requests.get(address)
   if (entry && now - entry.time < 60000) {

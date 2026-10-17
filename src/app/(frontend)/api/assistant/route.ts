@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server'
 import { isTrustedOrigin } from '@/lib/request-origin'
+import { requestAddress } from '@/lib/request-address'
 import { getSiteSettings } from '@/lib/content'
 import {
   assistantInstructions,
@@ -8,6 +9,7 @@ import {
   type ChatMessage,
 } from '@/lib/assistant-ai'
 export const runtime = 'nodejs'
+export const maxDuration = 60
 const requests = new Map<string, { time: number; count: number }>()
 let day = '',
   used = 0,
@@ -20,10 +22,7 @@ export async function POST(request: NextRequest) {
       { error: 'AI replies are not available yet. Please contact our team.' },
       { status: 503 },
     )
-  const address =
-    process.env.TRUST_NGINX_PROXY === 'true'
-      ? request.headers.get('x-real-ip') || 'unknown'
-      : 'local'
+  const address = requestAddress(request)
   const now = Date.now(),
     entry = requests.get(address)
   if (entry && now - entry.time < 60000) {
