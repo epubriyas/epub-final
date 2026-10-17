@@ -1,19 +1,12 @@
 import { NextRequest } from 'next/server'
+import { isTrustedOrigin } from '@/lib/request-origin'
 import { getLanguage } from '@/config/languages'
 import { getPublicTranslationCatalog, normalizeText } from '@/lib/i18n/catalog'
 import { translatePublicText } from '@/lib/i18n/translate'
 export const runtime = 'nodejs'
 const requests = new Map<string, { time: number; count: number }>()
 export async function POST(request: NextRequest) {
-  const origin = request.headers.get('origin')
-  const trusted = process.env.NEXT_PUBLIC_SERVER_URL
-  if (
-    !origin ||
-    !(
-      origin === trusted ||
-      (process.env.NODE_ENV !== 'production' && origin === new URL(request.url).origin)
-    )
-  )
+  if (!isTrustedOrigin(request))
     return Response.json({ error: 'Origin not allowed' }, { status: 403 })
   const address =
     process.env.TRUST_NGINX_PROXY === 'true'

@@ -1,4 +1,5 @@
 import { createHash, randomUUID } from 'node:crypto'
+import { isTrustedOrigin } from '@/lib/request-origin'
 import { NextResponse } from 'next/server'
 import { contentPayload } from '@/lib/content'
 import { notifyQuote } from '@/lib/quote-email'
@@ -56,11 +57,7 @@ async function findExisting(submissionKey: string) {
 }
 
 export async function POST(request: Request) {
-  const trustedOrigin = process.env.NEXT_PUBLIC_SERVER_URL
-  const origin = request.headers.get('origin')
-  const localOrigin =
-    process.env.NODE_ENV !== 'production' ? new URL(request.url).origin : undefined
-  if (!origin || ![trustedOrigin, localOrigin].filter(Boolean).includes(origin))
+  if (!isTrustedOrigin(request))
     return NextResponse.json(
       { error: 'This request must come from the EPUBTRANS website.' },
       { status: 403 },

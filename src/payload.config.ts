@@ -18,6 +18,7 @@ import { plugins } from './payload/plugins'
 import { defaultLexical } from '@/payload/fields/defaultLexical'
 
 import { getServerSideURL } from './utilities/getURL'
+import { trustedOrigins } from './lib/request-origin'
 
 import { Services } from './payload/collections/services'
 import { Solutions } from './payload/collections/solutions'
@@ -129,7 +130,8 @@ export default buildConfig({
   // CORS
   // =======================================================
 
-  cors: [getServerSideURL()].filter(Boolean),
+  cors: [...new Set([getServerSideURL(), ...trustedOrigins()])],
+  csrf: [...new Set([getServerSideURL(), ...trustedOrigins()])],
 
   // =======================================================
   // GLOBALS

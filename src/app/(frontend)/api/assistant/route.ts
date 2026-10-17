@@ -1,4 +1,5 @@
 import { NextRequest } from 'next/server'
+import { isTrustedOrigin } from '@/lib/request-origin'
 import { getSiteSettings } from '@/lib/content'
 import {
   assistantInstructions,
@@ -12,14 +13,7 @@ let day = '',
   used = 0,
   active = 0
 export async function POST(request: NextRequest) {
-  const origin = request.headers.get('origin')
-  if (
-    !origin ||
-    !(
-      origin === process.env.NEXT_PUBLIC_SERVER_URL ||
-      (process.env.NODE_ENV !== 'production' && origin === request.nextUrl.origin)
-    )
-  )
+  if (!isTrustedOrigin(request))
     return Response.json({ error: 'Origin not allowed' }, { status: 403 })
   if (!process.env.GEMINI_API_KEY)
     return Response.json(
