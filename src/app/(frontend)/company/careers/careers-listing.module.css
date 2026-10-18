@@ -1,0 +1,769 @@
+.page {
+  color: var(--text-primary);
+}
+.page :is(a, button):focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 5px;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #102b2b;
+  color: #f4f2eb;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 52%, #c6e6dc0a 52.1%, transparent 52.2%);
+}
+.heroInner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(36px, 6vw, 96px);
+  align-items: center;
+  padding-block: 64px;
+}
+.heroCopy {
+  padding-block: 30px;
+  min-width: 0;
+}
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #c6e6dc;
+  font:
+    500 11px/1.7 var(--font-geist-mono),
+    monospace;
+  letter-spacing: 0.12em;
+}
+.heroEyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d5e7a5;
+  box-shadow: 0 0 0 5px #d5e7a512;
+}
+.hero h1 {
+  margin: 28px 0;
+  font-size: clamp(48px, 5.9vw, 88px);
+  line-height: 1.03;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #d5e7a5;
+}
+.heroIntro {
+  max-width: 44ch;
+  color: #cfdbd6;
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.8;
+}
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 34px;
+}
+.primaryButton {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  background: #f4f2eb;
+  color: #102b2b;
+  padding: 17px 23px;
+  min-height: 54px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 200ms,
+    transform 200ms;
+}
+.primaryButton:hover {
+  background: #d5e7a5;
+  transform: translateY(-2px);
+}
+.hero :is(a, button):focus-visible,
+.closing a:focus-visible {
+  outline-color: #d5e7a5;
+}
+.primaryButton svg,
+.roleActions svg,
+.talentNote a svg,
+.disciplineAction svg {
+  transition: transform 250ms ease;
+  flex-shrink: 0;
+}
+.primaryButton:hover svg,
+.roleActions a:hover svg,
+.talentNote a:hover svg,
+.disciplineLink:hover .disciplineAction svg {
+  transform: translate(3px, -3px);
+}
+.heroSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: #f4f2eb;
+  min-height: 44px;
+  font-size: 14px;
+  border-bottom: 1px solid #c6e6dc55;
+}
+.heroFootnote {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+  color: #b8cbc1;
+  font:
+    10px/1.8 var(--font-geist-mono),
+    monospace;
+  letter-spacing: 0.06em;
+}
+.heroFootnote span {
+  width: 3px;
+  height: 3px;
+  background: #8ea99d;
+  border-radius: 50%;
+}
+.heroVisual {
+  position: relative;
+  margin: 0;
+  min-width: 0;
+  padding-bottom: 28px;
+}
+.heroImage {
+  position: relative;
+  aspect-ratio: 1.06;
+  overflow: hidden;
+}
+.heroImage img {
+  object-fit: cover;
+  object-position: 50% 63%;
+}
+.heroVisual figcaption {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin: -66px -1px 0 40px;
+  padding: 24px 28px;
+  background: #c6e6dc;
+  color: #102b2b;
+}
+.heroVisual figcaption > span {
+  grid-column: 1 / -1;
+  font:
+    9px/1.7 var(--font-geist-mono),
+    monospace;
+  letter-spacing: 0.08em;
+}
+.heroVisual figcaption p {
+  font-size: clamp(20px, 2vw, 29px);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  margin-top: 10px;
+}
+.heroVisual figcaption svg {
+  align-self: end;
+}
+.section {
+  padding-block: clamp(56px, 7vw, 96px);
+}
+.page :is(section[id], header[id]) {
+  scroll-margin-top: 112px;
+}
+.section h2 {
+  margin-block: 16px 24px;
+  font-size: clamp(32px, 3.1vw, 46px);
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+.sectionIntro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.intro {
+  max-width: 56ch;
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.85;
+}
+.sectionIntro :global(.et-text-link) {
+  margin-top: 20px;
+}
+.disciplines {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+.disciplines article {
+  min-width: 0;
+}
+.disciplines article + article {
+  border-left: 1px solid var(--border-default);
+}
+.disciplineLink {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 34px 30px;
+  transition: background 250ms ease;
+}
+.disciplineLink:hover {
+  background: var(--background-secondary);
+}
+.disciplineTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  color: var(--brand-primary);
+}
+.disciplineTop span {
+  font:
+    11px/1.5 var(--font-geist-mono),
+    monospace;
+  color: var(--text-muted);
+}
+.disciplines h3 {
+  font-size: clamp(21px, 1.8vw, 27px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 14px;
+}
+.disciplines p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.disciplineAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  color: var(--brand-primary);
+  font-size: 12px;
+}
+.openings {
+  background: var(--background-secondary);
+  border-block: 1px solid var(--border-default);
+}
+.sectionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.sectionTop h2 {
+  margin-bottom: 12px;
+}
+.sectionTop > p {
+  border: 1px solid var(--border-default);
+  padding: 10px 16px;
+  border-radius: 30px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.openingsIntro {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.roles {
+  border-top: 1px solid var(--border-default);
+}
+.roleCard {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) minmax(210px, 0.55fr);
+  gap: 28px;
+  padding: 34px 0;
+  border-bottom: 1px solid var(--border-default);
+  transition: background 200ms ease;
+}
+.roleNumber {
+  font:
+    12px/1.8 var(--font-geist-mono),
+    monospace;
+  color: var(--text-muted);
+  padding-top: 2px;
+}
+.roleDetails h3 {
+  font-size: clamp(25px, 2.3vw, 34px);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-block: 12px;
+  overflow-wrap: anywhere;
+}
+.roleDetails > p {
+  max-width: 65ch;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.roleMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+.facts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+.facts svg {
+  color: var(--brand-primary);
+}
+.roleActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  padding-top: 24px;
+  margin-top: auto;
+}
+.roleActions > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 36px;
+  color: var(--brand-primary);
+  font-size: 13px;
+}
+.roleActions > a:first-child {
+  font-weight: 600;
+}
+.empty {
+  border-block: 1px solid var(--border-default);
+  padding-block: 40px;
+}
+.empty > svg {
+  color: var(--brand-primary);
+  margin-bottom: 22px;
+}
+.empty h3 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.empty > p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 62ch;
+}
+.talentNote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 30px;
+  margin-top: 32px;
+  background: var(--background-primary);
+}
+.talentNote > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.talentNote > div > svg {
+  flex-shrink: 0;
+  color: var(--brand-primary);
+}
+.talentNote h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.talentNote p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.talentNote > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--brand-primary);
+  white-space: nowrap;
+  min-height: 44px;
+  font-size: 13px;
+}
+.process {
+  margin: 40px 0 0;
+}
+.process > figcaption {
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border-default);
+}
+.process ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.process li {
+  position: relative;
+  padding: 30px 32px 28px 0;
+}
+.process li + li {
+  padding-left: 30px;
+  border-left: 1px solid var(--border-default);
+}
+.stepIcon {
+  display: flex;
+  color: var(--brand-primary);
+  margin-bottom: 26px;
+}
+.stepNumber {
+  position: absolute;
+  right: 30px;
+  top: 34px;
+  color: var(--text-muted);
+  font:
+    11px/1.5 var(--font-geist-mono),
+    monospace;
+}
+.process h3 {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 13px;
+  letter-spacing: -0.02em;
+}
+.process li p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 32ch;
+}
+.processNote {
+  border-top: 1px solid var(--border-default);
+  padding-top: 20px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.checklist {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 30px;
+  margin-top: 36px;
+  background: var(--background-secondary);
+  border: 1px solid var(--border-default);
+}
+.checklist h3 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.checklist ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 26px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.checklist li {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.checklist li span {
+  color: var(--brand-primary);
+  font:
+    10px/2.2 var(--font-geist-mono),
+    monospace;
+}
+.closing {
+  background: #102b2b;
+  color: #f4f2eb;
+}
+.closingInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-block: 54px;
+}
+.closing h2 {
+  font-size: clamp(27px, 3.2vw, 44px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin-top: 16px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .page [data-blog-motion][data-blog-visible='true'] {
+    animation: careersReveal 750ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+  .page .heroVisual[data-blog-visible='true'] {
+    animation-delay: 110ms;
+  }
+  .page .disciplines article:nth-child(2)[data-blog-visible='true'] {
+    animation-delay: 80ms;
+  }
+  .page .disciplines article:nth-child(3)[data-blog-visible='true'] {
+    animation-delay: 160ms;
+  }
+  .process[data-blog-visible='true'] li {
+    animation: careersReveal 700ms ease backwards;
+  }
+  .process[data-blog-visible='true'] li:nth-child(2) {
+    animation-delay: 100ms;
+  }
+  .process[data-blog-visible='true'] li:nth-child(3) {
+    animation-delay: 200ms;
+  }
+  .heroImage img {
+    animation: careersImage 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+@keyframes careersReveal {
+  from {
+    opacity: 0;
+    translate: 0 22px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes careersImage {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (max-width: 1050px) {
+  .heroInner {
+    gap: 36px;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 6.4vw, 72px);
+  }
+  .heroVisual figcaption {
+    margin-left: 20px;
+    padding: 20px;
+  }
+  .heroVisual figcaption p {
+    font-size: 23px;
+  }
+  .sectionIntro {
+    gap: 40px;
+  }
+  .disciplineLink {
+    padding: 28px 22px;
+  }
+  .roleCard {
+    gap: 20px;
+    grid-template-columns: 28px minmax(0, 1fr) minmax(190px, 0.55fr);
+  }
+}
+@media (max-width: 850px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    padding-block: 36px 44px;
+    gap: 20px;
+  }
+  .heroCopy {
+    padding-block: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 8vw, 70px);
+  }
+  .heroIntro {
+    max-width: 58ch;
+  }
+  .heroFootnote {
+    margin-top: 32px;
+  }
+  .heroVisual {
+    padding-bottom: 0;
+  }
+  .heroImage {
+    aspect-ratio: 1.9;
+  }
+  .heroVisual figcaption {
+    margin: -50px 24px 0 auto;
+    max-width: 330px;
+  }
+  .sectionIntro {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .disciplines h3 {
+    font-size: 22px;
+  }
+  .roleCard {
+    grid-template-columns: 26px minmax(0, 1fr);
+  }
+  .roleMeta {
+    grid-column: 2;
+  }
+  .roleActions {
+    padding-top: 14px;
+  }
+  .talentNote {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .checklist {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .closingInner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: clamp(44px, 10.5vw, 60px);
+    margin-block: 22px;
+  }
+  .heroIntro {
+    font-size: 16px;
+  }
+  .heroActions {
+    gap: 18px;
+    margin-top: 26px;
+  }
+  .heroFootnote {
+    font-size: 8px;
+    gap: 9px;
+  }
+  .heroEyebrow {
+    font-size: 10px;
+  }
+  .heroImage {
+    aspect-ratio: 1.3;
+  }
+  .heroVisual figcaption {
+    margin-right: 0;
+    padding: 18px 22px;
+    max-width: 280px;
+  }
+  .heroVisual figcaption > span {
+    font-size: 8px;
+  }
+  .section h2 {
+    font-size: 32px;
+  }
+  .disciplines {
+    grid-template-columns: 1fr;
+    margin-top: 28px;
+  }
+  .disciplines article + article {
+    border-left: 0;
+    border-top: 1px solid var(--border-default);
+  }
+  .disciplineLink {
+    padding: 26px 8px;
+  }
+  .disciplineTop {
+    margin-bottom: 24px;
+  }
+  .disciplines p {
+    margin-bottom: 20px;
+  }
+  .sectionTop {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .roleCard {
+    padding-block: 28px;
+    gap: 16px;
+  }
+  .roleDetails h3 {
+    font-size: 26px;
+  }
+  .talentNote {
+    padding: 24px;
+  }
+  .talentNote > div {
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .talentNote > a {
+    margin-left: 36px;
+    gap: 14px;
+    white-space: normal;
+  }
+  .process ol {
+    grid-template-columns: 1fr;
+  }
+  .process li,
+  .process li + li {
+    padding: 28px 0;
+    border-left: 0;
+  }
+  .process li + li {
+    border-top: 1px solid var(--border-default);
+  }
+  .process li p {
+    max-width: none;
+  }
+  .stepNumber {
+    right: 0;
+  }
+  .stepIcon {
+    margin-bottom: 20px;
+  }
+  .checklist {
+    padding: 24px;
+  }
+  .checklist ul {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .closingInner {
+    padding-block: 42px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .page *::before,
+  .page *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

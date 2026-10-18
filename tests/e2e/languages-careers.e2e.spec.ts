@@ -34,10 +34,11 @@ test('careers page and company menu work at mobile and desktop widths', async ({
   for (const width of [375, 1440]) {
     await page.setViewportSize({ width, height: 900 })
     await page.goto('/company/careers')
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-      'Your talent. Our next chapter.',
-    )
-    await expect(page.getByRole('heading', { name: 'Find your next chapter.' })).toBeVisible()
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Build a career')
+    await expect(page.getByRole('heading', { name: 'Find your next opportunity.' })).toBeVisible()
+    await expect(
+      page.getByAltText('People collaborating around a table with laptops and project materials'),
+    ).toBeVisible()
     await expect(page.getByRole('link', { name: 'Contact the team' })).toHaveAttribute(
       'href',
       /^mailto:/,
@@ -52,6 +53,8 @@ test('careers page and company menu work at mobile and desktop widths', async ({
           .analyze()
       ).violations,
     ).toEqual([])
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await page.screenshot({ path: `artifacts/careers/enterprise-${width}.png`, fullPage: true })
   }
   await page.getByRole('button', { name: 'Company', exact: true }).click()
   await expect(

@@ -1,5 +1,6 @@
-import { Search, FileText, Send, BookOpen, Languages, Layers } from 'lucide-react'
-import styles from '@/app/(frontend)/company/careers/careers.module.css'
+import { Search, FileText, Send, BookOpen, Languages, Layers, ArrowUpRight } from 'lucide-react'
+import Link from '@/components/i18n/LocalizedLink'
+import styles from '@/app/(frontend)/company/careers/careers-listing.module.css'
 
 const steps = [
   {
@@ -22,8 +23,7 @@ export function CareerInfographic() {
   return (
     <figure className={styles.process} data-blog-motion>
       <figcaption>
-        <p className="et-label">YOUR NEXT STEP, MADE CLEAR</p>
-        <h2>From opportunity to introduction.</h2>
+        <p className="et-label">THREE STEPS TO GET STARTED</p>
       </figcaption>
       <ol>
         {steps.map(({ icon: Icon, title, text }, index) => (
@@ -63,11 +63,19 @@ export function CareerDisciplines() {
           title: 'Digital & media',
           text: 'Structured content, XML, graphics and multimedia production.',
         },
-      ].map(({ icon: Icon, title, text }) => (
-        <article key={title}>
-          <Icon size={30} strokeWidth={1.3} aria-hidden="true" />
-          <h3>{title}</h3>
-          <p>{text}</p>
+      ].map(({ icon: Icon, title, text }, index) => (
+        <article key={title} data-blog-motion>
+          <Link href="/services" className={styles.disciplineLink}>
+            <div className={styles.disciplineTop}>
+              <Icon size={28} strokeWidth={1.3} aria-hidden="true" />
+              <span>0{index + 1}</span>
+            </div>
+            <h3>{title}</h3>
+            <p>{text}</p>
+            <span className={styles.disciplineAction}>
+              Explore this work <ArrowUpRight size={18} aria-hidden="true" />
+            </span>
+          </Link>
         </article>
       ))}
     </div>
