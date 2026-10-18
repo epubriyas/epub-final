@@ -54,7 +54,25 @@ test('careers page and company menu work at mobile and desktop widths', async ({
       ).violations,
     ).toEqual([])
     await page.emulateMedia({ reducedMotion: 'reduce' })
+    expect(
+      await page
+        .locator('[data-blog-motion]')
+        .first()
+        .evaluate((element) => getComputedStyle(element).animationName),
+    ).toBe('none')
+    await page.screenshot({ path: `artifacts/careers/enterprise-hero-${width}.png` })
     await page.screenshot({ path: `artifacts/careers/enterprise-${width}.png`, fullPage: true })
+  }
+  const roleLink = page.getByRole('link', { name: 'View role & requirements' }).first()
+  if (await roleLink.count()) {
+    await roleLink.click()
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+    await expect(page.getByRole('link', { name: 'Apply by email' })).toHaveAttribute(
+      'href',
+      /^mailto:/,
+    )
+    await page.getByRole('link', { name: 'All open roles' }).click()
+    await expect(page.getByRole('heading', { name: 'Find your next opportunity.' })).toBeVisible()
   }
   await page.getByRole('button', { name: 'Company', exact: true }).click()
   await expect(
