@@ -13,13 +13,13 @@
   font-size: 10px;
   letter-spacing: 0.1em;
   line-height: 1.7;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   margin-bottom: 24px;
 }
 .screen {
   position: relative;
   aspect-ratio: 16 / 10;
-  background: #102b2b;
+  background: #12383a;
   color: #fff;
   border-radius: 4px;
   overflow: hidden;
@@ -27,7 +27,7 @@
 .scene {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 60% 30%, #367f75, #102b2b 75%);
+  background: radial-gradient(ellipse at 60% 30%, #367f75, #12383a 75%);
 }
 .scene span {
   position: absolute;
@@ -62,7 +62,7 @@
   top: 14px;
   font-size: 10px;
   letter-spacing: 0.13em;
-  color: #c6e6dc;
+  color: #eaf6f5;
 }
 .subtitle {
   position: absolute;
@@ -71,7 +71,7 @@
   right: 20px;
   margin: 0;
   text-align: center;
-  background: #081411e8;
+  background: #12383ae8;
   border-radius: 3px;
   padding: 12px 16px;
   font-size: 17px;
@@ -129,7 +129,7 @@
 .cues button > span:first-child {
   font-size: 10px;
   margin-bottom: 5px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .note {
   margin-top: 24px;
@@ -164,7 +164,7 @@
 .kicker {
   font-size: 10px;
   letter-spacing: 0.09em;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .readingView h3 {
   font-size: 26px;
@@ -209,7 +209,7 @@
 }
 .readingOrder span {
   font-size: 11px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .study button:hover:not(:disabled) {
   border-color: var(--brand-primary);

@@ -161,37 +161,35 @@ function Section({ section, index }: { section: HandoffSection; index: number })
       </section>
     )
   if (section.kind === 'related') {
-    const linked = section.groups.filter((group) => group.href)
-    const unlinked = section.groups.filter((group) => !group.href)
     return (
       <section id={id} className="et-container sp-section sp-related" data-motion="related">
         <Heading section={section} eyebrow="CONNECTED CAPABILITIES" />
         <div className="sp-related-grid">
-          {linked.map((group, itemIndex) => (
-            <Link
-              key={group.title}
-              href={group.href!}
-              style={{ '--fan': itemIndex - (linked.length - 1) / 2 } as CSSProperties}
-            >
-              <span className="sp-small-number">{String(itemIndex + 1).padStart(2, '0')}</span>
-              <h3>{group.title}</h3>
-              <Blocks blocks={group.blocks} />
-              <span className="sp-text-link">
-                Explore service <ArrowUpRight size={18} aria-hidden="true" />
-              </span>
-            </Link>
-          ))}
-        </div>
-        {unlinked.length > 0 && (
-          <ul className="sp-use-cases">
-            {unlinked.map((group) => (
-              <li key={group.title}>
+          {section.groups.map((group, itemIndex) => {
+            const content = (
+              <>
+                <span className="sp-small-number">{String(itemIndex + 1).padStart(2, '0')}</span>
                 <h3>{group.title}</h3>
                 <Blocks blocks={group.blocks} />
-              </li>
-            ))}
-          </ul>
-        )}
+                {group.href && (
+                  <span className="sp-text-link">
+                    Explore service <ArrowUpRight size={18} aria-hidden="true" />
+                  </span>
+                )}
+              </>
+            )
+            const style = { '--fan': itemIndex - (section.groups.length - 1) / 2 } as CSSProperties
+            return group.href ? (
+              <Link key={group.title} href={group.href} style={style}>
+                {content}
+              </Link>
+            ) : (
+              <article key={group.title} style={style}>
+                {content}
+              </article>
+            )
+          })}
+        </div>
       </section>
     )
   }

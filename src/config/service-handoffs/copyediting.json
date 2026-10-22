@@ -534,13 +534,13 @@
         },
         {
           "title": "XML & JATS Conversion Services",
+          "href": "/xml-conversion-services",
           "blocks": [
             {
               "kind": "paragraph",
               "text": "Structured XML article production for eligible scholarly publishing workflows."
             }
-          ],
-          "href": null
+          ]
         },
         {
           "title": "Indexing Services",

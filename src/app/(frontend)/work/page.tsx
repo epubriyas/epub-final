@@ -62,7 +62,7 @@ export default async function Work({
                   alt={sample.thumbnail!.alt}
                   width={sample.thumbnail!.width}
                   height={sample.thumbnail!.height}
-                  loading={i === 0 ? 'eager' : 'lazy'}
+                  loading="eager"
                 />
                 <figcaption>
                   {sample.category}

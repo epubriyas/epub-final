@@ -164,7 +164,7 @@
   border-radius: 50%;
   background: #35696b;
   box-shadow:
-    0 0 0 5px #c6e6dc80,
+    0 0 0 5px #eaf6f580,
     0 0 18px #35696b60;
   offset-path: var(--workflow-path);
   offset-distance: 100%;
@@ -252,7 +252,7 @@
 }
 .et-home-premium a.et-service-row:is(:hover, :focus-visible) .et-arrow {
   transform: translate(3px, -3px);
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .et-home-premium a.et-service-row:hover {
   background: #0786860a;
@@ -362,11 +362,11 @@
 @keyframes hp-node {
   0% {
     scale: 0.65;
-    box-shadow: 0 0 0 0 #c6e6dc;
+    box-shadow: 0 0 0 0 #eaf6f5;
   }
   55% {
     scale: 1.15;
-    box-shadow: 0 0 0 12px #c6e6dc00;
+    box-shadow: 0 0 0 12px #eaf6f500;
   }
   100% {
     scale: 1;

@@ -12,7 +12,7 @@
 }
 
 .sectionNav > span {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 
 .sectionNav a {
@@ -25,7 +25,7 @@
 
 .sectionNav a:hover,
 .sectionNav a:focus-visible {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   text-decoration: underline;
 }
 
@@ -39,7 +39,7 @@
 
 .overviewCopy > .et-label,
 .sectionHeading > .et-label {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 
 .overviewCopy h2,
@@ -80,7 +80,7 @@
 }
 
 .statusCard > .et-label {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 
 .statusCard > strong {
@@ -178,7 +178,7 @@
 .cardNumber {
   display: block;
   margin-bottom: 42px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font:
     500 11px/1 var(--font-geist-mono),
     monospace;
@@ -347,7 +347,7 @@
 .developmentStep > span {
   display: block;
   margin-bottom: 30px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 
 .questions {
@@ -387,7 +387,7 @@
 
 .questionList summary svg {
   flex: 0 0 auto;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   transition: transform var(--motion-fast);
 }
 

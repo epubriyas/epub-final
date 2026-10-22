@@ -1,0 +1,3818 @@
+[
+  {
+    "id": "S00-P001",
+    "section": 0,
+    "text": "CODEX MASTER PROMPT — EPUBTRANS V2 WEBSITE AUDIT, CORRECTIONS & QUALITY IMPROVEMENT",
+    "target": "Scope and source document",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S00-P002",
+    "section": 0,
+    "text": "ROLE AND OBJECTIVE",
+    "target": "Scope and source document",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S00-P003",
+    "section": 0,
+    "text": "Act as a senior UI/UX designer, frontend engineer, accessibility specialist, technical SEO engineer, and quality-assurance reviewer working on the EPUBTRANS V2 website.",
+    "target": "Scope and source document",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S00-P004",
+    "section": 0,
+    "text": "Project: EPUBTRANS V2 Corporate WebsiteTesting deployment: https://epubtrans-v2.vercel.app/Existing production website: https://www.epubtrans.com/",
+    "target": "Scope and source document",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S00-P005",
+    "section": 0,
+    "text": "Your task is to inspect, correct, optimize, and test the existing V2 website based on the approved EPUBTRANS brand standards and the findings listed below.",
+    "target": "Scope and source document",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S00-P006",
+    "section": 0,
+    "text": "The objective is to deliver a professional, visually consistent, responsive, accessible, secure, SEO-friendly B2B publishing-services website suitable for international customers.",
+    "target": "Scope and source document",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S00-P007",
+    "section": 0,
+    "text": "Important: Improve the existing website. Do not rebuild it unnecessarily, introduce a new design direction, or replace the approved technology stack.",
+    "target": "Scope and source document",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P008",
+    "section": 1,
+    "text": "1. CRITICAL PROJECT RULES",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P009",
+    "section": 1,
+    "text": "Work only within the EPUBTRANS V2 development repository.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P010",
+    "section": 1,
+    "text": "Do not modify, deploy over, or otherwise interfere with the existing production website.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P011",
+    "section": 1,
+    "text": "Preserve the approved stack: Next.js, React, TypeScript, Tailwind CSS, Payload CMS, and PostgreSQL.",
+    "target": "Repository, stack and safety policy",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P012",
+    "section": 1,
+    "text": "Preserve the planned self-hosted production architecture.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P013",
+    "section": 1,
+    "text": "Do not introduce unnecessary dependencies, paid services, SaaS platforms, or major architectural changes.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P014",
+    "section": 1,
+    "text": "Do not change existing URL slugs without a documented SEO reason and an approved migration decision.",
+    "target": "Repository, stack and safety policy",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P015",
+    "section": 1,
+    "text": "Preserve functioning features, CMS content relationships, and existing user workflows.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P016",
+    "section": 1,
+    "text": "Do not invent clients, testimonials, certifications, business statistics, or project outcomes.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P017",
+    "section": 1,
+    "text": "Avoid replacing authentic EPUBTRANS portfolio assets with generic stock photographs.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P018",
+    "section": 1,
+    "text": "Do not invent privacy policies, legal terms, employment opportunities, or publication permissions.",
+    "target": "Repository, stack and safety policy",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P019",
+    "section": 1,
+    "text": "Inspect actual implementation files and rendered behavior before identifying a defect as confirmed.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P020",
+    "section": 1,
+    "text": "Make safe, reversible corrections in logical groups and validate each group.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P021",
+    "section": 1,
+    "text": "Do not deploy to production or perform destructive data migrations.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P022",
+    "section": 1,
+    "text": "Do not claim a test passed unless it actually ran successfully.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P023",
+    "section": 1,
+    "text": "Start by identifying the repository structure, active branch, relevant components, CSS configuration, design tokens, routes, CMS models, and available test commands.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S01-P024",
+    "section": 1,
+    "text": "Document the initial findings before changing code, but continue with authorized, low-risk corrections rather than stopping after the audit.",
+    "target": "Repository, stack and safety policy",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P025",
+    "section": 2,
+    "text": "2. APPROVED EPUBTRANS BRAND COLORS",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P026",
+    "section": 2,
+    "text": "Use these colors as the official design-system baseline.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P027",
+    "section": 2,
+    "text": "Token",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P028",
+    "section": 2,
+    "text": "Approved HEX",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P029",
+    "section": 2,
+    "text": "Purpose",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P030",
+    "section": 2,
+    "text": "Primary teal",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P031",
+    "section": 2,
+    "text": "#078686",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P032",
+    "section": 2,
+    "text": "Main brand identity",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P033",
+    "section": 2,
+    "text": "Accent orange",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P034",
+    "section": 2,
+    "text": "#F2A03A",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P035",
+    "section": 2,
+    "text": "Selective highlights and accents",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P036",
+    "section": 2,
+    "text": "Brand green",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P037",
+    "section": 2,
+    "text": "#20BE27",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P038",
+    "section": 2,
+    "text": "Approved secondary brand color",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P039",
+    "section": 2,
+    "text": "Deep teal",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P040",
+    "section": 2,
+    "text": "#12383A",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P041",
+    "section": 2,
+    "text": "Dark surfaces and strong text",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P042",
+    "section": 2,
+    "text": "Gray",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P043",
+    "section": 2,
+    "text": "#526568",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P044",
+    "section": 2,
+    "text": "Secondary text",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P045",
+    "section": 2,
+    "text": "Soft teal",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P046",
+    "section": 2,
+    "text": "#EAF6F5",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P047",
+    "section": 2,
+    "text": "Soft tinted backgrounds",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P048",
+    "section": 2,
+    "text": "Off-white",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P049",
+    "section": 2,
+    "text": "#F7F9F9",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P050",
+    "section": 2,
+    "text": "Main light page background",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P051",
+    "section": 2,
+    "text": "White",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P052",
+    "section": 2,
+    "text": "#FFFFFF",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P053",
+    "section": 2,
+    "text": "White surfaces",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P054",
+    "section": 2,
+    "text": "Border",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P055",
+    "section": 2,
+    "text": "#DCE5E5",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P056",
+    "section": 2,
+    "text": "Borders and dividers",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P057",
+    "section": 2,
+    "text": "Alert red",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P058",
+    "section": 2,
+    "text": "#F3151A",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P059",
+    "section": 2,
+    "text": "Errors and alerts",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P060",
+    "section": 2,
+    "text": "Required color audit and correction",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P061",
+    "section": 2,
+    "text": "The screen recording suggested possible differences between the current website colors and the approved brand palette.",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P062",
+    "section": 2,
+    "text": "Approximate video samples included:",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P063",
+    "section": 2,
+    "text": "Warm cream background near #F3F2EB",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P064",
+    "section": 2,
+    "text": "Green-teal button near #087867",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P065",
+    "section": 2,
+    "text": "Dark surfaces near #112C2B",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P066",
+    "section": 2,
+    "text": "These are samples from a compressed recording, not verified CSS values.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P067",
+    "section": 2,
+    "text": "Inspect the real CSS, Tailwind configuration, theme variables, computed colors, and component styles.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P068",
+    "section": 2,
+    "text": "If the actual implementation uses unauthorized colors, replace them with the appropriate approved design tokens.",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P069",
+    "section": 2,
+    "text": "Apply these guidelines:",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P070",
+    "section": 2,
+    "text": "Use #F7F9F9 for the main off-white page background.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P071",
+    "section": 2,
+    "text": "Preserve intentional white surfaces where appropriate.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P072",
+    "section": 2,
+    "text": "Use #078686 as the brand's primary teal.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P073",
+    "section": 2,
+    "text": "Use #12383A for dark navigation surfaces, footer backgrounds, and important text where appropriate.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P074",
+    "section": 2,
+    "text": "Use #EAF6F5 for designated soft-teal sections.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P075",
+    "section": 2,
+    "text": "Use #F2A03A selectively as an accent.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P076",
+    "section": 2,
+    "text": "Do not overuse orange, green, or red.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P077",
+    "section": 2,
+    "text": "Reserve alert red for error and warning applications where appropriate.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P078",
+    "section": 2,
+    "text": "Keep borders, dividers, inputs, and cards visually consistent.",
+    "target": "Design tokens and CSS",
+    "status": "Local lab evidence only; field verification remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P079",
+    "section": 2,
+    "text": "Accessibility exception",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P080",
+    "section": 2,
+    "text": "The approved primary teal #078686 is slightly below the WCAG AA 4.5:1 minimum for normal-sized white text.",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P081",
+    "section": 2,
+    "text": "Do not blindly use white text on every brand-teal surface.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P082",
+    "section": 2,
+    "text": "Where required, use the smallest practical accessible darkening of the primary teal or another accessible approved foreground/background combination.",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P083",
+    "section": 2,
+    "text": "Treat any new color variant as a proposed design token requiring owner approval before it becomes a permanent brand-standard change.",
+    "target": "Design tokens and CSS",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P084",
+    "section": 2,
+    "text": "Measure actual contrast ratios.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P085",
+    "section": 2,
+    "text": "Target WCAG 2.2 Level AA, including:",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P086",
+    "section": 2,
+    "text": "Normal text: at least 4.5:1.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P087",
+    "section": 2,
+    "text": "Large text: at least 3:1.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P088",
+    "section": 2,
+    "text": "Applicable meaningful interface components and state indicators: at least 3:1.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P089",
+    "section": 2,
+    "text": "Visible, distinguishable keyboard focus indicators.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P090",
+    "section": 2,
+    "text": "Do not solve contrast problems by redesigning the entire brand.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S02-P091",
+    "section": 2,
+    "text": "Create or refine centralized semantic design tokens so the same color meanings remain consistent across components and pages.",
+    "target": "Design tokens and CSS",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P092",
+    "section": 3,
+    "text": "3. TYPOGRAPHY AUDIT AND CORRECTION",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P093",
+    "section": 3,
+    "text": "Inspect the actual font families, weights, sizes, line heights, letter spacing, and responsive typography.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P094",
+    "section": 3,
+    "text": "The approved EPUBTRANS reference does not mandate a particular font family.",
+    "target": "Typography and localization",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P095",
+    "section": 3,
+    "text": "Therefore:",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P096",
+    "section": 3,
+    "text": "Do not replace the current font merely to follow a personal design preference.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P097",
+    "section": 3,
+    "text": "Preserve the existing font if it is suitable and consistently implemented.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P098",
+    "section": 3,
+    "text": "Correct inconsistent typography.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P099",
+    "section": 3,
+    "text": "Establish or refine a maintainable typography token system.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P100",
+    "section": 3,
+    "text": "Avoid unnecessary font families and excessive font weights.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P101",
+    "section": 3,
+    "text": "Ensure proper Unicode font fallback for Tamil, Hindi, Telugu, Bengali, Arabic, Chinese, Japanese, and other supported scripts.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P102",
+    "section": 3,
+    "text": "Check Arabic right-to-left presentation where supported.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P103",
+    "section": 3,
+    "text": "Prevent long headings from overflowing or clipping.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P104",
+    "section": 3,
+    "text": "Maintain comfortable body-copy line heights.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P105",
+    "section": 3,
+    "text": "Ensure readable labels, buttons, captions, menus, and form messages.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P106",
+    "section": 3,
+    "text": "Avoid excessively small text in cards, dropdown menus, footers, and mobile interfaces.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P107",
+    "section": 3,
+    "text": "Suggested typography ranges for evaluation, not mandatory brand specifications:",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P108",
+    "section": 3,
+    "text": "Element",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P109",
+    "section": 3,
+    "text": "Desktop",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P110",
+    "section": 3,
+    "text": "Mobile",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P111",
+    "section": 3,
+    "text": "Hero heading",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P112",
+    "section": 3,
+    "text": "44–60 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P113",
+    "section": 3,
+    "text": "32–40 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P114",
+    "section": 3,
+    "text": "Section heading",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P115",
+    "section": 3,
+    "text": "28–36 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P116",
+    "section": 3,
+    "text": "26–30 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P117",
+    "section": 3,
+    "text": "Card heading",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P118",
+    "section": 3,
+    "text": "20–24 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P119",
+    "section": 3,
+    "text": "18–22 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P120",
+    "section": 3,
+    "text": "Body text",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P121",
+    "section": 3,
+    "text": "16–18 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P122",
+    "section": 3,
+    "text": "16–18 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P123",
+    "section": 3,
+    "text": "Navigation",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P124",
+    "section": 3,
+    "text": "14–16 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P125",
+    "section": 3,
+    "text": "Around 16 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P126",
+    "section": 3,
+    "text": "Form text",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P127",
+    "section": 3,
+    "text": "14–16 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P128",
+    "section": 3,
+    "text": "Around 16 px",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S03-P129",
+    "section": 3,
+    "text": "Prefer consistent typography over arbitrary changes to every element.",
+    "target": "Typography and localization",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P130",
+    "section": 4,
+    "text": "4. HOMEPAGE UI/UX IMPROVEMENTS",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P131",
+    "section": 4,
+    "text": "Inspect the complete homepage.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P132",
+    "section": 4,
+    "text": "Evaluate the hero, introductory content, service categories, industries, capabilities, portfolio, workflow sections, contact CTAs, and footer.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P133",
+    "section": 4,
+    "text": "Hero section",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P134",
+    "section": 4,
+    "text": "Maintain clear international B2B positioning.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P135",
+    "section": 4,
+    "text": "Make the primary message easy to understand within the first screen.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P136",
+    "section": 4,
+    "text": "Review excessive text density.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P137",
+    "section": 4,
+    "text": "Preserve important SEO content while improving readability.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P138",
+    "section": 4,
+    "text": "Establish a clear visual hierarchy between headline, description, supporting information, and CTAs.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P139",
+    "section": 4,
+    "text": "Use one visually dominant primary CTA.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P140",
+    "section": 4,
+    "text": "Keep secondary actions available but less prominent.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P141",
+    "section": 4,
+    "text": "Ensure the hero image supports publishing, localization, accessibility, or content transformation.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P142",
+    "section": 4,
+    "text": "Prevent hero images from becoming stretched, pixelated, or excessively large.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P143",
+    "section": 4,
+    "text": "Balance the hero at desktop, tablet, and mobile widths.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P144",
+    "section": 4,
+    "text": "Section hierarchy",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P145",
+    "section": 4,
+    "text": "Review possible repetition between:",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P146",
+    "section": 4,
+    "text": "Connected services",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P147",
+    "section": 4,
+    "text": "Main service categories",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P148",
+    "section": 4,
+    "text": "Content transformation",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P149",
+    "section": 4,
+    "text": "Production capabilities",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P150",
+    "section": 4,
+    "text": "Deliverables",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P151",
+    "section": 4,
+    "text": "Workflow explanations",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P152",
+    "section": 4,
+    "text": "Where sections duplicate the same purpose, recommend careful consolidation without losing important business or SEO information.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P153",
+    "section": 4,
+    "text": "Do not delete useful content automatically.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S04-P154",
+    "section": 4,
+    "text": "Improve section spacing, heading hierarchy, card consistency, and reading flow.",
+    "target": "Homepage",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P155",
+    "section": 5,
+    "text": "5. NAVIGATION AND MEGA-MENU",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P156",
+    "section": 5,
+    "text": "Inspect the desktop header, all mega-menus, the mobile navigation, language selector, and sticky-header behavior.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P157",
+    "section": 5,
+    "text": "An issue observed in the desktop recording was that the dark mega-menu could visually blend into the dark footer behind it.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P158",
+    "section": 5,
+    "text": "Required corrections",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P159",
+    "section": 5,
+    "text": "Improve visual separation between open mega-menus and underlying page content.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P160",
+    "section": 5,
+    "text": "Ensure dropdown boundaries are visually obvious.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P161",
+    "section": 5,
+    "text": "Use consistent column widths, padding, and link spacing.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P162",
+    "section": 5,
+    "text": "Prevent overly crowded navigation groups.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P163",
+    "section": 5,
+    "text": "Verify that menu items have clear hierarchy.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P164",
+    "section": 5,
+    "text": "Check navigation labels for consistency.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P165",
+    "section": 5,
+    "text": "Eliminate unnecessary duplicate links where appropriate.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P166",
+    "section": 5,
+    "text": "Ensure all links lead to the intended destinations.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P167",
+    "section": 5,
+    "text": "Preserve logical services, company, resources, and contact groupings.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P168",
+    "section": 5,
+    "text": "Ensure menus open and close predictably.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P169",
+    "section": 5,
+    "text": "Support keyboard navigation, Escape-key dismissal, logical focus movement, and appropriate focus visibility.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P170",
+    "section": 5,
+    "text": "Avoid hover-only interaction requirements.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P171",
+    "section": 5,
+    "text": "Verify that sticky-header behavior does not hide page headings or anchored content.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P172",
+    "section": 5,
+    "text": "Ensure menus remain usable near the page footer.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P173",
+    "section": 5,
+    "text": "Mobile navigation",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P174",
+    "section": 5,
+    "text": "Test menu opening, closing, scrolling, submenus, language selection, and focus management.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S05-P175",
+    "section": 5,
+    "text": "The mobile menu must not extend beyond the viewport or become impossible to scroll.",
+    "target": "Header, desktop/mobile navigation",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P176",
+    "section": 6,
+    "text": "6. SERVICE PAGES AND CARD LAYOUTS",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P177",
+    "section": 6,
+    "text": "Inspect every main service category and representative service-detail page.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P178",
+    "section": 6,
+    "text": "A specific issue was observed on the Book & Journal Typesetting page around 00:39–00:40 in the screen recording.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P179",
+    "section": 6,
+    "text": "The related-service grid appeared visually unbalanced, with remaining cards placed on the left and excessive unused space.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P180",
+    "section": 6,
+    "text": "Required correction",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P181",
+    "section": 6,
+    "text": "Inspect the actual grid component and resolve the issue if reproducible.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P182",
+    "section": 6,
+    "text": "Use a consistent responsive card layout.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P183",
+    "section": 6,
+    "text": "Where appropriate:",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P184",
+    "section": 6,
+    "text": "Three columns on wide desktop screens.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P185",
+    "section": 6,
+    "text": "Two columns on tablets.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P186",
+    "section": 6,
+    "text": "One column on narrow mobile screens.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P187",
+    "section": 6,
+    "text": "Balanced placement when a row contains fewer cards.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P188",
+    "section": 6,
+    "text": "Consistent card padding and spacing.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P189",
+    "section": 6,
+    "text": "Consistent numbering and icon treatment.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P190",
+    "section": 6,
+    "text": "Consistent CTA links and hover/focus states.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P191",
+    "section": 6,
+    "text": "No unintended empty grid tracks or large layout gaps.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P192",
+    "section": 6,
+    "text": "The XML & Structured Content Services card appeared different from neighboring cards. Check whether this is intentional. If not, correct it using the shared card component.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P193",
+    "section": 6,
+    "text": "Service discoverability",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P194",
+    "section": 6,
+    "text": "Inspect the services directory.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P195",
+    "section": 6,
+    "text": "Some service entries, including translation, subtitling, voiceover, and transcription, appeared to link directly to the quote form even though dedicated service-detail pages exist.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P196",
+    "section": 6,
+    "text": "Change service-card title/main actions to link to their appropriate detail pages, where confirmed.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P197",
+    "section": 6,
+    "text": "Provide a separate quote CTA where useful.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S06-P198",
+    "section": 6,
+    "text": "Do not remove valuable service landing pages.",
+    "target": "Service directory and detail cards",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P199",
+    "section": 7,
+    "text": "7. AI ASSISTANT POSITIONING",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P200",
+    "section": 7,
+    "text": "A visible issue was observed around 02:05 in the screen recording.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P201",
+    "section": 7,
+    "text": "The floating AI assistant overlapped the rightmost service-selection option in the Get a Quote form.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P202",
+    "section": 7,
+    "text": "Required correction",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P203",
+    "section": 7,
+    "text": "Prevent the assistant from covering buttons, cards, inputs, dropdowns, notices, or other important content.",
+    "target": "Assistant launcher and dialog",
+    "status": "Local lab evidence only; field verification remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P204",
+    "section": 7,
+    "text": "Inspect fixed positioning, stacking order, responsive offsets, and safe-area insets.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P205",
+    "section": 7,
+    "text": "Consider a smaller circular launcher or an alternative position on narrow screens.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P206",
+    "section": 7,
+    "text": "Avoid obscuring cookie notices, validation errors, progress indicators, or sticky actions.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P207",
+    "section": 7,
+    "text": "Confirm that the launcher and chat panel remain keyboard accessible.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P208",
+    "section": 7,
+    "text": "Preserve chat functionality.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P209",
+    "section": 7,
+    "text": "Do not hide or disable the assistant globally unless there is a demonstrated technical or usability need.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S07-P210",
+    "section": 7,
+    "text": "Test the assistant on the homepage, contact page, service pages, and every step of the quote form.",
+    "target": "Assistant launcher and dialog",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P211",
+    "section": 8,
+    "text": "8. PORTFOLIO AND IMAGE QUALITY",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P212",
+    "section": 8,
+    "text": "Inspect the Work/Portfolio section and all currently published portfolio cards.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P213",
+    "section": 8,
+    "text": "The desktop recording showed polished sample presentation, but some titles, such as \"Complex 1 typesetting sample\", read like internal production labels.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P214",
+    "section": 8,
+    "text": "Required actions",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P215",
+    "section": 8,
+    "text": "Inspect portfolio-card layout and spacing.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P216",
+    "section": 8,
+    "text": "Verify consistent thumbnail sizes and aspect ratios.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P217",
+    "section": 8,
+    "text": "Prevent image distortion, poor cropping, and stretched previews.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P218",
+    "section": 8,
+    "text": "Make sure cards remain balanced at all screen sizes.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P219",
+    "section": 8,
+    "text": "Use meaningful image alternative text.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P220",
+    "section": 8,
+    "text": "Review current titles and flag internal-looking names for editorial approval.",
+    "target": "Portfolio, media and permissions",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P221",
+    "section": 8,
+    "text": "Do not invent project descriptions or replace approved titles without confirmation.",
+    "target": "Portfolio, media and permissions",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P222",
+    "section": 8,
+    "text": "Ensure public previews use approved assets.",
+    "target": "Portfolio, media and permissions",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P223",
+    "section": 8,
+    "text": "Investigate whether original source documents or confidential material are publicly exposed.",
+    "target": "Portfolio, media and permissions",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P224",
+    "section": 8,
+    "text": "Do not delete or change portfolio publication permissions automatically.",
+    "target": "Portfolio, media and permissions",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P225",
+    "section": 8,
+    "text": "Optimize large images using the existing Next.js image pipeline where appropriate.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P226",
+    "section": 8,
+    "text": "Supply responsive sizes and prevent layout shift.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P227",
+    "section": 8,
+    "text": "Lazy-load below-the-fold images where appropriate.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P228",
+    "section": 8,
+    "text": "Avoid lazy-loading the main above-the-fold LCP image when it harms performance.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P229",
+    "section": 8,
+    "text": "Preserve image quality, especially for publication pages containing small text.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P230",
+    "section": 8,
+    "text": "Use authentic approved EPUBTRANS materials when possible.",
+    "target": "Portfolio, media and permissions",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S08-P231",
+    "section": 8,
+    "text": "Do not automatically replace actual portfolio samples with decorative stock images.",
+    "target": "Portfolio, media and permissions",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S09-P232",
+    "section": 9,
+    "text": "9. ABOUT AND COMPANY PAGES",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P233",
+    "section": 9,
+    "text": "The About EPUBTRANS page appeared to have excessive empty space on the right side of its introductory area.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P234",
+    "section": 9,
+    "text": "Inspect the layout at the relevant viewport.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P235",
+    "section": 9,
+    "text": "If the imbalance is confirmed:",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P236",
+    "section": 9,
+    "text": "Improve text-container proportions.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P237",
+    "section": 9,
+    "text": "Adjust maximum content width and column balance.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P238",
+    "section": 9,
+    "text": "Consider rearranging existing approved content.",
+    "target": "About and company pages",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P239",
+    "section": 9,
+    "text": "Maintain comfortable negative space.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P240",
+    "section": 9,
+    "text": "Avoid introducing decorative content simply to fill unused space.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P241",
+    "section": 9,
+    "text": "Do not invent company history, achievements, certifications, or statistics.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S09-P242",
+    "section": 9,
+    "text": "Review all company pages for consistent spacing, visual hierarchy, card layouts, images, and typography.",
+    "target": "About and company pages",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S10-P243",
+    "section": 10,
+    "text": "10. CONTACT AND GET A QUOTE UX",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P244",
+    "section": 10,
+    "text": "The quote form uses a multi-step process:",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P245",
+    "section": 10,
+    "text": "Service",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P246",
+    "section": 10,
+    "text": "Project Requirements",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P247",
+    "section": 10,
+    "text": "Contact Details",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P248",
+    "section": 10,
+    "text": "Review",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P249",
+    "section": 10,
+    "text": "Preserve this general workflow unless a clear functional or accessibility problem requires adjustment.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P250",
+    "section": 10,
+    "text": "Visual and interaction requirements",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P251",
+    "section": 10,
+    "text": "Keep progress indicators readable and understandable.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P252",
+    "section": 10,
+    "text": "Ensure every service-selection card is fully clickable.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P253",
+    "section": 10,
+    "text": "Eliminate floating-widget overlap.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P254",
+    "section": 10,
+    "text": "Make selected and unselected states clearly distinguishable.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P255",
+    "section": 10,
+    "text": "Provide clear required-field indications.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P256",
+    "section": 10,
+    "text": "Make validation messages understandable and accessible.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P257",
+    "section": 10,
+    "text": "Preserve previously entered data when users move backward.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P258",
+    "section": 10,
+    "text": "Maintain consistent input heights, padding, borders, and focus states.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Local lab evidence only; field verification remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P259",
+    "section": 10,
+    "text": "Prevent layout shifts when validation messages appear.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P260",
+    "section": 10,
+    "text": "Ensure controls do not overflow on small screens.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P261",
+    "section": 10,
+    "text": "Check the final review screen for clarity.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P262",
+    "section": 10,
+    "text": "Make the submit button state unambiguous.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P263",
+    "section": 10,
+    "text": "Preserve a clear alternative contact path.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P264",
+    "section": 10,
+    "text": "Functional verification",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P265",
+    "section": 10,
+    "text": "Where safe test infrastructure exists, verify:",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P266",
+    "section": 10,
+    "text": "Valid submissions",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P267",
+    "section": 10,
+    "text": "Invalid submissions",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P268",
+    "section": 10,
+    "text": "Server-side validation",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P269",
+    "section": 10,
+    "text": "Duplicate-submission handling",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P270",
+    "section": 10,
+    "text": "Spam/rate-limit protection",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P271",
+    "section": 10,
+    "text": "Lead persistence",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P272",
+    "section": 10,
+    "text": "Notification delivery",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P273",
+    "section": 10,
+    "text": "Appropriate success and error messages",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P274",
+    "section": 10,
+    "text": "Use only authorized test data.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S10-P275",
+    "section": 10,
+    "text": "Do not submit real customer information or claim lead-delivery success without end-to-end evidence.",
+    "target": "Contact and four-stage quote flow",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P276",
+    "section": 11,
+    "text": "11. RESPONSIVE DESIGN — MANDATORY TEST MATRIX",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P277",
+    "section": 11,
+    "text": "Review at least these viewport widths:",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P278",
+    "section": 11,
+    "text": "320 px",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P279",
+    "section": 11,
+    "text": "390 px",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P280",
+    "section": 11,
+    "text": "430 px",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P281",
+    "section": 11,
+    "text": "768 px",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P282",
+    "section": 11,
+    "text": "1024 px",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P283",
+    "section": 11,
+    "text": "1440 px",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P284",
+    "section": 11,
+    "text": "1920 px",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P285",
+    "section": 11,
+    "text": "Test representative pages at each applicable breakpoint.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P286",
+    "section": 11,
+    "text": "At minimum include:",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P287",
+    "section": 11,
+    "text": "Homepage",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P288",
+    "section": 11,
+    "text": "Services directory",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P289",
+    "section": 11,
+    "text": "Book & Journal Typesetting",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P290",
+    "section": 11,
+    "text": "Translation or Multilingual DTP service",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P291",
+    "section": 11,
+    "text": "Portfolio gallery",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P292",
+    "section": 11,
+    "text": "Portfolio detail",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P293",
+    "section": 11,
+    "text": "About",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P294",
+    "section": 11,
+    "text": "Contact",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P295",
+    "section": 11,
+    "text": "Get a Quote",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P296",
+    "section": 11,
+    "text": "Resources/blog",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P297",
+    "section": 11,
+    "text": "Acceptance requirements",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P298",
+    "section": 11,
+    "text": "No unexpected horizontal scrolling.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P299",
+    "section": 11,
+    "text": "No clipped headings or paragraphs.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P300",
+    "section": 11,
+    "text": "No overlapping cards or buttons.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P301",
+    "section": 11,
+    "text": "No broken grid transitions.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P302",
+    "section": 11,
+    "text": "No inaccessible navigation items.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P303",
+    "section": 11,
+    "text": "No image distortion.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P304",
+    "section": 11,
+    "text": "No hidden form fields.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P305",
+    "section": 11,
+    "text": "No assistant-widget obstruction.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P306",
+    "section": 11,
+    "text": "No unintended fixed-width containers.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P307",
+    "section": 11,
+    "text": "Comfortable margins and gutters.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P308",
+    "section": 11,
+    "text": "Appropriate touch target sizes.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P309",
+    "section": 11,
+    "text": "Functional zoom and reflow.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P310",
+    "section": 11,
+    "text": "Readable text without forced horizontal scrolling.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P311",
+    "section": 11,
+    "text": "Capture before/after screenshots for material changes where browser automation is available.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S11-P312",
+    "section": 11,
+    "text": "Do not claim mobile responsiveness has passed based only on CSS inspection.",
+    "target": "77 route/viewport combinations",
+    "status": "Implemented / locally tested",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P313",
+    "section": 12,
+    "text": "12. ACCESSIBILITY",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P314",
+    "section": 12,
+    "text": "Target WCAG 2.2 Level AA.",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P315",
+    "section": 12,
+    "text": "Inspect and correct verified problems involving:",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P316",
+    "section": 12,
+    "text": "Semantic landmarks",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P317",
+    "section": 12,
+    "text": "Heading hierarchy",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P318",
+    "section": 12,
+    "text": "Keyboard navigation",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P319",
+    "section": 12,
+    "text": "Skip-to-content functionality",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P320",
+    "section": 12,
+    "text": "Visible focus",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P321",
+    "section": 12,
+    "text": "Color contrast",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P322",
+    "section": 12,
+    "text": "Form labels and errors",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P323",
+    "section": 12,
+    "text": "Accessible link and button names",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P324",
+    "section": 12,
+    "text": "Image alternatives",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P325",
+    "section": 12,
+    "text": "Dialog and menu focus management",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P326",
+    "section": 12,
+    "text": "Touch target sizing",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P327",
+    "section": 12,
+    "text": "Zoom and reflow",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P328",
+    "section": 12,
+    "text": "Reduced motion",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P329",
+    "section": 12,
+    "text": "Language declarations",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P330",
+    "section": 12,
+    "text": "Correct right-to-left behavior where applicable",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P331",
+    "section": 12,
+    "text": "Run automated accessibility checks if available, but also perform manual keyboard and interaction testing.",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S12-P332",
+    "section": 12,
+    "text": "Do not claim full WCAG conformance from automated checks alone.",
+    "target": "Accessibility and keyboard behavior",
+    "status": "Automated and selected manual checks; AT/device review remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S13-P333",
+    "section": 13,
+    "text": "13. CONTENT AND PUBLICATION HYGIENE",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P334",
+    "section": 13,
+    "text": "Previous public-site review identified potentially unfinished or test-oriented content in:",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P335",
+    "section": 13,
+    "text": "Privacy Policy",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P336",
+    "section": 13,
+    "text": "Terms",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P337",
+    "section": 13,
+    "text": "Resources/blog",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P338",
+    "section": 13,
+    "text": "Careers",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P339",
+    "section": 13,
+    "text": "Inspect current repository and CMS data before changing anything.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P340",
+    "section": 13,
+    "text": "If placeholder or test content still exists:",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P341",
+    "section": 13,
+    "text": "Identify the affected page and record the evidence.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P342",
+    "section": 13,
+    "text": "Remove clearly development-only text from public presentation only when authorized and safe.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P343",
+    "section": 13,
+    "text": "Prepare unapproved content for owner review.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P344",
+    "section": 13,
+    "text": "Do not invent legally binding website terms or privacy disclosures.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P345",
+    "section": 13,
+    "text": "Do not invent job vacancies or change recruitment email addresses without approval.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P346",
+    "section": 13,
+    "text": "Avoid publishing unapproved replacement content.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P347",
+    "section": 13,
+    "text": "Refer substantive SEO copywriting and content-strategy decisions to EPUBTRANS GPT2.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Existing content preserved; owner review",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S13-P348",
+    "section": 13,
+    "text": "Keep the scope of automated corrections limited to approved content and confirmed implementation issues.",
+    "target": "CMS, legal, careers and blog content",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md); factual, careers and editorial approvals remain with owner/EPUBTRANS GPT2."
+  },
+  {
+    "id": "S14-P349",
+    "section": 14,
+    "text": "14. TECHNICAL SEO AND STAGING SAFETY",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P350",
+    "section": 14,
+    "text": "Review the V2 implementation for:",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P351",
+    "section": 14,
+    "text": "Metadata",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P352",
+    "section": 14,
+    "text": "Canonical URLs",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P353",
+    "section": 14,
+    "text": "Robots directives",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P354",
+    "section": 14,
+    "text": "Sitemap generation",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P355",
+    "section": 14,
+    "text": "Headings",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P356",
+    "section": 14,
+    "text": "Internal links",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P357",
+    "section": 14,
+    "text": "Redirects",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P358",
+    "section": 14,
+    "text": "Image alt text",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P359",
+    "section": 14,
+    "text": "Open Graph metadata",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P360",
+    "section": 14,
+    "text": "Structured data",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P361",
+    "section": 14,
+    "text": "Duplicate URLs",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P362",
+    "section": 14,
+    "text": "Search-engine visibility",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P363",
+    "section": 14,
+    "text": "Staging protection",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P364",
+    "section": 14,
+    "text": "The temporary Vercel environment must not be unintentionally indexed.",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P365",
+    "section": 14,
+    "text": "Verify actual HTTP headers and page robots directives for the deployed environment.",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P366",
+    "section": 14,
+    "text": "Do not assume Vercel automatically protects every deployment.",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P367",
+    "section": 14,
+    "text": "Ensure environment-specific indexing rules do not accidentally block the future production domain.",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P368",
+    "section": 14,
+    "text": "Migration protection",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P369",
+    "section": 14,
+    "text": "Preserve valuable legacy URLs wherever practical.",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P370",
+    "section": 14,
+    "text": "Review old-to-new URL mappings before changing routes.",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Local policy tested; remote rollout pending",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S14-P371",
+    "section": 14,
+    "text": "Do not redirect unrelated pages to the homepage or remove established pages without an approved migration decision.",
+    "target": "Metadata, redirects, robots and sitemap",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P372",
+    "section": 15,
+    "text": "15. SECURITY AND CODE QUALITY",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P373",
+    "section": 15,
+    "text": "Inspect relevant code and configuration for:",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P374",
+    "section": 15,
+    "text": "Unsafe client-side secret exposure",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P375",
+    "section": 15,
+    "text": "Unnecessary dependencies",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P376",
+    "section": 15,
+    "text": "Unsafe form input handling",
+    "target": "Forms, access control and code quality",
+    "status": "Local lab evidence only; field verification remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P377",
+    "section": 15,
+    "text": "Missing server-side validation",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P378",
+    "section": 15,
+    "text": "Authentication and authorization issues",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P379",
+    "section": 15,
+    "text": "Inappropriate public media access",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P380",
+    "section": 15,
+    "text": "Excessive client-side JavaScript",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P381",
+    "section": 15,
+    "text": "Unnecessary third-party scripts",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P382",
+    "section": 15,
+    "text": "Hydration errors",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P383",
+    "section": 15,
+    "text": "Invalid React keys",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P384",
+    "section": 15,
+    "text": "Console errors",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P385",
+    "section": 15,
+    "text": "Browser warnings",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P386",
+    "section": 15,
+    "text": "Missing React cleanup",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P387",
+    "section": 15,
+    "text": "TypeScript errors",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P388",
+    "section": 15,
+    "text": "Repeated inline styles",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P389",
+    "section": 15,
+    "text": "Excessive Tailwind overrides",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P390",
+    "section": 15,
+    "text": "Inconsistent component reuse",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P391",
+    "section": 15,
+    "text": "Prefer simple, maintainable fixes.",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P392",
+    "section": 15,
+    "text": "Do not carry out intrusive security testing, destructive CMS operations, or production credential changes.",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S15-P393",
+    "section": 15,
+    "text": "Do not assume backend functionality or security simply because matching code exists.",
+    "target": "Forms, access control and code quality",
+    "status": "Reviewed; upstream advisories and delivery verification remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P394",
+    "section": 16,
+    "text": "16. PERFORMANCE",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P395",
+    "section": 16,
+    "text": "Inspect the actual build and representative pages.",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P396",
+    "section": 16,
+    "text": "Optimize where justified:",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P397",
+    "section": 16,
+    "text": "Above-the-fold images",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P398",
+    "section": 16,
+    "text": "Responsive image sizes",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P399",
+    "section": 16,
+    "text": "Font loading",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P400",
+    "section": 16,
+    "text": "Client components",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P401",
+    "section": 16,
+    "text": "JavaScript bundle weight",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P402",
+    "section": 16,
+    "text": "Unnecessary animations",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P403",
+    "section": 16,
+    "text": "Layout shifts",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P404",
+    "section": 16,
+    "text": "Excessive third-party dependencies",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P405",
+    "section": 16,
+    "text": "Heavy interactive widgets",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P406",
+    "section": 16,
+    "text": "Render-blocking resources",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P407",
+    "section": 16,
+    "text": "Use measured evidence where available.",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P408",
+    "section": 16,
+    "text": "Aim for established Core Web Vitals good thresholds:",
+    "target": "Production build and lab performance",
+    "status": "Local lab evidence only; field verification remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P409",
+    "section": 16,
+    "text": "LCP ≤ 2.5 seconds",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P410",
+    "section": 16,
+    "text": "INP ≤ 200 milliseconds",
+    "target": "Production build and lab performance",
+    "status": "Local lab evidence only; field verification remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P411",
+    "section": 16,
+    "text": "CLS ≤ 0.1",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P412",
+    "section": 16,
+    "text": "Do not invent Lighthouse scores or claim thresholds are met without actual measurements.",
+    "target": "Production build and lab performance",
+    "status": "Local lab evidence only; field verification remains",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S16-P413",
+    "section": 16,
+    "text": "Do not sacrifice image readability or important functionality to obtain a better synthetic score.",
+    "target": "Production build and lab performance",
+    "status": "Local lab measured; field CWV unverified",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P414",
+    "section": 17,
+    "text": "17. IMPLEMENTATION ORDER",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P415",
+    "section": 17,
+    "text": "Work in controlled phases.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P416",
+    "section": 17,
+    "text": "Phase A — Inspect",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P417",
+    "section": 17,
+    "text": "Review the repository, shared components, design tokens, layout files, routes, images, forms, and test infrastructure.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P418",
+    "section": 17,
+    "text": "Reproduce the previously reported defects.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P419",
+    "section": 17,
+    "text": "Record which findings are confirmed, outdated, not reproducible, or unverified.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P420",
+    "section": 17,
+    "text": "Phase B — Correct shared design foundations",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P421",
+    "section": 17,
+    "text": "Fix confirmed issues in colors, typography, spacing, buttons, grids, navigation, and reusable components.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P422",
+    "section": 17,
+    "text": "Prefer changes to shared tokens and components over scattered page-specific overrides.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P423",
+    "section": 17,
+    "text": "Phase C — Correct page-specific UI/UX issues",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P424",
+    "section": 17,
+    "text": "Fix confirmed issues affecting the homepage, service pages, portfolio, About, contact, and quote flow.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P425",
+    "section": 17,
+    "text": "Prioritize conversion-blocking problems and accessibility before cosmetic improvements.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P426",
+    "section": 17,
+    "text": "Phase D — Test and optimize",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P427",
+    "section": 17,
+    "text": "Run the actual project's relevant commands, including TypeScript validation, linting, production build, available tests, and browser-based checks where supported.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P428",
+    "section": 17,
+    "text": "Inspect desktop and mobile layouts.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P429",
+    "section": 17,
+    "text": "Review console warnings and errors.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P430",
+    "section": 17,
+    "text": "Phase E — Report and hand off",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P431",
+    "section": 17,
+    "text": "Document completed corrections, unresolved issues, outstanding approvals, and test evidence.",
+    "target": "Implementation sequence",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S17-P432",
+    "section": 17,
+    "text": "Do not silently declare unfinished work complete.",
+    "target": "Implementation sequence",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P433",
+    "section": 18,
+    "text": "18. REQUIRED OUTPUT FILES",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P434",
+    "section": 18,
+    "text": "Create or update suitable audit documentation, preferably under a docs/audits/ directory:",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P435",
+    "section": 18,
+    "text": "epubtrans-v2-uiux-audit.md — observations, screenshots, findings, and severity.",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P436",
+    "section": 18,
+    "text": "epubtrans-v2-fix-log.md — files changed, reasons, and before/after behavior.",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P437",
+    "section": 18,
+    "text": "epubtrans-v2-responsive-tests.md — tested viewports, pages, results, and limitations.",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P438",
+    "section": 18,
+    "text": "epubtrans-v2-release-checklist.md — passed, failed, blocked, and unperformed release checks.",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P439",
+    "section": 18,
+    "text": "For each material finding, record:",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P440",
+    "section": 18,
+    "text": "Unique finding ID",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P441",
+    "section": 18,
+    "text": "Priority P0/P1/P2/P3",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P442",
+    "section": 18,
+    "text": "Confidence level",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P443",
+    "section": 18,
+    "text": "Affected component/file/page",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P444",
+    "section": 18,
+    "text": "Evidence",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P445",
+    "section": 18,
+    "text": "User/business impact",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P446",
+    "section": 18,
+    "text": "Root cause if confirmed",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P447",
+    "section": 18,
+    "text": "Fix implemented or proposed",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P448",
+    "section": 18,
+    "text": "Acceptance criteria",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S18-P449",
+    "section": 18,
+    "text": "Retest result",
+    "target": "Audit deliverables",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P450",
+    "section": 19,
+    "text": "19. DEFINITION OF DONE",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P451",
+    "section": 19,
+    "text": "A correction is complete only when:",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P452",
+    "section": 19,
+    "text": "The issue has been reproduced or adequately verified.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P453",
+    "section": 19,
+    "text": "The change is implemented without breaking existing functionality.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P454",
+    "section": 19,
+    "text": "The approved design system is respected.",
+    "target": "Acceptance and validation",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P455",
+    "section": 19,
+    "text": "Relevant accessibility requirements have been checked.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P456",
+    "section": 19,
+    "text": "Relevant desktop and mobile layouts have been tested.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P457",
+    "section": 19,
+    "text": "Available lint/typecheck/build/test commands have been run and results recorded.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P458",
+    "section": 19,
+    "text": "Unrelated pages and shared components have been checked for regressions.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P459",
+    "section": 19,
+    "text": "Results are documented with evidence.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P460",
+    "section": 19,
+    "text": "Remaining limitations and owner-approval dependencies are explicitly identified.",
+    "target": "Acceptance and validation",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S19-P461",
+    "section": 19,
+    "text": "A successful production build alone does not constitute a completed website audit.",
+    "target": "Acceptance and validation",
+    "status": "Local acceptance recorded; public release gates remain",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P462",
+    "section": 20,
+    "text": "20. FINAL INSTRUCTION",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P463",
+    "section": 20,
+    "text": "Begin with the current EPUBTRANS V2 codebase.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P464",
+    "section": 20,
+    "text": "First inspect the project and establish the actual implementation. Then implement all safe, clearly justified corrections within the authorized V2 development environment.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P465",
+    "section": 20,
+    "text": "Do not perform speculative redesigns or change the approved brand identity.",
+    "target": "Final handoff",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P466",
+    "section": 20,
+    "text": "Do not stop at recommendations when an issue is confirmed and a safe code correction can be implemented.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P467",
+    "section": 20,
+    "text": "For matters requiring owner approval—such as legal text, new brand variants, factual claims, portfolio permissions, or migration decisions—document the proposed change rather than making an unauthorized decision.",
+    "target": "Final handoff",
+    "status": "Safeguard preserved / owner approval retained",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P468",
+    "section": 20,
+    "text": "After implementation, provide:",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P469",
+    "section": 20,
+    "text": "Executive summary of what was inspected and corrected.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P470",
+    "section": 20,
+    "text": "Confirmed issues resolved.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P471",
+    "section": 20,
+    "text": "Files and components changed.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P472",
+    "section": 20,
+    "text": "Before/after screenshots where available.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P473",
+    "section": 20,
+    "text": "Actual test commands and results.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P474",
+    "section": 20,
+    "text": "Remaining issues and required owner decisions.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P475",
+    "section": 20,
+    "text": "Regression risks.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P476",
+    "section": 20,
+    "text": "Clear staging and production release-readiness status.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  },
+  {
+    "id": "S20-P477",
+    "section": 20,
+    "text": "The desired outcome is an improved, consistent, responsive, accessible, high-quality EPUBTRANS V2 website—not an unnecessary redesign.",
+    "target": "Final handoff",
+    "status": "Reviewed / documented",
+    "evidence": "[Audit](epubtrans-v2-uiux-audit.md), [fix log](epubtrans-v2-fix-log.md), [responsive tests](epubtrans-v2-responsive-tests.md), [release gates](epubtrans-v2-release-checklist.md)"
+  }
+]

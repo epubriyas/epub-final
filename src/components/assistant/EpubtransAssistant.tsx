@@ -1,10 +1,13 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+import { usePathname } from 'next/navigation'
 import { ArrowUp, ArrowUpRight, MessageCircle, RotateCcw, Square, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from '@/components/i18n/LocalizedLink'
 import type { AssistantReply } from '@/lib/assistant'
 import { companyWhatsApp } from '@/config/contact'
+import { serviceSlugForPath } from '@/config/service-paths'
 
 type Message = AssistantReply & { id: number; role: 'assistant' | 'user' }
 function AssistantText({ text, onNavigate }: { text: string; onNavigate: () => void }) {
@@ -22,9 +25,10 @@ function AssistantText({ text, onNavigate }: { text: string; onNavigate: () => v
           )
         if (
           link &&
-          /^\/(services(?:\/[a-z0-9-]+)?|resources|work|company(?:\/careers)?|contact-us|get-a-quote)$/.test(
-            link[2],
-          )
+          (serviceSlugForPath(link[2]) ||
+            /^\/(services(?:\/[a-z0-9-]+)?|resources|work|company(?:\/careers)?|contact-us|get-a-quote)$/.test(
+              link[2],
+            ))
         )
           return (
             <Link key={index} href={link[2]} onClick={onNavigate}>
@@ -52,12 +56,34 @@ function AssistantBrandMark() {
   )
 }
 export function EpubtransAssistant({ email, phone }: { email: string; phone: string }) {
+  const pathname = usePathname()
+  const [dock, setDock] = useState<HTMLElement | null>(null)
+  useEffect(() => {
+    let frame = 0
+    const syncDock = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        const target =
+          document.getElementById('project-assistant-dock') ||
+          document.getElementById('site-assistant-dock')
+        setDock((current) => (current === target ? current : target))
+      })
+    }
+    const observer = new MutationObserver(syncDock)
+    observer.observe(document.body, { childList: true, subtree: true })
+    syncDock()
+    return () => {
+      observer.disconnect()
+      cancelAnimationFrame(frame)
+    }
+  }, [pathname])
   const dialog = useRef<HTMLDialogElement>(null)
   const launcher = useRef<HTMLButtonElement>(null)
   const input = useRef<HTMLTextAreaElement>(null)
   const conversation = useRef<HTMLDivElement>(null)
   const followLatest = useRef(true)
   const [open, setOpen] = useState(false)
+
   const [draft, setDraft] = useState('')
   const [messages, setMessages] = useState<Message[]>([welcome])
   const [pending, setPending] = useState(false)
@@ -199,38 +225,41 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
       }
     }
   }
+  const launcherButton = (
+    <button
+      ref={launcher}
+      className="et-assistant-launcher"
+      aria-label="Open EPUBTRANS assistant"
+      aria-haspopup="dialog"
+      aria-expanded={open}
+      aria-controls="epubtrans-assistant"
+      onClick={() => {
+        dialog.current?.showModal()
+        followLatest.current = true
+        setOpen(true)
+        if (window.matchMedia('(min-width: 601px) and (pointer: fine)').matches)
+          input.current?.focus()
+        else dialog.current?.focus({ preventScroll: true })
+      }}
+    >
+      <span className="et-assistant-launcher-copy">
+        <span className="et-assistant-logo-reveal" aria-hidden="true">
+          <AssistantBrandMark />
+          <span className="et-assistant-wordmark">
+            <Image src="/favicon.jpeg" alt="" width={941} height={150} sizes="160px" />
+          </span>
+        </span>
+        <small>
+          <span className="et-assistant-ai-dot" aria-hidden="true" />
+          Ask our AI assistant
+        </small>
+      </span>
+      <ArrowUpRight className="et-assistant-launcher-arrow" size={16} aria-hidden="true" />
+    </button>
+  )
   return (
     <div className="et-assistant" data-no-translate>
-      <button
-        ref={launcher}
-        className="et-assistant-launcher"
-        aria-label="Open EPUBTRANS assistant"
-        aria-haspopup="dialog"
-        aria-expanded={open}
-        aria-controls="epubtrans-assistant"
-        onClick={() => {
-          dialog.current?.showModal()
-          followLatest.current = true
-          setOpen(true)
-          if (window.matchMedia('(min-width: 601px) and (pointer: fine)').matches)
-            input.current?.focus()
-          else dialog.current?.focus({ preventScroll: true })
-        }}
-      >
-        <span className="et-assistant-launcher-copy">
-          <span className="et-assistant-logo-reveal" aria-hidden="true">
-            <AssistantBrandMark />
-            <span className="et-assistant-wordmark">
-              <Image src="/favicon.jpeg" alt="" width={941} height={150} sizes="160px" />
-            </span>
-          </span>
-          <small>
-            <span className="et-assistant-ai-dot" aria-hidden="true" />
-            Ask our AI assistant
-          </small>
-        </span>
-        <ArrowUpRight className="et-assistant-launcher-arrow" size={16} aria-hidden="true" />
-      </button>
+      {dock ? createPortal(launcherButton, dock) : null}
       <dialog
         ref={dialog}
         id="epubtrans-assistant"
@@ -431,11 +460,13 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
             </div>
             <p>
               AI replies may be inaccurate. Avoid confidential details.
-              {(email || phone) && <span className="et-assistant-contact-links">
-                {email && <a href={`mailto:${email}`}>Email our team</a>}
-                {email && phone && <span aria-hidden="true">·</span>}
-                {phone && <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>Call us</a>}
-              </span>}
+              {(email || phone) && (
+                <span className="et-assistant-contact-links">
+                  {email && <a href={`mailto:${email}`}>Email our team</a>}
+                  {email && phone && <span aria-hidden="true">·</span>}
+                  {phone && <a href={`tel:${phone.replace(/[^+0-9]/g, '')}`}>Call us</a>}
+                </span>
+              )}
             </p>
           </form>
         </div>

@@ -96,10 +96,10 @@
 }
 .industryNav a svg {
   flex-shrink: 0;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .industryNav a:hover {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .directory {
   padding-block: clamp(40px, 5vw, 72px);
@@ -123,7 +123,7 @@
   margin-bottom: 26px;
 }
 .groupLabel {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   white-space: nowrap;
 }
 .groupLabel span {
@@ -207,7 +207,7 @@
 }
 .cardLabel {
   margin: 0 0 12px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font:
     500 9px/1.5 var(--font-geist-mono),
     monospace;
@@ -263,7 +263,7 @@
 .materials svg {
   flex-shrink: 0;
   margin-top: 2px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   stroke-width: 2;
 }
 .relatedServices {
@@ -282,7 +282,7 @@
   padding: 7px 9px;
   border: 1px solid var(--border-default);
   border-radius: 4px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-size: 11px;
   line-height: 1.5;
   transition: background 180ms;
@@ -296,7 +296,7 @@
   gap: 8px;
   width: fit-content;
   margin-top: 20px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-size: 13px;
   font-weight: 600;
   line-height: 1.5;
@@ -308,7 +308,7 @@
 .projectSection {
   padding-block: clamp(40px, 5vw, 64px);
   border-block: 1px solid var(--border-default);
-  background: var(--brand-secondary);
+  background: var(--surface-accent);
 }
 .sectionHeading {
   display: grid;
@@ -341,7 +341,7 @@
   border-top: 1px solid var(--border-default);
 }
 .process li > span {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font:
     500 12px/1.5 var(--font-geist-mono),
     monospace;
@@ -408,7 +408,7 @@
 }
 .questions summary span {
   flex-shrink: 0;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .questions details[open] summary span {
   transform: rotate(45deg);

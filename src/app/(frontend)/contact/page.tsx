@@ -135,6 +135,7 @@ export default function Contact() {
             <Link className="cp-link" href="/services">
               Explore our services <ArrowRight size={16} aria-hidden="true" />
             </Link>
+            <div id="project-assistant-dock" className="et-assistant-dock" data-no-translate />
           </div>
           <div className="cp-form-panel">
             <h3>Send us a message</h3>

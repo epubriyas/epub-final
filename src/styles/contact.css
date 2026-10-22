@@ -111,8 +111,13 @@
   min-height: 150px;
 }
 .et-enquiry-form [aria-invalid='true'],
-.et-quote-panel [aria-invalid='true'] {
-  border: 2px solid #a02424;
+.et-quote-panel :is(input, textarea, select)[aria-invalid='true'] {
+  border-color: var(--alert);
+  box-shadow: 0 0 0 1px var(--alert);
+}
+.qp-service-grid[aria-invalid='true'] {
+  outline: 2px solid var(--alert);
+  outline-offset: 4px;
 }
 .et-enquiry-privacy {
   margin-top: 18px;
@@ -230,7 +235,7 @@
   flex-shrink: 0;
   border: 1px solid var(--border-default);
   border-radius: 50%;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .et-contact-channel-copy {
   width: 100%;
@@ -261,7 +266,7 @@
   gap: 8px;
   margin-top: 24px;
   min-height: 24px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -293,7 +298,7 @@
   place-items: center;
   width: 100px;
   height: 100px;
-  border: 1px solid #c6e6dc55;
+  border: 1px solid #eaf6f555;
   border-radius: 50%;
   color: var(--brand-accent);
   margin-block: 48px 32px;
@@ -335,7 +340,7 @@
 .et-contact-project .et-button {
   margin-top: auto;
   background: var(--brand-accent);
-  color: #102b2b;
+  color: #12383a;
   border-color: var(--brand-accent);
 }
 .et-contact-project .et-button:hover {
@@ -390,7 +395,7 @@
   color: var(--border-strong);
 }
 .et-contact-office-area {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .et-contact-office h3 {
   margin-block: 16px 20px;
@@ -415,7 +420,7 @@
   padding-top: 20px;
   margin-top: auto;
   border-top: 1px solid var(--border-default);
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-weight: 600;
   font-size: 0.875rem;
 }
@@ -453,7 +458,7 @@
 }
 .et-contact-more-link > svg {
   flex-shrink: 0;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .et-contact-more-link:hover {
   border-color: var(--brand-primary);
@@ -587,7 +592,7 @@
   place-items: center;
   border: 1px solid var(--border-default);
   border-radius: 50%;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   flex-shrink: 0;
 }
 .cp-card h2 {
@@ -616,7 +621,7 @@
   min-height: 44px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   text-decoration: none;
 }
 .cp-card .cp-link {
@@ -641,7 +646,7 @@
 .cp-project-icon {
   width: 60px;
   height: 60px;
-  border: 1px solid #c6e6dc66;
+  border: 1px solid #eaf6f566;
   color: var(--brand-accent);
   display: grid;
   place-items: center;
@@ -657,7 +662,7 @@
   line-height: 1.12;
 }
 .cp-project > p:not(.et-label) {
-  color: #c6e6dc;
+  color: #eaf6f5;
   line-height: 1.65;
   font-size: var(--body);
   margin-block: 18px;
@@ -687,12 +692,12 @@
   gap: 20px;
   border-radius: 999px;
   background: var(--brand-accent);
-  color: #102b2b;
+  color: #12383a;
   margin-top: auto;
 }
 .cp-project-note {
   font-size: 0.72rem;
-  color: #c6e6dc;
+  color: #eaf6f5;
   margin-top: 18px;
 }
 .cp-message {
@@ -724,7 +729,7 @@
   line-height: 1.7;
 }
 .cp-message-guide a {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -766,7 +771,7 @@
 .contact-premium .et-field textarea {
   border-radius: 10px;
   background: var(--background-primary);
-  border-color: var(--border-default);
+  border-color: var(--border-strong);
   font-size: 16px;
   min-height: 48px;
   padding: 12px;
@@ -781,9 +786,6 @@
 .contact-premium .et-enquiry-privacy {
   margin-top: 0;
   margin-bottom: 8px;
-}
-.contact-premium .et-form-message:empty {
-  display: none;
 }
 .cp-location {
   border-top: 1px solid var(--border-default);
@@ -823,7 +825,7 @@
 @media (hover: hover) {
   .cp-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px #102b2b0a;
+    box-shadow: 0 12px 28px #12383a0a;
     border-color: var(--brand-primary);
   }
   .cp-link:hover svg {
@@ -990,7 +992,7 @@
   color: var(--text-secondary);
 }
 .quote-premium .et-quote-progress li[aria-current='step'] {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-weight: 600;
 }
 .quote-premium .et-quote-progress li > button {
@@ -1006,9 +1008,15 @@
   font-size: 0.65rem;
 }
 .quote-premium [aria-current='step'] .et-quote-step-number {
-  background: var(--brand-primary);
+  background: var(--action-primary);
   color: #fff;
   border-color: var(--brand-primary);
+}
+
+.cp-value[href] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .qp-sidebar-note {
   border-top: 1px solid var(--border-default);
@@ -1016,7 +1024,7 @@
   color: var(--text-secondary);
 }
 .qp-sidebar-note > svg {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .qp-sidebar-note h3 {
   font-size: 0.95rem;
@@ -1034,7 +1042,7 @@
   gap: 6px;
   min-height: 44px;
   font-size: 0.8rem;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   margin-top: 8px;
 }
 .quote-premium .et-quote-panel {
@@ -1121,7 +1129,7 @@
 .quote-premium .et-field input,
 .quote-premium .et-field textarea {
   background: var(--background-primary);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--border-strong);
   border-radius: 10px;
   padding: 12px;
   min-height: 48px;
@@ -1133,9 +1141,6 @@
 }
 .quote-premium .et-field label {
   font-size: 0.85rem;
-}
-.quote-premium .et-form-message:empty {
-  display: none;
 }
 .quote-premium .et-review > div {
   padding-block: 12px;
@@ -1162,7 +1167,7 @@
   margin-top: 24px;
 }
 .qp-next-grid article > span {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-size: 0.8rem;
 }
 .qp-next-grid h3 {
@@ -1195,7 +1200,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   min-height: 44px;
   white-space: nowrap;
 }
@@ -1294,7 +1299,7 @@
 }
 .cp-office-card .cp-office-area {
   margin-top: 20px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .cp-office-card h3 {
   font-size: 1.4rem;
@@ -1338,7 +1343,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   margin-bottom: 16px;
 }
 .qp-upload-label strong {
@@ -1359,8 +1364,8 @@
 .qp-upload input::file-selector-button {
   border: 0;
   border-radius: 999px;
-  background: var(--brand-primary);
-  color: #fff;
+  background: var(--action-primary);
+  color: var(--text-on-action);
   padding: 12px 16px;
   margin-right: 12px;
   cursor: pointer;

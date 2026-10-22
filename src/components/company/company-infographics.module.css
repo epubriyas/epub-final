@@ -98,7 +98,7 @@
   height: 52px;
   border: 1px solid var(--border-strong);
   border-radius: 50%;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 
 .figure .kicker {
@@ -168,7 +168,7 @@
   display: block;
   margin-top: 24px;
   font-size: 12px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 
 .audience {
@@ -226,7 +226,7 @@
 }
 
 .audienceList li > span {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-size: 13px;
   padding-top: 4px;
 }

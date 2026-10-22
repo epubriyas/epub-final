@@ -3,18 +3,22 @@ html[data-theme='light'] {
 }
 html[data-theme='dark'] {
   color-scheme: dark;
-  --background-primary: #0e1b19;
-  --background-secondary: #162823;
-  --background-inverse: #081411;
-  --text-primary: #ecf3ee;
-  --text-secondary: #b5c9c0;
-  --text-muted: #a1b7ad;
-  --brand-primary: #8bddc5;
-  --border-default: #345247;
-  --border-strong: #718e81;
-  --surface-accent: #1d3b32;
-  --text-on-brand: #102b2b;
-  --theme-error: #ffb0a3;
+  --background-primary: #12383a;
+  --background-secondary: #12383a;
+  --background-inverse: #12383a;
+  --text-primary: #f7f9f9;
+  --text-secondary: #dce5e5;
+  --text-muted: #dce5e5;
+  --brand-primary: #eaf6f5;
+  --action-primary: #eaf6f5;
+  --text-on-action: #12383a;
+  --link-primary: #eaf6f5;
+  --error-text: #f7f9f9;
+  --border-default: #526568;
+  --border-strong: #dce5e5;
+  --surface-accent: #12383a;
+  --text-on-brand: #12383a;
+  --theme-error: #f7f9f9;
 }
 
 .et-theme-toggle {
@@ -46,7 +50,7 @@ html[data-theme='dark'] {
 .et-theme-toggle button:hover:not([aria-pressed='true']),
 .et-theme-toggle-compact:hover {
   background: var(--background-primary);
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .et-theme-toggle-compact {
   display: none;
@@ -129,7 +133,7 @@ html[data-theme='dark'] .et-button {
   color: var(--text-on-brand);
 }
 html[data-theme='dark'] .et-button:hover {
-  background: #b4ebd8;
+  background: #eaf6f5;
   color: var(--text-on-brand);
 }
 html[data-theme='dark'] :is(.et-company-home, .et-feature-art, .et-quote-success) {
@@ -139,7 +143,7 @@ html[data-theme='dark'] .et-work-art {
   background: var(--background-secondary);
 }
 html[data-theme='dark'] .et-work-art > div:last-child {
-  color: #006d68;
+  color: #12383a;
 }
 html[data-theme='dark']
   :is(
@@ -241,7 +245,7 @@ html[data-theme='dark']
     .et-assistant-links a,
     .et-assistant-suggestions > button:hover
   ) {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 html[data-theme='dark']
   :is(.et-assistant-links a:hover, .et-assistant-suggestions > button, .et-assistant-composer) {
@@ -258,7 +262,7 @@ html[data-theme='dark'] .et-assistant-inputbox {
 }
 html[data-theme='dark'] .et-assistant-inputbox:focus-within {
   border-color: var(--brand-primary);
-  box-shadow: 0 0 0 3px #8bddc51a;
+  box-shadow: 0 0 0 3px #eaf6f51a;
 }
 html[data-theme='dark'] .et-assistant-composer textarea {
   color: var(--text-primary);
@@ -269,8 +273,8 @@ html[data-theme='dark'] .et-assistant-composer button {
   border-color: var(--brand-primary);
 }
 html[data-theme='dark'] .et-assistant-composer button:hover:not(:disabled) {
-  background: #b4ebd8;
-  border-color: #b4ebd8;
+  background: #eaf6f5;
+  border-color: #eaf6f5;
 }
 html[data-theme='dark'] .et-assistant-composer button:disabled {
   background: var(--surface-accent);

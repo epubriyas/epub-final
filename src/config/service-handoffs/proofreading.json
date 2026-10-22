@@ -587,13 +587,13 @@
         },
         {
           "title": "XML & JATS Conversion Services",
+          "href": "/xml-conversion-services",
           "blocks": [
             {
               "kind": "paragraph",
               "text": "Structured XML production for scholarly articles."
             }
-          ],
-          "href": null
+          ]
         }
       ],
       "kind": "related"

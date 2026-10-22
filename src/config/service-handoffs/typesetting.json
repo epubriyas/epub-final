@@ -481,13 +481,13 @@
         },
         {
           "title": "XML & Structured Content Services",
+          "href": "/xml-conversion-services",
           "blocks": [
             {
               "kind": "paragraph",
               "text": "Structured-content preparation for applicable academic and journal publishing workflows."
             }
-          ],
-          "href": null
+          ]
         },
         {
           "title": "Graphic Design & Image Services",

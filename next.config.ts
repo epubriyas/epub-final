@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
 import { redirects } from './redirects'
+import { siteCanBeIndexed } from './src/lib/site-indexing.cjs'
 
 const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
@@ -30,6 +31,9 @@ const nextConfig: NextConfig = {
       {
         source: '/:path*',
         headers: [
+          ...(!siteCanBeIndexed(NEXT_PUBLIC_SERVER_URL, process.env.VERCEL_ENV)
+            ? [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }]
+            : []),
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },

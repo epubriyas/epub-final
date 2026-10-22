@@ -35,6 +35,8 @@ npm run dev -- --port 3001
 
 The existing development database already has the baseline and additive enterprise migration applied. Do not seed or re-adopt it. The legacy template seed route is disabled.
 
+When moving to another laptop, the source code alone does not include PostgreSQL content or uploaded files. For a new empty local database, run the migrations above, then `node scripts/restore-local-content.mjs` to restore editorial content from the deployed database configured in `.vercel/.env.production.local`. The script only writes to localhost, refuses to replace existing content, backs up local editorial rows, and excludes user accounts, enquiries, quote requests, and submissions. It restores missing publicly accessible media files; transfer unpublished preview files separately. Keep environment files and backups private. For a completely new local installation, create your own administrator at `/admin`.
+
 ## Checks
 
 ```sh

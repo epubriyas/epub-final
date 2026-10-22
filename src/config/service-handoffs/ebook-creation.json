@@ -627,13 +627,13 @@
         },
         {
           "title": "XML & Structured Content Services",
+          "href": "/xml-conversion-services",
           "blocks": [
             {
               "kind": "paragraph",
               "text": "Structured-content preparation and XML conversion for applicable publishing workflows."
             }
-          ],
-          "href": null
+          ]
         },
         {
           "title": "Digital Accessibility Services",

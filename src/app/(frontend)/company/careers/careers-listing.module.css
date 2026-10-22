@@ -8,15 +8,15 @@
 .hero {
   position: relative;
   overflow: hidden;
-  background: #102b2b;
-  color: #f4f2eb;
+  background: #12383a;
+  color: #f7f9f9;
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(110deg, transparent 52%, #c6e6dc0a 52.1%, transparent 52.2%);
+  background: linear-gradient(110deg, transparent 52%, #eaf6f50a 52.1%, transparent 52.2%);
 }
 .heroInner {
   display: grid;
@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #c6e6dc;
+  color: #eaf6f5;
   font:
     500 11px/1.7 var(--font-geist-mono),
     monospace;
@@ -43,8 +43,8 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #d5e7a5;
-  box-shadow: 0 0 0 5px #d5e7a512;
+  background: #f2a03a;
+  box-shadow: 0 0 0 5px #f2a03a12;
 }
 .hero h1 {
   margin: 28px 0;
@@ -55,7 +55,7 @@
 }
 .hero h1 em {
   font-style: normal;
-  color: #d5e7a5;
+  color: #f2a03a;
 }
 .heroIntro {
   max-width: 44ch;
@@ -75,8 +75,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 32px;
-  background: #f4f2eb;
-  color: #102b2b;
+  background: #f7f9f9;
+  color: #12383a;
   padding: 17px 23px;
   min-height: 54px;
   font-size: 14px;
@@ -86,12 +86,12 @@
     transform 200ms;
 }
 .primaryButton:hover {
-  background: #d5e7a5;
+  background: #f2a03a;
   transform: translateY(-2px);
 }
 .hero :is(a, button):focus-visible,
 .closing a:focus-visible {
-  outline-color: #d5e7a5;
+  outline-color: #f2a03a;
 }
 .primaryButton svg,
 .roleActions svg,
@@ -110,10 +110,10 @@
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  color: #f4f2eb;
+  color: #f7f9f9;
   min-height: 44px;
   font-size: 14px;
-  border-bottom: 1px solid #c6e6dc55;
+  border-bottom: 1px solid #eaf6f555;
 }
 .heroFootnote {
   display: flex;
@@ -155,8 +155,8 @@
   align-items: center;
   margin: -66px -1px 0 40px;
   padding: 24px 28px;
-  background: #c6e6dc;
-  color: #102b2b;
+  background: #eaf6f5;
+  color: #12383a;
 }
 .heroVisual figcaption > span {
   grid-column: 1 / -1;
@@ -231,7 +231,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 36px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .disciplineTop span {
   font:
@@ -258,7 +258,7 @@
   justify-content: space-between;
   gap: 12px;
   margin-top: auto;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-size: 12px;
 }
 .openings {
@@ -338,7 +338,7 @@
   font-size: 12px;
 }
 .facts svg {
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .roleActions {
   display: flex;
@@ -352,7 +352,7 @@
   align-items: center;
   gap: 10px;
   min-height: 36px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font-size: 13px;
 }
 .roleActions > a:first-child {
@@ -363,7 +363,7 @@
   padding-block: 40px;
 }
 .empty > svg {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   margin-bottom: 22px;
 }
 .empty h3 {
@@ -393,7 +393,7 @@
 }
 .talentNote > div > svg {
   flex-shrink: 0;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .talentNote h3 {
   font-size: 18px;
@@ -409,7 +409,7 @@
   display: inline-flex;
   align-items: center;
   gap: 24px;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   white-space: nowrap;
   min-height: 44px;
   font-size: 13px;
@@ -438,7 +438,7 @@
 }
 .stepIcon {
   display: flex;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   margin-bottom: 26px;
 }
 .stepNumber {
@@ -501,14 +501,14 @@
   line-height: 1.7;
 }
 .checklist li span {
-  color: var(--brand-primary);
+  color: var(--link-primary);
   font:
     10px/2.2 var(--font-geist-mono),
     monospace;
 }
 .closing {
-  background: #102b2b;
-  color: #f4f2eb;
+  background: #12383a;
+  color: #f7f9f9;
 }
 .closingInner {
   display: flex;

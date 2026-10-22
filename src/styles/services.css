@@ -1,7 +1,7 @@
 /* Scoped service tokens keep the established site styles intact. */
 .sp-page {
   --sp-teal: #078686;
-  --sp-action: #066d6d;
+  --sp-action: #12383a;
   --sp-orange: #f2a03a;
   --sp-green: #20be27;
   --sp-ink: #12383a;
@@ -682,7 +682,7 @@
   color: #a32629;
 }
 .sv-editing ins {
-  color: #066d6d;
+  color: #12383a;
   text-decoration: none;
   border-bottom: 2px solid #078686;
 }
@@ -749,7 +749,7 @@
 }
 .sv-access b {
   font-family: monospace;
-  color: #066d6d;
+  color: #12383a;
   width: 35px;
 }
 .sv-access p {
@@ -921,20 +921,20 @@
 }
 
 html[data-theme='dark'] .sp-page {
-  --sp-white: #0e1b19;
-  --sp-paper: #162823;
-  --sp-soft: #1d3b32;
-  --sp-ink: #ecf3ee;
-  --sp-body: #b5c9c0;
-  --sp-border: #345247;
-  --sp-action: #8bddc5;
+  --sp-white: #12383a;
+  --sp-paper: #12383a;
+  --sp-soft: #12383a;
+  --sp-ink: #f7f9f9;
+  --sp-body: #dce5e5;
+  --sp-border: #526568;
+  --sp-action: #eaf6f5;
 }
 html[data-theme='dark'] .sp-page .sp-button {
-  background: #8bddc5;
-  color: #102b2b;
+  background: #eaf6f5;
+  color: #12383a;
 }
 html[data-theme='dark'] .sp-page .sp-button:hover {
-  background: #b0eddb;
+  background: #eaf6f5;
 }
 html[data-theme='dark'] .sp-page .sv-stage {
   color: #12383a;
@@ -1224,7 +1224,7 @@ html[data-theme='dark'] .sp-page .sv-stage {
   color: #a32629;
 }
 .sp-transform-panels ins {
-  color: #066d6d;
+  color: #12383a;
 }
 .sp-transform-note {
   font-size: 0.65rem;
@@ -1327,8 +1327,8 @@ html[data-theme='dark'] .sp-page .sv-stage {
   height: 34px;
   display: grid;
   place-items: center;
-  background: #078686;
-  color: #fff;
+  background: var(--action-primary);
+  color: var(--text-on-action);
   border-radius: 50%;
   font-size: 20px;
   z-index: 1;
@@ -1363,7 +1363,7 @@ html[data-theme='dark'] .sp-page .sv-stage {
   text-decoration: none;
 }
 .sv-replay:focus-visible {
-  outline: 2px solid #066d6d;
+  outline: 2px solid #12383a;
   outline-offset: 5px;
 }
 .sv-xml[data-playing='true'] .sv-document {

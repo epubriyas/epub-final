@@ -3,9 +3,12 @@ import Link from '@/components/i18n/LocalizedLink'
 import { ArrowRight } from 'lucide-react'
 import { QuoteForm } from '@/components/forms/QuoteForm'
 import { quoteServices } from '@/lib/validation/quote'
+import { getServerSideURL } from '@/utilities/getURL'
+import { siteCanBeIndexed } from '@/lib/site-indexing.cjs'
 
 const indexingApproved =
-  process.env.VERCEL_ENV === 'production' && process.env.EPUBTRANS_INDEXING_APPROVED === 'true'
+  siteCanBeIndexed(getServerSideURL(), process.env.VERCEL_ENV) &&
+  process.env.EPUBTRANS_INDEXING_APPROVED === 'true'
 
 export const metadata: Metadata = {
   title: { absolute: 'Request a Project Quote | EPUBTRANS' },

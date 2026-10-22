@@ -86,7 +86,9 @@ export default async function HomePage() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
               <div className="sp-actions">
-                <ArrowLink href={content.primaryCTA.href}>{content.primaryCTA.label}</ArrowLink>
+                <Link className="et-button" href={content.primaryCTA.href}>
+                  {content.primaryCTA.label} <ArrowUpRight size={18} aria-hidden="true" />
+                </Link>
                 <ArrowLink href={content.secondaryCTA.href}>{content.secondaryCTA.label}</ArrowLink>
               </div>
               {content.intro.slice(1).map((paragraph) => (

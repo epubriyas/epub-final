@@ -11,6 +11,7 @@ import {
 } from '@/lib/validation/quote'
 
 import { quoteUploadAccept, validateQuoteFiles } from '@/lib/quote-uploads'
+import { FieldFeedback } from './FieldFeedback'
 
 const steps = ['Service', 'Project Requirements', 'Contact Details', 'Review']
 const initial: QuoteData = {
@@ -119,11 +120,7 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
                 : 'off'
         }
       />
-      {errors[key] && (
-        <p id={`quote-${key}-error`} className="et-field-error">
-          {errors[key]}
-        </p>
-      )}
+      <FieldFeedback id={`quote-${key}-error`} message={errors[key]} />
     </div>
   )
 
@@ -226,6 +223,7 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
             Prefer a conversation? <ArrowRight size={14} aria-hidden="true" />
           </Link>
         </div>
+        <div id="project-assistant-dock" className="et-assistant-dock" data-no-translate />
       </aside>
       <form
         className="et-quote-panel"
@@ -255,7 +253,13 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
               Choose the service that best fits your project. Not sure? Select Multiple Services /
               Not Sure.
             </p>
-            <div className="qp-service-grid">
+            <div
+              className="qp-service-grid"
+              role="radiogroup"
+              aria-label="Service Required"
+              aria-invalid={!!errors.service}
+              aria-describedby={errors.service ? 'quote-service-error' : 'quote-service-help'}
+            >
               {quoteServiceOptions.map(({ value, label }) => (
                 <label
                   className="qp-service-option"
@@ -276,11 +280,7 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
                 </label>
               ))}
             </div>
-            {errors.service && (
-              <p id="quote-service-error" className="et-field-error">
-                {errors.service}
-              </p>
-            )}
+            <FieldFeedback id="quote-service-error" message={errors.service} />
           </fieldset>
         )}
 
@@ -299,16 +299,11 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
                 aria-invalid={!!errors.details}
                 aria-describedby={errors.details ? 'quote-details-error' : 'quote-details-help'}
               />
-              {errors.details ? (
-                <p id="quote-details-error" className="et-field-error">
-                  {errors.details}
-                </p>
-              ) : (
-                <p id="quote-details-help" className="et-form-help">
-                  Please provide a short description of the work. You do not need to have every
-                  technical detail finalized before contacting us.
-                </p>
-              )}
+              <FieldFeedback id="quote-details-error" message={errors.details} />
+              <p id="quote-details-help" className="et-form-help">
+                Please provide a short description of the work. You do not need to have every
+                technical detail finalized before contacting us.
+              </p>
             </div>
             <div className="et-enquiry-form-grid">
               {input('sourceFileFormat', 'Source File Format')}
@@ -331,11 +326,10 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
                   errors.additionalRequirements ? 'quote-additionalRequirements-error' : undefined
                 }
               />
-              {errors.additionalRequirements && (
-                <p id="quote-additionalRequirements-error" className="et-field-error">
-                  {errors.additionalRequirements}
-                </p>
-              )}
+              <FieldFeedback
+                id="quote-additionalRequirements-error"
+                message={errors.additionalRequirements}
+              />
               <p className="et-form-help">
                 Include any publisher specifications, style guides, accessibility requirements,
                 reference layouts, quality checks or other instructions that may affect the project.
@@ -367,7 +361,7 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
                 Add sample pages, a brief or reference specifications. Files are stored privately
                 with your enquiry.
               </p>
-              <p id="quote-files-error" className="et-field-error" role="alert">
+              <p id="quote-files-error" className="et-field-error et-field-feedback" role="alert">
                 {fileError}
               </p>
               {files.length > 0 && (

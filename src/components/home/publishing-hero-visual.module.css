@@ -7,7 +7,7 @@
   border: 1px solid var(--border-default);
   border-radius: 18px;
   background: var(--background-secondary);
-  box-shadow: 0 28px 64px -42px #102b2b66;
+  box-shadow: 0 28px 64px -42px #12383a66;
 }
 .journeyMap {
   position: absolute;
@@ -264,7 +264,7 @@
 }
 .caption svg {
   flex-shrink: 0;
-  color: var(--brand-primary);
+  color: var(--link-primary);
 }
 .orbit {
   position: absolute;
@@ -333,7 +333,7 @@
   height: 44px;
   border: 1px solid var(--border-default);
   border-radius: 50%;
-  color: var(--brand-primary);
+  color: var(--link-primary);
   background: transparent;
   cursor: pointer;
   transition: background 250ms;
@@ -441,7 +441,7 @@
   height: 30px;
   border-radius: 50%;
   background: #e1efe6;
-  color: #006d68;
+  color: #078686;
 }
 .serviceDetail {
   display: block;
@@ -473,7 +473,7 @@
   transform: translate(2px, -2px);
 }
 .service:focus-visible {
-  outline: 2px solid #006d68;
+  outline: 2px solid #078686;
   outline-offset: 4px;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -661,7 +661,7 @@
   width: 25px;
   height: 2px;
   border-radius: 2px;
-  background: #006d6829;
+  background: #07868629;
   transform-origin: left;
   transition: background-color 350ms;
 }
@@ -731,7 +731,7 @@
   0%,
   70%,
   100% {
-    background: #006d6829;
+    background: #07868629;
     transform: scaleX(0.7);
   }
   30% {
@@ -817,7 +817,7 @@
   border: 1px solid #ddf5e7b3;
   border-radius: 5px 12px 5px 5px;
   background: #effbf1ed;
-  color: #006d68;
+  color: #078686;
   box-shadow: 0 7px 20px #072e3533;
   transition:
     transform 600ms var(--motion-ease),

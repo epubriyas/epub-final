@@ -275,7 +275,7 @@ function PreviewContent({ sample }: { sample: WorkSample }) {
           </div>
         )}
       </div>
-      <div className="wp-preview-area" ref={area}>
+      <div className="wp-preview-area" ref={area} tabIndex={0} role="region" aria-label="Sample preview">
         {reader ? (
           <article className="wp-reading" style={{ fontSize: `${zoom}rem` }}>
             <p className="wp-kicker">Reading excerpt / Section {page + 1}</p>

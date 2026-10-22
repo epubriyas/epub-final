@@ -13,6 +13,7 @@ import { LocaleProvider } from '@/components/i18n/LocaleProvider'
 import { EpubtransAssistant } from '@/components/assistant/EpubtransAssistant'
 import { SiteMotion } from '@/components/motion/SiteMotion'
 import { getSiteSettings } from '@/lib/content'
+import { siteCanBeIndexed } from '@/lib/site-indexing.cjs'
 import '@/styles/index.css'
 export async function generateViewport(): Promise<Viewport> {
   const dark = (await cookies()).get(themeCookieKey)?.value === 'dark'
@@ -21,7 +22,7 @@ export async function generateViewport(): Promise<Viewport> {
     initialScale: 1,
     viewportFit: 'cover',
     interactiveWidget: 'resizes-content',
-    themeColor: dark ? '#0e1b19' : '#f4f2eb',
+    themeColor: dark ? '#12383a' : '#f7f9f9',
   }
 }
 export const dynamic = 'force-dynamic'
@@ -81,6 +82,9 @@ export default async function FrontendLayout({ children }: { children: React.Rea
   )
 }
 export const metadata: Metadata = {
+  ...(!siteCanBeIndexed(getServerSideURL(), process.env.VERCEL_ENV)
+    ? { robots: { index: false, follow: false, noarchive: true } }
+    : {}),
   metadataBase: new URL(getServerSideURL()),
   title: { default: 'EPUBTRANS', template: '%s | EPUBTRANS' },
   description:
