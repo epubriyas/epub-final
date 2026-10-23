@@ -261,7 +261,6 @@ function HeaderState({
         >
           <Menu size={25} />
         </button>
-        <div id="site-assistant-dock" className="et-assistant-header-dock" data-no-translate />
       </div>
       {open !== null && (
         <button

@@ -56,7 +56,7 @@ test('document landing pages retain responsive UI, content, links and accessible
   const search = page.getByRole('searchbox', { name: 'Search services' })
   await search.fill('OCR')
   await expect(page.locator('.sp-catalog-link')).toHaveCount(1)
-  await expect(page.getByRole('status')).toHaveText('1 matching services')
+  await expect(page.getByRole('status')).toHaveText('1 matching service')
   await search.fill('no-results-for-this-query')
   await expect(page.locator('.sp-catalog-link')).toHaveCount(0)
   await search.fill('')

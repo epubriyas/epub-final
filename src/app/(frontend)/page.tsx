@@ -7,9 +7,11 @@ import { contentPayload } from '@/lib/content'
 import { getLandingContent } from '@/lib/landing-content'
 import { getWorkSamples } from '@/lib/portfolio'
 import { HomeMotion } from '@/components/home/HomeMotion'
-import { PublishingHeroVisual } from '@/components/home/PublishingHeroVisual'
+import { HomeHeroFilm } from '@/components/home/HomeHeroFilm'
+import { HeroHeadline } from '@/components/home/HeroHeadline'
 import { PremiumWorkflow } from '@/components/home/PremiumWorkflow'
 import { ContentTransformationInfographic } from '@/components/home/HomeInfographics'
+import heroStyles from '@/components/home/home-hero-layout.module.css'
 export const dynamic = 'force-dynamic'
 
 export async function generateMetadata() {
@@ -61,41 +63,55 @@ export default async function HomePage() {
           '/desktop-publishing-services',
         ].includes(card.href),
     )
-  const headlineAccent = content.h1.lastIndexOf('&')
   return (
     <HomeMotion>
-      <section className="et-hero" data-home-motion="hero">
+      <section className={`et-hero ${heroStyles.hero}`} data-home-motion="hero">
         <div className="et-container">
-          <div className="et-hero-meta">
-            <span className="et-label">{content.eyebrow}</span>
-            <span className="et-label et-hero-index">A NEW CHAPTER / EPUBTRANS</span>
-          </div>
-          <div className="et-hero-layout">
-            <div className="et-hero-copy">
-              <h1>
-                {headlineAccent > 0 ? (
-                  <>
-                    {content.h1.slice(0, headlineAccent)}
-                    <span>{content.h1.slice(headlineAccent)}</span>
-                  </>
-                ) : (
-                  content.h1
-                )}
-              </h1>
-              {content.intro.slice(0, 1).map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-              <div className="sp-actions">
-                <Link className="et-button" href={content.primaryCTA.href}>
-                  {content.primaryCTA.label} <ArrowUpRight size={18} aria-hidden="true" />
-                </Link>
-                <ArrowLink href={content.secondaryCTA.href}>{content.secondaryCTA.label}</ArrowLink>
-              </div>
-              {content.intro.slice(1).map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+          <div className={heroStyles.stage} data-hero-stage>
+            <HomeHeroFilm />
+            <div className={`et-hero-meta ${heroStyles.meta}`}>
+              <span className="et-label">EPUBTRANS / PUBLISHING &amp; LANGUAGE PRODUCTION</span>
+              <span className="et-label et-hero-index">A NEW CHAPTER / EPUBTRANS</span>
             </div>
-            <PublishingHeroVisual />
+            <div className={`et-hero-layout ${heroStyles.layout}`}>
+              <div className={`et-hero-copy ${heroStyles.copy}`}>
+                <HeroHeadline title="Digital Publishing, Content Transformation & Localization" />
+                <p data-hero-paragraph>
+                  From books and journals to XML, EPUB and multilingual production, EPUBTRANS helps
+                  publishers and localization teams prepare content for print, digital and global
+                  audiences.
+                </p>
+                <div className="sp-actions">
+                  <Link
+                    className={`et-button ${heroStyles.solidButton}`}
+                    href={content.primaryCTA.href}
+                  >
+                    {content.primaryCTA.label} <ArrowUpRight size={18} aria-hidden="true" />
+                  </Link>
+                  <Link className={heroStyles.glassButton} href={content.secondaryCTA.href}>
+                    {content.secondaryCTA.label} <ArrowUpRight size={18} aria-hidden="true" />
+                  </Link>
+                </div>
+                <nav
+                  className={heroStyles.capabilities}
+                  aria-label="Explore our production capabilities"
+                >
+                  <Link href="/typesetting-services">Publishing &amp; typesetting</Link>
+                  <Link href="/scielo-xml-markup-services">XML &amp; digital content</Link>
+                  <Link href="/desktop-publishing-services">Multilingual production</Link>
+                </nav>
+              </div>
+            </div>
+            <a href="#possibilities" className={heroStyles.explore}>
+              Discover the possibilities <ArrowDown size={14} aria-hidden="true" />
+            </a>
+          </div>
+          <div className={heroStyles.details}>
+            {content.intro.slice(1).map((paragraph) => (
+              <p key={paragraph} data-hero-paragraph>
+                {paragraph}
+              </p>
+            ))}
           </div>
           <div className="et-hero-bottom">
             <a href="#possibilities">

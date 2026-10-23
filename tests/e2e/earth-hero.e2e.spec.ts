@@ -59,6 +59,7 @@ test('Earth rotates, pauses, supports exploration and respects visibility and re
   const figure = page.locator('figure[aria-labelledby="publishing-visual-caption"]')
   const canvas = figure.locator('canvas')
   await expect(figure).toHaveAttribute('data-earth-ready', 'true')
+  await figure.scrollIntoViewIfNeeded()
   await expect(canvas).toHaveAttribute('data-earth-state', 'rotating')
   const satellites = figure.locator('[data-service-satellite]')
   await expect(satellites).toHaveCount(4)

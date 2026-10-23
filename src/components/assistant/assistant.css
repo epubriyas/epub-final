@@ -8,7 +8,7 @@
   gap: 12px;
   padding: 10px 17px 10px 17px;
   border: 1px solid #a5d5bc70;
-  background: linear-gradient(125deg, #1c4641, #12383a 72%);
+  background: #12383a;
   color: #fff;
   border-radius: 40px;
   box-shadow:
@@ -55,41 +55,6 @@
   white-space: normal;
 }
 
-/* A reserved header slot keeps help available without covering page content. */
-.et-assistant-header-dock {
-  order: 5;
-  width: 44px;
-  min-width: 44px;
-  min-height: 44px;
-}
-.et-assistant-header-dock .et-assistant-launcher {
-  position: static;
-  width: 44px;
-  height: 44px;
-  padding: 6px;
-  gap: 0;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--action-primary);
-  box-shadow: none;
-}
-.et-assistant-header-dock :is(.et-assistant-launcher-copy, .et-assistant-logo-reveal) {
-  width: 28px;
-  height: 28px;
-}
-.et-assistant-header-dock .et-assistant-logo-reveal .et-assistant-brandmark {
-  width: 28px;
-  height: 28px;
-  animation: none;
-  transform: none;
-}
-.et-assistant-header-dock .et-assistant-brandmark img {
-  width: 175.65px;
-  height: 28px;
-}
-.et-assistant-header-dock :is(.et-assistant-wordmark, .et-assistant-launcher-arrow, small) {
-  display: none;
-}
 .et-assistant-launcher:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 40px #12383a38;
@@ -557,9 +522,6 @@ body:has(.et-translation-status) .et-assistant-launcher {
     bottom: max(12px, env(safe-area-inset-bottom));
     padding: 8px 14px;
     gap: 12px;
-  }
-  .et-assistant-launcher > svg {
-    display: none;
   }
   .et-assistant-launcher-copy {
     width: 144px;

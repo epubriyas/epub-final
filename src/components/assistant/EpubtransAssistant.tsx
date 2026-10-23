@@ -63,9 +63,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
     const syncDock = () => {
       cancelAnimationFrame(frame)
       frame = requestAnimationFrame(() => {
-        const target =
-          document.getElementById('project-assistant-dock') ||
-          document.getElementById('site-assistant-dock')
+        const target = document.getElementById('project-assistant-dock')
         setDock((current) => (current === target ? current : target))
       })
     }
@@ -259,7 +257,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
   )
   return (
     <div className="et-assistant" data-no-translate>
-      {dock ? createPortal(launcherButton, dock) : null}
+      {dock ? createPortal(launcherButton, dock) : launcherButton}
       <dialog
         ref={dialog}
         id="epubtrans-assistant"

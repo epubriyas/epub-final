@@ -116,7 +116,9 @@ test('staging directives and keyboard access preserve navigation and assistant f
   expect((await request.get('/')).headers()['x-robots-tag']).toContain('noindex')
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/', { waitUntil: 'domcontentloaded' })
-  await expect(page.locator('#site-assistant-dock .et-assistant-launcher')).toBeVisible({ timeout: 30000 })
+  await expect(page.locator('.et-assistant > .et-assistant-launcher')).toBeVisible({
+    timeout: 30000,
+  })
   await page.keyboard.press('Tab')
   await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused()
   const services = page

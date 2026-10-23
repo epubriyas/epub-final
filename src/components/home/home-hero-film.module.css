@@ -1,0 +1,103 @@
+.film {
+  --globe-teal: #08696c;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  isolation: isolate;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--background-primary);
+}
+.media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: 51% 8%;
+  filter: grayscale(1) contrast(1.15);
+  mix-blend-mode: screen;
+  opacity: 0.52;
+}
+.film .media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 51% 8%;
+  opacity: 0;
+  transition: opacity 900ms linear;
+}
+.tint {
+  position: absolute;
+  inset: 0;
+  background: var(--globe-teal);
+  mix-blend-mode: color;
+  opacity: 1;
+}
+.fade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 43%,
+      color-mix(in srgb, var(--background-primary) 90%, transparent),
+      color-mix(in srgb, var(--background-primary) 42%, transparent) 48%,
+      transparent 75%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--background-primary),
+      transparent 24%,
+      transparent 74%,
+      var(--background-primary)
+    );
+}
+.control {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  min-height: 44px;
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--background-primary) 80%, transparent);
+  backdrop-filter: blur(20px);
+  color: var(--text-primary);
+  font-size: 11px;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 3;
+}
+.control:focus-visible {
+  outline: 2px solid var(--link-primary);
+  outline-offset: 4px;
+}
+.film[data-reduced='true'] .control,
+.film:not([data-reduced]) .control,
+.film[data-playback='unavailable'] .control {
+  display: none;
+}
+@media (max-width: 700px) {
+  .control {
+    right: 20px;
+    bottom: 20px;
+  }
+  .media {
+    background-position: 51% 8%;
+  }
+  .film .media video {
+    object-position: 51% 8%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .film .media video {
+    display: none;
+    transition: none;
+  }
+  .control {
+    display: none;
+  }
+}

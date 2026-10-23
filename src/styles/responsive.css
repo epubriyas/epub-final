@@ -404,31 +404,6 @@
   }
 }
 
-@media (max-width: 1199px) {
-  .et-assistant-launcher {
-    width: 56px;
-    height: 56px;
-    padding: 11px;
-    justify-content: center;
-    gap: 0;
-  }
-  .et-assistant-launcher-copy,
-  .et-assistant-logo-reveal {
-    width: 32px;
-  }
-  .et-assistant-logo-reveal {
-    transform: none;
-  }
-  .et-assistant-logo-reveal .et-assistant-brandmark {
-    animation: none;
-    transform: none;
-  }
-  .et-assistant-launcher small,
-  .et-assistant-launcher .et-assistant-wordmark {
-    display: none;
-  }
-}
-
 @media (pointer: coarse) {
   .et-service-row:hover {
     padding-inline: 0;

@@ -1001,3 +1001,93 @@
     transform: none;
   }
 }
+
+/* Centered homepage layout: retain the renderer and every service interaction. */
+.figure[data-layout='centered'] {
+  width: min(100%, 940px);
+  height: 640px;
+  margin-inline: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.figure[data-layout='centered'] .scene {
+  background: transparent;
+}
+.figure[data-layout='centered'] .atmosphere {
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+}
+.figure[data-layout='centered'] .caption {
+  padding-inline: 0;
+}
+.figure[data-layout='centered'] .tag {
+  background: var(--background-primary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+@media (max-width: 650px) {
+  .figure.figure[data-layout='centered'] {
+    width: 100%;
+    height: auto;
+    min-height: 560px;
+    margin-top: 0;
+  }
+  .figure[data-layout='centered'] .caption {
+    padding-block: 18px;
+  }
+}
+
+/* Let the existing Earth scene span the viewport without scaling its controls. */
+.figure[data-layout='centered'] {
+  width: min(calc(100vw - 32px), 1560px);
+  max-width: none;
+  height: clamp(450px, 53svh, 720px);
+  flex: 1 0 auto;
+  align-self: flex-start;
+  left: 50%;
+  translate: -50% 0;
+  margin-inline: 0;
+}
+.figure[data-layout='centered'] .scene {
+  min-height: 350px;
+}
+.figure[data-layout='centered'] .caption {
+  padding: 14px max(16px, calc((100% - 1360px) / 2));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .figure[data-layout='centered'] .scene {
+    translate: 0 calc(var(--hero-scroll, 0) * -16px);
+  }
+  .figure[data-layout='centered'][data-earth-ready='true'] .earth {
+    animation: earth-stage-arrive 1.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .figure[data-layout='centered'][data-journey='true'] .scene {
+    translate: none;
+  }
+}
+@keyframes earth-stage-arrive {
+  from {
+    opacity: 0;
+    scale: 0.93;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media (max-width: 650px) {
+  .figure.figure[data-layout='centered'] {
+    width: calc(100vw - 24px);
+    min-height: 560px;
+    flex: none;
+  }
+  .figure[data-layout='centered'] .scene {
+    min-height: 0;
+  }
+  .figure[data-layout='centered'] .caption {
+    padding-inline: 8px;
+  }
+}

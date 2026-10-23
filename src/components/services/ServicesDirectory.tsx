@@ -1,22 +1,30 @@
 'use client'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from '@/components/i18n/LocalizedLink'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowDown, ArrowUpRight, Check, Search, X } from 'lucide-react'
 import type { ServicesLandingContent } from '@/lib/landing-schema'
-import { directoryCardHref, visibleDirectoryCategories } from '@/lib/landing-directory'
+import {
+  directoryCardHref,
+  directoryQuoteHref,
+  searchDirectoryCategories,
+  visibleDirectoryCategories,
+} from '@/lib/landing-directory'
+import styles from './services-directory.module.css'
 
 export function ServicesDirectory({ content }: { content: ServicesLandingContent }) {
   const [search, setSearch] = useState('')
+  const searchInput = useRef<HTMLInputElement>(null)
   const query = search.trim().toLocaleLowerCase()
-  const groups = visibleDirectoryCategories(content).map((group) => ({
-    ...group,
-    services: group.services.filter((card) =>
-      [group.title, card.title, ...card.paragraphs].join(' ').toLocaleLowerCase().includes(query),
-    ),
-  }))
+  const categories = visibleDirectoryCategories(content)
+  const groups = searchDirectoryCategories(categories, query)
   const count = groups.reduce((total, group) => total + group.services.length, 0)
+  const total = categories.reduce((sum, group) => sum + group.services.length, 0)
+  const clearSearch = () => {
+    setSearch('')
+    searchInput.current?.focus()
+  }
   return (
-    <main className="sp-page">
+    <main className={`sp-page ${styles.directory}`}>
       <section className="sp-index-hero">
         <div className="et-container">
           <p className="sp-eyebrow">{content.eyebrow}</p>
@@ -26,59 +34,149 @@ export function ServicesDirectory({ content }: { content: ServicesLandingContent
               {content.intro.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              <div className="sp-actions">
+                <Link className="sp-button" href={content.primaryCTA.href}>
+                  {content.primaryCTA.label} <ArrowUpRight size={19} aria-hidden="true" />
+                </Link>
+                <a className="sp-text-link" href="#service-catalog">
+                  Browse services <ArrowDown size={16} aria-hidden="true" />
+                </a>
+              </div>
             </div>
-            <div className="sp-actions">
-              <Link className="sp-button" href={content.primaryCTA.href}>
-                {content.primaryCTA.label} <ArrowUpRight size={19} aria-hidden="true" />
-              </Link>
-            </div>
+            <aside className={styles.guide} aria-labelledby="service-guide-title">
+              <p className="sp-eyebrow">A CLEAR STARTING POINT</p>
+              <h2 id="service-guide-title">
+                Your source. Your output. The right production support.
+              </h2>
+              <ul>
+                <li>
+                  <Check size={16} aria-hidden="true" />
+                  <span>
+                    <strong>Share what you have</strong>Manuscripts, PDFs, digital publications or
+                    translated files.
+                  </span>
+                </li>
+                <li>
+                  <Check size={16} aria-hidden="true" />
+                  <span>
+                    <strong>Define what you need</strong>Target formats, languages, layouts and
+                    technical specifications.
+                  </span>
+                </li>
+                <li>
+                  <Check size={16} aria-hidden="true" />
+                  <span>
+                    <strong>Agree the scope</strong>Confirm deliverables, review stages and the
+                    production schedule.
+                  </span>
+                </li>
+              </ul>
+              <div className={styles.catalogFacts}>
+                <span>
+                  <strong>{total}</strong> service options
+                </span>
+                <span>
+                  <strong>{categories.length}</strong> specialist categories
+                </span>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
-      <nav className="et-container sp-group-nav" aria-label="Service categories">
-        {groups.map((group) => (
-          <Link key={group.anchorId} href={`#${group.anchorId}`}>
-            {group.title}
-          </Link>
-        ))}
-      </nav>
-      <div className="et-container sp-directory-search">
+      <div id="service-catalog" className={`et-container sp-directory-search ${styles.search}`}>
         <div className="et-field">
           <label htmlFor="service-search" className="sp-eyebrow">
             Search services
           </label>
-          <input
-            id="service-search"
-            type="search"
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            className="et-input"
-            placeholder="Search by service, format or category"
-            aria-controls="service-results"
-          />
-          <p role="status" aria-live="polite">
-            {query ? `${count} matching services` : ''}
+          <div className={styles.inputWrap}>
+            <Search size={18} aria-hidden="true" />
+            <input
+              ref={searchInput}
+              id="service-search"
+              type="search"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              className="et-input"
+              placeholder="Search by service, format or category"
+              aria-controls="service-results"
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') clearSearch()
+              }}
+            />
+            {search && (
+              <button type="button" onClick={clearSearch} aria-label="Clear search">
+                <X size={17} aria-hidden="true" />
+              </button>
+            )}
+          </div>
+          <p role="status" aria-live="polite" aria-atomic="true">
+            {query
+              ? `${count} matching ${count === 1 ? 'service' : 'services'}`
+              : `${total} services across ${categories.length} categories`}
           </p>
         </div>
       </div>
+      {groups.length > 0 && (
+        <nav
+          className={`et-container sp-group-nav ${styles.categoryNav}`}
+          aria-label="Service categories"
+        >
+          {groups.map((group) => (
+            <Link key={group.anchorId} href={`#${group.anchorId}`}>
+              {group.title}
+              <span>{group.services.length}</span>
+            </Link>
+          ))}
+        </nav>
+      )}
       <div id="service-results">
-        {groups.map((group, i) => (
+        {count === 0 && (
+          <div className={`et-container ${styles.empty}`}>
+            <h2>No services match your search.</h2>
+            <p>
+              Try a format such as PDF, EPUB or XML, or a production task such as typesetting. If
+              your project spans several services, we can help define the scope.
+            </p>
+            <div className="sp-actions">
+              <button className="sp-button" type="button" onClick={clearSearch}>
+                Show all services
+              </button>
+              <Link className="sp-text-link" href={content.primaryCTA.href}>
+                Discuss your requirements <ArrowUpRight size={17} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        )}
+        {groups.map((group) => (
           <section
             className="et-container sp-section sp-catalog-group"
             id={group.anchorId}
             key={group.anchorId}
+            aria-labelledby={`${group.anchorId}-heading`}
           >
             <div>
-              <span className="sp-small-number">0{i + 1} / CAPABILITIES</span>
-              <h2>{group.title}</h2>
+              <span className="sp-small-number">
+                {String(
+                  categories.findIndex((category) => category.anchorId === group.anchorId) + 1,
+                ).padStart(2, '0')}{' '}
+                / CAPABILITIES
+              </span>
+              <h2 id={`${group.anchorId}-heading`}>{group.title}</h2>
               <p>{group.intro}</p>
+              <span className={styles.groupCount}>
+                {group.services.length} {group.services.length === 1 ? 'service' : 'services'}
+                {query ? ' matched' : ' in this category'}
+              </span>
             </div>
             <div>
               {group.services.map((card) => (
                 <article key={card.title} className="sp-directory-card">
                   <Link
                     className="sp-catalog-link"
-                    href={directoryCardHref(card, content.primaryCTA.href)}
+                    href={directoryCardHref(
+                      card,
+                      directoryQuoteHref(group.anchorId, content.primaryCTA.href),
+                    )}
                   >
                     <div>
                       <h3>{card.title}</h3>
@@ -86,8 +184,10 @@ export function ServicesDirectory({ content }: { content: ServicesLandingContent
                         <p key={paragraph}>{paragraph}</p>
                       ))}
                       <span className="sp-text-link">
-                        {directoryCardHref(card, content.primaryCTA.href) ===
-                        content.primaryCTA.href
+                        {directoryCardHref(
+                          card,
+                          directoryQuoteHref(group.anchorId, content.primaryCTA.href),
+                        ) === directoryQuoteHref(group.anchorId, content.primaryCTA.href)
                           ? content.primaryCTA.label
                           : card.linkLabel}
                       </span>
@@ -96,16 +196,13 @@ export function ServicesDirectory({ content }: { content: ServicesLandingContent
                   </Link>
                   <Link
                     className="sp-text-link sp-directory-quote"
-                    href={content.primaryCTA.href}
+                    href={directoryQuoteHref(group.anchorId, content.primaryCTA.href)}
                     aria-label={`Request a Quote for ${card.title}`}
                   >
                     Request a Quote <ArrowUpRight size={17} aria-hidden="true" />
                   </Link>
                 </article>
               ))}
-              {query && group.services.length === 0 && (
-                <p>No matching services in this category.</p>
-              )}
             </div>
           </section>
         ))}

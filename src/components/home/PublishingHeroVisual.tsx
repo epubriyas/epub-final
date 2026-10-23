@@ -51,7 +51,7 @@ const connectedServices = [
   },
 ]
 
-export function PublishingHeroVisual() {
+export function PublishingHeroVisual({ layout = 'default' }: { layout?: 'default' | 'centered' }) {
   const router = useRouter()
   const figure = useRef<HTMLElement>(null)
   const scene = useRef<HTMLDivElement>(null)
@@ -310,6 +310,7 @@ export function PublishingHeroVisual() {
       data-earth-paused={paused}
       data-active-service={active ?? 'none'}
       data-journey={journey !== null}
+      data-layout={layout}
     >
       <div ref={scene} className={styles.scene}>
         <div className={styles.atmosphere} aria-hidden="true">
