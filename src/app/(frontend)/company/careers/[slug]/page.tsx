@@ -5,7 +5,7 @@ import RichText from '@/components/RichText'
 import { BlogMotion as CareersMotion } from '@/components/blog/BlogMotion'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { getCareer, employmentLabel, applicationHref, roleSummary } from '@/lib/careers'
-import { getPreviewAccess, getSiteSettings } from '@/lib/content'
+import { getPreviewAccess } from '@/lib/content'
 import { pageMetadata } from '@/lib/seo'
 import styles from '../careers.module.css'
 
@@ -26,13 +26,10 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function CareerRole({ params }: Props) {
   const { slug } = await params
-  const [role, settings, access] = await Promise.all([
-    getCareer(slug),
-    getSiteSettings(),
-    getPreviewAccess(),
-  ])
+  const [role, access] = await Promise.all([getCareer(slug), getPreviewAccess()])
   if (!role) notFound()
-  const email = role.applicationEmail || settings.email || 'info@epubtrans.com'
+  const email = role.applicationEmail
+  const canApply = role.status === 'published' && Boolean(email) && !access.draft
   return (
     <CareersMotion className={styles.page}>
       {access.draft && (
@@ -102,16 +99,18 @@ export default async function CareerRole({ params }: Props) {
             )}
             <div>
               <dt>Applications</dt>
-              <dd>{email}</dd>
+              <dd>{canApply ? email : 'Applications are closed'}</dd>
             </div>
           </dl>
           <p>
             Introduce your relevant skills and experience. Include your availability and any work
             samples that support your application.
           </p>
-          <a className="et-button" href={applicationHref(role, email)}>
-            Apply by email <ArrowUpRight size={18} aria-hidden="true" />
-          </a>
+          {canApply && (
+            <a className="et-button" href={applicationHref(role)}>
+              Apply by email <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+          )}
         </aside>
       </div>
     </CareersMotion>

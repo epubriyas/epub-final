@@ -1,3 +1,4 @@
+import { serviceSlugForPath } from '@/config/service-paths'
 import type { ServicesLandingContent } from '@/lib/landing-schema'
 
 export function visibleDirectoryCategories(directory: ServicesLandingContent) {
@@ -15,5 +16,5 @@ export function directoryCardHref(
   card: ServicesLandingContent['categories'][number]['services'][number],
   quoteHref: string,
 ) {
-  return card.status === 'pendingApproval' ? quoteHref : card.href
+  return card.status === 'pendingApproval' && !serviceSlugForPath(card.href) ? quoteHref : card.href
 }

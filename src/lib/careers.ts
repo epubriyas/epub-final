@@ -12,8 +12,10 @@ export function roleSummary(description?: string | null): string {
 export const employmentLabel = (value: Career['employmentType']) =>
   value ? { 'full-time': 'Full time', 'part-time': 'Part time', contract: 'Contract' }[value] : ''
 
-export const applicationHref = (role: Career, fallback: string) =>
-  `mailto:${role.applicationEmail || fallback}?subject=${encodeURIComponent(`Application: ${role.title}`)}`
+export const applicationHref = (role: Career) =>
+  role.status === 'published' && role.applicationEmail
+    ? `mailto:${role.applicationEmail}?subject=${encodeURIComponent(`Application: ${role.title}`)}`
+    : undefined
 
 export const getCareer = cache(async (slug: string) => {
   let lookup = slug

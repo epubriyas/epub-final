@@ -168,12 +168,25 @@ export const Careers = contentCollection('careers', [
   { name: 'employmentType', type: 'select', options: ['full-time', 'part-time', 'contract'] },
   { name: 'applicationEmail', type: 'email' },
 ])
+Careers.hooks = {
+  beforeChange: [
+    ({ data, originalDoc }) => {
+      if (
+        (data.status ?? originalDoc?.status) === 'published' &&
+        !(data.applicationEmail ?? originalDoc?.applicationEmail)?.trim()
+      ) {
+        throw new Error('A verified application mailbox is required before publishing a vacancy.')
+      }
+      return data
+    },
+  ],
+}
 Careers.labels = { singular: 'Career Opening', plural: 'Careers' }
 Careers.admin = {
   ...Careers.admin,
   defaultColumns: ['title', 'location', 'employmentType', 'status', 'updatedAt'],
   description:
-    'Create an opening, add the role details and infographic blocks, then set Status to Published and Save. Draft openings stay private. Preview lets you review the role page before publication.',
+    'Verify owner authorization for the role and application mailbox before setting Status to Published and Save. Draft openings stay private. Preview lets you review the role page before publication.',
   preview: (data, { req }) =>
     generatePreviewPath({ collection: 'careers', slug: data.slug as string, req }),
 }

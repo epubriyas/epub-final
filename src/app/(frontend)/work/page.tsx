@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { WorkHeroCarousel } from '@/components/work/WorkHeroCarousel'
 import Link from '@/components/i18n/LocalizedLink'
 import { pageMetadata } from '@/lib/seo'
 import { getWorkSamples } from '@/lib/portfolio'
@@ -25,7 +25,7 @@ export default async function Work({
       ? samples.find((sample) => sample.category === requested || sample.categoryKey === requested)
           ?.category || ''
       : ''
-  const heroes = samples.filter((sample) => sample.featured && sample.thumbnail).slice(0, 2)
+  const heroes = samples.filter((sample) => sample.thumbnail).slice(0, 10)
   return (
     <main className="wp-work">
       <section className="wp-hero et-container">
@@ -52,40 +52,7 @@ export default async function Work({
           </div>
           <p className="wp-hero-footnote">Actual sample excerpts. Viewed here, on our site.</p>
         </div>
-        <div className="wp-hero-composition" aria-label="Selected sample previews">
-          {heroes.length ? (
-            heroes.map((sample, i) => (
-              <figure className={`wp-hero-sheet wp-hero-sheet-${i + 1}`} key={sample.id}>
-                <Image
-                  unoptimized
-                  src={sample.thumbnail!.url}
-                  alt={sample.thumbnail!.alt}
-                  width={sample.thumbnail!.width}
-                  height={sample.thumbnail!.height}
-                  loading="eager"
-                />
-                <figcaption>
-                  {sample.category}
-                  <span>{sample.format} / Preview</span>
-                </figcaption>
-              </figure>
-            ))
-          ) : (
-            <div className="wp-placeholder">
-              <span>Selected work</span>
-              <p>
-                Approved previews
-                <br />
-                are being prepared.
-              </p>
-            </div>
-          )}
-          <span className="wp-edition-mark" aria-hidden="true">
-            THE WORK
-            <br />
-            IN DETAIL
-          </span>
-        </div>
+        <WorkHeroCarousel samples={heroes} />
       </section>
       <WorkExplorer samples={samples} initialCategory={initialCategory} />
       <section className="wp-final et-container">

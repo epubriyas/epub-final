@@ -70,7 +70,9 @@ test('modal readers keep native scrolling and pause the background until closed'
 }) => {
   test.setTimeout(60000)
   await page.goto('/work')
-  const row = page.locator('.wp-work-row').filter({ hasText: 'Complex 1 typesetting sample' })
+  const row = page
+    .locator('.wp-work-row')
+    .filter({ hasText: 'Physics textbook layout: work, energy and power' })
   await row.getByRole('button', { name: /View Sample/ }).click()
   const dialog = page.getByRole('dialog')
   await expect(dialog.locator('.wp-page-image')).toBeVisible({ timeout: 20000 })

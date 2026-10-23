@@ -1142,3 +1142,34 @@ html[data-theme='dark'] .wp-work {
     min-height: 44px;
   }
 }
+
+/* Portfolio hero: existing editorial type and tokens, with a full-width curved preview band. */
+.wp-hero:has([aria-label='Selected portfolio previews']) {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.wp-hero:has([aria-label='Selected portfolio previews']) .wp-hero-copy {
+  text-align: center;
+  max-width: 65rem;
+  margin-inline: auto;
+}
+.wp-hero:has([aria-label='Selected portfolio previews']) .wp-hero-intro {
+  margin-inline: auto;
+}
+.wp-hero:has([aria-label='Selected portfolio previews']) .wp-hero-actions {
+  justify-content: center;
+}
+.wp-hero:has([aria-label='Selected portfolio previews']) .wp-hero-footnote {
+  margin-top: 1.5rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .wp-hero-copy > .wp-kicker {
+    animation: wp-headline 550ms var(--motion-ease) both;
+  }
+  .wp-hero-intro {
+    animation: wp-headline 700ms var(--motion-ease) 100ms both;
+  }
+  .wp-hero-actions {
+    animation: wp-headline 800ms var(--motion-ease) 180ms both;
+  }
+}

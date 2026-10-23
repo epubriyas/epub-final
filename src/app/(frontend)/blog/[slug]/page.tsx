@@ -96,7 +96,7 @@ export default async function BlogArticle({ params }: Props) {
     url: `${getServerSideURL()}/blog/${encodeURIComponent(post.slug!)}`,
     author: authors.length
       ? authors.map((author) => ({ '@type': 'Person', name: author.name }))
-      : { '@type': 'Organization', name: 'EPUBTRANS' },
+      : undefined,
     publisher: { '@type': 'Organization', name: 'EPUBTRANS' },
   }
   return (
@@ -135,7 +135,7 @@ export default async function BlogArticle({ params }: Props) {
                 <small>WRITTEN BY</small>
                 {authors.length
                   ? authors.map((author) => author.name).join(', ')
-                  : 'EPUBTRANS editorial team'}
+                  : 'Author not specified'}
               </span>
               {post.publishedAt && (
                 <span>
@@ -188,7 +188,7 @@ export default async function BlogArticle({ params }: Props) {
               <p>
                 {authors.length
                   ? authors.map((author) => author.name).join(', ')
-                  : 'EPUBTRANS editorial team'}
+                  : 'Author not specified'}
               </p>
               <span>Publishing. Language. Digital content.</span>
             </div>

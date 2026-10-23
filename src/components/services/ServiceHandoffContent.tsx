@@ -260,14 +260,62 @@ export function ServiceHandoffContent({
   handoff: ServiceHandoff
   service: Service
 }) {
+  const readingGuide = ['translation', 'voiceover'].includes(service.slug)
+  const sections = readingGuide
+    ? [
+        ...handoff.sections.filter((section) => section === handoff.sections[0]),
+        ...handoff.sections.filter((section) => /Deliverables$/.test(section.title)),
+        ...handoff.sections.filter((section) => section.kind === 'capabilities'),
+        ...handoff.sections.filter(
+          (section) => section.title === 'Source Materials and Project Requirements',
+        ),
+        ...handoff.sections.filter(
+          (section) =>
+            section !== handoff.sections[0] &&
+            !/Deliverables$/.test(section.title) &&
+            section.kind !== 'capabilities' &&
+            section.title !== 'Source Materials and Project Requirements',
+        ),
+      ]
+    : handoff.sections
   const firstCapabilities =
     handoff.showTransformation === false
       ? -1
-      : handoff.sections.findIndex((section) => section.kind === 'capabilities')
-  return handoff.sections.map((section, index) => (
-    <div key={section.title}>
-      <Section section={section} index={index} />
-      {index === firstCapabilities && <ServiceExplanation service={service} />}
-    </div>
-  ))
+      : sections.findIndex((section) => section.kind === 'capabilities')
+  return (
+    <>
+      {readingGuide && (
+        <nav className="et-container sp-service-contents" aria-label="On this service page">
+          <p className="sp-eyebrow">ON THIS PAGE</p>
+          <ul>
+            {sections
+              .map((section, index) => ({ section, index }))
+              .filter(
+                ({ section }) =>
+                  ['capabilities', 'faq', 'cta'].includes(section.kind) ||
+                  /Deliverables$/.test(section.title) ||
+                  section.title === 'Source Materials and Project Requirements',
+              )
+              .map(({ section, index }) => (
+                <li key={section.title}>
+                  <Link
+                    href={
+                      section.kind === 'workflow' ? '#process' : `#service-section-${index + 1}`
+                    }
+                  >
+                    {section.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </nav>
+      )}
+      {sections.map((section, index) => (
+        <div key={section.title}>
+          <Section section={section} index={index} />
+          {index === firstCapabilities && <ServiceExplanation service={service} />}
+        </div>
+      ))}
+    </>
+  )
 }

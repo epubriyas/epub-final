@@ -3,7 +3,7 @@ import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import { searchPlugin } from '@payloadcms/plugin-search'
-import { Plugin } from 'payload'
+import { Plugin, type Where } from 'payload'
 import { revalidateRedirects } from '@/payload/hooks/revalidateRedirects'
 import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
@@ -88,6 +88,26 @@ export const plugins: Plugin[] = [
     collections: ['posts'],
     beforeSync: beforeSyncWithSearch,
     searchOverrides: {
+      access: {
+        read: async ({ req }): Promise<boolean | Where> => {
+          if (req.user) return true
+          const published = await req.payload.find({
+            collection: 'posts',
+            overrideAccess: false,
+            pagination: false,
+            depth: 0,
+            select: { slug: true },
+            where: { _status: { equals: 'published' } },
+            req,
+          })
+          return {
+            and: [
+              { 'doc.relationTo': { equals: 'posts' } },
+              { 'doc.value': { in: published.docs.map((post) => post.id) } },
+            ],
+          }
+        },
+      },
       fields: ({ defaultFields }) => {
         return [...defaultFields, ...searchFields]
       },

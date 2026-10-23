@@ -1559,7 +1559,7 @@ export interface Resource {
   createdAt: string;
 }
 /**
- * Create an opening, add the role details and infographic blocks, then set Status to Published and Save. Draft openings stay private. Preview lets you review the role page before publication.
+ * Verify owner authorization for the role and application mailbox before setting Status to Published and Save. Draft openings stay private. Preview lets you review the role page before publication.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "careers".

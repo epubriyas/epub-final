@@ -2,7 +2,7 @@ import Link from '@/components/i18n/LocalizedLink'
 import Image from 'next/image'
 import { BriefcaseBusiness, MapPin, Clock3, ArrowUpRight, ArrowDown, Mail } from 'lucide-react'
 import { pageMetadata } from '@/lib/seo'
-import { listContent, getSiteSettings } from '@/lib/content'
+import { listContent } from '@/lib/content'
 import { ArrowLink } from '@/components/editorial/Primitives'
 import { CompanyPageNav } from '@/components/company/CompanyPageNav'
 import { CareerInfographic, CareerDisciplines } from '@/components/company/CareerInfographic'
@@ -18,8 +18,7 @@ export const metadata = pageMetadata({
   alternates: { canonical: '/company/careers' },
 })
 export default async function Careers() {
-  const [careers, settings] = await Promise.all([listContent('careers'), getSiteSettings()])
-  const email = settings.email || 'info@epubtrans.com'
+  const careers = await listContent('careers')
   return (
     <CareersMotion className={styles.page}>
       <header className={styles.hero}>
@@ -135,9 +134,11 @@ export default async function Careers() {
                       <Link href={`/company/careers/${encodeURIComponent(role.slug)}`}>
                         View role & requirements <ArrowUpRight size={18} aria-hidden="true" />
                       </Link>
-                      <a href={applicationHref(role, email)}>
-                        Apply by email <Mail size={16} aria-hidden="true" />
-                      </a>
+                      {applicationHref(role) && (
+                        <a href={applicationHref(role)}>
+                          Apply by email <Mail size={16} aria-hidden="true" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </article>
@@ -148,15 +149,13 @@ export default async function Careers() {
               <BriefcaseBusiness size={36} strokeWidth={1.3} aria-hidden="true" />
               <h3>No open roles published at the moment.</h3>
               <p>
-                Check back for new opportunities. You can also introduce your skills and area of
-                interest to our team to ask about future openings.
+                Check back for approved opportunities. Contact our team if you have a question about
+                recruitment.
               </p>
               <div className={styles.roleActions}>
-                <a
-                  href={`mailto:${email}?subject=${encodeURIComponent('Future career opportunities at EPUBTRANS')}`}
-                >
-                  Introduce yourself <ArrowUpRight size={18} aria-hidden="true" />
-                </a>
+                <Link href="/contact-us">
+                  Ask about recruitment <ArrowUpRight size={18} aria-hidden="true" />
+                </Link>
               </div>
             </div>
           )}
@@ -165,14 +164,12 @@ export default async function Careers() {
               <Mail size={22} strokeWidth={1.4} aria-hidden="true" />
               <div>
                 <h3>Don’t see the right fit?</h3>
-                <p>Introduce your skills and area of interest for future opportunities.</p>
+                <p>Ask our team about recruitment before sending application materials.</p>
               </div>
             </div>
-            <a
-              href={`mailto:${email}?subject=${encodeURIComponent('Future career opportunities at EPUBTRANS')}`}
-            >
+            <Link href="/contact-us">
               Contact the team <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

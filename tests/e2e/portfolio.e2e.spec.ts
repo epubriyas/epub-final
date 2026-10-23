@@ -37,7 +37,7 @@ test('real samples, filtering, lazy previews, accessible PDF viewer and responsi
   await page.getByRole('button', { name: /Return to All Work/ }).click()
   await expect(rows).toHaveCount(routes.length)
   const trigger = rows
-    .filter({ hasText: 'Complex 1 typesetting sample' })
+    .filter({ hasText: 'Physics textbook layout: work, energy and power' })
     .getByRole('button', { name: /View Sample/ })
   await trigger.click()
   const dialog = page.getByRole('dialog')
@@ -69,7 +69,7 @@ test('real samples, filtering, lazy previews, accessible PDF viewer and responsi
   }
   await dialog.getByRole('button', { name: 'Next sample', exact: true }).click()
   await expect(dialog.locator('#sample-viewer-title')).not.toHaveText(
-    'Complex 1 typesetting sample',
+    'Physics textbook layout: work, energy and power',
   )
   await page.keyboard.press('Escape')
   await expect(dialog).not.toBeVisible()

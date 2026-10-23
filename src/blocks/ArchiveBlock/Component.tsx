@@ -28,27 +28,38 @@ export const ArchiveBlock: React.FC<
 
     const fetchedPosts = await payload.find({
       collection: 'posts',
+      overrideAccess: false,
+      draft: false,
       depth: 1,
       limit,
-      ...(flattenedCategories && flattenedCategories.length > 0
-        ? {
-            where: {
-              categories: {
-                in: flattenedCategories,
-              },
-            },
-          }
-        : {}),
+      where: {
+        and: [
+          { _status: { equals: 'published' } },
+          ...(flattenedCategories?.length ? [{ categories: { in: flattenedCategories } }] : []),
+        ],
+      },
     })
 
     posts = fetchedPosts.docs
   } else {
     if (selectedDocs?.length) {
-      const filteredSelectedPosts = selectedDocs.map((post) => {
-        if (typeof post.value === 'object') return post.value
-      }) as Post[]
-
-      posts = filteredSelectedPosts
+      const ids = selectedDocs.flatMap(({ value }) => {
+        const valueId = value && typeof value === 'object' ? value.id : value
+        return valueId ? [valueId] : []
+      })
+      if (ids.length) {
+        const payload = await getPayload({ config: configPromise })
+        const result = await payload.find({
+          collection: 'posts',
+          overrideAccess: false,
+          draft: false,
+          depth: 1,
+          pagination: false,
+          where: { and: [{ id: { in: ids } }, { _status: { equals: 'published' } }] },
+        })
+        // Resolve current publication state instead of trusting cached relationship objects.
+        posts = ids.flatMap((id) => result.docs.filter((post) => post.id === id))
+      }
     }
   }
 

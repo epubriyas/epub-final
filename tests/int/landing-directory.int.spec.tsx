@@ -25,7 +25,7 @@ describe('document services directory', () => {
     fireEvent.change(input, { target: { value: '' } })
     expect(container.querySelectorAll('.sp-catalog-link')).toHaveLength(17)
   })
-  it('withholds hidden cards and routes pending scope to enquiries while preserving active URLs', () => {
+  it('withholds hidden cards and preserves verified specialist routes', () => {
     const directory = structuredClone(content.directory)
     directory.categories[0].services[0].status = 'hidden'
     const { container } = render(<ServicesDirectory content={directory} />)
@@ -36,7 +36,7 @@ describe('document services directory', () => {
         .getByRole('heading', { name: 'Translation Services' })
         .closest('a')
         ?.getAttribute('href'),
-    ).toBe('/get-a-quote')
+    ).toBe('/translation-services')
     expect(
       screen
         .getByRole('heading', { name: 'PDF Recreation & Document Preparation' })

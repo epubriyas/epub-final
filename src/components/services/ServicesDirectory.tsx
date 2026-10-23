@@ -75,24 +75,33 @@ export function ServicesDirectory({ content }: { content: ServicesLandingContent
             </div>
             <div>
               {group.services.map((card) => (
-                <Link
-                  className="sp-catalog-link"
-                  key={card.title}
-                  href={directoryCardHref(card, content.primaryCTA.href)}
-                >
-                  <div>
-                    <h3>{card.title}</h3>
-                    {card.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                    <span className="sp-text-link">
-                      {card.status === 'pendingApproval'
-                        ? content.primaryCTA.label
-                        : card.linkLabel}
-                    </span>
-                  </div>
-                  <ArrowUpRight size={25} aria-hidden="true" />
-                </Link>
+                <article key={card.title} className="sp-directory-card">
+                  <Link
+                    className="sp-catalog-link"
+                    href={directoryCardHref(card, content.primaryCTA.href)}
+                  >
+                    <div>
+                      <h3>{card.title}</h3>
+                      {card.paragraphs.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                      <span className="sp-text-link">
+                        {directoryCardHref(card, content.primaryCTA.href) ===
+                        content.primaryCTA.href
+                          ? content.primaryCTA.label
+                          : card.linkLabel}
+                      </span>
+                    </div>
+                    <ArrowUpRight size={25} aria-hidden="true" />
+                  </Link>
+                  <Link
+                    className="sp-text-link sp-directory-quote"
+                    href={content.primaryCTA.href}
+                    aria-label={`Request a Quote for ${card.title}`}
+                  >
+                    Request a Quote <ArrowUpRight size={17} aria-hidden="true" />
+                  </Link>
+                </article>
               ))}
               {query && group.services.length === 0 && (
                 <p>No matching services in this category.</p>

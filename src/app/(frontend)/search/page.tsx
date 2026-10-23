@@ -19,6 +19,7 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
 
   const posts = await payload.find({
     collection: 'search',
+    overrideAccess: false,
     depth: 1,
     limit: 12,
     select: {
@@ -83,6 +84,6 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Payload Website Template Search`,
+    title: `Search | EPUBTRANS`,
   }
 }
