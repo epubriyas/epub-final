@@ -538,6 +538,37 @@
   }
 }
 /* Contact: compact editorial layout in the site's established palette. */
+html:not([data-theme='dark']) .contact-premium {
+  --background-primary: #f4f2eb;
+  --background-secondary: #fff;
+  --background-inverse: #102b2b;
+  --text-primary: #102b2b;
+  --text-secondary: #4c605c;
+  --text-muted: #4c605c;
+  --text-on-action: #fff;
+  --brand-primary: #00817e;
+  --action-primary: #007571;
+  --link-primary: #007571;
+  --brand-secondary: #c7e6df;
+  --brand-accent: #d5e7a5;
+  --border-default: #c9d0c9;
+}
+
+.contact-premium .et-field-feedback:empty,
+.contact-premium .et-form-message:empty {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html:not([data-theme='dark'])
+  .contact-premium
+  .et-field
+  :is(input, select, textarea):not([aria-invalid='true']) {
+  border-color: var(--border-default);
+}
+
 .contact-premium {
   background: var(--background-primary);
   color: var(--text-primary);
