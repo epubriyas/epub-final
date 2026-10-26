@@ -9,10 +9,7 @@
     "title": "Voiceover Services for eLearning & Multimedia Localization",
     "lead": "Voiceover production and multilingual narration support for localization service providers, eLearning teams, publishers and digital-content businesses.",
     "paragraphs": [
-      "EPUBTRANS supports voiceover production workflows for organizations preparing audio and video content for different languages, audiences and publishing environments.",
-      "Our documented multimedia-localization services include project-specific voiceover activities and the preparation of contracted audio and script deliverables.",
-      "Whether your project involves narrated eLearning modules, educational videos, corporate training content or multilingual media, we can assess the source scripts, target languages, voice requirements and technical specifications.",
-      "Voice talent, recording, script adaptation, audio editing and synchronization are defined according to the project requirements and currently available production capabilities."
+      "Voiceover-related production for supported eLearning and multimedia projects, with scripts, voices, recording arrangements and audio outputs defined by the brief."
     ],
     "actions": [
       {
@@ -35,10 +32,6 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "Voiceover provides spoken narration or commentary for videos, eLearning modules and other media."
-        },
-        {
-          "kind": "paragraph",
           "text": "A voiceover project may begin with an approved script in the source language or translated scripts prepared for particular audiences."
         },
         {
@@ -56,10 +49,6 @@
         {
           "kind": "paragraph",
           "text": "EPUBTRANS supports voiceover-related production as an individual assignment or as a separately scoped component of multimedia or eLearning localization."
-        },
-        {
-          "kind": "paragraph",
-          "text": "The appropriate approach depends on the language, media format, available source assets and responsibilities defined in the project brief."
         }
       ],
       "groups": [],
@@ -1184,5 +1173,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 314
+  "sourceCopyBlockCount": 314,
+  "showTransformation": false
 }

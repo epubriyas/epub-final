@@ -9,10 +9,7 @@
     "title": "Proofreading Services for Books & Journals",
     "lead": "Final-stage proofreading support for book publishers, academic journals and publishing production teams.",
     "paragraphs": [
-      "EPUBTRANS provides proofreading services for publishers reviewing manuscripts, page proofs and other content approaching publication.",
-      "Proofreading focuses on identifying remaining errors and inconsistencies after the main editorial work has been completed. Depending on the project stage, it may involve checking spelling, punctuation, typographical details, text consistency and issues introduced during page layout.",
-      "Our approach is based on the agreed source materials, publisher house style, proof format and correction instructions.",
-      "Whether you need a review of a book's typeset pages, journal article proofs or another eligible publication, EPUBTRANS can assess your requirements and define the appropriate proofreading scope."
+      "Final-stage proofreading of edited manuscripts and publication proofs, with checks defined by the current production stage and your editorial instructions."
     ],
     "actions": [
       {
@@ -36,14 +33,6 @@
         {
           "kind": "paragraph",
           "text": "Proofreading generally takes place after copyediting and, in traditional book and journal production, after the material has been typeset."
-        },
-        {
-          "kind": "paragraph",
-          "text": "At this stage, the objective is usually to identify remaining errors without introducing unnecessary changes to approved content."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Proofreading can be particularly important when text has moved from an editable manuscript into a page-layout or publication format."
         },
         {
           "kind": "paragraph",
@@ -222,57 +211,6 @@
       "kind": "narrative"
     },
     {
-      "title": "Typeset Proofs and Other Source Formats",
-      "lead": [
-        {
-          "kind": "paragraph",
-          "text": "Proofreading requirements vary depending on the form in which content is supplied."
-        }
-      ],
-      "groups": [
-        {
-          "title": "PDF Page Proofs",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "A typeset PDF can be reviewed for agreed textual and visible presentation issues."
-            },
-            {
-              "kind": "paragraph",
-              "text": "The method for returning corrections—such as annotations or a separate correction list—should be confirmed before work begins."
-            }
-          ]
-        },
-        {
-          "title": "Editable Manuscripts",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Some projects use the term proofreading for a final language check in an editable document before layout."
-            },
-            {
-              "kind": "paragraph",
-              "text": "EPUBTRANS can assess this requirement, but the intended depth should be clarified so that the assignment is not mistaken for full copyediting."
-            }
-          ]
-        },
-        {
-          "title": "Revised Proofs",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "After corrections have been implemented, a revised proof may require checking against previously approved changes."
-            },
-            {
-              "kind": "paragraph",
-              "text": "The publisher should specify whether the task is limited to those changes or includes another complete proofreading pass."
-            }
-          ]
-        }
-      ],
-      "kind": "narrative"
-    },
-    {
       "title": "Our Proofreading Workflow",
       "lead": [],
       "groups": [
@@ -345,9 +283,48 @@
       "kind": "workflow"
     },
     {
-      "title": "What We Need and What You Receive",
+      "title": "Proof Stage, Project Inputs and Deliverables",
       "lead": [],
       "groups": [
+        {
+          "title": "PDF Page Proofs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A typeset PDF can be reviewed for agreed textual and visible presentation issues."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The method for returning corrections—such as annotations or a separate correction list—should be confirmed before work begins."
+            }
+          ]
+        },
+        {
+          "title": "Editable Manuscripts",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some projects use the term proofreading for a final language check in an editable document before layout."
+            },
+            {
+              "kind": "paragraph",
+              "text": "EPUBTRANS can assess this requirement, but the intended depth should be clarified so that the assignment is not mistaken for full copyediting."
+            }
+          ]
+        },
+        {
+          "title": "Revised Proofs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "After corrections have been implemented, a revised proof may require checking against previously approved changes."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The publisher should specify whether the task is limited to those changes or includes another complete proofreading pass."
+            }
+          ]
+        },
         {
           "title": "Typical Project Inputs",
           "blocks": [
@@ -736,5 +713,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 178
+  "sourceCopyBlockCount": 178,
+  "showTransformation": false
 }

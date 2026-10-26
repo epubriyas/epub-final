@@ -7,6 +7,7 @@ import * as migration_20261012_054530_vercel_private_storage from './20261012_05
 import * as migration_20261013_105445_about_page_mission_vision from './20261013_105445_about_page_mission_vision'
 import * as migration_20261013_165500_contact_quote_forms from './20261013_165500_contact_quote_forms'
 import * as migration_20261014_074433_landing_pages from './20261014_074433_landing_pages'
+import * as migration_20261026_120000_audience_pathways from './20261026_120000_audience_pathways'
 
 export const migrations = [
   {
@@ -53,5 +54,10 @@ export const migrations = [
     up: migration_20261014_074433_landing_pages.up,
     down: migration_20261014_074433_landing_pages.down,
     name: '20261014_074433_landing_pages',
+  },
+  {
+    up: migration_20261026_120000_audience_pathways.up,
+    down: migration_20261026_120000_audience_pathways.down,
+    name: '20261026_120000_audience_pathways',
   },
 ]

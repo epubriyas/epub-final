@@ -9,10 +9,7 @@
     "title": "eLearning Localization Services",
     "lead": "Multilingual course production, layout adaptation and localization support for training companies, localization service providers and learning-content teams.",
     "paragraphs": [
-      "EPUBTRANS provides eLearning localization services to help organizations prepare digital training content for different languages and learning audiences.",
-      "Our services cover course text integration, multilingual layout adaptation, on-screen graphics, interactive content, assessments, multimedia coordination and preparation of localized course deliverables.",
-      "Our documented production experience includes workflows involving Articulate Storyline, Rise and Lectora. The appropriate production method depends on the authoring environment, source files, language requirements and target delivery platform.",
-      "Whether you need to localize an existing course, integrate translated material or prepare multilingual training packages, we can review your project requirements and discuss a suitable production scope."
+      "Localization production for supported eLearning courses, including target-language content integration, layout adaptation and specified functional checks."
     ],
     "actions": [
       {
@@ -35,23 +32,11 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "An eLearning course contains more than text."
-        },
-        {
-          "kind": "paragraph",
           "text": "Slides, interactive elements, quizzes, videos, navigation controls, audio and completion settings all contribute to the learner experience."
         },
         {
           "kind": "paragraph",
-          "text": "When course content is adapted for another language, these elements may require additional production work."
-        },
-        {
-          "kind": "paragraph",
           "text": "Translated text can change the space needed within buttons or text boxes. On-screen graphics may contain embedded text. Multimedia timing may need adjustment, while interactive elements and assessments must be reviewed within the localized course."
-        },
-        {
-          "kind": "paragraph",
-          "text": "eLearning localization production addresses these requirements according to the source materials and agreed specifications."
         },
         {
           "kind": "paragraph",
@@ -1080,5 +1065,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 270
+  "sourceCopyBlockCount": 270,
+  "showTransformation": false
 }

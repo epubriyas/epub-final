@@ -9,10 +9,7 @@
     "title": "Copyediting Services for Book & Journal Publishers",
     "lead": "Manuscript copyediting for academic publishers, journal publishers, book publishers and publishing production teams.",
     "paragraphs": [
-      "EPUBTRANS provides copyediting support for publishers preparing manuscripts for typesetting and other print or digital production stages.",
-      "Our copyediting services focus on language accuracy, clarity, consistency and the application of agreed editorial style requirements. Depending on the project, this can include grammar, punctuation, spelling, terminology, manuscript formatting and editorial queries.",
-      "We work from the publisher's approved manuscript, house style and project instructions to define the appropriate editorial review.",
-      "Whether you require copyediting for a journal article, an individual book or a larger publishing project, we can assess the materials and discuss a suitable scope."
+      "Manuscript-level editing for book and journal publishers, guided by your house style, language requirements and agreed editorial scope."
     ],
     "actions": [
       {
@@ -182,43 +179,6 @@
       "kind": "narrative"
     },
     {
-      "title": "Working with Publisher House Styles",
-      "lead": [
-        {
-          "kind": "paragraph",
-          "text": "A clear editorial brief helps define consistent decisions across the manuscript."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Relevant instructions may include:"
-        },
-        {
-          "kind": "list",
-          "items": [
-            "Preferred spelling and language variety",
-            "Capitalization, hyphenation and punctuation conventions",
-            "Treatment of numbers, dates and units",
-            "Abbreviations and terminology",
-            "Heading hierarchy and text labels",
-            "Citation and reference formatting",
-            "Table, figure and equation conventions",
-            "The publisher's process for author queries",
-            "Requirements for tracking changes or documenting corrections"
-          ]
-        },
-        {
-          "kind": "paragraph",
-          "text": "A publisher may supply an established house style, a recognized editorial manual or specific instructions for a title or journal."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Support for a particular style and the depth of compliance checking should be confirmed during the project assessment."
-        }
-      ],
-      "groups": [],
-      "kind": "narrative"
-    },
-    {
       "title": "Our Copyediting Workflow",
       "lead": [],
       "groups": [
@@ -319,6 +279,40 @@
             {
               "kind": "paragraph",
               "text": "Microsoft Word is a typical editable manuscript format. Other source formats can be assessed based on the project and current technical capabilities."
+            },
+            {
+              "kind": "subheading",
+              "text": "House style and editorial instructions"
+            },
+            {
+              "kind": "paragraph",
+              "text": "A clear editorial brief helps define consistent decisions across the manuscript."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Relevant instructions may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Preferred spelling and language variety",
+                "Capitalization, hyphenation and punctuation conventions",
+                "Treatment of numbers, dates and units",
+                "Abbreviations and terminology",
+                "Heading hierarchy and text labels",
+                "Citation and reference formatting",
+                "Table, figure and equation conventions",
+                "The publisher's process for author queries",
+                "Requirements for tracking changes or documenting corrections"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "A publisher may supply an established house style, a recognized editorial manual or specific instructions for a title or journal."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Support for a particular style and the depth of compliance checking should be confirmed during the project assessment."
             }
           ]
         },
@@ -362,14 +356,6 @@
         {
           "kind": "paragraph",
           "text": "Proofreading is generally a later-stage review of edited material or typeset proofs to identify remaining errors and production-related inconsistencies."
-        },
-        {
-          "kind": "paragraph",
-          "text": "If the manuscript still needs significant language revision, copyediting is usually the more appropriate starting point."
-        },
-        {
-          "kind": "paragraph",
-          "text": "If the text is already edited and laid out, proofreading may be the appropriate next stage."
         },
         {
           "kind": "paragraph",
@@ -693,5 +679,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 169
+  "sourceCopyBlockCount": 169,
+  "showTransformation": false
 }

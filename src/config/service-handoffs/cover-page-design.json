@@ -9,10 +9,7 @@
     "title": "Cover Page Design Services for Books & Journals",
     "lead": "Book cover design, journal cover layouts and artwork adaptation for print and digital publishing.",
     "paragraphs": [
-      "EPUBTRANS provides cover page design services for book publishers, academic publishers, scholarly journals and publishing production teams.",
-      "Our documented publishing and design capabilities include cover design, graphic preparation, page layout and the development or adaptation of visual assets according to supplied specifications.",
-      "Whether your project needs a new front-cover concept, an existing cover adapted for another edition, a journal cover prepared using an established template or artwork for a print or digital publication, we can review your requirements and discuss the appropriate scope.",
-      "We work from your publication brief, approved content, design references and target formats. The expected concepts, review stages and final deliverables are established before production begins."
+      "Cover artwork for books, journals and digital editions, developed or adapted to the approved creative brief and the destination’s production specifications."
     ],
     "actions": [
       {
@@ -35,10 +32,6 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "A publication's cover introduces its content and establishes a visual connection with its intended audience."
-        },
-        {
-          "kind": "paragraph",
           "text": "For a book, the cover brings together the title, author details, typography, imagery and other design elements. Printed editions may also require a spine, back-cover information and a layout prepared for the chosen binding and production specifications."
         },
         {
@@ -48,14 +41,6 @@
         {
           "kind": "paragraph",
           "text": "Digital editions introduce additional requirements. Cover artwork may need to remain recognizable at smaller display sizes and be provided in a particular file format or set of dimensions."
-        },
-        {
-          "kind": "paragraph",
-          "text": "EPUBTRANS supports eligible cover-design and adaptation tasks according to the publication type, available artwork and agreed requirements."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Our service can be scoped as an individual cover assignment or coordinated with related typesetting and publishing production activities when appropriate."
         }
       ],
       "groups": [],
@@ -419,7 +404,7 @@
       "kind": "narrative"
     },
     {
-      "title": "Source Materials and Project Requirements",
+      "title": "What to Send for Cover Design",
       "lead": [
         {
           "kind": "paragraph",
@@ -958,5 +943,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 262
+  "sourceCopyBlockCount": 262,
+  "showTransformation": false
 }

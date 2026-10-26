@@ -176,7 +176,11 @@ export default function Contact() {
                 </address>
                 <a
                   className="cp-link"
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.lines.join(' '))}`}
+                  href={
+                    'mapsHref' in office
+                      ? office.mapsHref
+                      : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.lines.join(' '))}`
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`View ${office.title} on Google Maps (opens in a new tab)`}

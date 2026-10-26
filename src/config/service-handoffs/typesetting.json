@@ -9,9 +9,7 @@
     "title": "Book & Journal Typesetting Services",
     "lead": "Professional page composition and layout production for book publishers, academic publishers and journal publishing teams.",
     "paragraphs": [
-      "EPUBTRANS provides book and journal typesetting services to help publishers transform manuscripts into consistently formatted pages for print and digital publication workflows.",
-      "Our typesetting services cover page composition, typography, publication layout, tables, figures, equations, references and other content elements according to your design and production specifications.",
-      "Whether you need typesetting for a new title, an academic journal or an existing publication requiring layout updates, we can review your source files and define the appropriate production scope."
+      "Book and journal page composition for publishers, including complex tables, figures, equations and references, prepared to the approved layout and delivery specifications."
     ],
     "actions": [
       {
@@ -47,22 +45,6 @@
             },
             {
               "kind": "paragraph",
-              "text": "Depending on the project, typesetting activities may include:"
-            },
-            {
-              "kind": "list",
-              "items": [
-                "Chapter and section formatting",
-                "Typography and paragraph styles",
-                "Page numbering, running heads and footers",
-                "Table of contents formatting",
-                "Footnotes, endnotes and references",
-                "Tables, illustrations and image placement",
-                "Page-layout consistency across the publication"
-              ]
-            },
-            {
-              "kind": "paragraph",
               "text": "Book typesetting can be scoped for text-led publications or more complex layouts involving numerous visual and structural elements."
             }
           ]
@@ -73,10 +55,6 @@
             {
               "kind": "paragraph",
               "text": "Academic and scholarly journals often require consistent article layouts, references, figures, tables and publication-specific formatting."
-            },
-            {
-              "kind": "paragraph",
-              "text": "EPUBTRANS supports journal article composition based on publisher or journal style requirements."
             },
             {
               "kind": "paragraph",
@@ -97,10 +75,6 @@
             },
             {
               "kind": "paragraph",
-              "text": "Such content requires careful handling during page composition to preserve the intended presentation and maintain consistency."
-            },
-            {
-              "kind": "paragraph",
               "text": "We assess the complexity of the supplied material and clarify any specialist formatting requirements before confirming the production approach."
             }
           ]
@@ -118,7 +92,7 @@
       ],
       "groups": [
         {
-          "title": "Page Layout & Composition",
+          "title": "Page Layout & Typography",
           "blocks": [
             {
               "kind": "paragraph",
@@ -127,12 +101,7 @@
             {
               "kind": "paragraph",
               "text": "Activities may include managing margins, columns, text flow, page breaks and the positioning of publication elements."
-            }
-          ]
-        },
-        {
-          "title": "Typography & Text Formatting",
-          "blocks": [
+            },
             {
               "kind": "paragraph",
               "text": "Application of consistent text styles throughout the publication, including heading hierarchies, body text, captions, quotations, footnotes and other content elements."
@@ -161,7 +130,7 @@
           "blocks": [
             {
               "kind": "paragraph",
-              "text": "Formatting of bibliographies, reference lists, footnotes, endnotes, running heads, page numbers and other publication elements."
+              "text": "Formatting of tables of contents, bibliographies, reference lists, footnotes, endnotes, running heads, page numbers and other publication elements."
             },
             {
               "kind": "paragraph",
@@ -186,7 +155,7 @@
       "kind": "capabilities"
     },
     {
-      "title": "What We Need for a Typesetting Project",
+      "title": "Project Inputs and Deliverables",
       "lead": [
         {
           "kind": "paragraph",
@@ -194,43 +163,37 @@
         },
         {
           "kind": "paragraph",
-          "text": "Depending on the publication, useful materials may include:"
-        },
-        {
-          "kind": "list",
-          "items": [
-            "Manuscript files, preferably in an editable format",
-            "Publisher style sheets or design specifications",
-            "Existing templates or reference publication samples",
-            "Page size, margins and layout instructions",
-            "Tables, figures and image assets",
-            "Mathematical equations and special-character requirements",
-            "Font files or approved font specifications, where applicable",
-            "Instructions for references, footnotes, indexes and other publication elements",
-            "Required proof format and final delivery specifications"
-          ]
-        },
-        {
-          "kind": "paragraph",
-          "text": "If some materials are unavailable, we can review the information provided and identify what is needed before production begins."
-        }
-      ],
-      "groups": [],
-      "kind": "narrative"
-    },
-    {
-      "title": "Typesetting Deliverables",
-      "lead": [
-        {
-          "kind": "paragraph",
           "text": "The final deliverables depend on the publication type, source files and agreed production requirements."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Possible outputs include:"
         }
       ],
       "groups": [
+        {
+          "title": "What to Send",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Depending on the publication, useful materials may include:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Manuscript files, preferably in an editable format",
+                "Publisher style sheets or design specifications",
+                "Existing templates or reference publication samples",
+                "Page size, margins and layout instructions",
+                "Tables, figures and image assets",
+                "Mathematical equations and special-character requirements",
+                "Font files or approved font specifications, where applicable",
+                "Instructions for references, footnotes, indexes and other publication elements",
+                "Required proof format and final delivery specifications"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "If some materials are unavailable, we can review the information provided and identify what is needed before production begins."
+            }
+          ]
+        },
         {
           "title": "Typeset Page Proofs",
           "blocks": [
@@ -617,5 +580,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 149
+  "sourceCopyBlockCount": 149,
+  "showTransformation": false
 }

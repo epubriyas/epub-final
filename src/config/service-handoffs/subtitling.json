@@ -10,10 +10,7 @@
     "title": "Subtitling Services for eLearning & Video Localization",
     "lead": "Subtitle preparation, timed-text production and media-localization support for localization service providers, training-content teams and digital publishers.",
     "paragraphs": [
-      "EPUBTRANS provides subtitling services for organizations preparing video and multimedia content for different languages and audiences.",
-      "Our documented localization production scope includes subtitle preparation, timed-text deliverables and related media workflows, subject to the source content, target languages and agreed production requirements.",
-      "Whether you need subtitles for a training video, localized eLearning module, educational recording or other business content, we can review your media files, approved scripts, language assets and target specifications.",
-      "The scope may include subtitle timing, segmentation, formatting, synchronization and correction work. Translation, linguistic review and accessibility-specific captioning requirements are defined separately when applicable."
+      "Timed subtitle and caption-file preparation for eligible video and learning media, based on approved scripts, languages and delivery specifications."
     ],
     "actions": [
       {
@@ -37,14 +34,6 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "Subtitles allow viewers to follow speech and other specified information through synchronized text displayed during video playback."
-        },
-        {
-          "kind": "paragraph",
-          "text": "For localization service providers (LSPs), subtitle production may be one stage in a wider workflow involving transcription, translation, linguistic review, media engineering and final delivery."
-        },
-        {
-          "kind": "paragraph",
           "text": "The source video, approved language content and technical delivery rules determine how the subtitle file should be prepared."
         },
         {
@@ -54,10 +43,6 @@
         {
           "kind": "paragraph",
           "text": "EPUBTRANS supports subtitling production as an individual assignment or as a separately scoped part of a localization or eLearning project."
-        },
-        {
-          "kind": "paragraph",
-          "text": "We work from the project requirements rather than assuming one subtitle template is appropriate for every language, video or distribution platform."
         }
       ],
       "groups": []
@@ -180,23 +165,7 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "Localization service providers often manage the client relationship, translation decisions and linguistic approvals while assigning selected production stages to a specialist partner."
-        },
-        {
-          "kind": "paragraph",
-          "text": "EPUBTRANS can support these workflows by preparing agreed subtitle assets from supplied media, scripts and translations."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Depending on the assignment, relevant activities may include aligning translated text to the source video, preparing language-specific subtitle files and applying supplied formatting or timing conventions."
-        },
-        {
-          "kind": "paragraph",
-          "text": "The LSP can remain responsible for translation management, terminology, in-country review and client approvals unless the agreement defines another arrangement."
-        },
-        {
-          "kind": "paragraph",
-          "text": "EPUBTRANS should not be positioned as automatically replacing the LSP's linguistic team or end-client relationship."
+          "text": "EPUBTRANS prepares agreed subtitle assets from supplied media, scripts and approved translations; the commissioning LSP retains translation management, terminology, linguistic review and client approval unless a different responsibility is agreed."
         }
       ],
       "groups": [

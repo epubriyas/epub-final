@@ -10,11 +10,7 @@
     "title": "Graphic Design & Image Services for Publishers",
     "lead": "Publication artwork, figure preparation, image editing and visual-content production for book publishers, scholarly journals and localization teams.",
     "paragraphs": [
-      "EPUBTRANS provides graphic design and image services to support the preparation of print and digital publications.",
-      "Our documented service portfolio includes graphic design and publishing production, while the existing Graphic Design & Image Services offering covers illustrations, charts, infographics, image editing and visual consistency.",
-      "We work with supplied artwork, reference materials and publication specifications to assess the preparation or adaptation of images and graphic elements for an agreed output.",
-      "Whether your project involves figures for a scholarly journal, illustrations for a book, visual assets for a digital publication or graphics requiring localization, share the source materials and specifications with EPUBTRANS.",
-      "We can review the requirements and discuss an appropriate production scope."
+      "Figure, diagram and image preparation for publications, guided by the supplied artwork, journal specifications and target print or digital formats."
     ],
     "actions": [
       {
@@ -38,15 +34,7 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "Graphics are an important part of many publishing workflows."
-        },
-        {
-          "kind": "paragraph",
           "text": "A scholarly journal may need figures formatted according to its technical requirements. An educational book may contain diagrams, charts and illustrations that need consistent presentation. A digital publication may require images in different dimensions or file formats."
-        },
-        {
-          "kind": "paragraph",
-          "text": "The source artwork is not always ready for these uses."
         },
         {
           "kind": "paragraph",

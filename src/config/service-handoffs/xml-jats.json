@@ -11,10 +11,7 @@
     "title": "XML & JATS Conversion Services for Scholarly Publishers",
     "lead": "Structured XML production, JATS article markup and content conversion for academic publishers, journal publishers and publishing production teams.",
     "paragraphs": [
-      "EPUBTRANS provides XML and JATS conversion services to support scholarly publishing and structured-content workflows.",
-      "Our documented XML services include article markup, metadata structuring, bibliographic references, tables, figures, equations and related publishing content.",
-      "Whether you need to convert approved manuscripts into JATS XML, prepare an existing article archive for structured reuse or update XML files against specified requirements, we can review the available source materials and define an appropriate production scope.",
-      "Each XML project is planned around the required schema, version, tagging rules, source content and delivery specifications."
+      "JATS XML conversion for academic and journal publishers, based on the specified tag set, schema version and destination requirements."
     ],
     "actions": [
       {
@@ -38,15 +35,7 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "Scholarly journal articles contain information that needs to be identified and organized beyond its visual appearance."
-        },
-        {
-          "kind": "paragraph",
           "text": "Titles, authors, affiliations, abstracts, keywords, headings, references, tables, figures and supplementary information each have a role in the article's structure."
-        },
-        {
-          "kind": "paragraph",
-          "text": "XML markup represents these relationships through defined elements and attributes."
         },
         {
           "kind": "paragraph",
@@ -54,15 +43,7 @@
         },
         {
           "kind": "paragraph",
-          "text": "Structured XML can support publisher production, content interchange, archiving and the preparation of articles for different publishing environments."
-        },
-        {
-          "kind": "paragraph",
           "text": "The appropriate XML format depends on the intended destination. A publisher may need JATS for its own production workflow, a particular repository specification or a specialized XML model based on JATS."
-        },
-        {
-          "kind": "paragraph",
-          "text": "EPUBTRANS supports these requirements through project-specific XML conversion and markup activities."
         }
       ],
       "groups": []
@@ -597,15 +578,7 @@
           "blocks": [
             {
               "kind": "paragraph",
-              "text": "The XML and associated content are reviewed according to the defined quality requirements."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Where commissioned and technically supported, the appropriate validation tools are used against the agreed specification."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Errors or issues identified through the defined process are handled according to the correction scope."
+              "text": "Review the XML against the agreed quality and validation criteria, and address issues within the defined correction scope."
             }
           ]
         },

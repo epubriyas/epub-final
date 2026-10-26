@@ -9,10 +9,7 @@
     "title": "Digital Document & Publishing Accessibility Services",
     "lead": "Accessibility remediation and production support for PDF, EPUB, Word, PowerPoint and publishing-source files.",
     "paragraphs": [
-      "EPUBTRANS provides digital document accessibility services to support publishers, academic publishing organizations, localization service providers and other content teams preparing more accessible digital publications and documents.",
-      "Our services include accessibility-related production and remediation for PDF, EPUB, Microsoft Word, PowerPoint and suitable Adobe InDesign-based workflows.",
-      "Depending on the source files and agreed requirements, projects may involve document structure, tagging, reading order, alternative text, navigation, formatting improvements and relevant accessibility checks.",
-      "Whether you need to improve existing documents or prepare new digital content against specific accessibility requirements, we can review your materials and discuss an appropriate production scope."
+      "Accessibility-related production and remediation for supported PDF, EPUB, Word, PowerPoint and publishing-source files against an agreed specification."
     ],
     "actions": [
       {
@@ -43,15 +40,7 @@
         },
         {
           "kind": "paragraph",
-          "text": "Accessibility-related production addresses these issues by improving how content is structured, described, navigated and presented."
-        },
-        {
-          "kind": "paragraph",
           "text": "The appropriate requirements depend on the file format, intended audience, relevant accessibility criteria and target reading environment."
-        },
-        {
-          "kind": "paragraph",
-          "text": "EPUBTRANS supports these activities through project-specific production and remediation workflows."
         }
       ],
       "groups": [],
@@ -403,90 +392,33 @@
       "kind": "narrative"
     },
     {
-      "title": "Accessibility Features We Can Assess",
+      "title": "Shared Accessibility Features",
       "lead": [
         {
           "kind": "paragraph",
-          "text": "The issues requiring attention differ across formats. Depending on the project, relevant accessibility production activities may include the following."
+          "text": "Across supported formats, the agreed scope may address:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Meaningful document structure, headings and logical reading order",
+            "Alternative text for relevant images, charts and illustrations",
+            "Table headers, complex-content relationships and supported structural markup",
+            "Navigation, bookmarks and descriptive links",
+            "Language identification, document properties and accessibility metadata",
+            "Applicable color contrast and text-presentation requirements"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "The brief should specify whether EPUBTRANS incorporates supplied image descriptions, reviews existing ones or creates new descriptions. Complex scientific figures and educational illustrations may require subject-matter input."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Complex tables and mathematical content require assessment against the target format and agreed accessibility criteria."
         }
       ],
-      "groups": [
-        {
-          "title": "Document Structure & Headings",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Organizing content with meaningful sections, headings and structural relationships."
-            }
-          ]
-        },
-        {
-          "title": "Logical Reading Order",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Reviewing the sequence in which document content is presented through supported reading and assistive technologies."
-            }
-          ]
-        },
-        {
-          "title": "Alternative Text & Image Descriptions",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Integrating descriptions for meaningful images, charts and other visual content."
-            },
-            {
-              "kind": "paragraph",
-              "text": "The project scope should clarify whether EPUBTRANS is incorporating client-supplied descriptions, reviewing existing descriptions or creating new descriptions."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Complex scientific figures and educational illustrations may require subject-matter input."
-            }
-          ]
-        },
-        {
-          "title": "Tables & Complex Content",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Reviewing table headers, relationships between content and structural markup where supported."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Complex tables, mathematical expressions and specialized content may require additional assessment."
-            }
-          ]
-        },
-        {
-          "title": "Navigation & Links",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Preparing meaningful navigation elements, bookmarks, internal references and descriptive hyperlinks where relevant to the format."
-            }
-          ]
-        },
-        {
-          "title": "Language & Metadata",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Reviewing applicable language information, document properties and accessibility-related metadata."
-            }
-          ]
-        },
-        {
-          "title": "Visual Presentation",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Addressing agreed requirements involving color contrast, text presentation or other visual accessibility features where the format and project scope permit."
-            }
-          ]
-        }
-      ],
+      "groups": [],
       "kind": "narrative"
     },
     {

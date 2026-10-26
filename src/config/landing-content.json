@@ -34,7 +34,7 @@
           ],
           "cta": {
             "label": "Explore Publishing Services",
-            "href": "/services#publishing-editorial"
+            "href": "/services#for-publishers"
           }
         },
         {
@@ -45,7 +45,7 @@
           ],
           "cta": {
             "label": "Explore Localization Production",
-            "href": "/services#localization-dtp"
+            "href": "/services#for-localization-providers"
           }
         }
       ]
@@ -438,21 +438,43 @@
       }
     ],
     "audience": {
-      "title": "Production Support for Different Teams",
+      "eyebrow": "EXPLORE BY TEAM",
+      "title": "Find Production Support for Your Team",
+      "intro": "Publishing teams and localization service providers often work with different source files, specifications and delivery requirements. Choose the pathway that best matches your project, or browse the full service directory below.",
       "cards": [
         {
-          "title": "For Publishers & Academic Publishing Organizations",
+          "anchorId": "for-publishers",
+          "title": "For Publishers & Academic Publishing Teams",
           "paragraphs": [
-            "EPUBTRANS supports publishing workflows involving editorial production, book and journal typesetting, structured XML, EPUB creation, content conversion and digital accessibility.",
-            "We can review individual production tasks or related service requirements, based on your supplied files and publishing specifications."
-          ]
+            "Prepare books, journals and scholarly content for print and digital delivery. EPUBTRANS supports typesetting, editorial production, EPUB conversion, structured XML and accessibility-related production according to your publication specifications.",
+            "Useful starting materials include a sample manuscript or article, a house style or production template, target formats and any XML or accessibility requirements."
+          ],
+          "services": [
+            { "label": "Book & Journal Typesetting", "href": "/typesetting-services", "featured": true },
+            { "label": "Copyediting", "href": "/copyediting-services", "featured": false },
+            { "label": "EPUB Conversion", "href": "/ebook-creation-services", "featured": true },
+            { "label": "JATS XML Conversion", "href": "/xml-conversion-services", "featured": true },
+            { "label": "SciELO XML Markup", "href": "/scielo-xml-markup-services", "featured": true },
+            { "label": "Digital Accessibility", "href": "/accessibility-services", "featured": false }
+          ],
+          "cta": { "label": "Discuss a Publishing Project", "href": "/get-a-quote" }
         },
         {
+          "anchorId": "for-localization-providers",
           "title": "For Localization Service Providers & Translation Agencies",
           "paragraphs": [
-            "We support production work that complements translation and localization projects, including multilingual DTP, editable-file conversion, layout recreation and eLearning localization.",
-            "Our production activities are aligned with your agreed client specifications, workflow stages and delivery requirements."
-          ]
+            "Extend your production capacity for translated documents and learning content. EPUBTRANS supports multilingual DTP, post-translation layout adaptation, editable-file preparation and selected eLearning and multimedia workflows, working to your agreed client specifications and delivery process.",
+            "Helpful details include available source files, target languages and scripts, editable layouts or reference PDFs, the required output format and project deadlines."
+          ],
+          "services": [
+            { "label": "Multilingual DTP", "href": "/desktop-publishing-services", "featured": true },
+            { "label": "PDF Recreation & Document Preparation", "href": "/data-conversion-services", "featured": true },
+            { "label": "eLearning Localization", "href": "/elearning-localization-services", "featured": true },
+            { "label": "Subtitling", "href": "/subtitling-services", "featured": false },
+            { "label": "Transcription", "href": "/transcription-services", "featured": false },
+            { "label": "Voiceover", "href": "/voiceover-services", "featured": false }
+          ],
+          "cta": { "label": "Discuss Localization Production", "href": "/get-a-quote" }
         }
       ]
     },

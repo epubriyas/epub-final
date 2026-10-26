@@ -83,6 +83,48 @@ export function ServicesDirectory({ content }: { content: ServicesLandingContent
           </div>
         </div>
       </section>
+      <section className={styles.pathways} aria-labelledby="audience-pathways-title">
+        <div className="et-container">
+          <div className={styles.pathwaysHeading}>
+            <div>
+              <p className="sp-eyebrow">{content.audience.eyebrow}</p>
+              <h2 id="audience-pathways-title">{content.audience.title}</h2>
+            </div>
+            <p>{content.audience.intro}</p>
+          </div>
+          <div className={styles.pathwayGrid}>
+            {content.audience.cards.map((card, index) => (
+              <section
+                className={styles.pathwayCard}
+                id={card.anchorId}
+                aria-labelledby={`${card.anchorId}-heading`}
+                key={card.anchorId}
+                tabIndex={-1}
+              >
+                <span className={styles.pathwayNumber} aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')} / TEAM PATHWAY
+                </span>
+                <h3 id={`${card.anchorId}-heading`}>{card.title}</h3>
+                <p>{card.paragraphs[0]}</p>
+                <p className={styles.pathwayScope}>{card.paragraphs[1]}</p>
+                <h4>Explore relevant services</h4>
+                <ul className={styles.pathwayLinks}>
+                  {card.services.map((service) => (
+                    <li key={service.href}>
+                      <Link className={service.featured ? styles.featuredLink : ''} href={service.href}>
+                        {service.label} <ArrowUpRight size={15} aria-hidden="true" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link className={`sp-button ${styles.pathwayCta}`} href={card.cta.href}>
+                  {card.cta.label} <ArrowUpRight size={18} aria-hidden="true" />
+                </Link>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
       <div id="service-catalog" className={`et-container sp-directory-search ${styles.search}`}>
         <div className="et-field">
           <label htmlFor="service-search" className="sp-eyebrow">
@@ -207,22 +249,6 @@ export function ServicesDirectory({ content }: { content: ServicesLandingContent
           </section>
         ))}
       </div>
-      <section className="et-container sp-section sp-catalog-group">
-        <div>
-          <p className="sp-eyebrow">YOUR PRODUCTION TEAM</p>
-          <h2>{content.audience.title}</h2>
-        </div>
-        <div className="et-copy">
-          {content.audience.cards.map((card) => (
-            <article className="et-copy" key={card.title}>
-              <h3>{card.title}</h3>
-              {card.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </article>
-          ))}
-        </div>
-      </section>
       <section className="et-container sp-section sp-catalog-group">
         <div>
           <p className="sp-eyebrow">PROJECT REQUIREMENTS</p>

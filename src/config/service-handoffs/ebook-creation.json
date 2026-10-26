@@ -9,9 +9,7 @@
     "title": "EPUB Conversion & eBook Creation Services",
     "lead": "Reflowable and fixed-layout EPUB production for publishers, academic publishing organizations and digital-content teams.",
     "paragraphs": [
-      "EPUBTRANS provides eBook creation and EPUB conversion services to help publishers transform manuscripts, print-production files and existing content into digital publications.",
-      "Our services include reflowable and fixed-layout EPUB production, content structuring, navigation, styling, metadata preparation and related publishing-file workflows. Accessible EPUB and Read Aloud features can also be considered where included in the project scope.",
-      "Whether you are preparing a new eBook, converting an existing publication or updating digital publishing files, we can review your source materials and target requirements to define the appropriate production approach."
+      "Convert suitable manuscripts and publication files into reflowable or fixed-layout EPUB, with format, navigation and quality requirements agreed for the intended digital edition."
     ],
     "actions": [
       {
@@ -30,16 +28,8 @@
   },
   "sections": [
     {
-      "title": "EPUB Conversion Services for Digital Publishing",
+      "title": "Choosing and Producing the Right EPUB Format",
       "lead": [
-        {
-          "kind": "paragraph",
-          "text": "Preparing a publication for digital reading involves more than changing its file extension."
-        },
-        {
-          "kind": "paragraph",
-          "text": "An EPUB publication requires an appropriate content structure, navigation, styling, metadata and supporting assets. The production approach also depends on how readers are expected to use the content."
-        },
         {
           "kind": "paragraph",
           "text": "EPUBTRANS supports eBook creation and conversion for defined publishing requirements, including EPUB2 and EPUB3 outputs where applicable."
@@ -130,6 +120,42 @@
             {
               "kind": "paragraph",
               "text": "EPUB3 supports a range of modern digital publishing features, but individual features and reading-system requirements must be reviewed before they are included in a project."
+            }
+          ]
+        },
+        {
+          "title": "Choose Reflowable EPUB When:",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Text is the primary content.",
+                "Readers should be able to adjust text presentation.",
+                "The publication structure can adapt to different screen sizes.",
+                "A fixed page arrangement is not essential to understanding the content."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Consider Fixed-Layout EPUB When:",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Page design is central to the publication.",
+                "Text and illustrations have specific spatial relationships.",
+                "Visual composition needs to remain consistent.",
+                "The intended reading environment supports the required layout behavior."
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "For some projects, a source publication designed for print may need adjustments before it works effectively as a digital book."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We can review representative pages and discuss the suitable EPUB format before production begins."
             }
           ]
         }
@@ -236,54 +262,6 @@
         }
       ],
       "kind": "capabilities"
-    },
-    {
-      "title": "Choosing Between Reflowable & Fixed-Layout EPUB",
-      "lead": [
-        {
-          "kind": "paragraph",
-          "text": "The appropriate format depends on the content and the intended reading experience."
-        }
-      ],
-      "groups": [
-        {
-          "title": "Choose Reflowable EPUB When:",
-          "blocks": [
-            {
-              "kind": "list",
-              "items": [
-                "Text is the primary content.",
-                "Readers should be able to adjust text presentation.",
-                "The publication structure can adapt to different screen sizes.",
-                "A fixed page arrangement is not essential to understanding the content."
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Consider Fixed-Layout EPUB When:",
-          "blocks": [
-            {
-              "kind": "list",
-              "items": [
-                "Page design is central to the publication.",
-                "Text and illustrations have specific spatial relationships.",
-                "Visual composition needs to remain consistent.",
-                "The intended reading environment supports the required layout behavior."
-              ]
-            },
-            {
-              "kind": "paragraph",
-              "text": "For some projects, a source publication designed for print may need adjustments before it works effectively as a digital book."
-            },
-            {
-              "kind": "paragraph",
-              "text": "We can review representative pages and discuss the suitable EPUB format before production begins."
-            }
-          ]
-        }
-      ],
-      "kind": "narrative"
     },
     {
       "title": "Source Files We Can Assess for EPUB Conversion",
@@ -791,5 +769,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 198
+  "sourceCopyBlockCount": 198,
+  "showTransformation": false
 }

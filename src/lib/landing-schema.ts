@@ -43,6 +43,15 @@ export function validateLandingContent(
 export function validateDirectory(value: unknown): true | string {
   const result = validateLandingContent(value, defaults.directory)
   if (result !== true) return result
-  const ids = (value as ServicesLandingContent).categories.map((category) => category.anchorId)
-  return new Set(ids).size === ids.length || 'Category anchor IDs must be unique.'
+  const directory = value as ServicesLandingContent
+  const categoryIds = directory.categories.map((category) => category.anchorId)
+  const audienceIds = directory.audience.cards.map((card) => card.anchorId)
+  if (
+    audienceIds.length !== 2 ||
+    !audienceIds.includes('for-publishers') ||
+    !audienceIds.includes('for-localization-providers')
+  )
+    return 'Both named audience pathway anchors are required.'
+  const ids = [...categoryIds, ...audienceIds]
+  return new Set(ids).size === ids.length || 'Directory anchor IDs must be unique.'
 }

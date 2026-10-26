@@ -9,10 +9,7 @@
     "title": "Translation Services for Publishing & Digital Content",
     "lead": "Translation support for publishers, academic content teams, eLearning producers and organizations preparing multilingual publications and digital materials.",
     "paragraphs": [
-      "EPUBTRANS offers translation services for publishing and digital-content projects where written material needs to be prepared for readers, learners or business audiences in another language.",
-      "Our work in digital publishing and localization production provides a useful context for projects involving translated manuscripts, educational documents, training materials and content that must subsequently be typeset, converted or published.",
-      "Every translation assignment begins with an assessment of the source material, language pair, subject matter, target audience and intended use.",
-      "Translation production, linguistic review, terminology requirements and final file preparation are defined according to the agreed project scope and confirmed delivery capabilities."
+      "Project-scoped translation support for eligible publishing, learning and content-production materials, with languages, subject expertise and review method confirmed before acceptance."
     ],
     "actions": [
       {
@@ -35,19 +32,7 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "A translation project involves more than transferring words from one language into another."
-        },
-        {
-          "kind": "paragraph",
           "text": "The intended meaning, specialist terminology, audience expectations and use of the final material influence how the work should be specified and reviewed."
-        },
-        {
-          "kind": "paragraph",
-          "text": "For a publisher, the translated text may become part of a book, journal, reference publication or digital edition. For an eLearning team, it may be used in slides, onscreen instructions, assessments or narration scripts."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Translation projects can also involve content received in PDFs, editable documents, presentations or publishing files."
         },
         {
           "kind": "paragraph",
@@ -366,8 +351,13 @@
       "kind": "narrative"
     },
     {
-      "title": "Languages, Terminology and File Requirements",
-      "lead": [],
+      "title": "Language, Source Files and Project Requirements",
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Providing a clear translation brief helps establish the expected output and quality responsibilities."
+        }
+      ],
       "groups": [
         {
           "title": "Source and Target Languages",
@@ -452,19 +442,7 @@
               "text": "Structural validation, content integration and target-language testing should be separately defined where applicable."
             }
           ]
-        }
-      ],
-      "kind": "narrative"
-    },
-    {
-      "title": "Source Materials and Project Requirements",
-      "lead": [
-        {
-          "kind": "paragraph",
-          "text": "Providing a clear translation brief helps establish the expected output and quality responsibilities."
-        }
-      ],
-      "groups": [
+        },
         {
           "title": "What We Need",
           "blocks": [

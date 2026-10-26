@@ -9,9 +9,7 @@
     "title": "PDF-to-Word & Document Conversion Services",
     "lead": "PDF conversion, OCR and editable document preparation for publishers, localization service providers and translation agencies.",
     "paragraphs": [
-      "EPUBTRANS provides document and data conversion services to help organizations transform PDFs, scanned documents and other source materials into editable or structured files for further use.",
-      "Our services include PDF-to-Word conversion, OCR-assisted text extraction, document reconstruction, formatting cleanup and preparation of files for publishing, editing and localization workflows.",
-      "Whether you need to recreate a non-editable PDF, extract content from scanned pages or prepare documents for translation, we can review your source files and define an appropriate conversion approach."
+      "Convert PDFs, scans and other eligible documents into agreed editable or structured formats for publishing and localization workflows."
     ],
     "actions": [
       {
@@ -34,15 +32,7 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "Many publishing and localization projects begin with source documents that are difficult to edit or reuse."
-        },
-        {
-          "kind": "paragraph",
           "text": "A PDF may contain selectable text but lack usable formatting. A scanned document may contain only page images. Complex layouts can include columns, tables, graphics and text boxes that do not convert cleanly into editable files."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Document conversion helps prepare these materials for their next production stage."
         },
         {
           "kind": "paragraph",
@@ -223,10 +213,6 @@
         {
           "kind": "paragraph",
           "text": "Localization service providers and translation agencies often receive documents that are difficult to process in their existing translation workflows."
-        },
-        {
-          "kind": "paragraph",
-          "text": "For example, a project may begin with a PDF rather than the original editable Word or layout file. Scanned content may require OCR, while tables and text boxes may need to be reconstructed."
         },
         {
           "kind": "paragraph",
@@ -909,5 +895,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 224
+  "sourceCopyBlockCount": 224,
+  "showTransformation": false
 }

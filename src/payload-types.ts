@@ -3369,7 +3369,7 @@ export interface LandingPage {
     | boolean
     | null;
   /**
-   * Editable directory categories, cards, FAQs, guidance and SEO. Card status: active, pendingApproval or hidden. Pending approval cards use an enquiry link until scope is confirmed. sortOrder controls category and card order.
+   * Editable audience pathways, directory categories, cards, FAQs, guidance and SEO. Preserve the two pathway anchor IDs used by homepage links. Card status: active, pendingApproval or hidden. Pending approval cards use an enquiry link until scope is confirmed. sortOrder controls category and card order.
    */
   servicesContent:
     | {

@@ -9,9 +9,7 @@
     "title": "Multilingual Desktop Publishing (DTP) Services",
     "lead": "Post-translation layout, document formatting and multilingual production support for localization service providers, translation agencies and publishers.",
     "paragraphs": [
-      "EPUBTRANS provides desktop publishing (DTP) services to help organizations prepare, adapt and format documents for multilingual print and digital delivery.",
-      "Our services include multilingual DTP, post-translation layout adjustment, document formatting, PDF recreation and preparation of editable production files. We work with supplied content, reference layouts and project specifications to assess the appropriate formatting and production requirements.",
-      "Whether you need to prepare source files for translation, format translated documents or recreate complex layouts, EPUBTRANS can support defined production activities within your existing workflow."
+      "Multilingual desktop publishing and post-translation layout adaptation for LSPs, translation agencies and publishers working with approved target-language content."
     ],
     "actions": [
       {
@@ -39,14 +37,6 @@
         {
           "kind": "paragraph",
           "text": "Text may expand or contract, fonts may need to change, and certain languages require different approaches to typography, alignment and reading direction."
-        },
-        {
-          "kind": "paragraph",
-          "text": "A document designed for one language may therefore need further layout work before the translated version is suitable for its intended use."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Multilingual desktop publishing addresses these presentation requirements."
         },
         {
           "kind": "paragraph",
@@ -113,7 +103,7 @@
       "lead": [],
       "groups": [
         {
-          "title": "Multilingual Layout Adaptation",
+          "title": "Multilingual Layout Adaptation & Text Expansion",
           "blocks": [
             {
               "kind": "paragraph",
@@ -122,6 +112,18 @@
             {
               "kind": "paragraph",
               "text": "This may involve adjusting columns, text frames, spacing, page breaks and other layout elements."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Adjusting document layouts when translated text no longer fits the original text areas."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the document, this may involve changes to text flow, frame dimensions, spacing, pagination or other formatting properties."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Major redesigns or content changes require separate approval."
             }
           ]
         },
@@ -152,23 +154,6 @@
             {
               "kind": "paragraph",
               "text": "Complex elements are assessed against the original design and the target output requirements."
-            }
-          ]
-        },
-        {
-          "title": "Text Expansion & Layout Corrections",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "Adjusting document layouts when translated text no longer fits the original text areas."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Depending on the document, this may involve changes to text flow, frame dimensions, spacing, pagination or other formatting properties."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Major redesigns or content changes require separate approval."
             }
           ]
         },
@@ -955,5 +940,6 @@
       "kind": "cta"
     }
   ],
-  "sourceCopyBlockCount": 234
+  "sourceCopyBlockCount": 234,
+  "showTransformation": false
 }

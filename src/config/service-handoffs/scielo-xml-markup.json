@@ -11,9 +11,7 @@
     "title": "SciELO XML Markup Services for Scholarly Journals",
     "lead": "SciELO-Certified XML Article Tagging Services",
     "paragraphs": [
-      "EPUBTRANS is a SciELO-certified XML article tagging service provider, officially listed by SciELO for services involving the SciELO Publishing Schema (SciELO PS).",
-      "We support academic publishers, scholarly journal publishers and journal production teams with structured XML conversion, article metadata, references, figures, tables and other publication elements.",
-      "Our production workflow is organized around the applicable SciELO specifications, source materials and agreed validation requirements."
+      "SciELO-specific scholarly article markup prepared against the agreed SciELO Publishing Schema version and the journal or collection’s technical requirements."
     ],
     "actions": [
       {
@@ -67,10 +65,6 @@
         {
           "kind": "paragraph",
           "text": "Titles, authors, affiliations, abstracts, keywords, references, tables, figures and other article components may need to be identified using appropriate XML elements."
-        },
-        {
-          "kind": "paragraph",
-          "text": "SciELO XML markup supports this structured representation of scholarly content."
         }
       ],
       "groups": [
@@ -389,15 +383,7 @@
           "blocks": [
             {
               "kind": "paragraph",
-              "text": "Relevant structural, technical and content checks are performed according to the approved project scope."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Where commissioned, this may include validation with the applicable schema and specified SciELO-related tools."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Any issues identified during validation are reviewed and addressed according to the agreed responsibilities and correction process."
+              "text": "Perform the commissioned validation and content checks, then resolve identified issues through the agreed correction process."
             }
           ]
         },
