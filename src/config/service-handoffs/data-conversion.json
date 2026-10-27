@@ -28,8 +28,12 @@
   },
   "sections": [
     {
-      "title": "Document Conversion for Publishing & Localization Workflows",
+      "title": "PDF-to-Word Conversion & OCR",
       "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Convert eligible PDFs and scanned pages into editable Word files or extracted text for publishing, translation and content reuse. Source quality, tables, columns, equations and recognition needs determine how much cleanup or manual reconstruction is required."
+        },
         {
           "kind": "paragraph",
           "text": "A PDF may contain selectable text but lack usable formatting. A scanned document may contain only page images. Complex layouts can include columns, tables, graphics and text boxes that do not convert cleanly into editable files."
@@ -93,30 +97,10 @@
               "text": "OCR recognition alone does not guarantee complete or correct text extraction."
             }
           ]
-        },
-        {
-          "title": "Document Recreation & Reconstruction",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "When the original editable source file is unavailable, document elements may need to be recreated from a PDF or other reference."
-            },
-            {
-              "kind": "paragraph",
-              "text": "The work can involve rebuilding text frames, headings, tables, illustrations, page numbering and other layout features."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Depending on the requirements and technical feasibility, reconstructed content may be prepared in Word, PowerPoint, InDesign or another agreed target format."
-            },
-            {
-              "kind": "paragraph",
-              "text": "The feasibility of recreating the original design depends on source quality, fonts, graphics and the limitations of the selected output format."
-            }
-          ]
         }
       ],
-      "kind": "narrative"
+      "kind": "narrative",
+      "anchorId": "pdf-to-word-ocr"
     },
     {
       "title": "Our Document Conversion Capabilities",
@@ -303,8 +287,16 @@
       "kind": "narrative"
     },
     {
-      "title": "Editable Content vs Layout Preservation",
+      "title": "PDF Recreation & Editable Document Preparation",
       "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Recreate document layouts in an agreed editable format when the original source file is unavailable or unsuitable. Tell us whether you need working content for translation, close visual similarity to a reference PDF, or a combination of both; those are distinct production requirements."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Choose PDF-to-Word conversion and OCR when extracting or editing content is the priority. Choose document recreation when maintaining a closely comparable page layout and rebuilding editable elements is important. A single project may require both."
+        },
         {
           "kind": "paragraph",
           "text": "Not every conversion project has the same intended outcome."
@@ -315,6 +307,27 @@
         }
       ],
       "groups": [
+        {
+          "title": "Document Recreation & Reconstruction",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "When the original editable source file is unavailable, document elements may need to be recreated from a PDF or other reference."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work can involve rebuilding text frames, headings, tables, illustrations, page numbering and other layout features."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Depending on the requirements and technical feasibility, reconstructed content may be prepared in Word, PowerPoint, InDesign or another agreed target format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The feasibility of recreating the original design depends on source quality, fonts, graphics and the limitations of the selected output format."
+            }
+          ]
+        },
         {
           "title": "Editable Content",
           "blocks": [
@@ -359,7 +372,8 @@
           ]
         }
       ],
-      "kind": "narrative"
+      "kind": "narrative",
+      "anchorId": "pdf-recreation"
     },
     {
       "title": "Source Files & Materials We Can Assess",
@@ -720,6 +734,16 @@
             }
           ],
           "href": "/ebook-creation-services"
+        },
+        {
+          "title": "JATS XML Conversion",
+          "href": "/xml-conversion-services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "For structured journal article XML rather than editable Word files, review the target tag set, article metadata and delivery requirements with our XML conversion team."
+            }
+          ]
         },
         {
           "title": "SciELO XML Markup Services",

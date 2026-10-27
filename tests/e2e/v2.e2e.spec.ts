@@ -79,7 +79,7 @@ test('About page publishes the required canonical metadata and preserves the com
 test('contact form validates and confirms only accepted general enquiries', async ({ page }) => {
   await page.goto('/contact-us')
   await expect(page).toHaveTitle('Contact EPUBTRANS | Publishing & Content Services')
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Contact EPUBTRANS')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Contact EPUBTRANS About Publishing & Localization Projects')
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
   let attempts = 0
   await page.route('**/api/enquiry', async (route) => {
@@ -111,7 +111,7 @@ test('quote flow validates, preserves details and confirms only successful serve
   await page.goto('/get-a-quote')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()
-  await page.getByLabel('Service Required *').selectOption('publishing_editorial')
+  await page.locator('input[name="service_required"][value="publishing_editorial"]').check()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()

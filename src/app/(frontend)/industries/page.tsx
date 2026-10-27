@@ -8,9 +8,9 @@ import styles from './industries.module.css'
 export const dynamic = 'force-dynamic'
 
 export const metadata = pageMetadata({
-  title: 'Industries',
+  title: { absolute: 'Industries We Support | Publishing & Localization | EPUBTRANS' },
   description:
-    'Publishing, localization and accessible digital content for specialized industries.',
+    'Explore EPUBTRANS services for publishing, education, technology, business and media teams, including digital content production, localization and accessibility.',
   alternates: { canonical: '/industries' },
 })
 
@@ -204,10 +204,11 @@ export default function IndustriesPage() {
         <div className={`et-container ${styles.heroInner}`}>
           <div className={styles.heroCopy}>
             <p className="et-label">EPUBTRANS / INDUSTRIES</p>
-            <h1 id="industries-title">Content support shaped around your industry.</h1>
+            <h1 id="industries-title">Digital Publishing & Localization Services by Industry</h1>
             <p className={styles.heroDescription}>
-              Publishing, localization and accessible digital content for specialized industries.
-              Explore the areas we support and the services that may fit your project.
+              Explore how EPUBTRANS supports publishing, education, technology, business and media
+              teams with content production, conversion, multilingual formatting and
+              accessibility-related services.
             </p>
             <div className={styles.heroActions}>
               <ArrowLink href="#core-industries">Explore industries</ArrowLink>
@@ -327,7 +328,7 @@ export default function IndustriesPage() {
           <div className={styles.sectionHeading}>
             <div>
               <p className="et-label">FROM BRIEF TO DELIVERY</p>
-              <h2 id="industry-project-title">A clear process for connected content.</h2>
+              <h2 id="industry-project-title">How We Assess Industry-Specific Content Projects</h2>
             </div>
             <p>
               Industry context informs the brief. Your source materials and intended outputs
@@ -356,7 +357,9 @@ export default function IndustriesPage() {
       >
         <div>
           <p className="et-label">PLANNING YOUR PROJECT</p>
-          <h2 id="industry-questions-title">Practical answers before you begin.</h2>
+          <h2 id="industry-questions-title">
+            Frequently Asked Questions About Project Requirements
+          </h2>
           <p>
             Start with your materials, audience and delivery requirements. We can then discuss the
             services relevant to your brief.

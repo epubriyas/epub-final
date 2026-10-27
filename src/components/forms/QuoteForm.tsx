@@ -217,7 +217,7 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
         </ol>
         <div className="qp-sidebar-note">
           <BriefcaseBusiness size={20} aria-hidden="true" />
-          <h3>Built around your requirements.</h3>
+          <h3>Share Your Project Requirements</h3>
           <p>Source formats, production scope and delivery expectations, in one clear brief.</p>
           <Link href="/contact-us">
             Prefer a conversation? <ArrowRight size={14} aria-hidden="true" />
@@ -238,7 +238,7 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
         <p className="et-label">{steps[step]}</p>
         <h2 ref={heading} tabIndex={-1}>
           {steps[step] === 'Service'
-            ? 'What do you have in mind?'
+            ? 'Choose the Service You Need'
             : steps[step] === 'Project Requirements'
               ? 'Project Requirements'
               : steps[step] === 'Contact Details'

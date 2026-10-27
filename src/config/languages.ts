@@ -39,8 +39,10 @@ export const languages: SiteLanguage[] = [
 export type LanguageCode = string
 export const getLanguage = (code: string) => languages.find((language) => language.code === code)
 export function stripLanguage(path: string) {
-  const parts = path.split('/')
-  return getLanguage(parts[1]) ? '/' + parts.slice(2).join('/') : path
+  const prefix = path.match(/^\/([^/?#]+)(?=\/|[?#]|$)/)?.[1]
+  if (!prefix || !getLanguage(prefix)) return path
+  const remaining = path.slice(prefix.length + 1)
+  return remaining.startsWith('/') ? remaining : `/${remaining}`
 }
 export function languagePath(path: string, code: string): string {
   if (
@@ -49,6 +51,11 @@ export function languagePath(path: string, code: string): string {
     /^\/(api|admin|next|_next)(\/|$)/.test(path)
   )
     return path
-  const clean = stripLanguage(path)
-  return code === 'en' ? clean : `/${code}${clean === '/' ? '' : clean}`
+  const split = path.search(/[?#]/)
+  const pathname = split < 0 ? path : path.slice(0, split)
+  const suffix = split < 0 ? '' : path.slice(split)
+  const clean = stripLanguage(pathname)
+  if (/^\/(api|admin|next|_next)(\/|$)/.test(clean)) return clean + suffix
+  if (!getLanguage(code) || code === 'en') return clean + suffix
+  return `/${code}${clean === '/' ? '' : clean}${suffix}`
 }

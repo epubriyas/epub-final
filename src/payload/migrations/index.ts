@@ -8,8 +8,10 @@ import * as migration_20261013_105445_about_page_mission_vision from './20261013
 import * as migration_20261013_165500_contact_quote_forms from './20261013_165500_contact_quote_forms'
 import * as migration_20261014_074433_landing_pages from './20261014_074433_landing_pages'
 import * as migration_20261026_120000_audience_pathways from './20261026_120000_audience_pathways'
+import * as migration_20261027_120000_conversion_entry_links from './20261027_120000_conversion_entry_links'
 
 export const migrations = [
+  // Entries below remain in chronological order.
   {
     up: migration_20261007_103004_baseline.up,
     down: migration_20261007_103004_baseline.down,
@@ -59,5 +61,10 @@ export const migrations = [
     up: migration_20261026_120000_audience_pathways.up,
     down: migration_20261026_120000_audience_pathways.down,
     name: '20261026_120000_audience_pathways',
+  },
+  {
+    up: migration_20261027_120000_conversion_entry_links.up,
+    down: migration_20261027_120000_conversion_entry_links.down,
+    name: '20261027_120000_conversion_entry_links',
   },
 ]

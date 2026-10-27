@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
 
-test('publisher and localization CTAs reach distinct, usable service pathways', async ({ page }) => {
+test('publisher and localization CTAs reach distinct, usable service pathways', async ({
+  page,
+}) => {
   test.setTimeout(120000)
   for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: 900 })
@@ -21,7 +23,9 @@ test('publisher and localization CTAs reach distinct, usable service pathways', 
       const top = await target.evaluate((element) => element.getBoundingClientRect().top)
       expect(top).toBeGreaterThanOrEqual(width <= 600 ? 75 : 88)
       expect(top).toBeLessThan(180)
-      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+        true,
+      )
       await page.goBack({ waitUntil: 'domcontentloaded' })
       await expect(page).toHaveURL(/\/$/)
     }
@@ -33,7 +37,9 @@ test('publisher and localization CTAs reach distinct, usable service pathways', 
   await expect(page.locator('.sp-catalog-link')).toHaveCount(17)
   await expect(page.locator('nav[aria-label="Service categories"] a')).toHaveCount(6)
   await expect(page.locator('#for-publishers a[href="/xml-conversion-services"]')).toBeVisible()
-  await expect(page.locator('#for-localization-providers a[href="/data-conversion-services"]')).toBeVisible()
+  await expect(
+    page.locator('#for-localization-providers a[href="/data-conversion-services#pdf-recreation"]'),
+  ).toBeVisible()
   await expect(page.locator('#for-publishers a[href="/get-a-quote"]')).toBeVisible()
   await expect(page.locator('#for-localization-providers a[href="/get-a-quote"]')).toBeVisible()
 })
@@ -42,15 +48,11 @@ test('localized audience links retain their route, fragment and destinations', a
   test.setTimeout(60000)
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/ta/', { waitUntil: 'domcontentloaded' })
-  await expect(
-    page.locator('#possibilities a[href="/ta/services#for-publishers"]'),
-  ).toBeVisible()
+  await expect(page.locator('#possibilities a[href="/ta/services#for-publishers"]')).toBeVisible()
   await page.locator('#possibilities a[href="/ta/services#for-localization-providers"]').click()
   await expect(page).toHaveURL(/\/ta\/services#for-localization-providers$/)
   await expect(page.locator('#for-localization-providers h3')).toBeInViewport()
-  await expect(
-    page.locator('#for-localization-providers a[href="/ta/get-a-quote"]'),
-  ).toBeVisible()
+  await expect(page.locator('#for-localization-providers a[href="/ta/get-a-quote"]')).toBeVisible()
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
 })
 

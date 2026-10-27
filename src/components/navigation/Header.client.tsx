@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from '@/components/i18n/LocalizedLink'
 import { ArrowRight, ChevronDown, Globe2, Menu, X } from 'lucide-react'
@@ -8,22 +8,46 @@ import { Logo } from './Logo'
 import { ThemeToggle } from './ThemeToggle'
 import { LanguageSelector } from '@/components/i18n/LanguageSelector'
 import { useSiteLocale } from '@/components/i18n/LocaleProvider'
-import { stripLanguage } from '@/config/languages'
+import { getLanguage, stripLanguage } from '@/config/languages'
 import handoffStyles from './header-handoff.module.css'
 
 export function HeaderClient({ navigation }: { navigation: NavigationSection[] }) {
   const pathname = usePathname()
-  return <HeaderState key={pathname} pathname={stripLanguage(pathname)} navigation={navigation} />
+  const restoreLanguageFocus = useRef(false)
+  useEffect(() => {
+    if (!restoreLanguageFocus.current) return
+    restoreLanguageFocus.current = false
+    document
+      .querySelector<HTMLButtonElement>(
+        window.matchMedia('(min-width: 1200px)').matches
+          ? '.et-header-actions [aria-controls="language-options"]'
+          : '.et-mobile-language-toggle',
+      )
+      ?.focus({ preventScroll: true })
+  }, [pathname])
+  return (
+    <HeaderState
+      key={pathname}
+      pathname={stripLanguage(pathname)}
+      navigation={navigation}
+      onLanguageSelected={() => {
+        restoreLanguageFocus.current = true
+      }}
+    />
+  )
 }
 function HeaderState({
   pathname,
   navigation,
+  onLanguageSelected,
 }: {
   pathname: string
   navigation: NavigationSection[]
+  onLanguageSelected: () => void
 }) {
   const [open, setOpen] = useState<number | null>(null)
   const locale = useSiteLocale()
+  const languageDescriptionId = useId()
   const [scrolled, setScrolled] = useState(false)
   const header = useRef<HTMLElement>(null)
   const dialog = useRef<HTMLDialogElement>(null)
@@ -121,6 +145,7 @@ function HeaderState({
   return (
     <header
       ref={header}
+      data-locale={locale}
       className={`et-header ${handoffStyles.header}`}
       data-scrolled={scrolled}
       onBlur={(event) => {
@@ -205,6 +230,22 @@ function HeaderState({
             className="et-nav-link"
             aria-expanded={open === 99}
             aria-controls="language-options"
+            aria-label="Choose website language"
+            aria-describedby={languageDescriptionId}
+            data-no-translate
+            lang="en"
+            dir="ltr"
+            onKeyDown={(event) => {
+              if (event.key !== 'ArrowDown') return
+              event.preventDefault()
+              trigger.current = event.currentTarget
+              setOpen(99)
+              requestAnimationFrame(() =>
+                document
+                  .querySelector<HTMLButtonElement>('#language-options button[aria-pressed="true"]')
+                  ?.focus(),
+              )
+            }}
             onPointerEnter={(event) => {
               if (!canHover(event.pointerType)) return
               cancelHoverClose()
@@ -239,6 +280,10 @@ function HeaderState({
           ref={languageButton}
           className="et-mobile-language-toggle"
           aria-label="Choose website language"
+          aria-describedby={languageDescriptionId}
+          data-no-translate
+          lang="en"
+          dir="ltr"
           aria-haspopup="dialog"
           onClick={() => {
             languageDialog.current?.showModal()
@@ -262,6 +307,9 @@ function HeaderState({
           <Menu size={25} />
         </button>
       </div>
+      <span id={languageDescriptionId} className="sr-only" data-no-translate lang="en">
+        Current selection: {getLanguage(locale)?.name || 'English'}
+      </span>
       {open !== null && (
         <button
           aria-label="Close navigation"
@@ -345,7 +393,13 @@ function HeaderState({
             if (canHover(event.pointerType)) scheduleHoverClose()
           }}
         >
-          <LanguageSelector onSelect={() => setOpen(null)} />
+          <LanguageSelector
+            onSelect={(changed) => {
+              setOpen(null)
+              trigger.current?.focus()
+              if (changed) onLanguageSelected()
+            }}
+          />
         </div>
       )}
       <dialog
@@ -440,7 +494,12 @@ function HeaderState({
           </button>
         </div>
         <div className="et-mobile-language-body">
-          <LanguageSelector onSelect={closeLanguage} />
+          <LanguageSelector
+            onSelect={(changed) => {
+              closeLanguage()
+              if (changed) onLanguageSelected()
+            }}
+          />
         </div>
       </dialog>
     </header>

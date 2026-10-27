@@ -1,0 +1,163 @@
+[
+  {
+    "locale": "ar",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "as",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "bn",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "de",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "en",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "Existing English source; prior P1 editorial review still required",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "es",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "fr",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "gu",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "hi",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "it",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "ja",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "kn",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "ko",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "ml",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "mr",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "or",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "pa",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "pt",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "ru",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "ta",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "te",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "ur",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  },
+  {
+    "locale": "zh-CN",
+    "approvedLocalizedPages": 0,
+    "reviewer": "Not supplied",
+    "status": "BLOCKED",
+    "requiredReview": "Language quality, service terminology, caveats, metadata, forms, accessible names and script/RTL layout"
+  }
+]

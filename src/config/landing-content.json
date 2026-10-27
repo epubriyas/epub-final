@@ -322,7 +322,7 @@
             "paragraphs": [
               "Conversion of documents between agreed formats, including PDF-to-Word workflows, OCR-assisted extraction and structured or editable-file preparation where applicable."
             ],
-            "href": "/data-conversion-services",
+            "href": "/data-conversion-services#pdf-to-word-ocr",
             "linkLabel": "Explore Data Conversion Services",
             "status": "active",
             "sortOrder": 0
@@ -333,7 +333,7 @@
               "Reconstruction of non-editable documents or complex layouts into suitable working formats for publishing or localization production.",
               "Output editability and layout fidelity depend on the source files, available assets and agreed specifications."
             ],
-            "href": "/data-conversion-services",
+            "href": "/data-conversion-services#pdf-recreation",
             "linkLabel": "Discuss Document Conversion Requirements",
             "status": "active",
             "sortOrder": 1
@@ -468,7 +468,7 @@
           ],
           "services": [
             { "label": "Multilingual DTP", "href": "/desktop-publishing-services", "featured": true },
-            { "label": "PDF Recreation & Document Preparation", "href": "/data-conversion-services", "featured": true },
+            { "label": "PDF Recreation & Document Preparation", "href": "/data-conversion-services#pdf-recreation", "featured": true },
             { "label": "eLearning Localization", "href": "/elearning-localization-services", "featured": true },
             { "label": "Subtitling", "href": "/subtitling-services", "featured": false },
             { "label": "Transcription", "href": "/transcription-services", "featured": false },

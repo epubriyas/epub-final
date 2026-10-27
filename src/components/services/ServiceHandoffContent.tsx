@@ -62,7 +62,13 @@ function Heading({
   return (
     <div className="sp-section-heading">
       <p className="sp-eyebrow">{eyebrow}</p>
-      <h2>{section.title}</h2>
+      <h2
+        id={section.anchorId}
+        tabIndex={section.anchorId ? -1 : undefined}
+        style={section.anchorId ? { scrollMarginTop: '112px' } : undefined}
+      >
+        {section.title}
+      </h2>
       {showLead && (
         <div className="sp-richtext">
           <Blocks blocks={section.lead} />

@@ -32,3 +32,17 @@ it('returns successful translations with partial status while excluding private 
   })
   expect(translate).toHaveBeenCalledWith(['Your content.', 'A wider world.'], 'ta')
 })
+
+it('reports omitted non-catalogue strings as partial even when allowed strings succeed', async () => {
+  vi.stubEnv('NEXT_PUBLIC_SERVER_URL', 'http://localhost:3000')
+  translate.mockResolvedValue(['உங்கள் உள்ளடக்கம்.'])
+  const response = await POST(
+    new NextRequest('http://localhost:3000/api/translate', {
+      method: 'POST',
+      headers: { origin: 'http://localhost:3000', 'content-type': 'application/json' },
+      body: JSON.stringify({ locale: 'ta', texts: ['Your content.', 'Not in public catalogue'] }),
+    }),
+  )
+  expect((await response.json()).partial).toBe(true)
+  expect(translate).toHaveBeenCalledWith(['Your content.'], 'ta')
+})

@@ -473,12 +473,11 @@
           "title": "JATS XML",
           "blocks": [
             {
-              "kind": "paragraph",
-              "text": "JATS provides standardized XML structures for scholarly journal articles and related publication information."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Different publishers and repositories may specify different JATS tag sets, versions or implementation rules."
+              "kind": "linked-paragraph",
+              "before": "For broader scholarly XML conversion that does not require SciELO-specific rules, see our ",
+              "text": "JATS XML conversion services",
+              "href": "/xml-conversion-services",
+              "after": "."
             }
           ]
         },

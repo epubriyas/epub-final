@@ -354,32 +354,11 @@
           "title": "SciELO XML Markup",
           "blocks": [
             {
-              "kind": "paragraph",
-              "text": "SciELO Publishing Schema is based on JATS and introduces additional requirements for SciELO-related publishing workflows."
-            },
-            {
-              "kind": "paragraph",
-              "text": "EPUBTRANS is listed by SciELO among companies certified for XML article text tagging services according to the SciELO Publishing Schema."
-            },
-            {
-              "kind": "paragraph",
-              "text": "This certification is specific to SciELO XML article tagging; it is not a blanket certification of all JATS versions, XML formats or repository submissions."
-            },
-            {
-              "kind": "paragraph",
-              "text": "For work governed by SciELO requirements, please refer to our dedicated SciELO XML Markup Services page."
-            },
-            {
-              "kind": "link",
-              "text": "Explore SciELO XML Markup Services",
+              "kind": "linked-paragraph",
+              "before": "For article markup that must follow the SciELO Publishing Schema, see our ",
+              "text": "SciELO XML markup services",
               "href": "/scielo-xml-markup-services",
-              "primary": false
-            },
-            {
-              "kind": "link",
-              "text": "Verify Our SciELO Certification",
-              "href": "https://www.scielo.org/en/about-scielo/partnerships/companies-certified-for-xml-article-tagging-services/",
-              "primary": false
+              "after": ". Schema version and collection instructions determine the required workflow."
             }
           ]
         },
@@ -830,7 +809,7 @@
           "blocks": [
             {
               "kind": "paragraph",
-              "text": "Specialist XML article text tagging according to SciELO Publishing Schema, supported by EPUBTRANS's official listing as a SciELO-certified provider."
+              "text": "SciELO-specific article markup follows the agreed Publishing Schema version and collection requirements; general JATS conversion has a separate specification."
             }
           ],
           "href": "/scielo-xml-markup-services"

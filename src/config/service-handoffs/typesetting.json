@@ -465,6 +465,16 @@
             }
           ],
           "href": "/graphic-design-image-services"
+        },
+        {
+          "title": "Multilingual DTP for Localization Teams",
+          "href": "/desktop-publishing-services",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "For layout adaptation of translated files, explore multilingual DTP. Book and journal typesetting focuses on original publisher page composition and publication proofs."
+            }
+          ]
         }
       ],
       "kind": "related"

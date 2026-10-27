@@ -115,6 +115,7 @@
   background: #12383a;
 }
 .sp-text-link {
+  color: var(--link-primary);
   display: inline-flex;
   align-items: center;
   gap: 12px;

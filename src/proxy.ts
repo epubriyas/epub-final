@@ -6,7 +6,6 @@ export function proxy(request: NextRequest) {
   const original = request.nextUrl.pathname.replace(/\/$/, '') || '/'
   const parts = original.split('/'),
     language = getLanguage(parts[1])
-  const preferred = getLanguage(request.cookies.get('epubtrans-language')?.value || 'en')
   const locale = language?.code || 'en'
   const pathname = language ? '/' + parts.slice(2).join('/') : original
   if (language && /^\/(api|admin|next|_next)(\/|$)/.test(pathname))
@@ -40,17 +39,15 @@ export function proxy(request: NextRequest) {
     })
     return response
   }
-  if (original === '/' && !language && preferred && preferred.code !== 'en') {
-    const url = request.nextUrl.clone()
-    url.pathname = languagePath('/', preferred.code)
-    return NextResponse.redirect(url, 307)
-  }
   const headers = new Headers(request.headers)
   headers.set('x-epubtrans-language', locale)
   if (language) {
     const url = request.nextUrl.clone()
     url.pathname = pathname
-    return NextResponse.rewrite(url, { request: { headers } })
+    const response = NextResponse.rewrite(url, { request: { headers } })
+    // These are browser reading previews, not approved translated publications.
+    response.headers.set('X-Robots-Tag', 'noindex, follow')
+    return response
   }
   return NextResponse.next({ request: { headers } })
 }

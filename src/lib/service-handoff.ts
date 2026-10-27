@@ -37,6 +37,7 @@ export function limitWorkflowToFour<T>(
 }
 
 export interface HandoffSection {
+  anchorId?: string
   title: string
   kind: 'narrative' | 'capabilities' | 'workflow' | 'quality' | 'scope' | 'related' | 'faq' | 'cta'
   lead: HandoffBlock[]

@@ -15,7 +15,8 @@ html.lenis body {
 
 @media (prefers-reduced-motion: no-preference) {
   html:not(.lenis) {
-    scroll-behavior: smooth;
+    /* A native focus scroll must finish before a route's fragment scroll starts. */
+    scroll-behavior: auto;
   }
   .et-site :is(.et-button, .wp-button) {
     transition:

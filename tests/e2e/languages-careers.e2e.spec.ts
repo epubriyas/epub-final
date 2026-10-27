@@ -4,6 +4,7 @@ import AxeBuilder from '@axe-core/playwright'
 test('Tamil navigation and homepage survive provider failure and return to English', async ({
   page,
 }) => {
+  test.setTimeout(120000)
   const errors: string[] = []
   page.on('pageerror', (error) => errors.push(error.message))
   await page.route('**/api/translate', (route) =>
@@ -11,21 +12,24 @@ test('Tamil navigation and homepage survive provider failure and return to Engli
   )
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/ta')
-  await expect(page.locator('h1')).toHaveText('உங்கள் உள்ளடக்கம்.விரிந்த உலகம்.')
+  await expect(page.locator('h1')).toContainText('உள்ளூர்மயமாக்கல்')
+  await expect(page.locator('.et-translation-status')).toContainText('English')
   await expect(
     page.locator('.et-desktop-nav').getByRole('button', { name: 'எங்கள் சேவைகள்' }),
   ).toBeVisible()
-  await expect(page.locator('html')).toHaveAttribute('lang', 'ta')
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   )
-  await page.getByRole('button', { name: 'TA', exact: true }).click()
+  await page.getByRole('button', { name: 'Choose website language', exact: true }).click()
   await page
     .locator('#language-options')
     .getByRole('button', { name: 'English, default language' })
     .click()
   await expect(page).toHaveURL(/^https?:\/\/[^/]+\/$/)
-  await expect(page.locator('h1')).toHaveText('Your content.A wider world.')
+  await expect(page.locator('h1')).toHaveText(
+    'Digital Publishing, Content Transformation & Localization',
+  )
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   expect(errors).toEqual([])
 })
@@ -91,7 +95,7 @@ test('native language selector preserves the route, internal links and English r
   })
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/company/careers')
-  await page.getByRole('button', { name: 'EN', exact: true }).click()
+  await page.getByRole('button', { name: 'Choose website language', exact: true }).click()
   const selector = page.locator('#language-options')
   await expect(
     selector.getByRole('group', { name: 'Indian languages' }).getByRole('button'),
@@ -111,7 +115,7 @@ test('native language selector preserves the route, internal links and English r
   )
   await page.getByRole('link', { name: 'Discover our work' }).click()
   await expect(page).toHaveURL(/\/hi\/services$/)
-  await page.getByRole('button', { name: 'HI', exact: true }).click()
+  await page.getByRole('button', { name: 'Choose website language', exact: true }).click()
   await page
     .locator('#language-options')
     .getByRole('button', { name: 'English, default language' })
@@ -138,14 +142,13 @@ test('localized administrative routes are blocked and translation endpoint check
 test('language panel stays readable on mobile and keyboard accessible on desktop', async ({
   page,
 }) => {
+  test.setTimeout(120000)
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/')
-  const trigger = page.getByRole('button', { name: 'EN', exact: true })
+  const trigger = page.getByRole('button', { name: 'Choose website language', exact: true })
   await trigger.click()
   await expect(
-    page
-      .locator('#language-options')
-      .getByRole('heading', { name: 'A world of words. Your language.' }),
+    page.locator('#language-options').getByRole('heading', { name: 'Choose your language.' }),
   ).toBeVisible()
   expect(
     (

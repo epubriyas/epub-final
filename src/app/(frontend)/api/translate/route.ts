@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       ),
     )
     return Response.json(
-      { translations: translated, partial: values.some((value) => value === undefined) },
+      { translations: translated, partial: texts.some((text) => !translated[text]) },
       { headers: { 'Cache-Control': 'no-store' } },
     )
   } catch {

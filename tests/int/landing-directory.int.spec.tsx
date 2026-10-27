@@ -79,7 +79,7 @@ describe('document services directory', () => {
         .getByRole('heading', { name: 'PDF Recreation & Document Preparation' })
         .closest('a')
         ?.getAttribute('href'),
-    ).toBe('/data-conversion-services')
+    ).toBe('/data-conversion-services#pdf-recreation')
     const summary = screen.getByText(content.directory.faq.items[0].question)
     summary.focus()
     expect(document.activeElement).toBe(summary)
@@ -102,15 +102,29 @@ describe('document services directory', () => {
     const providers = container.querySelector('#for-localization-providers') as HTMLElement
     expect(publishers).toBeTruthy()
     expect(providers).toBeTruthy()
-    expect(container.querySelectorAll('#for-publishers, #for-localization-providers')).toHaveLength(2)
-    expect(publishers.compareDocumentPosition(container.querySelector('#service-catalog')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
-    expect(providers.compareDocumentPosition(container.querySelector('#service-catalog')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    expect(container.querySelectorAll('#for-publishers, #for-localization-providers')).toHaveLength(
+      2,
+    )
+    expect(
+      publishers.compareDocumentPosition(container.querySelector('#service-catalog')!) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy()
+    expect(
+      providers.compareDocumentPosition(container.querySelector('#service-catalog')!) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy()
     expect(publishers.querySelector('a[href="/xml-conversion-services"]')).toBeTruthy()
     expect(publishers.querySelector('a[href="/ebook-creation-services"]')).toBeTruthy()
     expect(providers.querySelector('a[href="/desktop-publishing-services"]')).toBeTruthy()
-    expect(providers.querySelector('a[href="/data-conversion-services"]')).toBeTruthy()
-    expect(publishers.querySelector('a[href="/get-a-quote"]')?.textContent).toContain('Discuss a Publishing Project')
-    expect(providers.querySelector('a[href="/get-a-quote"]')?.textContent).toContain('Discuss Localization Production')
+    expect(
+      providers.querySelector('a[href="/data-conversion-services#pdf-recreation"]'),
+    ).toBeTruthy()
+    expect(publishers.querySelector('a[href="/get-a-quote"]')?.textContent).toContain(
+      'Discuss a Publishing Project',
+    )
+    expect(providers.querySelector('a[href="/get-a-quote"]')?.textContent).toContain(
+      'Discuss Localization Production',
+    )
     expect(container.querySelectorAll('.sp-catalog-link')).toHaveLength(17)
     expect(screen.queryByText('Production Support for Different Teams')).toBeNull()
   })

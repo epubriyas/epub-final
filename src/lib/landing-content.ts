@@ -1,6 +1,7 @@
 import { cache } from 'react'
 import defaults from '@/config/landing-content.json'
 import { contentPayload } from '@/lib/content'
+import { upgradeConversionDirectoryLinks } from './conversion-directory-links'
 import {
   validateLandingContent,
   validateDirectory,
@@ -52,9 +53,10 @@ export const getLandingContent = cache(async () => {
         ? (content.homeContent as HomeLandingContent)
         : defaults.home,
     ),
-    directory:
+    directory: upgradeConversionDirectoryLinks(
       validateDirectory(directoryContent) === true
         ? (directoryContent as ServicesLandingContent)
         : defaults.directory,
+    ),
   }
 })

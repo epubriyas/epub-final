@@ -1,14 +1,31 @@
 'use client'
-import { createContext, useContext, useEffect, useState, useSyncExternalStore } from 'react'
-import { usePathname } from 'next/navigation'
-import { getLanguage, stripLanguage } from '@/config/languages'
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import { getLanguage, languagePath, stripLanguage } from '@/config/languages'
 import NextLink from 'next/link'
 import { fixedTranslation } from '@/lib/i18n/fixed-translations'
+import { saveLanguagePreference } from '@/lib/i18n/preference'
 const LocaleContext = createContext('en')
+const LocaleNavigationContext = createContext<(code: string) => void>(() => {})
 export const useSiteLocale = () => useContext(LocaleContext)
+export const useLocaleNavigation = () => useContext(LocaleNavigationContext)
 const excluded =
-  '[data-private], [data-no-translate], .notranslate, script, style, textarea, pre, code, [contenteditable], option'
-const subscribe = () => () => {}
+  '[data-private], .qp-upload-list, [data-no-translate], .notranslate, script, style, textarea, pre, code, [contenteditable]'
+const subscribe = (callback: () => void) => {
+  const events = ['popstate', 'hashchange', 'epubtrans:locale-navigation']
+  for (const event of events) window.addEventListener(event, callback)
+  return () => {
+    for (const event of events) window.removeEventListener(event, callback)
+  }
+}
 export function LocaleProvider({
   locale,
   configured = true,
@@ -19,6 +36,39 @@ export function LocaleProvider({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
+  const router = useRouter()
+  const pendingDestination = useRef<string | null>(null)
+  const navigate = useCallback(
+    (code: string) => {
+      if (!getLanguage(code)) return
+      saveLanguagePreference(code)
+      const target = new URL(window.location.href)
+      target.pathname = languagePath(target.pathname, code)
+      const destination = target.pathname + target.search + target.hash
+      if (destination === window.location.pathname + window.location.search + window.location.hash)
+        return
+      pendingDestination.current = destination
+      router.push(destination, { scroll: false })
+    },
+    [router],
+  )
+  useEffect(() => {
+    if (!pendingDestination.current) return
+    const target = new URL(pendingDestination.current, window.location.origin)
+    if (target.pathname !== window.location.pathname || target.search !== window.location.search)
+      return
+    pendingDestination.current = null
+    // Next's cached initial canonical may already contain a fragment. Keep the
+    // exact requested fragment instead of allowing the cache to append it twice.
+    if (window.location.hash !== target.hash) {
+      window.history.replaceState(
+        null,
+        '',
+        target.pathname + target.search + target.hash,
+      )
+      window.dispatchEvent(new Event('epubtrans:locale-navigation'))
+    }
+  }, [pathname])
   const current = useSyncExternalStore(
     subscribe,
     () => getLanguage(window.location.pathname.split('/')[1])?.code || 'en',
@@ -26,13 +76,21 @@ export function LocaleProvider({
   )
   return (
     <LocaleContext.Provider value={current}>
-      {children}
-      <PageTranslation key={`${current}:${pathname}`} locale={current} configured={configured} />
+      <LocaleNavigationContext.Provider value={navigate}>
+        {children}
+        <PageTranslation key={`${current}:${pathname}`} locale={current} configured={configured} />
+      </LocaleNavigationContext.Provider>
     </LocaleContext.Provider>
   )
 }
 function PageTranslation({ locale, configured }: { locale: string; configured: boolean }) {
   const pathname = usePathname()
+  const navigate = useLocaleNavigation()
+  const suffix = useSyncExternalStore(
+    subscribe,
+    () => window.location.search + window.location.hash,
+    () => '',
+  )
   const [status, setStatus] = useState<'idle' | 'working' | 'ready' | 'partial' | 'failed'>('idle')
   const [attempt, setAttempt] = useState(0)
   useEffect(() => {
@@ -42,6 +100,22 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
       cache = new Map<string, string>(),
       seen = new Set<string>()
     const attributes = new Map<Element, Map<string, { source: string; translated?: string }>>()
+    const languageAttributes = new Map<Element, { lang: string | null; dir: string | null }>()
+    const markLanguage = (element: Element | null) => {
+      if (!element) return
+      if (!languageAttributes.has(element))
+        languageAttributes.set(element, {
+          lang: element.getAttribute('lang'),
+          dir: element.getAttribute('dir'),
+        })
+      element.setAttribute('lang', locale)
+      element.setAttribute(
+        'dir',
+        element.matches('input[type="email"], input[type="url"], input[type="tel"]')
+          ? 'ltr'
+          : getLanguage(locale)?.direction || 'ltr',
+      )
+    }
     let timer: ReturnType<typeof setTimeout>,
       busy = false,
       pending = false,
@@ -65,7 +139,7 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
         childList: true,
         characterData: true,
         attributes: true,
-        attributeFilter: ['aria-label', 'placeholder', 'title'],
+        attributeFilter: ['aria-label', 'placeholder', 'title', 'alt'],
       })
     async function translate() {
       if (!active) return
@@ -98,10 +172,10 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
       }
       const attributeNodes: { element: Element; name: string; text: string }[] = []
       for (const element of document.body.querySelectorAll(
-        '[aria-label], [placeholder], [title]',
+        '[aria-label], [placeholder], [title], [alt]',
       )) {
         if (!allowed(element)) continue
-        for (const name of ['aria-label', 'placeholder', 'title']) {
+        for (const name of ['aria-label', 'placeholder', 'title', 'alt']) {
           const text = element.getAttribute(name)
           if (!text || !/[a-zA-Z]/.test(text)) continue
           const records =
@@ -135,6 +209,7 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
             const whitespace = node.data.match(/^(\s*)[\s\S]*?(\s*)$/)
             original.translated = (whitespace?.[1] || '') + value + (whitespace?.[2] || '')
             node.data = original.translated
+            if (normalize(value) !== normalize(original.source)) markLanguage(node.parentElement)
           }
         }
         for (const { element, name, text } of attributeNodes) {
@@ -143,11 +218,18 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
           if (value && record && element.isConnected && element.getAttribute(name) === text) {
             record.translated = value
             element.setAttribute(name, value)
+            if (normalize(value) !== normalize(text)) markLanguage(element)
           }
         }
-        if (cache.size) {
-          document.documentElement.lang = locale
-          document.documentElement.dir = getLanguage(locale)?.direction || 'ltr'
+        for (const element of document.querySelectorAll(
+          'input[type="email"], input[type="url"], input[type="tel"]',
+        )) {
+          if (!languageAttributes.has(element))
+            languageAttributes.set(element, {
+              lang: element.getAttribute('lang'),
+              dir: element.getAttribute('dir'),
+            })
+          element.setAttribute('dir', 'ltr')
         }
         watch()
       }
@@ -185,8 +267,14 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
             throw new Error('Invalid translation response')
           for (const text of batch) {
             seen.add(text)
-            if (typeof result.translations[text] === 'string')
-              cache.set(text, result.translations[text])
+            const value = result.translations[text]
+            if (
+              typeof value === 'string' &&
+              value.trim() &&
+              (normalize(value) !== normalize(text) || fixedTranslation(text, locale) === value)
+            )
+              cache.set(text, value)
+            else incomplete = true
           }
           if (result.partial) incomplete = true
           if (!active) return
@@ -194,6 +282,12 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
         }
         if (!active) return
         if (!cache.size && unique.length) throw new Error('No translated content returned')
+        // A few translated navigation strings do not change the language of the
+        // remaining English document. Translated elements carry their own lang/dir.
+        const complete = !incomplete && sources.every((text) => cache.has(text))
+        document.documentElement.lang = complete && cache.size ? locale : 'en'
+        document.documentElement.dir =
+          complete && cache.size ? getLanguage(locale)?.direction || 'ltr' : 'ltr'
         setStatus(incomplete ? 'partial' : cache.size ? 'ready' : 'idle')
       } catch {
         if (active) {
@@ -202,10 +296,8 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
           pending = false
           clearTimeout(timer)
           observer.disconnect()
-          if (!cache.size) {
-            document.documentElement.lang = 'en'
-            document.documentElement.dir = 'ltr'
-          }
+          document.documentElement.lang = 'en'
+          document.documentElement.dir = 'ltr'
           // Continue observing new menus and form steps even after a provider outage.
           watch()
         }
@@ -232,6 +324,13 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
         for (const [name, record] of records)
           if (element.isConnected && element.getAttribute(name) === record.translated)
             element.setAttribute(name, record.source)
+      for (const [element, record] of languageAttributes) {
+        if (!element.isConnected) continue
+        for (const name of ['lang', 'dir'] as const) {
+          if (record[name] === null) element.removeAttribute(name)
+          else element.setAttribute(name, record[name])
+        }
+      }
       document.documentElement.lang = 'en'
       document.documentElement.dir = 'ltr'
     }
@@ -239,7 +338,7 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
   if (locale === 'en') return null
   const missing = !configured || status === 'failed'
   return (
-    <aside className="et-translation-status" role="status" data-no-translate>
+    <aside className="et-translation-status" role="status" data-no-translate lang="en" dir="ltr">
       <span lang={locale}>{getLanguage(locale)?.nativeName}</span>
       <span>
         {missing
@@ -248,14 +347,28 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
             ? 'Some text could not be translated and remains in English.'
             : status === 'working' || status === 'idle'
               ? 'Translating this page…'
-              : 'Automatically translated. English is the original.'}
+              : 'Automatic reading preview, not a reviewed translation. English is the original.'}
       </span>
       {configured && (status === 'failed' || status === 'partial') && (
         <button type="button" onClick={() => setAttempt((value) => value + 1)}>
           Retry translation
         </button>
       )}
-      <NextLink href={`/en${stripLanguage(pathname) === '/' ? '' : stripLanguage(pathname)}`}>
+      <NextLink
+        href={stripLanguage(pathname) + suffix}
+        onClick={(event) => {
+          if (
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey ||
+            event.button !== 0
+          )
+            return
+          event.preventDefault()
+          navigate('en')
+        }}
+      >
         English
       </NextLink>
     </aside>

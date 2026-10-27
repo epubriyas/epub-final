@@ -2,8 +2,12 @@
 import React from 'react'
 import { render, screen, waitFor, cleanup, fireEvent, act } from '@testing-library/react'
 import { afterEach, describe, it, expect, vi } from 'vitest'
-import { LocaleProvider } from '@/components/i18n/LocaleProvider'
-vi.mock('next/navigation', () => ({ usePathname: () => window.location.pathname }))
+import { LocaleProvider, useLocaleNavigation } from '@/components/i18n/LocaleProvider'
+const { routePush } = vi.hoisted(() => ({ routePush: vi.fn() }))
+vi.mock('next/navigation', () => ({
+  usePathname: () => window.location.pathname,
+  useRouter: () => ({ push: routePush }),
+}))
 vi.mock('next/link', () => ({
   default: ({ children, href }: React.PropsWithChildren<{ href: string }>) => (
     <a href={href}>{children}</a>
@@ -13,8 +17,100 @@ afterEach(() => {
   cleanup()
   vi.unstubAllGlobals()
   window.history.replaceState({}, '', '/')
+  routePush.mockReset()
 })
 describe('native language reading', () => {
+  it('repairs a duplicated cached fragment without reloading the page or changing input state', async () => {
+    window.history.replaceState({}, '', '/fr/get-a-quote?service=ebook_xml#brief')
+    routePush.mockImplementation((destination: string) => {
+      window.history.pushState({}, '', destination + '#brief')
+      window.dispatchEvent(new PopStateEvent('popstate'))
+    })
+    function Switch() {
+      const navigate = useLocaleNavigation()
+      return <button onClick={() => navigate('en')}>Original English</button>
+    }
+    render(
+      <LocaleProvider locale="fr" configured={false}>
+        <Switch />
+        <input aria-label="Private draft" defaultValue="Retained draft" />
+      </LocaleProvider>,
+    )
+    fireEvent.change(screen.getByRole('textbox'), { target: { value: 'Edited private draft' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Original English' }))
+    await waitFor(() =>
+      expect(window.location.pathname + window.location.search + window.location.hash).toBe(
+        '/get-a-quote?service=ebook_xml#brief',
+      ),
+    )
+    expect(routePush).toHaveBeenCalledWith('/get-a-quote?service=ebook_xml#brief', {
+      scroll: false,
+    })
+    expect(screen.getByRole('textbox')).toHaveProperty('value', 'Edited private draft')
+  })
+
+  it('does not treat unchanged English responses as translated content', async () => {
+    window.history.replaceState({}, '', '/fr/typesetting-services?source=test#process')
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        json: async () => ({ translations: { 'A publishing project.': 'A publishing project.' } }),
+      })),
+    )
+    render(
+      <LocaleProvider locale="fr">
+        <h1>A publishing project.</h1>
+      </LocaleProvider>,
+    )
+    await waitFor(() =>
+      expect(screen.getByRole('status').textContent).toContain('Translation unavailable'),
+    )
+    expect(document.documentElement.lang).toBe('en')
+    expect(screen.getByRole('link', { name: 'English' }).getAttribute('href')).toBe(
+      '/typesetting-services?source=test#process',
+    )
+  })
+
+  it('translates option labels and alternative text without changing values or private entries', async () => {
+    window.history.replaceState({}, '', '/ar')
+    const sent: string[] = []
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (_url, options) => {
+        const { texts } = JSON.parse(options.body)
+        sent.push(...texts)
+        return {
+          ok: true,
+          json: async () => ({
+            translations: Object.fromEntries(texts.map((text: string) => [text, 'اختبار ' + text])),
+          }),
+        }
+      }),
+    )
+    render(
+      <LocaleProvider locale="ar">
+        <select aria-label="Enquiry type">
+          <option value="general">General enquiry</option>
+        </select>
+        {/* eslint-disable-next-line @next/next/no-img-element -- DOM-only alternative-text fixture. */}
+        <img src="/example.png" alt="Publication diagram" />
+        <input type="email" defaultValue="private@example.invalid" />
+        <ul className="qp-upload-list">
+          <li>private-client-manuscript.docx</li>
+        </ul>
+      </LocaleProvider>,
+    )
+    await waitFor(() =>
+      expect(screen.getByRole('option').textContent).toBe('اختبار General enquiry'),
+    )
+    expect(screen.getByRole('option').getAttribute('value')).toBe('general')
+    expect(screen.getByRole('img').getAttribute('alt')).toBe('اختبار Publication diagram')
+    expect(screen.getByRole('textbox').getAttribute('dir')).toBe('ltr')
+    expect(sent.join(' ')).not.toContain('private@example.invalid')
+    expect(sent.join(' ')).not.toContain('private-client-manuscript.docx')
+  })
+
   it('uses fixed Tamil wording even when the external provider is unavailable', async () => {
     window.history.replaceState({}, '', '/ta')
     const fetchTranslation = vi.fn(async (_url: string, _options: { body: string }) => ({
@@ -33,7 +129,8 @@ describe('native language reading', () => {
     await waitFor(() =>
       expect(screen.getByRole('status').textContent).toContain('Some text could not be translated'),
     )
-    expect(document.documentElement.lang).toBe('ta')
+    expect(document.documentElement.lang).toBe('en')
+    expect(screen.getByRole('heading').getAttribute('lang')).toBe('ta')
     expect(JSON.parse(fetchTranslation.mock.calls[0]?.[1]?.body || '{}').texts).not.toContain(
       'What We Do',
     )
@@ -63,7 +160,8 @@ describe('native language reading', () => {
     )
     expect(screen.getByText('अनुवाद Public sentence 0')).toBeDefined()
     expect(screen.getByText('Public sentence 32')).toBeDefined()
-    expect(document.documentElement.lang).toBe('hi')
+    expect(document.documentElement.lang).toBe('en')
+    expect(screen.getByText('अनुवाद Public sentence 0').getAttribute('lang')).toBe('hi')
   })
   it('reports partial server results without discarding their translated content', async () => {
     window.history.replaceState({}, '', '/hi')
@@ -121,7 +219,8 @@ describe('native language reading', () => {
     expect(screen.getByRole('button', { name: 'नेविगेशन खोलें' })).toBeDefined()
     expect(requests.join(' ')).not.toContain('Private applicant')
     expect(requests.join(' ')).not.toContain('private@example.invalid')
-    expect(document.documentElement.lang).toBe('hi')
+    expect(document.documentElement.lang).toBe('en')
+    expect(screen.getByRole('heading').getAttribute('lang')).toBe('hi')
   })
   it('Arabic sets RTL only after a successful translated response', async () => {
     window.history.replaceState({}, '', '/ar')

@@ -1,0 +1,2425 @@
+[
+  {
+    "path": "/xml-conversion-services",
+    "cmsRecordId": 17,
+    "source": "src/config/service-handoffs/xml-jats.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "JATS XML conversion",
+    "buyerTask": "General scholarly article markup and target-schema requirements",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 17,
+      "slug": "xml-jats",
+      "file": "src/config/service-handoffs/xml-jats.json",
+      "h1": "XML & JATS Conversion Services for Scholarly Publishers",
+      "title": "JATS XML Conversion Services for Publishers | EPUBTRANS",
+      "description": "XML and JATS conversion for scholarly publishers, including article markup, metadata, references, structured content and project-specific quality checks.",
+      "lead": "Structured XML production, JATS article markup and content conversion for academic publishers, journal publishers and publishing production teams.",
+      "opening": [
+        "JATS XML conversion for academic and journal publishers, based on the specified tag set, schema version and destination requirements."
+      ],
+      "firstSection": "Structured XML for Journal Publishing",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request an XML Conversion Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Discuss a Sample Article",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Structured XML for Journal Publishing",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our XML & JATS Conversion Capabilities",
+          "kind": "capabilities"
+        },
+        {
+          "title": "JATS Tag Sets and Publishing Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "JATS XML, SciELO XML and Repository Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Source Files and Information Required",
+          "kind": "narrative"
+        },
+        {
+          "title": "XML Conversion Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our XML Production Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "XML Validation and Quality Review",
+          "kind": "quality"
+        },
+        {
+          "title": "XML Conversion for Existing Journal Archives",
+          "kind": "narrative"
+        },
+        {
+          "title": "What Affects XML Conversion Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request an XML Conversion Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "SciELO XML Markup Services",
+          "href": "/scielo-xml-markup-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "XML & JATS Conversion Services for Scholarly Publishers",
+      "title": "JATS XML Conversion Services for Publishers | EPUBTRANS",
+      "description": "XML and JATS conversion for scholarly publishers, including article markup, metadata, references, structured content and project-specific quality checks.",
+      "lead": "Structured XML production, JATS article markup and content conversion for academic publishers, journal publishers and publishing production teams.",
+      "opening": [
+        "JATS XML conversion for academic and journal publishers, based on the specified tag set, schema version and destination requirements."
+      ],
+      "firstSection": "Structured XML for Journal Publishing",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request an XML Conversion Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "SciELO XML Markup Services",
+          "href": "/scielo-xml-markup-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "action": "Targeted boundary or deep-link improvement; retain established owner URL"
+  },
+  {
+    "path": "/voiceover-services",
+    "cmsRecordId": 16,
+    "source": "src/config/service-handoffs/voiceover.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Voiceover production",
+    "buyerTask": "Recorded speech and narration",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 16,
+      "slug": "voiceover",
+      "file": "src/config/service-handoffs/voiceover.json",
+      "h1": "Voiceover Services for eLearning & Multimedia Localization",
+      "title": "Voiceover Services for eLearning & Localization | EPUBTRANS",
+      "description": "Voiceover production support for LSPs, eLearning teams and publishers. Discuss narration scripts, target languages, audio specifications and delivery requirements.",
+      "lead": "Voiceover production and multilingual narration support for localization service providers, eLearning teams, publishers and digital-content businesses.",
+      "opening": [
+        "Voiceover-related production for supported eLearning and multimedia projects, with scripts, voices, recording arrangements and audio outputs defined by the brief."
+      ],
+      "firstSection": "Voiceover Production for Multilingual Content",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Voiceover Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Discuss Your Audio Project",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Voiceover Production for Multilingual Content",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Voiceover Production Services",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Working with Localization Service Providers",
+          "kind": "narrative"
+        },
+        {
+          "title": "Voiceover, Dubbing and Audio Description",
+          "kind": "narrative"
+        },
+        {
+          "title": "Voiceover for Different Content Types",
+          "kind": "narrative"
+        },
+        {
+          "title": "Audio Formats and Delivery Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Source Materials and Project Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Voiceover Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Voiceover Production Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Quality Review and Approval Responsibilities",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Voiceover Project Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Voiceover Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Transcription Services",
+          "href": "/transcription-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services",
+          "href": null
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Voiceover Services for eLearning & Multimedia Localization",
+      "title": "Voiceover Services for eLearning & Localization | EPUBTRANS",
+      "description": "Voiceover production support for LSPs, eLearning teams and publishers. Discuss narration scripts, target languages, audio specifications and delivery requirements.",
+      "lead": "Voiceover production and multilingual narration support for localization service providers, eLearning teams, publishers and digital-content businesses.",
+      "opening": [
+        "Voiceover-related production for supported eLearning and multimedia projects, with scripts, voices, recording arrangements and audio outputs defined by the brief."
+      ],
+      "firstSection": "Voiceover Production for Multilingual Content",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Voiceover Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Transcription Services",
+          "href": "/transcription-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services",
+          "href": null
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/typesetting-services",
+    "cmsRecordId": 15,
+    "source": "src/config/service-handoffs/typesetting.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Book and journal typesetting",
+    "buyerTask": "Publisher composition and proofs",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 15,
+      "slug": "typesetting",
+      "file": "src/config/service-handoffs/typesetting.json",
+      "h1": "Book & Journal Typesetting Services",
+      "title": "Book & Journal Typesetting Services | EPUBTRANS",
+      "description": "EPUBTRANS provides book and journal typesetting, page composition and layout production for publishers. Share your manuscript and specifications for a quote.",
+      "lead": "Professional page composition and layout production for book publishers, academic publishers and journal publishing teams.",
+      "opening": [
+        "Book and journal page composition for publishers, including complex tables, figures, equations and references, prepared to the approved layout and delivery specifications."
+      ],
+      "firstSection": "Typesetting for Books, Journals & Academic Publications",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Typesetting Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Publishing Services",
+          "href": "/services#publishing-editorial",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Typesetting for Books, Journals & Academic Publications",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Typesetting & Page Composition Services",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Project Inputs and Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Typesetting Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Quality Checks for Typeset Publications",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Typesetting Scope & Schedule?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related Publishing Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Typesetting Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Copyediting Services",
+          "href": "/copyediting-services"
+        },
+        {
+          "title": "Proofreading Services",
+          "href": "/proofreading-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "XML & Structured Content Services",
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "Graphic Design & Image Services",
+          "href": "/graphic-design-image-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Book & Journal Typesetting Services",
+      "title": "Book & Journal Typesetting Services | EPUBTRANS",
+      "description": "EPUBTRANS provides book and journal typesetting, page composition and layout production for publishers. Share your manuscript and specifications for a quote.",
+      "lead": "Professional page composition and layout production for book publishers, academic publishers and journal publishing teams.",
+      "opening": [
+        "Book and journal page composition for publishers, including complex tables, figures, equations and references, prepared to the approved layout and delivery specifications."
+      ],
+      "firstSection": "Typesetting for Books, Journals & Academic Publications",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Typesetting Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Copyediting Services",
+          "href": "/copyediting-services"
+        },
+        {
+          "title": "Proofreading Services",
+          "href": "/proofreading-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "XML & Structured Content Services",
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "Graphic Design & Image Services",
+          "href": "/graphic-design-image-services"
+        },
+        {
+          "title": "Multilingual DTP for Localization Teams",
+          "href": "/desktop-publishing-services"
+        }
+      ]
+    },
+    "action": "Targeted boundary or deep-link improvement; retain established owner URL"
+  },
+  {
+    "path": "/translation-services",
+    "cmsRecordId": 14,
+    "source": "src/config/service-handoffs/translation.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Translation services (scope confirmation required)",
+    "buyerTask": "Text-language work separately assessed from layout",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 14,
+      "slug": "translation",
+      "file": "src/config/service-handoffs/translation.json",
+      "h1": "Translation Services for Publishing & Digital Content",
+      "title": "Translation Services for Publishers & Content Teams | EPUBTRANS",
+      "description": "Translation services for publishing, documents and digital learning content. Discuss language pairs, subject matter, linguistic review and file requirements.",
+      "lead": "Translation support for publishers, academic content teams, eLearning producers and organizations preparing multilingual publications and digital materials.",
+      "opening": [
+        "Project-scoped translation support for eligible publishing, learning and content-production materials, with languages, subject expertise and review method confirmed before acceptance."
+      ],
+      "firstSection": "Translation for Multilingual Content Workflows",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Translation Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Discuss Your Multilingual Content Project",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Translation for Multilingual Content Workflows",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Translation Service Scope",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Working with Publishers and Localization Service Providers",
+          "kind": "narrative"
+        },
+        {
+          "title": "Translation, Localization and Multilingual DTP",
+          "kind": "narrative"
+        },
+        {
+          "title": "Language, Source Files and Project Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Translation Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Translation Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Translation Quality and Approval Responsibilities",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Translation Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Translation Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Localization Production Services",
+          "href": null
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "eBook Creation and Typesetting Services",
+          "href": null
+        }
+      ]
+    },
+    "after": {
+      "h1": "Translation Services for Publishing & Digital Content",
+      "title": "Translation Services for Publishers & Content Teams | EPUBTRANS",
+      "description": "Translation services for publishing, documents and digital learning content. Discuss language pairs, subject matter, linguistic review and file requirements.",
+      "lead": "Translation support for publishers, academic content teams, eLearning producers and organizations preparing multilingual publications and digital materials.",
+      "opening": [
+        "Project-scoped translation support for eligible publishing, learning and content-production materials, with languages, subject expertise and review method confirmed before acceptance."
+      ],
+      "firstSection": "Translation for Multilingual Content Workflows",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Translation Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Localization Production Services",
+          "href": null
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "eBook Creation and Typesetting Services",
+          "href": null
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/transcription-services",
+    "cmsRecordId": 13,
+    "source": "src/config/service-handoffs/transcription.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Transcription",
+    "buyerTask": "Speech-to-text",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 13,
+      "slug": "transcription",
+      "file": "src/config/service-handoffs/transcription.json",
+      "h1": "Transcription Services for Audio, Video & eLearning",
+      "title": "Audio & Video Transcription Services | EPUBTRANS",
+      "description": "Transcription support for audio, video, training and educational content. Discuss verbatim or edited transcripts, timestamps, speaker labels and deliverables.",
+      "lead": "Audio and video transcription support for localization service providers, educational publishers, eLearning teams and business-content producers.",
+      "opening": [
+        "Transcription and transcript review for eligible audio and video materials, following the agreed language, timestamp, speaker and formatting conventions."
+      ],
+      "firstSection": "Transcription Support for Digital Content Production",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Transcription Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Discuss Your Recording Requirements",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Transcription Support for Digital Content Production",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Transcription Service Scope",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Transcription for Different Content Types",
+          "kind": "narrative"
+        },
+        {
+          "title": "Working with Localization Service Providers and eLearning Teams",
+          "kind": "narrative"
+        },
+        {
+          "title": "Transcripts, Subtitles and Accessibility",
+          "kind": "narrative"
+        },
+        {
+          "title": "Source Files and Project Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Transcription Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Transcription Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Quality Review and Approval Responsibilities",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Transcription Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Transcription Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services",
+          "href": null
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Transcription Services for Audio, Video & eLearning",
+      "title": "Audio & Video Transcription Services | EPUBTRANS",
+      "description": "Transcription support for audio, video, training and educational content. Discuss verbatim or edited transcripts, timestamps, speaker labels and deliverables.",
+      "lead": "Audio and video transcription support for localization service providers, educational publishers, eLearning teams and business-content producers.",
+      "opening": [
+        "Transcription and transcript review for eligible audio and video materials, following the agreed language, timestamp, speaker and formatting conventions."
+      ],
+      "firstSection": "Transcription Support for Digital Content Production",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Transcription Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services",
+          "href": null
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/subtitling-services",
+    "cmsRecordId": 12,
+    "source": "src/config/service-handoffs/subtitling.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Subtitling",
+    "buyerTask": "Timed on-screen text",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 12,
+      "slug": "subtitling",
+      "file": "src/config/service-handoffs/subtitling.json",
+      "h1": "Subtitling Services for eLearning & Video Localization",
+      "title": "Subtitling Services for eLearning & Video | EPUBTRANS",
+      "description": "Subtitling production for LSPs, eLearning teams and publishers. EPUBTRANS supports timed text, subtitle synchronization and project-specific media deliverables.",
+      "lead": "Subtitle preparation, timed-text production and media-localization support for localization service providers, training-content teams and digital publishers.",
+      "opening": [
+        "Timed subtitle and caption-file preparation for eligible video and learning media, based on approved scripts, languages and delivery specifications."
+      ],
+      "firstSection": "Subtitling Production for Multilingual Content",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Subtitling Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Discuss Your Media Project",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Subtitling Production for Multilingual Content",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Subtitling Services",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Working with Translation Agencies and LSPs",
+          "kind": "narrative"
+        },
+        {
+          "title": "Subtitles, Captions and Accessibility Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Subtitle Formats and Delivery Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Subtitling for Different Content Types",
+          "kind": "scope"
+        },
+        {
+          "title": "Source Materials and Information Required",
+          "kind": "scope"
+        },
+        {
+          "title": "Subtitling Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Subtitling Production Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Quality Review and Client Responsibilities",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Subtitling Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Subtitling Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "Transcription Services",
+          "href": "/transcription-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Subtitling Services for eLearning & Video Localization",
+      "title": "Subtitling Services for eLearning & Video | EPUBTRANS",
+      "description": "Subtitling production for LSPs, eLearning teams and publishers. EPUBTRANS supports timed text, subtitle synchronization and project-specific media deliverables.",
+      "lead": "Subtitle preparation, timed-text production and media-localization support for localization service providers, training-content teams and digital publishers.",
+      "opening": [
+        "Timed subtitle and caption-file preparation for eligible video and learning media, based on approved scripts, languages and delivery specifications."
+      ],
+      "firstSection": "Subtitling Production for Multilingual Content",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Subtitling Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "Transcription Services",
+          "href": "/transcription-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Localization Production Services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/scielo-xml-markup-services",
+    "cmsRecordId": 11,
+    "source": "src/config/service-handoffs/scielo-xml-markup.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "SciELO XML markup",
+    "buyerTask": "SciELO Publishing Schema and collection-specific delivery",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 11,
+      "slug": "scielo-xml-markup",
+      "file": "src/config/service-handoffs/scielo-xml-markup.json",
+      "h1": "SciELO XML Markup Services for Scholarly Journals",
+      "title": "SciELO-Certified XML Markup Services | EPUBTRANS",
+      "description": "EPUBTRANS is a SciELO-certified XML tagging provider supporting scholarly journals with article XML conversion, metadata, references and structured content.",
+      "lead": "SciELO-Certified XML Article Tagging Services",
+      "opening": [
+        "SciELO-specific scholarly article markup prepared against the agreed SciELO Publishing Schema version and the journal or collection’s technical requirements."
+      ],
+      "firstSection": "SciELO-Certified XML Article Tagging Services",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a SciELO XML Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Publishing Services",
+          "href": "/services#ebook-xml",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "SciELO-Certified XML Article Tagging Services",
+          "kind": "narrative"
+        },
+        {
+          "title": "SciELO XML Conversion for Scholarly Publishing",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our SciELO XML Markup Capabilities",
+          "kind": "capabilities"
+        },
+        {
+          "title": "What Information Is Required for SciELO XML Production?",
+          "kind": "narrative"
+        },
+        {
+          "title": "SciELO XML Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our SciELO XML Markup Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "SciELO XML Validation & Quality Checks",
+          "kind": "quality"
+        },
+        {
+          "title": "SciELO XML vs General JATS XML",
+          "kind": "narrative"
+        },
+        {
+          "title": "Who Uses SciELO XML Markup Services?",
+          "kind": "related"
+        },
+        {
+          "title": "What Affects SciELO XML Project Scope & Schedule?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related Scholarly Publishing Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a SciELO XML Markup Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Scholarly Journal Publishers"
+        },
+        {
+          "title": "Academic Publishing Organizations"
+        },
+        {
+          "title": "Journal Production Vendors"
+        },
+        {
+          "title": "Publishers Converting Existing Articles"
+        }
+      ]
+    },
+    "after": {
+      "h1": "SciELO XML Markup Services for Scholarly Journals",
+      "title": "SciELO-Certified XML Markup Services | EPUBTRANS",
+      "description": "EPUBTRANS is a SciELO-certified XML tagging provider supporting scholarly journals with article XML conversion, metadata, references and structured content.",
+      "lead": "SciELO-Certified XML Article Tagging Services",
+      "opening": [
+        "SciELO-specific scholarly article markup prepared against the agreed SciELO Publishing Schema version and the journal or collection’s technical requirements."
+      ],
+      "firstSection": "SciELO-Certified XML Article Tagging Services",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a SciELO XML Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Scholarly Journal Publishers"
+        },
+        {
+          "title": "Academic Publishing Organizations"
+        },
+        {
+          "title": "Journal Production Vendors"
+        },
+        {
+          "title": "Publishers Converting Existing Articles"
+        }
+      ]
+    },
+    "action": "Targeted boundary or deep-link improvement; retain established owner URL"
+  },
+  {
+    "path": "/proofreading-services",
+    "cmsRecordId": 10,
+    "source": "src/config/service-handoffs/proofreading.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Proofreading for publishers",
+    "buyerTask": "Specified corrections in final text or typeset proofs",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 10,
+      "slug": "proofreading",
+      "file": "src/config/service-handoffs/proofreading.json",
+      "h1": "Proofreading Services for Books & Journals",
+      "title": "Proofreading Services for Books & Journals | EPUBTRANS",
+      "description": "Proofreading support for books, journals and typeset proofs, including final-stage text, layout consistency and correction checks within an agreed scope.",
+      "lead": "Final-stage proofreading support for book publishers, academic journals and publishing production teams.",
+      "opening": [
+        "Final-stage proofreading of edited manuscripts and publication proofs, with checks defined by the current production stage and your editorial instructions."
+      ],
+      "firstSection": "Proofreading as a Publishing Production Stage",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Proofreading Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Copyediting Services",
+          "href": "/copyediting-services",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Proofreading as a Publishing Production Stage",
+          "kind": "narrative"
+        },
+        {
+          "title": "What Our Proofreading Services Can Cover",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Proofreading for Books and Journal Publications",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Proofreading Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Proof Stage, Project Inputs and Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Proofreading Compared with Copyediting",
+          "kind": "narrative"
+        },
+        {
+          "title": "Quality Review and Responsibilities",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Proofreading Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Proofreading Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Copyediting Services",
+          "href": "/copyediting-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "XML & JATS Conversion Services",
+          "href": "/xml-conversion-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Proofreading Services for Books & Journals",
+      "title": "Proofreading Services for Books & Journals | EPUBTRANS",
+      "description": "Proofreading support for books, journals and typeset proofs, including final-stage text, layout consistency and correction checks within an agreed scope.",
+      "lead": "Final-stage proofreading support for book publishers, academic journals and publishing production teams.",
+      "opening": [
+        "Final-stage proofreading of edited manuscripts and publication proofs, with checks defined by the current production stage and your editorial instructions."
+      ],
+      "firstSection": "Proofreading as a Publishing Production Stage",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Proofreading Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Copyediting Services",
+          "href": "/copyediting-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "XML & JATS Conversion Services",
+          "href": "/xml-conversion-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/graphic-design-image-services",
+    "cmsRecordId": 8,
+    "source": "src/config/service-handoffs/graphic-design-image-services.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Publication graphics and image services",
+    "buyerTask": "Figures, artwork and image preparation",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 8,
+      "slug": "graphic-design-image-services",
+      "file": "src/config/service-handoffs/graphic-design-image-services.json",
+      "h1": "Graphic Design & Image Services for Publishers",
+      "title": "Graphic Design & Image Services for Publishers | EPUBTRANS",
+      "description": "Artwork preparation, figure formatting, illustration and image editing for book, journal and academic publishing projects. Discuss your requirements with EPUBTRANS.",
+      "lead": "Publication artwork, figure preparation, image editing and visual-content production for book publishers, scholarly journals and localization teams.",
+      "opening": [
+        "Figure, diagram and image preparation for publications, guided by the supplied artwork, journal specifications and target print or digital formats."
+      ],
+      "firstSection": "Graphic Design and Image Production for Publishing",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Graphic Design & Image Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Discuss Your Artwork Requirements",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Graphic Design and Image Production for Publishing",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Graphic Design & Image Services",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Artwork Preparation for Books and Scholarly Journals",
+          "kind": "narrative"
+        },
+        {
+          "title": "Image Quality, Technical Requirements and Research Integrity",
+          "kind": "quality"
+        },
+        {
+          "title": "Source Files and Project Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Graphic Design and Image Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Graphic Design and Image Production Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Quality Checks and Approval Responsibilities",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Project Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Graphic Design & Image Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Cover Page Design Services",
+          "href": "/cover-page-design-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": "/services#publishing-editorial"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Graphic Design & Image Services for Publishers",
+      "title": "Graphic Design & Image Services for Publishers | EPUBTRANS",
+      "description": "Artwork preparation, figure formatting, illustration and image editing for book, journal and academic publishing projects. Discuss your requirements with EPUBTRANS.",
+      "lead": "Publication artwork, figure preparation, image editing and visual-content production for book publishers, scholarly journals and localization teams.",
+      "opening": [
+        "Figure, diagram and image preparation for publications, guided by the supplied artwork, journal specifications and target print or digital formats."
+      ],
+      "firstSection": "Graphic Design and Image Production for Publishing",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Graphic Design & Image Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Cover Page Design Services",
+          "href": "/cover-page-design-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": "/services#publishing-editorial"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/elearning-localization-services",
+    "cmsRecordId": 7,
+    "source": "src/config/service-handoffs/elearning-localization.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "eLearning localization",
+    "buyerTask": "Course projects, interactions and functional deliverables",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 7,
+      "slug": "elearning-localization",
+      "file": "src/config/service-handoffs/elearning-localization.json",
+      "h1": "eLearning Localization Services",
+      "title": "eLearning Localization & Course Production | EPUBTRANS",
+      "description": "EPUBTRANS supports eLearning localization, course layout adaptation, multimedia integration and QA for supported Storyline, Rise and Lectora workflows.",
+      "lead": "Multilingual course production, layout adaptation and localization support for training companies, localization service providers and learning-content teams.",
+      "opening": [
+        "Localization production for supported eLearning courses, including target-language content integration, layout adaptation and specified functional checks."
+      ],
+      "firstSection": "eLearning Localization Beyond Translation",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request an eLearning Localization Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Our Services",
+          "href": "/services#elearning-multimedia",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "eLearning Localization Beyond Translation",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our eLearning Localization Capabilities",
+          "kind": "capabilities"
+        },
+        {
+          "title": "eLearning Authoring Tools & Production Workflows",
+          "kind": "narrative"
+        },
+        {
+          "title": "eLearning Production Support for Localization Agencies",
+          "kind": "narrative"
+        },
+        {
+          "title": "Translation & Multimedia Responsibilities",
+          "kind": "narrative"
+        },
+        {
+          "title": "Source Files & Project Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "eLearning Localization Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our eLearning Localization Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "eLearning Quality Assurance & Functional Checks",
+          "kind": "quality"
+        },
+        {
+          "title": "Course Packaging, SCORM & LMS Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Accessibility Considerations for Localized Courses",
+          "kind": "narrative"
+        },
+        {
+          "title": "What Affects eLearning Localization Scope & Schedule?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request an eLearning Localization Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "Transcription Services",
+          "href": "/transcription-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "eLearning Localization Services",
+      "title": "eLearning Localization & Course Production | EPUBTRANS",
+      "description": "EPUBTRANS supports eLearning localization, course layout adaptation, multimedia integration and QA for supported Storyline, Rise and Lectora workflows.",
+      "lead": "Multilingual course production, layout adaptation and localization support for training companies, localization service providers and learning-content teams.",
+      "opening": [
+        "Localization production for supported eLearning courses, including target-language content integration, layout adaptation and specified functional checks."
+      ],
+      "firstSection": "eLearning Localization Beyond Translation",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request an eLearning Localization Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Subtitling Services",
+          "href": "/subtitling-services"
+        },
+        {
+          "title": "Voiceover Services",
+          "href": "/voiceover-services"
+        },
+        {
+          "title": "Transcription Services",
+          "href": "/transcription-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/ebook-creation-services",
+    "cmsRecordId": 6,
+    "source": "src/config/service-handoffs/ebook-creation.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "EPUB conversion and eBook creation",
+    "buyerTask": "Create reflowable or fixed-layout publication packages",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 6,
+      "slug": "ebook-creation",
+      "file": "src/config/service-handoffs/ebook-creation.json",
+      "h1": "EPUB Conversion & eBook Creation Services",
+      "title": "EPUB Conversion & eBook Creation Services | EPUBTRANS",
+      "description": "Convert manuscripts and publishing files into reflowable or fixed-layout EPUB. EPUBTRANS supports eBook production, navigation, metadata and scoped QA.",
+      "lead": "Reflowable and fixed-layout EPUB production for publishers, academic publishing organizations and digital-content teams.",
+      "opening": [
+        "Convert suitable manuscripts and publication files into reflowable or fixed-layout EPUB, with format, navigation and quality requirements agreed for the intended digital edition."
+      ],
+      "firstSection": "Choosing and Producing the Right EPUB Format",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request an EPUB Conversion Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Digital Publishing Services",
+          "href": "/services#ebook-xml",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Choosing and Producing the Right EPUB Format",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our eBook Creation & Conversion Capabilities",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Source Files We Can Assess for EPUB Conversion",
+          "kind": "narrative"
+        },
+        {
+          "title": "EPUB Deliverables & Production Files",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our EPUB Conversion Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "EPUB Validation & Quality Checks",
+          "kind": "quality"
+        },
+        {
+          "title": "Accessible EPUB Production",
+          "kind": "narrative"
+        },
+        {
+          "title": "What Affects EPUB Conversion Scope & Schedule?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related Digital Publishing Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request an EPUB Conversion Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "XML & Structured Content Services",
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "Digital Accessibility Services",
+          "href": "/accessibility-services"
+        },
+        {
+          "title": "Document & Data Conversion Services",
+          "href": "/data-conversion-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "EPUB Conversion & eBook Creation Services",
+      "title": "EPUB Conversion & eBook Creation Services | EPUBTRANS",
+      "description": "Convert manuscripts and publishing files into reflowable or fixed-layout EPUB. EPUBTRANS supports eBook production, navigation, metadata and scoped QA.",
+      "lead": "Reflowable and fixed-layout EPUB production for publishers, academic publishing organizations and digital-content teams.",
+      "opening": [
+        "Convert suitable manuscripts and publication files into reflowable or fixed-layout EPUB, with format, navigation and quality requirements agreed for the intended digital edition."
+      ],
+      "firstSection": "Choosing and Producing the Right EPUB Format",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request an EPUB Conversion Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "XML & Structured Content Services",
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "Digital Accessibility Services",
+          "href": "/accessibility-services"
+        },
+        {
+          "title": "Document & Data Conversion Services",
+          "href": "/data-conversion-services"
+        }
+      ]
+    },
+    "action": "Targeted boundary or deep-link improvement; retain established owner URL"
+  },
+  {
+    "path": "/desktop-publishing-services",
+    "cmsRecordId": 5,
+    "source": "src/config/service-handoffs/desktop-publishing.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Multilingual DTP and post-translation layout",
+    "buyerTask": "Adapt layouts around supplied approved translations",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 5,
+      "slug": "desktop-publishing",
+      "file": "src/config/service-handoffs/desktop-publishing.json",
+      "h1": "Multilingual Desktop Publishing (DTP) Services",
+      "title": "Multilingual DTP & Desktop Publishing Services | EPUBTRANS",
+      "description": "EPUBTRANS supports localization agencies with multilingual DTP, post-translation formatting, document recreation and layout QA for print and digital files.",
+      "lead": "Post-translation layout, document formatting and multilingual production support for localization service providers, translation agencies and publishers.",
+      "opening": [
+        "Multilingual desktop publishing and post-translation layout adaptation for LSPs, translation agencies and publishers working with approved target-language content."
+      ],
+      "firstSection": "Multilingual Desktop Publishing for Localization Projects",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Multilingual DTP Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Our Services",
+          "href": "/services#localization-dtp",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Multilingual Desktop Publishing for Localization Projects",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Desktop Publishing Capabilities",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Documents We Can Assess for DTP Production",
+          "kind": "narrative"
+        },
+        {
+          "title": "Multilingual DTP for Different Languages & Scripts",
+          "kind": "narrative"
+        },
+        {
+          "title": "Source Files & Materials Required",
+          "kind": "narrative"
+        },
+        {
+          "title": "Desktop Publishing Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Multilingual DTP Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "DTP Quality Checks",
+          "kind": "quality"
+        },
+        {
+          "title": "Supporting Localization Service Providers & Translation Agencies",
+          "kind": "narrative"
+        },
+        {
+          "title": "What Affects Multilingual DTP Scope & Schedule?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Multilingual DTP Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Graphic Design & Image Services",
+          "href": "/graphic-design-image-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Multilingual Desktop Publishing (DTP) Services",
+      "title": "Multilingual DTP & Desktop Publishing Services | EPUBTRANS",
+      "description": "Multilingual desktop publishing for LSPs and translation agencies. Discuss target-language layout, formatting, source-file preparation and delivery requirements.",
+      "lead": "Post-translation layout, document formatting and multilingual production support for localization service providers, translation agencies and publishers.",
+      "opening": [
+        "Multilingual desktop publishing and post-translation layout adaptation for LSPs, translation agencies and publishers working with approved target-language content.",
+        "Post-translation layout does not automatically include translation."
+      ],
+      "firstSection": "Multilingual Desktop Publishing for Localization Projects",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Multilingual DTP Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Graphic Design & Image Services",
+          "href": "/graphic-design-image-services"
+        },
+        {
+          "title": "eLearning Localization Services",
+          "href": "/elearning-localization-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        },
+        {
+          "title": "Translation Requirements",
+          "href": "/translation-services"
+        }
+      ]
+    },
+    "action": "Targeted boundary or deep-link improvement; retain established owner URL"
+  },
+  {
+    "path": "/data-conversion-services",
+    "cmsRecordId": 4,
+    "source": "src/config/service-handoffs/data-conversion.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "PDF-to-Word, OCR and document recreation",
+    "buyerTask": "Editable source extraction or layout reconstruction",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 4,
+      "slug": "data-conversion",
+      "file": "src/config/service-handoffs/data-conversion.json",
+      "h1": "PDF-to-Word & Document Conversion Services",
+      "title": "PDF-to-Word & Document Conversion Services | EPUBTRANS",
+      "description": "PDF-to-Word conversion, OCR and document reconstruction for publishers and localization agencies. Share your files with EPUBTRANS for a project assessment.",
+      "lead": "PDF conversion, OCR and editable document preparation for publishers, localization service providers and translation agencies.",
+      "opening": [
+        "Convert PDFs, scans and other eligible documents into agreed editable or structured formats for publishing and localization workflows."
+      ],
+      "firstSection": "Document Conversion for Publishing & Localization Workflows",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Document Conversion Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Our Services",
+          "href": "/services#document-conversion",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Document Conversion for Publishing & Localization Workflows",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Document Conversion Capabilities",
+          "kind": "capabilities"
+        },
+        {
+          "title": "PDF-to-Word Conversion for Translation Agencies",
+          "kind": "narrative"
+        },
+        {
+          "title": "Document Conversion for Publishers & Content Teams",
+          "kind": "narrative"
+        },
+        {
+          "title": "Editable Content vs Layout Preservation",
+          "kind": "narrative"
+        },
+        {
+          "title": "Source Files & Materials We Can Assess",
+          "kind": "narrative"
+        },
+        {
+          "title": "Document Conversion Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Document Conversion Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Quality Checks for Converted Documents",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Document Conversion Scope & Schedule?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Document Conversion Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "SciELO XML Markup Services",
+          "href": "/scielo-xml-markup-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "PDF-to-Word & Document Conversion Services",
+      "title": "PDF-to-Word & Document Conversion Services | EPUBTRANS",
+      "description": "PDF-to-Word conversion, OCR and document reconstruction for publishers and localization agencies. Share your files with EPUBTRANS for a project assessment.",
+      "lead": "PDF conversion, OCR and editable document preparation for publishers, localization service providers and translation agencies.",
+      "opening": [
+        "Convert PDFs, scans and other eligible documents into agreed editable or structured formats for publishing and localization workflows."
+      ],
+      "firstSection": "PDF-to-Word Conversion & OCR",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Document Conversion Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "JATS XML Conversion",
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "SciELO XML Markup Services",
+          "href": "/scielo-xml-markup-services"
+        },
+        {
+          "title": "Accessibility Services",
+          "href": "/accessibility-services"
+        }
+      ]
+    },
+    "action": "Targeted boundary or deep-link improvement; retain established owner URL"
+  },
+  {
+    "path": "/cover-page-design-services",
+    "cmsRecordId": 3,
+    "source": "src/config/service-handoffs/cover-page-design.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Book cover design",
+    "buyerTask": "Cover-specific artwork and production files",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 3,
+      "slug": "cover-page-design",
+      "file": "src/config/service-handoffs/cover-page-design.json",
+      "h1": "Cover Page Design Services for Books & Journals",
+      "title": "Book & Journal Cover Design Services | EPUBTRANS",
+      "description": "Cover design and artwork adaptation for book and journal publishers, including front covers, spine and back layouts, and print or digital cover files.",
+      "lead": "Book cover design, journal cover layouts and artwork adaptation for print and digital publishing.",
+      "opening": [
+        "Cover artwork for books, journals and digital editions, developed or adapted to the approved creative brief and the destination’s production specifications."
+      ],
+      "firstSection": "Cover Design for Print and Digital Publishing",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Cover Design Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Discuss Your Cover Requirements",
+          "href": "/contact-us",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Cover Design for Print and Digital Publishing",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Cover Page Design Capabilities",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Cover Typography, Imagery and Brand Consistency",
+          "kind": "narrative"
+        },
+        {
+          "title": "Preparing Cover Artwork for Production",
+          "kind": "narrative"
+        },
+        {
+          "title": "What to Send for Cover Design",
+          "kind": "narrative"
+        },
+        {
+          "title": "Cover Design Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Cover Design Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Quality Review and Publisher Approvals",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Cover Design Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Cover Design Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Graphic Design & Image Services",
+          "href": "/graphic-design-image-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Cover Page Design Services for Books & Journals",
+      "title": "Book & Journal Cover Design Services | EPUBTRANS",
+      "description": "Cover design and artwork adaptation for book and journal publishers, including front covers, spine and back layouts, and print or digital cover files.",
+      "lead": "Book cover design, journal cover layouts and artwork adaptation for print and digital publishing.",
+      "opening": [
+        "Cover artwork for books, journals and digital editions, developed or adapted to the approved creative brief and the destination’s production specifications."
+      ],
+      "firstSection": "Cover Design for Print and Digital Publishing",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Cover Design Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Graphic Design & Image Services",
+          "href": "/graphic-design-image-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/accessibility-services",
+    "cmsRecordId": 2,
+    "source": "src/config/service-handoffs/accessibility.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Document accessibility remediation",
+    "buyerTask": "Format-specific remediation and scoped evaluation",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 2,
+      "slug": "accessibility",
+      "file": "src/config/service-handoffs/accessibility.json",
+      "h1": "Digital Document & Publishing Accessibility Services",
+      "title": "Document Accessibility & Remediation Services | EPUBTRANS",
+      "description": "EPUBTRANS supports PDF, EPUB, Word and PowerPoint accessibility remediation, document structure, tagging and project-specific quality checks.",
+      "lead": "Accessibility remediation and production support for PDF, EPUB, Word, PowerPoint and publishing-source files.",
+      "opening": [
+        "Accessibility-related production and remediation for supported PDF, EPUB, Word, PowerPoint and publishing-source files against an agreed specification."
+      ],
+      "firstSection": "Digital Accessibility for Documents & Publications",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request an Accessibility Assessment",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Our Services",
+          "href": "/services#digital-accessibility",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "Digital Accessibility for Documents & Publications",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Document Accessibility Services",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Accessibility Remediation vs Accessible Content Production",
+          "kind": "narrative"
+        },
+        {
+          "title": "Accessibility Standards & Project Requirements",
+          "kind": "narrative"
+        },
+        {
+          "title": "Shared Accessibility Features",
+          "kind": "narrative"
+        },
+        {
+          "title": "Source Files & Information Required",
+          "kind": "narrative"
+        },
+        {
+          "title": "Accessibility Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Accessibility Production Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Accessibility Quality Checks & Testing",
+          "kind": "quality"
+        },
+        {
+          "title": "Accessibility Support for Publishers & Localization Teams",
+          "kind": "narrative"
+        },
+        {
+          "title": "What Affects Accessibility Project Scope & Schedule?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request an Accessibility Assessment",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        }
+      ]
+    },
+    "after": {
+      "h1": "Digital Document & Publishing Accessibility Services",
+      "title": "Document Accessibility & Remediation Services | EPUBTRANS",
+      "description": "EPUBTRANS supports PDF, EPUB, Word and PowerPoint accessibility remediation, document structure, tagging and project-specific quality checks.",
+      "lead": "Accessibility remediation and production support for PDF, EPUB, Word, PowerPoint and publishing-source files.",
+      "opening": [
+        "Accessibility-related production and remediation for supported PDF, EPUB, Word, PowerPoint and publishing-source files against an agreed specification."
+      ],
+      "firstSection": "Digital Accessibility for Documents & Publications",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request an Accessibility Assessment",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "eBook Creation Services",
+          "href": "/ebook-creation-services"
+        },
+        {
+          "title": "Data Conversion Services",
+          "href": "/data-conversion-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Desktop Publishing Services",
+          "href": "/desktop-publishing-services"
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  },
+  {
+    "path": "/copyediting-services",
+    "cmsRecordId": 1,
+    "source": "src/config/service-handoffs/copyediting.json",
+    "metadataSource": "ServiceRoute.generateServiceMetadata -> local handoff overrides CMS SEO",
+    "primaryKeywordTheme": "Copyediting for publishers",
+    "buyerTask": "Manuscript language, style and consistency before layout",
+    "researchStatus": "Provisional; no GSC, analytics, backlink or search-volume data supplied",
+    "before": {
+      "cmsId": 1,
+      "slug": "copyediting",
+      "file": "src/config/service-handoffs/copyediting.json",
+      "h1": "Copyediting Services for Book & Journal Publishers",
+      "title": "Copyediting Services for Book & Journal Publishers | EPUBTRANS",
+      "description": "Copyediting support for book and journal publishers, including grammar, clarity, consistency, house-style checks and agreed editorial queries.",
+      "lead": "Manuscript copyediting for academic publishers, journal publishers, book publishers and publishing production teams.",
+      "opening": [
+        "Manuscript-level editing for book and journal publishers, guided by your house style, language requirements and agreed editorial scope."
+      ],
+      "firstSection": "What Does Copyediting Cover?",
+      "cta": [
+        {
+          "kind": "link",
+          "text": "Request a Copyediting Quote",
+          "href": "/get-a-quote",
+          "primary": true
+        },
+        {
+          "kind": "link",
+          "text": "Explore Proofreading Services",
+          "href": "/proofreading-services",
+          "primary": false
+        }
+      ],
+      "sections": [
+        {
+          "title": "What Does Copyediting Cover?",
+          "kind": "capabilities"
+        },
+        {
+          "title": "Copyediting for Different Publishing Projects",
+          "kind": "narrative"
+        },
+        {
+          "title": "Our Copyediting Workflow",
+          "kind": "workflow"
+        },
+        {
+          "title": "Source Files and Deliverables",
+          "kind": "narrative"
+        },
+        {
+          "title": "Copyediting and Proofreading: Different Stages",
+          "kind": "narrative"
+        },
+        {
+          "title": "Quality Checks and Editorial Responsibilities",
+          "kind": "quality"
+        },
+        {
+          "title": "What Affects Copyediting Scope and Scheduling?",
+          "kind": "scope"
+        },
+        {
+          "title": "Related EPUBTRANS Services",
+          "kind": "related"
+        },
+        {
+          "title": "Frequently Asked Questions",
+          "kind": "faq"
+        },
+        {
+          "title": "Request a Copyediting Quote",
+          "kind": "cta"
+        }
+      ],
+      "related": [
+        {
+          "title": "Proofreading Services",
+          "href": "/proofreading-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "XML & JATS Conversion Services",
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "Indexing Services",
+          "href": null
+        }
+      ]
+    },
+    "after": {
+      "h1": "Copyediting Services for Book & Journal Publishers",
+      "title": "Copyediting Services for Book & Journal Publishers | EPUBTRANS",
+      "description": "Copyediting support for book and journal publishers, including grammar, clarity, consistency, house-style checks and agreed editorial queries.",
+      "lead": "Manuscript copyediting for academic publishers, journal publishers, book publishers and publishing production teams.",
+      "opening": [
+        "Manuscript-level editing for book and journal publishers, guided by your house style, language requirements and agreed editorial scope."
+      ],
+      "firstSection": "What Does Copyediting Cover?",
+      "primaryCTA": {
+        "kind": "link",
+        "text": "Request a Copyediting Quote",
+        "href": "/get-a-quote",
+        "primary": true
+      },
+      "related": [
+        {
+          "title": "Proofreading Services",
+          "href": "/proofreading-services"
+        },
+        {
+          "title": "Typesetting Services",
+          "href": "/typesetting-services"
+        },
+        {
+          "title": "Publishing Services",
+          "href": null
+        },
+        {
+          "title": "XML & JATS Conversion Services",
+          "href": "/xml-conversion-services"
+        },
+        {
+          "title": "Indexing Services",
+          "href": null
+        }
+      ]
+    },
+    "action": "Retain differentiated existing copy, metadata and contextual links"
+  }
+]

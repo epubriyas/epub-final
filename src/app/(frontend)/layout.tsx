@@ -81,7 +81,7 @@ export default async function FrontendLayout({ children }: { children: React.Rea
     </html>
   )
 }
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   ...(!siteCanBeIndexed(getServerSideURL(), process.env.VERCEL_ENV)
     ? { robots: { index: false, follow: false, noarchive: true } }
     : {}),
@@ -107,4 +107,12 @@ export const metadata: Metadata = {
     title: 'EPUBTRANS',
     description: 'Publishing, language and digital content services.',
   },
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = getLanguage((await headers()).get('x-epubtrans-language') || 'en')?.code || 'en'
+  return {
+    ...defaultMetadata,
+    ...(locale !== 'en' ? { robots: { index: false, follow: true, noarchive: true } } : {}),
+  }
 }

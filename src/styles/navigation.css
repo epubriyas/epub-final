@@ -163,6 +163,23 @@
   overscroll-behavior: contain;
 }
 
+/* Keep the language options above the floating assistant while choosing. */
+.et-header:has(.et-language) {
+  z-index: 100;
+}
+
+@media (min-width: 1200px) {
+  .et-header:not([data-locale='en']) .et-header-inner {
+    gap: 12px;
+  }
+  .et-header:not([data-locale='en']) .et-desktop-nav {
+    min-width: 0;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 0;
+  }
+}
+
 .et-header .et-language-selector {
   padding: 28px;
 }
@@ -205,8 +222,8 @@
 }
 
 .et-header .et-locale-default[aria-pressed='true'] .et-locale-code {
-  background: var(--brand-primary);
-  color: var(--text-on-brand, white);
+  background: var(--action-primary);
+  color: var(--text-on-action);
 }
 
 .et-header .et-locale-badge {

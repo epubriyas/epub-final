@@ -488,41 +488,14 @@
       "lead": [
         {
           "kind": "paragraph",
-          "text": "Accessibility is an important consideration in digital publishing, particularly when publications must support diverse reading needs or meet specified accessibility requirements."
+          "text": "Accessibility features such as logical structure, navigation, reading order and alternative text integration can be part of EPUB production where specified. The source materials, EPUB version and agreed acceptance criteria determine the scope."
         },
         {
-          "kind": "paragraph",
-          "text": "EPUBTRANS's documented services include accessible EPUB-related production."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Depending on the project, activities may involve:"
-        },
-        {
-          "kind": "list",
-          "items": [
-            "Logical content structure and heading hierarchy",
-            "Appropriate reading order",
-            "Navigation and internal links",
-            "Language and metadata information",
-            "Alternative text integration when supplied or commissioned",
-            "Accessible treatment of images, tables and complex content",
-            "Applicable structural and format-specific accessibility checks"
-          ]
-        },
-        {
-          "kind": "paragraph",
-          "text": "Accessibility production and testing requirements are determined by the target specification, EPUB version, source materials and agreed acceptance criteria."
-        },
-        {
-          "kind": "paragraph",
-          "text": "An EPUB file passing general technical validation does not automatically establish compliance with an accessibility standard."
-        },
-        {
-          "kind": "link",
-          "text": "Explore Digital Accessibility Services",
+          "kind": "linked-paragraph",
+          "before": "Where the brief requires separate remediation or documented testing against accessibility criteria, discuss our ",
+          "text": "digital accessibility remediation services",
           "href": "/accessibility-services",
-          "primary": false
+          "after": " as a separate or combined scope. General EPUB technical validation does not automatically establish accessibility conformance."
         }
       ],
       "groups": [],

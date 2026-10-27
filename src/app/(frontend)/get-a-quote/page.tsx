@@ -31,14 +31,18 @@ export default async function Quote({
       <div className="et-container qp-wrap">
         <header className="qp-intro">
           <p className="et-label">GET A QUOTE</p>
-          <h1>A clear brief. A considered next step.</h1>
-          <p>Tell us what you need. Share the details you have, and we can clarify the rest.</p>
+          <h1>Request a Quote for Publishing & Content Production Services</h1>
+          <p>
+            Tell us which services you need, your available source files, intended deliverables and
+            preferred schedule. You can share the details you have; we can clarify the rest during
+            project assessment.
+          </p>
         </header>
         <QuoteForm key={initialService} initialService={initialService} />
         <section className="qp-next" aria-labelledby="quote-next-heading">
           <div className="qp-next-heading">
             <p className="et-label">AFTER YOUR ENQUIRY</p>
-            <h2 id="quote-next-heading">From brief to next steps.</h2>
+            <h2 id="quote-next-heading">What Happens After You Submit an Enquiry</h2>
           </div>
           <div className="qp-next-grid">
             <article>

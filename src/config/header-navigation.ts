@@ -27,8 +27,8 @@ const services: NavigationSection = {
     {
       title: 'Document & Data Conversion',
       items: [
-        { label: 'Data Conversion Services', href: '/data-conversion-services' },
-        { label: 'PDF Recreation Services', href: '/data-conversion-services' },
+        { label: 'Data Conversion Services', href: '/data-conversion-services#pdf-to-word-ocr' },
+        { label: 'PDF Recreation Services', href: '/data-conversion-services#pdf-recreation' },
       ],
     },
     {

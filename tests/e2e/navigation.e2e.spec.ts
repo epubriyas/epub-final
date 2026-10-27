@@ -20,10 +20,9 @@ test('service menu follows the six approved categories and keeps every service r
   await expect(
     menu.getByRole('link', { name: 'XML & JATS Conversion Services', exact: true }),
   ).toHaveAttribute('href', '/xml-conversion-services')
-  await expect(menu.getByRole('link', { name: 'PDF Recreation Services', exact: true })).toHaveAttribute(
-    'href',
-    '/data-conversion-services',
-  )
+  await expect(
+    menu.getByRole('link', { name: 'PDF Recreation Services', exact: true }),
+  ).toHaveAttribute('href', '/data-conversion-services#pdf-recreation')
   await expect(menu.getByText(/indexing/i)).toHaveCount(0)
   await menu.evaluate((element) =>
     Promise.all(element.getAnimations().map((animation) => animation.finished)),
@@ -145,7 +144,9 @@ test('mobile modal locks scroll, contains focus, reveals service categories and 
   expect(await page.locator('body').evaluate((el) => el.style.overflow)).toBe('hidden')
   await dialog.getByRole('button', { name: 'What We Do' }).click()
   await dialog.getByText('Publishing & Editorial Services', { exact: true }).click()
-    await expect(dialog.getByRole('link', { name: 'Copyediting Services', exact: true })).toBeVisible()
+  await expect(
+    dialog.getByRole('link', { name: 'Copyediting Services', exact: true }),
+  ).toBeVisible()
   await page.keyboard.press('Escape')
   await expect(dialog).not.toBeVisible()
   await expect(trigger).toBeFocused()
