@@ -32,11 +32,8 @@ export default function Contact() {
       <div className="et-container cp-wrap">
         <header className="cp-intro">
           <p className="et-label">LET’S CONNECT</p>
-          <h1>Contact EPUBTRANS About Publishing & Localization Projects</h1>
-          <p>
-            Have a publishing, content-conversion or localization enquiry? Contact our team about a
-            project, service requirement or production partnership.
-          </p>
+          <h1>Find your way to us.</h1>
+          <p>Publishing, localization or a new collaboration. Let’s find the right next step.</p>
         </header>
 
         <section className="cp-connect" aria-label="Ways to contact EPUBTRANS">
@@ -87,7 +84,11 @@ export default function Contact() {
             <span className="cp-project-icon">
               <ArrowUpRight size={32} aria-hidden="true" />
             </span>
-            <h2 id="project-heading">Request a Detailed Project Quote</h2>
+            <h2 id="project-heading">
+              Your next chapter
+              <br />
+              starts here.
+            </h2>
             <p>
               Share the details that matter. Our project enquiry form brings your requirements
               together in one place.
@@ -113,7 +114,11 @@ export default function Contact() {
         <section className="cp-message" id="send-message" aria-labelledby="message-heading">
           <div className="cp-message-copy">
             <p className="et-label">A CONVERSATION STARTS HERE</p>
-            <h2 id="message-heading">Send a General Enquiry</h2>
+            <h2 id="message-heading">
+              Tell us what
+              <br />
+              you have in mind.
+            </h2>
             <p>
               Ask a question, outline a production need or introduce your organization. Include a
               little context so we can understand your enquiry.
@@ -130,7 +135,6 @@ export default function Contact() {
             <Link className="cp-link" href="/services">
               Explore our services <ArrowRight size={16} aria-hidden="true" />
             </Link>
-            <div id="project-assistant-dock" className="et-assistant-dock" data-no-translate />
           </div>
           <div className="cp-form-panel">
             <h3>Send us a message</h3>
@@ -142,7 +146,11 @@ export default function Contact() {
         <section className="cp-location" id="our-location" aria-labelledby="location-heading">
           <div>
             <p className="et-label">OUR LOCATIONS</p>
-            <h2 id="location-heading">Our Offices in Chennai</h2>
+            <h2 id="location-heading">
+              At home in Chennai.
+              <br />
+              <span>Connected to your team.</span>
+            </h2>
           </div>
           <div className="cp-office-grid">
             {companyOffices.map((office, index) => (

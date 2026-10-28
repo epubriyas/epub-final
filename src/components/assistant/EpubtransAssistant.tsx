@@ -1,7 +1,5 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { createPortal } from 'react-dom'
-import { usePathname } from 'next/navigation'
 import { ArrowUp, ArrowUpRight, MessageCircle, RotateCcw, Square, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from '@/components/i18n/LocalizedLink'
@@ -56,25 +54,6 @@ function AssistantBrandMark() {
   )
 }
 export function EpubtransAssistant({ email, phone }: { email: string; phone: string }) {
-  const pathname = usePathname()
-  const [dock, setDock] = useState<HTMLElement | null>(null)
-  useEffect(() => {
-    let frame = 0
-    const syncDock = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(() => {
-        const target = document.getElementById('project-assistant-dock')
-        setDock((current) => (current === target ? current : target))
-      })
-    }
-    const observer = new MutationObserver(syncDock)
-    observer.observe(document.body, { childList: true, subtree: true })
-    syncDock()
-    return () => {
-      observer.disconnect()
-      cancelAnimationFrame(frame)
-    }
-  }, [pathname])
   const dialog = useRef<HTMLDialogElement>(null)
   const launcher = useRef<HTMLButtonElement>(null)
   const input = useRef<HTMLTextAreaElement>(null)
@@ -226,7 +205,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
   const launcherButton = (
     <button
       ref={launcher}
-      className="et-assistant-launcher"
+      className="et-assistant-launcher et-assistant-launcher-pill"
       aria-label="Open EPUBTRANS assistant"
       aria-haspopup="dialog"
       aria-expanded={open}
@@ -257,7 +236,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
   )
   return (
     <div className="et-assistant" data-no-translate>
-      {dock ? createPortal(launcherButton, dock) : launcherButton}
+      {launcherButton}
       <dialog
         ref={dialog}
         id="epubtrans-assistant"

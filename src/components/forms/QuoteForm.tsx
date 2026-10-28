@@ -3,12 +3,7 @@
 import { useRef, useState } from 'react'
 import Link from '@/components/i18n/LocalizedLink'
 import { ArrowRight, ArrowLeft, Check, BriefcaseBusiness, Upload, X } from 'lucide-react'
-import {
-  quoteServiceOptions,
-  quoteServices,
-  validateQuote,
-  type QuoteData,
-} from '@/lib/validation/quote'
+import { quoteServiceOptions, validateQuote, type QuoteData } from '@/lib/validation/quote'
 
 import { quoteUploadAccept, validateQuoteFiles } from '@/lib/quote-uploads'
 import { FieldFeedback } from './FieldFeedback'
@@ -35,10 +30,11 @@ const initial: QuoteData = {
 export function QuoteForm({ initialService = '' }: { initialService?: string }) {
   const [files, setFiles] = useState<File[]>([])
   const [fileError, setFileError] = useState('')
-  const [step, setStep] = useState(0)
+  const selectedService = quoteServiceOptions.find(({ value }) => value === initialService)
+  const [step, setStep] = useState(selectedService ? 1 : 0)
   const [data, setData] = useState(() => ({
     ...initial,
-    service: quoteServices.some((value) => value === initialService) ? initialService : '',
+    service: selectedService?.value || '',
   }))
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [pending, setPending] = useState(false)
@@ -217,13 +213,12 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
         </ol>
         <div className="qp-sidebar-note">
           <BriefcaseBusiness size={20} aria-hidden="true" />
-          <h3>Share Your Project Requirements</h3>
+          <h3>Built around your requirements.</h3>
           <p>Source formats, production scope and delivery expectations, in one clear brief.</p>
           <Link href="/contact-us">
             Prefer a conversation? <ArrowRight size={14} aria-hidden="true" />
           </Link>
         </div>
-        <div id="project-assistant-dock" className="et-assistant-dock" data-no-translate />
       </aside>
       <form
         className="et-quote-panel"
@@ -238,13 +233,25 @@ export function QuoteForm({ initialService = '' }: { initialService?: string }) 
         <p className="et-label">{steps[step]}</p>
         <h2 ref={heading} tabIndex={-1}>
           {steps[step] === 'Service'
-            ? 'Choose the Service You Need'
+            ? 'What do you have in mind?'
             : steps[step] === 'Project Requirements'
               ? 'Project Requirements'
               : steps[step] === 'Contact Details'
                 ? 'Your Contact Details'
                 : 'Review your project enquiry.'}
         </h2>
+
+        {step === 1 && (
+          <p className="et-form-help">
+            Selected service:{' '}
+            <strong>
+              {quoteServiceOptions.find(({ value }) => value === data.service)?.label}
+            </strong>{' '}
+            <button type="button" className="cp-link" onClick={() => go(0)}>
+              Change service
+            </button>
+          </p>
+        )}
 
         {step === 0 && (
           <fieldset>

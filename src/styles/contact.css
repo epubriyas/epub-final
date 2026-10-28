@@ -555,7 +555,10 @@ html:not([data-theme='dark']) .contact-premium {
 }
 
 .contact-premium .et-field-feedback:empty,
-.contact-premium .et-form-message:empty {
+.contact-premium .et-form-message:empty,
+.quote-premium .et-field-feedback:empty,
+.quote-premium .et-form-message:empty,
+.quote-premium :is(#quote-service-error, #quote-files-error):empty {
   min-height: 0;
   margin: 0;
   padding: 0;

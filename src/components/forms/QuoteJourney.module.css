@@ -1,0 +1,138 @@
+.journey {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  gap: clamp(28px, 6vw, 80px);
+  margin-top: clamp(36px, 5vw, 60px);
+  padding: clamp(24px, 3.5vw, 44px);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  background: var(--background-secondary);
+  color: var(--text-primary);
+}
+.intro {
+  padding-block: 8px;
+}
+.intro h2 {
+  margin-block: 16px;
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+.lead {
+  max-width: 320px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.assurance {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 28px;
+  max-width: 310px;
+}
+.rule {
+  width: 2px;
+  min-height: 38px;
+  flex-shrink: 0;
+  background: var(--brand-primary);
+  opacity: 0.6;
+}
+.assurance p {
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+.stages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.stage {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 20px;
+  padding-block: 22px;
+  border-top: 1px solid var(--border-default);
+}
+.stage:first-child {
+  border-top: 0;
+  padding-top: 8px;
+}
+.stage:last-child {
+  padding-bottom: 8px;
+}
+.number {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-default);
+  border-radius: 50%;
+  font-size: 0.72rem;
+  color: var(--link-primary);
+  font-variant-numeric: tabular-nums;
+}
+.content h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 550;
+  margin-bottom: 7px;
+  letter-spacing: -0.015em;
+}
+.content > p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 440px;
+}
+.outcome {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--link-primary);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+.outcome svg {
+  flex-shrink: 0;
+  transition: transform 180ms ease;
+}
+@media (hover: hover) {
+  .stage:hover .outcome svg {
+    transform: translateX(3px);
+  }
+}
+@media (max-width: 760px) {
+  .journey {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .intro h2 br {
+    display: none;
+  }
+  .lead,
+  .assurance {
+    max-width: 100%;
+  }
+  .assurance {
+    margin-top: 18px;
+  }
+  .stages {
+    border-top: 1px solid var(--border-default);
+    padding-top: 22px;
+  }
+  .stage {
+    gap: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .outcome svg {
+    transition: none;
+  }
+  .stage:hover .outcome svg {
+    transform: none;
+  }
+}

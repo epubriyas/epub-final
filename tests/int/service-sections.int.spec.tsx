@@ -26,6 +26,21 @@ const service: Service = {
 }
 afterEach(cleanup)
 describe('optional CMS service sections', () => {
+  it('adds the current service to both hero and closing quote links in service content', () => {
+    const html = renderToStaticMarkup(
+      <ServiceDetail
+        service={{ ...service, slug: 'translation', category: 'translation-localization' }}
+        related={[]}
+      />,
+    )
+    const page = document.createElement('div')
+    page.innerHTML = html
+    const links = [...page.querySelectorAll('a[href^="/get-a-quote"]')]
+    expect(links.length).toBeGreaterThanOrEqual(2)
+    expect(
+      links.every((link) => link.getAttribute('href') === '/get-a-quote?service=localization_dtp'),
+    ).toBe(true)
+  })
   it('renders a complete minimal service with default visuals and no optional CMS sections', () => {
     const html = renderToStaticMarkup(<ServiceDetail service={service} related={[]} />)
     expect(html).toContain('Example service')

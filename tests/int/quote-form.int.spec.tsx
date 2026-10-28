@@ -65,8 +65,13 @@ it('prevents duplicate clicks and sends approved field IDs while retaining the e
   expect(screen.queryByRole('button', { name: 'Submit Project Enquiry' })).toBeNull()
 })
 
-it('preselects only an allowlisted service ID', () => {
+it('opens project requirements for a valid service and allows changing the selection', () => {
   render(<QuoteForm initialService="localization_dtp" />)
+  expect(screen.getByRole('heading', { name: 'Project Requirements' })).toBeTruthy()
+  expect(
+    screen.getByText('Localization & Multilingual Production', { selector: 'strong' }),
+  ).toBeTruthy()
+  fireEvent.click(screen.getByRole('button', { name: 'Change service' }))
   expect(
     (
       screen.getByRole('radio', {
@@ -76,7 +81,7 @@ it('preselects only an allowlisted service ID', () => {
   ).toBe(true)
 })
 
-it('ignores an unknown service category', () => {
+it('starts at service selection for an unknown service category', () => {
   render(<QuoteForm initialService="untrusted-value" />)
   expect(screen.getAllByRole('radio').every((input) => !(input as HTMLInputElement).checked)).toBe(
     true,

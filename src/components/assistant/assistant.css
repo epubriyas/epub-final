@@ -743,3 +743,39 @@ body:has(.et-translation-status) .et-assistant-launcher {
     opacity: 1;
   }
 }
+
+/* Consistent floating invitation across every public page. */
+.et-assistant-launcher-pill {
+  min-height: 72px;
+  width: 224px;
+  max-width: calc(100vw - 24px);
+  padding: 10px 17px;
+  justify-content: space-between;
+  background: linear-gradient(120deg, #19443e, #102b2b);
+  animation: et-assistant-home-enter 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.et-assistant-launcher-pill .et-assistant-launcher-copy {
+  width: 160px;
+}
+.et-assistant-launcher-pill .et-assistant-ai-dot {
+  animation: et-assistant-home-dot 2.4s ease-in-out infinite;
+}
+@keyframes et-assistant-home-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes et-assistant-home-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 #c6e0ae00;
+  }
+  50% {
+    box-shadow: 0 0 0 4px #c6e0ae22;
+  }
+}

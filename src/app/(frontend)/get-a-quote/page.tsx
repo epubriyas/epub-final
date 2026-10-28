@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from '@/components/i18n/LocalizedLink'
 import { ArrowRight } from 'lucide-react'
+import { QuoteJourney } from '@/components/forms/QuoteJourney'
 import { QuoteForm } from '@/components/forms/QuoteForm'
 import { quoteServices } from '@/lib/validation/quote'
 import { getServerSideURL } from '@/utilities/getURL'
@@ -31,43 +32,11 @@ export default async function Quote({
       <div className="et-container qp-wrap">
         <header className="qp-intro">
           <p className="et-label">GET A QUOTE</p>
-          <h1>Request a Quote for Publishing & Content Production Services</h1>
-          <p>
-            Tell us which services you need, your available source files, intended deliverables and
-            preferred schedule. You can share the details you have; we can clarify the rest during
-            project assessment.
-          </p>
+          <h1>A clear brief. A considered next step.</h1>
+          <p>Tell us what you need. Share the details you have, and we can clarify the rest.</p>
         </header>
         <QuoteForm key={initialService} initialService={initialService} />
-        <section className="qp-next" aria-labelledby="quote-next-heading">
-          <div className="qp-next-heading">
-            <p className="et-label">AFTER YOUR ENQUIRY</p>
-            <h2 id="quote-next-heading">What Happens After You Submit an Enquiry</h2>
-          </div>
-          <div className="qp-next-grid">
-            <article>
-              <span>01</span>
-              <h3>Review your requirements</h3>
-              <p>We review your service, source formats, deliverables and preferred timeline.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Clarify the scope</h3>
-              <p>
-                Where needed, we discuss specifications, representative files and production
-                requirements.
-              </p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Discuss the project</h3>
-              <p>With the scope understood, we can assess the work and discuss the next steps.</p>
-            </article>
-          </div>
-          <p className="qp-estimate-note">
-            Estimates and delivery commitments depend on reviewing your project details.
-          </p>
-        </section>
+        <QuoteJourney />
         <div className="qp-support">
           <p>Still defining your requirements? We can start with a conversation.</p>
           <Link href="/contact-us">
