@@ -1,15 +1,14 @@
 import type { Service } from '@/payload-types'
 import type { CSSProperties } from 'react'
-import { limitWorkflowToFour } from '@/lib/service-handoff'
+import { compactWorkflow } from '@/lib/service-handoff'
 
 export function ServiceWorkflow({ service }: { service: Service }) {
   if (!service.workflow?.length) return null
   type WorkflowStep = NonNullable<Service['workflow']>[number]
   type WorkflowItem = WorkflowStep & { substeps?: WorkflowStep[] }
   const orderedWorkflow: WorkflowItem[] = [...service.workflow].sort((a, b) => a.step - b.step)
-  const workflow = limitWorkflowToFour<WorkflowItem>(orderedWorkflow, (finalSteps) => ({
+  const workflow = compactWorkflow<WorkflowItem>(orderedWorkflow, (finalSteps) => ({
     ...finalSteps[0],
-    step: 4,
     substeps: finalSteps.slice(1),
   }))
   return (
@@ -25,7 +24,7 @@ export function ServiceWorkflow({ service }: { service: Service }) {
         <ol className="sp-timeline">
           {workflow.map((item, i) => (
             <li key={item.id || i} style={{ '--motion-index': i } as CSSProperties}>
-              <span className="sp-step-number">{String(item.step).padStart(2, '0')}</span>
+              <span className="sp-step-number">{String(i + 1).padStart(2, '0')}</span>
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>

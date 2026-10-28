@@ -2,7 +2,7 @@ import Link from '@/components/i18n/LocalizedLink'
 import { ArrowUpRight } from 'lucide-react'
 import type { CSSProperties } from 'react'
 import {
-  limitWorkflowToFour,
+  compactWorkflow,
   type HandoffBlock,
   type HandoffSection,
   type ServiceHandoff,
@@ -98,7 +98,7 @@ function Section({ section, index }: { section: HandoffSection; index: number })
       </section>
     )
   if (section.kind === 'workflow') {
-    const workflow = limitWorkflowToFour(section.groups, (finalSteps) => ({
+    const workflow = compactWorkflow(section.groups, (finalSteps) => ({
       ...finalSteps[0],
       blocks: finalSteps.flatMap((step, index) => [
         ...(index > 0

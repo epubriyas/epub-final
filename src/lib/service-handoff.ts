@@ -28,12 +28,18 @@ export interface HandoffGroup {
   href?: string | null
 }
 
-export function limitWorkflowToFour<T>(
+export function compactWorkflow<T>(
   steps: readonly T[],
-  mergeFinalSteps: (steps: readonly T[]) => T,
+  mergeSteps: (steps: readonly T[]) => T,
 ): T[] {
-  if (steps.length <= 4) return [...steps]
-  return [...steps.slice(0, 3), mergeFinalSteps(steps.slice(3))]
+  // Keep short workflows intact. Longer workflows are grouped evenly in source order.
+  if (steps.length <= 6) return [...steps]
+  return Array.from({ length: 4 }, (_, index) => {
+    const start = Math.ceil((index * steps.length) / 4)
+    const end = Math.ceil(((index + 1) * steps.length) / 4)
+    const group = steps.slice(start, end)
+    return group.length === 1 ? group[0] : mergeSteps(group)
+  })
 }
 
 export interface HandoffSection {
