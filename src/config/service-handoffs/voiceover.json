@@ -939,7 +939,12 @@
     },
     {
       "title": "Related EPUBTRANS Services",
-      "lead": [],
+      "lead": [
+        {
+          "kind": "paragraph",
+          "text": "Each service is separately scoped. The inclusion of voiceover work does not automatically include transcription, translation, subtitles or full multimedia integration."
+        }
+      ],
       "groups": [
         {
           "title": "Subtitling Services",
@@ -972,16 +977,6 @@
           "href": "/elearning-localization-services"
         },
         {
-          "title": "Localization Production Services",
-          "blocks": [
-            {
-              "kind": "paragraph",
-              "text": "A broader overview of EPUBTRANS's multilingual production support for LSPs and translation agencies."
-            }
-          ],
-          "href": null
-        },
-        {
           "title": "Desktop Publishing Services",
           "blocks": [
             {
@@ -997,10 +992,6 @@
             {
               "kind": "paragraph",
               "text": "Accessibility-related production and remediation for supported documents, eBooks and digital publishing content."
-            },
-            {
-              "kind": "paragraph",
-              "text": "Each service is separately scoped. The inclusion of voiceover work does not automatically include transcription, translation, subtitles or full multimedia integration."
             }
           ],
           "href": "/accessibility-services"

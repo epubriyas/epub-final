@@ -78,7 +78,15 @@ function Heading({
   )
 }
 
-function Section({ section, index }: { section: HandoffSection; index: number }) {
+function Section({
+  section,
+  index,
+  compactRequirements = false,
+}: {
+  section: HandoffSection
+  index: number
+  compactRequirements?: boolean
+}) {
   const id = section.kind === 'workflow' ? 'process' : `service-section-${index + 1}`
   if (section.kind === 'faq')
     return (
@@ -217,7 +225,7 @@ function Section({ section, index }: { section: HandoffSection; index: number })
               section.kind === 'quality' ? 'QUALITY & TECHNICAL APPROACH' : 'PROJECT REQUIREMENTS'
             }
           />
-          <ul className="sp-use-cases">
+          <ul className={`sp-use-cases${compactRequirements ? ' sp-compact-requirements' : ''}`}>
             {section.groups.map((group) => (
               <li key={group.title}>
                 <h3>{group.title}</h3>
@@ -318,7 +326,11 @@ export function ServiceHandoffContent({
       )}
       {sections.map((section, index) => (
         <div key={section.title}>
-          <Section section={section} index={index} />
+          <Section
+            section={section}
+            index={index}
+            compactRequirements={service.slug === 'subtitling' && section.kind === 'scope'}
+          />
           {index === firstCapabilities && <ServiceExplanation service={service} />}
         </div>
       ))}

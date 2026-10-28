@@ -623,6 +623,34 @@ html[data-theme='dark'] .sp-page .sp-hero-art {
   padding: 0;
   list-style: none;
 }
+
+/* Keep the long subtitling checklist above its shorter assessment note. */
+.sp-page .sp-use-cases.sp-compact-requirements {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.sp-page .sp-compact-requirements > li > .sp-detail-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 20px;
+  padding: 0;
+}
+.sp-page .sp-compact-requirements > li > .sp-detail-list > li {
+  padding: 12px 0;
+  border: 0;
+  border-top: 1px solid var(--sp-border);
+  border-radius: 0;
+  background: transparent;
+}
+@media (max-width: 1000px) {
+  .sp-page .sp-compact-requirements > li > .sp-detail-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .sp-page .sp-compact-requirements > li > .sp-detail-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .sp-page .sp-use-cases > li,
 .sp-page .sp-quality > .et-container > ul > li {
   flex: 1 1 calc((100% - 32px) / 3);
