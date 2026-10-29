@@ -1,5 +1,17 @@
 import { test, expect, type Page } from '@playwright/test'
-import { mkdir } from 'node:fs/promises'
+import { mkdir, writeFile } from 'node:fs/promises'
+
+test.setTimeout(120000)
+
+async function visit(page: Page, route: string) {
+  await page.mouse.move(0, 0)
+  const response = await page.goto(route)
+  // Server-rendered buttons can appear before React attaches their handlers.
+  await expect(page.locator('select[aria-label="Color theme"]').first()).toBeEnabled({
+    timeout: 60000,
+  })
+  return response
+}
 
 async function expectContentToFit(page: Page, scope = '#main-content') {
   const metrics = await page.locator(scope).evaluate((root) => {
@@ -36,7 +48,7 @@ async function expectContentToFit(page: Page, scope = '#main-content') {
 test('all public pages fit phones, tablets and desktop without clipped content', async ({
   page,
 }) => {
-  test.setTimeout(240000)
+  test.setTimeout(900000)
   await page.emulateMedia({ reducedMotion: 'reduce' })
   const routes = new Set([
     '/',
@@ -54,13 +66,38 @@ test('all public pages fit phones, tablets and desktop without clipped content',
     '/terms',
     '/privacy-policy',
     '/accessibility',
+    '/contact',
+    '/about-us',
+    '/blog',
+    '/company/global-presence',
+    '/technology/production-os',
+    '/posts',
+    '/industry-insights',
   ])
-  const widths = [320, 360, 390, 430, 600, 768, 820, 1024, 1280, 1440]
+  const viewports = [
+    { width: 320, height: 568 },
+    { width: 360, height: 800 },
+    { width: 375, height: 812 },
+    { width: 390, height: 844 },
+    { width: 430, height: 932 },
+    { width: 480, height: 800 },
+    { width: 600, height: 800 },
+    { width: 768, height: 1024 },
+    { width: 820, height: 1180 },
+    { width: 844, height: 390 },
+    { width: 1024, height: 768 },
+    { width: 1280, height: 800 },
+    { width: 1366, height: 768 },
+    { width: 1440, height: 900 },
+    { width: 1920, height: 1080 },
+  ]
   await mkdir('artifacts/mobile', { recursive: true })
   const errors: string[] = []
+  const verified: { route: string; width: number; height: number }[] = []
+  await mkdir('artifacts/responsive-20261029', { recursive: true })
   page.on('pageerror', (error) => errors.push(error.message))
   for (const route of routes) {
-    const response = await page.goto(route)
+    const response = await visit(page, route)
     // Unpublished service links render the site's responsive not-found page.
     expect([200, 404], route).toContain(response?.status())
     await expect(page.locator('main h1')).toHaveCount(1)
@@ -73,20 +110,69 @@ test('all public pages fit phones, tablets and desktop without clipped content',
       if (link?.startsWith('/') && !link.startsWith('//') && !/^\/(api|admin|media)\//.test(link))
         routes.add(link.split(/[?#]/)[0])
     }
-    for (const width of widths) {
-      await page.setViewportSize({ width, height: 900 })
+    for (const viewport of viewports) {
+      const { width } = viewport
+      await page.setViewportSize(viewport)
+      await page.evaluate(() => document.fonts.ready)
       await expectContentToFit(page)
       await expectContentToFit(page, '.et-header')
       await expectContentToFit(page, '.et-footer')
+      if (route === '/' && width <= 650) {
+        for (const link of await page.locator('.et-footer nav a').all()) {
+          expect((await link.boundingBox())?.height).toBeGreaterThanOrEqual(44)
+        }
+      }
+      verified.push({ route, ...viewport })
+      await writeFile(
+        'artifacts/responsive-20261029/matrix.json',
+        JSON.stringify(verified, null, 2),
+      )
       if (width === 390 && ['/', '/get-a-quote', '/services', '/company'].includes(route)) {
         await page.screenshot({
           path: `artifacts/mobile/verified-${route === '/' ? 'home' : route.slice(1)}.png`,
         })
       }
     }
+    console.log(`Verified ${route} at ${viewports.length} viewport sizes.`)
   }
   expect(errors).toEqual([])
-  console.log(`Verified ${routes.size} public routes at ${widths.length} viewport widths.`)
+  console.log(`Verified ${routes.size} public routes at ${viewports.length} viewport sizes.`)
+})
+
+test('assistant help stays in the form flow on contact and quote pages', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  for (const route of ['/contact', '/contact-us', '/get-a-quote']) {
+    for (const viewport of [
+      { width: 320, height: 568 },
+      { width: 844, height: 390 },
+      { width: 1440, height: 900 },
+    ]) {
+      await page.setViewportSize(viewport)
+      await visit(page, route)
+      const launcher = page.locator('#project-assistant-dock .et-assistant-launcher')
+      await expect(launcher).toBeVisible()
+      expect(await launcher.evaluate((element) => getComputedStyle(element).position)).toBe(
+        'static',
+      )
+      await launcher.click()
+      const dialog = page.getByRole('dialog', { name: 'How can we help?' })
+      await expect(dialog).toBeVisible()
+      await expectContentToFit(page, '.et-assistant-panel')
+      await dialog.getByRole('button', { name: 'Close assistant', exact: true }).click()
+      await expect(launcher).toBeFocused()
+    }
+  }
+})
+
+test('mobile footer links provide full touch targets', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await visit(page, '/')
+  for (const width of [320, 390, 650]) {
+    await page.setViewportSize({ width, height: 800 })
+    for (const link of await page.locator('.et-footer nav a').all()) {
+      expect((await link.boundingBox())?.height).toBeGreaterThanOrEqual(44)
+    }
+  }
 })
 
 test('mobile menus remain scrollable on narrow phones, tablets and landscape', async ({ page }) => {
@@ -97,7 +183,7 @@ test('mobile menus remain scrollable on narrow phones, tablets and landscape', a
     { width: 768, height: 1024 },
   ]) {
     await page.setViewportSize(viewport)
-    await page.goto('/')
+    await visit(page, '/')
     await page.getByRole('button', { name: 'Open navigation', exact: true }).click()
     const dialog = page.getByRole('dialog', { name: 'Site navigation' })
     const company = dialog.getByRole('button', { name: 'Company', exact: true })
@@ -107,11 +193,11 @@ test('mobile menus remain scrollable on narrow phones, tablets and landscape', a
     for (const summary of await dialog.locator(`[id="${sectionId}"] summary`).all())
       await summary.click()
     await expectContentToFit(page, '.et-mobile-dialog')
-    const internships = dialog.getByRole('link', { name: 'Internships', exact: true })
-    await internships.scrollIntoViewIfNeeded()
-    expect((await internships.boundingBox())?.height).toBeGreaterThanOrEqual(44)
-    await internships.click()
-    await expect(page).toHaveURL(/\/company\/careers#internships$/)
+    const careers = dialog.getByRole('link', { name: 'Careers', exact: true })
+    await careers.scrollIntoViewIfNeeded()
+    expect((await careers.boundingBox())?.height).toBeGreaterThanOrEqual(44)
+    await careers.click()
+    await expect(page).toHaveURL(/\/company\/careers$/)
     await expect(dialog).not.toBeVisible()
     expect(await page.locator('body').evaluate((element) => element.style.overflow)).toBe('')
     await page.getByRole('button', { name: 'Choose website language' }).click()
@@ -127,8 +213,9 @@ test('crossing the desktop breakpoint closes menus and releases the scroll lock'
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('/')
+  await visit(page, '/')
   await page.getByRole('button', { name: 'Open navigation', exact: true }).click()
+  await page.mouse.move(0, 0)
   await page.setViewportSize({ width: 1280, height: 800 })
   await expect(page.getByRole('dialog', { name: 'Site navigation' })).not.toBeVisible()
   expect(await page.locator('body').evaluate((element) => element.style.overflow)).toBe('')
@@ -144,7 +231,7 @@ test('crossing the desktop breakpoint closes menus and releases the scroll lock'
 
 test('every quote step works on a small phone and preserves long details', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 })
-  await page.goto('/get-a-quote')
+  await visit(page, '/get-a-quote')
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   await expect(page.getByText('Please check the highlighted fields.')).toBeVisible()
   await expectContentToFit(page)

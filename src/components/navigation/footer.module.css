@@ -223,8 +223,13 @@
     margin-bottom: 10px;
   }
   .navigation a {
-    min-height: 40px;
+    min-height: 44px;
     font-size: 13px;
+  }
+  .brandLink,
+  .contactDetails > a,
+  .base nav a {
+    min-height: 44px;
   }
   .base {
     padding-inline-end: 0;

@@ -1,5 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+import { usePathname } from 'next/navigation'
 import { ArrowUp, ArrowUpRight, MessageCircle, RotateCcw, Square, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from '@/components/i18n/LocalizedLink'
@@ -54,6 +56,24 @@ function AssistantBrandMark() {
   )
 }
 export function EpubtransAssistant({ email, phone }: { email: string; phone: string }) {
+  const [launcherCompact, setLauncherCompact] = useState(false)
+  const [hoverReplay, setHoverReplay] = useState(false)
+  const hoverReplayTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  useEffect(() => {
+    const timer = window.setTimeout(() => setLauncherCompact(true), 5000)
+    return () => {
+      window.clearTimeout(timer)
+      if (hoverReplayTimer.current) clearTimeout(hoverReplayTimer.current)
+    }
+  }, [])
+  const pathname = usePathname()
+  const [dock, setDock] = useState<HTMLElement | null>(null)
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      setDock(document.getElementById('project-assistant-dock'))
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [pathname])
   const dialog = useRef<HTMLDialogElement>(null)
   const launcher = useRef<HTMLButtonElement>(null)
   const input = useRef<HTMLTextAreaElement>(null)
@@ -204,9 +224,23 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
   }
   const launcherButton = (
     <button
+      type="button"
       ref={launcher}
       className="et-assistant-launcher et-assistant-launcher-pill"
+      data-compact={launcherCompact && !dock ? 'true' : 'false'}
+      data-replay={hoverReplay && !dock ? 'true' : 'false'}
+      onPointerEnter={(event) => {
+        if (!launcherCompact || dock || event.pointerType !== 'mouse') return
+        if (hoverReplayTimer.current) clearTimeout(hoverReplayTimer.current)
+        setHoverReplay(true)
+        hoverReplayTimer.current = setTimeout(() => setHoverReplay(false), 4000)
+      }}
+      onPointerLeave={() => {
+        if (hoverReplayTimer.current) clearTimeout(hoverReplayTimer.current)
+        setHoverReplay(false)
+      }}
       aria-label="Open EPUBTRANS assistant"
+      title="AI assistant"
       aria-haspopup="dialog"
       aria-expanded={open}
       aria-controls="epubtrans-assistant"
@@ -219,6 +253,10 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
         else dialog.current?.focus({ preventScroll: true })
       }}
     >
+      <span className="et-assistant-compact-symbol" aria-hidden="true">
+        <AssistantBrandMark />
+        <span className="et-assistant-compact-label">AI assistant</span>
+      </span>
       <span className="et-assistant-launcher-copy">
         <span className="et-assistant-logo-reveal" aria-hidden="true">
           <AssistantBrandMark />
@@ -236,7 +274,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
   )
   return (
     <div className="et-assistant" data-no-translate>
-      {launcherButton}
+      {dock ? createPortal(launcherButton, dock) : launcherButton}
       <dialog
         ref={dialog}
         id="epubtrans-assistant"

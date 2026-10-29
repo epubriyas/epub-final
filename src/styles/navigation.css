@@ -8,9 +8,18 @@
 
 .et-header[data-scrolled='true'] {
   background: color-mix(in srgb, var(--background-primary) 88%, transparent);
+  box-shadow: 0 8px 28px #12383a08;
+}
+
+/* Blur a decorative layer so fixed menu backdrops stay relative to the viewport. */
+.et-header[data-scrolled='true']::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   -webkit-backdrop-filter: blur(20px) saturate(140%);
   backdrop-filter: blur(20px) saturate(140%);
-  box-shadow: 0 8px 28px #12383a08;
 }
 
 .et-header .et-header-inner {
@@ -101,6 +110,7 @@
 }
 
 .et-header .et-mega {
+  overscroll-behavior: contain;
   border-block-start: 2px solid var(--brand-primary);
   border-block-end: 2px solid var(--brand-accent);
   max-height: calc(100dvh - 76px);

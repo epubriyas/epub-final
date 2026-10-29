@@ -1,5 +1,63 @@
 import { test, expect } from '@playwright/test'
 
+test('homepage navigation remains usable after scrolling to the middle', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight / 2))
+  await expect(page.locator('.et-header')).toHaveAttribute('data-scrolled', 'true')
+  await page.getByRole('button', { name: 'What We Do', exact: true }).hover()
+  const menu = page.locator('.et-mega-services')
+  await expect(menu).toBeVisible()
+  const backdrop = await page.locator('.et-menu-backdrop').boundingBox()
+  expect(backdrop).not.toBeNull()
+  expect(backdrop!.height).toBeGreaterThan(700)
+  await menu.getByRole('link', { name: 'Copyediting Services', exact: true }).click()
+  await expect(page).toHaveURL(/\/copyediting-services$/)
+  await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden')
+})
+
+test('language dropdown scrolls independently while the page is locked', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 600 })
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  await page
+    .locator('.et-header-actions')
+    .getByRole('button', { name: 'Choose website language' })
+    .hover()
+  const options = page.locator('#language-options')
+  await expect(options).toBeVisible()
+  await expect(page.locator('body')).toHaveCSS('overflow', 'clip')
+  const pagePosition = await page.evaluate(() => window.scrollY)
+  await options.hover()
+  await page.mouse.wheel(0, 1500)
+  await expect.poll(() => options.evaluate((element) => element.scrollTop)).toBeGreaterThan(0)
+  expect(await page.evaluate(() => window.scrollY)).toBe(pagePosition)
+  await expect(options.getByRole('button', { name: 'Japanese', exact: true })).toBeInViewport()
+  await page.keyboard.press('Escape')
+  await expect(options).toHaveCount(0)
+  await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden')
+})
+
+test('hover menus contain scrolling and restore page scrolling on close', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 600 })
+  await page.goto('/')
+  const trigger = page.getByRole('button', { name: 'What We Do', exact: true })
+  await trigger.hover()
+  const menu = page.locator('.et-mega-services')
+  await expect(menu).toBeVisible()
+  await expect(page.locator('body')).toHaveCSS('overflow', 'clip')
+  const pagePosition = await page.evaluate(() => window.scrollY)
+  await menu.hover()
+  await page.mouse.wheel(0, 1500)
+  await expect.poll(() => menu.evaluate((element) => element.scrollTop)).toBeGreaterThan(0)
+  expect(await page.evaluate(() => window.scrollY)).toBe(pagePosition)
+  await page.keyboard.press('Escape')
+  await expect(menu).toHaveCount(0)
+  await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden')
+  await page.mouse.move(1400, 550)
+  await page.mouse.wheel(0, 500)
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(pagePosition)
+})
+
 test('service menu follows the six approved categories and keeps every service reachable', async ({
   page,
 }) => {

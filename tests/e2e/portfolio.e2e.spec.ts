@@ -130,6 +130,7 @@ test('EPUB reading, quote preselection, preview errors and reduced motion', asyn
   const quote = await dialog.getByRole('link', { name: /Request a Quote/ }).getAttribute('href')
   await page.keyboard.press('Escape')
   await page.goto(quote!)
+  await page.getByRole('button', { name: 'Return to Service step' }).click()
   await expect(
     page.getByRole('radio', { name: 'eBook, XML & Structured Content', exact: true }),
   ).toBeChecked()
@@ -162,7 +163,7 @@ test('dark theme, detail layouts and editorial compositions', async ({ page }) =
   expect(audit.violations).toEqual([])
   await page.setViewportSize({ width: 1440, height: 950 })
   await page.screenshot({ path: 'artifacts/portfolio/screens/work-dark-1440.png' })
-  await page.locator('.wp-hero-composition').scrollIntoViewIfNeeded()
+  await page.getByRole('region', { name: 'Selected portfolio previews' }).scrollIntoViewIfNeeded()
   await page.screenshot({ path: 'artifacts/portfolio/screens/featured-1440.png' })
   await page.locator('.wp-explorer-heading').scrollIntoViewIfNeeded()
   await expect(page.locator('.wp-row-preview img').first()).toBeVisible()

@@ -36,6 +36,7 @@ export default async function Quote({
           <p>Tell us what you need. Share the details you have, and we can clarify the rest.</p>
         </header>
         <QuoteForm key={initialService} initialService={initialService} />
+        <div id="project-assistant-dock" className="et-assistant-dock" data-no-translate />
         <QuoteJourney />
         <div className="qp-support">
           <p>Still defining your requirements? We can start with a conversation.</p>

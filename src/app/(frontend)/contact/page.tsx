@@ -140,6 +140,7 @@ export default function Contact() {
             <h3>Send us a message</h3>
             <p className="cp-form-note">Fields marked * are required.</p>
             <ContactForm />
+            <div id="project-assistant-dock" className="et-assistant-dock" data-no-translate />
           </div>
         </section>
 

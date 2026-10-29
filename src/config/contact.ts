@@ -6,7 +6,7 @@ export const companyWhatsApp = {
 export const companyOffices = [
   {
     title: 'Our Address',
-    mapsHref: 'https://maps.app.goo.gl/yqrfHgTPo2oK31Vz8',
+    mapsHref: 'https://maps.app.goo.gl/nUS7Afca2y1DUcD4A',
     area: 'Noombal · Chennai',
     lines: [
       'No. 37, 1st Floor, Arul Mary Street, Soosaiya Nagar,',

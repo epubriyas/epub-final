@@ -21,7 +21,7 @@ export function SiteMotion() {
     const lock = () => {
       if (!smooth) return
       const locked =
-        getComputedStyle(document.body).overflowY === 'hidden' ||
+        ['hidden', 'clip'].includes(getComputedStyle(document.body).overflowY) ||
         !!document.querySelector('dialog:modal')
       if (locked) smooth.stop()
       else smooth.start()

@@ -91,11 +91,14 @@ function HeaderState({
             )
             ?.focus()
         }
-      } else if (desktopMenu) {
-        ;(desktopMenu.getAttribute('aria-controls') === 'language-options'
-          ? languageButton.current
-          : menuButton.current
-        )?.focus()
+      } else if (desktopMenu || (document.activeElement === document.body && trigger.current)) {
+        // Hiding the focused desktop control can fire blur before matchMedia's
+        // change event. Keep its trigger available to restore visible focus.
+        const mobileTrigger =
+          (desktopMenu || trigger.current)?.getAttribute('aria-controls') === 'language-options'
+            ? languageButton.current
+            : menuButton.current
+        requestAnimationFrame(() => mobileTrigger?.focus())
       }
     }
     desktop.addEventListener('change', handleBreakpoint)
@@ -109,6 +112,12 @@ function HeaderState({
   }, [])
   useEffect(() => {
     if (open === null) return
+    const previousOverflow = document.body.style.overflow
+    const previousRootOverflow = document.documentElement.style.overflow
+    // SiteMotion also observes this lock and stops any smooth-scroll momentum.
+    // Unlike hidden, clip does not create a scroll container that breaks sticky headers.
+    document.body.style.overflow = 'clip'
+    document.documentElement.style.overflow = 'hidden'
     const pointer = (event: PointerEvent) => {
       if (!header.current?.contains(event.target as Node)) setOpen(null)
     }
@@ -121,6 +130,8 @@ function HeaderState({
     document.addEventListener('pointerdown', pointer)
     document.addEventListener('keydown', key)
     return () => {
+      document.body.style.overflow = previousOverflow
+      document.documentElement.style.overflow = previousRootOverflow
       document.removeEventListener('pointerdown', pointer)
       document.removeEventListener('keydown', key)
     }
@@ -186,7 +197,7 @@ function HeaderState({
                   aria-expanded={open === index}
                   aria-controls={`mega-${index}`}
                   ref={(node) => {
-                    if (open === index) trigger.current = node
+                    if (node && open === index) trigger.current = node
                   }}
                   onClick={(event) => {
                     trigger.current = event.currentTarget
@@ -388,6 +399,7 @@ function HeaderState({
         <div
           id="language-options"
           className="et-language"
+          data-native-scroll
           onPointerEnter={cancelHoverClose}
           onPointerLeave={(event) => {
             if (canHover(event.pointerType)) scheduleHoverClose()
