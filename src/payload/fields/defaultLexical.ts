@@ -26,6 +26,20 @@ export const defaultLexical = lexicalEditor({
         return [
           ...defaultFieldsWithoutUrl,
           {
+            name: 'seoClassification',
+            type: 'select',
+            defaultValue: 'auto',
+            options: [
+              { label: 'Automatic detection', value: 'auto' },
+              { label: 'Editorial (override detection)', value: 'editorial' },
+              { label: 'Trusted editorial resource (new tab)', value: 'trusted' },
+              { label: 'Sponsored / affiliate', value: 'sponsored' },
+            ],
+            admin: {
+              description: 'Explicit classifications take priority over affiliate URL detection.',
+            },
+          },
+          {
             name: 'url',
             type: 'text',
             admin: {

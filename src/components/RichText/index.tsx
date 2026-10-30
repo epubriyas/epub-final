@@ -3,11 +3,11 @@ import {
   DefaultNodeTypes,
   SerializedBlockNode,
   SerializedLinkNode,
+  type SerializedAutoLinkNode,
   type DefaultTypedEditorState,
 } from '@payloadcms/richtext-lexical'
 import {
   JSXConvertersFunction,
-  LinkJSXConverter,
   RichText as ConvertRichText,
 } from '@payloadcms/richtext-lexical/react'
 
@@ -18,11 +18,16 @@ import type {
   CallToActionBlock as CTABlockProps,
   MediaBlock as MediaBlockProps,
   BlogInfographicBlock,
+  Media,
 } from '@/payload-types'
 import { BannerBlock } from '@/blocks/Banner/Component'
 import { BlogInfographic } from '@/blocks/BlogInfographic/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { cn } from '@/utilities/ui'
+import { seoLink, type LinkClassification } from '@/lib/seo/links'
+import { blogAffiliateRules } from '@/config/blog-links'
+import { getServerSideURL } from '@/utilities/getURL'
+import { BlogCover } from '@/components/blog/BlogCover'
 
 type NodeTypes =
   | DefaultNodeTypes
@@ -30,18 +35,67 @@ type NodeTypes =
       CTABlockProps | MediaBlockProps | BannerBlockProps | CodeBlockProps | BlogInfographicBlock
     >
 
-const internalDocToHref = ({ linkNode }: { linkNode: SerializedLinkNode }) => {
-  const { value, relationTo } = linkNode.fields.doc!
-  if (typeof value !== 'object') {
-    throw new Error('Expected value to be an object')
-  }
+const internalDocToHref = ({
+  linkNode,
+}: {
+  linkNode: SerializedLinkNode | SerializedAutoLinkNode
+}) => {
+  const { value, relationTo } = linkNode.fields.doc || {}
+  if (!value || typeof value !== 'object') return ''
   const slug = value.slug
-  return relationTo === 'posts' ? `/blog/${slug}` : `/${slug}`
+  if (typeof slug !== 'string' || !slug) return ''
+  return relationTo === 'posts'
+    ? `/blog/${encodeURIComponent(slug)}`
+    : `/${encodeURIComponent(slug)}`
+}
+
+const convertLink = ({
+  node,
+  nodesToJSX,
+}: {
+  node: SerializedLinkNode | SerializedAutoLinkNode
+  nodesToJSX: (args: {
+    nodes: (SerializedLinkNode | SerializedAutoLinkNode)['children']
+  }) => React.ReactNode
+}) => {
+  const children = nodesToJSX({ nodes: node.children })
+  const fields = node.fields as typeof node.fields & { seoClassification?: LinkClassification }
+  const href =
+    fields.linkType === 'internal' ? internalDocToHref({ linkNode: node }) : fields.url || ''
+  const attributes = seoLink(
+    href,
+    { primaryURL: getServerSideURL(), affiliateRules: blogAffiliateRules },
+    fields.seoClassification,
+    Boolean(fields.newTab),
+  )
+  return attributes.href ? <a {...attributes}>{children}</a> : <>{children}</>
 }
 
 const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) => ({
   ...defaultConverters,
-  ...LinkJSXConverter({ internalDocToHref }),
+  link: convertLink,
+  autolink: convertLink,
+  upload: ({ node }) => {
+    if (!node.value || typeof node.value !== 'object') return null
+    const media = node.value as Media
+    if (media.mimeType?.startsWith('image/')) {
+      return <BlogCover image={media} sizes="(max-width: 750px) 100vw, 760px" />
+    }
+    const attributes = seoLink(media.url || '', {
+      primaryURL: getServerSideURL(),
+      affiliateRules: blogAffiliateRules,
+    })
+    return attributes.href ? <a {...attributes}>{media.filename}</a> : null
+  },
+  heading: ({ node, nodesToJSX }) => {
+    const Tag = (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.tag) ? node.tag : 'h2') as
+      'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+    return (
+      <Tag id={(node as typeof node & { id?: string }).id}>
+        {nodesToJSX({ nodes: node.children })}
+      </Tag>
+    )
+  },
   blocks: {
     blogInfographic: ({ node }) => <BlogInfographic {...node.fields} />,
     banner: ({ node }) => <BannerBlock className="col-start-2 mb-4" {...node.fields} />,
@@ -53,6 +107,7 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
         captionClassName="mx-auto max-w-[48rem]"
         enableGutter={false}
         disableInnerContainer={true}
+        sizes="(max-width: 750px) 100vw, 760px"
       />
     ),
     code: ({ node }) => <CodeBlock className="col-start-2" {...node.fields} />,

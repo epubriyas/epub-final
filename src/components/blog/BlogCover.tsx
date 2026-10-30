@@ -12,12 +12,14 @@ export function BlogCover({
   fill = false,
   priority = false,
   fit = 'cover',
+  alt,
 }: {
   image?: Media | null
   sizes?: string
   fill?: boolean
   priority?: boolean
   fit?: 'cover' | 'contain'
+  alt?: string
 }) {
   const [failedUrl, setFailedUrl] = useState<string | null>(null)
   const url = image?.url
@@ -25,12 +27,12 @@ export function BlogCover({
     return (
       <Image
         src={url}
-        alt={image.alt || ''}
+        alt={image.alt || alt || image.filename || 'Article illustration'}
         fill={fill}
         width={fill ? undefined : image.width || 1200}
         height={fill ? undefined : image.height || 750}
         sizes={sizes}
-        priority={priority}
+        preload={priority}
         style={{
           objectFit: fit,
           objectPosition: `${image.focalX ?? 50}% ${image.focalY ?? 50}%`,

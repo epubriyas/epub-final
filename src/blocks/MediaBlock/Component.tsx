@@ -16,6 +16,7 @@ type Props = MediaBlockProps & {
   imgClassName?: string
   staticImage?: StaticImageData
   disableInnerContainer?: boolean
+  sizes?: string
 }
 
 export const MediaBlock: React.FC<Props> = (props) => {
@@ -27,6 +28,7 @@ export const MediaBlock: React.FC<Props> = (props) => {
     media,
     staticImage,
     disableInnerContainer,
+    sizes,
   } = props
 
   let caption
@@ -47,6 +49,7 @@ export const MediaBlock: React.FC<Props> = (props) => {
           imgClassName={cn('border border-border rounded-[0.8rem]', imgClassName)}
           resource={media}
           src={staticImage}
+          size={sizes}
         />
       )}
       {caption && (

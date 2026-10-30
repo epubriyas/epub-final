@@ -4,26 +4,22 @@ import { useEffect, useState } from 'react'
 import { Check, Link2, Printer } from 'lucide-react'
 import styles from './blog.module.css'
 
-export function ArticleTools() {
-  const [sections, setSections] = useState<{ id: string; title: string }[]>([])
+import type { ArticleSection } from '@/lib/seo/article-content'
+
+export function ArticleTools({
+  sections = [],
+  url,
+  title = '',
+}: {
+  sections?: ArticleSection[]
+  url?: string
+  title?: string
+}) {
   const [progress, setProgress] = useState(0)
   const [status, setStatus] = useState('')
   useEffect(() => {
     const article = document.getElementById('article-content')
     if (!article) return
-    const headings = Array.from(
-      article.querySelectorAll<HTMLElement>('.payload-richtext h2, .payload-richtext h3'),
-    )
-    const sectionFrame = requestAnimationFrame(() =>
-      setSections(
-        headings
-          .map((heading, index) => {
-            if (!heading.id) heading.id = `article-section-${index + 1}`
-            return { id: heading.id, title: heading.textContent || '' }
-          })
-          .filter((heading) => heading.title),
-      ),
-    )
     let frame = 0
     const update = () => {
       cancelAnimationFrame(frame)
@@ -40,7 +36,6 @@ export function ArticleTools() {
     window.addEventListener('resize', update)
     return () => {
       cancelAnimationFrame(frame)
-      cancelAnimationFrame(sectionFrame)
       window.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
     }
@@ -56,11 +51,30 @@ export function ArticleTools() {
           <p className={styles.eyebrow}>ON THIS PAGE</p>
           <ol>
             {sections.map((section) => (
-              <li key={section.id}>
+              <li key={section.id} data-level={section.level}>
                 <a href={`#${section.id}`}>{section.title}</a>
               </li>
             ))}
           </ol>
+        </nav>
+      )}
+      {url && (
+        <nav aria-label="Share article">
+          <a
+            href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
+            target="_blank"
+            rel="noopener"
+          >
+            Share on LinkedIn
+          </a>
+          {' · '}
+          <a
+            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`}
+            target="_blank"
+            rel="noopener"
+          >
+            Share on X
+          </a>
         </nav>
       )}
       <button
