@@ -20,7 +20,7 @@ export function TechnologyCards() {
           const Icon = icons[index]
           return (
             <Reveal key={topic.slug}>
-              <Link href={`/technology/${topic.slug}`} className="et-tech-card">
+              <Link href={`/technology#${topic.slug}`} className="et-tech-card">
                 <div className="et-tech-card-top">
                   <Icon size={28} aria-hidden="true" />
                   <span className="et-label">0{index + 1}</span>
@@ -28,7 +28,7 @@ export function TechnologyCards() {
                 <h3>{topic.title}</h3>
                 <p>{topic.description}</p>
                 <span className="et-tech-card-link">
-                  Explore capabilities <ArrowUpRight size={20} aria-hidden="true" />
+                  Read below <ArrowUpRight size={20} aria-hidden="true" />
                 </span>
               </Link>
             </Reveal>

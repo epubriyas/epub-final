@@ -359,3 +359,11 @@
     transform: none;
   }
 }
+
+.et-tech-topic {
+  scroll-margin-top: 120px;
+}
+.et-tech-topic > .et-lead {
+  max-width: 75ch;
+  margin-block: 24px 40px;
+}

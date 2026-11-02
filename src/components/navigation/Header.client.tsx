@@ -181,7 +181,7 @@ function HeaderState({
                   if (canHover(event.pointerType)) scheduleHoverClose()
                 }}
               >
-                {item.label === 'What We Do' && (
+                {item.label === 'Services' && (
                   <Link
                     className="et-nav-link"
                     href={item.href!}
@@ -193,7 +193,7 @@ function HeaderState({
                 )}
                 <button
                   aria-label={item.label}
-                  className={`et-nav-link${item.label === 'What We Do' ? ` ${handoffStyles.toggle}` : ''}`}
+                  className={`et-nav-link${item.label === 'Services' ? ` ${handoffStyles.toggle}` : ''}`}
                   aria-expanded={open === index}
                   aria-controls={`mega-${index}`}
                   ref={(node) => {
@@ -220,7 +220,7 @@ function HeaderState({
                     }
                   }}
                 >
-                  {item.label !== 'What We Do' && item.label}
+                  {item.label !== 'Services' && item.label}
                   <ChevronDown size={12} className="et-chevron" aria-hidden="true" />
                 </button>
               </div>
@@ -335,7 +335,7 @@ function HeaderState({
           item.groups && (
             <div
               key={item.label}
-              className={`et-mega${item.label === 'Company' ? ' et-mega-company' : item.label === 'What We Do' ? ' et-mega-services' : item.label === 'Resources' ? ' et-mega-resources' : item.label === 'Technology' ? ' et-mega-technology' : ''}`}
+              className={`et-mega${item.label === 'Company' ? ' et-mega-company' : item.label === 'Services' ? ' et-mega-services' : item.label === 'Resources' ? ' et-mega-resources' : item.label === 'Technology' ? ' et-mega-technology' : ''}`}
               aria-label={`${item.label} navigation`}
               id={`mega-${index}`}
               onPointerEnter={cancelHoverClose}
@@ -370,7 +370,7 @@ function HeaderState({
                     <div
                       key={group.title}
                       className={
-                        item.label === 'What We Do' && group.items.length > 6
+                        item.label === 'Services' && group.items.length > 6
                           ? 'et-mega-group-wide'
                           : undefined
                       }
@@ -432,7 +432,7 @@ function HeaderState({
               {item.groups ? (
                 <>
                   <div className={handoffStyles.mobileDisclosure}>
-                    {item.label === 'What We Do' && (
+                    {item.label === 'Services' && (
                       <Link href={item.href!} onClick={closeMobile}>
                         {item.label}
                       </Link>
@@ -443,7 +443,7 @@ function HeaderState({
                       aria-controls={`mobile-${index}`}
                       onClick={() => setMobileSection(mobileSection === index ? null : index)}
                     >
-                      {item.label !== 'What We Do' && item.label}
+                      {item.label !== 'Services' && item.label}
                       <span aria-hidden="true">{mobileSection === index ? '−' : '+'}</span>
                     </button>
                   </div>
@@ -451,7 +451,7 @@ function HeaderState({
                     <div id={`mobile-${index}`}>
                       <Link href={item.href!} onClick={closeMobile}>
                         {item.overviewLabel ??
-                          (item.label === 'What We Do'
+                          (item.label === 'Services'
                             ? 'Explore all services'
                             : 'Explore ' + item.label.toLowerCase())}{' '}
                         →

@@ -1,7 +1,7 @@
 import type { NavigationSection } from '@/types/navigation'
 export const navigation: NavigationSection[] = [
   {
-    label: 'What We Do',
+    label: 'Services',
     href: '/services',
     overviewLabel: 'Explore our services',
     description:
@@ -51,7 +51,7 @@ export const navigation: NavigationSection[] = [
     ],
   },
   {
-    label: 'Industries',
+    label: 'What we serve',
     href: '/industries',
     overviewLabel: 'Explore All Industries',
     description:
@@ -93,32 +93,6 @@ export const navigation: NavigationSection[] = [
   {
     label: 'Technology',
     href: '/technology',
-    overviewLabel: 'Explore our technology',
-    description:
-      'Explore the tools, automation and in-house development that support our publishing and content production workflows.',
-    groups: [
-      {
-        title: 'Tools & Capabilities',
-        description: 'Discover the software, file formats and production methods used to prepare print and digital content.',
-        items: [{ label: 'Production Technologies', href: '/technology/production-technologies' }],
-      },
-      {
-        title: 'Smarter Workflows',
-        description: 'See how automation and AI can support repeatable production tasks, with people guiding decisions and review.',
-        items: [{ label: 'Workflow Automation & AI', href: '/technology/workflow-automation' }],
-      },
-      {
-        title: 'Built for Production',
-        description: 'Explore internal tools and EPUBTRANS Production OS, developed around practical content production needs.',
-        items: [
-          { label: 'In-House Development', href: '/technology/in-house-development' },
-          {
-            label: 'EPUBTRANS Production OS',
-            href: '/technology/production-os',
-          },
-        ],
-      },
-    ],
   },
   {
     label: 'Resources',
