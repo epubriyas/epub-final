@@ -51,7 +51,7 @@ export const navigation: NavigationSection[] = [
     ],
   },
   {
-    label: 'What we serve',
+    label: 'Who we serve',
     href: '/industries',
     overviewLabel: 'Explore All Industries',
     description:

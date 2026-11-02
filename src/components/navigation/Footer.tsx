@@ -11,7 +11,7 @@ const footerGroups = [
     title: 'Explore',
     links: [
       ...navigation.filter((item) =>
-        ['Solutions', 'What we serve', 'Technology', 'Resources'].includes(item.label),
+        ['Solutions', 'Who we serve', 'Technology', 'Resources'].includes(item.label),
       ),
       { label: 'Our work', href: '/work' },
     ],
