@@ -1,188 +1,150 @@
+import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import Link from '@/components/i18n/LocalizedLink'
-import { ArrowLink, ContentCTA, PageHero } from '@/components/editorial/Primitives'
-import { developmentSteps, productionOS } from '@/config/technology'
-import { technologyGuides } from '@/config/technology-guides'
-import { TechnologyRelatedLinks } from '@/components/technology/TechnologyContent'
+import { ProductionConsole } from '@/components/technology/ProductionConsole'
+import { productionOS } from '@/config/technology'
 import { pageMetadata } from '@/lib/seo'
-import styles from './production-os.module.css'
-import { ArrowRight, ChevronDown } from 'lucide-react'
+import styles from '@/components/technology/technology-premium.module.css'
 
 export const metadata = pageMetadata({
-  title: productionOS.title,
-  description: productionOS.description,
+  title: 'EPUBTRANS Production OS',
+  description:
+    'Inside our Production OS initiative: an interactive concept for connected production information, clearer handoffs and specialist review.',
   alternates: { canonical: '/technology/production-os' },
 })
-
-const guide = technologyGuides['production-os']
-
-const sections = [
-  ['overview', 'Overview'],
-  ['focus-areas', 'Focus areas'],
-  ['concept-workflow', 'Concept workflow'],
-  ['development-approach', 'Development approach'],
-  ['questions', 'Questions'],
-] as const
 
 export default function ProductionOSPage() {
   return (
     <main className={styles.page}>
-      <div className="et-container et-tech-breadcrumb">
-        <ArrowLink href="/technology">Technology overview</ArrowLink>
-      </div>
-
-      <PageHero
-        eyebrow="INTERNAL INITIATIVE · IN DEVELOPMENT"
-        title={productionOS.title}
-        description="An internal initiative exploring how production workflow information, task coordination and support could come together for EPUBTRANS teams."
-      />
-
-      <nav className={`et-container ${styles.sectionNav}`} aria-label="On this page">
-        <span className="et-label">ON THIS PAGE</span>
-        {sections.map(([id, label]) => (
-          <Link href={`#${id}`} key={id}>
-            {label}
+      <section className={styles.osHero} aria-labelledby="production-os-page-title">
+        <div className={styles.wrap}>
+          <Link className={styles.back} href="/technology#production-os">
+            <ArrowLeft size={15} aria-hidden="true" /> Back to Technology
           </Link>
-        ))}
-      </nav>
-
-      <section
-        className={`et-container ${styles.overview}`}
-        id="overview"
-        aria-labelledby="production-os-overview"
-      >
-        <div className={styles.overviewCopy}>
-          <p className="et-label">WHAT IT IS</p>
-          <h2 id="production-os-overview">An internal idea, shaped around real production work.</h2>
-          <div className={styles.overviewText}>
-            {guide.explanation.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+          <div className={styles.osHeroTitle}>
+            <span className={styles.status}>
+              <span /> INTERNAL INITIATIVE · IN DEVELOPMENT
+            </span>
+            <h1 id="production-os-page-title">
+              Production OS.
+              <br />
+              <span>The work, connected.</span>
+            </h1>
+            <p>
+              An internal initiative shaped around a simple idea: production works better when the
+              context, the task and the people stay connected.
+            </p>
           </div>
-        </div>
-        <aside className={styles.statusCard} aria-label="Production OS status">
-          <p className="et-label">CURRENT STATUS</p>
-          <strong>In development</strong>
-          <dl>
-            <div>
-              <dt>Initiative</dt>
-              <dd>Internal to EPUBTRANS</dd>
-            </div>
-            <div>
-              <dt>Availability</dt>
-              <dd>Not offered as a customer product</dd>
-            </div>
-          </dl>
-        </aside>
-      </section>
-
-      <section
-        className={`et-container ${styles.focus}`}
-        id="focus-areas"
-        aria-labelledby="production-os-focus"
-      >
-        <div className={styles.sectionHeading}>
-          <p className="et-label">AREAS BEING EXPLORED</p>
-          <h2 id="production-os-focus">Four connected parts of production.</h2>
-          <p>
-            These focus areas describe the initiative’s direction while the team explores needs and
-            possible approaches.
+          <ProductionConsole />
+          <p className={styles.osCaption}>
+            Explore the stages in this illustrative concept. Production OS is in development; this
+            is not a live application or a customer product.
           </p>
         </div>
-        <div className={styles.focusGrid}>
-          {productionOS.areas.map((area, index) => (
-            <article className={styles.focusCard} key={area.title}>
-              <span className={styles.cardNumber} aria-hidden="true">
-                0{index + 1}
-              </span>
-              <h3>{area.title}</h3>
+      </section>
+      <section className={`${styles.wrap} ${styles.section}`} aria-labelledby="os-direction">
+        <div className={styles.sectionHeading}>
+          <div>
+            <p className={styles.eyebrow}>THE DIRECTION</p>
+            <h2 id="os-direction">
+              Less fragmented work.
+              <br />
+              <span>More shared context.</span>
+            </h2>
+          </div>
+          <p>
+            A production project carries requirements, files, decisions and review responsibilities.
+            Production OS explores how that information could stay connected as work moves between
+            teams.
+          </p>
+        </div>
+        <div className={styles.qualityGrid}>
+          {productionOS.areas.slice(0, 3).map((area, index) => (
+            <article key={area.title}>
+              <p className={styles.eyebrow}>0{index + 1} / DEVELOPMENT FOCUS</p>
+              <h3 style={{ marginTop: 18 }}>{area.title}</h3>
               <p>{area.description}</p>
             </article>
           ))}
         </div>
       </section>
-
-      <section
-        className={styles.workflow}
-        id="concept-workflow"
-        aria-labelledby="production-os-workflow"
-      >
-        <div className={`et-container ${styles.workflowInner}`}>
-          <div className={styles.workflowHeading}>
-            <p className="et-label">ILLUSTRATIVE · CONCEPT ONLY</p>
-            <h2 id="production-os-workflow">How production work could connect.</h2>
-            <p>{guide.example.text}</p>
+      <section className={styles.quality}>
+        <div className={`${styles.wrap} ${styles.section} ${styles.development}`}>
+          <div>
+            <p className={styles.eyebrow}>DESIGNED WITH PRODUCTION TEAMS</p>
+            <h2>
+              Start with a need.
+              <br />
+              <span>Learn from the work.</span>
+            </h2>
+            <p>
+              The initiative develops through conversations with production specialists, focused
+              prototypes and review of real operational requirements.
+            </p>
           </div>
-          <ol className={styles.workflowSteps}>
-            {productionOS.stages.map((stage, index) => (
-              <li className={styles.workflowStep} key={stage}>
-                <span className={styles.workflowNode} aria-hidden="true">
-                  0{index + 1}
-                </span>
+          <ol>
+            {[
+              {
+                title: 'Requirements before features',
+                text: 'Clarify where context is lost, which handoffs need support and what information matters.',
+              },
+              {
+                title: 'Focused concepts',
+                text: 'Explore a defined task or workflow before expanding the scope.',
+              },
+              {
+                title: 'Specialist feedback',
+                text: 'Evaluate behavior, exceptions and practical usefulness with the teams doing the work.',
+              },
+            ].map((item, index) => (
+              <li key={item.title}>
+                <span>0{index + 1}</span>
                 <div>
-                  <h3>{stage}</h3>
-                  <p>{guide.example.steps[index]}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
                 </div>
-                {index < productionOS.stages.length - 1 && (
-                  <ArrowRight className={styles.workflowArrow} size={18} aria-hidden="true" />
-                )}
               </li>
             ))}
           </ol>
-          <p className={styles.workflowNote}>
-            Production OS is under development. This sequence illustrates the current direction, not
-            released features.
-          </p>
         </div>
       </section>
-
-      <section
-        className={`et-container ${styles.development}`}
-        id="development-approach"
-        aria-labelledby="production-os-development"
-      >
-        <div className={styles.sectionHeading}>
-          <p className="et-label">HOW THE IDEA DEVELOPS</p>
-          <h2 id="production-os-development">Learn, test, refine.</h2>
-          <p>
-            The development approach starts with production specialists and moves forward through
-            feedback at each stage.
-          </p>
-        </div>
-        <ol className={styles.developmentSteps}>
-          {developmentSteps.map((step, index) => (
-            <li className={styles.developmentStep} key={step.title}>
-              <span className="et-label">0{index + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </li>
-          ))}
-        </ol>
+      <section className={`${styles.wrap} ${styles.questions}`} aria-labelledby="os-questions">
+        <p className={styles.eyebrow}>ABOUT THE INITIATIVE</p>
+        <h2 id="os-questions" style={{ marginTop: 20 }}>
+          A clear view of where we are.
+        </h2>
+        {[
+          {
+            q: 'Is Production OS available to customers?',
+            a: 'Production OS is an internal EPUBTRANS initiative currently in development. It is not offered as a customer product.',
+          },
+          {
+            q: 'What does the interactive workflow show?',
+            a: 'The interface illustrates how requirements, production tasks, review and delivery readiness could connect. The files and statuses are examples, not live project data or a confirmed feature list.',
+          },
+          {
+            q: 'Has a launch date been announced?',
+            a: 'No launch date has been announced. Priorities continue to be shaped by production needs, validation and specialist feedback.',
+          },
+        ].map((item) => (
+          <details key={item.q}>
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
       </section>
-
-      <section
-        className={`et-container ${styles.questions}`}
-        id="questions"
-        aria-labelledby="production-os-questions"
-      >
-        <div className={styles.sectionHeading}>
-          <p className="et-label">CLEAR ANSWERS</p>
-          <h2 id="production-os-questions">Common questions.</h2>
+      <section className={`${styles.wrap} ${styles.closing}`}>
+        <div>
+          <p className={styles.eyebrow}>FROM THE IDEA TO YOUR PROJECT</p>
+          <h2>
+            Let’s talk
+            <br />
+            <span>production requirements.</span>
+          </h2>
         </div>
-        <div className={styles.questionList}>
-          {guide.questions.map((item) => (
-            <details key={item.question}>
-              <summary>
-                {item.question}
-                <ChevronDown size={18} aria-hidden="true" />
-              </summary>
-              <p>{item.answer}</p>
-            </details>
-          ))}
-        </div>
+        <Link className={styles.darkButton} href="/get-a-quote">
+          Discuss your project <ArrowUpRight size={19} aria-hidden="true" />
+        </Link>
       </section>
-
-      <TechnologyRelatedLinks current="production-os" />
-      <ContentCTA />
     </main>
   )
 }
