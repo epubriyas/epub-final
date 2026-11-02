@@ -55,10 +55,11 @@ export const navigation: NavigationSection[] = [
     href: '/industries',
     overviewLabel: 'Explore All Industries',
     description:
-      'Publishing, localization and accessible digital content for specialized industries.',
+      'Find publishing, localization and content production services suited to your industry, source materials and delivery requirements.',
     groups: [
       {
         title: 'Core Industries',
+        description: 'Production support for publishing, education, technology and medical content, from source documents to print and digital editions.',
         items: [
           {
             label: 'Publishing & Scholarly Communications',
@@ -66,10 +67,15 @@ export const navigation: NavigationSection[] = [
           },
           { label: 'Education & eLearning', href: '/industries#education-elearning' },
           { label: 'Technology & Digital Content', href: '/industries#technology-digital-content' },
+          {
+            label: 'Healthcare & Medical Publishing',
+            href: '/industries#healthcare-medical-publishing',
+          },
         ],
       },
       {
         title: 'Specialized Markets',
+        description: 'Document and media production for business communications, audience engagement and inclusive access to content.',
         items: [
           {
             label: 'Corporate & Business Communications',
@@ -89,21 +95,21 @@ export const navigation: NavigationSection[] = [
     href: '/technology',
     overviewLabel: 'Explore our technology',
     description:
-      'Production expertise, practical automation and development built around the work.',
+      'Explore the tools, automation and in-house development that support our publishing and content production workflows.',
     groups: [
       {
-        title: 'Production Technologies',
-        description: 'The tools and formats behind your content.',
+        title: 'Tools & Capabilities',
+        description: 'Discover the software, file formats and production methods used to prepare print and digital content.',
         items: [{ label: 'Production Technologies', href: '/technology/production-technologies' }],
       },
       {
-        title: 'Workflow Automation & AI',
-        description: 'Thoughtful improvements with people at the centre.',
+        title: 'Smarter Workflows',
+        description: 'See how automation and AI can support repeatable production tasks, with people guiding decisions and review.',
         items: [{ label: 'Workflow Automation & AI', href: '/technology/workflow-automation' }],
       },
       {
-        title: 'In-House Development',
-        description: 'Internal tools shaped by production needs.',
+        title: 'Built for Production',
+        description: 'Explore internal tools and EPUBTRANS Production OS, developed around practical content production needs.',
         items: [
           { label: 'In-House Development', href: '/technology/in-house-development' },
           {
@@ -118,16 +124,16 @@ export const navigation: NavigationSection[] = [
     label: 'Resources',
     href: '/resources',
     overviewLabel: 'Explore our resources',
-    description: 'Ideas, practical guidance and approved project stories for your next chapter.',
+    description: 'Explore publishing insights, project stories and production samples to help plan your next project.',
     groups: [
       {
-        title: 'Blog',
-        description: 'Ideas and perspectives for publishing and localization.',
+        title: 'Editorial Insights',
+        description: 'Read practical guidance on publishing workflows, localization and digital content preparation.',
         items: [{ label: 'Blog', href: '/blog' }],
       },
       {
-        title: 'Case Studies',
-        description: 'Explore our work across content, languages and learning.',
+        title: 'Project Stories',
+        description: 'Explore examples of our work across publishing, localization, learning and accessibility.',
         items: [
           { label: 'Publishing', href: '/work?category=publishing' },
           { label: 'Localization', href: '/work?category=localization' },
@@ -136,8 +142,8 @@ export const navigation: NavigationSection[] = [
         ],
       },
       {
-        title: 'Portfolio',
-        description: 'Explore our publishing and learning samples.',
+        title: 'Selected Work',
+        description: 'Browse publication layouts, digital editions and learning samples to see our production work in context.',
         items: [{ label: 'View Portfolio', href: '/work' }],
       },
     ],
@@ -147,25 +153,25 @@ export const navigation: NavigationSection[] = [
     href: '/about-us',
     overviewLabel: 'Discover EPUBTRANS',
     description:
-      'Company expertise, international production collaboration and career opportunities.',
+      'Get to know our company, explore how we collaborate with clients, and find your next career opportunity.',
     groups: [
       {
-        title: 'About EPUBTRANS',
-        description: 'Company profile, expertise and working approach.',
+        title: 'Our Company',
+        description: 'Discover our publishing expertise, production capabilities and approach to client projects.',
         items: [
           { label: 'About EPUBTRANS', href: '/about-us' },
         ],
       },
       {
-        title: 'Global Delivery & Collaboration',
-        description: 'Location, international projects and language requirements.',
+        title: 'Working Together',
+        description: 'Explore how we coordinate international projects, language requirements and production delivery.',
         items: [
           { label: 'Global Delivery & Collaboration', href: '/company/global-presence' },
         ],
       },
       {
-        title: 'Careers',
-        description: 'Opportunities, roles and applications.',
+        title: 'Join Our Team',
+        description: 'Explore opportunities to contribute your skills in publishing, language and digital content production.',
         items: [
           { label: 'Careers', href: '/company/careers' },
         ],

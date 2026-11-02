@@ -100,9 +100,9 @@ test('company menu presents three columns and navigates to company content', asy
   const menu = page.locator('.et-mega-company')
   await expect(menu.getByRole('link', { name: 'Discover EPUBTRANS' })).toBeFocused()
   await expect(menu.getByRole('heading')).toHaveText([
-    'About EPUBTRANS',
-    'Global Delivery & Collaboration',
-    'Careers',
+    'Our Company',
+    'Working Together',
+    'Join Our Team',
   ])
   await expect(menu.getByRole('link')).toHaveCount(4)
   const columns = await menu
@@ -135,11 +135,11 @@ test('mobile company groups lead to the careers page without horizontal overflow
   await expect(dialog.getByRole('link', { name: 'Discover EPUBTRANS' })).toBeVisible()
   const companySection = dialog.locator(`#${sectionId}`)
   await expect(companySection.locator('summary')).toHaveText([
-    'About EPUBTRANS',
-    'Global Delivery & Collaboration',
-    'Careers',
+    'Our Company',
+    'Working Together',
+    'Join Our Team',
   ])
-  await companySection.locator('summary').getByText('Careers', { exact: true }).click()
+  await companySection.locator('summary').getByText('Join Our Team', { exact: true }).click()
   await dialog
     .locator(`#${sectionId}`)
     .evaluate((element) => element.scrollIntoView({ block: 'start' }))

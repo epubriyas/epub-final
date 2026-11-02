@@ -1,4 +1,5 @@
 import { landingMetadata } from '@/lib/landing-seo'
+import Image from 'next/image'
 import Link from '@/components/i18n/LocalizedLink'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { ArrowLink } from '@/components/editorial/Primitives'
@@ -12,6 +13,7 @@ import { HeroHeadline } from '@/components/home/HeroHeadline'
 import { PremiumWorkflow } from '@/components/home/PremiumWorkflow'
 import { ContentTransformationInfographic } from '@/components/home/HomeInfographics'
 import heroStyles from '@/components/home/home-hero-layout.module.css'
+import corporateStyles from '@/components/home/home-corporate.module.css'
 export const dynamic = 'force-dynamic'
 
 export async function generateMetadata() {
@@ -143,6 +145,82 @@ export default async function HomePage() {
           </div>
         </Reveal>
       </section>
+      <section className={corporateStyles.section} aria-labelledby="production-capabilities-title">
+        <div className="et-container">
+          <div className={corporateStyles.heading}>
+            <div>
+              <p className="et-label">PUBLISHING / LANGUAGE / DIGITAL CONTENT</p>
+              <h2 id="production-capabilities-title">
+                Production support built around your content
+              </h2>
+            </div>
+            <p>
+              From manuscript preparation to multilingual delivery, bring the right services
+              together around your source files, publishing specifications and review process.
+            </p>
+          </div>
+          <div className={corporateStyles.grid}>
+            {[
+              {
+                title: 'Editorial & publication production',
+                image: '/images/services/hero-copyediting.webp',
+                alt: 'Printed manuscript being reviewed with editorial annotations',
+                description:
+                  'Prepare books, journals and reports with copyediting, proofreading and typesetting. Establish house style, reference treatment and proof stages before production begins.',
+                detail: 'Books · Journals · Reports',
+                href: '/services#publishing-editorial',
+                link: 'Explore publishing services',
+              },
+              {
+                title: 'Multilingual document production',
+                image: '/images/services/hero-desktop-publishing.webp',
+                alt: 'Document layout being reviewed alongside its digital publication files',
+                description:
+                  'Coordinate translation and desktop publishing for your target languages. Plan for terminology, text expansion, fonts and layout requirements across editable documents and final outputs.',
+                detail: 'Translation · Layout · Language review',
+                href: '/services#localization-dtp',
+                link: 'Explore multilingual services',
+              },
+              {
+                title: 'Digital editions & structured content',
+                image: '/images/services/hero-data-conversion.webp',
+                alt: 'Printed source documents beside a workstation used for digital conversion',
+                description:
+                  'Transform supplied content into EPUB, XML and editable formats. Define document structure, navigation and format-specific checks, with accessibility work scoped to the required deliverables.',
+                detail: 'EPUB · XML · Document conversion',
+                href: '/services#ebook-xml',
+                link: 'Explore digital content services',
+              },
+            ].map((capability) => (
+              <article className={corporateStyles.card} key={capability.title}>
+                <div className={corporateStyles.image}>
+                  <Image
+                    src={capability.image}
+                    alt={capability.alt}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 33vw"
+                  />
+                </div>
+                <p className={corporateStyles.detail}>{capability.detail}</p>
+                <h3>{capability.title}</h3>
+                <p className={corporateStyles.description}>{capability.description}</p>
+                <ArrowLink href={capability.href}>{capability.link}</ArrowLink>
+              </article>
+            ))}
+          </div>
+          <div className={corporateStyles.brief}>
+            <div>
+              <h3>Start with a clear production brief</h3>
+              <p>
+                Share representative files, approximate volume, target languages and delivery
+                formats. We’ll review the requirements and clarify scope, dependencies and review
+                responsibilities.
+              </p>
+            </div>
+            <ArrowLink href="/get-a-quote">Discuss your requirements</ArrowLink>
+          </div>
+        </div>
+      </section>
       <section className="et-services-section">
         <div className="et-container">
           <div className="et-section-head">
@@ -232,25 +310,17 @@ export default async function HomePage() {
           <p>{content.portfolio.note}</p>
           <div className="et-work-layout" data-home-motion="work">
             <Link href={content.portfolio.cta.href} className="et-work-primary">
-              <div className="et-work-art" aria-hidden="true">
-                <div>
-                  <small>FORM & LANGUAGE</small>
-                  <b>
-                    The art
-                    <br />
-                    of a page.
-                  </b>
-                  <span>EPUBTRANS / TYPESETTING</span>
+              {samples[0].thumbnail && (
+                <div className={corporateStyles.sampleImage}>
+                  <Image
+                    src={samples[0].thumbnail.url}
+                    unoptimized
+                    alt={samples[0].thumbnail.alt || samples[0].title}
+                    fill
+                    sizes="(max-width: 700px) 100vw, 60vw"
+                  />
                 </div>
-                <div>
-                  <small>CONTENT & STRUCTURE</small>
-                  <b>
-                    क<br />
-                    Aa
-                  </b>
-                  <span>PRINT TO DIGITAL</span>
-                </div>
-              </div>
+              )}
               <p className="et-label">{samples[0].category}</p>
               <h3>{samples[0].title}</h3>
               <p>{samples[0].description}</p>

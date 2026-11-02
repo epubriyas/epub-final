@@ -19,19 +19,19 @@ const industryGroups = [
     number: '01',
     id: 'core-industries',
     title: 'Core Industries',
-    description: 'Publishing, education and technology content prepared for readers and users.',
+    description: 'Publishing, learning, technology and medical content prepared for print and digital use.',
     industries: [
       {
         number: '01',
         id: 'publishing-scholarly-communications',
         title: 'Publishing & Scholarly Communications',
         description:
-          'For publishers, research & academia teams, and scholarly journals: eBook production, XML conversion, editing, typesetting and digital publishing.',
+          'Turn manuscripts into publication-ready books, journals and digital editions. We support publishers, scholarly societies and research teams with editorial preparation, typesetting, EPUB production and structured XML.',
         image: '/images/services/hero-typesetting.webp',
         imageAlt: 'A publication layout reviewed against printed book proofs',
         materials: ['Books and monographs', 'Journal articles', 'Reference publications'],
         approach:
-          'Bring editorial preparation, page composition and digital editions into a coordinated production brief. Agree the house style, reference treatment and required outputs before work begins.',
+          'Build a consistent reading experience across print and digital formats. The production brief brings together house style, heading hierarchy, tables, figures, citations and reference treatment. Agree proof stages and output specifications up front so editorial corrections can be carried through the commissioned editions.',
         services: [
           { label: 'Copyediting', href: '/copyediting-services' },
           { label: 'Typesetting', href: '/typesetting-services' },
@@ -45,12 +45,12 @@ const industryGroups = [
         id: 'education-elearning',
         title: 'Education & eLearning',
         description:
-          'For education and learning teams: eLearning production, course localization, multilingual learning content and accessible educational materials.',
+          'Prepare courses, training resources and learner materials for new languages and delivery formats. We help education providers and learning teams coordinate localized text, presentation layouts, narration and accessibility-related production.',
         image: '/images/services/hero-elearning-localization.webp',
         imageAlt: 'A multilingual content team reviewing learning material on a tablet',
         materials: ['Course and module scripts', 'Training presentations', 'Learner resources'],
         approach:
-          'Prepare learning content for its intended language, format and audience. Review source files, terminology, on-screen text and media requirements together so the scope reflects the complete learning experience.',
+          'Plan the complete learning asset, from on-screen instructions to supporting handouts. Review editable source files, course terminology, text expansion, narration scripts and subtitle requirements together. Confirm the target platform, file formats and review stages before production so language and layout decisions support the intended learning experience.',
         services: [
           { label: 'eLearning Localization', href: '/elearning-localization-services' },
           { label: 'Translation', href: '/translation-services' },
@@ -64,7 +64,7 @@ const industryGroups = [
         id: 'technology-digital-content',
         title: 'Technology & Digital Content',
         description:
-          'For technology teams: technical documentation, digital content conversion and localization for multilingual software-related content.',
+          'Make technical information easier to maintain, translate and publish. We support technology teams with document conversion, multilingual formatting and production for user guides, product documentation and structured content collections.',
         image: '/images/services/hero-data-conversion.webp',
         imageAlt: 'Source documents being digitized and reviewed alongside their digital files',
         materials: [
@@ -73,7 +73,7 @@ const industryGroups = [
           'Structured document collections',
         ],
         approach:
-          'Align language, document structure and file requirements across technical content. Assess source quality, terminology and conversion rules before selecting the production workflow.',
+          'Keep product terminology, navigation and document structure consistent across versions. Assess source quality, heading levels, tables, screenshots, cross-references and conversion rules before work begins. Agree how product names, interface text and subsequent revisions will be handled across the required languages and output formats.',
         services: [
           { label: 'Data Conversion', href: '/data-conversion-services' },
           { label: 'Translation', href: '/translation-services' },
@@ -81,6 +81,32 @@ const industryGroups = [
           { label: 'Proofreading', href: '/proofreading-services' },
         ],
         serviceHref: '/services#localization-dtp',
+      },
+      {
+        number: '04',
+        id: 'healthcare-medical-publishing',
+        title: 'Healthcare & Medical Publishing',
+        description:
+          'For medical publishers, healthcare organizations, research institutions, and life sciences teams: professional document preparation, medical publishing production, translation, typesetting, and digital content services.',
+        image: '/images/services/hero-healthcare-medical-publishing.webp',
+        imageAlt:
+          'Medical textbook and research journal proofs beside a laptop displaying a publication layout',
+        materials: [
+          'Medical books and textbooks',
+          'Medical journal articles and research publications',
+          'Healthcare educational and training materials',
+        ],
+        approach:
+          'Support medical and healthcare content through structured editorial preparation, accurate document formatting, multilingual production, and digital publishing workflows. Define terminology, source requirements, formatting specifications, and review responsibilities before production begins. Include reference style, tables, figure captions and approved terminology in the brief, with subject-matter review responsibilities agreed with your team.',
+        services: [
+          { label: 'Typesetting', href: '/typesetting-services' },
+          { label: 'Translation', href: '/translation-services' },
+          { label: 'Desktop Publishing', href: '/desktop-publishing-services' },
+          { label: 'Proofreading', href: '/proofreading-services' },
+          { label: 'eBook Creation', href: '/ebook-creation-services' },
+          { label: 'Accessibility', href: '/accessibility-services' },
+        ],
+        serviceHref: '/services#publishing-editorial',
       },
     ],
   },
@@ -91,11 +117,11 @@ const industryGroups = [
     description: 'Business, media and accessible content shaped for wider audiences.',
     industries: [
       {
-        number: '04',
+        number: '05',
         id: 'corporate-business-communications',
         title: 'Corporate & Business Communications',
         description:
-          'Prepare business reports, corporate presentations and business documents for multilingual communication.',
+          'Present business information clearly across documents, presentations and language versions. We support corporate teams with translation, desktop publishing, graphic design and proofreading for internal and external communications.',
         image: '/images/services/hero-desktop-publishing.webp',
         imageAlt: 'A desktop publishing specialist checking a multilingual document layout',
         materials: [
@@ -104,7 +130,7 @@ const industryGroups = [
           'Brand and business documents',
         ],
         approach:
-          'Keep terminology, visual hierarchy and document presentation consistent across business materials. Define brand guidance, language versions and review responsibilities in one practical production brief.',
+          'Apply approved brand guidelines to typography, charts, tables and page layouts while allowing for translated text expansion. Establish the source version, terminology, editable-file requirements and approval contacts before production. Coordinate revisions across language versions so the delivery package reflects the agreed content and presentation.',
         services: [
           { label: 'Translation', href: '/translation-services' },
           { label: 'Desktop Publishing', href: '/desktop-publishing-services' },
@@ -114,11 +140,11 @@ const industryGroups = [
         serviceHref: '/services#localization-dtp',
       },
       {
-        number: '05',
+        number: '06',
         id: 'media-entertainment',
         title: 'Media & Entertainment',
         description:
-          'Make audiovisual content ready for more audiences with subtitling, transcription, voiceover, multimedia localization and accessibility.',
+          'Adapt interviews, video programmes and narrated content for wider audiences. We support media teams with transcription, translation, subtitling and voiceover production based on the source recording and intended release format.',
         image: '/images/services/hero-subtitling.webp',
         imageAlt: 'An audiovisual editor reviewing subtitles against a video timeline',
         materials: [
@@ -127,7 +153,7 @@ const industryGroups = [
           'Audio and subtitle assets',
         ],
         approach:
-          'Plan language and media requirements around the source recording and its intended use. Timing, script readiness, pronunciation and review arrangements are assessed for the commissioned services.',
+          'Align the language workflow with the recording, script and delivery specification. Confirm speaker identification, timing, pronunciation guidance, subtitle treatment and audio requirements for the commissioned services. Review source quality and script readiness early, then agree linguistic and media review stages before final files are prepared.',
         services: [
           { label: 'Subtitling', href: '/subtitling-services' },
           { label: 'Transcription', href: '/transcription-services' },
@@ -137,16 +163,16 @@ const industryGroups = [
         serviceHref: '/services#elearning-multimedia',
       },
       {
-        number: '06',
+        number: '07',
         id: 'accessibility-inclusive-content',
         title: 'Accessibility & Inclusive Content',
         description:
-          'Prepare EPUB, PDF, Word, PowerPoint and InDesign documents for accessible, inclusive digital publishing.',
+          'Make document structure part of your publishing workflow. We support accessibility preparation and remediation for EPUB, PDF, Word, PowerPoint and InDesign-based projects, with requirements defined for each source format and deliverable.',
         image: '/images/services/hero-accessibility.webp',
         imageAlt: 'A specialist reviewing document structure and reading order on screen',
         materials: ['Digital publications', 'Reports and documents', 'Presentation materials'],
         approach:
-          'Address reading order, document structure and other agreed accessibility requirements within the relevant format. Target criteria, assessment methods and remediation boundaries are established for each project.',
+          'Review heading structure, reading order, navigation, tables, links and image descriptions against the agreed project requirements. Assess the available source files before defining remediation tasks and format-specific checks. Confirm target criteria, assessment methods, content-owner input and any specialist validation separately, so the scope and review responsibilities are clear.',
         services: [
           { label: 'Accessibility', href: '/accessibility-services' },
           { label: 'eBook Creation', href: '/ebook-creation-services' },
