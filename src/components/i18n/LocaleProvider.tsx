@@ -61,11 +61,7 @@ export function LocaleProvider({
     // Next's cached initial canonical may already contain a fragment. Keep the
     // exact requested fragment instead of allowing the cache to append it twice.
     if (window.location.hash !== target.hash) {
-      window.history.replaceState(
-        null,
-        '',
-        target.pathname + target.search + target.hash,
-      )
+      window.history.replaceState(null, '', target.pathname + target.search + target.hash)
       window.dispatchEvent(new Event('epubtrans:locale-navigation'))
     }
   }, [pathname])
@@ -123,6 +119,8 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
       incomplete = false
     const normalize = (value: string) => value.replace(/\s+/g, ' ').trim()
     const allowed = (parent: Element | null) => parent && !parent.closest(excluded)
+    const attributeAllowed = (element: Element) =>
+      !element.closest(excluded.replace('textarea, ', ''))
     const observer = new MutationObserver((changes) => {
       if (
         !changes.some(({ target }) =>
@@ -148,6 +146,7 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
         return
       }
       busy = true
+      incomplete = false
       pending = false
       const nodes: Text[] = []
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT)
@@ -174,7 +173,7 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
       for (const element of document.body.querySelectorAll(
         '[aria-label], [placeholder], [title], [alt]',
       )) {
-        if (!allowed(element)) continue
+        if (!attributeAllowed(element)) continue
         for (const name of ['aria-label', 'placeholder', 'title', 'alt']) {
           const text = element.getAttribute(name)
           if (!text || !/[a-zA-Z]/.test(text)) continue
@@ -266,15 +265,12 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
           if (!result.translations || typeof result.translations !== 'object')
             throw new Error('Invalid translation response')
           for (const text of batch) {
-            seen.add(text)
             const value = result.translations[text]
-            if (
-              typeof value === 'string' &&
-              value.trim() &&
-              (normalize(value) !== normalize(text) || fixedTranslation(text, locale) === value)
-            )
+            if (typeof value === 'string' && value.trim() && value.length <= 20000) {
+              // Names and technical terms can legitimately remain unchanged.
               cache.set(text, value)
-            else incomplete = true
+              seen.add(text)
+            } else incomplete = true
           }
           if (result.partial) incomplete = true
           if (!active) return
@@ -335,23 +331,20 @@ function PageTranslation({ locale, configured }: { locale: string; configured: b
       document.documentElement.dir = 'ltr'
     }
   }, [locale, configured, attempt])
-  if (locale === 'en') return null
+  if (locale === 'en' || status === 'ready') return null
   const missing = !configured || status === 'failed'
+  const message = missing
+    ? 'Translation unavailable. English content is shown.'
+    : status === 'partial'
+      ? 'Some text could not be translated and remains in English.'
+      : 'Translating this page…'
   return (
     <aside className="et-translation-status" role="status" data-no-translate lang="en" dir="ltr">
       <span lang={locale}>{getLanguage(locale)?.nativeName}</span>
-      <span>
-        {missing
-          ? 'Translation unavailable. English content is shown.'
-          : status === 'partial'
-            ? 'Some text could not be translated and remains in English.'
-            : status === 'working' || status === 'idle'
-              ? 'Translating this page…'
-              : 'Automatic reading preview, not a reviewed translation. English is the original.'}
-      </span>
+      <span lang={locale}>{fixedTranslation(message, locale) || message}</span>
       {configured && (status === 'failed' || status === 'partial') && (
         <button type="button" onClick={() => setAttempt((value) => value + 1)}>
-          Retry translation
+          {fixedTranslation('Retry translation', locale) || 'Retry translation'}
         </button>
       )}
       <NextLink

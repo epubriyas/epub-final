@@ -5,6 +5,8 @@ import { usePathname } from 'next/navigation'
 import { ArrowUp, ArrowUpRight, MessageCircle, RotateCcw, Square, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from '@/components/i18n/LocalizedLink'
+import { useSiteLocale } from '@/components/i18n/LocaleProvider'
+import { fixedTranslation } from '@/lib/i18n/fixed-translations'
 import type { AssistantReply } from '@/lib/assistant'
 import { companyWhatsApp } from '@/config/contact'
 import { serviceSlugForPath } from '@/config/service-paths'
@@ -56,6 +58,7 @@ function AssistantBrandMark() {
   )
 }
 export function EpubtransAssistant({ email, phone }: { email: string; phone: string }) {
+  const locale = useSiteLocale()
   const [launcherCompact, setLauncherCompact] = useState(false)
   const [hoverReplay, setHoverReplay] = useState(false)
   const hoverReplayTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -273,7 +276,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
     </button>
   )
   return (
-    <div className="et-assistant" data-no-translate>
+    <div className="et-assistant">
       {dock ? createPortal(launcherButton, dock) : launcherButton}
       <dialog
         ref={dialog}
@@ -333,7 +336,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
                 href={companyWhatsApp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                title={`Message our team: ${companyWhatsApp.number}`}
+                title="Message our team"
                 aria-label="Message EPUBTRANS on WhatsApp (opens in a new tab)"
               >
                 <MessageCircle size={13} aria-hidden="true" /> WhatsApp{' '}
@@ -380,7 +383,14 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
                   <p>
                     {message.role === 'assistant' ? (
                       message.text ? (
-                        <AssistantText text={message.text} onNavigate={close} />
+                        <AssistantText
+                          text={
+                            message.id === 0
+                              ? fixedTranslation(message.text, locale) || message.text
+                              : message.text
+                          }
+                          onNavigate={close}
+                        />
                       ) : (
                         <span className="et-assistant-writing">Writing a reply…</span>
                       )
@@ -413,7 +423,7 @@ export function EpubtransAssistant({ email, phone }: { email: string; phone: str
               </div>
             )}
             {error && (
-              <div className="et-assistant-error" role="alert">
+              <div className="et-assistant-error" role="alert" data-private>
                 <p>{error}</p>
                 <button
                   type="button"

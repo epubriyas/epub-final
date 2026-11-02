@@ -1,12 +1,16 @@
 'use client'
 import { useId } from 'react'
 import { ArrowUpRight, Check, Globe2 } from 'lucide-react'
-import { getLanguage, type SiteLanguage } from '@/config/languages'
+import { getLanguage, languages, type SiteLanguage } from '@/config/languages'
 import { useLocaleNavigation, useSiteLocale } from './LocaleProvider'
 import { saveLanguagePreference } from '@/lib/i18n/preference'
 
-const indianCodes = ['hi', 'ta', 'te', 'bn']
-const globalCodes = ['fr', 'es', 'de', 'ar', 'zh-CN', 'ja']
+const indianCodes = languages
+  .filter((language) => language.group === 'Indian')
+  .map((language) => language.code)
+const globalCodes = languages
+  .filter((language) => language.group === 'Global' && language.code !== 'en')
+  .map((language) => language.code)
 export function LanguageSelector({ onSelect }: { onSelect?: (changed: boolean) => void }) {
   const id = useId(),
     locale = useSiteLocale(),
@@ -21,6 +25,7 @@ export function LanguageSelector({ onSelect }: { onSelect?: (changed: boolean) =
     const selected = locale === language.code
     return (
       <button
+        data-no-translate
         key={language.code}
         type="button"
         className="et-locale-option"
@@ -46,26 +51,18 @@ export function LanguageSelector({ onSelect }: { onSelect?: (changed: boolean) =
     )
   }
   return (
-    <section
-      className="et-language-selector"
-      aria-labelledby={`${id}-title`}
-      data-no-translate
-      lang="en"
-      dir="ltr"
-    >
+    <section className="et-language-selector" aria-labelledby={`${id}-title`} lang="en" dir="ltr">
       <div className="et-locale-heading">
         <p className="et-label">
           <Globe2 size={14} aria-hidden="true" /> LANGUAGE
         </p>
         <h2 id={`${id}-title`}>Choose your language.</h2>
-        <p>
-          English is the original. Other choices provide an automatic reading preview; some content
-          may remain in English.
-        </p>
+        <p>Choose a language to read this website.</p>
       </div>
       <button
         type="button"
         className="et-locale-default"
+        data-no-translate
         aria-pressed={locale === 'en'}
         aria-label="English, default language"
         onClick={() => choose('en')}
@@ -107,7 +104,7 @@ export function LanguageSelector({ onSelect }: { onSelect?: (changed: boolean) =
       </div>
       <div className="et-locale-note">
         <span className="et-locale-dot" aria-hidden="true" />
-        <p>Your choice follows language-prefixed links. Direct English links stay in English.</p>
+        <p>Your selected language follows you as you browse.</p>
       </div>
     </section>
   )

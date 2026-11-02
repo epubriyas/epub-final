@@ -1,9 +1,22 @@
 import { createHash } from 'node:crypto'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { translateWithMyMemory } from './mymemory'
+import { translateWithoutKey } from './free'
+import { translateWithGoogle } from './google'
 import { fixedTranslation } from './fixed-translations'
+import bundled from './bundled.json'
+const bundledCopy: Record<string, Record<string, string>> = bundled
 const memory = new Map<string, string>()
+async function saveTranslation(directory: string, id: string, text: string) {
+  memory.set(id, text)
+  try {
+    await mkdir(directory, { recursive: true })
+    await writeFile(path.join(directory, id + '.txt'), text, { mode: 0o600 })
+  } catch {
+    // Read-only hosts can still serve successful translations from memory.
+    // Bundled translations provide persistence across deployments.
+  }
+}
 let day = new Date().toISOString().slice(0, 10),
   characters = 0
 const decode = (text: string) =>
@@ -19,13 +32,19 @@ export async function translatePublicText(
   texts: string[],
   locale: string,
 ): Promise<(string | undefined)[]> {
-  const key = process.env.GOOGLE_TRANSLATE_API_KEY
+  const useCloud = process.env.TRANSLATION_PROVIDER === 'google-cloud'
   const directory = path.resolve(process.env.TRANSLATION_CACHE_DIR || '.translation-cache')
-  const ids = texts.map((text) => createHash('sha256').update(`${locale}\0${text}`).digest('hex'))
+  const ids = texts.map((text) =>
+    createHash('sha256')
+      .update(`${useCloud ? 'google-v1' : 'free-google-v1'}\0${locale}\0${text}`)
+      .digest('hex'),
+  )
   const values = await Promise.all(
     ids.map(async (id, index) => {
       const fixed = fixedTranslation(texts[index], locale)
       if (fixed) return fixed
+      const saved = bundledCopy[locale]?.[texts[index]]
+      if (saved) return saved
       if (memory.has(id)) return memory.get(id)
       try {
         const text = await readFile(path.join(directory, id + '.txt'), 'utf8')
@@ -51,25 +70,21 @@ export async function translatePublicText(
     if (characters + count > limit) throw new Error('Translation usage limit reached')
     characters += count
     let translated: { translatedText: string }[]
-    if (!key) {
+    if (!useCloud) {
       translated = new Array(missing.length)
       let next = 0
       let failure: unknown
       await Promise.all(
         Array.from({ length: Math.min(4, missing.length) }, async () => {
-          while (next < missing.length && !failure) {
+          while (next < missing.length) {
             const index = next++
             try {
-              const value = await translateWithMyMemory(missing[index].text, locale)
+              const value = await translateWithoutKey(missing[index].text, locale)
               const text = decode(value)
               translated[index] = { translatedText: value }
               values[missing[index].index] = text
               // Persist each successful segment so retries do not spend quota again.
-              await mkdir(directory, { recursive: true })
-              memory.set(ids[missing[index].index], text)
-              await writeFile(path.join(directory, ids[missing[index].index] + '.txt'), text, {
-                mode: 0o600,
-              })
+              await saveTranslation(directory, ids[missing[index].index], text)
             } catch (error) {
               failure = error
             }
@@ -79,40 +94,19 @@ export async function translatePublicText(
       // A failed segment must not discard the successfully translated segments.
       if (failure && values.every((value) => value === undefined)) throw failure
     } else {
-      const response = await fetch('https://translation.googleapis.com/language/translate/v2', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': key },
-        body: JSON.stringify({
-          q: missing.map((item) => item.text),
-          source: 'en',
-          target: locale,
-          format: 'text',
-        }),
-        signal: AbortSignal.timeout(20000),
-      })
-      if (!response.ok) throw new Error('Translation provider unavailable')
-      const result = (await response.json()) as {
-        data?: { translations?: { translatedText: string }[] }
-      }
-      const values = result.data?.translations
-      if (
-        !values ||
-        values.length !== missing.length ||
-        values.some(
-          (item) => typeof item.translatedText !== 'string' || item.translatedText.length > 20000,
+      translated = (
+        await translateWithGoogle(
+          missing.map((item) => item.text),
+          locale,
         )
-      )
-        throw new Error('Invalid translation response')
-      translated = values
+      ).map((translatedText) => ({ translatedText }))
     }
-    await mkdir(directory, { recursive: true })
     await Promise.all(
       missing.map(async (item, index) => {
-        if (!translated[index]) return
+        if (!translated[index] || values[item.index] !== undefined) return
         const text = decode(translated[index].translatedText)
         values[item.index] = text
-        memory.set(ids[item.index], text)
-        await writeFile(path.join(directory, ids[item.index] + '.txt'), text, { mode: 0o600 })
+        await saveTranslation(directory, ids[item.index], text)
       }),
     )
     if (memory.size > 20000) memory.clear()

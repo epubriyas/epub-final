@@ -3,6 +3,7 @@
 /* Cinematic hero; the existing theme tokens remain the source of every UI color. */
 .hero {
   isolation: isolate;
+  padding-top: 0;
 }
 .stage {
   --background-primary: #082d31;
@@ -20,13 +21,12 @@
   color: var(--text-primary);
   position: relative;
   isolation: isolate;
-  width: calc(100% + var(--gutter) * 2);
-  margin-inline: calc(-1 * var(--gutter));
+  width: 100%;
   min-height: calc(100svh - 77px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px var(--gutter) 140px;
+  padding: clamp(100px, 12svh, 160px) var(--gutter) clamp(110px, 14svh, 180px);
 }
 .hero .meta {
   position: absolute;
@@ -63,7 +63,7 @@
   pointer-events: none;
 }
 .hero .copy {
-  width: min(100%, 1200px);
+  width: min(100%, 1800px);
   margin-inline: auto;
   padding: 0;
   text-align: center;
@@ -72,7 +72,7 @@
 .hero .copy h1 {
   font-family: inherit;
   font-style: normal;
-  font-size: clamp(42px, 4.4vw, 64px);
+  font-size: clamp(42px, 4.4vw, 96px);
   font-weight: 600;
   line-height: 1.16;
   letter-spacing: -0.035em;

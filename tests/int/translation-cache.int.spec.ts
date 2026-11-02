@@ -4,13 +4,13 @@ const { provider, readFile, writeFile } = vi.hoisted(() => ({
   readFile: vi.fn(),
   writeFile: vi.fn(),
 }))
-vi.mock('@/lib/i18n/mymemory', () => ({ translateWithMyMemory: provider }))
+vi.mock('@/lib/i18n/free', () => ({ translateWithoutKey: provider }))
 vi.mock('node:fs/promises', () => ({ mkdir: vi.fn(), readFile, writeFile }))
 beforeEach(() => {
   vi.resetModules()
   vi.clearAllMocks()
   readFile.mockRejectedValue(new Error('Not cached'))
-  vi.stubEnv('GOOGLE_TRANSLATE_API_KEY', '')
+  vi.stubEnv('TRANSLATION_PROVIDER', 'free')
 })
 afterEach(() => vi.unstubAllEnvs())
 
@@ -45,4 +45,17 @@ it('returns and caches successful segments even if another segment fails', async
     'Texte public B',
   ])
   expect(provider.mock.calls.filter(([text]) => text === 'Public text A')).toHaveLength(1)
+})
+
+it('returns successful translations on a read-only hosting filesystem', async () => {
+  writeFile.mockRejectedValueOnce(new Error('EROFS'))
+  provider.mockResolvedValue('Texte public sans disque')
+  const { translatePublicText } = await import('@/lib/i18n/translate')
+  expect(await translatePublicText(['New public text without disk'], 'fr')).toEqual([
+    'Texte public sans disque',
+  ])
+  expect(await translatePublicText(['New public text without disk'], 'fr')).toEqual([
+    'Texte public sans disque',
+  ])
+  expect(provider).toHaveBeenCalledTimes(1)
 })

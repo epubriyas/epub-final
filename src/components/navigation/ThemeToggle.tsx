@@ -7,7 +7,7 @@ export function ThemeToggle({ compact = false }: { compact?: boolean }) {
   const { theme, preference, setTheme, ready } = useTheme()
   if (compact)
     return (
-      <div className="et-theme-toggle-compact" data-no-translate title="Choose light or dark theme">
+      <div className="et-theme-toggle-compact" title="Choose light or dark theme">
         {theme === 'dark' ? (
           <Moon size={16} aria-hidden="true" />
         ) : (
@@ -25,7 +25,7 @@ export function ThemeToggle({ compact = false }: { compact?: boolean }) {
       </div>
     )
   return (
-    <div className="et-theme-toggle" role="group" aria-label="Color theme" data-no-translate>
+    <div className="et-theme-toggle" role="group" aria-label="Color theme">
       <button
         type="button"
         aria-label="Use light theme"

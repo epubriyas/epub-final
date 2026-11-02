@@ -2,6 +2,7 @@ import 'server-only'
 import { contentPayload } from '@/lib/content'
 import publicUITexts from './public-ui-texts.json'
 import tamil from './ta.json'
+import { decodeJSXText } from './html-text'
 import { technologyTopics, productionOS, developmentSteps } from '@/config/technology'
 import { technologyGuides } from '@/config/technology-guides'
 export const normalizeText = (text: string) => text.replace(/\s+/g, ' ').trim()
@@ -11,7 +12,12 @@ export async function getPublicTranslationCatalog(): Promise<Set<string>> {
   if (catalog && catalog.expires > Date.now()) return catalog.texts
   if (building) return building
   building = (async () => {
-    const texts = new Set([...publicUITexts, ...Object.keys(tamil)].map(normalizeText))
+    const texts = new Set(
+      [...publicUITexts, ...Object.keys(tamil)].flatMap((text) => [
+        normalizeText(text),
+        normalizeText(decodeJSXText(text)),
+      ]),
+    )
     const payload = await contentPayload()
     function collect(value: unknown) {
       if (typeof value === 'string') {
@@ -38,6 +44,7 @@ export async function getPublicTranslationCatalog(): Promise<Set<string>> {
             collect(item)
         }
     }
+    collect(await payload.findGlobal({ slug: 'site-settings', overrideAccess: false, depth: 0 }))
     collect(technologyTopics)
     collect(productionOS)
     collect(developmentSteps)
