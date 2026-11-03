@@ -22,23 +22,23 @@ const capabilities = [
   {
     icon: BookOpen,
     number: '01',
-    title: 'Publishing, built on structure.',
-    text: 'Prepare content for print and digital reading with structure, typography and navigation considered together. The production specification guides the format and the checks.',
-    tags: ['EPUB & HTML5', 'Print layouts', 'Accessible content'],
+    title: 'Digital publishing & page production.',
+    text: 'Prepare EPUB 2, EPUB 3, accessible EPUB and HTML5 editions alongside print layouts. From manuscript to final pages, align content structure, typography and navigation with the agreed reading experience.',
+    tags: ['EPUB 2 & 3', 'HTML5 & print', 'Accessibility review'],
   },
   {
     icon: Braces,
     number: '02',
-    title: 'Content that moves between systems.',
-    text: 'Transform source documents into structured outputs with attention to metadata, references and content relationships. XML requirements are defined around the destination.',
-    tags: ['JATS & SciELO XML', 'Document conversion', 'Metadata'],
+    title: 'Structured content & conversion.',
+    text: 'Transform Word, PDF and XML sources for their next publishing destination. Review headings, references, tables and metadata against the receiving specification, including JATS and SciELO requirements where applicable.',
+    tags: ['JATS & SciELO XML', 'PDF & Word', 'IDML & MIF'],
   },
   {
     icon: Globe2,
     number: '03',
-    title: 'Ready for another audience.',
-    text: 'Connect translated content with the realities of production: text expansion, language-specific typography, multimedia timing and the learning environment.',
-    tags: ['Multilingual DTP', 'eLearning', 'Media localization'],
+    title: 'Localization & learning production.',
+    text: 'Bring translated text into layouts, learning courses and multimedia assets. Account for text expansion, language-specific typography and interactive content using tools suited to the source files and delivery requirements.',
+    tags: ['Multilingual DTP', 'eLearning', 'Trados Studio'],
   },
 ]
 
@@ -75,14 +75,14 @@ export function TechnologyExperience({ children }: { children?: ReactNode }) {
           <div className={styles.heroLayout}>
             <div className={styles.heroCopy}>
               <h1 id="technology-title">
-                Complex content.
+                Technology, grounded
                 <br />
-                <span>Considered systems.</span>
+                <span>in production.</span>
               </h1>
               <p>
-                Behind every well-made publication is a connected process. We bring publishing
-                expertise, practical automation and in-house development to the work that makes
-                content ready.
+                Publishing and localization expertise, supported by the right technology. We connect
+                established production tools, practical automation and in-house development around
+                your content, formats and quality requirements.
               </p>
               <div className={styles.actions}>
                 <Link className={styles.primaryButton} href="#production-os">
@@ -167,8 +167,8 @@ export function TechnologyExperience({ children }: { children?: ReactNode }) {
               </h2>
             </div>
             <p>
-              Good technology begins with understanding the destination. We select tools and
-              workflows around your source files, publishing requirements and audience.
+              Your source files and delivery requirements shape the toolkit. We consider languages,
+              layout, structure and review criteria before selecting the production approach.
             </p>
           </div>
         </Reveal>
@@ -194,9 +194,11 @@ export function TechnologyExperience({ children }: { children?: ReactNode }) {
         <div className={styles.toolstrip}>
           <span>A PROJECT-SPECIFIC TOOLKIT</span>
           <p>
-            Adobe InDesign <i /> FrameMaker <i /> Trados Studio <i /> Articulate Rise & Storyline
+            Adobe InDesign <i /> FrameMaker <i /> Trados Studio <i /> Rise & Storyline 360
           </p>
-          <small>Selected to suit the agreed production scope.</small>
+          <small>
+            Also selected by scope: QuarkXPress, Photoshop, Illustrator and Lectora Inspire.
+          </small>
         </div>
       </section>
 
@@ -239,24 +241,26 @@ export function TechnologyExperience({ children }: { children?: ReactNode }) {
                 <span>human expertise.</span>
               </h2>
               <p>
-                Repeated preparation and coordination tasks can take attention away from the work
-                that needs judgment. We explore focused scripts and internal utilities where the
-                task, inputs and expected result can be clearly defined.
+                Map the journey from source preparation to delivery, then identify steps that follow
+                repeatable rules. Our developers and production specialists explore scripts and
+                internal utilities for preparation, conversion and coordination tasks.
               </p>
               <ul className={styles.checklist}>
                 <li>
-                  <Check size={17} /> Map the workflow before choosing the technology.
+                  <Check size={17} /> Define inputs, expected outputs and review checkpoints.
                 </li>
                 <li>
-                  <Check size={17} /> Keep exceptions visible and review responsibilities clear.
+                  <Check size={17} /> Test representative files and flag exceptions for specialists.
                 </li>
                 <li>
-                  <Check size={17} /> Evaluate AI use against the project’s scope and requirements.
+                  <Check size={17} /> Evaluate AI assistance for utility, reliability and project
+                  fit.
                 </li>
               </ul>
               <p className={styles.smallNote}>
-                Automation and AI are evaluated for each use case. Suitability, confidentiality
-                requirements and human review are part of that discussion.
+                Automation can follow fixed rules without AI. Any proposed AI use is assessed within
+                the project scope, with confidentiality requirements and specialist review defined
+                before adoption. These areas remain subject to development and evaluation.
               </p>
             </div>
           </Reveal>
@@ -330,8 +334,9 @@ export function TechnologyExperience({ children }: { children?: ReactNode }) {
               <span>to the work.</span>
             </h2>
             <p>
-              Our development team works alongside production specialists. Real operational needs
-              shape what we explore, what we prototype and what we improve.
+              Our developers work alongside publishing, XML, eBook, DTP and localization teams.
+              Everyday production needs shape focused utilities, internal systems and longer-term
+              concepts such as Production OS—from task coordination to production support.
             </p>
           </div>
         </Reveal>
@@ -339,19 +344,19 @@ export function TechnologyExperience({ children }: { children?: ReactNode }) {
           {[
             {
               title: 'Understand',
-              text: 'Start with the task, its constraints and the people responsible for delivery.',
+              text: 'Map the task, source formats and handoffs with the people responsible for delivery.',
             },
             {
               title: 'Prototype',
-              text: 'Build a focused concept around a defined production need.',
+              text: 'Turn a defined need into a focused utility or internal application concept.',
             },
             {
               title: 'Validate',
-              text: 'Review outputs and exceptions with the specialists doing the work.',
+              text: 'Test representative inputs, outputs and exceptions with production specialists.',
             },
             {
               title: 'Refine',
-              text: 'Use feedback to improve the approach and set the next priority.',
+              text: 'Use operational feedback to improve the tool and set the next development priority.',
             },
           ].map((step, index) => (
             <li key={step.title}>

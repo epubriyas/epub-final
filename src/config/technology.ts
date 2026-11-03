@@ -4,18 +4,18 @@ export const technologyTopics = [
     title: 'Production Technologies',
     headline: 'The right tools. A considered process.',
     description:
-      'Publishing, structured content and localization technologies chosen around your source files, delivery formats and quality requirements.',
+      'From EPUB and XML to multilingual layouts and learning content, we select production tools around your source files, delivery formats and review requirements.',
     eyebrow: 'TOOLS & FORMATS',
     sections: [
       {
         title: 'Digital publishing',
         description:
-          'Prepare EPUB 2, EPUB 3, accessible EPUB and HTML5 editions with structure, navigation and reading experience considered throughout production.',
+          'Prepare EPUB 2, EPUB 3, accessible EPUB and HTML5 editions from manuscripts and production files. Plan headings, navigation, images and reading order around the intended reading environment.',
       },
       {
         title: 'Structured content & XML',
         description:
-          'Organize documents, metadata and content relationships for reusable publishing workflows. JATS and SciELO XML requirements are assessed against the project specification.',
+          'Structure headings, references, tables and metadata for reuse across publishing systems. Review JATS and SciELO XML requirements against the receiving specification and check the resulting content relationships.',
       },
       {
         title: 'Multilingual desktop publishing',
@@ -25,7 +25,7 @@ export const technologyTopics = [
       {
         title: 'Document & data conversion',
         description:
-          'Plan transformations between PDF, Word, XML and other agreed formats, with checks for completeness, structure and the intended downstream use.',
+          'Plan transformations between PDF, Word, XML and other agreed formats. Review source quality, preserve required content and check structure, tables and metadata for the intended downstream use.',
       },
       {
         title: 'Localization & eLearning',
@@ -46,7 +46,7 @@ export const technologyTopics = [
     title: 'Workflow Automation & AI',
     headline: 'Less repetition. More room for expertise.',
     description:
-      'Practical automation starts with understanding the work. Our development and production teams explore where software can simplify tasks and strengthen coordination.',
+      'Our developers and production specialists assess repeatable tasks, clearer handoffs and selected AI use cases, with defined inputs, visible exceptions and human review.',
     eyebrow: 'PROCESS & PEOPLE',
     sections: [
       {
@@ -57,7 +57,7 @@ export const technologyTopics = [
       {
         title: 'Support repeatable tasks',
         description:
-          'Explore scripts and internal utilities for suitable preparation, transformation and administrative tasks, with defined inputs, exceptions and review points.',
+          'Explore scripts and internal utilities for file preparation, content transformation and administrative tasks. Define expected inputs and outputs, then test representative files and exceptions before adoption.',
       },
       {
         title: 'Improve production coordination',
@@ -67,7 +67,7 @@ export const technologyTopics = [
       {
         title: 'Evaluate AI assistance',
         description:
-          'Assess selected information and task-support use cases for practical utility, reliability and feasibility. Any proposed AI use is discussed within the project scope.',
+          'Assess selected information and task-support use cases for utility, reliability and technical feasibility. Agree any proposed AI use, confidentiality requirements and review responsibilities within the project scope.',
       },
       {
         title: 'Keep quality accountable',
@@ -88,7 +88,7 @@ export const technologyTopics = [
     title: 'In-House Development',
     headline: 'Built close to the work.',
     description:
-      'Our development team works alongside production specialists to turn everyday operational needs into practical internal tools, workflow improvements and product concepts.',
+      'Our developers work alongside publishing, XML, eBook, DTP and localization specialists to shape production utilities, internal systems and longer-term product concepts.',
     eyebrow: 'DEVELOPMENT AT EPUBTRANS',
     sections: [
       {
@@ -104,7 +104,7 @@ export const technologyTopics = [
       {
         title: 'Internal tools & systems',
         description:
-          'Develop operational applications around task organization, production information and administrative needs, shaped by feedback from the teams using them.',
+          'Develop internal application concepts around task organization, production information and administrative needs. Define responsibilities and handoffs with the teams using them, then refine the approach through feedback.',
       },
       {
         title: 'Product development initiatives',
