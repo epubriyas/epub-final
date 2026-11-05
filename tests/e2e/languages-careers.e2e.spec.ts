@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
-import { languages } from '../../src/config/languages'
 
 test('Tamil navigation and homepage survive provider failure and return to English', async ({
   page,
@@ -101,12 +100,13 @@ test('native language selector preserves the route, internal links and English r
   const selector = page.locator('#language-options')
   await expect(
     selector.getByRole('group', { name: 'Indian languages' }).getByRole('button'),
-  ).toHaveCount(languages.filter((language) => language.group === 'Indian').length)
+  ).toHaveCount(9)
   await expect(
     selector.getByRole('group', { name: 'Global languages' }).getByRole('button'),
-  ).toHaveCount(
-    languages.filter((language) => language.group === 'Global' && language.code !== 'en').length,
-  )
+  ).toHaveCount(9)
+  for (const name of ['Odia', 'Assamese', 'Urdu', 'Russian']) {
+    await expect(selector.getByRole('button', { name, exact: true })).toHaveCount(0)
+  }
   await expect(selector.getByRole('button', { name: 'English, default language' })).toHaveAttribute(
     'aria-pressed',
     'true',
@@ -170,7 +170,7 @@ test('language panel stays readable on mobile and keyboard accessible on desktop
   await expect(dialog.getByRole('button', { name: 'English, default language' })).toBeVisible()
   await expect(
     dialog.getByRole('group', { name: 'Indian languages' }).getByRole('button'),
-  ).toHaveCount(languages.filter((language) => language.group === 'Indian').length)
+  ).toHaveCount(9)
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   )

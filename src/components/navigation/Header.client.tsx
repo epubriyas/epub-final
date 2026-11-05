@@ -2,7 +2,7 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from '@/components/i18n/LocalizedLink'
-import { ArrowRight, ChevronDown, Globe2, Menu, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, ChevronDown, Globe2, Menu, X } from 'lucide-react'
 import type { NavigationSection } from '@/types/navigation'
 import { Logo } from './Logo'
 import { ThemeToggle } from './ThemeToggle'
@@ -10,6 +10,31 @@ import { LanguageSelector } from '@/components/i18n/LanguageSelector'
 import { useSiteLocale } from '@/components/i18n/LocaleProvider'
 import { getLanguage, stripLanguage } from '@/config/languages'
 import handoffStyles from './header-handoff.module.css'
+
+function TechnologyMenuLinks({
+  section,
+  onNavigate,
+}: {
+  section: NavigationSection
+  onNavigate: () => void
+}) {
+  return (
+    <ul className="et-technology-menu-links">
+      {section.groups
+        ?.flatMap((group) => group.items)
+        .map((link) => (
+          <li key={link.href}>
+            <Link href={link.href!} onClick={onNavigate}>
+              <span>
+                {link.label} <ArrowUpRight size={14} aria-hidden="true" />
+              </span>
+              <small>{link.description}</small>
+            </Link>
+          </li>
+        ))}
+    </ul>
+  )
+}
 
 export function HeaderClient({ navigation }: { navigation: NavigationSection[] }) {
   const pathname = usePathname()
@@ -347,7 +372,11 @@ function HeaderState({
                 <div className="et-mega-top">
                   <div>
                     {item.description && (
-                      <p className="et-mega-eyebrow">{item.label.toUpperCase()} / EPUBTRANS</p>
+                      <p className="et-mega-eyebrow">
+                        {item.label === 'Technology'
+                          ? 'TECHNOLOGY'
+                          : `${item.label.toUpperCase()} / EPUBTRANS`}
+                      </p>
                     )}
                     <Link className="et-mega-title" href={item.href!} onClick={() => setOpen(null)}>
                       {item.overviewLabel ?? `Explore ${item.label.toLowerCase()}`}{' '}
@@ -365,32 +394,36 @@ function HeaderState({
                     <X size={24} />
                   </button>
                 </div>
-                <div className="et-mega-groups">
-                  {item.groups.map((group) => (
-                    <div
-                      key={group.title}
-                      className={
-                        item.label === 'Services' && group.items.length > 6
-                          ? 'et-mega-group-wide'
-                          : undefined
-                      }
-                    >
-                      <h3>{group.title}</h3>
-                      {group.description && (
-                        <p className="et-mega-group-description">{group.description}</p>
-                      )}
-                      <ul>
-                        {group.items.map((link) => (
-                          <li key={link.label}>
-                            <Link href={link.href!} onClick={() => setOpen(null)}>
-                              {link.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
+                {item.label === 'Technology' ? (
+                  <TechnologyMenuLinks section={item} onNavigate={() => setOpen(null)} />
+                ) : (
+                  <div className="et-mega-groups">
+                    {item.groups.map((group) => (
+                      <div
+                        key={group.title}
+                        className={
+                          item.label === 'Services' && group.items.length > 6
+                            ? 'et-mega-group-wide'
+                            : undefined
+                        }
+                      >
+                        <h3>{group.title}</h3>
+                        {group.description && (
+                          <p className="et-mega-group-description">{group.description}</p>
+                        )}
+                        <ul>
+                          {group.items.map((link) => (
+                            <li key={link.label}>
+                              <Link href={link.href!} onClick={() => setOpen(null)}>
+                                {link.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ),
@@ -456,23 +489,27 @@ function HeaderState({
                             : 'Explore ' + item.label.toLowerCase())}{' '}
                         →
                       </Link>
-                      {item.groups.map((group) => (
-                        <details key={group.title}>
-                          <summary>{group.title}</summary>
-                          {group.description && (
-                            <p className="et-mobile-group-description">{group.description}</p>
-                          )}
-                          <ul>
-                            {group.items.map((link) => (
-                              <li key={link.label}>
-                                <Link href={link.href!} onClick={closeMobile}>
-                                  {link.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </details>
-                      ))}
+                      {item.label === 'Technology' ? (
+                        <TechnologyMenuLinks section={item} onNavigate={closeMobile} />
+                      ) : (
+                        item.groups.map((group) => (
+                          <details key={group.title}>
+                            <summary>{group.title}</summary>
+                            {group.description && (
+                              <p className="et-mobile-group-description">{group.description}</p>
+                            )}
+                            <ul>
+                              {group.items.map((link) => (
+                                <li key={link.label}>
+                                  <Link href={link.href!} onClick={closeMobile}>
+                                    {link.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </details>
+                        ))
+                      )}
                     </div>
                   )}
                 </>

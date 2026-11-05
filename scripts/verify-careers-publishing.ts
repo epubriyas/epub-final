@@ -104,7 +104,7 @@ try {
     (await publicPage
       .getByRole('link', { name: 'Apply by email', exact: true })
       .getAttribute('href')) || '',
-    /^mailto:careers@example.test\?subject=Application/,
+    /^mailto:info@epubtrans.com\?subject=Application/,
   )
   await mkdir('artifacts/careers', { recursive: true })
   await publicPage.screenshot({

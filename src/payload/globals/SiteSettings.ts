@@ -1,12 +1,13 @@
 import type { GlobalConfig } from 'payload'
 import { authenticated } from '@/payload/access/authenticated'
+import { COMPANY_EMAIL } from '@/config/contact'
 export const SiteSettings: GlobalConfig = {
   slug: 'site-settings',
   access: { read: () => true, update: authenticated },
   fields: [
     { name: 'siteName', type: 'text', defaultValue: 'EPUBTRANS' },
     { name: 'description', type: 'textarea' },
-    { name: 'email', type: 'email', defaultValue: 'info@epubtrans.com' },
+    { name: 'email', type: 'email', defaultValue: COMPANY_EMAIL },
     { name: 'phone', type: 'text', defaultValue: '+91 44 3136 3907' },
     { name: 'location', type: 'text', defaultValue: 'Chennai, India' },
     {

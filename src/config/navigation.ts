@@ -59,7 +59,8 @@ export const navigation: NavigationSection[] = [
     groups: [
       {
         title: 'Core Industries',
-        description: 'Production support for publishing, education, technology and medical content, from source documents to print and digital editions.',
+        description:
+          'Production support for publishing, education, technology and medical content, from source documents to print and digital editions.',
         items: [
           {
             label: 'Publishing & Scholarly Communications',
@@ -75,7 +76,8 @@ export const navigation: NavigationSection[] = [
       },
       {
         title: 'Specialized Markets',
-        description: 'Document and media production for business communications, audience engagement and inclusive access to content.',
+        description:
+          'Document and media production for business communications, audience engagement and inclusive access to content.',
         items: [
           {
             label: 'Corporate & Business Communications',
@@ -93,31 +95,55 @@ export const navigation: NavigationSection[] = [
   {
     label: 'Technology',
     href: '/technology',
+    overviewLabel: 'Technology & Innovation',
+    description: 'Tools, automation and development supporting our production workflows.',
+    groups: [
+      {
+        title: 'Technology & Innovation',
+        items: [
+          {
+            label: 'Production Technologies',
+            href: '/technology/production-technologies',
+            description: 'Publishing tools, supported formats and production technologies.',
+          },
+          {
+            label: 'AI & Workflow Automation',
+            href: '/technology/workflow-automation',
+            description:
+              'Automation and AI-assisted methods for publishing and content production.',
+          },
+          {
+            label: 'In-House Development',
+            href: '/technology/in-house-development',
+            description: 'Internal utilities and development supporting production workflows.',
+          },
+        ],
+      },
+    ],
   },
   {
     label: 'Resources',
     href: '/resources',
     overviewLabel: 'Explore our resources',
-    description: 'Explore publishing insights, project stories and production samples to help plan your next project.',
+    description:
+      'Explore publishing insights, project stories and production samples to help plan your next project.',
     groups: [
       {
         title: 'Editorial Insights',
-        description: 'Read practical guidance on publishing workflows, localization and digital content preparation.',
+        description:
+          'Read practical guidance on publishing workflows, localization and digital content preparation.',
         items: [{ label: 'Blog', href: '/blog' }],
       },
       {
-        title: 'Project Stories',
-        description: 'Explore examples of our work across publishing, localization, learning and accessibility.',
-        items: [
-          { label: 'Publishing', href: '/work?category=publishing' },
-          { label: 'Localization', href: '/work?category=localization' },
-          { label: 'eLearning', href: '/work?category=elearning' },
-          { label: 'Accessibility', href: '/work?category=accessibility' },
-        ],
+        title: 'Case Studies',
+        description:
+          'Explore examples of our work across publishing, localization, learning and accessibility.',
+        items: [{ label: 'View Case Studies', href: '/case-studies' }],
       },
       {
         title: 'Selected Work',
-        description: 'Browse publication layouts, digital editions and learning samples to see our production work in context.',
+        description:
+          'Browse publication layouts, digital editions and learning samples to see our production work in context.',
         items: [{ label: 'View Portfolio', href: '/work' }],
       },
     ],
@@ -131,24 +157,21 @@ export const navigation: NavigationSection[] = [
     groups: [
       {
         title: 'Our Company',
-        description: 'Discover our publishing expertise, production capabilities and approach to client projects.',
-        items: [
-          { label: 'About EPUBTRANS', href: '/about-us' },
-        ],
+        description:
+          'Discover our publishing expertise, production capabilities and approach to client projects.',
+        items: [{ label: 'About EPUBTRANS', href: '/about-us' }],
       },
       {
         title: 'Working Together',
-        description: 'Explore how we coordinate international projects, language requirements and production delivery.',
-        items: [
-          { label: 'Global Delivery & Collaboration', href: '/company/global-presence' },
-        ],
+        description:
+          'Explore how we coordinate international projects, language requirements and production delivery.',
+        items: [{ label: 'Global Delivery & Collaboration', href: '/company/global-presence' }],
       },
       {
         title: 'Join Our Team',
-        description: 'Explore opportunities to contribute your skills in publishing, language and digital content production.',
-        items: [
-          { label: 'Careers', href: '/company/careers' },
-        ],
+        description:
+          'Explore opportunities to contribute your skills in publishing, language and digital content production.',
+        items: [{ label: 'Careers', href: '/company/careers' }],
       },
     ],
   },

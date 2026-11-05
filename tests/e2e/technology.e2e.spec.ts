@@ -5,10 +5,9 @@ const routes = [
   'production-technologies',
   'workflow-automation',
   'in-house-development',
-  'production-os',
 ]
 
-test('Technology menu connects all pages and Production OS on desktop and mobile', async ({
+test('Technology menu connects all three topic pages on desktop and mobile', async ({
   page,
   request,
 }) => {
@@ -19,9 +18,9 @@ test('Technology menu connects all pages and Production OS on desktop and mobile
     .getByRole('button', { name: 'Technology', exact: true })
     .click()
   const menu = page.locator('.et-mega-technology')
-  await expect(menu.getByRole('heading', { level: 3 })).toHaveText([
+  await expect(menu.locator('.et-technology-menu-links a > span')).toHaveText([
     'Production Technologies',
-    'Workflow Automation & AI',
+    'AI & Workflow Automation',
     'In-House Development',
   ])
   const links = await menu
@@ -50,12 +49,9 @@ test('Technology menu connects all pages and Production OS on desktop and mobile
   await page.getByRole('button', { name: 'Open navigation' }).click()
   const mobile = page.getByRole('dialog', { name: 'Site navigation' })
   await mobile.getByRole('button', { name: 'Technology', exact: true }).click()
-  await mobile
-    .locator('summary')
-    .filter({ hasText: /^In-House Development$/ })
-    .click()
-  await mobile.getByRole('link', { name: 'EPUBTRANS Production OS', exact: true }).click()
-  await expect(page).toHaveURL(/technology\/production-os$/)
+  await expect(mobile.locator('.et-technology-menu-links a')).toHaveCount(3)
+  await mobile.getByRole('link', { name: /^In-House Development/ }).click()
+  await expect(page).toHaveURL(/technology\/in-house-development$/)
   await expect(mobile).not.toBeVisible()
   await page.screenshot({ path: 'artifacts/technology/production-os-mobile.png', fullPage: true })
 })

@@ -1,14 +1,14 @@
 'use client'
 import { useId } from 'react'
 import { ArrowUpRight, Check, Globe2 } from 'lucide-react'
-import { getLanguage, languages, type SiteLanguage } from '@/config/languages'
+import { getLanguage, pickerLanguages, type SiteLanguage } from '@/config/languages'
 import { useLocaleNavigation, useSiteLocale } from './LocaleProvider'
 import { saveLanguagePreference } from '@/lib/i18n/preference'
 
-const indianCodes = languages
+const indianCodes = pickerLanguages
   .filter((language) => language.group === 'Indian')
   .map((language) => language.code)
-const globalCodes = languages
+const globalCodes = pickerLanguages
   .filter((language) => language.group === 'Global' && language.code !== 'en')
   .map((language) => language.code)
 export function LanguageSelector({ onSelect }: { onSelect?: (changed: boolean) => void }) {

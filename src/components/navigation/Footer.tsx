@@ -6,6 +6,7 @@ import { getSiteSettings } from '@/lib/content'
 import { getLandingContent } from '@/lib/landing-content'
 import { visibleDirectoryCategories } from '@/lib/landing-directory'
 import styles from './footer.module.css'
+import { COMPANY_EMAIL } from '@/config/contact'
 const footerGroups = [
   {
     title: 'Explore',
@@ -39,7 +40,7 @@ export async function Footer() {
     ...footerGroups,
   ]
   const contactDetailsApproved = settings.contactDetailsApproved === true
-  const email = contactDetailsApproved ? settings.email || '' : ''
+  const email = COMPANY_EMAIL
   const phone = contactDetailsApproved ? settings.phone || '' : ''
   const location = settings.location || 'Chennai, India'
   return (

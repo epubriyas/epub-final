@@ -1,5 +1,59 @@
-.et-mega-technology .et-mega-groups {
+.et-technology-menu-links {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+  padding: 24px 0 0;
+  margin: 0;
+}
+.et-technology-menu-links li {
+  margin: 0;
+}
+.et-technology-menu-links a {
+  display: grid;
+  gap: 6px;
+}
+.et-technology-menu-links a > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.et-technology-menu-links small {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.et-mega-technology .et-technology-menu-links {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  padding-top: 32px;
+}
+.et-mega-technology .et-technology-menu-links a {
+  gap: 20px;
+  transition: color var(--motion-fast);
+}
+.et-mega-technology .et-technology-menu-links a > span {
+  color: var(--brand-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.et-mega-technology .et-technology-menu-links small {
+  color: #ffffff99;
+  font-size: 13px;
+  max-width: 220px;
+}
+.et-mega-technology .et-technology-menu-links a:hover {
+  color: var(--brand-secondary);
+}
+
+.et-mobile-dialog .et-technology-menu-links {
+  padding: 16px 0 24px;
+}
+.et-mobile-dialog .et-technology-menu-links a {
+  display: grid;
+  padding-block: 8px;
 }
 .et-tech-section {
   padding-block: var(--section-space);

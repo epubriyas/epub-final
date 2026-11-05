@@ -11,7 +11,7 @@ import {
   MessagesSquare,
 } from 'lucide-react'
 import { ContactForm } from '@/components/forms/ContactForm'
-import { companyOffices } from '@/config/contact'
+import { companyOffices, COMPANY_EMAIL } from '@/config/contact'
 
 const indexingApproved =
   process.env.VERCEL_ENV === 'production' && process.env.EPUBTRANS_INDEXING_APPROVED === 'true'
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 }
 
 export default function Contact() {
-  const email = 'info@epubtrans.com'
+  const email = COMPANY_EMAIL
   const phone = '+91 4431363907'
   return (
     <main className="et-contact-page contact-premium">

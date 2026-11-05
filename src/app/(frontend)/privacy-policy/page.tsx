@@ -1,5 +1,6 @@
 import { pageMetadata } from '@/lib/seo'
 import { PageHero } from '@/components/editorial/Primitives'
+import { COMPANY_EMAIL } from '@/config/contact'
 export const metadata = pageMetadata({
   title: 'Privacy information',
   robots: { index: false, follow: true },
@@ -22,8 +23,8 @@ export default function Privacy() {
         <h2>Questions about your information</h2>
         <p>
           Contact{' '}
-          <a className="et-text-link" href="mailto:info@epubtrans.com">
-            info@epubtrans.com
+          <a className="et-text-link" href={`mailto:${COMPANY_EMAIL}`}>
+            {COMPANY_EMAIL}
           </a>{' '}
           to ask about your request or the information you submitted.
         </p>
@@ -38,4 +39,3 @@ export default function Privacy() {
     </main>
   )
 }
-

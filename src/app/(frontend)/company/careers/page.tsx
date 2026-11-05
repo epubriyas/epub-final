@@ -9,6 +9,7 @@ import { CareerInfographic, CareerDisciplines } from '@/components/company/Caree
 import { BlogMotion as CareersMotion } from '@/components/blog/BlogMotion'
 import { employmentLabel, applicationHref, roleSummary } from '@/lib/careers'
 import styles from './careers-listing.module.css'
+import { COMPANY_EMAIL } from '@/config/contact'
 
 export const dynamic = 'force-dynamic'
 export const metadata = pageMetadata({
@@ -153,9 +154,9 @@ export default async function Careers() {
                 recruitment.
               </p>
               <div className={styles.roleActions}>
-                <Link href="/contact-us">
+                <a href={`mailto:${COMPANY_EMAIL}?subject=Recruitment%20enquiry`}>
                   Ask about recruitment <ArrowUpRight size={18} aria-hidden="true" />
-                </Link>
+                </a>
               </div>
             </div>
           )}
@@ -167,9 +168,9 @@ export default async function Careers() {
                 <p>Ask our team about recruitment before sending application materials.</p>
               </div>
             </div>
-            <Link href="/contact-us">
-              Contact the team <ArrowUpRight size={18} aria-hidden="true" />
-            </Link>
+            <a href={`mailto:${COMPANY_EMAIL}?subject=Careers%20enquiry`}>
+              {COMPANY_EMAIL} <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
           </div>
         </div>
       </section>

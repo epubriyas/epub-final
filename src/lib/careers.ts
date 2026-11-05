@@ -1,6 +1,7 @@
 import { cache } from 'react'
 import { contentPayload, getPreviewAccess } from '@/lib/content'
 import type { Career } from '@/payload-types'
+import { COMPANY_EMAIL } from '@/config/contact'
 
 export function roleSummary(description?: string | null): string {
   const text = description?.replace(/\s+/g, ' ').trim() || ''
@@ -13,8 +14,8 @@ export const employmentLabel = (value: Career['employmentType']) =>
   value ? { 'full-time': 'Full time', 'part-time': 'Part time', contract: 'Contract' }[value] : ''
 
 export const applicationHref = (role: Career) =>
-  role.status === 'published' && role.applicationEmail
-    ? `mailto:${role.applicationEmail}?subject=${encodeURIComponent(`Application: ${role.title}`)}`
+  role.status === 'published'
+    ? `mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(`Application: ${role.title}`)}`
     : undefined
 
 export const getCareer = cache(async (slug: string) => {

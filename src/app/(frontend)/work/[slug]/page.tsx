@@ -1,5 +1,5 @@
 import { pageMetadata } from '@/lib/seo'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { getContent } from '@/lib/content'
 import { PageHero, ContentCTA } from '@/components/editorial/Primitives'
 import RichText from '@/components/RichText'
@@ -8,12 +8,15 @@ import Link from '@/components/i18n/LocalizedLink'
 import { getWorkSamples } from '@/lib/portfolio'
 import { SampleLauncher } from '@/components/work/WorkExplorer'
 import '../work.css'
+import { editorialCaseStudies } from '@/config/case-studies'
 export const dynamic = 'force-dynamic'
 type Props = { params: Promise<{ slug: string }> }
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params
+  if (editorialCaseStudies.some((study) => study.slug === slug)) redirect(`/case-studies#${slug}`)
   const doc = await getContent('case-studies', slug)
   if (!doc?.permissionConfirmed) notFound()
+  if (!doc.workKind || doc.workKind === 'case-study') redirect(`/case-studies#${doc.slug}`)
   return pageMetadata({
     title: doc.seo?.metaTitle || doc.title,
     description: doc.seo?.metaDescription || doc.description,
@@ -22,10 +25,12 @@ export async function generateMetadata({ params }: Props) {
 }
 export default async function CaseStudy({ params }: Props) {
   const { slug } = await params
+  if (editorialCaseStudies.some((study) => study.slug === slug)) redirect(`/case-studies#${slug}`)
   const doc = await getContent('case-studies', slug)
   if (!doc?.permissionConfirmed) notFound()
+  if (!doc.workKind || doc.workKind === 'case-study') redirect(`/case-studies#${doc.slug}`)
   const sample = (await getWorkSamples()).find((item) => item.slug === slug)
-  if (sample && doc.workKind && doc.workKind !== 'case-study')
+  if (sample)
     return (
       <main className="wp-work">
         <section className="wp-detail-hero et-container">

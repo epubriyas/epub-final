@@ -2,6 +2,7 @@ import type { CollectionConfig, Field, Where } from 'payload'
 import { authenticated } from '@/payload/access/authenticated'
 import { publishedContent } from '@/payload/access/publishedContent'
 import { caseStudyCategories, resourceTypes } from '@/config/resource-content'
+import { COMPANY_EMAIL } from '@/config/contact'
 import {
   BlocksFeature,
   HeadingFeature,
@@ -166,7 +167,7 @@ export const Resources = contentCollection('resources', [
 export const Careers = contentCollection('careers', [
   { name: 'location', type: 'text' },
   { name: 'employmentType', type: 'select', options: ['full-time', 'part-time', 'contract'] },
-  { name: 'applicationEmail', type: 'email' },
+  { name: 'applicationEmail', type: 'email', defaultValue: COMPANY_EMAIL },
 ])
 Careers.hooks = {
   beforeChange: [

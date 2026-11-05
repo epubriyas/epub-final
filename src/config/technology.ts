@@ -43,7 +43,7 @@ export const technologyTopics = [
   },
   {
     slug: 'workflow-automation',
-    title: 'Workflow Automation & AI',
+    title: 'AI & Workflow Automation',
     headline: 'Less repetition. More room for expertise.',
     description:
       'Our developers and production specialists assess repeatable tasks, clearer handoffs and selected AI use cases, with defined inputs, visible exceptions and human review.',

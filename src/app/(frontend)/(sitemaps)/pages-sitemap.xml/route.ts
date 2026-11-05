@@ -22,6 +22,7 @@ export async function GET() {
     '/company/global-presence',
     '/company/careers',
     '/work',
+    '/case-studies',
     '/get-a-quote',
     '/contact-us',
     '/accessibility',
@@ -42,6 +43,7 @@ export async function GET() {
     })
     for (const doc of records.docs) {
       if ('permissionConfirmed' in doc && !doc.permissionConfirmed) continue
+      if ('workKind' in doc && (!doc.workKind || doc.workKind === 'case-study')) continue
       sitemap.push({
         loc:
           collection === 'services'

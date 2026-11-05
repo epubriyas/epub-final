@@ -2,6 +2,7 @@ import { NextRequest } from 'next/server'
 import { isTrustedOrigin } from '@/lib/request-origin'
 import { requestAddress } from '@/lib/request-address'
 import { getSiteSettings } from '@/lib/content'
+import { COMPANY_EMAIL } from '@/config/contact'
 import {
   assistantInstructions,
   responseEvents,
@@ -89,7 +90,7 @@ export async function POST(request: NextRequest) {
             parts: [
               {
                 text: assistantInstructions(
-                  settings.contactDetailsApproved === true ? settings.email || '' : '',
+                  COMPANY_EMAIL,
                   settings.contactDetailsApproved === true ? settings.phone || '' : '',
                   settings.location || 'Chennai, India',
                 ),

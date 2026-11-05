@@ -8,6 +8,7 @@ import { getCareer, employmentLabel, applicationHref, roleSummary } from '@/lib/
 import { getPreviewAccess } from '@/lib/content'
 import { pageMetadata } from '@/lib/seo'
 import styles from '../careers.module.css'
+import { COMPANY_EMAIL } from '@/config/contact'
 
 export const dynamic = 'force-dynamic'
 type Props = { params: Promise<{ slug: string }> }
@@ -28,7 +29,7 @@ export default async function CareerRole({ params }: Props) {
   const { slug } = await params
   const [role, access] = await Promise.all([getCareer(slug), getPreviewAccess()])
   if (!role) notFound()
-  const email = role.applicationEmail
+  const email = COMPANY_EMAIL
   const canApply = role.status === 'published' && Boolean(email) && !access.draft
   return (
     <CareersMotion className={styles.page}>

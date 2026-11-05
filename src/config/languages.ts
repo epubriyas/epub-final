@@ -37,6 +37,29 @@ export const languages: SiteLanguage[] = [
   { code: 'ru', name: 'Russian', nativeName: 'Русский', direction: 'ltr', group: 'Global' },
 ]
 export type LanguageCode = string
+// Keep the picker focused while preserving existing localized URLs.
+const mainLanguageCodes = new Set([
+  'en',
+  'hi',
+  'ta',
+  'te',
+  'bn',
+  'mr',
+  'kn',
+  'ml',
+  'gu',
+  'pa',
+  'es',
+  'fr',
+  'de',
+  'pt',
+  'it',
+  'ar',
+  'zh-CN',
+  'ja',
+  'ko',
+])
+export const pickerLanguages = languages.filter((language) => mainLanguageCodes.has(language.code))
 export const getLanguage = (code: string) => languages.find((language) => language.code === code)
 export function stripLanguage(path: string) {
   const prefix = path.match(/^\/([^/?#]+)(?=\/|[?#]|$)/)?.[1]

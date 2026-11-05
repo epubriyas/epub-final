@@ -13,6 +13,7 @@ import { LocaleProvider } from '@/components/i18n/LocaleProvider'
 import { EpubtransAssistant } from '@/components/assistant/EpubtransAssistant'
 import { SiteMotion } from '@/components/motion/SiteMotion'
 import { getSiteSettings } from '@/lib/content'
+import { COMPANY_EMAIL } from '@/config/contact'
 import { siteCanBeIndexed } from '@/lib/site-indexing.cjs'
 import '@/styles/index.css'
 export async function generateViewport(): Promise<Viewport> {
@@ -35,9 +36,7 @@ export default async function FrontendLayout({ children }: { children: React.Rea
     '@type': 'Organization',
     name: 'EPUBTRANS',
     url: getServerSideURL(),
-    ...(settings.contactDetailsApproved === true && settings.email
-      ? { email: settings.email }
-      : {}),
+    email: COMPANY_EMAIL,
     ...(settings.contactDetailsApproved === true && settings.phone
       ? { telephone: settings.phone }
       : {}),
@@ -66,7 +65,7 @@ export default async function FrontendLayout({ children }: { children: React.Rea
             </div>
             <Footer />
             <EpubtransAssistant
-              email={settings.contactDetailsApproved === true ? settings.email || '' : ''}
+              email={COMPANY_EMAIL}
               phone={settings.contactDetailsApproved === true ? settings.phone || '' : ''}
             />
           </LocaleProvider>
